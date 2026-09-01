@@ -1,0 +1,447 @@
+[
+  {
+    "id": "card_001",
+    "name": "熾焰劍舞",
+    "characterId": "char_01",
+    "rarityId": "sr",
+    "classId": "atk",
+    "elementId": "water",
+    "cd": 4,
+    "tags": [
+      "burst",
+      "dot"
+    ],
+    "image": "assets/img/cards/card_001.svg"
+  },
+  {
+    "id": "card_002",
+    "name": "寒冰壁壘",
+    "characterId": "char_02",
+    "rarityId": "sr",
+    "classId": "debuf",
+    "elementId": "wood",
+    "cd": 7,
+    "tags": [
+      "normal_atk",
+      "atk_buff_self",
+      "dot"
+    ],
+    "image": "assets/img/cards/card_002.svg"
+  },
+  {
+    "id": "card_003",
+    "name": "森羅庇護",
+    "characterId": "char_03",
+    "rarityId": "ssr",
+    "classId": "debuf",
+    "elementId": "dark",
+    "cd": 2,
+    "tags": [
+      "atk_buff_self",
+      "def_down"
+    ],
+    "image": "assets/img/cards/card_003.svg"
+  },
+  {
+    "id": "card_004",
+    "name": "聖光審判",
+    "characterId": "char_04",
+    "rarityId": "sr",
+    "classId": "tank",
+    "elementId": "dark",
+    "cd": 4,
+    "tags": [
+      "burst"
+    ],
+    "image": "assets/img/cards/card_004.svg"
+  },
+  {
+    "id": "card_005",
+    "name": "幽紫詠嘆",
+    "characterId": "char_05",
+    "rarityId": "sr",
+    "classId": "heal",
+    "elementId": "water",
+    "cd": 3,
+    "tags": [
+      "heal_tag",
+      "dot"
+    ],
+    "image": "assets/img/cards/card_005.svg"
+  },
+  {
+    "id": "card_006",
+    "name": "夜帷潛行",
+    "characterId": "char_06",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "water",
+    "cd": 4,
+    "tags": [
+      "normal_atk",
+      "atk_buff_enemy"
+    ],
+    "image": "assets/img/cards/card_006.svg"
+  },
+  {
+    "id": "card_007",
+    "name": "素白祈禱",
+    "characterId": "char_07",
+    "rarityId": "sr",
+    "classId": "tank",
+    "elementId": "wood",
+    "cd": 6,
+    "tags": [
+      "atk_buff_self",
+      "stun"
+    ],
+    "image": "assets/img/cards/card_007.svg"
+  },
+  {
+    "id": "card_008",
+    "name": "赤紅怒濤",
+    "characterId": "char_08",
+    "rarityId": "r",
+    "classId": "heal",
+    "elementId": "dark",
+    "cd": 4,
+    "tags": [
+      "normal_atk"
+    ],
+    "image": "assets/img/cards/card_008.svg"
+  },
+  {
+    "id": "card_009",
+    "name": "銀翼守望",
+    "characterId": "char_09",
+    "rarityId": "sr",
+    "classId": "heal",
+    "elementId": "wood",
+    "cd": 4,
+    "tags": [
+      "cleanse"
+    ],
+    "image": "assets/img/cards/card_009.svg"
+  },
+  {
+    "id": "card_010",
+    "name": "緋櫻亂舞",
+    "characterId": "char_10",
+    "rarityId": "ssr",
+    "classId": "heal",
+    "elementId": "fire",
+    "cd": 4,
+    "tags": [
+      "aoe",
+      "shield"
+    ],
+    "image": "assets/img/cards/card_010.svg"
+  },
+  {
+    "id": "card_011",
+    "name": "菫色迴廊",
+    "characterId": "char_11",
+    "rarityId": "sr",
+    "classId": "atk",
+    "elementId": "dark",
+    "cd": 3,
+    "tags": [
+      "burst",
+      "atk_buff_enemy"
+    ],
+    "image": "assets/img/cards/card_011.svg"
+  },
+  {
+    "id": "card_012",
+    "name": "大地誓約",
+    "characterId": "char_12",
+    "rarityId": "ssr",
+    "classId": "debuf",
+    "elementId": "fire",
+    "cd": 4,
+    "tags": [
+      "aoe"
+    ],
+    "image": "assets/img/cards/card_012.svg"
+  },
+  {
+    "id": "card_013",
+    "name": "炎獄爆裂",
+    "characterId": "char_01",
+    "rarityId": "r",
+    "classId": "heal",
+    "elementId": "light",
+    "cd": 4,
+    "tags": [
+      "aoe"
+    ],
+    "image": "assets/img/cards/card_013.svg"
+  },
+  {
+    "id": "card_014",
+    "name": "冰晶結界",
+    "characterId": "char_02",
+    "rarityId": "r",
+    "classId": "debuf",
+    "elementId": "water",
+    "cd": 4,
+    "tags": [
+      "cleanse",
+      "atk_buff_enemy",
+      "burst"
+    ],
+    "image": "assets/img/cards/card_014.svg"
+  },
+  {
+    "id": "card_015",
+    "name": "綠蔭治癒",
+    "characterId": "char_03",
+    "rarityId": "ssr",
+    "classId": "buf",
+    "elementId": "dark",
+    "cd": 6,
+    "tags": [
+      "stun",
+      "cleanse"
+    ],
+    "image": "assets/img/cards/card_015.svg"
+  },
+  {
+    "id": "card_016",
+    "name": "光之聖詠",
+    "characterId": "char_04",
+    "rarityId": "r",
+    "classId": "tank",
+    "elementId": "water",
+    "cd": 4,
+    "tags": [
+      "def_down",
+      "atk_buff_enemy"
+    ],
+    "image": "assets/img/cards/card_016.svg"
+  },
+  {
+    "id": "card_017",
+    "name": "暗影蝕刻",
+    "characterId": "char_05",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "wood",
+    "cd": 3,
+    "tags": [
+      "atk_buff_self",
+      "cleanse"
+    ],
+    "image": "assets/img/cards/card_017.svg"
+  },
+  {
+    "id": "card_018",
+    "name": "夜梟突襲",
+    "characterId": "char_06",
+    "rarityId": "sr",
+    "classId": "tank",
+    "elementId": "light",
+    "cd": 7,
+    "tags": [
+      "def_down",
+      "shield",
+      "atk_buff_self"
+    ],
+    "image": "assets/img/cards/card_018.svg"
+  },
+  {
+    "id": "card_019",
+    "name": "白羽淨化",
+    "characterId": "char_07",
+    "rarityId": "r",
+    "classId": "atk",
+    "elementId": "wood",
+    "cd": 6,
+    "tags": [
+      "atk_buff_self",
+      "heal_tag"
+    ],
+    "image": "assets/img/cards/card_019.svg"
+  },
+  {
+    "id": "card_020",
+    "name": "赤炎連斬",
+    "characterId": "char_08",
+    "rarityId": "ssr",
+    "classId": "tank",
+    "elementId": "fire",
+    "cd": 5,
+    "tags": [
+      "shield"
+    ],
+    "image": "assets/img/cards/card_020.svg"
+  },
+  {
+    "id": "card_021",
+    "name": "銀刃反射",
+    "characterId": "char_09",
+    "rarityId": "n",
+    "classId": "buf",
+    "elementId": "dark",
+    "cd": 3,
+    "tags": [
+      "atk_buff_self",
+      "def_down"
+    ],
+    "image": "assets/img/cards/card_021.svg"
+  },
+  {
+    "id": "card_022",
+    "name": "櫻花亂咲",
+    "characterId": "char_10",
+    "rarityId": "sr",
+    "classId": "buf",
+    "elementId": "water",
+    "cd": 3,
+    "tags": [
+      "stun"
+    ],
+    "image": "assets/img/cards/card_022.svg"
+  },
+  {
+    "id": "card_023",
+    "name": "紫電交鳴",
+    "characterId": "char_11",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "wood",
+    "cd": 4,
+    "tags": [
+      "aoe",
+      "normal_atk"
+    ],
+    "image": "assets/img/cards/card_023.svg"
+  },
+  {
+    "id": "card_024",
+    "name": "岩鎧不動",
+    "characterId": "char_12",
+    "rarityId": "ssr",
+    "classId": "debuf",
+    "elementId": "wood",
+    "cd": 3,
+    "tags": [
+      "dot",
+      "def_down",
+      "burst"
+    ],
+    "image": "assets/img/cards/card_024.svg"
+  },
+  {
+    "id": "card_025",
+    "name": "灼熱一擊",
+    "characterId": "char_01",
+    "rarityId": "ssr",
+    "classId": "tank",
+    "elementId": "dark",
+    "cd": 3,
+    "tags": [
+      "def_down",
+      "stun"
+    ],
+    "image": "assets/img/cards/card_025.svg"
+  },
+  {
+    "id": "card_026",
+    "name": "凍土封鎖",
+    "characterId": "char_02",
+    "rarityId": "sr",
+    "classId": "buf",
+    "elementId": "dark",
+    "cd": 4,
+    "tags": [
+      "cleanse",
+      "heal_tag"
+    ],
+    "image": "assets/img/cards/card_026.svg"
+  },
+  {
+    "id": "card_027",
+    "name": "荊棘纏繞",
+    "characterId": "char_03",
+    "rarityId": "sr",
+    "classId": "debuf",
+    "elementId": "light",
+    "cd": 3,
+    "tags": [
+      "aoe",
+      "dot"
+    ],
+    "image": "assets/img/cards/card_027.svg"
+  },
+  {
+    "id": "card_028",
+    "name": "極光加護",
+    "characterId": "char_04",
+    "rarityId": "ssr",
+    "classId": "debuf",
+    "elementId": "dark",
+    "cd": 4,
+    "tags": [
+      "normal_atk",
+      "dot"
+    ],
+    "image": "assets/img/cards/card_028.svg"
+  },
+  {
+    "id": "card_029",
+    "name": "漆黑吞噬",
+    "characterId": "char_05",
+    "rarityId": "sr",
+    "classId": "atk",
+    "elementId": "fire",
+    "cd": 3,
+    "tags": [
+      "heal_tag"
+    ],
+    "image": "assets/img/cards/card_029.svg"
+  },
+  {
+    "id": "card_030",
+    "name": "梟眼狙擊",
+    "characterId": "char_06",
+    "rarityId": "ssr",
+    "classId": "buf",
+    "elementId": "water",
+    "cd": 5,
+    "tags": [
+      "def_down",
+      "burst"
+    ],
+    "image": "assets/img/cards/card_030.svg"
+  },
+  {
+    "id": "card_031",
+    "name": "素心守誓",
+    "characterId": "char_07",
+    "rarityId": "sr",
+    "classId": "debuf",
+    "elementId": "dark",
+    "cd": 5,
+    "tags": [
+      "atk_buff_enemy",
+      "cleanse"
+    ],
+    "image": "assets/img/cards/card_031.svg"
+  },
+  {
+    "id": "card_032",
+    "name": "赤獅咆哮",
+    "characterId": "char_08",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "light",
+    "cd": 4,
+    "tags": [
+      "cleanse",
+      "atk_buff_enemy",
+      "normal_atk"
+    ],
+    "image": "assets/img/cards/card_032.svg"
+  }
+]

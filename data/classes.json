@@ -1,0 +1,7 @@
+[
+  { "id": "atk",   "label": "輸出", "icon": "assets/img/classes/atk.svg" },
+  { "id": "buf",   "label": "增益", "icon": "assets/img/classes/buf.svg" },
+  { "id": "heal",  "label": "治療", "icon": "assets/img/classes/heal.svg" },
+  { "id": "tank",  "label": "坦克", "icon": "assets/img/classes/tank.svg" },
+  { "id": "debuf", "label": "減益", "icon": "assets/img/classes/debuf.svg" }
+]

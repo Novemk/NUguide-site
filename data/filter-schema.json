@@ -1,0 +1,8 @@
+[
+  { "field": "rarityId",    "label": "稀有度",   "source": "data/rarities.json",   "optionType": "badge",     "cardField": "rarityId" },
+  { "field": "classId",     "label": "定位",     "source": "data/classes.json",    "optionType": "icon",      "cardField": "classId" },
+  { "field": "elementId",   "label": "屬性",     "source": "data/elements.json",   "optionType": "icon",      "cardField": "elementId" },
+  { "field": "cd",          "label": "CD",       "source": "data/cd-ranges.json",  "optionType": "range",     "cardField": "cd" },
+  { "field": "characterId", "label": "角色",     "source": "data/characters.json","optionType": "avatar",    "cardField": "characterId" },
+  { "field": "tags",        "label": "技能效果", "source": "data/tags.json",      "optionType": "icon-multi","cardField": "tags" }
+]

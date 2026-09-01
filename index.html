@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>流光秘境攻略 | 玩家攻略站</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Noto+Sans+TC:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/components.css">
+</head>
+<body>
+<div id="navbar-host"></div>
+
+<header class="container page-header">
+  <div class="page-eyebrow">Player Guide</div>
+  <h1>流光秘境攻略</h1>
+  <p>關卡攻略、卡片資料庫與你自己的隊伍紀錄，全部整理在一個地方。</p>
+</header>
+
+<main class="container">
+  <div class="section" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px;">
+    <a class="btn btn-primary btn-block" style="padding:20px; flex-direction:column; align-items:flex-start; gap:4px;" href="stages.html">
+      <strong style="font-size:1.05rem;">關卡攻略</strong>
+      <span style="font-weight:400; font-size:0.85rem; opacity:0.85;">敵人資訊、推薦能力、官方隊伍</span>
+    </a>
+    <a class="btn btn-block" style="padding:20px; flex-direction:column; align-items:flex-start; gap:4px;" href="cards.html">
+      <strong style="font-size:1.05rem;">卡片資料庫</strong>
+      <span style="font-weight:400; font-size:0.85rem; color:var(--text-dim);">多條件圖片式篩選</span>
+    </a>
+    <a class="btn btn-block" style="padding:20px; flex-direction:column; align-items:flex-start; gap:4px;" href="my-teams.html">
+      <strong style="font-size:1.05rem;">我的隊伍</strong>
+      <span style="font-weight:400; font-size:0.85rem; color:var(--text-dim);">跨關卡總覽，快速修改</span>
+    </a>
+  </div>
+</main>
+
+<div id="footer-host"></div>
+
+<script type="module">
+import { mountNavbar, mountFooter } from './src/components/Navbar.js';
+mountNavbar('index.html');
+mountFooter();
+</script>
+</body>
+</html>
