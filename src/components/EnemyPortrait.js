@@ -42,17 +42,21 @@ export function renderEnemyPortrait({
   const portrait = document.createElement('div');
   portrait.className = 'enemy-portrait';
 
+  const clip = document.createElement('div');
+  clip.className = 'enemy-portrait-clip';
+  portrait.appendChild(clip);
+
   const img = document.createElement('img');
   img.className = 'enemy-portrait-img';
   img.alt = imageAlt;
   img.loading = 'lazy';
   img.draggable = false;
-  portrait.appendChild(img);
+  clip.appendChild(img);
 
   function layout() {
     if (!img.naturalWidth || !img.naturalHeight) return;
-    const vw = portrait.clientWidth;
-    const vh = portrait.clientHeight;
+    const vw = clip.clientWidth;
+    const vh = clip.clientHeight;
     if (vw === 0 || vh === 0) return;
     const coverScale = Math.max(vw / img.naturalWidth, vh / img.naturalHeight);
     const scale = coverScale * (imageZoom || 1);
@@ -70,9 +74,14 @@ export function renderEnemyPortrait({
   if (img.complete && img.naturalWidth) layout();
 
   const resizeObserver = new ResizeObserver(() => layout());
-  resizeObserver.observe(portrait);
+  resizeObserver.observe(clip);
 
   if (element) {
+    // Deliberately a sibling of .enemy-portrait-clip, not a child of it —
+    // the clip div is where overflow:hidden lives (so the photo itself
+    // stays a clean rounded square), while the badge sits in the outer
+    // .enemy-portrait wrapper, which has no clipping, so it's free to
+    // overflow past the square's top-left corner as intended.
     const badge = document.createElement('span');
     badge.className = 'enemy-portrait-badge';
     badge.title = element.label;
