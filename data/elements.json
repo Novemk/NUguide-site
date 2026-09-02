@@ -2,6 +2,7 @@
   {
     "id": "wood",
     "label": "木",
+    "sortOrder": 1,
     "icon": "assets/img/elements/wood.png"
   },
   {
