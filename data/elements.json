@@ -20,6 +20,7 @@
   {
     "id": "light",
     "label": "光",
+    "sortOrder": 4,
     "icon": "assets/img/elements/light.png"
   },
   {
