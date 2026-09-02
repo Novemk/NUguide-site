@@ -35,17 +35,20 @@
   },
   {
     "id": "card_003",
-    "name": "森羅庇護",
-    "characterId": "char_03",
+    "name": "向純潔象徵告",
+    "characterId": "char_06",
     "rarityId": "ssr",
-    "classId": "debuf",
+    "classId": "heal",
     "elementId": "dark",
-    "cd": 2,
+    "cd": 4,
     "tags": [
-      "atk_buff_self",
-      "def_down"
+      "heal_tag"
     ],
-    "image": "assets/img/cards/card_003.svg"
+    "image": "assets/img/cards/card_003.png",
+    "imageZoom": 1.47,
+    "imageOffsetX": 0.44418742028468955,
+    "imageOffsetY": 0.24225768929304375,
+    "sortOrder": 3
   },
   {
     "id": "card_004",
