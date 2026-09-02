@@ -500,7 +500,7 @@ hr.ql-divider {
 .team-card-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; margin-bottom: 4px; }
 .team-card-name { font-weight: 700; font-size: 1.02rem; }
 .team-card-note { font-size: 0.82rem; color: var(--text-dim); margin-bottom: 10px; white-space: pre-wrap; }
-.team-card-members { display: flex; gap: 8px; margin-bottom: 12px; }
+.team-card-members { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
 .team-card-members .mini-avatar, .team-card-members .mini-avatar-empty {
   width: 80px; height: 104px; border-radius: 8px; overflow: hidden;
   border: 1px solid var(--border-soft);
@@ -542,6 +542,24 @@ hr.ql-divider {
 .team-card-members .mini-avatar-empty { display: flex; align-items: center; justify-content: center; color: var(--text-faint); font-size: 0.9rem; }
 .team-card-footer { display: flex; justify-content: flex-end; gap: 8px; }
 .team-card-stage-link { font-size: 0.82rem; color: var(--text-faint); margin-bottom: 8px; }
+
+/* Below ~480px the 80px avatars + gaps no longer fit 5-across inside the
+   card's own padding, which is what was breaking out of the frame on
+   phones. Shrinking the avatars (rather than wrapping to a second row)
+   keeps the "one row = one team" reading intact — wrapping worked but
+   read as awkward/unintuitive per feedback. 48px is small but chosen so
+   5 avatars + gaps fit down to ~360px-wide phones; flex-wrap:wrap above
+   stays on as a last-resort fallback only for anything narrower than
+   that (rare at this point), so it never actually breaks the frame. */
+@media (max-width: 480px) {
+  .team-card-members .mini-avatar, .team-card-members .mini-avatar-empty {
+    width: 48px;
+    height: 62.4px;
+  }
+  .team-card-members .mini-avatar-stage {
+    transform: scale(0.24); /* 200×0.24 / 260×0.24 = 48 / 62.4 */
+  }
+}
 
 .team-slots { display: flex; gap: 12px; margin: 6px 0 4px; flex-wrap: wrap; }
 .team-slot-btn { width: 88px; }
