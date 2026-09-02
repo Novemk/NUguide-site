@@ -86,17 +86,20 @@
   },
   {
     "id": "card_006",
-    "name": "夜帷潛行",
-    "characterId": "char_06",
+    "name": "來自主人的新禮物",
+    "characterId": "char_09",
     "rarityId": "ssr",
     "classId": "atk",
-    "elementId": "water",
+    "elementId": "dark",
     "cd": 4,
     "tags": [
-      "normal_atk",
-      "atk_buff_enemy"
+      "aoe"
     ],
-    "image": "assets/img/cards/card_006.svg"
+    "image": "assets/img/cards/card_006.png",
+    "imageZoom": 1.36,
+    "imageOffsetX": 0.3827591221847813,
+    "imageOffsetY": 0.32231061862418375,
+    "sortOrder": 6
   },
   {
     "id": "card_007",
