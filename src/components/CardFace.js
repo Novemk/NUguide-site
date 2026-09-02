@@ -49,7 +49,7 @@ function mountCoverImage(clip, { imageSrc, imageAlt = '', imageZoom = 1, imageOf
   return img;
 }
 
-const BORDER_CLASS_BY_RARITY = { ssr: 'card-face-border-ssr', sr: 'card-face-border-sr', r: 'card-face-border-r', n: 'card-face-border-n' };
+export const BORDER_CLASS_BY_RARITY = { ssr: 'card-face-border-ssr', sr: 'card-face-border-sr', r: 'card-face-border-r', n: 'card-face-border-n' };
 
 /**
  * Renders the visual "face" of a card:

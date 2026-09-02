@@ -1,6 +1,6 @@
 // src/components/TeamCard.js
 import { resolveAsset } from '../core/dataLoader.js';
-import { renderCardFace } from './CardFace.js';
+import { renderCardFace, BORDER_CLASS_BY_RARITY } from './CardFace.js';
 
 // Reference size CardFace is measured against before being scaled down —
 // matches the 200/260 aspect ratio used everywhere else (.card-btn,
@@ -53,10 +53,11 @@ export function renderTeamCard(team, cardMap, opts = {}) {
       stage.style.width = `${STAGE_W}px`;
       stage.style.height = `${STAGE_H}px`;
 
+      const rarity = rarityMap ? rarityMap.get(card.rarityId) : null;
       const face = renderCardFace({
         imageSrc: resolveAsset(card.image),
         imageAlt: card.name,
-        rarity: rarityMap ? rarityMap.get(card.rarityId) : null,
+        rarity,
         element: elementMap ? elementMap.get(card.elementId) : null,
         cls: classMap ? classMap.get(card.classId) : null,
         imageZoom: card.imageZoom,
@@ -65,6 +66,20 @@ export function renderTeamCard(team, cardMap, opts = {}) {
       });
       stage.appendChild(face);
       wrap.appendChild(stage);
+
+      // The rarity border drawn *inside* the scaled stage (see CardFace.js)
+      // is suppressed at this size (.mini-avatar-stage .card-face-border
+      // in components.css) — its CSS-mask technique loses crisp edges on
+      // the right/bottom once rendered at full size and then shrunk by
+      // transform:scale. Redrawn here instead, directly at the avatar's
+      // own real 80×104 size, so it's never scaled and can't lose a sliver.
+      const borderClass = rarity && BORDER_CLASS_BY_RARITY[rarity.id];
+      if (borderClass) {
+        const border = document.createElement('div');
+        border.className = `mini-avatar-border ${borderClass}`;
+        wrap.appendChild(border);
+      }
+
       members.appendChild(wrap);
     } else {
       const wrap = document.createElement('div');

@@ -404,14 +404,30 @@
    down as one unit — this is what keeps "唯一差異只有等比縮小或放大"
    true against 卡片資料庫 / 卡片管理's full-size card.
    Scale is 0.4 (not 0.36) specifically because 200×0.4 / 260×0.4 land on
-   whole pixels (80 / 104) — a fractional result like 93.6px let the
-   browser round the scaled box a hair short of the container's
-   overflow:hidden boundary, clipping a sliver off the border's right
-   and bottom edges. */
+   whole pixels (80 / 104), avoiding fractional-pixel rounding. */
 .team-card-members .mini-avatar-stage {
   position: relative;
   transform: scale(0.4);
   transform-origin: top left;
+}
+/* The rarity border normally drawn inside .card-face (via CSS mask) loses
+   crisp edges on its right/bottom sides once rendered at full size and
+   then shrunk 0.4× by the transform above — masks + transform:scale are
+   an unreliable combination for a clean edge at this size. Hidden here;
+   .mini-avatar-border below redraws the same border directly at the
+   avatar's real, unscaled 80×104 size instead. */
+.team-card-members .mini-avatar-stage .card-face-border { display: none; }
+.mini-avatar-border {
+  position: absolute;
+  inset: 0;
+  border-radius: 8px; /* matches .mini-avatar's own border-radius */
+  padding: 2px;
+  pointer-events: none;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  z-index: 2;
 }
 .team-card-members .mini-avatar-empty { display: flex; align-items: center; justify-content: center; color: var(--text-faint); font-size: 0.9rem; }
 .team-card-footer { display: flex; justify-content: flex-end; gap: 8px; }
