@@ -2,42 +2,22 @@
   {
     "id": "stage_8_2",
     "chapter": "忘卻遺跡",
-    "order": "8-2",
-    "title": "大魔法師之嘆",
+    "order": "1-1",
+    "title": "共同陪伴之探",
     "enemies": [
       {
-        "name": "殘影魔導士",
+        "name": "旋轉木馬",
         "note": "開場即釋放全體減益",
-        "elementId": "fire",
-        "image": "assets/img/enemies/stage_8_2_0_殘影魔導士.png",
-        "imageZoom": 1.12,
-        "imageOffsetX": 0.6191875448731571,
-        "imageOffsetY": 0.6347098496455215
-      },
-      {
-        "name": "石像守衛",
-        "note": "高防禦，建議降防",
-        "elementId": "",
-        "image": "",
-        "imageZoom": 1,
-        "imageOffsetX": 0.5,
-        "imageOffsetY": 0.5
-      },
-      {
-        "name": "大魔法師",
-        "note": "血量過半後爆發大招",
-        "elementId": "",
-        "image": "",
-        "imageZoom": 1,
-        "imageOffsetX": 0.5,
-        "imageOffsetY": 0.5
+        "elementId": "water",
+        "image": "assets/img/enemies/stage_8_2_0_旋轉木馬.png",
+        "imageZoom": 1.23,
+        "imageOffsetX": 0.6027371522400354,
+        "imageOffsetY": 0.5494230411839586
       }
     ],
     "guide": "<p>開場先上<strong>減傷</strong>與<strong>淨化</strong>，避免第一輪被削弱狀態拖累輸出節奏。</p><p>石像守衛防禦偏高，優先使用<strong>降防</strong>技能再集火。</p><p>大魔法師血量過半會釋放全體爆發，務必在該回合前準備好減傷或治療，否則容易團滅。</p>",
     "recommendedTags": [
-      "shield",
-      "def_down",
-      "dot"
+      "burst"
     ]
   },
   {
