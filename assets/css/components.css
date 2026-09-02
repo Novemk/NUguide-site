@@ -278,7 +278,14 @@
 .card-btn.disabled:hover { border-color: var(--border-soft); transform: none; }
 .card-btn-disabled-overlay {
   position: absolute;
-  inset: 0;
+  /* Matches .card-face-badge-tl's own overflow amount (top:-4cqw;
+     left:-4cqw; in card-face.css) so the dimming actually reaches the
+     element badge that's deliberately poking past the card's own edge —
+     inset:0 alone left that badge lit up outside the dimmed area. */
+  top: -4cqw;
+  left: -4cqw;
+  right: 0;
+  bottom: 0;
   background: rgba(25,23,38,0.7);
   border-radius: inherit;
   pointer-events: none;
