@@ -120,16 +120,18 @@
   },
   {
     "id": "card_008",
-    "name": "赤紅怒濤",
-    "characterId": "char_08",
-    "rarityId": "r",
-    "classId": "heal",
-    "elementId": "dark",
+    "name": "賽獸場上的暖陽",
+    "characterId": "char_11",
+    "rarityId": "ssr",
+    "classId": "tank",
+    "elementId": "fire",
     "cd": 4,
-    "tags": [
-      "normal_atk"
-    ],
-    "image": "assets/img/cards/card_008.svg"
+    "tags": [],
+    "image": "assets/img/cards/card_008.png",
+    "imageZoom": 1.39,
+    "imageOffsetX": 0.4883942521799334,
+    "imageOffsetY": 0.19170303306368602,
+    "sortOrder": 8
   },
   {
     "id": "card_009",
