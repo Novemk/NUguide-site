@@ -17,7 +17,7 @@
   {
     "id": "tank",
     "label": "坦克",
-    "icon": "assets/img/classes/tank.svg"
+    "icon": "assets/img/classes/tank.png"
   },
   {
     "id": "debuf",
