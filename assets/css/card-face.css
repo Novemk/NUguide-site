@@ -6,6 +6,7 @@
   position: absolute;
   inset: 0;
   overflow: hidden;
+  border-radius: var(--radius-md);
 }
 .card-face-img {
   position: absolute;
@@ -42,7 +43,8 @@
 .card-face-rarity {
   position: absolute;
   left: 10px;
-  bottom: 8px;
+  bottom: 4px;
+  line-height: 1;
   font-family: var(--font-mono);
   font-weight: 700;
   font-size: 1.9rem;
