@@ -156,6 +156,24 @@
    (not Quill's default 1.5em) per the "限制一個程度不能放太大" request. */
 .guide-content .ql-size-large { font-size: 1.3em; }
 
+/* Divider inserted from the rich-text editor's toolbar (攻略內容 /
+   必殺技敘述 — both share this). A "ticket perforation" dash-dot line:
+   drawn with an SVG background (round-capped dashes + a round dot, on a
+   repeating tile) rather than CSS border-style:dashed, which only draws
+   uniform rectangular dashes and looks flat/plain by comparison.
+   Narrower than the content column and left-aligned (not centered) to
+   read as a break in the text rather than a decorative full-width rule. */
+hr.ql-divider {
+  border: none;
+  width: 60%;
+  max-width: 320px;
+  height: 6px;
+  margin: 1.1em 0;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2222%22%20height%3D%226%22%3E%3Cline%20x1%3D%220%22%20y1%3D%223%22%20x2%3D%2222%22%20y2%3D%223%22%20stroke%3D%22%234fc8b0%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-dasharray%3D%226%2C8%2C0%2C8%22/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-position: left center;
+}
+
 /* =========================================================
    Tag pill (icon + label, read-only display)
    ========================================================= */
@@ -235,6 +253,7 @@
 }
 .ultimate-skill-desc p { margin: 0 0 0.6em; }
 .ultimate-skill-desc p:last-child { margin-bottom: 0; }
+.ultimate-skill-desc .ql-size-large { font-size: 1.3em; }
 
 /* =========================================================
    Card grid & card button (used by CardGrid / CardButton)
