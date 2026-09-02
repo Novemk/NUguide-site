@@ -58,5 +58,10 @@
     "id": "char_14",
     "name": "伊得",
     "icon": "assets/img/characters/char_14.png"
+  },
+  {
+    "id": "char_001",
+    "name": "Ａ",
+    "icon": "assets/img/characters/char_001.png"
   }
 ]
