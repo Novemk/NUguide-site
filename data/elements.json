@@ -8,6 +8,7 @@
   {
     "id": "fire",
     "label": "火",
+    "sortOrder": 2,
     "icon": "assets/img/elements/fire.png"
   },
   {
