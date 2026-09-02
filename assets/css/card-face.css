@@ -10,6 +10,14 @@
      rounded-corner clipping itself happens one layer down, in
      .card-face-clip. */
   border-radius: var(--radius-md);
+  /* Establishes a sizing context so badge widths/offsets and the rarity
+     font-size below can be expressed in cqw (% of THIS element's own
+     rendered width) instead of fixed px. That's what keeps proportions
+     correct whether the card renders at ~200px in 卡片資料庫, ~88px in
+     a 隊伍編輯 slot, or any other width — a fixed-px badge only looked
+     right at one specific width and was oversized everywhere narrower. */
+  container-type: inline-size;
+  isolation: isolate;
 }
 .card-face-clip {
   position: absolute;
@@ -31,8 +39,8 @@
 .card-face-badge {
   position: absolute;
   top: 0;
-  width: 46px;
-  height: 46px;
+  width: 22cqw;
+  height: 22cqw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -41,14 +49,14 @@
 }
 .card-face-badge img { width: 100%; height: 100%; object-fit: contain; }
 .card-face-badge-tr { right: 0; }
-/* Element badge (top-left): deliberately larger and pulled past the
+/* Element badge (top-left): deliberately a bit larger and pulled past the
    card's own edge, and painted last in the DOM (see CardFace.js) so it
    sits above the metallic border and the artwork underneath it. */
 .card-face-badge-tl {
-  left: -8px;
-  top: -8px;
-  width: 64px;
-  height: 64px;
+  left: -3cqw;
+  top: -3cqw;
+  width: 28cqw;
+  height: 28cqw;
   z-index: 3;
 }
 
@@ -61,12 +69,12 @@
 }
 .card-face-rarity {
   position: absolute;
-  left: 10px;
-  bottom: 4px;
+  left: 5cqw;
+  bottom: 2cqw;
   line-height: 1;
   font-family: var(--font-mono);
   font-weight: 700;
-  font-size: 1.55rem;
+  font-size: 11cqw;
   letter-spacing: 0.04em;
   text-shadow: 0 1px 5px rgba(0,0,0,0.95), 0 0 10px rgba(0,0,0,0.7);
 }
