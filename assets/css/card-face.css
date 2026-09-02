@@ -15,16 +15,12 @@
 .card-face-badge {
   position: absolute;
   top: 6px;
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  background: rgba(16,15,24,0.55);
-  border: 1.5px solid rgba(255,255,255,0.55);
+  width: 54px;
+  height: 54px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 4px;
-  backdrop-filter: blur(2px);
+  filter: drop-shadow(0 1px 3px rgba(0,0,0,0.85)) drop-shadow(0 0 4px rgba(0,0,0,0.6));
 }
 .card-face-badge img { width: 100%; height: 100%; object-fit: contain; }
 .card-face-badge-tl { left: 6px; }
@@ -33,8 +29,8 @@
 .card-face-gradient {
   position: absolute;
   left: 0; right: 0; bottom: 0;
-  height: 46%;
-  background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.82) 88%);
+  height: 52%;
+  background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.88) 82%);
   pointer-events: none;
 }
 .card-face-rarity {
@@ -43,9 +39,9 @@
   bottom: 6px;
   font-family: var(--font-mono);
   font-weight: 700;
-  font-size: 0.85rem;
+  font-size: 1.5rem;
   letter-spacing: 0.04em;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.9);
+  text-shadow: 0 1px 5px rgba(0,0,0,0.95), 0 0 10px rgba(0,0,0,0.7);
 }
 
 /* Live preview used in the admin card-image dropzone (same visual language
