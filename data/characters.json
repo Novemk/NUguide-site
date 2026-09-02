@@ -53,5 +53,10 @@
     "id": "char_12",
     "name": "歛",
     "icon": "assets/img/characters/char_12.png"
+  },
+  {
+    "id": "char_14",
+    "name": "ED",
+    "icon": "assets/img/characters/char_14.png"
   }
 ]
