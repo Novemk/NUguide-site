@@ -152,17 +152,20 @@
   },
   {
     "id": "card_010",
-    "name": "緋櫻亂舞",
-    "characterId": "char_10",
+    "name": "酒心可可",
+    "characterId": "char_04",
     "rarityId": "ssr",
-    "classId": "heal",
-    "elementId": "fire",
+    "classId": "atk",
+    "elementId": "dark",
     "cd": 4,
     "tags": [
-      "aoe",
-      "shield"
+      "burst"
     ],
-    "image": "assets/img/cards/card_010.svg"
+    "image": "assets/img/cards/card_010.png",
+    "imageZoom": 1.67,
+    "imageOffsetX": 0.6128127125059173,
+    "imageOffsetY": 0.2491131144614146,
+    "sortOrder": 10
   },
   {
     "id": "card_011",
