@@ -519,6 +519,9 @@
 
 .team-slots { display: flex; gap: 12px; margin: 6px 0 4px; flex-wrap: wrap; }
 .team-slot-btn { width: 88px; }
+.team-slot-move-row { display: flex; gap: 4px; margin-top: 4px; }
+.team-slot-move-row .btn { flex: 1; padding: 4px 0; font-size: 0.9rem; line-height: 1; }
+.team-slot-move-row .btn:disabled { opacity: 0.3; cursor: default; }
 .team-slot-label { text-align: center; font-size: 0.7rem; color: var(--text-faint); margin-top: 4px; }
 
 /* =========================================================

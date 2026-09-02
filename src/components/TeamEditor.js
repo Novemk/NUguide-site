@@ -71,6 +71,13 @@ export function openTeamEditor(stageId, existingTeam = null) {
 
     body.append(nameField, noteField, slotsLabel);
 
+    function moveMember(index, direction) {
+      const target = index + direction;
+      if (target < 0 || target >= members.length) return;
+      [members[index], members[target]] = [members[target], members[index]];
+      renderSlots();
+    }
+
     function renderSlots() {
       slots.innerHTML = '';
       members.forEach((cardId, index) => {
@@ -90,6 +97,29 @@ export function openTeamEditor(stageId, existingTeam = null) {
           });
           btn.style.width = '100%';
           slotWrap.appendChild(btn);
+
+          // Swap this card's position with its left/right neighbor —
+          // stages here often care about which slot a card sits in
+          // (positioning matters), so this saves re-picking cards from
+          // scratch just to reorder them.
+          const moveRow = document.createElement('div');
+          moveRow.className = 'team-slot-move-row';
+          const leftBtn = document.createElement('button');
+          leftBtn.type = 'button';
+          leftBtn.className = 'btn btn-sm btn-secondary';
+          leftBtn.textContent = '◀';
+          leftBtn.disabled = index === 0;
+          leftBtn.setAttribute('aria-label', `將隊員 ${index + 1} 往左移`);
+          leftBtn.addEventListener('click', () => moveMember(index, -1));
+          const rightBtn = document.createElement('button');
+          rightBtn.type = 'button';
+          rightBtn.className = 'btn btn-sm btn-secondary';
+          rightBtn.textContent = '▶';
+          rightBtn.disabled = index === members.length - 1;
+          rightBtn.setAttribute('aria-label', `將隊員 ${index + 1} 往右移`);
+          rightBtn.addEventListener('click', () => moveMember(index, 1));
+          moveRow.append(leftBtn, rightBtn);
+          slotWrap.appendChild(moveRow);
 
           const removeBtn = document.createElement('button');
           removeBtn.type = 'button';
