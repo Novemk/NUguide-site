@@ -73,7 +73,7 @@
     "characterId": "char_08",
     "rarityId": "ssr",
     "classId": "debuf",
-    "elementId": "water",
+    "elementId": "dark",
     "cd": 4,
     "tags": [
       "aoe"
