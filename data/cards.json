@@ -39,15 +39,15 @@
     "characterId": "char_06",
     "rarityId": "ssr",
     "classId": "heal",
-    "elementId": "dark",
+    "elementId": "light",
     "cd": 4,
     "tags": [
       "heal_tag"
     ],
     "image": "assets/img/cards/card_003.png",
-    "imageZoom": 1.47,
-    "imageOffsetX": 0.44418742028468955,
-    "imageOffsetY": 0.24225768929304375,
+    "imageZoom": 1.4,
+    "imageOffsetX": 0.48069602937172884,
+    "imageOffsetY": 0.21428151757831113,
     "sortOrder": 3
   },
   {
