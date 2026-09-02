@@ -16,22 +16,6 @@
     ]
   },
   {
-    "stageId": "stage_9_1",
-    "teams": [
-      {
-        "name": "持續傷害隊",
-        "note": "",
-        "members": [
-          "card_004",
-          "card_008",
-          "card_012",
-          "card_016",
-          "card_020"
-        ]
-      }
-    ]
-  },
-  {
     "stageId": "stage_8_2",
     "teams": [
       {
