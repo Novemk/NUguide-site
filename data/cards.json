@@ -52,16 +52,20 @@
   },
   {
     "id": "card_004",
-    "name": "聖光審判",
-    "characterId": "char_04",
+    "name": "古老祭祀的賭約",
+    "characterId": "char_07",
     "rarityId": "sr",
-    "classId": "tank",
-    "elementId": "dark",
-    "cd": 4,
+    "classId": "atk",
+    "elementId": "wood",
+    "cd": 6,
     "tags": [
       "burst"
     ],
-    "image": "assets/img/cards/card_004.svg"
+    "image": "assets/img/cards/card_004.png",
+    "imageZoom": 1.63,
+    "imageOffsetX": 0.5698748721143096,
+    "imageOffsetY": 0.39921162986498127,
+    "sortOrder": 4
   },
   {
     "id": "card_005",
