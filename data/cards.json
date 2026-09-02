@@ -69,17 +69,20 @@
   },
   {
     "id": "card_005",
-    "name": "幽紫詠嘆",
-    "characterId": "char_05",
-    "rarityId": "sr",
-    "classId": "heal",
+    "name": "化形宴，飄落葉",
+    "characterId": "char_08",
+    "rarityId": "ssr",
+    "classId": "debuf",
     "elementId": "water",
-    "cd": 3,
+    "cd": 4,
     "tags": [
-      "heal_tag",
-      "dot"
+      "aoe"
     ],
-    "image": "assets/img/cards/card_005.svg"
+    "image": "assets/img/cards/card_005.png",
+    "imageZoom": 1.61,
+    "imageOffsetX": 0.47092211554510216,
+    "imageOffsetY": 0.33331460057140927,
+    "sortOrder": 5
   },
   {
     "id": "card_006",
