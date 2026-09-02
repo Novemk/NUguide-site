@@ -1,6 +1,6 @@
 // src/pages/stageDetail.js
 import { loadJSON, DataSources, toMap, resolveAsset } from '../core/dataLoader.js';
-import { mountNavbar, mountFooter } from '../components/Navbar.js';
+import { mountNavbar, mountFooter, getSiteTitle } from '../components/Navbar.js';
 import { renderTeamCard } from '../components/TeamCard.js';
 import { renderEnemyChip } from '../components/EnemyPortrait.js';
 import { renderMyTeamsSection } from '../modules/myTeamsSection.js';
@@ -46,7 +46,7 @@ async function init() {
   const cardMaps = { rarityMap, elementMap, classMap };
   const officialTeams = (stageTeams.find((t) => t.stageId === stageId) || {}).teams || [];
 
-  document.title = `${stage.order} ${stage.title} | 流光秘境攻略`;
+  document.title = `${stage.order} ${stage.title} | ${await getSiteTitle()}`;
 
   document.getElementById('stage-header').innerHTML = `
     <div class="page-eyebrow">${stage.chapter} · ${stage.order}</div>

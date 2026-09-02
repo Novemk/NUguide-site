@@ -8,6 +8,23 @@ const LINKS = [
   { href: 'my-teams.html', label: '我的隊伍' },
 ];
 
+const DEFAULT_SITE_TITLE = '流光秘境攻略';
+
+/**
+ * Resolves the site title set on the admin's 網站設定 page, falling back
+ * to the hardcoded default if the file is missing or the fetch fails —
+ * so no caller needs its own try/catch around this. Cached by loadJSON,
+ * so calling this from multiple pages/components costs one fetch total.
+ */
+export async function getSiteTitle() {
+  try {
+    const settings = await loadJSON(DataSources.siteSettings);
+    return (settings && settings.siteTitle) || DEFAULT_SITE_TITLE;
+  } catch {
+    return DEFAULT_SITE_TITLE;
+  }
+}
+
 export function renderNavbar(current) {
   const nav = document.createElement('div');
   nav.className = 'navbar';
@@ -24,7 +41,7 @@ export function renderNavbar(current) {
   // next to it.
   const titleSpan = document.createElement('span');
   titleSpan.id = 'navbar-brand-title';
-  titleSpan.textContent = '流光秘境攻略';
+  titleSpan.textContent = DEFAULT_SITE_TITLE;
   const subtitleSpan = document.createElement('span');
   subtitleSpan.className = 'navbar-brand-sub';
   subtitleSpan.textContent = '玩家攻略站';
@@ -51,15 +68,27 @@ export function mountNavbar(current) {
   host.replaceWith(renderNavbar(current));
 
   // Same siteTitle field the homepage's <h1> uses (edited from the
-  // admin's 網站設定 page) — applied here too so the navbar brand and
-  // the homepage heading always show the same text. Fetched after the
-  // navbar is already on screen so a slow/missing settings file never
-  // blocks or breaks the page; the hardcoded text above is the fallback.
-  loadJSON(DataSources.siteSettings).then((settings) => {
-    if (!settings || !settings.siteTitle) return;
+  // admin's 網站設定 page) — applied here too so the navbar brand, the
+  // browser tab title, and the homepage heading always show the same
+  // text. Fetched after the navbar is already on screen so a slow/
+  // missing settings file never blocks or breaks the page; the
+  // hardcoded text is the fallback everywhere.
+  //
+  // The tab-title part matters even on pages that never set
+  // document.title themselves (stages.html/cards.html/my-teams.html —
+  // their <title> is static HTML that always ends with the literal
+  // default "流光秘境攻略"): this patches that trailing default to the
+  // real site title. Pages that DO set their own document.title
+  // dynamically (stage-detail.html) now call getSiteTitle() themselves
+  // instead of hardcoding the default, so whichever of the two finishes
+  // last still lands on the same correct value — no ordering race.
+  getSiteTitle().then((siteTitle) => {
     const titleEl = document.getElementById('navbar-brand-title');
-    if (titleEl) titleEl.textContent = settings.siteTitle;
-  }).catch(() => {});
+    if (titleEl) titleEl.textContent = siteTitle;
+    if (document.title.endsWith(DEFAULT_SITE_TITLE)) {
+      document.title = document.title.slice(0, -DEFAULT_SITE_TITLE.length) + siteTitle;
+    }
+  });
 }
 
 export function mountFooter() {
