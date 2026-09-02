@@ -39,8 +39,8 @@
 .card-face-badge {
   position: absolute;
   top: 0;
-  width: 22cqw;
-  height: 22cqw;
+  width: 28cqw;
+  height: 28cqw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -53,10 +53,10 @@
    card's own edge, and painted last in the DOM (see CardFace.js) so it
    sits above the metallic border and the artwork underneath it. */
 .card-face-badge-tl {
-  left: -3cqw;
-  top: -3cqw;
-  width: 28cqw;
-  height: 28cqw;
+  left: -4cqw;
+  top: -4cqw;
+  width: 36cqw;
+  height: 36cqw;
   z-index: 3;
 }
 
@@ -74,7 +74,7 @@
   line-height: 1;
   font-family: var(--font-mono);
   font-weight: 700;
-  font-size: 11cqw;
+  font-size: 15cqw;
   letter-spacing: 0.04em;
   text-shadow: 0 1px 5px rgba(0,0,0,0.95), 0 0 10px rgba(0,0,0,0.7);
 }
