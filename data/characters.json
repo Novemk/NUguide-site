@@ -57,6 +57,7 @@
   {
     "id": "char_14",
     "name": "伊得",
+    "sortOrder": 1,
     "icon": "assets/img/characters/char_14.png"
   }
 ]
