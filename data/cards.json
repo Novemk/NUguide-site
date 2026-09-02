@@ -157,7 +157,7 @@
     "rarityId": "ssr",
     "classId": "atk",
     "elementId": "dark",
-    "cd": 4,
+    "cd": 3,
     "tags": [
       "burst"
     ],
