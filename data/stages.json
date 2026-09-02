@@ -5,12 +5,40 @@
     "order": "8-2",
     "title": "大魔法師之嘆",
     "enemies": [
-      { "name": "殘影魔導士", "note": "開場即釋放全體減益" },
-      { "name": "石像守衛", "note": "高防禦，建議降防" },
-      { "name": "大魔法師", "note": "血量過半後爆發大招" }
+      {
+        "name": "殘影魔導士",
+        "note": "開場即釋放全體減益",
+        "elementId": "water",
+        "image": "assets/img/enemies/stage_8_2_0_殘影魔導士.png",
+        "imageZoom": 1,
+        "imageOffsetX": 0.5893208661417323,
+        "imageOffsetY": 0.5
+      },
+      {
+        "name": "石像守衛",
+        "note": "高防禦，建議降防",
+        "elementId": "",
+        "image": "",
+        "imageZoom": 1,
+        "imageOffsetX": 0.5,
+        "imageOffsetY": 0.5
+      },
+      {
+        "name": "大魔法師",
+        "note": "血量過半後爆發大招",
+        "elementId": "",
+        "image": "",
+        "imageZoom": 1,
+        "imageOffsetX": 0.5,
+        "imageOffsetY": 0.5
+      }
     ],
     "guide": "<p>開場先上<strong>減傷</strong>與<strong>淨化</strong>，避免第一輪被削弱狀態拖累輸出節奏。</p><p>石像守衛防禦偏高，優先使用<strong>降防</strong>技能再集火。</p><p>大魔法師血量過半會釋放全體爆發，務必在該回合前準備好減傷或治療，否則容易團滅。</p>",
-    "recommendedTags": ["shield", "def_down", "dot"]
+    "recommendedTags": [
+      "shield",
+      "def_down",
+      "dot"
+    ]
   },
   {
     "id": "stage_7_5",
@@ -18,11 +46,20 @@
     "order": "7-5",
     "title": "深淵回聲",
     "enemies": [
-      { "name": "回聲亡靈", "note": "會複製我方上一回合傷害" },
-      { "name": "深淵觸手", "note": "範圍攻擊，注意站位" }
+      {
+        "name": "回聲亡靈",
+        "note": "會複製我方上一回合傷害"
+      },
+      {
+        "name": "深淵觸手",
+        "note": "範圍攻擊，注意站位"
+      }
     ],
     "guide": "<p>回聲亡靈會複製我方輸出，<em>不建議一開始就打出最高爆發</em>，先用普攻試探。</p><p>深淵觸手為範圍攻擊，全隊減傷可大幅降低損耗。</p>",
-    "recommendedTags": ["shield", "aoe"]
+    "recommendedTags": [
+      "shield",
+      "aoe"
+    ]
   },
   {
     "id": "stage_9_1",
@@ -30,9 +67,15 @@
     "order": "9-1",
     "title": "不眠的獄卒",
     "enemies": [
-      { "name": "獄卒長", "note": "免疫暈眩，控場技能保留" }
+      {
+        "name": "獄卒長",
+        "note": "免疫暈眩，控場技能保留"
+      }
     ],
     "guide": "<p>獄卒長免疫暈眩類效果，控場技能建議留給後續小怪。</p><p>持續傷害疊加效果在本關表現穩定，推薦優先配置。</p>",
-    "recommendedTags": ["dot", "atk_buff_self"]
+    "recommendedTags": [
+      "dot",
+      "atk_buff_self"
+    ]
   }
 ]
