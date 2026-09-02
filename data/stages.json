@@ -40,22 +40,5 @@
       "shield",
       "aoe"
     ]
-  },
-  {
-    "id": "stage_9_1",
-    "chapter": "永夜迴廊",
-    "order": "9-1",
-    "title": "不眠的獄卒",
-    "enemies": [
-      {
-        "name": "獄卒長",
-        "note": "免疫暈眩，控場技能保留"
-      }
-    ],
-    "guide": "<p>獄卒長免疫暈眩類效果，控場技能建議留給後續小怪。</p><p>持續傷害疊加效果在本關表現穩定，推薦優先配置。</p>",
-    "recommendedTags": [
-      "dot",
-      "atk_buff_self"
-    ]
   }
 ]
