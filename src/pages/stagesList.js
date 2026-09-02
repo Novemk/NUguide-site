@@ -1,26 +1,19 @@
 // src/pages/stagesList.js
 import { loadJSON, DataSources, toMap, resolveAsset } from '../core/dataLoader.js';
 import { mountNavbar, mountFooter } from '../components/Navbar.js';
-
-function stripHtml(html) {
-  const div = document.createElement('div');
-  div.innerHTML = html || '';
-  return div.textContent || '';
-}
+import { renderEnemyPortrait } from '../components/EnemyPortrait.js';
 
 async function init() {
   mountNavbar('stages.html');
   mountFooter();
 
-  const [stages, stageTeams, tags, cards] = await Promise.all([
+  const [stages, tags, elements] = await Promise.all([
     loadJSON(DataSources.stages),
-    loadJSON(DataSources.stageTeams),
     loadJSON(DataSources.tags),
-    loadJSON(DataSources.cards),
+    loadJSON(DataSources.elements),
   ]);
   const tagMap = toMap(tags);
-  const cardMap = toMap(cards);
-  const teamsByStage = new Map(stageTeams.map((entry) => [entry.stageId, entry.teams]));
+  const elementMap = toMap(elements);
 
   // group by chapter, preserving JSON order
   const chapters = [];
@@ -69,7 +62,7 @@ async function init() {
       panel.className = 'accordion-panel';
 
       const recTags = (stage.recommendedTags || []).map((id) => tagMap.get(id)).filter(Boolean);
-      const officialTeams = teamsByStage.get(stage.id) || [];
+      const enemies = stage.enemies || [];
 
       panel.innerHTML = `
         <div class="accordion-block">
@@ -79,28 +72,26 @@ async function init() {
           </div>
         </div>
         <div class="accordion-block">
-          <div class="accordion-block-label">攻略摘要</div>
-          <div class="guide-preview">${stripHtml(stage.guide).slice(0, 60) || '（尚未撰寫攻略）'}${stripHtml(stage.guide).length > 60 ? '…' : ''}</div>
+          <div class="accordion-block-label">敵人</div>
+          <div class="enemy-thumb-row"></div>
         </div>
-        ${officialTeams.length ? `
-        <div class="accordion-block">
-          <div class="accordion-block-label">官方推薦隊伍</div>
-          <div class="mini-team-row"></div>
-        </div>` : ''}
       `;
 
-      if (officialTeams.length) {
-        const row = panel.querySelector('.mini-team-row');
-        for (const team of officialTeams) {
-          const chip = document.createElement('div');
-          chip.style.cssText = 'display:flex;gap:6px;align-items:center;background:var(--bg-elevated);border:1px solid var(--border-soft);border-radius:8px;padding:6px 10px;';
-          const avatars = team.members.filter(Boolean).slice(0, 5).map((cid) => {
-            const c = cardMap.get(cid);
-            return c ? `<img src="${resolveAsset(c.image)}" alt="" style="width:24px;height:24px;border-radius:5px;object-fit:cover;">` : '';
-          }).join('');
-          chip.innerHTML = `<span style="font-size:0.78rem;color:var(--text-dim);">${team.name}</span><span style="display:flex;gap:2px;">${avatars}</span>`;
-          row.appendChild(chip);
+      const enemyRow = panel.querySelector('.enemy-thumb-row');
+      if (enemies.length) {
+        for (const enemy of enemies) {
+          const portrait = renderEnemyPortrait({
+            imageSrc: enemy.image ? resolveAsset(enemy.image) : null,
+            imageAlt: enemy.name,
+            element: enemy.elementId ? elementMap.get(enemy.elementId) : null,
+            imageZoom: enemy.imageZoom,
+            imageOffsetX: enemy.imageOffsetX,
+            imageOffsetY: enemy.imageOffsetY,
+          });
+          enemyRow.appendChild(portrait);
         }
+      } else {
+        enemyRow.innerHTML = '<span class="guide-preview">尚未提供敵人資訊。</span>';
       }
 
       const linkWrap = document.createElement('div');

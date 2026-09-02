@@ -15,8 +15,8 @@
 
 <header class="container page-header">
   <div class="page-eyebrow">Player Guide</div>
-  <h1>流光秘境攻略</h1>
-  <p>關卡攻略、卡片資料庫與你自己的隊伍紀錄，全部整理在一個地方。</p>
+  <h1 id="site-title">流光秘境攻略</h1>
+  <p id="site-tagline">關卡攻略、卡片資料庫與你自己的隊伍紀錄，全部整理在一個地方。</p>
 </header>
 
 <main class="container">
@@ -40,8 +40,22 @@
 
 <script type="module">
 import { mountNavbar, mountFooter } from './src/components/Navbar.js';
+import { loadJSON, DataSources } from './src/core/dataLoader.js';
 mountNavbar('index.html');
 mountFooter();
+
+// data/site-settings.json is edited from the admin's 網站設定 page; fall
+// back to the text already in the HTML (above) if the file is missing so
+// a fresh repo without it yet still renders correctly.
+loadJSON(DataSources.siteSettings).then((settings) => {
+  if (settings.siteTitle) {
+    document.getElementById('site-title').textContent = settings.siteTitle;
+    document.title = `${settings.siteTitle} | 玩家攻略站`;
+  }
+  if (settings.siteTagline) {
+    document.getElementById('site-tagline').textContent = settings.siteTagline;
+  }
+}).catch(() => {});
 </script>
 </body>
 </html>

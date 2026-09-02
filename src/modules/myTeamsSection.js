@@ -9,8 +9,11 @@ import { showToast } from '../core/toast.js';
  * @param {HTMLElement} container
  * @param {string} stageId
  * @param {Map} cardMap
+ * @param {{rarityMap?:Map, elementMap?:Map, classMap?:Map}} [maps] - passed
+ *   through to TeamCard/TeamEditor so the card face shows the same
+ *   屬性/定位/稀有度 badges as everywhere else on the site.
  */
-export async function renderMyTeamsSection(container, stageId, cardMap) {
+export async function renderMyTeamsSection(container, stageId, cardMap, maps) {
   async function refresh() {
     const teams = await getTeams(stageId);
     container.innerHTML = '';
@@ -23,6 +26,7 @@ export async function renderMyTeamsSection(container, stageId, cardMap) {
     } else {
       for (const team of teams) {
         container.appendChild(renderTeamCard(team, cardMap, {
+          maps,
           actions: [
             { label: '修改', className: 'btn btn-sm', onClick: () => handleEdit(team) },
             { label: '複製', className: 'btn btn-sm btn-secondary', onClick: () => handleDuplicate(team) },

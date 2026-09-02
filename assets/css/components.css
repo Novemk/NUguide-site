@@ -147,6 +147,14 @@
 .enemy-chip-note { font-size: 0.82rem; color: var(--text-dim); }
 .guide-content { background: var(--bg-card); border: 1px solid var(--border-soft); border-radius: var(--radius-md); padding: 18px 20px; }
 .guide-content :last-child { margin-bottom: 0; }
+/* Quill (the admin's rich-text editor) writes <span class="ql-size-large">
+   for the one-step-up size option, and inline color styles for the
+   swatch picker (those need no extra CSS — they're plain style="color:").
+   The admin page has Quill's own stylesheet loaded so this class already
+   renders there; the public site doesn't load Quill at all, so this rule
+   is what makes the same markup look right here too. Deliberately modest
+   (not Quill's default 1.5em) per the "限制一個程度不能放太大" request. */
+.guide-content .ql-size-large { font-size: 1.3em; }
 
 /* =========================================================
    Tag pill (icon + label, read-only display)
@@ -176,7 +184,9 @@
   border: 2px solid var(--border-soft);
   border-radius: var(--radius-md);
   padding: 0;
-  overflow: hidden;
+  /* No overflow:hidden — CardFace clips its own artwork/gradient via
+     .card-face-clip; leaving this visible lets the element badge
+     protrude past the card edge as designed. */
   text-align: left;
   transition: border-color 0.15s, transform 0.1s;
   aspect-ratio: 200 / 260;
@@ -343,11 +353,22 @@
 .team-card-note { font-size: 0.82rem; color: var(--text-dim); margin-bottom: 10px; white-space: pre-wrap; }
 .team-card-members { display: flex; gap: 8px; margin-bottom: 12px; }
 .team-card-members .mini-avatar, .team-card-members .mini-avatar-empty {
-  width: 44px; height: 44px; border-radius: 8px; overflow: hidden;
+  width: 72px; height: 93.6px; border-radius: 8px; overflow: hidden;
   border: 1px solid var(--border-soft);
   background: var(--bg-elevated);
+  position: relative;
+  flex-shrink: 0;
 }
-.team-card-members .mini-avatar img { width: 100%; height: 100%; object-fit: cover; }
+/* .mini-avatar-stage is rendered at the same 200x260 reference size as
+   every other card (.card-btn/.card-preview-box) so CardFace's fixed-px
+   badges/gradient/rarity text keep identical proportions, then scaled
+   down as one unit — this is what keeps "唯一差異只有等比縮小或放大"
+   true against 卡片資料庫 / 卡片管理's full-size card. */
+.team-card-members .mini-avatar-stage {
+  position: relative;
+  transform: scale(0.36);
+  transform-origin: top left;
+}
 .team-card-members .mini-avatar-empty { display: flex; align-items: center; justify-content: center; color: var(--text-faint); font-size: 0.9rem; }
 .team-card-footer { display: flex; justify-content: flex-end; gap: 8px; }
 .team-card-stage-link { font-size: 0.82rem; color: var(--text-faint); margin-bottom: 8px; }

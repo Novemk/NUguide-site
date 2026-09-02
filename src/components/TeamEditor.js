@@ -1,7 +1,8 @@
 // src/components/TeamEditor.js
 import { openModal } from './Modal.js';
 import { openCardPicker } from './CardPicker.js';
-import { loadJSON, DataSources, resolveAsset } from '../core/dataLoader.js';
+import { renderCardButton } from './CardButton.js';
+import { loadJSON, DataSources } from '../core/dataLoader.js';
 import { saveTeam, TEAM_MEMBER_SLOTS } from '../core/store.js';
 import { showToast } from '../core/toast.js';
 
@@ -13,8 +14,21 @@ import { showToast } from '../core/toast.js';
  */
 export function openTeamEditor(stageId, existingTeam = null) {
   return new Promise(async (resolve) => {
-    const cards = await loadJSON(DataSources.cards);
+    const [cards, rarities, elements, classes] = await Promise.all([
+      loadJSON(DataSources.cards),
+      loadJSON(DataSources.rarities),
+      loadJSON(DataSources.elements),
+      loadJSON(DataSources.classes),
+    ]);
     const cardMap = new Map(cards.map((c) => [c.id, c]));
+    // Same maps CardButton/CardGrid use everywhere else, so a slot here
+    // (屬性/定位/稀有度 badges, same proportions) looks identical to the
+    // card as it appears in 卡片資料庫 or the card picker grid below it.
+    const cardMaps = {
+      rarityMap: new Map(rarities.map((r) => [r.id, r])),
+      elementMap: new Map(elements.map((e) => [e.id, e])),
+      classMap: new Map(classes.map((c) => [c.id, c])),
+    };
 
     let members = existingTeam
       ? [...existingTeam.members]
@@ -65,21 +79,16 @@ export function openTeamEditor(stageId, existingTeam = null) {
         slotWrap.className = 'team-slot-btn';
 
         if (card) {
-          const btn = document.createElement('button');
-          btn.type = 'button';
-          btn.className = 'card-btn';
-          btn.style.width = '100%';
-          const img = document.createElement('img');
-          img.src = resolveAsset(card.image);
-          img.alt = card.name;
-          btn.appendChild(img);
-          btn.addEventListener('click', async () => {
-            const chosen = await openCardPicker();
-            if (chosen) {
-              members[index] = chosen.id;
-              renderSlots();
-            }
+          const btn = renderCardButton(card, cardMaps, {
+            onClick: async () => {
+              const chosen = await openCardPicker();
+              if (chosen) {
+                members[index] = chosen.id;
+                renderSlots();
+              }
+            },
           });
+          btn.style.width = '100%';
           slotWrap.appendChild(btn);
 
           const removeBtn = document.createElement('button');

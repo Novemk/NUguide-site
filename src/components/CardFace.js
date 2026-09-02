@@ -3,11 +3,14 @@ import { resolveAsset } from '../core/dataLoader.js';
 
 /**
  * Renders the visual "face" of a card:
- * - full-bleed artwork (with optional zoom/pan positioning)
- * - element badge, top-left
+ * - full-bleed artwork (with optional zoom/pan positioning), clipped to
+ *   rounded corners by an inner .card-face-clip wrapper
+ * - a metallic gradient border keyed to the rarity
+ * - element badge, top-left — deliberately NOT inside the clipped wrapper,
+ *   and appended after the border, so it can overflow past the card's
+ *   edge and paint above the border/gradient/artwork
  * - class (定位) badge, top-right
  * - a bottom semi-transparent black gradient with the rarity label
- * - a metallic gradient border keyed to the rarity
  *
  * Image positioning uses the exact same pixel-based math as the admin's
  * interactive cropper (src/components/ImageCropper.js) — real
@@ -41,12 +44,18 @@ export function renderCardFace({
   const face = document.createElement('div');
   face.className = 'card-face';
 
+  // Everything that must stay inside the card's rounded-corner silhouette
+  // (artwork, bottom gradient, rarity text) lives in this clipped layer.
+  const clip = document.createElement('div');
+  clip.className = 'card-face-clip';
+  face.appendChild(clip);
+
   const img = document.createElement('img');
   img.className = 'card-face-img';
   img.alt = imageAlt;
   img.loading = 'lazy';
   img.draggable = false;
-  face.appendChild(img);
+  clip.appendChild(img);
 
   // Self-positioning: recompute pixel geometry whenever the image finishes
   // loading (need naturalWidth/Height) and whenever the card's own
@@ -55,8 +64,8 @@ export function renderCardFace({
   // callers never need to measure or re-position it themselves.
   function layout() {
     if (!img.naturalWidth || !img.naturalHeight) return;
-    const vw = face.clientWidth;
-    const vh = face.clientHeight;
+    const vw = clip.clientWidth;
+    const vh = clip.clientHeight;
     if (vw === 0 || vh === 0) return;
     const coverScale = Math.max(vw / img.naturalWidth, vh / img.naturalHeight);
     const scale = coverScale * (imageZoom || 1);
@@ -74,33 +83,11 @@ export function renderCardFace({
   if (img.complete && img.naturalWidth) layout(); // cached image, load already fired
 
   const resizeObserver = new ResizeObserver(() => layout());
-  resizeObserver.observe(face);
-
-  if (element) {
-    const badge = document.createElement('span');
-    badge.className = 'card-face-badge card-face-badge-tl';
-    badge.title = element.label;
-    const bimg = document.createElement('img');
-    bimg.src = resolveAsset(element.icon);
-    bimg.alt = element.label;
-    badge.appendChild(bimg);
-    face.appendChild(badge);
-  }
-
-  if (cls) {
-    const badge = document.createElement('span');
-    badge.className = 'card-face-badge card-face-badge-tr';
-    badge.title = cls.label;
-    const bimg = document.createElement('img');
-    bimg.src = resolveAsset(cls.icon);
-    bimg.alt = cls.label;
-    badge.appendChild(bimg);
-    face.appendChild(badge);
-  }
+  resizeObserver.observe(clip);
 
   const gradient = document.createElement('div');
   gradient.className = 'card-face-gradient';
-  face.appendChild(gradient);
+  clip.appendChild(gradient);
 
   if (rarity) {
     const rarityLabel = document.createElement('span');
@@ -135,7 +122,7 @@ export function renderCardFace({
       if (rarity.color) rarityLabel.style.color = rarity.color;
     }
 
-    face.appendChild(rarityLabel);
+    clip.appendChild(rarityLabel);
 
     const borderIds = { ssr: 'card-face-border-ssr', sr: 'card-face-border-sr', r: 'card-face-border-r', n: 'card-face-border-n' };
     const borderClass = borderIds[rarity.id];
@@ -144,6 +131,31 @@ export function renderCardFace({
       border.className = `card-face-border ${borderClass}`;
       face.appendChild(border);
     }
+  }
+
+  // Badges are appended last (and live outside .card-face-clip) so they
+  // paint above the border/gradient/artwork and — for the element badge —
+  // are free to overflow past the card's own rounded-corner edge.
+  if (cls) {
+    const badge = document.createElement('span');
+    badge.className = 'card-face-badge card-face-badge-tr';
+    badge.title = cls.label;
+    const bimg = document.createElement('img');
+    bimg.src = resolveAsset(cls.icon);
+    bimg.alt = cls.label;
+    badge.appendChild(bimg);
+    face.appendChild(badge);
+  }
+
+  if (element) {
+    const badge = document.createElement('span');
+    badge.className = 'card-face-badge card-face-badge-tl';
+    badge.title = element.label;
+    const bimg = document.createElement('img');
+    bimg.src = resolveAsset(element.icon);
+    bimg.alt = element.label;
+    badge.appendChild(bimg);
+    face.appendChild(badge);
   }
 
   return face;

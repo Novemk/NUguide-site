@@ -12,12 +12,16 @@ async function init() {
   mountNavbar('my-teams.html');
   mountFooter();
 
-  const [stages, cards] = await Promise.all([
+  const [stages, cards, rarities, classes, elements] = await Promise.all([
     loadJSON(DataSources.stages),
     loadJSON(DataSources.cards),
+    loadJSON(DataSources.rarities),
+    loadJSON(DataSources.classes),
+    loadJSON(DataSources.elements),
   ]);
   const stageMap = toMap(stages);
   const cardMap = toMap(cards);
+  const cardMaps = { rarityMap: toMap(rarities), classMap: toMap(classes), elementMap: toMap(elements) };
   const root = document.getElementById('overview-root');
 
   async function refresh() {
@@ -54,6 +58,7 @@ async function init() {
 
       for (const team of entry.teams) {
         block.appendChild(renderTeamCard(team, cardMap, {
+          maps: cardMaps,
           actions: [
             { label: '修改', className: 'btn btn-sm', onClick: () => handleEdit(entry.stageId, team) },
             { label: '複製', className: 'btn btn-sm btn-secondary', onClick: () => handleDuplicate(entry.stageId, team) },

@@ -22,12 +22,14 @@ async function init() {
     return;
   }
 
-  const [stages, stageTeams, tags, cards, elements] = await Promise.all([
+  const [stages, stageTeams, tags, cards, elements, rarities, classes] = await Promise.all([
     loadJSON(DataSources.stages),
     loadJSON(DataSources.stageTeams),
     loadJSON(DataSources.tags),
     loadJSON(DataSources.cards),
     loadJSON(DataSources.elements),
+    loadJSON(DataSources.rarities),
+    loadJSON(DataSources.classes),
   ]);
 
   const stage = stages.find((s) => s.id === stageId);
@@ -39,6 +41,9 @@ async function init() {
   const tagMap = toMap(tags);
   const cardMap = toMap(cards);
   const elementMap = toMap(elements);
+  const rarityMap = toMap(rarities);
+  const classMap = toMap(classes);
+  const cardMaps = { rarityMap, elementMap, classMap };
   const officialTeams = (stageTeams.find((t) => t.stageId === stageId) || {}).teams || [];
 
   document.title = `${stage.order} ${stage.title} | 流光秘境攻略`;
@@ -74,15 +79,15 @@ async function init() {
   if (officialTeams.length) {
     officialWrap.innerHTML = '';
     for (const team of officialTeams) {
-      officialWrap.appendChild(renderTeamCard(team, cardMap, { showNote: true }));
+      officialWrap.appendChild(renderTeamCard(team, cardMap, { showNote: true, maps: cardMaps }));
     }
   } else {
-    officialWrap.innerHTML = '<p class="guide-preview">尚未提供官方推薦隊伍。</p>';
+    officialWrap.innerHTML = '<p class="guide-preview">尚未提供推薦隊伍。</p>';
   }
 
   // My teams
   const myTeamsHost = document.getElementById('my-teams-list');
-  const { handleAdd } = await renderMyTeamsSection(myTeamsHost, stageId, cardMap);
+  const { handleAdd } = await renderMyTeamsSection(myTeamsHost, stageId, cardMap, cardMaps);
   document.getElementById('add-team-btn').addEventListener('click', handleAdd);
 }
 

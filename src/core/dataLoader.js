@@ -68,6 +68,7 @@ export const DataSources = {
   stages: 'data/stages.json',
   stageTeams: 'data/stage-teams.json',
   filterSchema: 'data/filter-schema.json',
+  siteSettings: 'data/site-settings.json',
 };
 
 /** Loads every taxonomy file needed to render the filter panel / forms. */

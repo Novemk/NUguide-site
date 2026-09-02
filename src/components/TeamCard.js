@@ -1,5 +1,13 @@
 // src/components/TeamCard.js
 import { resolveAsset } from '../core/dataLoader.js';
+import { renderCardFace } from './CardFace.js';
+
+// Reference size CardFace is measured against before being scaled down —
+// matches the 200/260 aspect ratio used everywhere else (.card-btn,
+// .card-preview-box), so badge sizes / gradient / rarity text all keep
+// the exact same proportions as the full-size card, just shrunk down.
+const STAGE_W = 200;
+const STAGE_H = 260;
 
 /**
  * @param {Object} team - { name, note, members: [cardId|null, ...] }
@@ -7,8 +15,13 @@ import { resolveAsset } from '../core/dataLoader.js';
  * @param {Object} [opts]
  * @param {Array<{label:string, className:string, onClick:Function}>} [opts.actions]
  * @param {boolean} [opts.showNote]
+ * @param {{rarityMap?:Map, elementMap?:Map, classMap?:Map}} [opts.maps] - pass
+ *   these to show the same 屬性/定位/稀有度 badges CardFace shows everywhere
+ *   else (卡片資料庫、後台卡片管理…). Omitted maps just render without that badge.
  */
 export function renderTeamCard(team, cardMap, opts = {}) {
+  const { rarityMap, elementMap, classMap } = opts.maps || {};
+
   const el = document.createElement('div');
   el.className = 'team-card';
 
@@ -34,10 +47,24 @@ export function renderTeamCard(team, cardMap, opts = {}) {
     if (card) {
       const wrap = document.createElement('div');
       wrap.className = 'mini-avatar';
-      const img = document.createElement('img');
-      img.src = resolveAsset(card.image);
-      img.alt = card.name;
-      wrap.appendChild(img);
+
+      const stage = document.createElement('div');
+      stage.className = 'mini-avatar-stage';
+      stage.style.width = `${STAGE_W}px`;
+      stage.style.height = `${STAGE_H}px`;
+
+      const face = renderCardFace({
+        imageSrc: resolveAsset(card.image),
+        imageAlt: card.name,
+        rarity: rarityMap ? rarityMap.get(card.rarityId) : null,
+        element: elementMap ? elementMap.get(card.elementId) : null,
+        cls: classMap ? classMap.get(card.classId) : null,
+        imageZoom: card.imageZoom,
+        imageOffsetX: card.imageOffsetX,
+        imageOffsetY: card.imageOffsetY,
+      });
+      stage.appendChild(face);
+      wrap.appendChild(stage);
       members.appendChild(wrap);
     } else {
       const wrap = document.createElement('div');
