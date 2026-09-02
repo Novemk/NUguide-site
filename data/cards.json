@@ -144,10 +144,10 @@
     "tags": [
       "burst"
     ],
-    "image": "assets/img/cards/card_009.svg",
-    "imageZoom": 1,
-    "imageOffsetX": 0.5,
-    "imageOffsetY": 0.5,
+    "image": "assets/img/cards/card_009.png",
+    "imageZoom": 1.67,
+    "imageOffsetX": 0.5265183315970626,
+    "imageOffsetY": 0.3865980584447897,
     "sortOrder": 9
   },
   {
