@@ -13,6 +13,9 @@ const INFO_ICON_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor
  * @param {Map} [maps.classMap] - id -> class/定位 object (for the top-right badge)
  * @param {Object} [opts]
  * @param {boolean} [opts.selected]
+ * @param {boolean} [opts.disabled] - dims the card with a 30% black overlay
+ *   and blocks onClick (e.g. a card already in the team being edited) —
+ *   onInfoClick still works, so it's still possible to look the card up.
  * @param {(card:Object) => void} [opts.onClick]
  * @param {(card:Object) => void} [opts.onInfoClick] - when set, shows a small
  *   info button in the bottom-right corner on hover (same size as the
@@ -28,9 +31,10 @@ export function renderCardButton(card, maps, opts = {}) {
 
   const btn = document.createElement('button');
   btn.type = 'button';
-  btn.className = 'card-btn' + (opts.selected ? ' selected' : '');
-  btn.setAttribute('aria-label', card.name);
+  btn.className = 'card-btn' + (opts.selected ? ' selected' : '') + (opts.disabled ? ' disabled' : '');
+  btn.setAttribute('aria-label', card.name + (opts.disabled ? '（已在隊伍中）' : ''));
   btn.dataset.cardId = card.id;
+  if (opts.disabled) btn.setAttribute('aria-disabled', 'true');
 
   const face = renderCardFace({
     imageSrc: resolveAsset(card.image),
@@ -43,6 +47,12 @@ export function renderCardButton(card, maps, opts = {}) {
     imageOffsetY: card.imageOffsetY,
   });
   btn.appendChild(face);
+
+  if (opts.disabled) {
+    const overlay = document.createElement('div');
+    overlay.className = 'card-btn-disabled-overlay';
+    btn.appendChild(overlay);
+  }
 
   if (opts.onInfoClick) {
     // A <button> can't legally nest inside another <button>, so this is a
@@ -68,6 +78,6 @@ export function renderCardButton(card, maps, opts = {}) {
     btn.appendChild(infoBtn);
   }
 
-  if (opts.onClick) btn.addEventListener('click', () => opts.onClick(card));
+  if (opts.onClick && !opts.disabled) btn.addEventListener('click', () => opts.onClick(card));
   return btn;
 }

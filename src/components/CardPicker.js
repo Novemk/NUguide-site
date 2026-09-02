@@ -10,9 +10,15 @@ import { sortCardsByOrder } from '../modules/cardSort.js';
 /**
  * Opens the card picker modal and resolves with the chosen card, or null
  * if the player closes it without picking one.
+ * @param {Object} [opts]
+ * @param {string[]} [opts.excludeIds] - card ids to show dimmed and
+ *   unclickable — e.g. the OTHER cards already in the team being built,
+ *   so the same card can't be picked twice into one team. Omit (or leave
+ *   the slot currently being edited out of the list) to allow it.
  * @returns {Promise<Object|null>}
  */
-export function openCardPicker() {
+export function openCardPicker(opts = {}) {
+  const excludeIds = new Set(opts.excludeIds || []);
   return new Promise(async (resolve) => {
     const [cardsRaw, rarities, classes, elements, characters, tags] = await Promise.all([
       loadJSON(DataSources.cards),
@@ -59,6 +65,7 @@ export function openCardPicker() {
     const gridOpts = {
       onCardClick: pickCard,
       onInfoClick: (card) => showCardInfoModal(card, infoMaps),
+      isDisabled: (card) => excludeIds.has(card.id),
       compact: true,
       emptyTitle: '沒有符合條件的卡片',
       emptyBody: '試著取消一些篩選條件，範圍會重新放寬。',

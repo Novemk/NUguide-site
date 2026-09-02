@@ -81,7 +81,7 @@ export function openTeamEditor(stageId, existingTeam = null) {
         if (card) {
           const btn = renderCardButton(card, cardMaps, {
             onClick: async () => {
-              const chosen = await openCardPicker();
+              const chosen = await openCardPicker({ excludeIds: members.filter((id, i) => id && i !== index) });
               if (chosen) {
                 members[index] = chosen.id;
                 renderSlots();
@@ -108,7 +108,7 @@ export function openTeamEditor(stageId, existingTeam = null) {
           btn.setAttribute('aria-label', `選擇第 ${index + 1} 位隊員`);
           btn.textContent = '+';
           btn.addEventListener('click', async () => {
-            const chosen = await openCardPicker();
+            const chosen = await openCardPicker({ excludeIds: members.filter(Boolean) });
             if (chosen) {
               members[index] = chosen.id;
               renderSlots();

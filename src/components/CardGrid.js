@@ -10,6 +10,8 @@ import { renderCardButton } from './CardButton.js';
  * @param {(card:Object) => void} [opts.onInfoClick] - see CardButton.js; adds
  *   a hover info button to every card that opens 卡片資訊 without selecting it
  * @param {(card:Object) => boolean} [opts.isSelected]
+ * @param {(card:Object) => boolean} [opts.isDisabled] - see CardButton.js's
+ *   opts.disabled — cards this returns true for are dimmed and unclickable
  * @param {string} [opts.emptyTitle]
  * @param {string} [opts.emptyBody]
  * @param {boolean} [opts.compact] - smaller minimum tile size (see
@@ -29,7 +31,8 @@ export function renderCardGrid(container, cards, maps, opts = {}) {
   grid.className = 'card-grid' + (opts.compact ? ' card-grid--compact' : '');
   for (const card of cards) {
     const selected = opts.isSelected ? opts.isSelected(card) : false;
-    grid.appendChild(renderCardButton(card, maps, { selected, onClick: opts.onCardClick, onInfoClick: opts.onInfoClick }));
+    const disabled = opts.isDisabled ? opts.isDisabled(card) : false;
+    grid.appendChild(renderCardButton(card, maps, { selected, disabled, onClick: opts.onCardClick, onInfoClick: opts.onInfoClick }));
   }
   container.appendChild(grid);
 }
