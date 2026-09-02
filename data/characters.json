@@ -1,14 +1,62 @@
 [
-  { "id": "char_01", "name": "焰",  "icon": "assets/img/characters/char_01.svg" },
-  { "id": "char_02", "name": "冰",  "icon": "assets/img/characters/char_02.svg" },
-  { "id": "char_03", "name": "葉",  "icon": "assets/img/characters/char_03.svg" },
-  { "id": "char_04", "name": "光",  "icon": "assets/img/characters/char_04.svg" },
-  { "id": "char_05", "name": "紫",  "icon": "assets/img/characters/char_05.svg" },
-  { "id": "char_06", "name": "夜",  "icon": "assets/img/characters/char_06.svg" },
-  { "id": "char_07", "name": "白",  "icon": "assets/img/characters/char_07.svg" },
-  { "id": "char_08", "name": "赤",  "icon": "assets/img/characters/char_08.svg" },
-  { "id": "char_09", "name": "銀",  "icon": "assets/img/characters/char_09.svg" },
-  { "id": "char_10", "name": "櫻",  "icon": "assets/img/characters/char_10.svg" },
-  { "id": "char_11", "name": "菫",  "icon": "assets/img/characters/char_11.svg" },
-  { "id": "char_12", "name": "土",  "icon": "assets/img/characters/char_12.svg" }
+  {
+    "id": "char_01",
+    "name": "啖天",
+    "icon": "assets/img/characters/char_01.png"
+  },
+  {
+    "id": "char_02",
+    "name": "艾斯特",
+    "icon": "assets/img/characters/char_02.png"
+  },
+  {
+    "id": "char_03",
+    "name": "墨菲",
+    "icon": "assets/img/characters/char_03.png"
+  },
+  {
+    "id": "char_04",
+    "name": "八雲",
+    "icon": "assets/img/characters/char_04.png"
+  },
+  {
+    "id": "char_05",
+    "name": "艾德蒙特",
+    "icon": "assets/img/characters/char_05.png"
+  },
+  {
+    "id": "char_06",
+    "name": "奧利文",
+    "icon": "assets/img/characters/char_06.png"
+  },
+  {
+    "id": "char_07",
+    "name": "崑西",
+    "icon": "assets/img/characters/char_07.png"
+  },
+  {
+    "id": "char_08",
+    "name": "玖夜",
+    "icon": "assets/img/characters/char_08.png"
+  },
+  {
+    "id": "char_09",
+    "name": "可爾",
+    "icon": "assets/img/characters/char_09.png"
+  },
+  {
+    "id": "char_10",
+    "name": "布儡",
+    "icon": "assets/img/characters/char_10.png"
+  },
+  {
+    "id": "char_11",
+    "name": "啖天",
+    "icon": "assets/img/characters/char_11.png"
+  },
+  {
+    "id": "char_12",
+    "name": "歛",
+    "icon": "assets/img/characters/char_12.png"
+  }
 ]
