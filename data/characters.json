@@ -1,10 +1,5 @@
 [
   {
-    "id": "char_01",
-    "name": "啖天",
-    "icon": "assets/img/characters/char_01.png"
-  },
-  {
     "id": "char_02",
     "name": "艾斯特",
     "icon": "assets/img/characters/char_02.png"
@@ -58,5 +53,10 @@
     "id": "char_12",
     "name": "歛",
     "icon": "assets/img/characters/char_12.png"
+  },
+  {
+    "id": "char_14",
+    "name": "伊得",
+    "icon": "assets/img/characters/char_14.png"
   }
 ]
