@@ -1,7 +1,27 @@
 [
-  { "id": "wood",  "label": "木", "icon": "assets/img/elements/wood.svg" },
-  { "id": "fire",  "label": "火", "icon": "assets/img/elements/fire.svg" },
-  { "id": "water", "label": "水", "icon": "assets/img/elements/water.svg" },
-  { "id": "light", "label": "光", "icon": "assets/img/elements/light.svg" },
-  { "id": "dark",  "label": "闇", "icon": "assets/img/elements/dark.svg" }
+  {
+    "id": "wood",
+    "label": "木",
+    "icon": "assets/img/elements/wood.png"
+  },
+  {
+    "id": "fire",
+    "label": "火",
+    "icon": "assets/img/elements/fire.svg"
+  },
+  {
+    "id": "water",
+    "label": "水",
+    "icon": "assets/img/elements/water.svg"
+  },
+  {
+    "id": "light",
+    "label": "光",
+    "icon": "assets/img/elements/light.svg"
+  },
+  {
+    "id": "dark",
+    "label": "闇",
+    "icon": "assets/img/elements/dark.svg"
+  }
 ]
