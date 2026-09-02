@@ -31,6 +31,9 @@ export function renderCardButton(card, maps, opts = {}) {
     rarity,
     element,
     cls,
+    imageZoom: card.imageZoom,
+    imageOffsetX: card.imageOffsetX,
+    imageOffsetY: card.imageOffsetY,
   });
   btn.appendChild(face);
 
