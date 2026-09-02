@@ -1,17 +1,20 @@
 [
   {
     "id": "card_001",
-    "name": "熾焰劍舞",
-    "characterId": "char_01",
-    "rarityId": "sr",
+    "name": "爵士冊封之夜",
+    "characterId": "char_05",
+    "rarityId": "ssr",
     "classId": "atk",
     "elementId": "water",
     "cd": 4,
     "tags": [
-      "burst",
-      "dot"
+      "burst"
     ],
-    "image": "assets/img/cards/card_001.svg"
+    "image": "assets/img/cards/card_001.png",
+    "imageZoom": 1,
+    "imageOffsetX": 0.5,
+    "imageOffsetY": 0.5,
+    "sortOrder": 1
   },
   {
     "id": "card_002",
