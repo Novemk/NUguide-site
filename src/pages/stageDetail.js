@@ -2,6 +2,7 @@
 import { loadJSON, DataSources, toMap, resolveAsset } from '../core/dataLoader.js';
 import { mountNavbar, mountFooter } from '../components/Navbar.js';
 import { renderTeamCard } from '../components/TeamCard.js';
+import { renderEnemyChip } from '../components/EnemyPortrait.js';
 import { renderMyTeamsSection } from '../modules/myTeamsSection.js';
 
 function getStageIdFromUrl() {
@@ -21,11 +22,12 @@ async function init() {
     return;
   }
 
-  const [stages, stageTeams, tags, cards] = await Promise.all([
+  const [stages, stageTeams, tags, cards, elements] = await Promise.all([
     loadJSON(DataSources.stages),
     loadJSON(DataSources.stageTeams),
     loadJSON(DataSources.tags),
     loadJSON(DataSources.cards),
+    loadJSON(DataSources.elements),
   ]);
 
   const stage = stages.find((s) => s.id === stageId);
@@ -36,6 +38,7 @@ async function init() {
 
   const tagMap = toMap(tags);
   const cardMap = toMap(cards);
+  const elementMap = toMap(elements);
   const officialTeams = (stageTeams.find((t) => t.stageId === stageId) || {}).teams || [];
 
   document.title = `${stage.order} ${stage.title} | 流光秘境攻略`;
@@ -47,13 +50,11 @@ async function init() {
 
   // Enemies
   const enemyList = document.getElementById('enemy-list');
+  enemyList.innerHTML = '';
   if (stage.enemies && stage.enemies.length) {
-    enemyList.innerHTML = stage.enemies.map((e) => `
-      <div class="enemy-chip">
-        <div class="enemy-chip-name">${e.name}</div>
-        ${e.note ? `<div class="enemy-chip-note">${e.note}</div>` : ''}
-      </div>
-    `).join('');
+    for (const enemy of stage.enemies) {
+      enemyList.appendChild(renderEnemyChip(enemy, elementMap));
+    }
   } else {
     enemyList.innerHTML = '<p class="guide-preview">尚未提供敵人資訊。</p>';
   }
