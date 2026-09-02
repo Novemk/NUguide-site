@@ -7,6 +7,13 @@
     "icon": "assets/img/tags/atk_buff_enemy.svg"
   },
   {
+    "id": "atk_buff_self",
+    "label": "使我方技能傷害增加",
+    "sortOrder": 2,
+    "group": "buff",
+    "icon": "assets/img/tags/atk_buff_self.svg"
+  },
+  {
     "id": "normal_atk",
     "label": "普攻",
     "icon": "assets/img/tags/normal_atk.svg",
@@ -59,11 +66,5 @@
     "label": "暈眩",
     "icon": "assets/img/tags/stun.svg",
     "group": "debuff"
-  },
-  {
-    "id": "atk_buff_self",
-    "label": "增傷（己）",
-    "icon": "assets/img/tags/atk_buff_self.svg",
-    "group": "buff"
   }
 ]
