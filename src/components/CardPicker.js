@@ -12,11 +12,17 @@ import { filterCards } from '../modules/cardFilter.js';
  */
 export function openCardPicker() {
   return new Promise(async (resolve) => {
-    const [cards, rarities] = await Promise.all([
+    const [cards, rarities, classes, elements] = await Promise.all([
       loadJSON(DataSources.cards),
       loadJSON(DataSources.rarities),
+      loadJSON(DataSources.classes),
+      loadJSON(DataSources.elements),
     ]);
-    const rarityMap = toMap(rarities);
+    const cardMaps = {
+      rarityMap: toMap(rarities),
+      classMap: toMap(classes),
+      elementMap: toMap(elements),
+    };
 
     const body = document.createElement('div');
     const filterHost = document.createElement('div');
@@ -34,7 +40,7 @@ export function openCardPicker() {
 
     const panel = await mountFilterPanel(filterHost, (state) => {
       const filtered = filterCards(cards, state, panel.schema, panel.cdRanges);
-      renderCardGrid(gridHost, filtered, rarityMap, {
+      renderCardGrid(gridHost, filtered, cardMaps, {
         onCardClick: (card) => {
           settled = true;
           close();
@@ -45,7 +51,7 @@ export function openCardPicker() {
       });
     });
 
-    renderCardGrid(gridHost, cards, rarityMap, {
+    renderCardGrid(gridHost, cards, cardMaps, {
       onCardClick: (card) => {
         settled = true;
         close();

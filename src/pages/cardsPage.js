@@ -23,6 +23,7 @@ async function init() {
   const elementMap = toMap(elements);
   const characterMap = toMap(characters);
   const tagMap = toMap(tags);
+  const cardMaps = { rarityMap, elementMap, classMap };
 
   const filterHost = document.getElementById('filter-host');
   const gridHost = document.getElementById('card-grid-host');
@@ -60,7 +61,7 @@ async function init() {
   function applyAndRender(state, schema, cdRanges) {
     const filtered = filterCards(cards, state, schema, cdRanges);
     totalLabel.textContent = `共 ${filtered.length} / ${cards.length} 張卡片`;
-    renderCardGrid(gridHost, filtered, rarityMap, { onCardClick: showDetail });
+    renderCardGrid(gridHost, filtered, cardMaps, { onCardClick: showDetail });
   }
 
   const panel = await mountFilterPanel(filterHost, (state) => {

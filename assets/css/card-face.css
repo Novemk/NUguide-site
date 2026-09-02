@@ -1,0 +1,62 @@
+/* =========================================================
+   Card face — full-bleed art, corner badges, bottom gradient
+   (replaces the old .rarity-flag / .cd-flag / .card-name-strip rules)
+   ========================================================= */
+.card-face {
+  position: absolute;
+  inset: 0;
+}
+.card-face-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.card-face-badge {
+  position: absolute;
+  top: 6px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(16,15,24,0.55);
+  border: 1.5px solid rgba(255,255,255,0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  backdrop-filter: blur(2px);
+}
+.card-face-badge img { width: 100%; height: 100%; object-fit: contain; }
+.card-face-badge-tl { left: 6px; }
+.card-face-badge-tr { right: 6px; }
+
+.card-face-gradient {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 46%;
+  background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.82) 88%);
+  pointer-events: none;
+}
+.card-face-rarity {
+  position: absolute;
+  left: 8px;
+  bottom: 6px;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.9);
+}
+
+/* Live preview used in the admin card-image dropzone (same visual language
+   as .card-btn/.card-face, but standalone — not a clickable grid item). */
+.card-preview-box {
+  position: relative;
+  width: 160px;
+  aspect-ratio: 200 / 260;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 2px solid var(--border-soft);
+  background: var(--bg-elevated);
+  margin: 0 auto 10px;
+}
