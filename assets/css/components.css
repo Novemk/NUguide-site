@@ -244,6 +244,20 @@
   grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   gap: 12px;
 }
+/* Denser variant for the 選擇卡片 picker modal, which has less width to
+   work with than the full 卡片資料庫 page — smaller minimum tile size so
+   more cards fit per row (~5 on desktop, ~3 on narrow phones via the
+   media query below), without changing the main card database page. */
+.card-grid.card-grid--compact {
+  grid-template-columns: repeat(auto-fill, minmax(108px, 1fr));
+  gap: 10px;
+}
+@media (max-width: 480px) {
+  .card-grid.card-grid--compact {
+    grid-template-columns: repeat(auto-fill, minmax(72px, 1fr));
+    gap: 6px;
+  }
+}
 .card-btn {
   position: relative;
   background: var(--bg-card);
@@ -256,9 +270,42 @@
   text-align: left;
   transition: border-color 0.15s, transform 0.1s;
   aspect-ratio: 200 / 260;
+  container-type: inline-size;
 }
 .card-btn:hover { border-color: var(--text-faint); transform: translateY(-2px); }
 .card-btn.selected { border-color: var(--accent-teal); box-shadow: 0 0 0 2px rgba(79,200,176,0.35); }
+/* Hover-only "view card info" button — same footprint as the 定位 badge
+   (34cqw), bottom-right, styled to match the badge family (circular,
+   drop-shadow) but with its own icon since there's no uploaded asset for
+   this one. Hidden until hover/focus so it doesn't compete with the
+   artwork at rest. */
+.card-info-btn {
+  position: absolute;
+  right: -2cqw;
+  bottom: -2cqw;
+  width: 34cqw;
+  height: 34cqw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(20,19,31,0.92);
+  border: 1.5px solid var(--accent-teal-dim);
+  color: var(--accent-teal);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s, transform 0.15s;
+  z-index: 4;
+  filter: drop-shadow(0 1px 3px rgba(0,0,0,0.6));
+  cursor: pointer;
+}
+.card-info-btn svg { width: 62%; height: 62%; }
+.card-btn:hover .card-info-btn,
+.card-info-btn:focus-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+.card-info-btn:hover { transform: scale(1.08); background: rgba(20,19,31,1); }
 .card-empty-slot {
   display: flex; align-items: center; justify-content: center;
   background: var(--bg-elevated);

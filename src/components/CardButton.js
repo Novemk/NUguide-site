@@ -2,6 +2,8 @@
 import { resolveAsset } from '../core/dataLoader.js';
 import { renderCardFace } from './CardFace.js';
 
+const INFO_ICON_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><line x1="12" y1="11" x2="12" y2="16"></line><circle cx="12" cy="7.5" r="0.6" fill="currentColor" stroke="none"></circle></svg>';
+
 /**
  * Renders one card thumbnail button.
  * @param {Object} card
@@ -12,6 +14,11 @@ import { renderCardFace } from './CardFace.js';
  * @param {Object} [opts]
  * @param {boolean} [opts.selected]
  * @param {(card:Object) => void} [opts.onClick]
+ * @param {(card:Object) => void} [opts.onInfoClick] - when set, shows a small
+ *   info button in the bottom-right corner on hover (same size as the
+ *   定位 badge) that opens the 卡片資訊 modal instead of triggering
+ *   onClick — for pickers where clicking the card itself selects it, so
+ *   there needs to be a separate way to inspect a card before choosing it.
  */
 export function renderCardButton(card, maps, opts = {}) {
   const { rarityMap, elementMap, classMap } = maps;
@@ -36,6 +43,30 @@ export function renderCardButton(card, maps, opts = {}) {
     imageOffsetY: card.imageOffsetY,
   });
   btn.appendChild(face);
+
+  if (opts.onInfoClick) {
+    // A <button> can't legally nest inside another <button>, so this is a
+    // span with button semantics bolted on — real button elements led to
+    // broken/unpredictable click handling once nested in Chrome/Safari.
+    const infoBtn = document.createElement('span');
+    infoBtn.className = 'card-info-btn';
+    infoBtn.setAttribute('role', 'button');
+    infoBtn.setAttribute('tabindex', '0');
+    infoBtn.setAttribute('aria-label', `查看「${card.name}」的卡片資訊`);
+    infoBtn.innerHTML = INFO_ICON_SVG;
+    infoBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      opts.onInfoClick(card);
+    });
+    infoBtn.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        e.stopPropagation();
+        opts.onInfoClick(card);
+      }
+    });
+    btn.appendChild(infoBtn);
+  }
 
   if (opts.onClick) btn.addEventListener('click', () => opts.onClick(card));
   return btn;

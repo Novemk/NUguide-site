@@ -1,5 +1,21 @@
 // src/components/Modal.js
 
+// Modals can now stack (e.g. the 卡片資訊 modal opening on top of the
+// 選擇卡片 picker). Two things a naive "one modal at a time" implementation
+// gets wrong once that happens:
+//  1. Scroll lock: closing the top modal shouldn't unlock scrolling while
+//     one underneath is still open — openModalStack.length tracks this.
+//  2. Esc key: should close only the TOPMOST modal, not every open one.
+//     A single shared keydown listener (rather than one per modal) with a
+//     stack of close functions gets this right regardless of stacking order.
+const openModalStack = [];
+
+function onGlobalKeydown(e) {
+  if (e.key !== 'Escape') return;
+  const top = openModalStack[openModalStack.length - 1];
+  if (top) top.close();
+}
+
 /**
  * Opens a modal dialog.
  * @param {Object} opts
@@ -35,24 +51,31 @@ export function openModal({ title, body, wide = false, onClose }) {
   box.append(header, bodyWrap);
   overlay.appendChild(box);
   document.body.appendChild(overlay);
+
+  if (openModalStack.length === 0) document.addEventListener('keydown', onGlobalKeydown);
   document.body.style.overflow = 'hidden';
 
+  const entry = { close };
+  let closed = false;
   function close() {
+    if (closed) return;
+    closed = true;
     overlay.remove();
-    document.body.style.overflow = '';
-    document.removeEventListener('keydown', onKeydown);
+    const idx = openModalStack.indexOf(entry);
+    if (idx !== -1) openModalStack.splice(idx, 1);
+    if (openModalStack.length === 0) {
+      document.body.style.overflow = '';
+      document.removeEventListener('keydown', onGlobalKeydown);
+    }
     if (onClose) onClose();
   }
-
-  function onKeydown(e) {
-    if (e.key === 'Escape') close();
-  }
+  entry.close = close;
+  openModalStack.push(entry);
 
   closeBtn.addEventListener('click', close);
   overlay.addEventListener('click', (e) => {
     if (e.target === overlay) close();
   });
-  document.addEventListener('keydown', onKeydown);
 
   return { close, overlay, box };
 }
