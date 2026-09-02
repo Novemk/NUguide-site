@@ -8,11 +8,11 @@
       {
         "name": "殘影魔導士",
         "note": "開場即釋放全體減益",
-        "elementId": "water",
+        "elementId": "fire",
         "image": "assets/img/enemies/stage_8_2_0_殘影魔導士.png",
-        "imageZoom": 1,
-        "imageOffsetX": 0.5893208661417323,
-        "imageOffsetY": 0.5
+        "imageZoom": 1.12,
+        "imageOffsetX": 0.6191875448731571,
+        "imageOffsetY": 0.6347098496455215
       },
       {
         "name": "石像守衛",
