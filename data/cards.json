@@ -103,17 +103,20 @@
   },
   {
     "id": "card_007",
-    "name": "素白祈禱",
-    "characterId": "char_07",
-    "rarityId": "sr",
-    "classId": "tank",
-    "elementId": "wood",
-    "cd": 6,
+    "name": "戰鬥人偶與回憶",
+    "characterId": "char_10",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "light",
+    "cd": 3,
     "tags": [
-      "atk_buff_self",
-      "stun"
+      "burst"
     ],
-    "image": "assets/img/cards/card_007.svg"
+    "image": "assets/img/cards/card_007.png",
+    "imageZoom": 1.74,
+    "imageOffsetX": 0.4779101799365471,
+    "imageOffsetY": 0.3723753420683185,
+    "sortOrder": 7
   },
   {
     "id": "card_008",
