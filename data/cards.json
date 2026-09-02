@@ -18,18 +18,20 @@
   },
   {
     "id": "card_002",
-    "name": "寒冰壁壘",
-    "characterId": "char_02",
-    "rarityId": "sr",
-    "classId": "debuf",
-    "elementId": "wood",
+    "name": "回到故鄉的那日",
+    "characterId": "char_04",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "fire",
     "cd": 7,
     "tags": [
-      "normal_atk",
-      "atk_buff_self",
-      "dot"
+      "burst"
     ],
-    "image": "assets/img/cards/card_002.svg"
+    "image": "assets/img/cards/card_002.png",
+    "imageZoom": 1.46,
+    "imageOffsetX": 0.5136846985946831,
+    "imageOffsetY": 0.17083437020068915,
+    "sortOrder": 1
   },
   {
     "id": "card_003",
