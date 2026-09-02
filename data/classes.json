@@ -12,7 +12,7 @@
   {
     "id": "heal",
     "label": "治療",
-    "icon": "assets/img/classes/heal.svg"
+    "icon": "assets/img/classes/heal.png"
   },
   {
     "id": "tank",
