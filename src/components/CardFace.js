@@ -9,10 +9,14 @@ import { resolveAsset } from '../core/dataLoader.js';
  * - a bottom semi-transparent black gradient with the rarity label
  * - a metallic gradient border keyed to the rarity
  *
- * This is a shared building block — the player-facing card grid wraps it in
- * a <button>, and the admin's upload dropzone renders it standalone (no
- * click behavior) purely so the operator can see whether the badges cover
- * the character's face before publishing.
+ * Image positioning uses the exact same pixel-based math as the admin's
+ * interactive cropper (src/components/ImageCropper.js) — real
+ * getBoundingClientRect() + naturalWidth/naturalHeight measurements taken
+ * after the image is actually in the live DOM, never CSS percentages
+ * against a container whose height comes from `aspect-ratio` (that
+ * combination is what caused the black-edge bug previously). Because the
+ * math lives in one place, what the operator sees while editing a card is
+ * guaranteed to match what players see on the actual site.
  *
  * @param {Object} opts
  * @param {string} opts.imageSrc - resolved image URL (already run through resolveAsset)
@@ -21,8 +25,8 @@ import { resolveAsset } from '../core/dataLoader.js';
  * @param {{label:string, icon:string}|null} [opts.element]
  * @param {{label:string, icon:string}|null} [opts.cls]
  * @param {number} [opts.imageZoom] - 1 = fit, >1 = zoomed in. Defaults to 1.
- * @param {number} [opts.imageOffsetX] - 0-100, horizontal focus point. Defaults to 50 (center).
- * @param {number} [opts.imageOffsetY] - 0-100, vertical focus point. Defaults to 50 (center).
+ * @param {number} [opts.imageOffsetX] - 0-1, horizontal pan fraction. Defaults to 0.5 (center).
+ * @param {number} [opts.imageOffsetY] - 0-1, vertical pan fraction. Defaults to 0.5 (center).
  */
 export function renderCardFace({
   imageSrc,
@@ -31,22 +35,46 @@ export function renderCardFace({
   element = null,
   cls = null,
   imageZoom = 1,
-  imageOffsetX = 50,
-  imageOffsetY = 50,
+  imageOffsetX = 0.5,
+  imageOffsetY = 0.5,
 }) {
   const face = document.createElement('div');
   face.className = 'card-face';
 
   const img = document.createElement('img');
   img.className = 'card-face-img';
-  img.src = imageSrc;
   img.alt = imageAlt;
   img.loading = 'lazy';
-  img.style.objectPosition = `${imageOffsetX}% ${imageOffsetY}%`;
-  if (imageZoom && imageZoom !== 1) {
-    img.style.transform = `scale(${imageZoom})`;
-  }
+  img.draggable = false;
   face.appendChild(img);
+
+  // Self-positioning: recompute pixel geometry whenever the image finishes
+  // loading (need naturalWidth/Height) and whenever the card's own
+  // rendered size changes (ResizeObserver — covers responsive grid
+  // reflow, window resize, etc). This makes CardFace fully self-contained;
+  // callers never need to measure or re-position it themselves.
+  function layout() {
+    if (!img.naturalWidth || !img.naturalHeight) return;
+    const vw = face.clientWidth;
+    const vh = face.clientHeight;
+    if (vw === 0 || vh === 0) return;
+    const coverScale = Math.max(vw / img.naturalWidth, vh / img.naturalHeight);
+    const scale = coverScale * (imageZoom || 1);
+    const renderW = img.naturalWidth * scale;
+    const renderH = img.naturalHeight * scale;
+    const overflowX = Math.max(0, renderW - vw);
+    const overflowY = Math.max(0, renderH - vh);
+    img.style.width = `${renderW}px`;
+    img.style.height = `${renderH}px`;
+    img.style.left = `${-overflowX * imageOffsetX}px`;
+    img.style.top = `${-overflowY * imageOffsetY}px`;
+  }
+  img.addEventListener('load', layout);
+  img.src = imageSrc;
+  if (img.complete && img.naturalWidth) layout(); // cached image, load already fired
+
+  const resizeObserver = new ResizeObserver(() => layout());
+  resizeObserver.observe(face);
 
   if (element) {
     const badge = document.createElement('span');
@@ -78,12 +106,6 @@ export function renderCardFace({
     const rarityLabel = document.createElement('span');
     rarityLabel.className = 'card-face-rarity';
 
-    // Per-rarity treatments:
-    // - ssr / sr: each letter gets its own solid color from a fixed
-    //   palette (a continuous gradient doesn't read on 2-3 characters).
-    // - n: flat light gray-white.
-    // - anything else (r, or a future custom rarity): flat color from
-    //   rarities.json, unchanged.
     const letterPalettes = {
       ssr: ['#7CF5D8', '#FFF04D', '#FFC4FF'],
       sr: ['#fffbe0', '#ffff9c'],
@@ -115,8 +137,6 @@ export function renderCardFace({
 
     face.appendChild(rarityLabel);
 
-    // Metallic gradient border, keyed to the rarity id. Falls back to no
-    // special border for a custom rarity id we don't have a palette for.
     const borderIds = { ssr: 'card-face-border-ssr', sr: 'card-face-border-sr', r: 'card-face-border-r', n: 'card-face-border-n' };
     const borderClass = borderIds[rarity.id];
     if (borderClass) {

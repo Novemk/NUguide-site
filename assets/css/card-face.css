@@ -5,12 +5,18 @@
 .card-face {
   position: absolute;
   inset: 0;
+  overflow: hidden;
 }
 .card-face-img {
+  position: absolute;
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
+  -webkit-user-drag: none;
+  user-select: none;
+  -webkit-user-select: none;
+  max-width: none;
 }
 .card-face-badge {
   position: absolute;
