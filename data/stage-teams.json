@@ -16,44 +16,17 @@
     ]
   },
   {
-    "stageId": "stage_9_1",
-    "teams": [
-      {
-        "name": "持續傷害隊",
-        "note": "",
-        "members": [
-          "card_004",
-          "card_008",
-          "card_012",
-          "card_016",
-          "card_020"
-        ]
-      }
-    ]
-  },
-  {
     "stageId": "stage_8_2",
     "teams": [
       {
-        "name": "標準減傷隊",
-        "note": "穩定過關，容錯率高",
-        "members": [
-          "card_001",
-          "card_005",
-          "card_009",
-          "card_013",
-          "card_017"
-        ]
-      },
-      {
-        "name": "極速爆發隊",
-        "note": "適合熟練玩家，第二回合結束戰鬥",
+        "name": "新隊伍",
+        "note": "",
         "members": [
           "card_002",
-          "card_006",
-          "card_010",
-          "card_014",
-          "card_018"
+          "card_001",
+          null,
+          null,
+          null
         ]
       }
     ]

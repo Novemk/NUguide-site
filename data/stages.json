@@ -1,43 +1,23 @@
 [
   {
     "id": "stage_8_2",
-    "chapter": "忘卻遺跡",
-    "order": "8-2",
-    "title": "大魔法師之嘆",
+    "chapter": "忘卻遺跡 第二十二季",
+    "order": "1-1",
+    "title": "共同陪伴之探",
     "enemies": [
       {
-        "name": "殘影魔導士",
-        "note": "開場即釋放全體減益",
-        "elementId": "fire",
-        "image": "assets/img/enemies/stage_8_2_0_殘影魔導士.png",
-        "imageZoom": 1.12,
-        "imageOffsetX": 0.6191875448731571,
-        "imageOffsetY": 0.6347098496455215
-      },
-      {
-        "name": "石像守衛",
-        "note": "高防禦，建議降防",
-        "elementId": "",
-        "image": "",
-        "imageZoom": 1,
-        "imageOffsetX": 0.5,
-        "imageOffsetY": 0.5
-      },
-      {
-        "name": "大魔法師",
-        "note": "血量過半後爆發大招",
-        "elementId": "",
-        "image": "",
-        "imageZoom": 1,
-        "imageOffsetX": 0.5,
-        "imageOffsetY": 0.5
+        "name": "旋轉木馬",
+        "note": "自身受到的護盾量，每回合持續增加。",
+        "elementId": "water",
+        "image": "assets/img/enemies/stage_8_2_0_旋轉木馬.png",
+        "imageZoom": 1.23,
+        "imageOffsetX": 0.6027371522400354,
+        "imageOffsetY": 0.5494230411839586
       }
     ],
-    "guide": "<p>開場先上<strong>減傷</strong>與<strong>淨化</strong>，避免第一輪被削弱狀態拖累輸出節奏。</p><p>石像守衛防禦偏高，優先使用<strong>降防</strong>技能再集火。</p><p>大魔法師血量過半會釋放全體爆發，務必在該回合前準備好減傷或治療，否則容易團滅。</p>",
+    "guide": "<p>【挑戰核心】</p><p>當旋轉木馬受到《侵蝕》時，會獲得高額的護盾效果，須及時突破護盾以解除蓄力，否則將受到高額全體傷害，並永久大幅降低受到的治療量。</p><p>且每特定回合，旋轉木馬還會進行《木馬協奏曲》的全體攻擊，因此若蓄力解除失敗達至2次，將難以應對挑戰。</p><p><br></p><p>【隊伍建議】</p><p>有利快速通關的隊伍，推薦攜帶必殺技3CD且高爆發型的角色。</p>",
     "recommendedTags": [
-      "shield",
-      "def_down",
-      "dot"
+      "burst"
     ]
   },
   {
@@ -59,23 +39,6 @@
     "recommendedTags": [
       "shield",
       "aoe"
-    ]
-  },
-  {
-    "id": "stage_9_1",
-    "chapter": "永夜迴廊",
-    "order": "9-1",
-    "title": "不眠的獄卒",
-    "enemies": [
-      {
-        "name": "獄卒長",
-        "note": "免疫暈眩，控場技能保留"
-      }
-    ],
-    "guide": "<p>獄卒長免疫暈眩類效果，控場技能建議留給後續小怪。</p><p>持續傷害疊加效果在本關表現穩定，推薦優先配置。</p>",
-    "recommendedTags": [
-      "dot",
-      "atk_buff_self"
     ]
   }
 ]

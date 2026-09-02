@@ -1,13 +1,70 @@
 [
-  { "id": "normal_atk",     "label": "普攻",     "icon": "assets/img/tags/normal_atk.svg",     "group": "damage" },
-  { "id": "dot",            "label": "持續傷害",  "icon": "assets/img/tags/dot.svg",            "group": "damage" },
-  { "id": "burst",          "label": "爆發",     "icon": "assets/img/tags/burst.svg",          "group": "damage" },
-  { "id": "aoe",            "label": "全體攻擊",  "icon": "assets/img/tags/aoe.svg",            "group": "damage" },
-  { "id": "shield",         "label": "減傷",     "icon": "assets/img/tags/shield.svg",         "group": "defense" },
-  { "id": "heal_tag",       "label": "治療",     "icon": "assets/img/tags/heal_tag.svg",       "group": "defense" },
-  { "id": "cleanse",        "label": "淨化",     "icon": "assets/img/tags/cleanse.svg",        "group": "defense" },
-  { "id": "atk_buff_enemy", "label": "增傷（敵）","icon": "assets/img/tags/atk_buff_enemy.svg", "group": "debuff" },
-  { "id": "def_down",       "label": "降防",     "icon": "assets/img/tags/def_down.svg",       "group": "debuff" },
-  { "id": "stun",           "label": "暈眩",     "icon": "assets/img/tags/stun.svg",           "group": "debuff" },
-  { "id": "atk_buff_self",  "label": "增傷（己）","icon": "assets/img/tags/atk_buff_self.svg",  "group": "buff" }
+  {
+    "id": "atk_buff_enemy",
+    "label": "使敵方所受傷害增加",
+    "sortOrder": 1,
+    "group": "debuff",
+    "icon": "assets/img/tags/atk_buff_enemy.svg"
+  },
+  {
+    "id": "atk_buff_self",
+    "label": "使我方技能傷害增加",
+    "sortOrder": 2,
+    "group": "buff",
+    "icon": "assets/img/tags/atk_buff_self.svg"
+  },
+  {
+    "id": "normal_atk",
+    "label": "普攻",
+    "icon": "assets/img/tags/normal_atk.svg",
+    "group": "damage"
+  },
+  {
+    "id": "dot",
+    "label": "持續傷害",
+    "icon": "assets/img/tags/dot.svg",
+    "group": "damage"
+  },
+  {
+    "id": "burst",
+    "label": "爆發",
+    "icon": "assets/img/tags/burst.svg",
+    "group": "damage"
+  },
+  {
+    "id": "aoe",
+    "label": "全體攻擊",
+    "icon": "assets/img/tags/aoe.svg",
+    "group": "damage"
+  },
+  {
+    "id": "shield",
+    "label": "減傷",
+    "icon": "assets/img/tags/shield.svg",
+    "group": "defense"
+  },
+  {
+    "id": "heal_tag",
+    "label": "治療",
+    "icon": "assets/img/tags/heal_tag.svg",
+    "group": "defense"
+  },
+  {
+    "id": "cleanse",
+    "label": "淨化",
+    "icon": "assets/img/tags/cleanse.svg",
+    "group": "defense"
+  },
+  {
+    "id": "def_down",
+    "label": "降防",
+    "icon": "assets/img/tags/def_down.svg",
+    "group": "debuff"
+  },
+  {
+    "id": "stun",
+    "label": "暈眩",
+    "icon": "assets/img/tags/stun.svg",
+    "group": "debuff"
+  }
 ]

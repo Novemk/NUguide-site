@@ -1,155 +1,189 @@
 [
   {
     "id": "card_001",
-    "name": "熾焰劍舞",
-    "characterId": "char_01",
-    "rarityId": "sr",
+    "name": "爵士冊封之夜",
+    "characterId": "char_05",
+    "rarityId": "ssr",
     "classId": "atk",
     "elementId": "water",
-    "cd": 4,
+    "cd": 3,
     "tags": [
-      "burst",
-      "dot"
+      "burst"
     ],
-    "image": "assets/img/cards/card_001.svg"
+    "image": "assets/img/cards/card_001.png",
+    "imageZoom": 1.49,
+    "imageOffsetX": 0.4979682996784913,
+    "imageOffsetY": 0.3184103774834327,
+    "sortOrder": 2
   },
   {
     "id": "card_002",
-    "name": "寒冰壁壘",
-    "characterId": "char_02",
-    "rarityId": "sr",
-    "classId": "debuf",
-    "elementId": "wood",
-    "cd": 7,
-    "tags": [
-      "normal_atk",
-      "atk_buff_self",
-      "dot"
-    ],
-    "image": "assets/img/cards/card_002.svg"
-  },
-  {
-    "id": "card_003",
-    "name": "森羅庇護",
-    "characterId": "char_03",
-    "rarityId": "ssr",
-    "classId": "debuf",
-    "elementId": "dark",
-    "cd": 2,
-    "tags": [
-      "atk_buff_self",
-      "def_down"
-    ],
-    "image": "assets/img/cards/card_003.svg"
-  },
-  {
-    "id": "card_004",
-    "name": "聖光審判",
+    "name": "回到故鄉的那日",
     "characterId": "char_04",
-    "rarityId": "sr",
-    "classId": "tank",
-    "elementId": "dark",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "fire",
     "cd": 4,
     "tags": [
       "burst"
     ],
-    "image": "assets/img/cards/card_004.svg"
+    "image": "assets/img/cards/card_002.png",
+    "imageZoom": 1.46,
+    "imageOffsetX": 0.5136846985946831,
+    "imageOffsetY": 0.17083437020068915,
+    "sortOrder": 1
   },
   {
-    "id": "card_005",
-    "name": "幽紫詠嘆",
-    "characterId": "char_05",
-    "rarityId": "sr",
-    "classId": "heal",
-    "elementId": "water",
-    "cd": 3,
-    "tags": [
-      "heal_tag",
-      "dot"
-    ],
-    "image": "assets/img/cards/card_005.svg"
-  },
-  {
-    "id": "card_006",
-    "name": "夜帷潛行",
+    "id": "card_003",
+    "name": "向純潔象徵告",
     "characterId": "char_06",
     "rarityId": "ssr",
-    "classId": "atk",
-    "elementId": "water",
+    "classId": "heal",
+    "elementId": "light",
     "cd": 4,
     "tags": [
-      "normal_atk",
-      "atk_buff_enemy"
+      "heal_tag"
     ],
-    "image": "assets/img/cards/card_006.svg"
+    "image": "assets/img/cards/card_003.png",
+    "imageZoom": 1.4,
+    "imageOffsetX": 0.48069602937172884,
+    "imageOffsetY": 0.21428151757831113,
+    "sortOrder": 3
   },
   {
-    "id": "card_007",
-    "name": "素白祈禱",
+    "id": "card_004",
+    "name": "古老祭祀的賭約",
     "characterId": "char_07",
-    "rarityId": "sr",
-    "classId": "tank",
+    "rarityId": "ssr",
+    "classId": "atk",
     "elementId": "wood",
     "cd": 6,
     "tags": [
-      "atk_buff_self",
-      "stun"
+      "burst"
     ],
-    "image": "assets/img/cards/card_007.svg"
+    "image": "assets/img/cards/card_004.png",
+    "imageZoom": 1.63,
+    "imageOffsetX": 0.5698748721143096,
+    "imageOffsetY": 0.39921162986498127,
+    "sortOrder": 4
   },
   {
-    "id": "card_008",
-    "name": "赤紅怒濤",
+    "id": "card_005",
+    "name": "化形宴，飄落葉",
     "characterId": "char_08",
-    "rarityId": "r",
-    "classId": "heal",
+    "rarityId": "ssr",
+    "classId": "debuf",
     "elementId": "dark",
     "cd": 4,
     "tags": [
-      "normal_atk"
+      "aoe"
     ],
-    "image": "assets/img/cards/card_008.svg"
+    "image": "assets/img/cards/card_005.png",
+    "imageZoom": 1.61,
+    "imageOffsetX": 0.47092211554510216,
+    "imageOffsetY": 0.33331460057140927,
+    "sortOrder": 5
+  },
+  {
+    "id": "card_006",
+    "name": "來自主人的新禮物",
+    "characterId": "char_09",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "dark",
+    "cd": 4,
+    "tags": [
+      "aoe"
+    ],
+    "image": "assets/img/cards/card_006.png",
+    "imageZoom": 1.36,
+    "imageOffsetX": 0.3827591221847813,
+    "imageOffsetY": 0.32231061862418375,
+    "sortOrder": 6
+  },
+  {
+    "id": "card_007",
+    "name": "戰鬥人偶與回憶",
+    "characterId": "char_10",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "light",
+    "cd": 3,
+    "tags": [
+      "burst"
+    ],
+    "image": "assets/img/cards/card_007.png",
+    "imageZoom": 1.74,
+    "imageOffsetX": 0.4779101799365471,
+    "imageOffsetY": 0.3723753420683185,
+    "sortOrder": 7
+  },
+  {
+    "id": "card_008",
+    "name": "賽獸場上的暖陽",
+    "characterId": "char_11",
+    "rarityId": "ssr",
+    "classId": "tank",
+    "elementId": "fire",
+    "cd": 4,
+    "tags": [],
+    "image": "assets/img/cards/card_008.png",
+    "imageZoom": 1.5,
+    "imageOffsetX": 0.47039038398316396,
+    "imageOffsetY": 0.09470530452891279,
+    "sortOrder": 8
   },
   {
     "id": "card_009",
-    "name": "銀翼守望",
-    "characterId": "char_09",
-    "rarityId": "sr",
-    "classId": "heal",
-    "elementId": "wood",
-    "cd": 4,
-    "tags": [
-      "cleanse"
-    ],
-    "image": "assets/img/cards/card_009.svg"
-  },
-  {
-    "id": "card_010",
-    "name": "緋櫻亂舞",
-    "characterId": "char_10",
+    "name": "黑街潛行的夜鴞",
+    "characterId": "char_12",
     "rarityId": "ssr",
-    "classId": "heal",
-    "elementId": "fire",
-    "cd": 4,
-    "tags": [
-      "aoe",
-      "shield"
-    ],
-    "image": "assets/img/cards/card_010.svg"
-  },
-  {
-    "id": "card_011",
-    "name": "菫色迴廊",
-    "characterId": "char_11",
-    "rarityId": "sr",
     "classId": "atk",
     "elementId": "dark",
     "cd": 3,
     "tags": [
-      "burst",
-      "atk_buff_enemy"
+      "burst"
     ],
-    "image": "assets/img/cards/card_011.svg"
+    "image": "assets/img/cards/card_009.png",
+    "imageZoom": 1.67,
+    "imageOffsetX": 0.5265183315970626,
+    "imageOffsetY": 0.3865980584447897,
+    "sortOrder": 9
+  },
+  {
+    "id": "card_010",
+    "name": "酒心可可",
+    "characterId": "char_04",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "dark",
+    "cd": 3,
+    "tags": [
+      "burst"
+    ],
+    "image": "assets/img/cards/card_010.png",
+    "imageZoom": 1.67,
+    "imageOffsetX": 0.6128127125059173,
+    "imageOffsetY": 0.2491131144614146,
+    "sortOrder": 10
+  },
+  {
+    "id": "card_011",
+    "name": "白色戀人",
+    "characterId": "char_05",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "light",
+    "cd": 3,
+    "tags": [
+      "aoe",
+      "dot"
+    ],
+    "image": "assets/img/cards/card_011.png",
+    "imageZoom": 1.6,
+    "imageOffsetX": 0.46541247545115244,
+    "imageOffsetY": 0.2895046780218961,
+    "sortOrder": 11
   },
   {
     "id": "card_012",
