@@ -6,15 +6,15 @@
     "rarityId": "ssr",
     "classId": "atk",
     "elementId": "water",
-    "cd": 4,
+    "cd": 3,
     "tags": [
       "burst"
     ],
     "image": "assets/img/cards/card_001.png",
-    "imageZoom": 1,
-    "imageOffsetX": 0.5,
-    "imageOffsetY": 0.5,
-    "sortOrder": 1
+    "imageZoom": 1.49,
+    "imageOffsetX": 0.4979682996784913,
+    "imageOffsetY": 0.3184103774834327,
+    "sortOrder": 2
   },
   {
     "id": "card_002",
