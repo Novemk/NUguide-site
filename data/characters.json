@@ -1,5 +1,11 @@
 [
   {
+    "id": "char_14",
+    "name": "伊得",
+    "sortOrder": 1,
+    "icon": "assets/img/characters/char_14.png"
+  },
+  {
     "id": "char_02",
     "name": "艾斯特",
     "sortOrder": 2,
@@ -54,11 +60,5 @@
     "id": "char_12",
     "name": "歛",
     "icon": "assets/img/characters/char_12.png"
-  },
-  {
-    "id": "char_14",
-    "name": "伊得",
-    "sortOrder": 1,
-    "icon": "assets/img/characters/char_14.png"
   }
 ]
