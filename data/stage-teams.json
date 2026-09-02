@@ -1,21 +1,5 @@
 [
   {
-    "stageId": "stage_8_2",
-    "teams": [
-      {
-        "name": "新隊伍",
-        "note": "",
-        "members": [
-          "card_002",
-          "card_001",
-          null,
-          null,
-          null
-        ]
-      }
-    ]
-  },
-  {
     "stageId": "stage_7_5",
     "teams": [
       {
@@ -40,6 +24,22 @@
         "members": [
           "card_002",
           "card_006",
+          null,
+          null,
+          null
+        ]
+      }
+    ]
+  },
+  {
+    "stageId": "stage_8_2",
+    "teams": [
+      {
+        "name": "新隊伍",
+        "note": "",
+        "members": [
+          "card_002",
+          "card_001",
           null,
           null,
           null
