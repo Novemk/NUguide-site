@@ -135,16 +135,20 @@
   },
   {
     "id": "card_009",
-    "name": "銀翼守望",
-    "characterId": "char_09",
-    "rarityId": "sr",
-    "classId": "heal",
-    "elementId": "wood",
-    "cd": 4,
+    "name": "黑街潛行的夜鴞",
+    "characterId": "char_12",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "dark",
+    "cd": 3,
     "tags": [
-      "cleanse"
+      "burst"
     ],
-    "image": "assets/img/cards/card_009.svg"
+    "image": "assets/img/cards/card_009.svg",
+    "imageZoom": 1,
+    "imageOffsetX": 0.5,
+    "imageOffsetY": 0.5,
+    "sortOrder": 9
   },
   {
     "id": "card_010",
