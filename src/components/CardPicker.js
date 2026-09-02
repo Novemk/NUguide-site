@@ -27,10 +27,15 @@ export function openCardPicker() {
     };
 
     const body = document.createElement('div');
+    const layout = document.createElement('div');
+    layout.className = 'filter-grid-layout';
     const filterHost = document.createElement('div');
+    filterHost.className = 'fg-sidebar';
+    const gridCol = document.createElement('div');
     const gridHost = document.createElement('div');
-    gridHost.style.marginTop = '18px';
-    body.append(filterHost, gridHost);
+    gridCol.appendChild(gridHost);
+    layout.append(filterHost, gridCol);
+    body.appendChild(layout);
 
     let settled = false;
     const { close } = openModal({

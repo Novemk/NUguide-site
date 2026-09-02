@@ -171,6 +171,33 @@
 .tag-pill img { width: 18px; height: 18px; }
 
 /* =========================================================
+   Filter + grid two-column layout — shared by 卡片資料庫 (cards.html)
+   and the「選擇卡片」picker modal (CardPicker.js), so both look and
+   behave the same: 300px filter sidebar on the left, results on the
+   right, stacking to one column on narrow viewports.
+   ========================================================= */
+.filter-grid-layout { display: grid; grid-template-columns: 260px 1fr; gap: 20px; align-items: start; }
+.filter-grid-layout .fg-sidebar {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  position: sticky;
+  top: 0;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+.filter-grid-layout .result-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; color: var(--text-dim); font-size: 0.85rem; }
+/* Page context (卡片資料庫) has a sticky navbar above it that the modal
+   context (CardPicker) doesn't — offset the sidebar down by the navbar's
+   own height so it doesn't stick underneath/behind it while scrolling. */
+.filter-grid-layout.fg-page .fg-sidebar { top: 78px; }
+@media (max-width: 700px) {
+  .filter-grid-layout { grid-template-columns: 1fr; }
+  .filter-grid-layout .fg-sidebar { position: static; max-height: none; }
+}
+
+/* =========================================================
    Card info modal — small class/element icons + ultimate skill block
    ========================================================= */
 .card-info-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 16px; }
