@@ -1,4 +1,5 @@
 // src/components/Navbar.js
+import { loadJSON, DataSources } from '../core/dataLoader.js';
 
 const LINKS = [
   { href: 'index.html', label: '首頁' },
@@ -16,9 +17,18 @@ export function renderNavbar(current) {
   const brand = document.createElement('a');
   brand.href = 'index.html';
   brand.className = 'navbar-brand';
-  brand.textContent = '流光秘境攻略';
-  brand.innerHTML += '<span>玩家攻略站</span>';
   brand.style.textDecoration = 'none';
+
+  // Kept as its own element (not a bare text node) so the async update
+  // below can target it by id without touching the "玩家攻略站" subtitle
+  // next to it.
+  const titleSpan = document.createElement('span');
+  titleSpan.id = 'navbar-brand-title';
+  titleSpan.textContent = '流光秘境攻略';
+  const subtitleSpan = document.createElement('span');
+  subtitleSpan.className = 'navbar-brand-sub';
+  subtitleSpan.textContent = '玩家攻略站';
+  brand.append(titleSpan, subtitleSpan);
 
   const links = document.createElement('div');
   links.className = 'navbar-links';
@@ -37,7 +47,19 @@ export function renderNavbar(current) {
 
 export function mountNavbar(current) {
   const host = document.getElementById('navbar-host');
-  if (host) host.replaceWith(renderNavbar(current));
+  if (!host) return;
+  host.replaceWith(renderNavbar(current));
+
+  // Same siteTitle field the homepage's <h1> uses (edited from the
+  // admin's 網站設定 page) — applied here too so the navbar brand and
+  // the homepage heading always show the same text. Fetched after the
+  // navbar is already on screen so a slow/missing settings file never
+  // blocks or breaks the page; the hardcoded text above is the fallback.
+  loadJSON(DataSources.siteSettings).then((settings) => {
+    if (!settings || !settings.siteTitle) return;
+    const titleEl = document.getElementById('navbar-brand-title');
+    if (titleEl) titleEl.textContent = settings.siteTitle;
+  }).catch(() => {});
 }
 
 export function mountFooter() {

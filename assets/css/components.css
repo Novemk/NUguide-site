@@ -25,7 +25,7 @@
   letter-spacing: 0.06em;
   white-space: nowrap;
 }
-.navbar-brand span { color: var(--text-dim); font-size: 0.75rem; font-family: var(--font-body); margin-left: 6px; letter-spacing: 0; }
+.navbar-brand span.navbar-brand-sub { color: var(--text-dim); font-size: 0.75rem; font-family: var(--font-body); margin-left: 6px; letter-spacing: 0; }
 .navbar-links { display: flex; gap: 4px; flex-wrap: wrap; }
 .navbar-links a {
   color: var(--text-dim);
@@ -39,7 +39,7 @@
   text-decoration: none;
 }
 
-.page-header { padding: 36px 0 20px; border-bottom: 1px solid var(--border-soft); margin-bottom: 28px; }
+.page-header { padding-top: 36px; padding-bottom: 20px; border-bottom: 1px solid var(--border-soft); margin-bottom: 28px; }
 .page-header p { color: var(--text-dim); margin: 0; }
 .page-eyebrow {
   font-family: var(--font-mono);
