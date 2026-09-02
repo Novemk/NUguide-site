@@ -169,17 +169,21 @@
   },
   {
     "id": "card_011",
-    "name": "菫色迴廊",
-    "characterId": "char_11",
-    "rarityId": "sr",
+    "name": "白色戀人",
+    "characterId": "char_05",
+    "rarityId": "ssr",
     "classId": "atk",
-    "elementId": "dark",
+    "elementId": "light",
     "cd": 3,
     "tags": [
-      "burst",
-      "atk_buff_enemy"
+      "aoe",
+      "dot"
     ],
-    "image": "assets/img/cards/card_011.svg"
+    "image": "assets/img/cards/card_011.png",
+    "imageZoom": 1.6,
+    "imageOffsetX": 0.46541247545115244,
+    "imageOffsetY": 0.2895046780218961,
+    "sortOrder": 11
   },
   {
     "id": "card_012",
