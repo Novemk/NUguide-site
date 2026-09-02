@@ -26,6 +26,7 @@
   {
     "id": "dark",
     "label": "闇",
+    "sortOrder": 5,
     "icon": "assets/img/elements/dark.png"
   }
 ]
