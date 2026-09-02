@@ -17,7 +17,7 @@
   {
     "id": "light",
     "label": "光",
-    "icon": "assets/img/elements/light.svg"
+    "icon": "assets/img/elements/light.png"
   },
   {
     "id": "dark",
