@@ -30,5 +30,21 @@
         ]
       }
     ]
+  },
+  {
+    "stageId": "stage_1_1",
+    "teams": [
+      {
+        "name": "新隊伍",
+        "note": "",
+        "members": [
+          "card_002",
+          "card_001",
+          null,
+          null,
+          null
+        ]
+      }
+    ]
   }
 ]
