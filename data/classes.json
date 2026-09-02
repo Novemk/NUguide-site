@@ -21,7 +21,7 @@
   },
   {
     "id": "debuf",
-    "label": "減益",
+    "label": "妨礙",
     "icon": "assets/img/classes/debuf.png"
   }
 ]
