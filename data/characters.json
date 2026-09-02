@@ -2,6 +2,7 @@
   {
     "id": "char_02",
     "name": "艾斯特",
+    "sortOrder": 2,
     "icon": "assets/img/characters/char_02.png"
   },
   {
