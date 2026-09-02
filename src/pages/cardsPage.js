@@ -4,13 +4,14 @@ import { mountNavbar, mountFooter } from '../components/Navbar.js';
 import { mountFilterPanel } from '../components/FilterPanel.js';
 import { renderCardGrid } from '../components/CardGrid.js';
 import { filterCards } from '../modules/cardFilter.js';
+import { sortCardsByOrder } from '../modules/cardSort.js';
 import { openModal } from '../components/Modal.js';
 
 async function init() {
   mountNavbar('cards.html');
   mountFooter();
 
-  const [cards, rarities, classes, elements, characters, tags] = await Promise.all([
+  const [cardsRaw, rarities, classes, elements, characters, tags] = await Promise.all([
     loadJSON(DataSources.cards),
     loadJSON(DataSources.rarities),
     loadJSON(DataSources.classes),
@@ -18,6 +19,7 @@ async function init() {
     loadJSON(DataSources.characters),
     loadJSON(DataSources.tags),
   ]);
+  const cards = sortCardsByOrder(cardsRaw);
   const rarityMap = toMap(rarities);
   const classMap = toMap(classes);
   const elementMap = toMap(elements);

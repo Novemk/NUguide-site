@@ -4,6 +4,7 @@ import { mountFilterPanel } from './FilterPanel.js';
 import { renderCardGrid } from './CardGrid.js';
 import { loadJSON, DataSources, toMap } from '../core/dataLoader.js';
 import { filterCards } from '../modules/cardFilter.js';
+import { sortCardsByOrder } from '../modules/cardSort.js';
 
 /**
  * Opens the card picker modal and resolves with the chosen card, or null
@@ -12,12 +13,13 @@ import { filterCards } from '../modules/cardFilter.js';
  */
 export function openCardPicker() {
   return new Promise(async (resolve) => {
-    const [cards, rarities, classes, elements] = await Promise.all([
+    const [cardsRaw, rarities, classes, elements] = await Promise.all([
       loadJSON(DataSources.cards),
       loadJSON(DataSources.rarities),
       loadJSON(DataSources.classes),
       loadJSON(DataSources.elements),
     ]);
+    const cards = sortCardsByOrder(cardsRaw);
     const cardMaps = {
       rarityMap: toMap(rarities),
       classMap: toMap(classes),
