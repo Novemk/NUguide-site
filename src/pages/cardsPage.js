@@ -3,6 +3,7 @@ import { loadJSON, DataSources, toMap, resolveAsset } from '../core/dataLoader.j
 import { mountNavbar, mountFooter } from '../components/Navbar.js';
 import { mountFilterPanel } from '../components/FilterPanel.js';
 import { renderCardGrid } from '../components/CardGrid.js';
+import { renderCardCrop } from '../components/CardFace.js';
 import { filterCards } from '../modules/cardFilter.js';
 import { sortCardsByOrder } from '../modules/cardSort.js';
 import { openModal } from '../components/Modal.js';
@@ -39,24 +40,61 @@ async function init() {
     const char = characterMap.get(card.characterId);
     const cardTags = (card.tags || []).map((id) => tagMap.get(id)).filter(Boolean);
 
-    body.innerHTML = `
-      <div style="display:flex; gap:20px; flex-wrap:wrap;">
-        <img src="${resolveAsset(card.image)}" alt="${card.name}" style="width:160px; border-radius:10px; border:2px solid ${rarity ? rarity.color : 'var(--border)'};">
-        <div style="flex:1; min-width:200px;">
-          <div style="font-family:var(--font-mono); color:${rarity ? rarity.color : 'var(--text)'}; font-weight:700; margin-bottom:4px;">${rarity ? rarity.label : ''}</div>
-          <h2 style="margin-bottom:12px;">${card.name}</h2>
-          <div style="display:flex; gap:16px; flex-wrap:wrap; margin-bottom:14px; font-size:0.88rem; color:var(--text-dim);">
-            <span>角色：${char ? char.name : '—'}</span>
-            <span>定位：${cls ? cls.label : '—'}</span>
-            <span>屬性：${elem ? elem.label : '—'}</span>
-            <span>CD：${card.cd}</span>
-          </div>
-          <div class="tag-row">
-            ${cardTags.map((t) => `<span class="tag-pill"><img src="${resolveAsset(t.icon)}" alt="">${t.label}</span>`).join('') || '<span class="guide-preview">尚未設定技能標籤</span>'}
-          </div>
-        </div>
-      </div>
+    const wrap = document.createElement('div');
+    wrap.style.cssText = 'display:flex; gap:20px; flex-wrap:wrap;';
+
+    // Cropped thumbnail — same crop math + rarity border as every other
+    // card, just without the badges/gradient/rarity-text overlay (that
+    // info is shown as plain text/icons in the column next to it instead).
+    const thumbBox = document.createElement('div');
+    thumbBox.className = 'card-preview-box';
+    thumbBox.appendChild(renderCardCrop({
+      imageSrc: resolveAsset(card.image),
+      imageAlt: card.name,
+      rarity,
+      imageZoom: card.imageZoom,
+      imageOffsetX: card.imageOffsetX,
+      imageOffsetY: card.imageOffsetY,
+    }));
+
+    const infoCol = document.createElement('div');
+    infoCol.style.cssText = 'flex:1; min-width:220px;';
+
+    const titleRow = document.createElement('div');
+    titleRow.style.cssText = 'display:flex; align-items:baseline; gap:8px; margin-bottom:4px; font-family:var(--font-mono); font-weight:700;';
+    titleRow.innerHTML = `
+      <span style="color:${rarity ? rarity.color : 'var(--text)'};">${rarity ? rarity.label : ''}</span>
+      <span style="color:var(--text-dim); font-family:var(--font-body); font-weight:400; font-size:0.9rem;">${char ? char.name : ''}</span>
     `;
+
+    const h2 = document.createElement('h2');
+    h2.style.marginBottom = '12px';
+    h2.textContent = card.name;
+
+    const metaRow = document.createElement('div');
+    metaRow.className = 'card-info-meta';
+    if (cls) metaRow.innerHTML += `<img class="card-info-icon" src="${resolveAsset(cls.icon)}" alt="${cls.label}" title="定位：${cls.label}">`;
+    if (elem) metaRow.innerHTML += `<img class="card-info-icon" src="${resolveAsset(elem.icon)}" alt="${elem.label}" title="屬性：${elem.label}">`;
+    metaRow.innerHTML += `<span class="card-info-cd">CD：${card.cd}</span>`;
+
+    const ultimateWrap = document.createElement('div');
+    ultimateWrap.style.marginBottom = '16px';
+    const ultimateLabel = document.createElement('div');
+    ultimateLabel.className = 'ultimate-skill-label';
+    ultimateLabel.textContent = '必殺技';
+    const ultimateDesc = document.createElement('div');
+    ultimateDesc.className = 'ultimate-skill-desc';
+    ultimateDesc.innerHTML = card.ultimateSkill && card.ultimateSkill.trim() ? card.ultimateSkill : '空白。';
+    ultimateWrap.append(ultimateLabel, ultimateDesc);
+
+    const tagRow = document.createElement('div');
+    tagRow.className = 'tag-row';
+    tagRow.innerHTML = cardTags.map((t) => `<span class="tag-pill"><img src="${resolveAsset(t.icon)}" alt="">${t.label}</span>`).join('') || '<span class="guide-preview">尚未設定技能標籤</span>';
+
+    infoCol.append(titleRow, h2, metaRow, ultimateWrap, tagRow);
+    wrap.append(thumbBox, infoCol);
+    body.appendChild(wrap);
+
     openModal({ title: '卡片資訊', body });
   }
 
@@ -73,3 +111,4 @@ async function init() {
 }
 
 init();
+

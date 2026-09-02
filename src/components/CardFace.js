@@ -2,6 +2,56 @@
 import { resolveAsset } from '../core/dataLoader.js';
 
 /**
+ * Mounts a "cover"-cropped image (same math as the admin's interactive
+ * cropper) into a clip element, self-positioning on load/resize. Shared
+ * by renderCardFace() and renderCardCrop() so the pixel math — and any
+ * future fix to it — lives in exactly one place.
+ *
+ * @param {HTMLElement} clip - the overflow:hidden container the image is cropped against
+ * @param {string} imageSrc
+ * @param {string} imageAlt
+ * @param {number} imageZoom
+ * @param {number} imageOffsetX
+ * @param {number} imageOffsetY
+ * @returns {HTMLImageElement}
+ */
+function mountCoverImage(clip, { imageSrc, imageAlt = '', imageZoom = 1, imageOffsetX = 0.5, imageOffsetY = 0.5 }) {
+  const img = document.createElement('img');
+  img.className = 'card-face-img';
+  img.alt = imageAlt;
+  img.loading = 'lazy';
+  img.draggable = false;
+  clip.appendChild(img);
+
+  function layout() {
+    if (!img.naturalWidth || !img.naturalHeight) return;
+    const vw = clip.clientWidth;
+    const vh = clip.clientHeight;
+    if (vw === 0 || vh === 0) return;
+    const coverScale = Math.max(vw / img.naturalWidth, vh / img.naturalHeight);
+    const scale = coverScale * (imageZoom || 1);
+    const renderW = img.naturalWidth * scale;
+    const renderH = img.naturalHeight * scale;
+    const overflowX = Math.max(0, renderW - vw);
+    const overflowY = Math.max(0, renderH - vh);
+    img.style.width = `${renderW}px`;
+    img.style.height = `${renderH}px`;
+    img.style.left = `${-overflowX * imageOffsetX}px`;
+    img.style.top = `${-overflowY * imageOffsetY}px`;
+  }
+  img.addEventListener('load', layout);
+  img.src = imageSrc;
+  if (img.complete && img.naturalWidth) layout(); // cached image, load already fired
+
+  const resizeObserver = new ResizeObserver(() => layout());
+  resizeObserver.observe(clip);
+
+  return img;
+}
+
+const BORDER_CLASS_BY_RARITY = { ssr: 'card-face-border-ssr', sr: 'card-face-border-sr', r: 'card-face-border-r', n: 'card-face-border-n' };
+
+/**
  * Renders the visual "face" of a card:
  * - full-bleed artwork (with optional zoom/pan positioning), clipped to
  *   rounded corners by an inner .card-face-clip wrapper
@@ -11,15 +61,6 @@ import { resolveAsset } from '../core/dataLoader.js';
  *   edge and paint above the border/gradient/artwork
  * - class (定位) badge, top-right
  * - a bottom semi-transparent black gradient with the rarity label
- *
- * Image positioning uses the exact same pixel-based math as the admin's
- * interactive cropper (src/components/ImageCropper.js) — real
- * getBoundingClientRect() + naturalWidth/naturalHeight measurements taken
- * after the image is actually in the live DOM, never CSS percentages
- * against a container whose height comes from `aspect-ratio` (that
- * combination is what caused the black-edge bug previously). Because the
- * math lives in one place, what the operator sees while editing a card is
- * guaranteed to match what players see on the actual site.
  *
  * @param {Object} opts
  * @param {string} opts.imageSrc - resolved image URL (already run through resolveAsset)
@@ -44,46 +85,11 @@ export function renderCardFace({
   const face = document.createElement('div');
   face.className = 'card-face';
 
-  // Everything that must stay inside the card's rounded-corner silhouette
-  // (artwork, bottom gradient, rarity text) lives in this clipped layer.
   const clip = document.createElement('div');
   clip.className = 'card-face-clip';
   face.appendChild(clip);
 
-  const img = document.createElement('img');
-  img.className = 'card-face-img';
-  img.alt = imageAlt;
-  img.loading = 'lazy';
-  img.draggable = false;
-  clip.appendChild(img);
-
-  // Self-positioning: recompute pixel geometry whenever the image finishes
-  // loading (need naturalWidth/Height) and whenever the card's own
-  // rendered size changes (ResizeObserver — covers responsive grid
-  // reflow, window resize, etc). This makes CardFace fully self-contained;
-  // callers never need to measure or re-position it themselves.
-  function layout() {
-    if (!img.naturalWidth || !img.naturalHeight) return;
-    const vw = clip.clientWidth;
-    const vh = clip.clientHeight;
-    if (vw === 0 || vh === 0) return;
-    const coverScale = Math.max(vw / img.naturalWidth, vh / img.naturalHeight);
-    const scale = coverScale * (imageZoom || 1);
-    const renderW = img.naturalWidth * scale;
-    const renderH = img.naturalHeight * scale;
-    const overflowX = Math.max(0, renderW - vw);
-    const overflowY = Math.max(0, renderH - vh);
-    img.style.width = `${renderW}px`;
-    img.style.height = `${renderH}px`;
-    img.style.left = `${-overflowX * imageOffsetX}px`;
-    img.style.top = `${-overflowY * imageOffsetY}px`;
-  }
-  img.addEventListener('load', layout);
-  img.src = imageSrc;
-  if (img.complete && img.naturalWidth) layout(); // cached image, load already fired
-
-  const resizeObserver = new ResizeObserver(() => layout());
-  resizeObserver.observe(clip);
+  mountCoverImage(clip, { imageSrc, imageAlt, imageZoom, imageOffsetX, imageOffsetY });
 
   const gradient = document.createElement('div');
   gradient.className = 'card-face-gradient';
@@ -124,8 +130,7 @@ export function renderCardFace({
 
     clip.appendChild(rarityLabel);
 
-    const borderIds = { ssr: 'card-face-border-ssr', sr: 'card-face-border-sr', r: 'card-face-border-r', n: 'card-face-border-n' };
-    const borderClass = borderIds[rarity.id];
+    const borderClass = BORDER_CLASS_BY_RARITY[rarity.id];
     if (borderClass) {
       const border = document.createElement('div');
       border.className = `card-face-border ${borderClass}`;
@@ -156,6 +161,49 @@ export function renderCardFace({
     bimg.alt = element.label;
     badge.appendChild(bimg);
     face.appendChild(badge);
+  }
+
+  return face;
+}
+
+/**
+ * A pared-down sibling of renderCardFace(): just the cropped artwork and
+ * the rarity-keyed metallic border, no badges/gradient/rarity-text
+ * overlay. Used where the card's attribute/class/CD/etc. are already
+ * being shown separately as plain text/icons nearby (e.g. the 卡片資訊
+ * modal), so the thumbnail itself should just read as "the picture,
+ * cropped the same way as everywhere else" without duplicating info.
+ *
+ * @param {Object} opts
+ * @param {string} opts.imageSrc
+ * @param {string} [opts.imageAlt]
+ * @param {{label:string, color:string, id:string}|null} [opts.rarity]
+ * @param {number} [opts.imageZoom]
+ * @param {number} [opts.imageOffsetX]
+ * @param {number} [opts.imageOffsetY]
+ */
+export function renderCardCrop({
+  imageSrc,
+  imageAlt = '',
+  rarity = null,
+  imageZoom = 1,
+  imageOffsetX = 0.5,
+  imageOffsetY = 0.5,
+}) {
+  const face = document.createElement('div');
+  face.className = 'card-face';
+
+  const clip = document.createElement('div');
+  clip.className = 'card-face-clip';
+  face.appendChild(clip);
+
+  mountCoverImage(clip, { imageSrc, imageAlt, imageZoom, imageOffsetX, imageOffsetY });
+
+  const borderClass = rarity && BORDER_CLASS_BY_RARITY[rarity.id];
+  if (borderClass) {
+    const border = document.createElement('div');
+    border.className = `card-face-border ${borderClass}`;
+    face.appendChild(border);
   }
 
   return face;

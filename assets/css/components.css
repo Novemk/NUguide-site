@@ -171,6 +171,45 @@
 .tag-pill img { width: 18px; height: 18px; }
 
 /* =========================================================
+   Card info modal — small class/element icons + ultimate skill block
+   ========================================================= */
+.card-info-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 16px; }
+.card-info-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  filter: drop-shadow(0 1px 3px rgba(0,0,0,0.5));
+}
+.card-info-cd { font-size: 0.9rem; color: var(--text-dim); margin-left: 4px; }
+
+/* The label sits like a tab on top of the description box: rounded top
+   corners, square bottom corners, no gap to the box below it. The desc
+   box mirrors this — square top-left (so the two shapes fuse into one
+   continuous outline where they meet) and the label's own radius on
+   its other three corners for visual balance. */
+.ultimate-skill-label {
+  display: inline-block;
+  background: #373737;
+  color: var(--text-dim);
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 6px 14px;
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+}
+.ultimate-skill-desc {
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) var(--radius-sm);
+  padding: 12px 14px;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--text);
+  overflow-wrap: break-word;
+}
+.ultimate-skill-desc p { margin: 0 0 0.6em; }
+.ultimate-skill-desc p:last-child { margin-bottom: 0; }
+
+/* =========================================================
    Card grid & card button (used by CardGrid / CardButton)
    ========================================================= */
 .card-grid {
@@ -353,20 +392,25 @@
 .team-card-note { font-size: 0.82rem; color: var(--text-dim); margin-bottom: 10px; white-space: pre-wrap; }
 .team-card-members { display: flex; gap: 8px; margin-bottom: 12px; }
 .team-card-members .mini-avatar, .team-card-members .mini-avatar-empty {
-  width: 72px; height: 93.6px; border-radius: 8px; overflow: hidden;
+  width: 80px; height: 104px; border-radius: 8px; overflow: hidden;
   border: 1px solid var(--border-soft);
   background: var(--bg-elevated);
   position: relative;
   flex-shrink: 0;
 }
 /* .mini-avatar-stage is rendered at the same 200x260 reference size as
-   every other card (.card-btn/.card-preview-box) so CardFace's fixed-px
+   every other card (.card-btn/.card-preview-box) so CardFace's cqw-based
    badges/gradient/rarity text keep identical proportions, then scaled
    down as one unit — this is what keeps "唯一差異只有等比縮小或放大"
-   true against 卡片資料庫 / 卡片管理's full-size card. */
+   true against 卡片資料庫 / 卡片管理's full-size card.
+   Scale is 0.4 (not 0.36) specifically because 200×0.4 / 260×0.4 land on
+   whole pixels (80 / 104) — a fractional result like 93.6px let the
+   browser round the scaled box a hair short of the container's
+   overflow:hidden boundary, clipping a sliver off the border's right
+   and bottom edges. */
 .team-card-members .mini-avatar-stage {
   position: relative;
-  transform: scale(0.36);
+  transform: scale(0.4);
   transform-origin: top left;
 }
 .team-card-members .mini-avatar-empty { display: flex; align-items: center; justify-content: center; color: var(--text-faint); font-size: 0.9rem; }
