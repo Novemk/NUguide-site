@@ -60,8 +60,40 @@ export function renderCardFace({ imageSrc, imageAlt = '', rarity = null, element
   if (rarity) {
     const rarityLabel = document.createElement('span');
     rarityLabel.className = 'card-face-rarity';
-    rarityLabel.textContent = rarity.label;
-    if (rarity.color) rarityLabel.style.color = rarity.color;
+
+    // Per-rarity treatments:
+    // - ssr / sr: each letter gets its own solid color from a fixed
+    //   palette (a continuous gradient doesn't read on 2-3 characters).
+    // - n: single letter, a short background-clip gradient across it
+    //   still shows both tones blending, so it's left as one gradient.
+    // - anything else (r, or a future custom rarity): flat color from
+    //   rarities.json, unchanged.
+    const letterPalettes = {
+      ssr: ['#7CF5D8', '#FFF04D', '#FFC4FF'],
+      sr: ['#fffbe0', '#ffff9c'],
+    };
+    const glowColors = { sr: '#ff7300', ssr: '#ffd700' };
+
+    if (letterPalettes[rarity.id]) {
+      const palette = letterPalettes[rarity.id];
+      const glow = glowColors[rarity.id];
+      [...rarity.label].forEach((ch, i) => {
+        const span = document.createElement('span');
+        span.textContent = ch;
+        span.style.color = palette[i % palette.length];
+        if (glow) {
+          span.style.textShadow = `0 0 6px ${glow}, 0 1px 4px rgba(0,0,0,0.9)`;
+        }
+        rarityLabel.appendChild(span);
+      });
+    } else if (rarity.id === 'n') {
+      rarityLabel.textContent = rarity.label;
+      rarityLabel.style.color = '#E2EBF0';
+    } else {
+      rarityLabel.textContent = rarity.label;
+      if (rarity.color) rarityLabel.style.color = rarity.color;
+    }
+
     face.appendChild(rarityLabel);
   }
 

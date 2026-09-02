@@ -14,7 +14,7 @@
 }
 .card-face-badge {
   position: absolute;
-  top: 6px;
+  top: 2px;
   width: 54px;
   height: 54px;
   display: flex;
@@ -23,8 +23,8 @@
   filter: drop-shadow(0 1px 3px rgba(0,0,0,0.85)) drop-shadow(0 0 4px rgba(0,0,0,0.6));
 }
 .card-face-badge img { width: 100%; height: 100%; object-fit: contain; }
-.card-face-badge-tl { left: 6px; }
-.card-face-badge-tr { right: 6px; }
+.card-face-badge-tl { left: 2px; }
+.card-face-badge-tr { right: 2px; }
 
 .card-face-gradient {
   position: absolute;
@@ -39,9 +39,29 @@
   bottom: 6px;
   font-family: var(--font-mono);
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 1.9rem;
   letter-spacing: 0.04em;
   text-shadow: 0 1px 5px rgba(0,0,0,0.95), 0 0 10px rgba(0,0,0,0.7);
+}
+
+/* Rarity-specific gradient text. Keyed off the rarity's own id (ssr/sr/n) —
+   if a rarity's id doesn't match one of these, it just keeps the flat
+   color set inline from rarities.json (this covers "r" and any future
+   custom rarity added via the admin, unchanged as requested). */
+.card-face-rarity.rarity-grad {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+.card-face-rarity.rarity-grad-ssr {
+  background-image: linear-gradient(135deg, #E3FDF5, #FBFCDB, #FFE6FA);
+}
+.card-face-rarity.rarity-grad-sr {
+  background-image: linear-gradient(135deg, #fffbe0, #ffff9c, #ff7300);
+}
+.card-face-rarity.rarity-grad-n {
+  background-image: linear-gradient(135deg, #F5F7FA, #C3CFE2);
 }
 
 /* Live preview used in the admin card-image dropzone (same visual language
