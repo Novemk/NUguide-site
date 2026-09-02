@@ -23,7 +23,7 @@
     "rarityId": "ssr",
     "classId": "atk",
     "elementId": "fire",
-    "cd": 7,
+    "cd": 4,
     "tags": [
       "burst"
     ],
