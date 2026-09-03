@@ -1493,5 +1493,24 @@
     "imageOffsetX": 0.5539880990093098,
     "imageOffsetY": 0.27219017128448064,
     "sortOrder": 73
+  },
+  {
+    "id": "card_074",
+    "name": "絕對敬業♡歛喵",
+    "characterId": "char_12",
+    "rarityId": "ssr",
+    "classId": "buf",
+    "elementId": "fire",
+    "cd": 4,
+    "tags": [
+      "atk_buff_self",
+      "immune_silence"
+    ],
+    "ultimateSkill": "以自身基礎攻擊力173%使我方全體攻擊力增加（1回合）\n使我方全體受到治療量增加17%（4回合）\n並使我方全體定位妨礙的角色造成傷害增加21％（1回合）\n［冷卻時間：4回合］",
+    "image": "assets/img/cards/card_074.png",
+    "imageZoom": 1.46,
+    "imageOffsetX": 0.488477726046457,
+    "imageOffsetY": 0.40247304277613843,
+    "sortOrder": 74
   }
 ]
