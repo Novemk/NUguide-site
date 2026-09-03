@@ -1462,7 +1462,8 @@
     "tags": [
       "self_burst_dmg_up",
       "enemy_elem_dmg_up",
-      "taunt"
+      "taunt",
+      "immune_silence"
     ],
     "ultimateSkill": "使目標受到闇屬性傷害增加15%（3回合）\n以攻擊力100%對目標造成傷害\n再以最大HP40%給予自身護盾（1回合）\n使我方全體必殺技傷害增加26%（1回合）\n使自身獲得嘲諷（1回合）\n並使自身變為防禦狀態\n［冷卻時間：3回合］",
     "image": "assets/img/cards/card_072.png",
