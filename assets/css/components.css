@@ -441,14 +441,13 @@ hr.ql-divider {
 }
 .opt-range.active { background: var(--accent-teal); border-color: var(--accent-teal); color: #0d1f1c; }
 /* Fixed 2-column grid for the "normal" tag rows — short labels sit two
-   to a row; anything long enough to risk wrapping (see
-   WIDE_LABEL_THRESHOLD in TagPicker.js) gets .opt-tag-wide and spans
-   both columns instead, so it never wraps or gets squeezed. Widens to
-   4 columns when there's actually room (container query, not viewport —
-   this looks at .tag-group-block's own width, so it does the right
-   thing whether it's sitting in the public site's narrow 260px filter
-   sidebar or a much wider admin picker). */
-.tag-group-block { container-type: inline-size; }
+   to a row; anything actually measured as too long (see
+   widenOverflowingTags in TagPicker.js) gets .opt-tag-wide and spans
+   both columns instead of wrapping or getting squeezed. Deliberately a
+   plain fixed grid, not a container query — a "widen past 460px"
+   version of this broke layout entirely in some cases (all text
+   collapsing to zero width), and a stable 2 columns everywhere is a
+   better trade than a fancier layout that occasionally breaks. */
 .tag-flow {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -465,9 +464,6 @@ hr.ql-divider {
   min-width: 0;
 }
 .tag-flow .opt-tag-wide { grid-column: 1 / -1; }
-@container (min-width: 460px) {
-  .tag-flow { grid-template-columns: repeat(4, 1fr); }
-}
 .opt-tag {
   display: inline-flex; align-items: center; gap: 7px;
   border: 1px solid var(--border);
