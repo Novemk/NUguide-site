@@ -450,13 +450,22 @@ hr.ql-divider {
    hand could never reliably avoid across different screen widths. */
 .tag-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
+  gap: 8px;
 }
 .tag-grid + .tag-grid,
 .tag-grid + .filter-options,
 .filter-options + .tag-grid { margin-top: 8px; }
-.tag-grid .opt-tag { width: 100%; box-sizing: border-box; }
+.tag-grid .opt-tag {
+  width: 100%;
+  min-width: 0; /* grid items default to min-width:auto, which — combined
+    with white-space:nowrap on the label — was refusing to shrink below
+    each pill's own full unwrapped text width, silently forcing the
+    column count down to 1 regardless of the minmax() above. */
+  box-sizing: border-box;
+  white-space: normal;
+  text-align: left;
+}
 
 .opt-tag {
   display: inline-flex; align-items: center; gap: 7px;
