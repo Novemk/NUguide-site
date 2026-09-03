@@ -1227,8 +1227,9 @@
     "elementId": "fire",
     "cd": 3,
     "tags": [
-      "enemy_elem_dmg_up",
       "trigger",
+      "proc_followup",
+      "enemy_elem_dmg_up",
       "immune_sleep"
     ],
     "ultimateSkill": "使目標受到火屬性傷害增加5%（3回合）\n以攻擊力125%對目標造成傷害\n再使自身獲得「攻擊時，觸發『以攻擊力139%對目標造成傷害』（3回合）」\n［冷卻時間：3回合］",
