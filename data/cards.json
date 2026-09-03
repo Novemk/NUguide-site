@@ -270,17 +270,24 @@
   },
   {
     "id": "card_015",
-    "name": "綠蔭治癒",
-    "characterId": "char_03",
+    "name": "狐火映追憶",
+    "characterId": "char_08",
     "rarityId": "ssr",
-    "classId": "buf",
-    "elementId": "dark",
-    "cd": 6,
+    "classId": "debuf",
+    "elementId": "fire",
+    "cd": 3,
     "tags": [
-      "stun",
-      "cleanse"
+      "cleanse",
+      "dot",
+      "enemy_dmg_down",
+      "immune_stun"
     ],
-    "image": "assets/img/cards/card_015.svg"
+    "ultimateSkill": "以自身攻擊力182%對目標造成持續傷害（3回合），\n並使目標受到持續傷害效果增加10%（最多3層）、\n必殺技傷害減少10%（2回合）\n［冷卻時間：3回合］",
+    "image": "assets/img/cards/card_015.png",
+    "imageZoom": 1.35,
+    "imageOffsetX": 0.3303580371451465,
+    "imageOffsetY": 0.4810451537195034,
+    "sortOrder": 14
   },
   {
     "id": "card_016",
