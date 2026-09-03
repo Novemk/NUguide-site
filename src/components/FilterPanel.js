@@ -19,7 +19,7 @@ export async function mountFilterPanel(container, onChange) {
   let countEl = null;
   let clearBtnEl = null;
 
-  function updateFooter() {
+  function updateHeader() {
     const active = countActiveFilters(state);
     countEl.textContent = active > 0 ? `已套用 ${active} 項篩選條件` : '尚未套用篩選條件';
     clearBtnEl.disabled = active === 0;
@@ -50,7 +50,7 @@ export async function mountFilterPanel(container, onChange) {
         isActive: (option) => (state[group.field] || []).includes(option.id),
         onToggle: (option) => {
           state = toggleFilterOption(state, group.field, option.id);
-          updateFooter();
+          updateHeader();
           onChange(state);
         },
       });
@@ -112,19 +112,43 @@ export async function mountFilterPanel(container, onChange) {
       el.addEventListener('click', () => {
         state = toggleFilterOption(state, group.field, option.id);
         paintActive((state[group.field] || []).includes(option.id));
-        updateFooter();
+        updateHeader();
         onChange(state);
       });
       optionsWrap.appendChild(el);
     }
   }
 
-  // Full rebuild — only used once on mount, and on "清除全部"/reset,
-  // where starting the whole panel fresh is actually correct.
+  // Full rebuild — only used once on mount, and on "重設"/reset, where
+  // starting the whole panel fresh is actually correct.
   function renderAll() {
     container.innerHTML = '';
     const panel = document.createElement('div');
     panel.className = 'filter-panel';
+
+    // Moved to the top (was at the bottom) and made sticky — before any
+    // scrolling happens this just sits in its normal spot above 稀有度
+    // like any other block (sticky elements don't overlap anything until
+    // they'd otherwise scroll out of view), so nothing gets covered on
+    // load. Once you scroll the sidebar down past it, it sticks to the
+    // top of .fg-sidebar instead of scrolling away, so it's reachable no
+    // matter how far down the filter list you've scrolled.
+    const header = document.createElement('div');
+    header.className = 'filter-panel-header';
+    countEl = document.createElement('span');
+    countEl.className = 'filter-count';
+    clearBtnEl = document.createElement('button');
+    clearBtnEl.type = 'button';
+    clearBtnEl.className = 'btn btn-sm btn-secondary';
+    clearBtnEl.textContent = '重設';
+    clearBtnEl.addEventListener('click', () => {
+      state = createEmptyFilterState(schema);
+      renderAll();
+      onChange(state);
+    });
+    header.append(countEl, clearBtnEl);
+    panel.appendChild(header);
+    updateHeader();
 
     for (const group of schema) {
       const wrap = document.createElement('div');
@@ -142,23 +166,6 @@ export async function mountFilterPanel(container, onChange) {
 
       renderGroup(group, optionsWrap);
     }
-
-    const footer = document.createElement('div');
-    footer.className = 'filter-panel-footer';
-    countEl = document.createElement('span');
-    countEl.className = 'filter-count';
-    clearBtnEl = document.createElement('button');
-    clearBtnEl.type = 'button';
-    clearBtnEl.className = 'btn btn-sm btn-secondary';
-    clearBtnEl.textContent = '清除全部';
-    clearBtnEl.addEventListener('click', () => {
-      state = createEmptyFilterState(schema);
-      renderAll();
-      onChange(state);
-    });
-    footer.append(countEl, clearBtnEl);
-    panel.appendChild(footer);
-    updateFooter();
 
     container.appendChild(panel);
   }

@@ -443,14 +443,25 @@ hr.ql-divider {
 /* Fixed 2-column grid for the "normal" tag rows — short labels sit two
    to a row; anything actually measured as too long (see
    widenOverflowingTags in TagPicker.js) gets .opt-tag-wide and spans
-   both columns instead of wrapping or getting squeezed. Deliberately a
-   plain fixed grid, not a container query — a "widen past 460px"
-   version of this broke layout entirely in some cases (all text
-   collapsing to zero width), and a stable 2 columns everywhere is a
-   better trade than a fancier layout that occasionally breaks. */
+   both columns instead of wrapping or getting squeezed. This exact
+   rule (fixed 2 columns) is confirmed working on the public site —
+   don't change it here; add a *new* class instead (see .tag-flow-admin
+   below) if a different context needs different column behavior. */
 .tag-flow {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+/* Admin-only variant (see fieldSelectors.js's flowClass option) — plain
+   flex-wrap, each button's own width is set inline by TagPicker.js
+   (computeFixedTagWidth), straight from that label's character count.
+   No grid, no column-sharing, no live measurement: a given label is
+   always the same width regardless of what's next to it, and rows just
+   wrap whenever the next button doesn't fit. Public site never uses
+   this class, so it can't be affected by it. */
+.tag-flow-admin {
+  display: flex;
+  flex-wrap: wrap;
   gap: 10px;
 }
 .tag-flow .opt-tag {
@@ -458,7 +469,10 @@ hr.ql-divider {
   min-width: 0;
   box-sizing: border-box;
 }
-.tag-flow .opt-tag span {
+.tag-flow-admin .opt-tag {
+  flex: 0 0 auto;
+}
+.tag-flow .opt-tag span, .tag-flow-admin .opt-tag span {
   overflow: hidden;
   text-overflow: ellipsis;
   min-width: 0;
@@ -479,7 +493,24 @@ hr.ql-divider {
 .opt-tag img { width: 20px; height: 20px; flex-shrink: 0; }
 .opt-tag.active { opacity: 1; border-color: var(--accent-teal); background: rgba(79,200,176,0.12); color: var(--text); }
 
-.filter-panel-footer { display: flex; justify-content: space-between; align-items: center; padding-top: 4px; border-top: 1px solid var(--border-soft); margin-top: 4px; }
+.filter-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid var(--border-soft);
+  /* Sits in its normal spot (above 稀有度) until scrolling would carry it
+     out of view, then sticks to the top of .fg-sidebar instead — never
+     overlaps anything before that point, since sticky elements don't
+     leave their normal flow position until they'd otherwise scroll away.
+     Opaque background is needed once it IS stuck, so options scrolling
+     underneath don't show through/overlap it. */
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: var(--bg-elevated);
+}
 .filter-count { font-size: 0.82rem; color: var(--text-faint); }
 
 /* =========================================================
