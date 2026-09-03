@@ -374,16 +374,22 @@
   },
   {
     "id": "card_020",
-    "name": "赤炎連斬",
-    "characterId": "char_08",
+    "name": "永不消散的焰火",
+    "characterId": "char_11",
     "rarityId": "ssr",
-    "classId": "tank",
-    "elementId": "fire",
-    "cd": 5,
+    "classId": "atk",
+    "elementId": "water",
+    "cd": 3,
     "tags": [
-      "shield"
+      "break_shield",
+      "enemy_burst_dmg_up"
     ],
-    "image": "assets/img/cards/card_020.svg"
+    "ultimateSkill": "使目標解除防禦狀態，\n使目標受必殺技傷害增加27%（1回合），\n並以攻擊力273%對目標造成傷害\n［冷卻時間：3回合］",
+    "image": "assets/img/cards/card_020.png",
+    "imageZoom": 1.53,
+    "imageOffsetX": 0.5641825390221928,
+    "imageOffsetY": 0.18376253325823785,
+    "sortOrder": 20
   },
   {
     "id": "card_021",
