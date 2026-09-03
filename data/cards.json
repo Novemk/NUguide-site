@@ -595,17 +595,24 @@
   },
   {
     "id": "card_031",
-    "name": "素心守誓",
-    "characterId": "char_07",
-    "rarityId": "sr",
-    "classId": "debuf",
-    "elementId": "dark",
-    "cd": 5,
+    "name": "春日迷亂",
+    "characterId": "char_05",
+    "rarityId": "ssr",
+    "classId": "tank",
+    "elementId": "wood",
+    "cd": 6,
     "tags": [
-      "atk_buff_enemy",
-      "cleanse"
+      "enemy_dmg_down",
+      "shield",
+      "hot",
+      "immune_sleep"
     ],
-    "image": "assets/img/cards/card_031.svg"
+    "ultimateSkill": "以攻擊力100%對目標造成傷害，\n並使目標造成傷害減少10%（3回合），\n再使自身受到傷害減少7.5%（最多2層），\n並以最大HP12.5%對自身進行持續治療（4回合）\n［冷卻時間：6回合］",
+    "image": "assets/img/cards/card_031.png",
+    "imageZoom": 1.93,
+    "imageOffsetX": 0.4342646668561401,
+    "imageOffsetY": 0.24905238897064322,
+    "sortOrder": 31
   },
   {
     "id": "card_032",
