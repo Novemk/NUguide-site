@@ -773,9 +773,9 @@
     ],
     "ultimateSkill": "以攻擊力100%對目標造成傷害\n使我方站位2的角色普攻傷害增加54%（2回合）\n使我方站位2的角色獲得「普攻時，追加『以攻擊力137%對目標造成傷害』（2回合）」\n［冷卻時間：3回合］",
     "image": "assets/img/cards/card_039.png",
-    "imageZoom": 1.48,
-    "imageOffsetX": 0.4365677190034167,
-    "imageOffsetY": 0.26540465944347413,
+    "imageZoom": 1.54,
+    "imageOffsetX": 0.44246619012202126,
+    "imageOffsetY": 0.2878153621790146,
     "sortOrder": 39
   },
   {
