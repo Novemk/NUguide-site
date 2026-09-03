@@ -1554,5 +1554,27 @@
     "imageOffsetX": 0.40887506375838434,
     "imageOffsetY": 0.39952587188883903,
     "sortOrder": 76
+  },
+  {
+    "id": "card_077",
+    "name": "冬夜迷徑",
+    "characterId": "char_06",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "light",
+    "cd": 4,
+    "tags": [
+      "normal_atk",
+      "team_normal_dmg_up",
+      "own_dmg_up",
+      "followup_atk",
+      "immune_sleep"
+    ],
+    "ultimateSkill": "以攻擊力125%對目標造成傷害\n使自身攻擊力增加34%（4回合）\n使我方全體定位攻擊與妨礙的角色普攻傷害增加34%（4回合）\n再使自身獲得「普攻時，追加『以攻擊力73%對目標進行追擊』（4回合）」\n［冷卻時間：4回合］",
+    "image": "assets/img/cards/card_077.png",
+    "imageZoom": 1.44,
+    "imageOffsetX": 0.41079121514818295,
+    "imageOffsetY": 0.3696141990016394,
+    "sortOrder": 77
   }
 ]
