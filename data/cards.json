@@ -1207,8 +1207,10 @@
     "elementId": "fire",
     "cd": 3,
     "tags": [
+      "trigger",
       "atk_buff_self",
       "team_proc_dmg_up",
+      "proc_followup",
       "immune_stun"
     ],
     "ultimateSkill": "以自身基礎攻擊力21%使我方全體攻擊力增加（3回合）\n使我方全體觸發技傷害增加27%（3回合）\n並使自身以外的我方全體獲得「攻擊時，觸發『以攻擊力32% 目標造成傷害』（3回合）」\n［冷卻時間：3回合］",
@@ -1227,8 +1229,9 @@
     "elementId": "fire",
     "cd": 3,
     "tags": [
-      "enemy_elem_dmg_up",
       "trigger",
+      "proc_followup",
+      "enemy_elem_dmg_up",
       "immune_sleep"
     ],
     "ultimateSkill": "使目標受到火屬性傷害增加5%（3回合）\n以攻擊力125%對目標造成傷害\n再使自身獲得「攻擊時，觸發『以攻擊力139%對目標造成傷害』（3回合）」\n［冷卻時間：3回合］",
@@ -1237,5 +1240,110 @@
     "imageOffsetX": 0.5323333714798573,
     "imageOffsetY": 0.04045136472333807,
     "sortOrder": 61
+  },
+  {
+    "id": "card_062",
+    "name": "滿月夜的疾行追影",
+    "characterId": "char_10",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "water",
+    "cd": 3,
+    "tags": [
+      "self_dmg",
+      "atk_buff_enemy",
+      "enemy_elem_dmg_up",
+      "immune_stun"
+    ],
+    "ultimateSkill": "以當前HP20%對自身造成真實傷害\n使目標受到傷害增加27%（3回合）\n使目標受到五屬性傷害增加12%（3回合）\n再以攻擊力290%對目標造成傷害\n［冷卻時間：3回合］",
+    "image": "assets/img/cards/card_062.png",
+    "imageZoom": 1.47,
+    "imageOffsetX": 0.6462149705275003,
+    "imageOffsetY": 0.5329187526074259,
+    "sortOrder": 62
+  },
+  {
+    "id": "card_063",
+    "name": "無價賣的明鑑探蹤",
+    "characterId": "char_12",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "light",
+    "cd": 4,
+    "tags": [
+      "self_dmg",
+      "burst",
+      "enemy_elem_dmg_up",
+      "hot",
+      "immune_silence"
+    ],
+    "ultimateSkill": "以當前HP12.5%對我方全體造成真實傷害\n並使敵方全體受到光屬性傷害增加9%（2回合）\n使我方全體必殺技傷害增加21%（2回合）\n再以攻擊力419%對目標造成傷害\n並以自身最大HP10%對我方全體進行持續治療（2回合）\n［冷卻時間：4回合］",
+    "image": "assets/img/cards/card_063.png",
+    "imageZoom": 1.27,
+    "imageOffsetX": 0.4864407011084145,
+    "imageOffsetY": 0.10801312260291837,
+    "sortOrder": 63
+  },
+  {
+    "id": "card_064",
+    "name": "破繭的抉擇",
+    "characterId": "char_06",
+    "rarityId": "ssr",
+    "classId": "debuf",
+    "elementId": "wood",
+    "cd": 4,
+    "tags": [
+      "proc_followup",
+      "atk_buff_enemy",
+      "dot",
+      "immune_sleep"
+    ],
+    "ultimateSkill": "使敵方全體受到傷害增加13.5%（最多2層）\n以攻擊力125%對目標造成傷害\n以攻擊力147%對目標造成持續傷害（3回合）\n並使我方全體定位攻擊與妨礙的角色獲得「攻擊時，觸發『以攻擊力34%對目標造成持續傷害（3回合）』（1回合）」\n［冷卻時間：4回合］",
+    "image": "assets/img/cards/card_064.png",
+    "imageZoom": 1.34,
+    "imageOffsetX": 0.47099596010564165,
+    "imageOffsetY": 0.16818581303262556,
+    "sortOrder": 64
+  },
+  {
+    "id": "card_065",
+    "name": "赴焰的試煉",
+    "characterId": "char_08",
+    "rarityId": "ssr",
+    "classId": "buf",
+    "elementId": "light",
+    "cd": 3,
+    "tags": [
+      "dot",
+      "atk_buff_self",
+      "immune_stun"
+    ],
+    "ultimateSkill": "使目標受到持續傷害量增加30%（最多1層）\n以自身基礎攻擊力69%使我方全體攻擊力增加（2回合）\n並以攻擊力50%對目標造成持續傷害（2回合）\n［冷卻時間：3回合］",
+    "image": "assets/img/cards/card_065.png",
+    "imageZoom": 1.38,
+    "imageOffsetX": 0.5381726315935291,
+    "imageOffsetY": 0.2221874050704445,
+    "sortOrder": 65
+  },
+  {
+    "id": "card_066",
+    "name": "登陸者的盛夏冠冕",
+    "characterId": "char_07",
+    "rarityId": "ssr",
+    "classId": "debuf",
+    "elementId": "light",
+    "cd": 4,
+    "tags": [
+      "enemy_dmg_down",
+      "own_burst_dmg_up",
+      "burst",
+      "immune_silence"
+    ],
+    "ultimateSkill": "使目標造成傷害減少10%（3回合）\n使自身必殺技傷害增加30%（1回合）\n並以攻擊力25%對目標造成2次傷害\n再以攻擊力345%對目標造成傷害\n［冷卻時間：4回合］",
+    "image": "assets/img/cards/card_066.png",
+    "imageZoom": 1.41,
+    "imageOffsetX": 0.4221964397286994,
+    "imageOffsetY": 0.22080248067520175,
+    "sortOrder": 66
   }
 ]
