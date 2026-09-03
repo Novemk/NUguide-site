@@ -1408,5 +1408,237 @@
     "imageOffsetX": 0.3498912388225897,
     "imageOffsetY": 0.08811947574199941,
     "sortOrder": 69
+  },
+  {
+    "id": "card_070",
+    "name": "捕捉星芒的造夢者",
+    "characterId": "char_10",
+    "rarityId": "ssr",
+    "classId": "buf",
+    "elementId": "dark",
+    "cd": 4,
+    "tags": [
+      "atk_buff_self",
+      "heal_tag",
+      "target_pos_cd",
+      "immune_stun"
+    ],
+    "ultimateSkill": "使我方站位5的角色必殺技冷卻時間減少4回合\n使我方全體造成傷害增加34%（1回合）\n使我方站位5的攻擊力增加34%（1回合）\n以自身基礎攻擊力44%使我方全體攻擊力增加（4回合）【不可疊加】\n再以攻擊力100%對我方全體進行治療\n［冷卻時間：4回合］",
+    "image": "assets/img/cards/card_070.png",
+    "imageZoom": 1.43,
+    "imageOffsetX": 0.33567238836657354,
+    "imageOffsetY": 0.363412616136571,
+    "sortOrder": 70
+  },
+  {
+    "id": "card_071",
+    "name": "暗淵明珠",
+    "characterId": "char_04",
+    "rarityId": "ssr",
+    "classId": "debuf",
+    "elementId": "water",
+    "cd": 4,
+    "tags": [
+      "burst",
+      "atk_buff_self",
+      "self_burst_dmg_up",
+      "immune_sleep"
+    ],
+    "ultimateSkill": "使目標受到定位妨礙的角色傷害增加51%（1回合）\n再使我方定位妨礙的角色必殺技傷害增加31%（1回合）\n並以攻擊力345%對目標造成傷害\n［冷卻時間：4回合］",
+    "image": "assets/img/cards/card_071.png",
+    "imageZoom": 1.47,
+    "imageOffsetX": 0.5940004433006997,
+    "imageOffsetY": 0.17089204737725028,
+    "sortOrder": 71
+  },
+  {
+    "id": "card_072",
+    "name": "怒濤燐火",
+    "characterId": "char_08",
+    "rarityId": "ssr",
+    "classId": "tank",
+    "elementId": "dark",
+    "cd": 3,
+    "tags": [
+      "self_burst_dmg_up",
+      "enemy_elem_dmg_up",
+      "taunt",
+      "immune_silence"
+    ],
+    "ultimateSkill": "使目標受到闇屬性傷害增加15%（3回合）\n以攻擊力100%對目標造成傷害\n再以最大HP40%給予自身護盾（1回合）\n使我方全體必殺技傷害增加26%（1回合）\n使自身獲得嘲諷（1回合）\n並使自身變為防禦狀態\n［冷卻時間：3回合］",
+    "image": "assets/img/cards/card_072.png",
+    "imageZoom": 1.41,
+    "imageOffsetX": 0.641090399428211,
+    "imageOffsetY": 0.2451403899760986,
+    "sortOrder": 72
+  },
+  {
+    "id": "card_073",
+    "name": "強勢攻心♡天天",
+    "characterId": "char_11",
+    "rarityId": "ssr",
+    "classId": "tank",
+    "elementId": "water",
+    "cd": 3,
+    "tags": [
+      "shield",
+      "atk_buff_self",
+      "heal_tag",
+      "taunt",
+      "immune_silence"
+    ],
+    "ultimateSkill": "以攻擊力100%對目標造成傷害\n使自身受到傷害減少28%（1回合）\n使我方全體造成傷害增加17%（3回合）\n使自身獲得「被攻擊時，觸發『以自身最大HP20%對我方全體進行治療』（2回合）（觸發1次後解除）」\n使自身獲得嘲諷（1回合）\n並變為防禦狀態\n［冷卻時間：3回合］",
+    "image": "assets/img/cards/card_073.png",
+    "imageZoom": 1.52,
+    "imageOffsetX": 0.5539880990093098,
+    "imageOffsetY": 0.27219017128448064,
+    "sortOrder": 73
+  },
+  {
+    "id": "card_074",
+    "name": "絕對敬業♡歛喵",
+    "characterId": "char_12",
+    "rarityId": "ssr",
+    "classId": "buf",
+    "elementId": "fire",
+    "cd": 4,
+    "tags": [
+      "atk_buff_self",
+      "immune_silence"
+    ],
+    "ultimateSkill": "以自身基礎攻擊力173%使我方全體攻擊力增加（1回合）\n使我方全體受到治療量增加17%（4回合）\n並使我方全體定位妨礙的角色造成傷害增加21％（1回合）\n［冷卻時間：4回合］",
+    "image": "assets/img/cards/card_074.png",
+    "imageZoom": 1.46,
+    "imageOffsetX": 0.488477726046457,
+    "imageOffsetY": 0.40247304277613843,
+    "sortOrder": 74
+  },
+  {
+    "id": "card_075",
+    "name": "守望生命之流",
+    "characterId": "char_07",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "water",
+    "cd": 6,
+    "tags": [
+      "burst",
+      "own_dmg_up",
+      "immune_sleep"
+    ],
+    "ultimateSkill": "使自身造成傷害增加34%（4回合）\n以攻擊力657%對目標造成傷害\n［冷卻時間：6回合］",
+    "image": "assets/img/cards/card_075.png",
+    "imageZoom": 1.47,
+    "imageOffsetX": 0.6265619545103832,
+    "imageOffsetY": 0.3146725225911001,
+    "sortOrder": 75
+  },
+  {
+    "id": "card_076",
+    "name": "捍衛命途之光",
+    "characterId": "char_09",
+    "rarityId": "ssr",
+    "classId": "buf",
+    "elementId": "water",
+    "cd": 3,
+    "tags": [
+      "trigger",
+      "shield",
+      "proc_followup",
+      "atk_buff_self",
+      "immune_stun"
+    ],
+    "ultimateSkill": "使除自身以外我方全體觸發技傷害增加34%（1回合）\n使我方全體定位守護的角色受到必殺技傷害減少27%（1回合）\n使除自身以外我方全體獲得「攻擊時，觸發『以攻擊力99%對目標造成傷害』（1回合）」\n並以自身基礎攻擊力30%使我方全體攻擊力增加（1回合）\n［冷卻時間：3回合］",
+    "image": "assets/img/cards/card_076.png",
+    "imageZoom": 1.46,
+    "imageOffsetX": 0.40887506375838434,
+    "imageOffsetY": 0.39952587188883903,
+    "sortOrder": 76
+  },
+  {
+    "id": "card_077",
+    "name": "冬夜迷徑",
+    "characterId": "char_06",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "light",
+    "cd": 4,
+    "tags": [
+      "normal_atk",
+      "team_normal_dmg_up",
+      "own_dmg_up",
+      "followup_atk",
+      "immune_sleep"
+    ],
+    "ultimateSkill": "以攻擊力125%對目標造成傷害\n使自身攻擊力增加34%（4回合）\n使我方全體定位攻擊與妨礙的角色普攻傷害增加34%（4回合）\n再使自身獲得「普攻時，追加『以攻擊力73%對目標進行追擊』（4回合）」\n［冷卻時間：4回合］",
+    "image": "assets/img/cards/card_077.png",
+    "imageZoom": 1.44,
+    "imageOffsetX": 0.41079121514818295,
+    "imageOffsetY": 0.3696141990016394,
+    "sortOrder": 77
+  },
+  {
+    "id": "card_078",
+    "name": "雪夜餘溫",
+    "characterId": "char_08",
+    "rarityId": "ssr",
+    "classId": "debuf",
+    "elementId": "water",
+    "cd": 3,
+    "tags": [
+      "normal_atk",
+      "followup_atk",
+      "enemy_normal_dmg_up",
+      "heal_down",
+      "immune_sleep"
+    ],
+    "ultimateSkill": "使目標受到治療量減少100%（3回合）\n使目標受到普攻傷害增加34%（最多1層）\n並以攻擊力50%對目標造成傷害\n再使自身獲得「普攻時，追加『以攻擊力129%對目標造成傷害，再以攻擊力25%對我方全體進行治療』（3回合）」\n［冷卻時間：3回合］",
+    "image": "assets/img/cards/card_078.png",
+    "imageZoom": 1.33,
+    "imageOffsetX": 0.5039230503381974,
+    "imageOffsetY": 0.33175031783250714,
+    "sortOrder": 78
+  },
+  {
+    "id": "card_079",
+    "name": "星夜畫憶",
+    "characterId": "char_10",
+    "rarityId": "ssr",
+    "classId": "heal",
+    "elementId": "light",
+    "cd": 6,
+    "tags": [
+      "atk_buff_self",
+      "heal_tag",
+      "hot",
+      "immune_stun"
+    ],
+    "ultimateSkill": "以自身基礎攻擊力105%使我方全體攻擊力增加（1回合）\n使我方全體受到治療量增加34%（6回合）\n以攻擊力25%對我方全體進行治療，\n攻擊力56%進行持續治療（6回合）\n［冷卻時間：6回合］",
+    "image": "assets/img/cards/card_079.png",
+    "imageZoom": 1.51,
+    "imageOffsetX": 0.5759832538559936,
+    "imageOffsetY": 0.3299070745827819,
+    "sortOrder": 79
+  },
+  {
+    "id": "card_080",
+    "name": "撲朔迷離",
+    "characterId": "char_14",
+    "rarityId": "ssr",
+    "classId": "tank",
+    "elementId": "light",
+    "cd": 3,
+    "tags": [
+      "atk_buff_self",
+      "lifesteal",
+      "taunt",
+      "immune_silence"
+    ],
+    "ultimateSkill": "以自身基礎攻擊力81%使我方全體攻擊力增加（2回合）\n使我方全體獲得吸血效果17%（3回合）\n以攻擊力50%對目標造成傷害\n以最大HP40%給予自身護盾（1回合）\n使自身獲得嘲諷（1回合）\n並變為防禦狀態\n［冷卻時間：3回合］",
+    "image": "assets/img/cards/card_080.png",
+    "imageZoom": 1.5,
+    "imageOffsetX": 0.48930261414594733,
+    "imageOffsetY": 0.4219308099826845,
+    "sortOrder": 80
   }
 ]
