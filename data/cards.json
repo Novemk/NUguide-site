@@ -513,17 +513,24 @@
   },
   {
     "id": "card_027",
-    "name": "荊棘纏繞",
-    "characterId": "char_03",
-    "rarityId": "sr",
-    "classId": "debuf",
-    "elementId": "light",
-    "cd": 3,
+    "name": "祝禱者的霜夜心願",
+    "characterId": "char_06",
+    "rarityId": "ssr",
+    "classId": "heal",
+    "elementId": "wood",
+    "cd": 4,
     "tags": [
-      "aoe",
-      "dot"
+      "heal_tag",
+      "hot",
+      "atk_buff_self",
+      "immune_silence"
     ],
-    "image": "assets/img/cards/card_027.svg"
+    "ultimateSkill": "以攻擊力100%對我方全體進行治療，\n以攻擊力45%進行持續治療（3回合），\n再以自身基礎攻擊力17%使我方全體攻擊力增加（4回合）\n［冷卻時間：4回合］",
+    "image": "assets/img/cards/card_027.png",
+    "imageZoom": 1.83,
+    "imageOffsetX": 0.45781456742896903,
+    "imageOffsetY": 0.3411518152709503,
+    "sortOrder": 27
   },
   {
     "id": "card_028",
