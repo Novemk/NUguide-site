@@ -675,5 +675,26 @@
     "imageOffsetX": 0.47673590435015695,
     "imageOffsetY": 0.336349470194582,
     "sortOrder": 34
+  },
+  {
+    "id": "card_035",
+    "name": "幽曖新星的禱詞",
+    "characterId": "char_04",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "wood",
+    "cd": 4,
+    "tags": [
+      "normal_atk",
+      "enemy_normal_dmg_up",
+      "followup_atk",
+      "immune_stun"
+    ],
+    "ultimateSkill": "以攻擊力125%對目標造成傷害\n使目標受到普攻傷害增加27%（最多1層） \n再使自身獲得「普攻時，追加『以攻擊力94% 目標進行追擊』（3回合）」\n及「普攻時，追加『以攻擊力94% 目標進行追擊』（2回合）」\n［冷卻時間：4回合］",
+    "image": "assets/img/cards/card_035.png",
+    "imageZoom": 1.5,
+    "imageOffsetX": 0.40163607314736366,
+    "imageOffsetY": 0.23954649637324577,
+    "sortOrder": 35
   }
 ]
