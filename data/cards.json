@@ -215,16 +215,22 @@
   },
   {
     "id": "card_012",
-    "name": "大地誓約",
-    "characterId": "char_12",
+    "name": "翠燦之水的花使",
+    "characterId": "char_06",
     "rarityId": "ssr",
-    "classId": "debuf",
-    "elementId": "fire",
+    "classId": "buf",
+    "elementId": "water",
     "cd": 4,
     "tags": [
-      "aoe"
+      "atk_buff_self",
+      "immune_sleep"
     ],
-    "image": "assets/img/cards/card_012.svg"
+    "ultimateSkill": "以自身基礎攻擊力152%使我方全體攻擊力增加（1回合）\n［冷卻時間：4回合］",
+    "image": "assets/img/cards/card_012.png",
+    "imageZoom": 1.71,
+    "imageOffsetX": 0.5353852560505818,
+    "imageOffsetY": 0.21935958726136817,
+    "sortOrder": 12
   },
   {
     "id": "card_013",
