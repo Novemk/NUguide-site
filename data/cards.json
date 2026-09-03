@@ -881,5 +881,26 @@
     "imageOffsetX": 0.48112426424810983,
     "imageOffsetY": 0.22192750915813317,
     "sortOrder": 44
+  },
+  {
+    "id": "card_045",
+    "name": "縹緲之守候",
+    "characterId": "char_09",
+    "rarityId": "ssr",
+    "classId": "heal",
+    "elementId": "wood",
+    "cd": 3,
+    "tags": [
+      "heal_tag",
+      "hot",
+      "team_normal_dmg_up",
+      "immune_silence"
+    ],
+    "ultimateSkill": "以攻擊力100%對我方全體進行治療\n以攻擊力59%進行持續治療（3回合）\n使除自身以外的我方全體普攻傷害增加27%（3回合）\n［冷卻時間：3回合］",
+    "image": "assets/img/cards/card_045.png",
+    "imageZoom": 1.65,
+    "imageOffsetX": 0.48200153865490275,
+    "imageOffsetY": 0.44152972195680334,
+    "sortOrder": 45
   }
 ]
