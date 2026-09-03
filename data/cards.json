@@ -819,5 +819,26 @@
     "imageOffsetX": 0.4881583484116592,
     "imageOffsetY": 0.38701868002106,
     "sortOrder": 41
+  },
+  {
+    "id": "card_042",
+    "name": "冷豔腥紅",
+    "characterId": "char_02",
+    "rarityId": "ssr",
+    "classId": "debuf",
+    "elementId": "light",
+    "cd": 4,
+    "tags": [
+      "lifesteal",
+      "burst",
+      "enemy_dmg_down",
+      "immune_silence"
+    ],
+    "ultimateSkill": "使自身獲得吸血效果50%（1回合）\n再以攻擊力382%對目標造成傷害\n並使目標造成傷害減少15%（2回合）\n再以100%機率對目標造成睡眠2回合\n［冷卻時間：4回合］",
+    "image": "assets/img/cards/card_042.png",
+    "imageZoom": 1.52,
+    "imageOffsetX": 0.445377479346509,
+    "imageOffsetY": 0.23509935588393216,
+    "sortOrder": 42
   }
 ]
