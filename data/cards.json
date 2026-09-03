@@ -777,5 +777,26 @@
     "imageOffsetX": 0.4365677190034167,
     "imageOffsetY": 0.26540465944347413,
     "sortOrder": 39
+  },
+  {
+    "id": "card_040",
+    "name": "異域蜜香的豔聞",
+    "characterId": "char_08",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "light",
+    "cd": 4,
+    "tags": [
+      "burst",
+      "atk_buff_enemy",
+      "dot",
+      "immune_sleep"
+    ],
+    "ultimateSkill": "使目標受到傷害增加13.5%（最多2層）\n以攻擊力345%對目標造成傷害\n再以攻擊力86% 目標造成持續傷害（4回合）\n［冷卻時間：4回合］",
+    "image": "assets/img/cards/card_040.png",
+    "imageZoom": 1.42,
+    "imageOffsetX": 0.4393826862698933,
+    "imageOffsetY": 0.41017761225991156,
+    "sortOrder": 40
   }
 ]
