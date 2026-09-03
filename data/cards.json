@@ -201,8 +201,10 @@
     "cd": 3,
     "tags": [
       "aoe",
-      "dot"
+      "dot",
+      "immune_stun"
     ],
+    "ultimateSkill": "以攻擊力90%對敵全體造成傷害，\n再以攻擊力30%造成持續傷害（3回合）\n［冷卻時間：3回合］",
     "image": "assets/img/cards/card_011.png",
     "imageZoom": 1.6,
     "imageOffsetX": 0.46541247545115244,
