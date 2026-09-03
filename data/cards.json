@@ -534,17 +534,23 @@
   },
   {
     "id": "card_028",
-    "name": "極光加護",
-    "characterId": "char_04",
+    "name": "守望者的冬季饋禮",
+    "characterId": "char_07",
     "rarityId": "ssr",
-    "classId": "debuf",
-    "elementId": "dark",
+    "classId": "atk",
+    "elementId": "light",
     "cd": 4,
     "tags": [
-      "normal_atk",
-      "dot"
+      "burst",
+      "heal_tag",
+      "immune_sleep"
     ],
-    "image": "assets/img/cards/card_028.svg"
+    "ultimateSkill": "以攻擊力345%對目標造成傷害，\n並以自身最大HP20%對我方全體進行治療\n［冷卻時間：4回合］",
+    "image": "assets/img/cards/card_028.png",
+    "imageZoom": 1.6,
+    "imageOffsetX": 0.4742179816810757,
+    "imageOffsetY": 0.16845314094987923,
+    "sortOrder": 28
   },
   {
     "id": "card_029",
