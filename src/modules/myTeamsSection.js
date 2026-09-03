@@ -1,5 +1,5 @@
 // src/modules/myTeamsSection.js
-import { getTeams, deleteTeam, duplicateTeam } from '../core/store.js';
+import { getTeams, deleteTeam, duplicateTeam, MAX_TEAMS_PER_STAGE } from '../core/store.js';
 import { openTeamEditor } from '../components/TeamEditor.js';
 import { renderTeamCard } from '../components/TeamCard.js';
 import { confirmDialog } from '../components/Modal.js';
@@ -17,6 +17,16 @@ export async function renderMyTeamsSection(container, stageId, cardMap, maps) {
   async function refresh() {
     const teams = await getTeams(stageId);
     container.innerHTML = '';
+
+    // The "+ 新增隊伍" button lives outside this module (in stage-detail.html
+    // / stageDetail.js), so it's looked up by its known id here rather than
+    // threading a reference through — same pattern as elsewhere on this page.
+    const addBtn = document.getElementById('add-team-btn');
+    if (addBtn) {
+      const atCap = teams.length >= MAX_TEAMS_PER_STAGE;
+      addBtn.disabled = atCap;
+      addBtn.title = atCap ? `每個關卡最多只能建立 ${MAX_TEAMS_PER_STAGE} 組隊伍` : '';
+    }
 
     if (teams.length === 0) {
       const empty = document.createElement('div');
@@ -38,6 +48,11 @@ export async function renderMyTeamsSection(container, stageId, cardMap, maps) {
   }
 
   async function handleAdd() {
+    const teams = await getTeams(stageId);
+    if (teams.length >= MAX_TEAMS_PER_STAGE) {
+      showToast(`每個關卡最多只能建立 ${MAX_TEAMS_PER_STAGE} 組隊伍`, { type: 'error' });
+      return;
+    }
     await openTeamEditor(stageId, null);
     refresh();
   }
@@ -48,6 +63,11 @@ export async function renderMyTeamsSection(container, stageId, cardMap, maps) {
   }
 
   async function handleDuplicate(team) {
+    const teams = await getTeams(stageId);
+    if (teams.length >= MAX_TEAMS_PER_STAGE) {
+      showToast(`每個關卡最多只能建立 ${MAX_TEAMS_PER_STAGE} 組隊伍`, { type: 'error' });
+      return;
+    }
     await duplicateTeam(stageId, team.localId);
     showToast('已複製隊伍');
     refresh();

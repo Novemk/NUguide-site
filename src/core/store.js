@@ -136,3 +136,4 @@ export async function importTeams(payload, mode = 'merge') {
 }
 
 export const TEAM_MEMBER_SLOTS = MEMBER_SLOTS;
+export const MAX_TEAMS_PER_STAGE = 2;

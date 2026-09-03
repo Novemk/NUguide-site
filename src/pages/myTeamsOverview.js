@@ -82,9 +82,17 @@ async function init() {
       panel.className = 'mt-stage-panel';
 
       const activeTeamId = openTeamByStage.get(entry.stageId) ?? null;
-      for (const team of entry.teams) {
+      entry.teams.forEach((team, teamIndex) => {
         const row = document.createElement('div');
         row.className = 'mt-team-row';
+
+        const rowMain = document.createElement('div');
+        rowMain.className = 'mt-team-row-main';
+
+        const numberBadge = document.createElement('div');
+        numberBadge.className = 'mt-team-number';
+        numberBadge.textContent = String(teamIndex + 1);
+        rowMain.appendChild(numberBadge);
 
         // Collapsed preview — member avatars only, no name/note/buttons,
         // per request. Clicking it expands (or, if already the open one,
@@ -98,7 +106,8 @@ async function init() {
           openTeamByStage.set(entry.stageId, activeTeamId === team.localId ? null : team.localId);
           refresh();
         });
-        row.appendChild(previewBtn);
+        rowMain.appendChild(previewBtn);
+        row.appendChild(rowMain);
 
         if (activeTeamId === team.localId) {
           const detail = document.createElement('div');
@@ -135,7 +144,7 @@ async function init() {
         }
 
         panel.appendChild(row);
-      }
+      });
       block.appendChild(panel);
       root.appendChild(block);
     }
