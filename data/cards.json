@@ -1240,5 +1240,26 @@
     "imageOffsetX": 0.5323333714798573,
     "imageOffsetY": 0.04045136472333807,
     "sortOrder": 61
+  },
+  {
+    "id": "card_062",
+    "name": "滿月夜的疾行追影",
+    "characterId": "char_10",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "water",
+    "cd": 3,
+    "tags": [
+      "self_dmg",
+      "atk_buff_enemy",
+      "enemy_elem_dmg_up",
+      "immune_stun"
+    ],
+    "ultimateSkill": "以當前HP20%對自身造成真實傷害\n使目標受到傷害增加27%（3回合）\n使目標受到五屬性傷害增加12%（3回合）\n再以攻擊力290%對目標造成傷害\n［冷卻時間：3回合］",
+    "image": "assets/img/cards/card_062.png",
+    "imageZoom": 1.49,
+    "imageOffsetX": 0.6885287069663599,
+    "imageOffsetY": 0.5085334261369749,
+    "sortOrder": 62
   }
 ]
