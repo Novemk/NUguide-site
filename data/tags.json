@@ -176,7 +176,7 @@
   },
   {
     "id": "cleanse",
-    "label": "淨化",
+    "label": "-CD",
     "sortOrder": 26,
     "group": "survival",
     "icon": "assets/img/tags/cleanse.svg"

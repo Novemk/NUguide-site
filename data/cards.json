@@ -215,295 +215,507 @@
   },
   {
     "id": "card_012",
-    "name": "大地誓約",
-    "characterId": "char_12",
+    "name": "翠燦之水的花使",
+    "characterId": "char_06",
     "rarityId": "ssr",
-    "classId": "debuf",
-    "elementId": "fire",
+    "classId": "buf",
+    "elementId": "water",
     "cd": 4,
     "tags": [
-      "aoe"
+      "atk_buff_self",
+      "immune_sleep"
     ],
-    "image": "assets/img/cards/card_012.svg"
+    "ultimateSkill": "以自身基礎攻擊力152%使我方全體攻擊力增加（1回合）\n［冷卻時間：4回合］",
+    "image": "assets/img/cards/card_012.png",
+    "imageZoom": 1.71,
+    "imageOffsetX": 0.5353852560505818,
+    "imageOffsetY": 0.21935958726136817,
+    "sortOrder": 12
   },
   {
     "id": "card_013",
-    "name": "炎獄爆裂",
-    "characterId": "char_01",
-    "rarityId": "r",
-    "classId": "heal",
-    "elementId": "light",
+    "name": "七葉之花的奇蹟",
+    "characterId": "char_07",
+    "rarityId": "ssr",
+    "classId": "tank",
+    "elementId": "wood",
     "cd": 4,
     "tags": [
-      "aoe"
+      "immune_stun",
+      "taunt",
+      "shield",
+      "counter"
     ],
-    "image": "assets/img/cards/card_013.svg"
+    "ultimateSkill": "以攻擊力100%對目標造成傷害，再獲得嘲諷（2回合）、\n受到麻痹機率減少50%（2回合）、\n受到必殺技傷害減少40%（2回合）、\n「被攻擊時，觸發『以攻擊力87%對目標進行反擊』（2回合）」，\n並變為防禦狀態\n［冷卻時間：4回合］",
+    "image": "assets/img/cards/card_013.png",
+    "imageZoom": 1.63,
+    "imageOffsetX": 0.4727839162483365,
+    "imageOffsetY": 0,
+    "sortOrder": 13
   },
   {
     "id": "card_014",
-    "name": "冰晶結界",
-    "characterId": "char_02",
-    "rarityId": "r",
-    "classId": "debuf",
-    "elementId": "water",
-    "cd": 4,
+    "name": "華宴夜未央",
+    "characterId": "char_09",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "light",
+    "cd": 3,
     "tags": [
-      "cleanse",
       "atk_buff_enemy",
-      "burst"
+      "immune_silence"
     ],
-    "image": "assets/img/cards/card_014.svg"
+    "ultimateSkill": "以攻擊力273%對目標造成傷害，\n再使目標受到傷害增加10%（9回合）\n［冷卻時間：3回合］",
+    "image": "assets/img/cards/card_014.png",
+    "imageZoom": 1.56,
+    "imageOffsetX": 0.5001432258130867,
+    "imageOffsetY": 0.4320788620452198,
+    "sortOrder": 15
   },
   {
     "id": "card_015",
-    "name": "綠蔭治癒",
-    "characterId": "char_03",
+    "name": "狐火映追憶",
+    "characterId": "char_08",
     "rarityId": "ssr",
-    "classId": "buf",
-    "elementId": "dark",
-    "cd": 6,
+    "classId": "debuf",
+    "elementId": "fire",
+    "cd": 3,
     "tags": [
-      "stun",
-      "cleanse"
+      "cleanse",
+      "dot",
+      "enemy_dmg_down",
+      "immune_stun"
     ],
-    "image": "assets/img/cards/card_015.svg"
+    "ultimateSkill": "以自身攻擊力182%對目標造成持續傷害（3回合），\n並使目標受到持續傷害效果增加10%（最多3層）、\n必殺技傷害減少10%（2回合）\n［冷卻時間：3回合］",
+    "image": "assets/img/cards/card_015.png",
+    "imageZoom": 1.35,
+    "imageOffsetX": 0.3303580371451465,
+    "imageOffsetY": 0.4810451537195034,
+    "sortOrder": 14
   },
   {
     "id": "card_016",
-    "name": "光之聖詠",
+    "name": "傾聽海風",
     "characterId": "char_04",
-    "rarityId": "r",
-    "classId": "tank",
-    "elementId": "water",
+    "rarityId": "ssr",
+    "classId": "buf",
+    "elementId": "wood",
     "cd": 4,
     "tags": [
-      "def_down",
-      "atk_buff_enemy"
+      "immune_silence",
+      "atk_buff_self"
     ],
-    "image": "assets/img/cards/card_016.svg"
+    "ultimateSkill": "以自身基礎攻擊力87%使我方全體攻擊力增加（2回合），\n使我方全體受到護盾效果增加75%（2回合），\n並使我方全體受到持續型治療增加75%（3回合）\n［冷卻時間：4回合］",
+    "image": "assets/img/cards/card_016.png",
+    "imageZoom": 1.59,
+    "imageOffsetX": 0.456510324828267,
+    "imageOffsetY": 0.30463232947136015,
+    "sortOrder": 16
   },
   {
     "id": "card_017",
-    "name": "暗影蝕刻",
-    "characterId": "char_05",
+    "name": "閃耀領航",
+    "characterId": "char_06",
     "rarityId": "ssr",
     "classId": "atk",
-    "elementId": "wood",
-    "cd": 3,
+    "elementId": "dark",
+    "cd": 4,
     "tags": [
-      "atk_buff_self",
-      "cleanse"
+      "own_burst_dmg_up",
+      "target_pos",
+      "immune_stun"
     ],
-    "image": "assets/img/cards/card_017.svg"
+    "ultimateSkill": "使自身必殺技傷害增加27%（2回合），\n再以攻擊力156%對敵方站位1、3、5造成傷害\n［冷卻時間：4回合］",
+    "image": "assets/img/cards/card_017.png",
+    "imageZoom": 1.65,
+    "imageOffsetX": 0.4538649225385494,
+    "imageOffsetY": 0.40810985899450963,
+    "sortOrder": 17
   },
   {
     "id": "card_018",
-    "name": "夜梟突襲",
-    "characterId": "char_06",
-    "rarityId": "sr",
-    "classId": "tank",
-    "elementId": "light",
-    "cd": 7,
+    "name": "偶像實習",
+    "characterId": "char_10",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "water",
+    "cd": 3,
     "tags": [
-      "def_down",
-      "shield",
-      "atk_buff_self"
+      "aoe",
+      "immune_stun",
+      "taunt",
+      "counter"
     ],
-    "image": "assets/img/cards/card_018.svg"
+    "ultimateSkill": "以攻擊力50%對敵全體造成傷害，\n使自身獲得「被攻擊時，觸發『以攻擊力81%對敵全體造成傷害』（2回合）」，\n再獲得嘲諷（1回合），\n並獲得「被攻擊時，解除嘲諷」（1回合）\n［冷卻時間：3回合］",
+    "image": "assets/img/cards/card_018.png",
+    "imageZoom": 1.59,
+    "imageOffsetX": 0.3755743110978011,
+    "imageOffsetY": 0.36037411572146066,
+    "sortOrder": 18
   },
   {
     "id": "card_019",
-    "name": "白羽淨化",
-    "characterId": "char_07",
-    "rarityId": "r",
+    "name": "初露芬芳的甜味",
+    "characterId": "char_05",
+    "rarityId": "ssr",
     "classId": "atk",
-    "elementId": "wood",
-    "cd": 6,
+    "elementId": "fire",
+    "cd": 3,
     "tags": [
-      "atk_buff_self",
-      "heal_tag"
+      "enemy_normal_dmg_up",
+      "immune_stun"
     ],
-    "image": "assets/img/cards/card_019.svg"
+    "ultimateSkill": "以攻擊力273%對目標造成傷害，\n並使目標受到普攻傷害增加27%（3回合）\n［冷卻時間：3回合］",
+    "image": "assets/img/cards/card_019.png",
+    "imageZoom": 1.65,
+    "imageOffsetX": 0.49224951829979247,
+    "imageOffsetY": 0.21086108667864853,
+    "sortOrder": 19
   },
   {
     "id": "card_020",
-    "name": "赤炎連斬",
-    "characterId": "char_08",
-    "rarityId": "ssr",
-    "classId": "tank",
-    "elementId": "fire",
-    "cd": 5,
-    "tags": [
-      "shield"
-    ],
-    "image": "assets/img/cards/card_020.svg"
-  },
-  {
-    "id": "card_021",
-    "name": "銀刃反射",
-    "characterId": "char_09",
-    "rarityId": "n",
-    "classId": "buf",
-    "elementId": "dark",
-    "cd": 3,
-    "tags": [
-      "atk_buff_self",
-      "def_down"
-    ],
-    "image": "assets/img/cards/card_021.svg"
-  },
-  {
-    "id": "card_022",
-    "name": "櫻花亂咲",
-    "characterId": "char_10",
-    "rarityId": "sr",
-    "classId": "buf",
-    "elementId": "water",
-    "cd": 3,
-    "tags": [
-      "stun"
-    ],
-    "image": "assets/img/cards/card_022.svg"
-  },
-  {
-    "id": "card_023",
-    "name": "紫電交鳴",
+    "name": "永不消散的焰火",
     "characterId": "char_11",
     "rarityId": "ssr",
     "classId": "atk",
-    "elementId": "wood",
-    "cd": 4,
-    "tags": [
-      "aoe",
-      "normal_atk"
-    ],
-    "image": "assets/img/cards/card_023.svg"
-  },
-  {
-    "id": "card_024",
-    "name": "岩鎧不動",
-    "characterId": "char_12",
-    "rarityId": "ssr",
-    "classId": "debuf",
-    "elementId": "wood",
+    "elementId": "water",
     "cd": 3,
     "tags": [
-      "dot",
-      "def_down",
-      "burst"
+      "break_shield",
+      "enemy_burst_dmg_up",
+      "immune_silence"
     ],
-    "image": "assets/img/cards/card_024.svg"
+    "ultimateSkill": "使目標解除防禦狀態，\n使目標受必殺技傷害增加27%（1回合），\n並以攻擊力273%對目標造成傷害\n［冷卻時間：3回合］",
+    "image": "assets/img/cards/card_020.png",
+    "imageZoom": 1.53,
+    "imageOffsetX": 0.5641825390221928,
+    "imageOffsetY": 0.18376253325823785,
+    "sortOrder": 20
   },
   {
-    "id": "card_025",
-    "name": "灼熱一擊",
-    "characterId": "char_01",
+    "id": "card_021",
+    "name": "追逐悠遠之約",
+    "characterId": "char_07",
     "rarityId": "ssr",
-    "classId": "tank",
-    "elementId": "dark",
-    "cd": 3,
-    "tags": [
-      "def_down",
-      "stun"
-    ],
-    "image": "assets/img/cards/card_025.svg"
-  },
-  {
-    "id": "card_026",
-    "name": "凍土封鎖",
-    "characterId": "char_02",
-    "rarityId": "sr",
-    "classId": "buf",
+    "classId": "atk",
     "elementId": "dark",
     "cd": 4,
     "tags": [
-      "cleanse",
-      "heal_tag"
+      "own_dmg_up",
+      "normal_atk",
+      "followup_atk",
+      "immune_stun"
     ],
-    "image": "assets/img/cards/card_026.svg"
+    "ultimateSkill": "使自身造成傷害增加40%（2回合），\n以攻擊力125%對目標造成傷害，\n再使自身獲得「普攻時，追加『以242%攻擊力對目標進行追擊』（2回合）」\n［冷卻時間：4回合］",
+    "image": "assets/img/cards/card_021.png",
+    "imageZoom": 1.44,
+    "imageOffsetX": 0.4561996364997607,
+    "imageOffsetY": 0,
+    "sortOrder": 21
   },
   {
-    "id": "card_027",
-    "name": "荊棘纏繞",
-    "characterId": "char_03",
-    "rarityId": "sr",
-    "classId": "debuf",
-    "elementId": "light",
-    "cd": 3,
+    "id": "card_022",
+    "name": "穿梭盤月之煦",
+    "characterId": "char_08",
+    "rarityId": "ssr",
+    "classId": "heal",
+    "elementId": "dark",
+    "cd": 4,
     "tags": [
-      "aoe",
-      "dot"
+      "heal_tag",
+      "lifesteal",
+      "immune_sleep"
     ],
-    "image": "assets/img/cards/card_027.svg"
+    "ultimateSkill": "以攻擊力182%對我方全體進行治療，\n並使我方全體獲得吸血效果15%（4回合）\n［冷卻時間：4回合］",
+    "image": "assets/img/cards/card_022.png",
+    "imageZoom": 1.56,
+    "imageOffsetX": 0.5258470068001606,
+    "imageOffsetY": 0.3680560781546919,
+    "sortOrder": 22
   },
   {
-    "id": "card_028",
-    "name": "極光加護",
+    "id": "card_023",
+    "name": "殷紅魅影",
     "characterId": "char_04",
     "rarityId": "ssr",
-    "classId": "debuf",
-    "elementId": "dark",
-    "cd": 4,
-    "tags": [
-      "normal_atk",
-      "dot"
-    ],
-    "image": "assets/img/cards/card_028.svg"
-  },
-  {
-    "id": "card_029",
-    "name": "漆黑吞噬",
-    "characterId": "char_05",
-    "rarityId": "sr",
-    "classId": "atk",
+    "classId": "tank",
     "elementId": "fire",
     "cd": 3,
     "tags": [
-      "heal_tag"
+      "lifesteal",
+      "taunt",
+      "counter",
+      "immune_sleep"
     ],
-    "image": "assets/img/cards/card_029.svg"
+    "ultimateSkill": "使自身獲得吸血效果100%（1回合），\n以攻擊力50%對目標造成傷害，\n再獲得嘲諷（1回合），\n使自身獲得「被攻擊時，觸發『以自身基礎攻擊力68%對目標進行反擊』（2回合）」，\n並變為防禦狀態\n［冷卻時間：3回合］",
+    "image": "assets/img/cards/card_023.png",
+    "imageZoom": 1.65,
+    "imageOffsetX": 0.5759770392948993,
+    "imageOffsetY": 0.286808249817355,
+    "sortOrder": 23
   },
   {
-    "id": "card_030",
-    "name": "梟眼狙擊",
-    "characterId": "char_06",
+    "id": "card_024",
+    "name": "詭夜疾風",
+    "characterId": "char_09",
     "rarityId": "ssr",
     "classId": "buf",
-    "elementId": "water",
-    "cd": 5,
+    "elementId": "light",
+    "cd": 4,
     "tags": [
-      "def_down",
-      "burst"
+      "atk_buff_self",
+      "immune_stun"
     ],
-    "image": "assets/img/cards/card_030.svg"
+    "ultimateSkill": "以攻擊力100%對目標造成傷害，\n以自身基礎攻擊力87%使我方全體攻擊力增加（2回合）\n［冷卻時間：4回合］",
+    "image": "assets/img/cards/card_024.png",
+    "imageZoom": 1.84,
+    "imageOffsetX": 0.4259082644184381,
+    "imageOffsetY": 0.6585202679255608,
+    "sortOrder": 24
   },
   {
-    "id": "card_031",
-    "name": "素心守誓",
-    "characterId": "char_07",
-    "rarityId": "sr",
-    "classId": "debuf",
+    "id": "card_025",
+    "name": "專屬指導",
+    "characterId": "char_05",
+    "rarityId": "ssr",
+    "classId": "atk",
     "elementId": "dark",
-    "cd": 5,
+    "cd": 3,
     "tags": [
       "atk_buff_enemy",
-      "cleanse"
+      "immune_stun"
     ],
-    "image": "assets/img/cards/card_031.svg"
+    "ultimateSkill": "使目標獲得「被攻擊時，觸發『使自身受到傷害增加3.5%（3回合）』（3回合）」，\n再以攻擊力273%對目標造成傷害\n［冷卻時間：3回合］",
+    "image": "assets/img/cards/card_025.png",
+    "imageZoom": 1.67,
+    "imageOffsetX": 0.5504695553802267,
+    "imageOffsetY": 0.36809633055171453,
+    "sortOrder": 25
   },
   {
-    "id": "card_032",
-    "name": "赤獅咆哮",
-    "characterId": "char_08",
+    "id": "card_026",
+    "name": "守護甜心",
+    "characterId": "char_10",
+    "rarityId": "ssr",
+    "classId": "debuf",
+    "elementId": "wood",
+    "cd": 4,
+    "tags": [
+      "immune_silence",
+      "own_dmg_up"
+    ],
+    "ultimateSkill": "使自身造成傷害增加20%（3回合），\n再以攻擊力345%對目標造成傷害，\n並以50％機率造成沉默1回合\n［冷卻時間：4回合］",
+    "image": "assets/img/cards/card_026.png",
+    "imageZoom": 1.64,
+    "imageOffsetX": 0.5043558191194594,
+    "imageOffsetY": 0.23198633292967052,
+    "sortOrder": 26
+  },
+  {
+    "id": "card_027",
+    "name": "祝禱者的霜夜心願",
+    "characterId": "char_06",
+    "rarityId": "ssr",
+    "classId": "heal",
+    "elementId": "wood",
+    "cd": 4,
+    "tags": [
+      "heal_tag",
+      "hot",
+      "atk_buff_self",
+      "immune_silence"
+    ],
+    "ultimateSkill": "以攻擊力100%對我方全體進行治療，\n以攻擊力45%進行持續治療（3回合），\n再以自身基礎攻擊力17%使我方全體攻擊力增加（4回合）\n［冷卻時間：4回合］",
+    "image": "assets/img/cards/card_027.png",
+    "imageZoom": 1.83,
+    "imageOffsetX": 0.45781456742896903,
+    "imageOffsetY": 0.3411518152709503,
+    "sortOrder": 27
+  },
+  {
+    "id": "card_028",
+    "name": "守望者的冬季饋禮",
+    "characterId": "char_07",
     "rarityId": "ssr",
     "classId": "atk",
     "elementId": "light",
     "cd": 4,
     "tags": [
-      "cleanse",
-      "atk_buff_enemy",
-      "normal_atk"
+      "burst",
+      "heal_tag",
+      "immune_sleep"
     ],
-    "image": "assets/img/cards/card_032.svg"
+    "ultimateSkill": "以攻擊力345%對目標造成傷害，\n並以自身最大HP20%對我方全體進行治療\n［冷卻時間：4回合］",
+    "image": "assets/img/cards/card_028.png",
+    "imageZoom": 1.6,
+    "imageOffsetX": 0.4742179816810757,
+    "imageOffsetY": 0.16845314094987923,
+    "sortOrder": 28
+  },
+  {
+    "id": "card_029",
+    "name": "權衡者的雪藏初心",
+    "characterId": "char_11",
+    "rarityId": "ssr",
+    "classId": "buf",
+    "elementId": "light",
+    "cd": 4,
+    "tags": [
+      "followup_atk",
+      "team_normal_dmg_up",
+      "immune_silence"
+    ],
+    "ultimateSkill": "使我方全體定位攻擊的角色獲得「普攻時，追加『以攻擊力68%對目標造成傷害』（3回合）」\n［冷卻時間：4回合］",
+    "image": "assets/img/cards/card_029.png",
+    "imageZoom": 1.48,
+    "imageOffsetX": 0.5013480681000244,
+    "imageOffsetY": 0.23670667826124686,
+    "sortOrder": 29
+  },
+  {
+    "id": "card_030",
+    "name": "夜霧銀星",
+    "characterId": "char_14",
+    "rarityId": "ssr",
+    "classId": "buf",
+    "elementId": "fire",
+    "cd": 5,
+    "tags": [
+      "atk_buff_self",
+      "shield",
+      "cleanse",
+      "immune_silence"
+    ],
+    "ultimateSkill": "以自身基礎攻擊力32%使自身以外的我方全體攻擊力增加（5回合），\n使我方全體受到傷害減少5%（5回合），\n★並使除自身以外的我方全體必殺技冷卻時間減少1回合\n［冷卻時間：5回合］",
+    "image": "assets/img/cards/card_030.png",
+    "imageZoom": 1.58,
+    "imageOffsetX": 0.4595706952410329,
+    "imageOffsetY": 0.19168583347489082,
+    "sortOrder": 30
+  },
+  {
+    "id": "card_031",
+    "name": "春日迷亂",
+    "characterId": "char_05",
+    "rarityId": "ssr",
+    "classId": "tank",
+    "elementId": "wood",
+    "cd": 6,
+    "tags": [
+      "enemy_dmg_down",
+      "shield",
+      "hot",
+      "immune_sleep"
+    ],
+    "ultimateSkill": "以攻擊力100%對目標造成傷害，\n並使目標造成傷害減少10%（3回合），\n再使自身受到傷害減少7.5%（最多2層），\n並以最大HP12.5%對自身進行持續治療（4回合）\n［冷卻時間：6回合］",
+    "image": "assets/img/cards/card_031.png",
+    "imageZoom": 1.93,
+    "imageOffsetX": 0.4342646668561401,
+    "imageOffsetY": 0.24905238897064322,
+    "sortOrder": 31
+  },
+  {
+    "id": "card_032",
+    "name": "午後醺然",
+    "characterId": "char_08",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "water",
+    "cd": 4,
+    "tags": [
+      "atk_buff_enemy",
+      "burst",
+      "immune_stun"
+    ],
+    "ultimateSkill": "使目標受到傷害增加15%（2回合），\n以攻擊力345%對目標造成傷害，\n並使自身獲得「攻擊時，觸發『使目標受到傷害增加15%（2回合）』（4回合）」\n［冷卻時間：4回合］",
+    "image": "assets/img/cards/card_032.png",
+    "imageZoom": 1.6,
+    "imageOffsetX": 0.5056418678301479,
+    "imageOffsetY": 0.20667221966911764,
+    "sortOrder": 32
+  },
+  {
+    "id": "card_033",
+    "name": "遺忘的甜蜜果",
+    "characterId": "char_09",
+    "rarityId": "ssr",
+    "classId": "tank",
+    "elementId": "water",
+    "cd": 4,
+    "tags": [
+      "taunt",
+      "shield_gain",
+      "shield",
+      "immune_stun"
+    ],
+    "ultimateSkill": "使我方全體受到必殺技傷害減少15%（2回合），\n並以自身最大HP18%使我方全體獲得護盾（1回合），\n再使自身獲得嘲諷（1回合），\n並使自身變為防禦狀態\n［冷卻時間：4回合］",
+    "image": "assets/img/cards/card_033.png",
+    "imageZoom": 1.6,
+    "imageOffsetX": 0.41470402122562766,
+    "imageOffsetY": 0.39735747588647286,
+    "sortOrder": 33
+  },
+  {
+    "id": "card_034",
+    "name": "覺醒的晶瑩花",
+    "characterId": "char_10",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "fire",
+    "cd": 4,
+    "tags": [
+      "break_shield",
+      "immune_silence",
+      "burst",
+      "multi_hit"
+    ],
+    "ultimateSkill": "使目標解除防禦狀態，\n並以攻擊力60%對目標造成3次傷害，\n再以攻擊力406%對目標造成傷害\n［冷卻時間：4回合］",
+    "image": "assets/img/cards/card_034.png",
+    "imageZoom": 1.74,
+    "imageOffsetX": 0.47673590435015695,
+    "imageOffsetY": 0.336349470194582,
+    "sortOrder": 34
+  },
+  {
+    "id": "card_035",
+    "name": "幽曖新星的禱詞",
+    "characterId": "char_04",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "wood",
+    "cd": 4,
+    "tags": [
+      "normal_atk",
+      "enemy_normal_dmg_up",
+      "followup_atk",
+      "immune_stun"
+    ],
+    "ultimateSkill": "以攻擊力125%對目標造成傷害\n使目標受到普攻傷害增加27%（最多1層） \n再使自身獲得「普攻時，追加『以攻擊力94% 目標進行追擊』（3回合）」\n及「普攻時，追加『以攻擊力94% 目標進行追擊』（2回合）」\n［冷卻時間：4回合］",
+    "image": "assets/img/cards/card_035.png",
+    "imageZoom": 1.5,
+    "imageOffsetX": 0.40163607314736366,
+    "imageOffsetY": 0.23954649637324577,
+    "sortOrder": 35
+  },
+  {
+    "id": "card_036",
+    "name": "囹圄之星的祕聞",
+    "characterId": "char_06",
+    "rarityId": "ssr",
+    "classId": "buf",
+    "elementId": "dark",
+    "cd": 3,
+    "tags": [
+      "self_dmg",
+      "self_burst_dmg_up",
+      "atk_buff_self",
+      "immune_silence"
+    ],
+    "ultimateSkill": "以當前HP20%對自身造成真實傷害\n使我方全體必殺技傷害增加20%（1回合）\n再以自身基礎攻擊力167%使我方全體攻擊力增加（1回合）\n［冷卻時間：3回合］",
+    "image": "assets/img/cards/card_036.png",
+    "imageZoom": 1.49,
+    "imageOffsetX": 0.5113973493099063,
+    "imageOffsetY": 0.2886289830873754,
+    "sortOrder": 36
   }
 ]
