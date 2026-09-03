@@ -1049,5 +1049,25 @@
     "imageOffsetX": 0.4803086589509335,
     "imageOffsetY": 0.423671759769109,
     "sortOrder": 52
+  },
+  {
+    "id": "card_053",
+    "name": "深慾☆闇王",
+    "characterId": "char_14",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "dark",
+    "cd": 3,
+    "tags": [
+      "atk_buff_enemy",
+      "cleanse",
+      "immune_stun"
+    ],
+    "ultimateSkill": "使自身獲得文字效果「伊得獲得來自部下們的鼎力相助！」（1回合）\n使目標受到定位攻擊的角色傷害增加34%（3回合）\n再以攻擊力273%對目標造成傷害\n並使自身以外的我方全體定位攻擊的角色必殺技冷卻時間減少1回合\n［冷卻時間：3回合］",
+    "image": "assets/img/cards/card_053.png",
+    "imageZoom": 1.42,
+    "imageOffsetX": 0.3952129210307921,
+    "imageOffsetY": 0.3698891589217226,
+    "sortOrder": 53
   }
 ]
