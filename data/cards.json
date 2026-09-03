@@ -902,5 +902,25 @@
     "imageOffsetX": 0.48200153865490275,
     "imageOffsetY": 0.44152972195680334,
     "sortOrder": 45
+  },
+  {
+    "id": "card_046",
+    "name": "唯一使命",
+    "characterId": "char_10",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "dark",
+    "cd": 4,
+    "tags": [
+      "burst",
+      "enemy_dmg_down",
+      "immune_silence"
+    ],
+    "ultimateSkill": "使敵方目標造成傷害減少8%（4回合）\n再以攻擊力406%對目標造成傷害\n並以最大HP10%對自身進行持續治療（4回合）\n再以最大HP20%給予自身護盾（4回合）\n［冷卻時間：4回合］",
+    "image": "assets/img/cards/card_046.png",
+    "imageZoom": 1.6,
+    "imageOffsetX": 0.45478231440145506,
+    "imageOffsetY": 0.33144427997419706,
+    "sortOrder": 46
   }
 ]
