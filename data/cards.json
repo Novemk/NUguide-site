@@ -1197,5 +1197,25 @@
     "imageOffsetX": 0.5052298981414919,
     "imageOffsetY": 0.32344498042187664,
     "sortOrder": 59
+  },
+  {
+    "id": "card_060",
+    "name": "慎謀的監察者",
+    "characterId": "char_05",
+    "rarityId": "ssr",
+    "classId": "buf",
+    "elementId": "fire",
+    "cd": 3,
+    "tags": [
+      "atk_buff_self",
+      "team_proc_dmg_up",
+      "immune_stun"
+    ],
+    "ultimateSkill": "以自身基礎攻擊力21%使我方全體攻擊力增加（3回合）\n使我方全體觸發技傷害增加27%（3回合）\n並使自身以外的我方全體獲得「攻擊時，觸發『以攻擊力32% 目標造成傷害』（3回合）」\n［冷卻時間：3回合］",
+    "image": "assets/img/cards/card_060.png",
+    "imageZoom": 1.4,
+    "imageOffsetX": 0.49760925847114135,
+    "imageOffsetY": 0.33601401833926925,
+    "sortOrder": 60
   }
 ]
