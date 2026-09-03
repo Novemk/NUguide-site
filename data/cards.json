@@ -393,17 +393,24 @@
   },
   {
     "id": "card_021",
-    "name": "銀刃反射",
-    "characterId": "char_09",
-    "rarityId": "n",
-    "classId": "buf",
+    "name": "追逐悠遠之約",
+    "characterId": "char_07",
+    "rarityId": "ssr",
+    "classId": "atk",
     "elementId": "dark",
-    "cd": 3,
+    "cd": 4,
     "tags": [
-      "atk_buff_self",
-      "def_down"
+      "own_dmg_up",
+      "normal_atk",
+      "followup_atk",
+      "immune_stun"
     ],
-    "image": "assets/img/cards/card_021.svg"
+    "ultimateSkill": "使自身造成傷害增加40%（2回合），\n以攻擊力125%對目標造成傷害，\n再使自身獲得「普攻時，追加『以242%攻擊力對目標進行追擊』（2回合）」\n［冷卻時間：4回合］",
+    "image": "assets/img/cards/card_021.png",
+    "imageZoom": 1.44,
+    "imageOffsetX": 0.4561996364997607,
+    "imageOffsetY": 0,
+    "sortOrder": 21
   },
   {
     "id": "card_022",
