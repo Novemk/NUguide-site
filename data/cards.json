@@ -1028,5 +1028,26 @@
     "imageOffsetX": 0.5801800962502063,
     "imageOffsetY": 0.2861818700060879,
     "sortOrder": 51
+  },
+  {
+    "id": "card_052",
+    "name": "雙星輝映",
+    "characterId": "char_09",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "water",
+    "cd": 4,
+    "tags": [
+      "self_dmg",
+      "target_pos",
+      "lifesteal",
+      "immune_sleep"
+    ],
+    "ultimateSkill": "以當前HP20%對自身造成真實傷害\n並以攻擊力82%對敵方站位1、2、3造成傷害\n再以攻擊力82%對敵方站位3、4、5造成傷害\n並使自身獲得吸血效果50%（3回合）\n［冷卻時間：4回合］",
+    "image": "assets/img/cards/card_052.png",
+    "imageZoom": 1.71,
+    "imageOffsetX": 0.4803086589509335,
+    "imageOffsetY": 0.423671759769109,
+    "sortOrder": 52
   }
 ]
