@@ -1598,5 +1598,26 @@
     "imageOffsetX": 0.5039230503381974,
     "imageOffsetY": 0.33175031783250714,
     "sortOrder": 78
+  },
+  {
+    "id": "card_079",
+    "name": "星夜畫憶",
+    "characterId": "char_10",
+    "rarityId": "ssr",
+    "classId": "heal",
+    "elementId": "light",
+    "cd": 6,
+    "tags": [
+      "atk_buff_self",
+      "heal_tag",
+      "hot",
+      "immune_stun"
+    ],
+    "ultimateSkill": "以自身基礎攻擊力105%使我方全體攻擊力增加（1回合）\n使我方全體受到治療量增加34%（6回合）\n以攻擊力25%對我方全體進行治療，\n攻擊力56%進行持續治療（6回合）\n［冷卻時間：6回合］",
+    "image": "assets/img/cards/card_079.png",
+    "imageZoom": 1.51,
+    "imageOffsetX": 0.5759832538559936,
+    "imageOffsetY": 0.3299070745827819,
+    "sortOrder": 79
   }
 ]
