@@ -1388,5 +1388,25 @@
     "imageOffsetX": 0.6113205320009109,
     "imageOffsetY": 0.2841967158999037,
     "sortOrder": 68
+  },
+  {
+    "id": "card_069",
+    "name": "蔚然於夜的繁星花",
+    "characterId": "char_05",
+    "rarityId": "ssr",
+    "classId": "debuf",
+    "elementId": "wood",
+    "cd": 3,
+    "tags": [
+      "team_dot_dmg_up",
+      "atk_buff_enemy",
+      "immune_silence"
+    ],
+    "ultimateSkill": "使目標受到傷害增加17%（3回合）\n使我方全體造成持續傷害量增加18%（3回合）\n並以攻擊力273% 目標造成傷害\n［冷卻時間：3回合］",
+    "image": "assets/img/cards/card_069.png",
+    "imageZoom": 1.45,
+    "imageOffsetX": 0.3498912388225897,
+    "imageOffsetY": 0.08811947574199941,
+    "sortOrder": 69
   }
 ]
