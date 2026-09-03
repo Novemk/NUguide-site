@@ -922,5 +922,26 @@
     "imageOffsetX": 0.45478231440145506,
     "imageOffsetY": 0.33144427997419706,
     "sortOrder": 46
+  },
+  {
+    "id": "card_047",
+    "name": "索隱探奧",
+    "characterId": "char_12",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "water",
+    "cd": 6,
+    "tags": [
+      "normal_atk",
+      "own_dmg_up",
+      "followup_atk",
+      "immune_silence"
+    ],
+    "ultimateSkill": "使自身造成傷害增加25%（最多1層）\n並以攻擊力125%對目標造成傷害\n並使自身獲得「普攻時，追加『以攻擊力98%對目標進行追擊（6回合）』」\n［冷卻時間：6回合］",
+    "image": "assets/img/cards/card_047.png",
+    "imageZoom": 1.61,
+    "imageOffsetX": 0.47372065886822967,
+    "imageOffsetY": 0.3440737066312059,
+    "sortOrder": 47
   }
 ]
