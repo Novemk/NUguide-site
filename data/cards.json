@@ -633,5 +633,26 @@
     "imageOffsetX": 0.5056418678301479,
     "imageOffsetY": 0.20667221966911764,
     "sortOrder": 32
+  },
+  {
+    "id": "card_033",
+    "name": "遺忘的甜蜜果",
+    "characterId": "char_09",
+    "rarityId": "ssr",
+    "classId": "tank",
+    "elementId": "water",
+    "cd": 4,
+    "tags": [
+      "taunt",
+      "shield_gain",
+      "shield",
+      "immune_stun"
+    ],
+    "ultimateSkill": "使我方全體受到必殺技傷害減少15%（2回合），\n並以自身最大HP18%使我方全體獲得護盾（1回合），\n再使自身獲得嘲諷（1回合），\n並使自身變為防禦狀態\n［冷卻時間：4回合］",
+    "image": "assets/img/cards/card_033.png",
+    "imageZoom": 1.6,
+    "imageOffsetX": 0.41470402122562766,
+    "imageOffsetY": 0.39735747588647286,
+    "sortOrder": 33
   }
 ]
