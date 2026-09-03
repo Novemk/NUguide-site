@@ -554,16 +554,23 @@
   },
   {
     "id": "card_029",
-    "name": "漆黑吞噬",
-    "characterId": "char_05",
-    "rarityId": "sr",
-    "classId": "atk",
-    "elementId": "fire",
-    "cd": 3,
+    "name": "權衡者的雪藏初心",
+    "characterId": "char_11",
+    "rarityId": "ssr",
+    "classId": "buf",
+    "elementId": "light",
+    "cd": 4,
     "tags": [
-      "heal_tag"
+      "followup_atk",
+      "team_normal_dmg_up",
+      "immune_silence"
     ],
-    "image": "assets/img/cards/card_029.svg"
+    "ultimateSkill": "使我方全體定位攻擊的角色獲得「普攻時，追加『以攻擊力68%對目標造成傷害』（3回合）」\n［冷卻時間：4回合］",
+    "image": "assets/img/cards/card_029.png",
+    "imageZoom": 1.48,
+    "imageOffsetX": 0.5013480681000244,
+    "imageOffsetY": 0.23670667826124686,
+    "sortOrder": 29
   },
   {
     "id": "card_030",
