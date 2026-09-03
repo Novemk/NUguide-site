@@ -18,6 +18,12 @@ export async function mountFilterPanel(container, onChange) {
   let state = createEmptyFilterState(schema);
 
   function render() {
+    // container itself is the scrolling element (.fg-sidebar has its own
+    // overflow-y:auto) — wiping and rebuilding its children on every
+    // single option click was resetting its scrollTop to 0 each time,
+    // which is what was jumping the whole filter list back to the top
+    // instead of staying where you clicked.
+    const scrollTop = container.scrollTop;
     container.innerHTML = '';
     const panel = document.createElement('div');
     panel.className = 'filter-panel';
@@ -73,6 +79,7 @@ export async function mountFilterPanel(container, onChange) {
     panel.appendChild(footer);
 
     container.appendChild(panel);
+    container.scrollTop = scrollTop;
   }
 
   function renderOption(group, option) {
