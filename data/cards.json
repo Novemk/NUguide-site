@@ -144,7 +144,11 @@
     "classId": "tank",
     "elementId": "fire",
     "cd": 4,
-    "tags": [],
+    "tags": [
+      "shield_gain",
+      "immune_sleep"
+    ],
+    "ultimateSkill": "以攻擊力100%對目標造成傷害，\n再以自身最大HP18%使我方全體獲得護盾（1回合）\n［冷卻時間：4回合］",
     "image": "assets/img/cards/card_008.png",
     "imageZoom": 1.5,
     "imageOffsetX": 0.47039038398316396,
