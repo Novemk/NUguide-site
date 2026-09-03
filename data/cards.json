@@ -943,5 +943,26 @@
     "imageOffsetX": 0.47372065886822967,
     "imageOffsetY": 0.3440737066312059,
     "sortOrder": 47
+  },
+  {
+    "id": "card_048",
+    "name": "銀彈的告解者",
+    "characterId": "char_06",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "fire",
+    "cd": 6,
+    "tags": [
+      "burst",
+      "hot",
+      "enemy_burst_dmg_up",
+      "immune_sleep"
+    ],
+    "ultimateSkill": "以攻擊力44%對我方全體進行持續治療（4回合）\n再使目標受到必殺技傷害增加20%（3回合）\n再以攻擊力513%對目標造成傷害\n［冷卻時間：6回合］",
+    "image": "assets/img/cards/card_048.png",
+    "imageZoom": 1.57,
+    "imageOffsetX": 0.46130223001813864,
+    "imageOffsetY": 0.29330643113708904,
+    "sortOrder": 48
   }
 ]
