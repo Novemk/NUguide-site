@@ -836,9 +836,9 @@
     ],
     "ultimateSkill": "使自身獲得吸血效果50%（1回合）\n再以攻擊力382%對目標造成傷害\n並使目標造成傷害減少15%（2回合）\n再以100%機率對目標造成睡眠2回合\n［冷卻時間：4回合］",
     "image": "assets/img/cards/card_042.png",
-    "imageZoom": 1.52,
-    "imageOffsetX": 0.445377479346509,
-    "imageOffsetY": 0.23509935588393216,
+    "imageZoom": 1.59,
+    "imageOffsetX": 0.43987527135448046,
+    "imageOffsetY": 0.20293181605002322,
     "sortOrder": 42
   },
   {
