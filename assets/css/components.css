@@ -444,19 +444,24 @@ hr.ql-divider {
 .tag-row-aligned + .tag-row-aligned { margin-top: 8px; }
 
 .opt-tag {
-  display: flex; flex-direction: column; align-items: center; gap: 6px;
-  width: 72px;
+  display: inline-flex; align-items: center; gap: 7px;
   border: 1px solid var(--border);
   background: var(--bg-elevated);
-  border-radius: var(--radius-sm);
-  padding: 10px 6px 8px;
+  border-radius: 999px;
+  padding: 7px 14px 7px 9px;
   color: var(--text-dim);
-  font-size: 0.7rem;
-  opacity: 0.6;
-  transition: opacity 0.15s, border-color 0.15s;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  opacity: 0.75;
+  transition: opacity 0.15s, border-color 0.15s, background 0.15s;
 }
-.opt-tag img { width: 26px; height: 26px; }
-.opt-tag.active { opacity: 1; border-color: var(--accent-teal); color: var(--text); }
+.opt-tag img { width: 20px; height: 20px; flex-shrink: 0; }
+.opt-tag.active { opacity: 1; border-color: var(--accent-teal); background: rgba(79,200,176,0.12); color: var(--text); }
+/* Used inside the 我方增傷 / -CD aligned rows (see tag-row-aligned) —
+   fixed width so the same damage-type lines up in the same column
+   between the 我方 row and the 自身 row below it, which a natural
+   auto-width pill can't guarantee once label lengths differ. */
+.tag-row-aligned .opt-tag { width: 172px; }
 
 .filter-panel-footer { display: flex; justify-content: space-between; align-items: center; padding-top: 4px; border-top: 1px solid var(--border-soft); margin-top: 4px; }
 .filter-count { font-size: 0.82rem; color: var(--text-faint); }

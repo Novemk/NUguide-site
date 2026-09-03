@@ -1,6 +1,7 @@
 // src/components/FilterPanel.js
 import { loadJSON, resolveAsset } from '../core/dataLoader.js';
 import { createEmptyFilterState, toggleFilterOption, countActiveFilters } from '../modules/cardFilter.js';
+import { renderTagList } from './TagPicker.js';
 
 /**
  * Builds a filter panel bound to filter-schema.json.
@@ -34,8 +35,19 @@ export async function mountFilterPanel(container, onChange) {
       optionsWrap.className = 'filter-options';
 
       const options = sourcesCache[group.field];
-      for (const option of options) {
-        optionsWrap.appendChild(renderOption(group, option));
+      if (group.optionType === 'icon-multi') {
+        renderTagList(optionsWrap, options, {
+          isActive: (option) => (state[group.field] || []).includes(option.id),
+          onToggle: (option) => {
+            state = toggleFilterOption(state, group.field, option.id);
+            render();
+            onChange(state);
+          },
+        });
+      } else {
+        for (const option of options) {
+          optionsWrap.appendChild(renderOption(group, option));
+        }
       }
       wrap.appendChild(optionsWrap);
       panel.appendChild(wrap);
@@ -91,16 +103,6 @@ export async function mountFilterPanel(container, onChange) {
       img.src = resolveAsset(option.icon);
       img.alt = option.name;
       el.appendChild(img);
-    } else if (group.optionType === 'icon-multi') {
-      el = document.createElement('button');
-      el.type = 'button';
-      el.className = 'opt-tag' + (isActive ? ' active' : '');
-      const img = document.createElement('img');
-      img.src = resolveAsset(option.icon);
-      img.alt = option.label;
-      const span = document.createElement('span');
-      span.textContent = option.label;
-      el.append(img, span);
     } else {
       // icon (class / element single-value)
       el = document.createElement('button');
