@@ -588,7 +588,15 @@ hr.ql-divider {
   border: none;
   background: none;
 }
-.mt-team-detail { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--border-soft); }
+.mt-team-detail {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border-soft);
+  /* Lines up with the first avatar's left edge, not the row's own edge —
+     the avatar row starts after the number circle (32px) + the gap next
+     to it (14px), so the text below should start at that same x. */
+  margin-left: 46px;
+}
 .form-row { display: flex; gap: 14px; }
 .form-row .form-field { flex: 1; }
 
