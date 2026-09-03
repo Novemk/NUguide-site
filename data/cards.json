@@ -415,16 +415,23 @@
   },
   {
     "id": "card_022",
-    "name": "櫻花亂咲",
+    "name": "穿梭盤月之煦",
     "characterId": "char_10",
-    "rarityId": "sr",
-    "classId": "buf",
-    "elementId": "water",
-    "cd": 3,
+    "rarityId": "ssr",
+    "classId": "heal",
+    "elementId": "dark",
+    "cd": 4,
     "tags": [
-      "stun"
+      "heal_tag",
+      "lifesteal",
+      "immune_sleep"
     ],
-    "image": "assets/img/cards/card_022.svg"
+    "ultimateSkill": "以攻擊力182%對我方全體進行治療，\n並使我方全體獲得吸血效果15%（4回合）\n［冷卻時間：4回合］",
+    "image": "assets/img/cards/card_022.png",
+    "imageZoom": 1.56,
+    "imageOffsetX": 0.5258470068001606,
+    "imageOffsetY": 0.3680560781546919,
+    "sortOrder": 22
   },
   {
     "id": "card_023",
