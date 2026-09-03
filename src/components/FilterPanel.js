@@ -16,14 +16,112 @@ export async function mountFilterPanel(container, onChange) {
     sourcesCache[group.field] = await loadJSON(group.source);
   }
   let state = createEmptyFilterState(schema);
+  let countEl = null;
+  let clearBtnEl = null;
 
-  function render() {
-    // container itself is the scrolling element (.fg-sidebar has its own
-    // overflow-y:auto) — wiping and rebuilding its children on every
-    // single option click was resetting its scrollTop to 0 each time,
-    // which is what was jumping the whole filter list back to the top
-    // instead of staying where you clicked.
-    const scrollTop = container.scrollTop;
+  function updateFooter() {
+    const active = countActiveFilters(state);
+    countEl.textContent = active > 0 ? `已套用 ${active} 項篩選條件` : '尚未套用篩選條件';
+    clearBtnEl.disabled = active === 0;
+  }
+
+  // Renders (or re-renders) just ONE group's own options into its own
+  // small wrapper element — never touches any other group, and never
+  // touches `container` itself. Container is the scrolling element
+  // (.fg-sidebar has its own overflow-y:auto); the previous version
+  // rebuilt the *entire* panel from scratch on every single click, which
+  // wiped and recreated every group's DOM (including ones the click had
+  // nothing to do with) — that churn was what made the list jump around
+  // (to the top, to the bottom, depending on layout specifics), not
+  // simply "scroll position reset to 0" as first assumed. Only replacing
+  // the one group that actually changed means nothing above or below it
+  // ever moves.
+  function renderGroup(group, optionsWrap) {
+    const options = sourcesCache[group.field];
+
+    if (group.optionType === 'icon-multi') {
+      // renderTagList manages its own per-category repainting internally
+      // now (see TagPicker.js) — calling renderGroup again here would
+      // wipe and rebuild every one of its sub-categories on every click,
+      // exactly the whole-list churn this was meant to avoid. Toggling
+      // here only needs to update state/footer/results; the tag button
+      // that was actually clicked repaints itself.
+      renderTagList(optionsWrap, options, {
+        isActive: (option) => (state[group.field] || []).includes(option.id),
+        onToggle: (option) => {
+          state = toggleFilterOption(state, group.field, option.id);
+          updateFooter();
+          onChange(state);
+        },
+      });
+      return;
+    }
+
+    optionsWrap.innerHTML = '';
+    for (const option of options) {
+      let el;
+
+      if (group.optionType === 'badge') {
+        el = document.createElement('button');
+        el.type = 'button';
+        el.className = 'opt-badge';
+        el.textContent = option.label;
+      } else if (group.optionType === 'range') {
+        el = document.createElement('button');
+        el.type = 'button';
+        el.className = 'opt-range';
+        el.textContent = option.label;
+      } else if (group.optionType === 'avatar') {
+        el = document.createElement('button');
+        el.type = 'button';
+        el.className = 'opt-avatar';
+        el.title = option.name;
+        el.setAttribute('aria-label', option.name);
+        const img = document.createElement('img');
+        img.src = resolveAsset(option.icon);
+        img.alt = option.name;
+        el.appendChild(img);
+      } else {
+        // icon (class / element single-value)
+        el = document.createElement('button');
+        el.type = 'button';
+        el.className = 'opt-icon';
+        el.title = option.label;
+        el.setAttribute('aria-label', option.label);
+        const img = document.createElement('img');
+        img.src = resolveAsset(option.icon);
+        img.alt = option.label;
+        el.appendChild(img);
+      }
+
+      // Reflects this one button's own active/inactive look without
+      // touching any other element — toggling one option never affects
+      // its siblings' state (toggleFilterOption only adds/removes this
+      // option's own id), so there's nothing to rebuild.
+      const paintActive = (isActive) => {
+        el.classList.toggle('active', isActive);
+        el.setAttribute('aria-pressed', String(isActive));
+        if (group.optionType === 'badge') {
+          el.style.background = isActive ? option.color : '';
+          el.style.borderColor = isActive ? option.color : '';
+          el.style.color = isActive ? '#14131f' : '';
+        }
+      };
+      paintActive((state[group.field] || []).includes(option.id));
+
+      el.addEventListener('click', () => {
+        state = toggleFilterOption(state, group.field, option.id);
+        paintActive((state[group.field] || []).includes(option.id));
+        updateFooter();
+        onChange(state);
+      });
+      optionsWrap.appendChild(el);
+    }
+  }
+
+  // Full rebuild — only used once on mount, and on "清除全部"/reset,
+  // where starting the whole panel fresh is actually correct.
+  function renderAll() {
     container.innerHTML = '';
     const panel = document.createElement('div');
     panel.className = 'filter-panel';
@@ -39,104 +137,37 @@ export async function mountFilterPanel(container, onChange) {
 
       const optionsWrap = document.createElement('div');
       optionsWrap.className = 'filter-options';
-
-      const options = sourcesCache[group.field];
-      if (group.optionType === 'icon-multi') {
-        renderTagList(optionsWrap, options, {
-          isActive: (option) => (state[group.field] || []).includes(option.id),
-          onToggle: (option) => {
-            state = toggleFilterOption(state, group.field, option.id);
-            render();
-            onChange(state);
-          },
-        });
-      } else {
-        for (const option of options) {
-          optionsWrap.appendChild(renderOption(group, option));
-        }
-      }
       wrap.appendChild(optionsWrap);
       panel.appendChild(wrap);
+
+      renderGroup(group, optionsWrap);
     }
 
     const footer = document.createElement('div');
     footer.className = 'filter-panel-footer';
-    const count = document.createElement('span');
-    count.className = 'filter-count';
-    const active = countActiveFilters(state);
-    count.textContent = active > 0 ? `已套用 ${active} 項篩選條件` : '尚未套用篩選條件';
-    const clearBtn = document.createElement('button');
-    clearBtn.type = 'button';
-    clearBtn.className = 'btn btn-sm btn-secondary';
-    clearBtn.textContent = '清除全部';
-    clearBtn.disabled = active === 0;
-    clearBtn.addEventListener('click', () => {
+    countEl = document.createElement('span');
+    countEl.className = 'filter-count';
+    clearBtnEl = document.createElement('button');
+    clearBtnEl.type = 'button';
+    clearBtnEl.className = 'btn btn-sm btn-secondary';
+    clearBtnEl.textContent = '清除全部';
+    clearBtnEl.addEventListener('click', () => {
       state = createEmptyFilterState(schema);
-      render();
+      renderAll();
       onChange(state);
     });
-    footer.append(count, clearBtn);
+    footer.append(countEl, clearBtnEl);
     panel.appendChild(footer);
+    updateFooter();
 
     container.appendChild(panel);
-    container.scrollTop = scrollTop;
   }
 
-  function renderOption(group, option) {
-    const selectedList = state[group.field] || [];
-    const isActive = selectedList.includes(option.id);
-    let el;
-
-    if (group.optionType === 'badge') {
-      el = document.createElement('button');
-      el.type = 'button';
-      el.className = 'opt-badge' + (isActive ? ' active' : '');
-      el.textContent = option.label;
-      if (isActive) el.style.background = option.color;
-      if (isActive) el.style.borderColor = option.color;
-      if (isActive) el.style.color = '#14131f';
-    } else if (group.optionType === 'range') {
-      el = document.createElement('button');
-      el.type = 'button';
-      el.className = 'opt-range' + (isActive ? ' active' : '');
-      el.textContent = option.label;
-    } else if (group.optionType === 'avatar') {
-      el = document.createElement('button');
-      el.type = 'button';
-      el.className = 'opt-avatar' + (isActive ? ' active' : '');
-      el.title = option.name;
-      el.setAttribute('aria-label', option.name);
-      const img = document.createElement('img');
-      img.src = resolveAsset(option.icon);
-      img.alt = option.name;
-      el.appendChild(img);
-    } else {
-      // icon (class / element single-value)
-      el = document.createElement('button');
-      el.type = 'button';
-      el.className = 'opt-icon' + (isActive ? ' active' : '');
-      el.title = option.label;
-      el.setAttribute('aria-label', option.label);
-      const img = document.createElement('img');
-      img.src = resolveAsset(option.icon);
-      img.alt = option.label;
-      el.appendChild(img);
-    }
-
-    el.setAttribute('aria-pressed', String(isActive));
-    el.addEventListener('click', () => {
-      state = toggleFilterOption(state, group.field, option.id);
-      render();
-      onChange(state);
-    });
-    return el;
-  }
-
-  render();
+  renderAll();
 
   return {
     getState: () => state,
-    reset: () => { state = createEmptyFilterState(schema); render(); onChange(state); },
+    reset: () => { state = createEmptyFilterState(schema); renderAll(); onChange(state); },
     schema,
     cdRanges: sourcesCache.cd,
   };

@@ -38,52 +38,77 @@ export function highlightTagLabel(label) {
   return html;
 }
 
-function buildTagBtn(option, isActive, onToggle) {
+function buildTagBtn(option, isActive, onToggle, fixedWidthPx) {
   const el = document.createElement('button');
   el.type = 'button';
-  el.className = 'opt-tag' + (isActive(option) ? ' active' : '');
-  el.setAttribute('aria-pressed', String(isActive(option)));
+  if (fixedWidthPx) el.style.width = fixedWidthPx + 'px';
   const img = document.createElement('img');
   img.src = resolveAsset(option.icon);
   img.alt = option.label;
   const span = document.createElement('span');
   span.innerHTML = highlightTagLabel(option.label);
   el.append(img, span);
-  el.addEventListener('click', () => onToggle(option));
+
+  // Toggling this one tag only ever changes its own active/inactive
+  // look — nothing about its label, width, or whether it needs to span
+  // a full row changes — so the click handler updates this same button
+  // in place instead of asking the caller to rebuild anything.
+  const paintActive = () => {
+    el.className = 'opt-tag' + (isActive(option) ? ' active' : '');
+    el.setAttribute('aria-pressed', String(isActive(option)));
+  };
+  paintActive();
+  el.addEventListener('click', () => {
+    onToggle(option);
+    paintActive();
+  });
   return el;
 }
 
+// Admin-only "dumb but predictable" sizing: width is computed straight
+// from the label's character count, nothing measured, nothing dependent
+// on neighboring buttons — the same label is always the same width no
+// matter what. An ASCII character (the "-CD" in "自身-CD") counts as
+// half a unit since it renders narrower than a full CJK character.
+// BASE_PX is the icon + padding + border overhead; PER_CHAR_PX is roughly
+// how wide one CJK character is at this font-size. Both are estimates —
+// nudge them if real labels end up looking too tight or too loose.
+const BASE_PX = 56;
+const PER_CHAR_PX = 17;
+function visualLength(label) {
+  let len = 0;
+  for (const ch of label) len += /[\x00-\xFF]/.test(ch) ? 0.5 : 1;
+  return len;
+}
+function computeFixedTagWidth(label) {
+  return Math.round(BASE_PX + visualLength(label) * PER_CHAR_PX);
+}
+
 // Whether a label needs its own full-width row can't be decided from the
-// text alone (a fixed character-count guess calibrated for the public
-// site's narrow 260px filter sidebar was forcing 8-character labels onto
-// their own row even inside the admin's much wider picker, where they'd
-// easily fit two-up) — it depends on how wide the actual container is
-// *right now*, which is only knowable once these buttons are really in
-// the page. So: render everything plain first, then — after the caller
-// has attached `container` to the document and the browser has painted
-// a layout — measure which labels are actually being truncated by
-// .tag-flow's ellipsis and only then mark those .opt-tag-wide, which
-// makes them span both columns and re-render without truncation.
-function widenOverflowingTags(container) {
+// text alone — it depends on how wide the actual container is *right
+// now*, which is only knowable once these buttons are really in the
+// page. So: render everything plain first, then — after the browser has
+// actually painted a layout and the real webfont has loaded — measure
+// which labels are being truncated by .tag-flow's ellipsis and only
+// then mark those .opt-tag-wide, which makes them span both columns and
+// re-render without truncation. Scoped to just one group's own wrap
+// element (not the whole tag list), matching how paintGroup below only
+// ever touches the one group that changed.
+function widenOverflowingButtons(wrap) {
   const measure = () => {
     requestAnimationFrame(() => {
-      for (const wrap of container.querySelectorAll('.tag-flow')) {
-        for (const btn of wrap.querySelectorAll('.opt-tag:not(.opt-tag-wide)')) {
-          const span = btn.querySelector('span');
-          if (span && span.scrollWidth > span.clientWidth + 1) {
-            btn.classList.add('opt-tag-wide');
-          }
+      for (const btn of wrap.querySelectorAll('.opt-tag:not(.opt-tag-wide)')) {
+        const span = btn.querySelector('span');
+        if (span && span.scrollWidth > span.clientWidth + 1) {
+          btn.classList.add('opt-tag-wide');
         }
       }
     });
   };
   // document.fonts.ready only resolves once the page's actual webfont
   // (Noto Sans TC, loaded from Google Fonts) has finished downloading —
-  // measuring before that was reading widths of the browser's temporary
-  // fallback font, which is narrower, so some labels that only overflow
-  // in the *real* font were silently measured as "fits fine" and never
-  // got widened. Falls back to measuring immediately if the Font Loading
-  // API isn't available for some reason, rather than never measuring.
+  // measuring before that reads the browser's narrower temporary
+  // fallback font instead.
   if (document.fonts && document.fonts.ready) {
     document.fonts.ready.then(measure);
   } else {
@@ -92,32 +117,43 @@ function widenOverflowingTags(container) {
 }
 
 /**
- * Renders the full grouped tag list into `container` (cleared first).
- * Every row uses the same rule everywhere: pairs of short labels sit
- * side by side, anything long enough to risk wrapping spans the full
- * row on its own (see WIDE_LABEL_THRESHOLD / .tag-flow) — no exceptions
- * for particular groups, so the layout reads as one consistent rule
- * instead of behaving differently row to row.
+ * Renders the full grouped tag list into `container` (cleared once, on
+ * mount). Every button — group headers, and each tag button inside a
+ * category — is built exactly once; toggling a tag only flips that same
+ * button's own active/inactive look in place. Nothing is ever destroyed
+ * and recreated after the initial build, so there's no DOM churn of any
+ * kind for a click to disturb. (Two earlier, more conservative versions
+ * of this rebuilt progressively smaller pieces — the whole list, then
+ * just the clicked category — and still occasionally caused the
+ * scrolling sidebar to visibly jump, most likely because removing a
+ * focused button element and inserting a new one in its place isn't
+ * something browsers handle identically. Never removing the button at
+ * all sidesteps that entirely.)
  * @param {HTMLElement} container
  * @param {Array<Object>} options - tags.json entries
  * @param {{ isActive: (option:Object) => boolean, onToggle: (option:Object) => void }} handlers
+ *   onToggle should just update the caller's own state/fire onChange —
+ *   it must NOT re-call renderTagList itself, since this function now
+ *   manages its own repainting internally.
+ * @param {{ flowClass?: string }} [opts] - flowClass picks which CSS rule
+ *   decides layout (see components.css). Omit it (the public site never
+ *   passes this) and you get the exact behavior already confirmed
+ *   working there — .tag-flow, fixed at 2 columns, live-measured
+ *   wide-spanning. The admin picker passes 'tag-flow-admin' instead:
+ *   flex-wrap with each button's width computed straight from its own
+ *   label's character count. Same grouping/ordering/highlighting code
+ *   either way — only sizing/layout differs.
  */
-export function renderTagList(container, options, { isActive, onToggle }) {
+export function renderTagList(container, options, { isActive, onToggle }, opts = {}) {
+  const flowClass = opts.flowClass || 'tag-flow';
+  const isAdmin = flowClass === 'tag-flow-admin';
   container.innerHTML = '';
-  for (const group of groupTags(options)) {
-    const groupWrap = document.createElement('div');
-    groupWrap.className = 'tag-group-block';
-    const label = document.createElement('div');
-    label.className = 'tag-group-label';
-    label.textContent = group.label;
-    groupWrap.appendChild(label);
 
-    // Only used to decide DISPLAY ORDER now (我方 items listed together,
-    // then 自身 items together, then anything else) — not to force the
-    // two sets into pixel-aligned columns, which needed a fixed width
-    // that didn't actually fit two per row in the narrow 260px sidebar
-    // this also has to render in, and ended up looking inconsistent with
-    // every other row's short-pairs-up/long-spans-alone rule.
+  function paintGroup(group, wrap) {
+    wrap.className = flowClass;
+
+    // Only used to decide DISPLAY ORDER (我方 items listed together, then
+    // 自身 items together, then anything else) — not pixel alignment.
     let items = group.items;
     if (group.groupId === SELF_TEAM_SPLIT_GROUP) {
       const { teamRow, ownRow, leftover } = splitTeamOwnRows(group.items);
@@ -127,12 +163,27 @@ export function renderTagList(container, options, { isActive, onToggle }) {
       items = [...mainRow, ...cdRow];
     }
 
-    const wrap = document.createElement('div');
-    wrap.className = 'tag-flow';
-    for (const option of items) wrap.appendChild(buildTagBtn(option, isActive, onToggle));
-    groupWrap.appendChild(wrap);
+    for (const option of items) {
+      const fixedWidthPx = isAdmin ? computeFixedTagWidth(option.label) : null;
+      wrap.appendChild(buildTagBtn(option, isActive, onToggle, fixedWidthPx));
+    }
 
-    container.appendChild(groupWrap);
+    // Fixed-width admin buttons never truncate by design.
+    if (!isAdmin) widenOverflowingButtons(wrap);
   }
-  widenOverflowingTags(container);
+
+  for (const group of groupTags(options)) {
+    const groupWrap = document.createElement('div');
+    groupWrap.className = 'tag-group-block';
+    const label = document.createElement('div');
+    label.className = 'tag-group-label';
+    label.textContent = group.label;
+    groupWrap.appendChild(label);
+
+    const wrap = document.createElement('div');
+    groupWrap.appendChild(wrap);
+    container.appendChild(groupWrap);
+
+    paintGroup(group, wrap);
+  }
 }
