@@ -295,17 +295,22 @@
   },
   {
     "id": "card_016",
-    "name": "光之聖詠",
+    "name": "傾聽海風",
     "characterId": "char_04",
-    "rarityId": "r",
-    "classId": "tank",
-    "elementId": "water",
+    "rarityId": "ssr",
+    "classId": "buf",
+    "elementId": "wood",
     "cd": 4,
     "tags": [
-      "def_down",
-      "atk_buff_enemy"
+      "immune_silence",
+      "atk_buff_self"
     ],
-    "image": "assets/img/cards/card_016.svg"
+    "ultimateSkill": "以自身基礎攻擊力87%使我方全體攻擊力增加（2回合），\n使我方全體受到護盾效果增加75%（2回合），\n並使我方全體受到持續型治療增加75%（3回合）\n［冷卻時間：4回合］",
+    "image": "assets/img/cards/card_016.png",
+    "imageZoom": 1.59,
+    "imageOffsetX": 0.456510324828267,
+    "imageOffsetY": 0.30463232947136015,
+    "sortOrder": 16
   },
   {
     "id": "card_017",
