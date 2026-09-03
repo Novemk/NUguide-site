@@ -25,7 +25,11 @@ export function showCardInfoModal(card, maps) {
 
   const body = document.createElement('div');
   const wrap = document.createElement('div');
-  wrap.style.cssText = 'display:flex; gap:20px; flex-wrap:wrap;';
+  // align-items:flex-start is the fix here — flex's default (stretch)
+  // was forcing the fixed-size thumbnail to stretch to match whatever
+  // height the info column ended up at (varies with how long the 必殺技
+  // description is), which is what was distorting its aspect ratio.
+  wrap.style.cssText = 'display:flex; gap:20px; flex-wrap:wrap; align-items:flex-start;';
 
   // Cropped thumbnail — same crop math + rarity border as every other
   // card, just without the badges/gradient/rarity-text overlay (that
