@@ -32,7 +32,12 @@ function matchesSingleValue(cardValue, selectedIds) {
 function matchesArrayIntersection(cardValues, selectedIds) {
   if (selectedIds.length === 0) return true;
   if (!Array.isArray(cardValues)) return false;
-  return cardValues.some((v) => selectedIds.includes(v));
+  // AND, not OR — a card must have every selected tag, not just one of
+  // them. Only 技能效果 (filter-schema.json's "icon-multi" optionType)
+  // goes through this function; every other field (rarity/class/
+  // element/character/cd) uses matchesSingleValue/matchesRange above,
+  // untouched by this change.
+  return selectedIds.every((id) => cardValues.includes(id));
 }
 
 /**
