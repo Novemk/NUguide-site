@@ -372,6 +372,14 @@ hr.ql-divider {
   margin-bottom: 8px;
 }
 .filter-options { display: flex; gap: 10px; flex-wrap: wrap; }
+.tag-group-block + .tag-group-block { margin-top: 18px; }
+.tag-group-label {
+  font-size: 0.82rem;
+  color: var(--accent-teal);
+  letter-spacing: 0.06em;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
 
 .opt-badge {
   border: 1px solid var(--border);
