@@ -355,17 +355,22 @@
   },
   {
     "id": "card_019",
-    "name": "白羽淨化",
-    "characterId": "char_07",
-    "rarityId": "r",
+    "name": "初露芬芳的甜味",
+    "characterId": "char_05",
+    "rarityId": "ssr",
     "classId": "atk",
-    "elementId": "wood",
-    "cd": 6,
+    "elementId": "fire",
+    "cd": 3,
     "tags": [
-      "atk_buff_self",
-      "heal_tag"
+      "enemy_normal_dmg_up",
+      "immune_stun"
     ],
-    "image": "assets/img/cards/card_019.svg"
+    "ultimateSkill": "以攻擊力273%對目標造成傷害，\n並使目標受到普攻傷害增加27%（3回合）\n［冷卻時間：3回合］",
+    "image": "assets/img/cards/card_019.png",
+    "imageZoom": 1.65,
+    "imageOffsetX": 0.49224951829979247,
+    "imageOffsetY": 0.21086108667864853,
+    "sortOrder": 19
   },
   {
     "id": "card_020",
