@@ -575,6 +575,19 @@ hr.ql-divider {
   text-align: left;
 }
 .mt-team-preview-btn .team-card-members { margin-bottom: 0; }
+/* renderTeamCard() returns a .team-card div with its own background/
+   border/padding — appropriate when it's used standalone (stage-detail
+   page, 卡片資料庫 etc), but here it's nested inside .mt-team-row, which
+   already draws that same box. Without this override the two padded/
+   bordered boxes stack, which is what was reading as "too much empty
+   space" — it wasn't extra padding, it was a second box drawn inside
+   the first one. */
+.mt-team-preview-btn .team-card {
+  padding: 0;
+  margin-bottom: 0;
+  border: none;
+  background: none;
+}
 .mt-team-detail { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--border-soft); }
 .form-row { display: flex; gap: 14px; }
 .form-row .form-field { flex: 1; }
