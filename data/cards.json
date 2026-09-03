@@ -737,5 +737,25 @@
     "imageOffsetX": 0.43795568182339645,
     "imageOffsetY": 0.15911452830615094,
     "sortOrder": 37
+  },
+  {
+    "id": "card_038",
+    "name": "雨季終時的新生",
+    "characterId": "char_12",
+    "rarityId": "ssr",
+    "classId": "tank",
+    "elementId": "light",
+    "cd": 3,
+    "tags": [
+      "counter",
+      "taunt",
+      "immune_stun"
+    ],
+    "ultimateSkill": "以攻擊力100%對目標造成傷害\n以最大HP40%給予自身護盾（1回合）\n使自身獲得「被攻擊時，觸發『以攻擊力216%對目標進行反擊。』（1回合）」\n並獲得「被攻擊時，解除反擊」（1回合）\n再使自身獲得嘲諷（1回合）\n並變為防禦狀態\n［冷卻時間：3回合］",
+    "image": "assets/img/cards/card_038.png",
+    "imageZoom": 1.46,
+    "imageOffsetX": 0.4747819280400204,
+    "imageOffsetY": 0.34440784503127,
+    "sortOrder": 38
   }
 ]
