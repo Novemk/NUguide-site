@@ -334,18 +334,24 @@
   },
   {
     "id": "card_018",
-    "name": "夜梟突襲",
-    "characterId": "char_06",
-    "rarityId": "sr",
-    "classId": "tank",
-    "elementId": "light",
-    "cd": 7,
+    "name": "偶像實習",
+    "characterId": "char_10",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "water",
+    "cd": 3,
     "tags": [
-      "def_down",
-      "shield",
-      "atk_buff_self"
+      "aoe",
+      "immune_stun",
+      "taunt",
+      "counter"
     ],
-    "image": "assets/img/cards/card_018.svg"
+    "ultimateSkill": "以攻擊力50%對敵全體造成傷害，\n使自身獲得「被攻擊時，觸發『以攻擊力81%對敵全體造成傷害』（2回合）」，\n再獲得嘲諷（1回合），\n並獲得「被攻擊時，解除嘲諷」（1回合）\n［冷卻時間：3回合］",
+    "image": "assets/img/cards/card_018.png",
+    "imageZoom": 1.59,
+    "imageOffsetX": 0.3755743110978011,
+    "imageOffsetY": 0.36037411572146066,
+    "sortOrder": 18
   },
   {
     "id": "card_019",
