@@ -497,15 +497,18 @@ hr.ql-divider {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 10px;
-  margin-bottom: 10px;
+  /* Cancels out .fg-sidebar's own 16px padding on the top/left/right,
+     then re-adds that same spacing as this element's own padding — so
+     its background box actually reaches .fg-sidebar's real top/side
+     edges instead of stopping at the inner (padded) content area. The
+     previous version's background only covered its own padded-in box,
+     leaving a sliver of .fg-sidebar's top padding uncovered — content
+     scrolling past could peek through that gap mid-scroll, before the
+     sticky positioning fully caught up. */
+  margin: -16px -16px 10px -16px;
+  padding: 16px 16px 10px 16px;
   border-bottom: 1px solid var(--border-soft);
-  /* Sits in its normal spot (above 稀有度) until scrolling would carry it
-     out of view, then sticks to the top of .fg-sidebar instead — never
-     overlaps anything before that point, since sticky elements don't
-     leave their normal flow position until they'd otherwise scroll away.
-     Opaque background is needed once it IS stuck, so options scrolling
-     underneath don't show through/overlap it. */
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
   position: sticky;
   top: 0;
   z-index: 2;
