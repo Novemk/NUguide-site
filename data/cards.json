@@ -1512,5 +1512,25 @@
     "imageOffsetX": 0.488477726046457,
     "imageOffsetY": 0.40247304277613843,
     "sortOrder": 74
+  },
+  {
+    "id": "card_075",
+    "name": "守望生命之流",
+    "characterId": "char_07",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "water",
+    "cd": 6,
+    "tags": [
+      "burst",
+      "own_dmg_up",
+      "immune_sleep"
+    ],
+    "ultimateSkill": "使自身造成傷害增加34%（4回合）\n以攻擊力657%對目標造成傷害\n［冷卻時間：6回合］",
+    "image": "assets/img/cards/card_075.png",
+    "imageZoom": 1.47,
+    "imageOffsetX": 0.6265619545103832,
+    "imageOffsetY": 0.3146725225911001,
+    "sortOrder": 75
   }
 ]
