@@ -6,6 +6,12 @@ import { loadJSON, DataSources } from '../core/dataLoader.js';
 import { saveTeam, TEAM_MEMBER_SLOTS } from '../core/store.js';
 import { showToast } from '../core/toast.js';
 
+// Same three accent colors used site-wide (Quill's swatches in the admin
+// editors, badges, etc.) — kept to this fixed set rather than a full
+// color picker so it stays a small native contenteditable + a couple of
+// buttons, no external library needed on the public site for this.
+const NOTE_COLOR_SWATCHES = ['#c9a45c', '#4fc8b0', '#e2604f'];
+
 /**
  * Opens the team editor modal for a stage. Resolves with the saved team,
  * or null if the user cancelled.
@@ -50,17 +56,49 @@ export function openTeamEditor(stageId, existingTeam = null) {
 
     const noteField = document.createElement('div');
     noteField.className = 'form-field';
-    noteField.innerHTML = '<label for="team-note-input">備註</label>';
-    const noteInput = document.createElement('textarea');
-    noteInput.id = 'team-note-input';
-    noteInput.maxLength = 300;
-    noteInput.rows = 3;
-    noteInput.placeholder = '例如：第三回合保留大招。';
-    noteInput.value = existingTeam ? existingTeam.note || '' : '';
+    noteField.innerHTML = '<label>備註</label>';
+
+    const noteToolbar = document.createElement('div');
+    noteToolbar.className = 'note-editor-toolbar';
+    const noteEditor = document.createElement('div');
+    noteEditor.className = 'note-editor';
+    noteEditor.contentEditable = 'true';
+    noteEditor.setAttribute('data-placeholder', '例如：第三回合保留大招。');
+    noteEditor.innerHTML = existingTeam ? existingTeam.note || '' : '';
+
+    function applyNoteColor(color) {
+      noteEditor.focus();
+      document.execCommand('styleWithCSS', false, true);
+      document.execCommand('foreColor', false, color);
+    }
+    for (const color of NOTE_COLOR_SWATCHES) {
+      const swatch = document.createElement('button');
+      swatch.type = 'button';
+      swatch.className = 'note-color-swatch';
+      swatch.style.backgroundColor = color;
+      swatch.setAttribute('aria-label', `套用文字顏色 ${color}`);
+      // mousedown (not click) + preventDefault so the current text
+      // selection in noteEditor survives the button press — a click
+      // handler fires after the selection has already collapsed on blur.
+      swatch.addEventListener('mousedown', (e) => { e.preventDefault(); applyNoteColor(color); });
+      noteToolbar.appendChild(swatch);
+    }
+    const resetSwatch = document.createElement('button');
+    resetSwatch.type = 'button';
+    resetSwatch.className = 'note-color-swatch note-color-reset';
+    resetSwatch.textContent = 'A';
+    resetSwatch.setAttribute('aria-label', '清除文字顏色');
+    resetSwatch.addEventListener('mousedown', (e) => {
+      e.preventDefault();
+      noteEditor.focus();
+      document.execCommand('removeFormat');
+    });
+    noteToolbar.appendChild(resetSwatch);
+
     const noteHint = document.createElement('div');
     noteHint.className = 'form-hint';
-    noteHint.textContent = '換行會保留原本的排版。';
-    noteField.append(noteInput, noteHint);
+    noteHint.textContent = '選取文字後點顏色即可上色；換行會保留原本的排版。';
+    noteField.append(noteToolbar, noteEditor, noteHint);
 
     const slotsLabel = document.createElement('div');
     slotsLabel.className = 'form-field';
@@ -190,7 +228,7 @@ export function openTeamEditor(stageId, existingTeam = null) {
         const saved = await saveTeam(stageId, {
           localId: existingTeam ? existingTeam.localId : undefined,
           name: nameInput.value,
-          note: noteInput.value,
+          note: noteEditor.innerHTML,
           members,
         });
         settled = true;

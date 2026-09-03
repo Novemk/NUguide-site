@@ -24,6 +24,13 @@ async function init() {
   const cardMaps = { rarityMap: toMap(rarities), classMap: toMap(classes), elementMap: toMap(elements) };
   const root = document.getElementById('overview-root');
 
+  // Which stage sections are expanded, and — independently, per stage —
+  // which single team (if any) is expanded to show its name/note/actions.
+  // Kept outside refresh() so the accordion state survives a refresh
+  // (e.g. after editing a team) instead of collapsing everything back.
+  const openStages = new Set();
+  const openTeamByStage = new Map(); // stageId -> team.localId | null
+
   async function refresh() {
     const grouped = await getAllTeamsGrouped();
     root.innerHTML = '';
@@ -40,33 +47,96 @@ async function init() {
 
     for (const entry of grouped) {
       const stage = stageMap.get(entry.stageId);
+      const stageTitle = stage ? `${stage.chapter} ${stage.order} ${stage.title}` : entry.stageId;
+      const isStageOpen = openStages.has(entry.stageId);
+
       const block = document.createElement('div');
-      block.className = 'section';
+      block.className = 'section mt-stage-block' + (isStageOpen ? ' open' : '');
 
       const titleRow = document.createElement('div');
       titleRow.className = 'section-title';
-      titleRow.innerHTML = `<h2>${stage ? `${stage.chapter} ${stage.order} ${stage.title}` : entry.stageId}</h2>`;
+
+      const toggleBtn = document.createElement('button');
+      toggleBtn.type = 'button';
+      toggleBtn.className = 'mt-stage-toggle';
+      toggleBtn.innerHTML = `<span class="mt-stage-caret">▶</span><span>${stageTitle}</span>`;
+      toggleBtn.addEventListener('click', () => {
+        if (openStages.has(entry.stageId)) openStages.delete(entry.stageId);
+        else openStages.add(entry.stageId);
+        refresh();
+      });
+      titleRow.appendChild(toggleBtn);
+
       if (stage) {
         const link = document.createElement('a');
         link.href = `stage-detail.html?id=${encodeURIComponent(stage.id)}`;
         link.className = 'btn btn-sm btn-secondary';
         link.textContent = '查看攻略 →';
         link.style.flexShrink = '0';
+        link.style.marginLeft = 'auto';
         titleRow.appendChild(link);
       }
       block.appendChild(titleRow);
 
+      const panel = document.createElement('div');
+      panel.className = 'mt-stage-panel';
+
+      const activeTeamId = openTeamByStage.get(entry.stageId) ?? null;
       for (const team of entry.teams) {
-        block.appendChild(renderTeamCard(team, cardMap, {
-          maps: cardMaps,
-          actions: [
+        const row = document.createElement('div');
+        row.className = 'mt-team-row';
+
+        // Collapsed preview — member avatars only, no name/note/buttons,
+        // per request. Clicking it expands (or, if already the open one,
+        // collapses) this team's full detail below.
+        const previewBtn = document.createElement('button');
+        previewBtn.type = 'button';
+        previewBtn.className = 'mt-team-preview-btn';
+        previewBtn.setAttribute('aria-label', `${team.name}：${activeTeamId === team.localId ? '收合' : '展開'}隊伍內容`);
+        previewBtn.appendChild(renderTeamCard(team, cardMap, { maps: cardMaps, showName: false, showNote: false }));
+        previewBtn.addEventListener('click', () => {
+          openTeamByStage.set(entry.stageId, activeTeamId === team.localId ? null : team.localId);
+          refresh();
+        });
+        row.appendChild(previewBtn);
+
+        if (activeTeamId === team.localId) {
+          const detail = document.createElement('div');
+          detail.className = 'mt-team-detail';
+          const name = document.createElement('div');
+          name.className = 'team-card-name';
+          name.style.marginBottom = '6px';
+          name.textContent = team.name;
+          detail.appendChild(name);
+          if (team.note) {
+            const note = document.createElement('div');
+            note.className = 'team-card-note';
+            note.innerHTML = team.note;
+            detail.appendChild(note);
+          }
+          const footer = document.createElement('div');
+          footer.className = 'team-card-footer';
+          footer.style.marginTop = '10px';
+          const actions = [
             { label: '修改', className: 'btn btn-sm', onClick: () => handleEdit(entry.stageId, team) },
             { label: '複製', className: 'btn btn-sm btn-secondary', onClick: () => handleDuplicate(entry.stageId, team) },
             { label: '刪除', className: 'btn btn-sm btn-danger', onClick: () => handleDelete(entry.stageId, team) },
-          ],
-        }));
-      }
+          ];
+          for (const action of actions) {
+            const btn = document.createElement('button');
+            btn.type = 'button';
+            btn.className = action.className;
+            btn.textContent = action.label;
+            btn.addEventListener('click', () => action.onClick());
+            footer.appendChild(btn);
+          }
+          detail.appendChild(footer);
+          row.appendChild(detail);
+        }
 
+        panel.appendChild(row);
+      }
+      block.appendChild(panel);
       root.appendChild(block);
     }
   }

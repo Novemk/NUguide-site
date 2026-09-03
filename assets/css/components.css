@@ -484,6 +484,82 @@ hr.ql-divider {
 .form-field input[type="text"], .form-field textarea { width: 100%; }
 .form-field textarea { resize: vertical; min-height: 70px; white-space: pre-wrap; }
 .form-hint { font-size: 0.76rem; color: var(--text-faint); margin-top: 4px; }
+
+/* Lightweight "select text, apply color" editor for a team's 備註 —
+   a plain contenteditable + a few color-swatch buttons, deliberately not
+   pulling in the full Quill library (that's an admin-only dependency;
+   this field lives on the public site). */
+.note-editor-toolbar { display: flex; gap: 6px; margin-bottom: 6px; }
+.note-color-swatch {
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  border: 2px solid var(--border-soft);
+  padding: 0;
+  cursor: pointer;
+}
+.note-color-swatch:hover { border-color: var(--text-dim); }
+.note-color-reset {
+  background: var(--bg-elevated);
+  color: var(--text-dim);
+  font-size: 0.72rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.note-editor {
+  min-height: 70px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  background: var(--bg-elevated);
+  color: var(--text);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  outline: none;
+}
+.note-editor:focus { border-color: var(--accent-teal); }
+.note-editor:empty::before { content: attr(data-placeholder); color: var(--text-faint); }
+
+/* =========================================================
+   我的隊伍總覽 — two-level accordion (stage → team)
+   ========================================================= */
+.mt-stage-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+  color: var(--accent-gold);
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+}
+.mt-stage-caret { color: var(--text-faint); transition: transform 0.18s; flex-shrink: 0; }
+.mt-stage-block.open .mt-stage-caret { transform: rotate(90deg); }
+.mt-stage-panel { display: none; margin-top: 14px; }
+.mt-stage-block.open .mt-stage-panel { display: block; }
+.mt-team-row {
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  margin-bottom: 12px;
+}
+.mt-team-preview-btn {
+  display: block;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+}
+.mt-team-preview-btn .team-card-members { margin-bottom: 0; }
+.mt-team-detail { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--border-soft); }
 .form-row { display: flex; gap: 14px; }
 .form-row .form-field { flex: 1; }
 

@@ -15,6 +15,9 @@ const STAGE_H = 260;
  * @param {Object} [opts]
  * @param {Array<{label:string, className:string, onClick:Function}>} [opts.actions]
  * @param {boolean} [opts.showNote]
+ * @param {boolean} [opts.showName] - default true. Set false for a
+ *   collapsed/preview rendering that should show only the member avatars
+ *   (used by 我的隊伍總覽's collapsed team rows).
  * @param {{rarityMap?:Map, elementMap?:Map, classMap?:Map}} [opts.maps] - pass
  *   these to show the same 屬性/定位/稀有度 badges CardFace shows everywhere
  *   else (卡片資料庫、後台卡片管理…). Omitted maps just render without that badge.
@@ -25,18 +28,24 @@ export function renderTeamCard(team, cardMap, opts = {}) {
   const el = document.createElement('div');
   el.className = 'team-card';
 
-  const head = document.createElement('div');
-  head.className = 'team-card-head';
-  const name = document.createElement('div');
-  name.className = 'team-card-name';
-  name.textContent = team.name;
-  head.appendChild(name);
-  el.appendChild(head);
+  if (opts.showName !== false) {
+    const head = document.createElement('div');
+    head.className = 'team-card-head';
+    const name = document.createElement('div');
+    name.className = 'team-card-name';
+    name.textContent = team.name;
+    head.appendChild(name);
+    el.appendChild(head);
+  }
 
   if (opts.showNote !== false && team.note) {
     const note = document.createElement('div');
     note.className = 'team-card-note';
-    note.textContent = team.note;
+    // team.note is HTML (the 備註 editor supports selecting text and
+    // applying one of the site's accent colors to it) — not user input
+    // shared between people, it only ever round-trips through the
+    // player's own browser storage, so rendering it directly is safe.
+    note.innerHTML = team.note;
     el.appendChild(note);
   }
 
