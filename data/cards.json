@@ -457,17 +457,21 @@
   {
     "id": "card_024",
     "name": "岩鎧不動",
-    "characterId": "char_12",
+    "characterId": "char_09",
     "rarityId": "ssr",
-    "classId": "debuf",
-    "elementId": "wood",
+    "classId": "buf",
+    "elementId": "light",
     "cd": 3,
     "tags": [
-      "dot",
-      "def_down",
-      "burst"
+      "atk_buff_self",
+      "immune_stun"
     ],
-    "image": "assets/img/cards/card_024.svg"
+    "ultimateSkill": "以攻擊力100%對目標造成傷害，\n以自身基礎攻擊力87%使我方全體攻擊力增加（2回合）\n［冷卻時間：4回合］",
+    "image": "assets/img/cards/card_024.png",
+    "imageZoom": 1.84,
+    "imageOffsetX": 0.4259082644184381,
+    "imageOffsetY": 0.6585202679255608,
+    "sortOrder": 24
   },
   {
     "id": "card_025",
