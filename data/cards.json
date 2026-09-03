@@ -1345,5 +1345,68 @@
     "imageOffsetX": 0.4221964397286994,
     "imageOffsetY": 0.22080248067520175,
     "sortOrder": 66
+  },
+  {
+    "id": "card_067",
+    "name": "追風者的奪心計畫",
+    "characterId": "char_09",
+    "rarityId": "ssr",
+    "classId": "heal",
+    "elementId": "fire",
+    "cd": 4,
+    "tags": [
+      "self_burst_dmg_up",
+      "atk_buff_self",
+      "heal_tag",
+      "hot",
+      "immune_sleep"
+    ],
+    "ultimateSkill": "使除自身以外我方全體必殺技傷害增加37.5%（1回合）\n使我方全體攻擊力增加28%（2回合）\n並以攻擊力150%對我方全體進行治療\n再以攻擊力77％進行持續治療（2回合）\n［冷卻時間：4回合］",
+    "image": "assets/img/cards/card_067.png",
+    "imageZoom": 1.48,
+    "imageOffsetX": 0.4858844765824755,
+    "imageOffsetY": 0.31011284722222227,
+    "sortOrder": 67
+  },
+  {
+    "id": "card_068",
+    "name": "馭浪者的海中粼光",
+    "characterId": "char_11",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "wood",
+    "cd": 4,
+    "tags": [
+      "burst",
+      "atk_buff_enemy",
+      "own_dmg_up",
+      "immune_stun"
+    ],
+    "ultimateSkill": "使目標受到傷害增加30%（1回合）\n使自身攻擊力增加30%（4回合）\n再以攻擊力345%對目標造成傷害\n［冷卻時間：4回合］",
+    "image": "assets/img/cards/card_068.png",
+    "imageZoom": 1.43,
+    "imageOffsetX": 0.6113205320009109,
+    "imageOffsetY": 0.2841967158999037,
+    "sortOrder": 68
+  },
+  {
+    "id": "card_069",
+    "name": "蔚然於夜的繁星花",
+    "characterId": "char_05",
+    "rarityId": "ssr",
+    "classId": "debuf",
+    "elementId": "wood",
+    "cd": 3,
+    "tags": [
+      "team_dot_dmg_up",
+      "atk_buff_enemy",
+      "immune_silence"
+    ],
+    "ultimateSkill": "使目標受到傷害增加17%（3回合）\n使我方全體造成持續傷害量增加18%（3回合）\n並以攻擊力273% 目標造成傷害\n［冷卻時間：3回合］",
+    "image": "assets/img/cards/card_069.png",
+    "imageZoom": 1.45,
+    "imageOffsetX": 0.3498912388225897,
+    "imageOffsetY": 0.08811947574199941,
+    "sortOrder": 69
   }
 ]
