@@ -494,17 +494,22 @@
   },
   {
     "id": "card_026",
-    "name": "凍土封鎖",
-    "characterId": "char_02",
-    "rarityId": "sr",
-    "classId": "buf",
-    "elementId": "dark",
+    "name": "守護甜心",
+    "characterId": "char_10",
+    "rarityId": "ssr",
+    "classId": "debuf",
+    "elementId": "wood",
     "cd": 4,
     "tags": [
-      "cleanse",
-      "heal_tag"
+      "immune_silence",
+      "own_dmg_up"
     ],
-    "image": "assets/img/cards/card_026.svg"
+    "ultimateSkill": "使自身造成傷害增加20%（3回合），\n再以攻擊力345%對目標造成傷害，\n並以50％機率造成沉默1回合\n［冷卻時間：4回合］",
+    "image": "assets/img/cards/card_026.png",
+    "imageZoom": 1.64,
+    "imageOffsetX": 0.5043558191194594,
+    "imageOffsetY": 0.23198633292967052,
+    "sortOrder": 26
   },
   {
     "id": "card_027",
