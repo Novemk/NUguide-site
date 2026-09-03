@@ -203,122 +203,122 @@
     "icon": "assets/img/tags/heal_down.svg"
   },
   {
-    "id": "cleanse",
-    "label": "淨化",
-    "sortOrder": 30,
-    "group": "survival",
-    "icon": "assets/img/tags/cleanse.svg"
-  },
-  {
     "id": "shield_gain",
     "label": "增加護盾",
-    "sortOrder": 31,
+    "sortOrder": 30,
     "group": "survival",
     "icon": "assets/img/tags/shield_gain.svg"
   },
   {
     "id": "enemy_dmg_down",
     "label": "敵方傷害減少",
-    "sortOrder": 32,
+    "sortOrder": 31,
     "group": "survival",
     "icon": "assets/img/tags/enemy_dmg_down.svg"
   },
   {
+    "id": "cleanse",
+    "label": "-CD",
+    "sortOrder": 32,
+    "group": "survival",
+    "icon": "assets/img/tags/cleanse.svg"
+  },
+  {
+    "id": "own_cd",
+    "label": "自身-CD",
+    "sortOrder": 33,
+    "group": "survival",
+    "icon": "assets/img/tags/own_cd.svg"
+  },
+  {
+    "id": "target_pos_cd",
+    "label": "指定站位-CD",
+    "sortOrder": 34,
+    "group": "survival",
+    "icon": "assets/img/tags/target_pos_cd.svg"
+  },
+  {
     "id": "def_down",
     "label": "降防",
-    "sortOrder": 33,
+    "sortOrder": 35,
     "group": "control",
     "icon": "assets/img/tags/def_down.svg"
   },
   {
     "id": "stun",
     "label": "暈眩",
-    "sortOrder": 34,
+    "sortOrder": 36,
     "group": "control",
     "icon": "assets/img/tags/stun.svg"
   },
   {
     "id": "break_shield",
     "label": "解除防禦",
-    "sortOrder": 35,
+    "sortOrder": 37,
     "group": "control",
     "icon": "assets/img/tags/break_shield.svg"
   },
   {
     "id": "taunt",
     "label": "嘲諷",
-    "sortOrder": 36,
+    "sortOrder": 38,
     "group": "control",
     "icon": "assets/img/tags/taunt.svg"
   },
   {
     "id": "force_taunt",
     "label": "使目標嘲諷",
-    "sortOrder": 37,
+    "sortOrder": 39,
     "group": "control",
     "icon": "assets/img/tags/force_taunt.svg"
   },
   {
     "id": "immune_stun",
     "label": "免疫麻痺",
-    "sortOrder": 38,
+    "sortOrder": 40,
     "group": "immune",
     "icon": "assets/img/tags/immune_stun.svg"
   },
   {
     "id": "immune_silence",
     "label": "免疫沈默",
-    "sortOrder": 39,
+    "sortOrder": 41,
     "group": "immune",
     "icon": "assets/img/tags/immune_silence.svg"
   },
   {
     "id": "immune_sleep",
     "label": "免疫睡眠",
-    "sortOrder": 40,
+    "sortOrder": 42,
     "group": "immune",
     "icon": "assets/img/tags/immune_sleep.svg"
   },
   {
     "id": "self_dmg",
     "label": "自傷",
-    "sortOrder": 41,
+    "sortOrder": 43,
     "group": "mechanic",
     "icon": "assets/img/tags/self_dmg.svg"
   },
   {
     "id": "counter",
     "label": "反擊",
-    "sortOrder": 42,
+    "sortOrder": 44,
     "group": "mechanic",
     "icon": "assets/img/tags/counter.svg"
   },
   {
     "id": "atk_support",
     "label": "攻擊型輔助",
-    "sortOrder": 43,
+    "sortOrder": 45,
     "group": "mechanic",
     "icon": "assets/img/tags/atk_support.svg"
   },
   {
     "id": "lifesteal",
     "label": "吸血",
-    "sortOrder": 44,
-    "group": "mechanic",
-    "icon": "assets/img/tags/lifesteal.svg"
-  },
-  {
-    "id": "own_cd",
-    "label": "自身-CD",
-    "sortOrder": 45,
-    "group": "mechanic",
-    "icon": "assets/img/tags/own_cd.svg"
-  },
-  {
-    "id": "target_pos_cd",
-    "label": "指定站位-CD",
     "sortOrder": 46,
     "group": "mechanic",
-    "icon": "assets/img/tags/target_pos_cd.svg"
+    "icon": "assets/img/tags/lifesteal.svg"
   }
 ]
