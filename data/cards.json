@@ -1153,5 +1153,28 @@
     "imageOffsetX": 0.510732033019078,
     "imageOffsetY": 0.4558998251218992,
     "sortOrder": 57
+  },
+  {
+    "id": "card_058",
+    "name": "馳騁命途的冒險家",
+    "characterId": "char_09",
+    "rarityId": "ssr",
+    "classId": "debuf",
+    "elementId": "fire",
+    "cd": 3,
+    "tags": [
+      "trigger",
+      "enemy_proc_dmg_up",
+      "enemy_dmg_down",
+      "counter",
+      "taunt",
+      "immune_silence"
+    ],
+    "ultimateSkill": "以攻擊力253%對目標造成傷害\n再使敵方全體受到觸發技傷害增加27%（3回合）\n使敵方全體造成傷害減少10%（1回合）\n並使自身獲得「被攻擊時，觸發『以攻擊力64%對目標造成傷害』（2回合）」\n再獲得嘲諷（1回合）\n並獲得「被攻擊時，解除嘲諷」（1回合）\n［冷卻時間：3回合］",
+    "image": "assets/img/cards/card_058.png",
+    "imageZoom": 1.6,
+    "imageOffsetX": 0.5185801491226939,
+    "imageOffsetY": 0.3954249363319547,
+    "sortOrder": 58
   }
 ]
