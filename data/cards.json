@@ -757,5 +757,25 @@
     "imageOffsetX": 0.4747819280400204,
     "imageOffsetY": 0.34440784503127,
     "sortOrder": 38
+  },
+  {
+    "id": "card_039",
+    "name": "焰沙暗探的袐夢",
+    "characterId": "char_05",
+    "rarityId": "ssr",
+    "classId": "buf",
+    "elementId": "fire",
+    "cd": 3,
+    "tags": [
+      "team_normal_dmg_up",
+      "followup_atk",
+      "immune_silence"
+    ],
+    "ultimateSkill": "以攻擊力100%對目標造成傷害\n使我方站位2的角色普攻傷害增加54%（2回合）\n使我方站位2的角色獲得「普攻時，追加『以攻擊力137%對目標造成傷害』（2回合）」\n［冷卻時間：3回合］",
+    "image": "assets/img/cards/card_039.png",
+    "imageZoom": 1.48,
+    "imageOffsetX": 0.4365677190034167,
+    "imageOffsetY": 0.26540465944347413,
+    "sortOrder": 39
   }
 ]
