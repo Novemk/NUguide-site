@@ -733,7 +733,7 @@
     ],
     "ultimateSkill": "使除自身以外的我方全體必殺傷害增加37.5%（1回合），\n以攻擊力150%對我方全體進行治療，\n並使自身獲得普攻傷害增加90%（3回合）\n［冷卻時間：3回合］",
     "image": "assets/img/cards/card_037.png",
-    "imageZoom": 1.6,
+    "imageZoom": 1.54,
     "imageOffsetX": 0.43795568182339645,
     "imageOffsetY": 0.15911452830615094,
     "sortOrder": 37
