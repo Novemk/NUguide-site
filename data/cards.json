@@ -574,17 +574,23 @@
   },
   {
     "id": "card_030",
-    "name": "梟眼狙擊",
-    "characterId": "char_06",
+    "name": "夜霧銀星",
+    "characterId": "char_14",
     "rarityId": "ssr",
     "classId": "buf",
-    "elementId": "water",
+    "elementId": "fire",
     "cd": 5,
     "tags": [
-      "def_down",
-      "burst"
+      "atk_buff_self",
+      "shield",
+      "cleanse"
     ],
-    "image": "assets/img/cards/card_030.svg"
+    "ultimateSkill": "以自身基礎攻擊力32%使自身以外的我方全體攻擊力增加（5回合），\n使我方全體受到傷害減少5%（5回合），\n★並使除自身以外的我方全體必殺技冷卻時間減少1回合\n［冷卻時間：5回合］",
+    "image": "assets/img/cards/card_030.png",
+    "imageZoom": 1.58,
+    "imageOffsetX": 0.4595706952410329,
+    "imageOffsetY": 0.19168583347489082,
+    "sortOrder": 30
   },
   {
     "id": "card_031",
