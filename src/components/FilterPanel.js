@@ -80,6 +80,7 @@ export async function mountFilterPanel(container, onChange) {
         const img = document.createElement('img');
         img.src = resolveAsset(option.icon);
         img.alt = option.name;
+        img.draggable = false;
         el.appendChild(img);
       } else {
         // icon (class / element single-value)
@@ -91,6 +92,7 @@ export async function mountFilterPanel(container, onChange) {
         const img = document.createElement('img');
         img.src = resolveAsset(option.icon);
         img.alt = option.label;
+        img.draggable = false;
         el.appendChild(img);
       }
 

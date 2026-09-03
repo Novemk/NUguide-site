@@ -424,7 +424,16 @@ hr.ql-divider {
   opacity: 0.55;
   transition: opacity 0.15s, transform 0.15s;
 }
-.opt-icon img { width: 100%; height: 100%; object-fit: contain; }
+.opt-icon img {
+  width: 100%; height: 100%; object-fit: contain;
+  /* Belt-and-suspenders alongside <img draggable="false"> in
+     FilterPanel.js — some browsers still allow a drag gesture to pick
+     up the image unless this is set too, which was getting in the way
+     of just clicking to select. */
+  -webkit-user-drag: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
 .opt-icon.active { opacity: 1; transform: scale(1.08); }
 
 .opt-avatar {
@@ -437,7 +446,12 @@ hr.ql-divider {
   opacity: 0.55;
   transition: opacity 0.15s, transform 0.15s;
 }
-.opt-avatar img { width: 100%; height: 100%; object-fit: contain; }
+.opt-avatar img {
+  width: 100%; height: 100%; object-fit: contain;
+  -webkit-user-drag: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
 .opt-avatar.active { opacity: 1; transform: scale(1.08); }
 
 .opt-range {
