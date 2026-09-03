@@ -199,12 +199,22 @@ hr.ql-divider {
   background: var(--bg-elevated);
   border: 1px solid var(--border-soft);
   border-radius: var(--radius-md);
-  padding: 16px;
   position: sticky;
   top: 0;
   max-height: 70vh;
   overflow-y: auto;
+  overflow-x: hidden;
 }
+/* Holds the actual padding that used to live on .fg-sidebar itself.
+   .filter-panel-header is a *sibling* of this, not a child — sitting
+   directly in .fg-sidebar with no padding to fight against — so its
+   sticky/opaque background reaches the sidebar's real top edge with no
+   gap for scrolled-past content to peek through. (A negative-margin
+   trick to cancel .fg-sidebar's old padding was tried first and didn't
+   reliably work — sticky positioning + negative margins is a known
+   rough combination — so this restructures around the problem instead
+   of fighting it.) */
+.fg-sidebar-body { padding: 16px; }
 .filter-grid-layout .result-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; color: var(--text-dim); font-size: 0.85rem; }
 /* Page context (卡片資料庫) has a sticky navbar above it that the modal
    context (CardPicker) doesn't — offset the sidebar down by the navbar's
@@ -497,15 +507,6 @@ hr.ql-divider {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* Cancels out .fg-sidebar's own 16px padding on the top/left/right,
-     then re-adds that same spacing as this element's own padding — so
-     its background box actually reaches .fg-sidebar's real top/side
-     edges instead of stopping at the inner (padded) content area. The
-     previous version's background only covered its own padded-in box,
-     leaving a sliver of .fg-sidebar's top padding uncovered — content
-     scrolling past could peek through that gap mid-scroll, before the
-     sticky positioning fully caught up. */
-  margin: -16px -16px 10px -16px;
   padding: 16px 16px 10px 16px;
   border-bottom: 1px solid var(--border-soft);
   border-radius: var(--radius-md) var(--radius-md) 0 0;

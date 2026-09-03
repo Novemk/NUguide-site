@@ -123,16 +123,13 @@ export async function mountFilterPanel(container, onChange) {
   // starting the whole panel fresh is actually correct.
   function renderAll() {
     container.innerHTML = '';
-    const panel = document.createElement('div');
-    panel.className = 'filter-panel';
 
-    // Moved to the top (was at the bottom) and made sticky — before any
-    // scrolling happens this just sits in its normal spot above 稀有度
-    // like any other block (sticky elements don't overlap anything until
-    // they'd otherwise scroll out of view), so nothing gets covered on
-    // load. Once you scroll the sidebar down past it, it sticks to the
-    // top of .fg-sidebar instead of scrolling away, so it's reachable no
-    // matter how far down the filter list you've scrolled.
+    // Direct child of `container` (.fg-sidebar) — not nested inside
+    // .filter-panel/.fg-sidebar-body — specifically so it has no
+    // ancestor padding to fight against. Sits in its normal spot above
+    // 稀有度 until scrolling would carry it out of view, then sticks to
+    // the top of .fg-sidebar instead of scrolling away, so it's
+    // reachable no matter how far down the filter list you've scrolled.
     const header = document.createElement('div');
     header.className = 'filter-panel-header';
     countEl = document.createElement('span');
@@ -147,8 +144,15 @@ export async function mountFilterPanel(container, onChange) {
       onChange(state);
     });
     header.append(countEl, clearBtnEl);
-    panel.appendChild(header);
+    container.appendChild(header);
     updateHeader();
+
+    const body = document.createElement('div');
+    body.className = 'fg-sidebar-body';
+    const panel = document.createElement('div');
+    panel.className = 'filter-panel';
+    body.appendChild(panel);
+    container.appendChild(body);
 
     for (const group of schema) {
       const wrap = document.createElement('div');
@@ -166,8 +170,6 @@ export async function mountFilterPanel(container, onChange) {
 
       renderGroup(group, optionsWrap);
     }
-
-    container.appendChild(panel);
   }
 
   renderAll();
