@@ -53,8 +53,37 @@ function buildTagBtn(option, isActive, onToggle) {
   return el;
 }
 
+// Whether a label needs its own full-width row can't be decided from the
+// text alone (a fixed character-count guess calibrated for the public
+// site's narrow 260px filter sidebar was forcing 8-character labels onto
+// their own row even inside the admin's much wider picker, where they'd
+// easily fit two-up) — it depends on how wide the actual container is
+// *right now*, which is only knowable once these buttons are really in
+// the page. So: render everything plain first, then — after the caller
+// has attached `container` to the document and the browser has painted
+// a layout — measure which labels are actually being truncated by
+// .tag-flow's ellipsis and only then mark those .opt-tag-wide, which
+// makes them span both columns and re-render without truncation.
+function widenOverflowingTags(container) {
+  requestAnimationFrame(() => {
+    for (const wrap of container.querySelectorAll('.tag-flow')) {
+      for (const btn of wrap.querySelectorAll('.opt-tag:not(.opt-tag-wide)')) {
+        const span = btn.querySelector('span');
+        if (span && span.scrollWidth > span.clientWidth + 1) {
+          btn.classList.add('opt-tag-wide');
+        }
+      }
+    }
+  });
+}
+
 /**
  * Renders the full grouped tag list into `container` (cleared first).
+ * Every row uses the same rule everywhere: pairs of short labels sit
+ * side by side, anything long enough to risk wrapping spans the full
+ * row on its own (see WIDE_LABEL_THRESHOLD / .tag-flow) — no exceptions
+ * for particular groups, so the layout reads as one consistent rule
+ * instead of behaving differently row to row.
  * @param {HTMLElement} container
  * @param {Array<Object>} options - tags.json entries
  * @param {{ isActive: (option:Object) => boolean, onToggle: (option:Object) => void }} handlers
@@ -69,48 +98,27 @@ export function renderTagList(container, options, { isActive, onToggle }) {
     label.textContent = group.label;
     groupWrap.appendChild(label);
 
+    // Only used to decide DISPLAY ORDER now (我方 items listed together,
+    // then 自身 items together, then anything else) — not to force the
+    // two sets into pixel-aligned columns, which needed a fixed width
+    // that didn't actually fit two per row in the narrow 260px sidebar
+    // this also has to render in, and ended up looking inconsistent with
+    // every other row's short-pairs-up/long-spans-alone rule.
+    let items = group.items;
     if (group.groupId === SELF_TEAM_SPLIT_GROUP) {
       const { teamRow, ownRow, leftover } = splitTeamOwnRows(group.items);
-      for (const row of [teamRow, ownRow]) {
-        const rowWrap = document.createElement('div');
-        rowWrap.className = 'filter-options tag-row-aligned';
-        for (const option of row) {
-          if (option) {
-            rowWrap.appendChild(buildTagBtn(option, isActive, onToggle));
-          } else {
-            const placeholder = document.createElement('span');
-            placeholder.className = 'opt-tag opt-tag-placeholder';
-            placeholder.setAttribute('aria-hidden', 'true');
-            rowWrap.appendChild(placeholder);
-          }
-        }
-        groupWrap.appendChild(rowWrap);
-      }
-      if (leftover.length) {
-        const leftoverWrap = document.createElement('div');
-        leftoverWrap.className = 'tag-grid';
-        for (const option of leftover) leftoverWrap.appendChild(buildTagBtn(option, isActive, onToggle));
-        groupWrap.appendChild(leftoverWrap);
-      }
+      items = [...teamRow, ...ownRow].filter(Boolean).concat(leftover);
     } else if (group.groupId === CD_SPLIT_GROUP) {
       const { mainRow, cdRow } = splitCdRow(group.items);
-      const mainWrap = document.createElement('div');
-      mainWrap.className = 'tag-grid';
-      for (const option of mainRow) mainWrap.appendChild(buildTagBtn(option, isActive, onToggle));
-      groupWrap.appendChild(mainWrap);
-      if (cdRow.length) {
-        const cdWrap = document.createElement('div');
-        cdWrap.className = 'filter-options tag-row-aligned';
-        for (const option of cdRow) cdWrap.appendChild(buildTagBtn(option, isActive, onToggle));
-        groupWrap.appendChild(cdWrap);
-      }
-    } else {
-      const wrap = document.createElement('div');
-      wrap.className = 'tag-grid';
-      for (const option of group.items) wrap.appendChild(buildTagBtn(option, isActive, onToggle));
-      groupWrap.appendChild(wrap);
+      items = [...mainRow, ...cdRow];
     }
+
+    const wrap = document.createElement('div');
+    wrap.className = 'tag-flow';
+    for (const option of items) wrap.appendChild(buildTagBtn(option, isActive, onToggle));
+    groupWrap.appendChild(wrap);
 
     container.appendChild(groupWrap);
   }
+  widenOverflowingTags(container);
 }

@@ -440,33 +440,34 @@ hr.ql-divider {
   font-weight: 600;
 }
 .opt-range.active { background: var(--accent-teal); border-color: var(--accent-teal); color: #0d1f1c; }
-.opt-tag-placeholder { visibility: hidden; pointer-events: none; }
-.tag-row-aligned + .tag-row-aligned { margin-top: 8px; }
-/* Equal-width grid for the "normal" tag rows (not the 我方/自身 or -CD
-   aligned rows, which already fix their own width) — auto-fill still
-   lets more columns appear on a wider container, but every column in a
-   given row is forced to the same width, so short and long labels don't
-   leave the lopsided single-item-alone-on-a-row look that ordering by
-   hand could never reliably avoid across different screen widths. */
-.tag-grid {
+/* Fixed 2-column grid for the "normal" tag rows — short labels sit two
+   to a row; anything long enough to risk wrapping (see
+   WIDE_LABEL_THRESHOLD in TagPicker.js) gets .opt-tag-wide and spans
+   both columns instead, so it never wraps or gets squeezed. Widens to
+   4 columns when there's actually room (container query, not viewport —
+   this looks at .tag-group-block's own width, so it does the right
+   thing whether it's sitting in the public site's narrow 260px filter
+   sidebar or a much wider admin picker). */
+.tag-group-block { container-type: inline-size; }
+.tag-flow {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
-  gap: 8px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
 }
-.tag-grid + .tag-grid,
-.tag-grid + .filter-options,
-.filter-options + .tag-grid { margin-top: 8px; }
-.tag-grid .opt-tag {
+.tag-flow .opt-tag {
   width: 100%;
-  min-width: 0; /* grid items default to min-width:auto, which — combined
-    with white-space:nowrap on the label — was refusing to shrink below
-    each pill's own full unwrapped text width, silently forcing the
-    column count down to 1 regardless of the minmax() above. */
+  min-width: 0;
   box-sizing: border-box;
-  white-space: normal;
-  text-align: left;
 }
-
+.tag-flow .opt-tag span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+.tag-flow .opt-tag-wide { grid-column: 1 / -1; }
+@container (min-width: 460px) {
+  .tag-flow { grid-template-columns: repeat(4, 1fr); }
+}
 .opt-tag {
   display: inline-flex; align-items: center; gap: 7px;
   border: 1px solid var(--border);
@@ -481,11 +482,6 @@ hr.ql-divider {
 }
 .opt-tag img { width: 20px; height: 20px; flex-shrink: 0; }
 .opt-tag.active { opacity: 1; border-color: var(--accent-teal); background: rgba(79,200,176,0.12); color: var(--text); }
-/* Used inside the 我方增傷 / -CD aligned rows (see tag-row-aligned) —
-   fixed width so the same damage-type lines up in the same column
-   between the 我方 row and the 自身 row below it, which a natural
-   auto-width pill can't guarantee once label lengths differ. */
-.tag-row-aligned .opt-tag { width: 172px; }
 
 .filter-panel-footer { display: flex; justify-content: space-between; align-items: center; padding-top: 4px; border-top: 1px solid var(--border-soft); margin-top: 4px; }
 .filter-count { font-size: 0.82rem; color: var(--text-faint); }
