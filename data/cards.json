@@ -1069,5 +1069,25 @@
     "imageOffsetX": 0.3952129210307921,
     "imageOffsetY": 0.3698891589217226,
     "sortOrder": 53
+  },
+  {
+    "id": "card_054",
+    "name": "傘下的不解之緣",
+    "characterId": "char_04",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "water",
+    "cd": 3,
+    "tags": [
+      "own_dmg_up",
+      "hot",
+      "immune_sleep"
+    ],
+    "ultimateSkill": "使自身攻擊力增加27%（3回合）\n再以攻擊力25%對我方全體進行持續治療（3回合）\n並以攻擊力273% 目標造成傷害\n［冷卻時間：3回合］",
+    "image": "assets/img/cards/card_054.png",
+    "imageZoom": 1.44,
+    "imageOffsetX": 0.4107518727562516,
+    "imageOffsetY": 0.3468210916886343,
+    "sortOrder": 54
   }
 ]
