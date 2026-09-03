@@ -1217,5 +1217,25 @@
     "imageOffsetX": 0.49760925847114135,
     "imageOffsetY": 0.33601401833926925,
     "sortOrder": 60
+  },
+  {
+    "id": "card_061",
+    "name": "作繭的暴徒",
+    "characterId": "char_07",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "fire",
+    "cd": 3,
+    "tags": [
+      "enemy_elem_dmg_up",
+      "trigger",
+      "immune_sleep"
+    ],
+    "ultimateSkill": "使目標受到火屬性傷害增加5%（3回合）\n以攻擊力125%對目標造成傷害\n再使自身獲得「攻擊時，觸發『以攻擊力139%對目標造成傷害』（3回合）」\n［冷卻時間：3回合］",
+    "image": "assets/img/cards/card_061.png",
+    "imageZoom": 1.34,
+    "imageOffsetX": 0.5323333714798573,
+    "imageOffsetY": 0.04045136472333807,
+    "sortOrder": 61
   }
 ]
