@@ -288,9 +288,9 @@
     ],
     "ultimateSkill": "以自身攻擊力182%對目標造成持續傷害（3回合），\n並使目標受到持續傷害效果增加10%（最多3層）、\n必殺技傷害減少10%（2回合）\n［冷卻時間：3回合］",
     "image": "assets/img/cards/card_015.png",
-    "imageZoom": 1.35,
-    "imageOffsetX": 0.3303580371451465,
-    "imageOffsetY": 0.4810451537195034,
+    "imageZoom": 1.45,
+    "imageOffsetX": 0.33409752727379677,
+    "imageOffsetY": 0.4460602698566279,
     "sortOrder": 14
   },
   {
