@@ -753,9 +753,9 @@
     ],
     "ultimateSkill": "以攻擊力100%對目標造成傷害\n以最大HP40%給予自身護盾（1回合）\n使自身獲得「被攻擊時，觸發『以攻擊力216%對目標進行反擊。』（1回合）」\n並獲得「被攻擊時，解除反擊」（1回合）\n再使自身獲得嘲諷（1回合）\n並變為防禦狀態\n［冷卻時間：3回合］",
     "image": "assets/img/cards/card_038.png",
-    "imageZoom": 1.46,
-    "imageOffsetX": 0.4747819280400204,
-    "imageOffsetY": 0.34440784503127,
+    "imageZoom": 1.58,
+    "imageOffsetX": 0.46468133786580673,
+    "imageOffsetY": 0.3116576759981395,
     "sortOrder": 38
   },
   {
