@@ -65,16 +65,30 @@ function buildTagBtn(option, isActive, onToggle) {
 // .tag-flow's ellipsis and only then mark those .opt-tag-wide, which
 // makes them span both columns and re-render without truncation.
 function widenOverflowingTags(container) {
-  requestAnimationFrame(() => {
-    for (const wrap of container.querySelectorAll('.tag-flow')) {
-      for (const btn of wrap.querySelectorAll('.opt-tag:not(.opt-tag-wide)')) {
-        const span = btn.querySelector('span');
-        if (span && span.scrollWidth > span.clientWidth + 1) {
-          btn.classList.add('opt-tag-wide');
+  const measure = () => {
+    requestAnimationFrame(() => {
+      for (const wrap of container.querySelectorAll('.tag-flow')) {
+        for (const btn of wrap.querySelectorAll('.opt-tag:not(.opt-tag-wide)')) {
+          const span = btn.querySelector('span');
+          if (span && span.scrollWidth > span.clientWidth + 1) {
+            btn.classList.add('opt-tag-wide');
+          }
         }
       }
-    }
-  });
+    });
+  };
+  // document.fonts.ready only resolves once the page's actual webfont
+  // (Noto Sans TC, loaded from Google Fonts) has finished downloading —
+  // measuring before that was reading widths of the browser's temporary
+  // fallback font, which is narrower, so some labels that only overflow
+  // in the *real* font were silently measured as "fits fine" and never
+  // got widened. Falls back to measuring immediately if the Font Loading
+  // API isn't available for some reason, rather than never measuring.
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(measure);
+  } else {
+    measure();
+  }
 }
 
 /**
