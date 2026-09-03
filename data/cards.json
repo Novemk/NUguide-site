@@ -1304,5 +1304,25 @@
     "imageOffsetX": 0.47099596010564165,
     "imageOffsetY": 0.16818581303262556,
     "sortOrder": 64
+  },
+  {
+    "id": "card_065",
+    "name": "赴焰的試煉",
+    "characterId": "char_08",
+    "rarityId": "ssr",
+    "classId": "buf",
+    "elementId": "light",
+    "cd": 3,
+    "tags": [
+      "dot",
+      "atk_buff_self",
+      "immune_stun"
+    ],
+    "ultimateSkill": "使目標受到持續傷害量增加30%（最多1層）\n以自身基礎攻擊力69%使我方全體攻擊力增加（2回合）\n並以攻擊力50%對目標造成持續傷害（2回合）\n［冷卻時間：3回合］",
+    "image": "assets/img/cards/card_065.png",
+    "imageZoom": 1.38,
+    "imageOffsetX": 0.5381726315935291,
+    "imageOffsetY": 0.2221874050704445,
+    "sortOrder": 65
   }
 ]
