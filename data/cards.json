@@ -29,8 +29,11 @@
     "elementId": "fire",
     "cd": 4,
     "tags": [
-      "burst"
+      "burst",
+      "immune_sleep",
+      "own_dmg_up"
     ],
+    "ultimateSkill": "使自身攻擊力增加25%（3回合），\n再以攻擊力345%對目標造成傷害\n［冷卻時間：4回合］",
     "image": "assets/img/cards/card_002.png",
     "imageZoom": 1.46,
     "imageOffsetX": 0.5136846985946831,
