@@ -1089,5 +1089,26 @@
     "imageOffsetX": 0.4107518727562516,
     "imageOffsetY": 0.3468210916886343,
     "sortOrder": 54
+  },
+  {
+    "id": "card_055",
+    "name": "塔中的迢遙之願",
+    "characterId": "char_06",
+    "rarityId": "ssr",
+    "classId": "tank",
+    "elementId": "water",
+    "cd": 3,
+    "tags": [
+      "enemy_elem_dmg_up",
+      "shield",
+      "shield_gain",
+      "immune_silence"
+    ],
+    "ultimateSkill": "以攻擊力100%對目標造成傷害\n使目標受到水屬性傷害增加15%（1回合）\n使自身受到傷害減少15%（3回合）\n以自身最大HP18%使我方全體獲得護盾（1回合）\n［冷卻時間：3回合］",
+    "image": "assets/img/cards/card_055.png",
+    "imageZoom": 1.58,
+    "imageOffsetX": 0.5158395954582365,
+    "imageOffsetY": 0.4027319640176861,
+    "sortOrder": 55
   }
 ]
