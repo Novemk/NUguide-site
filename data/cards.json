@@ -1279,9 +1279,9 @@
     ],
     "ultimateSkill": "以當前HP12.5%對我方全體造成真實傷害\n並使敵方全體受到光屬性傷害增加9%（2回合）\n使我方全體必殺技傷害增加21%（2回合）\n再以攻擊力419%對目標造成傷害\n並以自身最大HP10%對我方全體進行持續治療（2回合）\n［冷卻時間：4回合］",
     "image": "assets/img/cards/card_063.png",
-    "imageZoom": 1.31,
-    "imageOffsetX": 0.4874702962780691,
-    "imageOffsetY": 0.10135616193733772,
+    "imageZoom": 1.27,
+    "imageOffsetX": 0.4864407011084145,
+    "imageOffsetY": 0.10801312260291837,
     "sortOrder": 63
   }
 ]
