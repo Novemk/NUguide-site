@@ -1,302 +1,323 @@
 [
   {
-    "id": "atk_buff_enemy",
-    "label": "敵方受到傷害增加",
-    "sortOrder": 1,
-    "group": "enemy_dmg_up",
-    "icon": "assets/img/tags/atk_buff_enemy.svg"
-  },
-  {
-    "id": "enemy_burst_dmg_up",
-    "label": "敵方受必殺傷害增加",
-    "sortOrder": 2,
-    "group": "enemy_dmg_up",
-    "icon": "assets/img/tags/enemy_burst_dmg_up.svg"
-  },
-  {
-    "id": "enemy_normal_dmg_up",
-    "label": "敵方受普攻傷害增加",
-    "sortOrder": 3,
-    "group": "enemy_dmg_up",
-    "icon": "assets/img/tags/enemy_normal_dmg_up.svg"
-  },
-  {
-    "id": "enemy_elem_dmg_up",
-    "label": "敵方受屬性傷害增加",
-    "sortOrder": 4,
-    "group": "enemy_dmg_up",
-    "icon": "assets/img/tags/enemy_elem_dmg_up.svg"
-  },
-  {
-    "id": "enemy_dot_dmg_up",
-    "label": "敵方受持續傷害增加",
-    "sortOrder": 5,
-    "group": "enemy_dmg_up",
-    "icon": "assets/img/tags/enemy_dot_dmg_up.svg"
-  },
-  {
-    "id": "enemy_proc_dmg_up",
-    "label": "敵方受觸發技傷害增加",
-    "sortOrder": 6,
-    "group": "enemy_dmg_up",
-    "icon": "assets/img/tags/enemy_proc_dmg_up.svg"
-  },
-  {
-    "id": "atk_buff_self",
-    "label": "我方傷害增加",
-    "sortOrder": 7,
-    "group": "self_dmg_up",
-    "icon": "assets/img/tags/atk_buff_self.svg"
-  },
-  {
-    "id": "own_dmg_up",
-    "label": "自身傷害增加",
-    "sortOrder": 8,
-    "group": "self_dmg_up",
-    "icon": "assets/img/tags/own_dmg_up.svg"
-  },
-  {
-    "id": "self_burst_dmg_up",
-    "label": "我方必殺傷害增加",
-    "sortOrder": 9,
-    "group": "self_dmg_up",
-    "icon": "assets/img/tags/self_burst_dmg_up.svg"
-  },
-  {
-    "id": "own_burst_dmg_up",
-    "label": "自身必殺傷害增加",
-    "sortOrder": 10,
-    "group": "self_dmg_up",
-    "icon": "assets/img/tags/own_burst_dmg_up.svg"
-  },
-  {
-    "id": "team_normal_dmg_up",
-    "label": "我方普攻傷害增加",
-    "sortOrder": 11,
-    "group": "self_dmg_up",
-    "icon": "assets/img/tags/team_normal_dmg_up.svg"
-  },
-  {
-    "id": "own_normal_dmg_up",
-    "label": "自身普攻傷害增加",
-    "sortOrder": 12,
-    "group": "self_dmg_up",
-    "icon": "assets/img/tags/own_normal_dmg_up.svg"
-  },
-  {
-    "id": "team_proc_dmg_up",
-    "label": "我方觸發傷害增加",
-    "sortOrder": 13,
-    "group": "self_dmg_up",
-    "icon": "assets/img/tags/team_proc_dmg_up.svg"
-  },
-  {
-    "id": "own_proc_dmg_up",
-    "label": "自身觸發傷害增加",
-    "sortOrder": 14,
-    "group": "self_dmg_up",
-    "icon": "assets/img/tags/own_proc_dmg_up.svg"
-  },
-  {
     "id": "normal_atk",
     "label": "普攻",
-    "sortOrder": 15,
+    "sortOrder": 1,
     "group": "damage",
     "icon": "assets/img/tags/normal_atk.svg"
   },
   {
     "id": "multi_hit",
     "label": "多段攻擊",
-    "sortOrder": 16,
+    "sortOrder": 2,
     "group": "damage",
     "icon": "assets/img/tags/multi_hit.svg"
   },
   {
     "id": "dot",
     "label": "持續傷害",
-    "sortOrder": 17,
+    "sortOrder": 3,
     "group": "damage",
     "icon": "assets/img/tags/dot.svg"
   },
   {
     "id": "burst",
     "label": "爆發",
-    "sortOrder": 18,
+    "sortOrder": 4,
     "group": "damage",
     "icon": "assets/img/tags/burst.svg"
   },
   {
     "id": "aoe",
     "label": "全體攻擊",
-    "sortOrder": 19,
+    "sortOrder": 5,
     "group": "damage",
     "icon": "assets/img/tags/aoe.svg"
   },
   {
     "id": "target_pos",
     "label": "指定站位攻擊",
-    "sortOrder": 20,
+    "sortOrder": 6,
     "group": "damage",
     "icon": "assets/img/tags/target_pos.svg"
   },
   {
     "id": "trigger",
     "label": "觸發",
-    "sortOrder": 21,
+    "sortOrder": 7,
     "group": "damage",
     "icon": "assets/img/tags/trigger.svg"
   },
   {
+    "id": "atk_buff_self",
+    "label": "我方傷害增加",
+    "sortOrder": 8,
+    "group": "self_dmg_up",
+    "icon": "assets/img/tags/atk_buff_self.svg"
+  },
+  {
+    "id": "own_dmg_up",
+    "label": "自身傷害增加",
+    "sortOrder": 9,
+    "group": "self_dmg_up",
+    "icon": "assets/img/tags/own_dmg_up.svg"
+  },
+  {
+    "id": "self_burst_dmg_up",
+    "label": "我方必殺傷害增加",
+    "sortOrder": 10,
+    "group": "self_dmg_up",
+    "icon": "assets/img/tags/self_burst_dmg_up.svg"
+  },
+  {
+    "id": "own_burst_dmg_up",
+    "label": "自身必殺傷害增加",
+    "sortOrder": 11,
+    "group": "self_dmg_up",
+    "icon": "assets/img/tags/own_burst_dmg_up.svg"
+  },
+  {
+    "id": "team_normal_dmg_up",
+    "label": "我方普攻傷害增加",
+    "sortOrder": 12,
+    "group": "self_dmg_up",
+    "icon": "assets/img/tags/team_normal_dmg_up.svg"
+  },
+  {
+    "id": "own_normal_dmg_up",
+    "label": "自身普攻傷害增加",
+    "sortOrder": 13,
+    "group": "self_dmg_up",
+    "icon": "assets/img/tags/own_normal_dmg_up.svg"
+  },
+  {
+    "id": "team_dot_dmg_up",
+    "label": "我方持續傷害增加",
+    "group": "self_dmg_up",
+    "icon": "assets/img/tags/team_dot_dmg_up.svg",
+    "sortOrder": 14
+  },
+  {
+    "id": "own_dot_dmg_up",
+    "label": "自身持續傷害增加",
+    "group": "self_dmg_up",
+    "icon": "assets/img/tags/own_dot_dmg_up.svg",
+    "sortOrder": 15
+  },
+  {
+    "id": "team_proc_dmg_up",
+    "label": "我方觸發傷害增加",
+    "sortOrder": 16,
+    "group": "self_dmg_up",
+    "icon": "assets/img/tags/team_proc_dmg_up.svg"
+  },
+  {
+    "id": "own_proc_dmg_up",
+    "label": "自身觸發傷害增加",
+    "sortOrder": 17,
+    "group": "self_dmg_up",
+    "icon": "assets/img/tags/own_proc_dmg_up.svg"
+  },
+  {
+    "id": "followup_atk",
+    "label": "普攻追擊",
+    "sortOrder": 18,
+    "group": "self_dmg_up",
+    "icon": "assets/img/tags/followup_atk.svg"
+  },
+  {
+    "id": "proc_followup",
+    "label": "觸發追擊",
+    "group": "self_dmg_up",
+    "icon": "assets/img/tags/proc_followup.svg",
+    "sortOrder": 19
+  },
+  {
+    "id": "atk_buff_enemy",
+    "label": "敵方受到傷害增加",
+    "sortOrder": 20,
+    "group": "enemy_dmg_up",
+    "icon": "assets/img/tags/atk_buff_enemy.svg"
+  },
+  {
+    "id": "enemy_burst_dmg_up",
+    "label": "敵方受必殺傷害增加",
+    "sortOrder": 21,
+    "group": "enemy_dmg_up",
+    "icon": "assets/img/tags/enemy_burst_dmg_up.svg"
+  },
+  {
+    "id": "enemy_normal_dmg_up",
+    "label": "敵方受普攻傷害增加",
+    "sortOrder": 22,
+    "group": "enemy_dmg_up",
+    "icon": "assets/img/tags/enemy_normal_dmg_up.svg"
+  },
+  {
+    "id": "enemy_elem_dmg_up",
+    "label": "敵方受屬性傷害增加",
+    "sortOrder": 23,
+    "group": "enemy_dmg_up",
+    "icon": "assets/img/tags/enemy_elem_dmg_up.svg"
+  },
+  {
+    "id": "enemy_dot_dmg_up",
+    "label": "敵方受持續傷害增加",
+    "sortOrder": 24,
+    "group": "enemy_dmg_up",
+    "icon": "assets/img/tags/enemy_dot_dmg_up.svg"
+  },
+  {
+    "id": "enemy_proc_dmg_up",
+    "label": "敵方受觸發技傷害增加",
+    "sortOrder": 25,
+    "group": "enemy_dmg_up",
+    "icon": "assets/img/tags/enemy_proc_dmg_up.svg"
+  },
+  {
     "id": "shield",
     "label": "減傷",
-    "sortOrder": 22,
+    "sortOrder": 26,
     "group": "survival",
     "icon": "assets/img/tags/shield.svg"
   },
   {
     "id": "heal_tag",
     "label": "治療",
-    "sortOrder": 23,
+    "sortOrder": 27,
     "group": "survival",
     "icon": "assets/img/tags/heal_tag.svg"
   },
   {
     "id": "hot",
     "label": "持續治療",
-    "sortOrder": 24,
+    "sortOrder": 28,
     "group": "survival",
     "icon": "assets/img/tags/hot.svg"
   },
   {
     "id": "heal_down",
     "label": "減療",
-    "sortOrder": 25,
+    "sortOrder": 29,
     "group": "survival",
     "icon": "assets/img/tags/heal_down.svg"
   },
   {
     "id": "cleanse",
-    "label": "-CD",
-    "sortOrder": 26,
+    "label": "淨化",
+    "sortOrder": 30,
     "group": "survival",
     "icon": "assets/img/tags/cleanse.svg"
   },
   {
     "id": "shield_gain",
     "label": "增加護盾",
-    "sortOrder": 27,
+    "sortOrder": 31,
     "group": "survival",
     "icon": "assets/img/tags/shield_gain.svg"
   },
   {
     "id": "enemy_dmg_down",
     "label": "敵方傷害減少",
-    "sortOrder": 28,
+    "sortOrder": 32,
     "group": "survival",
     "icon": "assets/img/tags/enemy_dmg_down.svg"
   },
   {
     "id": "def_down",
     "label": "降防",
-    "sortOrder": 29,
+    "sortOrder": 33,
     "group": "control",
     "icon": "assets/img/tags/def_down.svg"
   },
   {
     "id": "stun",
     "label": "暈眩",
-    "sortOrder": 30,
+    "sortOrder": 34,
     "group": "control",
     "icon": "assets/img/tags/stun.svg"
   },
   {
     "id": "break_shield",
     "label": "解除防禦",
-    "sortOrder": 31,
+    "sortOrder": 35,
     "group": "control",
     "icon": "assets/img/tags/break_shield.svg"
   },
   {
     "id": "taunt",
     "label": "嘲諷",
-    "sortOrder": 32,
+    "sortOrder": 36,
     "group": "control",
     "icon": "assets/img/tags/taunt.svg"
   },
   {
     "id": "force_taunt",
     "label": "使目標嘲諷",
-    "sortOrder": 33,
+    "sortOrder": 37,
     "group": "control",
     "icon": "assets/img/tags/force_taunt.svg"
   },
   {
     "id": "immune_stun",
     "label": "免疫麻痺",
-    "sortOrder": 34,
+    "sortOrder": 38,
     "group": "immune",
     "icon": "assets/img/tags/immune_stun.svg"
   },
   {
     "id": "immune_silence",
     "label": "免疫沈默",
-    "sortOrder": 35,
+    "sortOrder": 39,
     "group": "immune",
     "icon": "assets/img/tags/immune_silence.svg"
   },
   {
     "id": "immune_sleep",
     "label": "免疫睡眠",
-    "sortOrder": 36,
+    "sortOrder": 40,
     "group": "immune",
     "icon": "assets/img/tags/immune_sleep.svg"
   },
   {
     "id": "self_dmg",
     "label": "自傷",
-    "sortOrder": 37,
+    "sortOrder": 41,
     "group": "mechanic",
     "icon": "assets/img/tags/self_dmg.svg"
   },
   {
     "id": "counter",
     "label": "反擊",
-    "sortOrder": 38,
+    "sortOrder": 42,
     "group": "mechanic",
     "icon": "assets/img/tags/counter.svg"
   },
   {
-    "id": "followup_atk",
-    "label": "普攻追擊",
-    "sortOrder": 39,
-    "group": "mechanic",
-    "icon": "assets/img/tags/followup_atk.svg"
-  },
-  {
     "id": "atk_support",
     "label": "攻擊型輔助",
-    "sortOrder": 40,
+    "sortOrder": 43,
     "group": "mechanic",
     "icon": "assets/img/tags/atk_support.svg"
   },
   {
     "id": "lifesteal",
     "label": "吸血",
-    "sortOrder": 41,
+    "sortOrder": 44,
     "group": "mechanic",
     "icon": "assets/img/tags/lifesteal.svg"
   },
   {
     "id": "own_cd",
     "label": "自身-CD",
-    "sortOrder": 42,
+    "sortOrder": 45,
     "group": "mechanic",
     "icon": "assets/img/tags/own_cd.svg"
   },
   {
     "id": "target_pos_cd",
     "label": "指定站位-CD",
-    "sortOrder": 43,
+    "sortOrder": 46,
     "group": "mechanic",
     "icon": "assets/img/tags/target_pos_cd.svg"
   }
