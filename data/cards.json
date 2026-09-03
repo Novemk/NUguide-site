@@ -1429,5 +1429,26 @@
     "imageOffsetX": 0.33567238836657354,
     "imageOffsetY": 0.363412616136571,
     "sortOrder": 70
+  },
+  {
+    "id": "card_071",
+    "name": "暗淵明珠",
+    "characterId": "char_04",
+    "rarityId": "ssr",
+    "classId": "debuf",
+    "elementId": "water",
+    "cd": 4,
+    "tags": [
+      "burst",
+      "atk_buff_self",
+      "self_burst_dmg_up",
+      "immune_sleep"
+    ],
+    "ultimateSkill": "使目標受到定位妨礙的角色傷害增加51%（1回合）\n再使我方定位妨礙的角色必殺技傷害增加31%（1回合）\n並以攻擊力345%對目標造成傷害\n［冷卻時間：4回合］",
+    "image": "assets/img/cards/card_071.png",
+    "imageZoom": 1.47,
+    "imageOffsetX": 0.5940004433006997,
+    "imageOffsetY": 0.17089204737725028,
+    "sortOrder": 71
   }
 ]
