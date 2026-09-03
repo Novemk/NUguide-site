@@ -1132,5 +1132,26 @@
     "imageOffsetX": 0.4966536677028935,
     "imageOffsetY": 0.3977847492239956,
     "sortOrder": 56
+  },
+  {
+    "id": "card_057",
+    "name": "夢裡的未竟之盼",
+    "characterId": "char_12",
+    "rarityId": "ssr",
+    "classId": "debuf",
+    "elementId": "wood",
+    "cd": 4,
+    "tags": [
+      "enemy_burst_dmg_up",
+      "atk_buff_self",
+      "burst",
+      "immune_sleep"
+    ],
+    "ultimateSkill": "使敵方全體受到必殺技傷害增加20%（1回合）\n並使我方全體定位攻擊與妨礙的角色造成傷害增加17%（1回合）\n再以攻擊力345%對目標造成傷害\n［冷卻時間：4回合］",
+    "image": "assets/img/cards/card_057.png",
+    "imageZoom": 1.5,
+    "imageOffsetX": 0.510732033019078,
+    "imageOffsetY": 0.4558998251218992,
+    "sortOrder": 57
   }
 ]
