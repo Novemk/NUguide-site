@@ -314,17 +314,23 @@
   },
   {
     "id": "card_017",
-    "name": "暗影蝕刻",
-    "characterId": "char_05",
+    "name": "閃耀領航",
+    "characterId": "char_06",
     "rarityId": "ssr",
     "classId": "atk",
-    "elementId": "wood",
-    "cd": 3,
+    "elementId": "dark",
+    "cd": 4,
     "tags": [
-      "atk_buff_self",
-      "cleanse"
+      "own_burst_dmg_up",
+      "target_pos",
+      "immune_stun"
     ],
-    "image": "assets/img/cards/card_017.svg"
+    "ultimateSkill": "使自身必殺技傷害增加27%（2回合），\n再以攻擊力156%對敵方站位1、3、5造成傷害\n［冷卻時間：4回合］",
+    "image": "assets/img/cards/card_017.png",
+    "imageZoom": 1.65,
+    "imageOffsetX": 0.4538649225385494,
+    "imageOffsetY": 0.40810985899450963,
+    "sortOrder": 17
   },
   {
     "id": "card_018",
