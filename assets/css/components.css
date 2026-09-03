@@ -442,6 +442,21 @@ hr.ql-divider {
 .opt-range.active { background: var(--accent-teal); border-color: var(--accent-teal); color: #0d1f1c; }
 .opt-tag-placeholder { visibility: hidden; pointer-events: none; }
 .tag-row-aligned + .tag-row-aligned { margin-top: 8px; }
+/* Equal-width grid for the "normal" tag rows (not the 我方/自身 or -CD
+   aligned rows, which already fix their own width) — auto-fill still
+   lets more columns appear on a wider container, but every column in a
+   given row is forced to the same width, so short and long labels don't
+   leave the lopsided single-item-alone-on-a-row look that ordering by
+   hand could never reliably avoid across different screen widths. */
+.tag-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 10px;
+}
+.tag-grid + .tag-grid,
+.tag-grid + .filter-options,
+.filter-options + .tag-grid { margin-top: 8px; }
+.tag-grid .opt-tag { width: 100%; box-sizing: border-box; }
 
 .opt-tag {
   display: inline-flex; align-items: center; gap: 7px;

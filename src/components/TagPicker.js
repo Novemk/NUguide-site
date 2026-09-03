@@ -88,14 +88,14 @@ export function renderTagList(container, options, { isActive, onToggle }) {
       }
       if (leftover.length) {
         const leftoverWrap = document.createElement('div');
-        leftoverWrap.className = 'filter-options';
+        leftoverWrap.className = 'tag-grid';
         for (const option of leftover) leftoverWrap.appendChild(buildTagBtn(option, isActive, onToggle));
         groupWrap.appendChild(leftoverWrap);
       }
     } else if (group.groupId === CD_SPLIT_GROUP) {
       const { mainRow, cdRow } = splitCdRow(group.items);
       const mainWrap = document.createElement('div');
-      mainWrap.className = 'filter-options';
+      mainWrap.className = 'tag-grid';
       for (const option of mainRow) mainWrap.appendChild(buildTagBtn(option, isActive, onToggle));
       groupWrap.appendChild(mainWrap);
       if (cdRow.length) {
@@ -106,7 +106,7 @@ export function renderTagList(container, options, { isActive, onToggle }) {
       }
     } else {
       const wrap = document.createElement('div');
-      wrap.className = 'filter-options';
+      wrap.className = 'tag-grid';
       for (const option of group.items) wrap.appendChild(buildTagBtn(option, isActive, onToggle));
       groupWrap.appendChild(wrap);
     }

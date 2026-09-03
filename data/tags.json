@@ -35,18 +35,18 @@
     "icon": "assets/img/tags/aoe.svg"
   },
   {
-    "id": "target_pos",
-    "label": "指定站位攻擊",
-    "sortOrder": 6,
-    "group": "damage",
-    "icon": "assets/img/tags/target_pos.svg"
-  },
-  {
     "id": "trigger",
     "label": "觸發",
-    "sortOrder": 7,
+    "sortOrder": 6,
     "group": "damage",
     "icon": "assets/img/tags/trigger.svg"
+  },
+  {
+    "id": "target_pos",
+    "label": "指定站位攻擊",
+    "sortOrder": 7,
+    "group": "damage",
+    "icon": "assets/img/tags/target_pos.svg"
   },
   {
     "id": "atk_buff_self",
