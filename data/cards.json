@@ -49,8 +49,10 @@
     "elementId": "light",
     "cd": 4,
     "tags": [
-      "heal_tag"
+      "hot",
+      "immune_silence"
     ],
+    "ultimateSkill": "以攻擊力182%對我方全體進行治療，\n再以攻擊力24%進行持續治療（4回合）\n［冷卻時間：4回合］",
     "image": "assets/img/cards/card_003.png",
     "imageZoom": 1.4,
     "imageOffsetX": 0.48069602937172884,
