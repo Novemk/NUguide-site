@@ -8,12 +8,16 @@
     "elementId": "water",
     "cd": 3,
     "tags": [
-      "burst"
+      "normal_atk",
+      "followup_atk",
+      "own_normal_dmg_up",
+      "immune_stun"
     ],
+    "ultimateSkill": "",
     "image": "assets/img/cards/card_001.png",
-    "imageZoom": 1.49,
-    "imageOffsetX": 0.4979682996784913,
-    "imageOffsetY": 0.3184103774834327,
+    "imageZoom": 1.63,
+    "imageOffsetX": 0.48647430356232924,
+    "imageOffsetY": 0.1225606194236322,
     "sortOrder": 2
   },
   {
