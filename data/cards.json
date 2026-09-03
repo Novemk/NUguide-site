@@ -1261,5 +1261,27 @@
     "imageOffsetX": 0.6885287069663599,
     "imageOffsetY": 0.5085334261369749,
     "sortOrder": 62
+  },
+  {
+    "id": "card_063",
+    "name": "無價賣的明鑑探蹤",
+    "characterId": "char_12",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "light",
+    "cd": 4,
+    "tags": [
+      "self_dmg",
+      "burst",
+      "enemy_elem_dmg_up",
+      "hot",
+      "immune_silence"
+    ],
+    "ultimateSkill": "以當前HP12.5%對我方全體造成真實傷害\n並使敵方全體受到光屬性傷害增加9%（2回合）\n使我方全體必殺技傷害增加21%（2回合）\n再以攻擊力419%對目標造成傷害\n並以自身最大HP10%對我方全體進行持續治療（2回合）\n［冷卻時間：4回合］",
+    "image": "assets/img/cards/card_063.png",
+    "imageZoom": 1.31,
+    "imageOffsetX": 0.4874702962780691,
+    "imageOffsetY": 0.10135616193733772,
+    "sortOrder": 63
   }
 ]
