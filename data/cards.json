@@ -255,18 +255,22 @@
   },
   {
     "id": "card_014",
-    "name": "冰晶結界",
-    "characterId": "char_02",
-    "rarityId": "r",
-    "classId": "debuf",
-    "elementId": "water",
-    "cd": 4,
+    "name": "華宴夜未央",
+    "characterId": "char_09",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "light",
+    "cd": 3,
     "tags": [
-      "cleanse",
       "atk_buff_enemy",
-      "burst"
+      "immune_silence"
     ],
-    "image": "assets/img/cards/card_014.svg"
+    "ultimateSkill": "以攻擊力273%對目標造成傷害，\n再使目標受到傷害增加10%（9回合）\n［冷卻時間：3回合］",
+    "image": "assets/img/cards/card_014.png",
+    "imageZoom": 1.56,
+    "imageOffsetX": 0.5001432258130867,
+    "imageOffsetY": 0.4320788620452198,
+    "sortOrder": 15
   },
   {
     "id": "card_015",
