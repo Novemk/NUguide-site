@@ -382,7 +382,8 @@
     "cd": 3,
     "tags": [
       "break_shield",
-      "enemy_burst_dmg_up"
+      "enemy_burst_dmg_up",
+      "immune_silence"
     ],
     "ultimateSkill": "使目標解除防禦狀態，\n使目標受必殺技傷害增加27%（1回合），\n並以攻擊力273%對目標造成傷害\n［冷卻時間：3回合］",
     "image": "assets/img/cards/card_020.png",
