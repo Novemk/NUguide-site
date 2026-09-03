@@ -939,7 +939,7 @@
     ],
     "ultimateSkill": "使自身造成傷害增加25%（最多1層）\n並以攻擊力125%對目標造成傷害\n並使自身獲得「普攻時，追加『以攻擊力98%對目標進行追擊（6回合）』」\n［冷卻時間：6回合］",
     "image": "assets/img/cards/card_047.png",
-    "imageZoom": 1.61,
+    "imageZoom": 1.7,
     "imageOffsetX": 0.47372065886822967,
     "imageOffsetY": 0.3440737066312059,
     "sortOrder": 47
