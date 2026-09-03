@@ -461,7 +461,7 @@
     "rarityId": "ssr",
     "classId": "buf",
     "elementId": "light",
-    "cd": 3,
+    "cd": 4,
     "tags": [
       "atk_buff_self",
       "immune_stun"
