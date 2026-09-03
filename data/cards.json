@@ -1471,5 +1471,27 @@
     "imageOffsetX": 0.641090399428211,
     "imageOffsetY": 0.2451403899760986,
     "sortOrder": 72
+  },
+  {
+    "id": "card_073",
+    "name": "強勢攻心♡天天",
+    "characterId": "char_11",
+    "rarityId": "ssr",
+    "classId": "tank",
+    "elementId": "water",
+    "cd": 4,
+    "tags": [
+      "shield",
+      "atk_buff_self",
+      "heal_tag",
+      "taunt",
+      "immune_silence"
+    ],
+    "ultimateSkill": "以攻擊力100%對目標造成傷害\n使自身受到傷害減少28%（1回合）\n使我方全體造成傷害增加17%（3回合）\n使自身獲得「被攻擊時，觸發『以自身最大HP20%對我方全體進行治療』（2回合）（觸發1次後解除）」\n使自身獲得嘲諷（1回合）\n並變為防禦狀態\n［冷卻時間：3回合］",
+    "image": "assets/img/cards/card_073.png",
+    "imageZoom": 1.52,
+    "imageOffsetX": 0.5539880990093098,
+    "imageOffsetY": 0.27219017128448064,
+    "sortOrder": 73
   }
 ]
