@@ -609,9 +609,9 @@
     ],
     "ultimateSkill": "以攻擊力100%對目標造成傷害，\n並使目標造成傷害減少10%（3回合），\n再使自身受到傷害減少7.5%（最多2層），\n並以最大HP12.5%對自身進行持續治療（4回合）\n［冷卻時間：6回合］",
     "image": "assets/img/cards/card_031.png",
-    "imageZoom": 1.8,
-    "imageOffsetX": 0.4207430322407555,
-    "imageOffsetY": 0.2345336999479045,
+    "imageZoom": 1.74,
+    "imageOffsetX": 0.4145168541395774,
+    "imageOffsetY": 0.21545072383680436,
     "sortOrder": 31
   },
   {
