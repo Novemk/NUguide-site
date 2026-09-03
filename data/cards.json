@@ -107,8 +107,10 @@
     "elementId": "dark",
     "cd": 4,
     "tags": [
-      "aoe"
+      "aoe",
+      "immune_stun"
     ],
+    "ultimateSkill": "以攻擊力203%對敵全體造成傷害\n［冷卻時間：4回合］",
     "image": "assets/img/cards/card_006.png",
     "imageZoom": 1.36,
     "imageOffsetX": 0.3827591221847813,
