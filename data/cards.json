@@ -1450,5 +1450,25 @@
     "imageOffsetX": 0.5940004433006997,
     "imageOffsetY": 0.17089204737725028,
     "sortOrder": 71
+  },
+  {
+    "id": "card_072",
+    "name": "怒濤燐火",
+    "characterId": "char_08",
+    "rarityId": "ssr",
+    "classId": "tank",
+    "elementId": "dark",
+    "cd": 3,
+    "tags": [
+      "self_burst_dmg_up",
+      "enemy_elem_dmg_up",
+      "taunt"
+    ],
+    "ultimateSkill": "使目標受到闇屬性傷害增加15%（3回合）\n以攻擊力100%對目標造成傷害\n再以最大HP40%給予自身護盾（1回合）\n使我方全體必殺技傷害增加26%（1回合）\n使自身獲得嘲諷（1回合）\n並使自身變為防禦狀態\n［冷卻時間：3回合］",
+    "image": "assets/img/cards/card_072.png",
+    "imageZoom": 1.41,
+    "imageOffsetX": 0.641090399428211,
+    "imageOffsetY": 0.2451403899760986,
+    "sortOrder": 72
   }
 ]
