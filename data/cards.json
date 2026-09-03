@@ -798,5 +798,26 @@
     "imageOffsetX": 0.4393826862698933,
     "imageOffsetY": 0.41017761225991156,
     "sortOrder": 40
+  },
+  {
+    "id": "card_041",
+    "name": "烈日炎陽的戲語",
+    "characterId": "char_11",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "fire",
+    "cd": 3,
+    "tags": [
+      "enemy_burst_dmg_up",
+      "own_dmg_up",
+      "target_pos",
+      "immune_stun"
+    ],
+    "ultimateSkill": "使敵方全體受到必殺技傷害增加13.5%（最多1層）\n並使自身攻擊力增加27%（1回合）\n再以攻擊力119%對敵方站位2、3、4造成傷害\n［冷卻時間：3回合］",
+    "image": "assets/img/cards/card_041.png",
+    "imageZoom": 1.54,
+    "imageOffsetX": 0.4881583484116592,
+    "imageOffsetY": 0.38701868002106,
+    "sortOrder": 41
   }
 ]
