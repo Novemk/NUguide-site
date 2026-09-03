@@ -696,5 +696,26 @@
     "imageOffsetX": 0.40163607314736366,
     "imageOffsetY": 0.23954649637324577,
     "sortOrder": 35
+  },
+  {
+    "id": "card_036",
+    "name": "囹圄之星的祕聞",
+    "characterId": "char_06",
+    "rarityId": "ssr",
+    "classId": "buf",
+    "elementId": "dark",
+    "cd": 3,
+    "tags": [
+      "self_dmg",
+      "self_burst_dmg_up",
+      "atk_buff_self",
+      "immune_silence"
+    ],
+    "ultimateSkill": "以當前HP20%對自身造成真實傷害\n使我方全體必殺技傷害增加20%（1回合）\n再以自身基礎攻擊力167%使我方全體攻擊力增加（1回合）\n［冷卻時間：3回合］",
+    "image": "assets/img/cards/card_036.png",
+    "imageZoom": 1.49,
+    "imageOffsetX": 0.5113973493099063,
+    "imageOffsetY": 0.2886289830873754,
+    "sortOrder": 36
   }
 ]
