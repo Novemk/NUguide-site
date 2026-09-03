@@ -435,17 +435,23 @@
   },
   {
     "id": "card_023",
-    "name": "紫電交鳴",
-    "characterId": "char_11",
+    "name": "殷紅魅影",
+    "characterId": "char_04",
     "rarityId": "ssr",
-    "classId": "atk",
-    "elementId": "wood",
-    "cd": 4,
+    "classId": "tank",
+    "elementId": "fire",
+    "cd": 3,
     "tags": [
-      "aoe",
-      "normal_atk"
+      "lifesteal",
+      "taunt",
+      "counter"
     ],
-    "image": "assets/img/cards/card_023.svg"
+    "ultimateSkill": "使自身獲得吸血效果100%（1回合），\n以攻擊力50%對目標造成傷害，\n再獲得嘲諷（1回合），\n使自身獲得「被攻擊時，觸發『以自身基礎攻擊力68%對目標進行反擊』（2回合）」，\n並變為防禦狀態\n［冷卻時間：3回合］",
+    "image": "assets/img/cards/card_023.png",
+    "imageZoom": 1.65,
+    "imageOffsetX": 0.5759770392948993,
+    "imageOffsetY": 0.286808249817355,
+    "sortOrder": 23
   },
   {
     "id": "card_024",
