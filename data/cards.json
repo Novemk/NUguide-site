@@ -87,8 +87,11 @@
     "elementId": "dark",
     "cd": 4,
     "tags": [
-      "aoe"
+      "aoe",
+      "heal_down",
+      "immune_stun"
     ],
+    "ultimateSkill": "以攻擊力173%對敵全體造成傷害，\n再以25%機率造成麻痺1回合\n［冷卻時間：4回合］",
     "image": "assets/img/cards/card_005.png",
     "imageZoom": 1.61,
     "imageOffsetX": 0.47092211554510216,
