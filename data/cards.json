@@ -234,16 +234,24 @@
   },
   {
     "id": "card_013",
-    "name": "炎獄爆裂",
+    "name": "七葉之花的奇蹟",
     "characterId": "char_01",
-    "rarityId": "r",
-    "classId": "heal",
-    "elementId": "light",
+    "rarityId": "ssr",
+    "classId": "tank",
+    "elementId": "wood",
     "cd": 4,
     "tags": [
-      "aoe"
+      "immune_stun",
+      "taunt",
+      "shield",
+      "counter"
     ],
-    "image": "assets/img/cards/card_013.svg"
+    "ultimateSkill": "以攻擊力100%對目標造成傷害，再獲得嘲諷（2回合）、\n受到麻痹機率減少50%（2回合）、\n受到必殺技傷害減少40%（2回合）、\n「被攻擊時，觸發『以攻擊力87%對目標進行反擊』（2回合）」，\n並變為防禦狀態\n［冷卻時間：4回合］",
+    "image": "assets/img/cards/card_013.png",
+    "imageZoom": 1.63,
+    "imageOffsetX": 0.4727839162483365,
+    "imageOffsetY": 0,
+    "sortOrder": 13
   },
   {
     "id": "card_014",
