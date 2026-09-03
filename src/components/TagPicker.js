@@ -54,7 +54,7 @@ function buildTagBtn(option, isActive, onToggle, fixedWidthPx) {
   // a full row changes — so the click handler updates this same button
   // in place instead of asking the caller to rebuild anything.
   const paintActive = () => {
-    el.className = 'opt-tag' + (isActive(option) ? ' active' : '');
+    el.classList.toggle('active', isActive(option));
     el.setAttribute('aria-pressed', String(isActive(option)));
   };
   paintActive();
