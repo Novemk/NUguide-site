@@ -1008,5 +1008,25 @@
     "imageOffsetX": 0.4866993271671798,
     "imageOffsetY": 0.29892246595149924,
     "sortOrder": 50
+  },
+  {
+    "id": "card_051",
+    "name": "踏雪巡行",
+    "characterId": "char_07",
+    "rarityId": "ssr",
+    "classId": "buf",
+    "elementId": "fire",
+    "cd": 4,
+    "tags": [
+      "shield",
+      "atk_buff_self",
+      "immune_stun"
+    ],
+    "ultimateSkill": "使我方全體受到傷害減少12.5%（2回合）\n並使我方全體受到持續治療量增加27%（4回合）\n再以自身基礎攻擊力173%使我方全體攻擊力增加（1回合）\n［冷卻時間：4回合］",
+    "image": "assets/img/cards/card_051.png",
+    "imageZoom": 1.45,
+    "imageOffsetX": 0.5801800962502063,
+    "imageOffsetY": 0.2861818700060879,
+    "sortOrder": 51
   }
 ]
