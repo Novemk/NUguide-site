@@ -1207,8 +1207,10 @@
     "elementId": "fire",
     "cd": 3,
     "tags": [
+      "trigger",
       "atk_buff_self",
       "team_proc_dmg_up",
+      "proc_followup",
       "immune_stun"
     ],
     "ultimateSkill": "以自身基礎攻擊力21%使我方全體攻擊力增加（3回合）\n使我方全體觸發技傷害增加27%（3回合）\n並使自身以外的我方全體獲得「攻擊時，觸發『以攻擊力32% 目標造成傷害』（3回合）」\n［冷卻時間：3回合］",
