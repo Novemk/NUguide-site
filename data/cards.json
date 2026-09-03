@@ -583,7 +583,8 @@
     "tags": [
       "atk_buff_self",
       "shield",
-      "cleanse"
+      "cleanse",
+      "immune_silence"
     ],
     "ultimateSkill": "以自身基礎攻擊力32%使自身以外的我方全體攻擊力增加（5回合），\n使我方全體受到傷害減少5%（5回合），\n★並使除自身以外的我方全體必殺技冷卻時間減少1回合\n［冷卻時間：5回合］",
     "image": "assets/img/cards/card_030.png",
