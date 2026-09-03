@@ -1257,9 +1257,9 @@
     ],
     "ultimateSkill": "以當前HP20%對自身造成真實傷害\n使目標受到傷害增加27%（3回合）\n使目標受到五屬性傷害增加12%（3回合）\n再以攻擊力290%對目標造成傷害\n［冷卻時間：3回合］",
     "image": "assets/img/cards/card_062.png",
-    "imageZoom": 1.49,
-    "imageOffsetX": 0.6885287069663599,
-    "imageOffsetY": 0.5085334261369749,
+    "imageZoom": 1.47,
+    "imageOffsetX": 0.6462149705275003,
+    "imageOffsetY": 0.5329187526074259,
     "sortOrder": 62
   },
   {
