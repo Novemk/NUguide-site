@@ -475,17 +475,22 @@
   },
   {
     "id": "card_025",
-    "name": "灼熱一擊",
-    "characterId": "char_01",
+    "name": "專屬指導",
+    "characterId": "char_05",
     "rarityId": "ssr",
-    "classId": "tank",
+    "classId": "atk",
     "elementId": "dark",
     "cd": 3,
     "tags": [
-      "def_down",
-      "stun"
+      "atk_buff_enemy",
+      "immune_stun"
     ],
-    "image": "assets/img/cards/card_025.svg"
+    "ultimateSkill": "使目標獲得「被攻擊時，觸發『使自身受到傷害增加3.5%（3回合）』（3回合）」，\n再以攻擊力273%對目標造成傷害\n［冷卻時間：3回合］",
+    "image": "assets/img/cards/card_025.png",
+    "imageZoom": 1.67,
+    "imageOffsetX": 0.5504695553802267,
+    "imageOffsetY": 0.36809633055171453,
+    "sortOrder": 25
   },
   {
     "id": "card_026",
