@@ -815,7 +815,7 @@
     ],
     "ultimateSkill": "使敵方全體受到必殺技傷害增加13.5%（最多1層）\n並使自身攻擊力增加27%（1回合）\n再以攻擊力119%對敵方站位2、3、4造成傷害\n［冷卻時間：3回合］",
     "image": "assets/img/cards/card_041.png",
-    "imageZoom": 1.54,
+    "imageZoom": 1.47,
     "imageOffsetX": 0.4881583484116592,
     "imageOffsetY": 0.38701868002106,
     "sortOrder": 41
