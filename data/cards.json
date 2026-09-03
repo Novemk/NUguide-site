@@ -1619,5 +1619,26 @@
     "imageOffsetX": 0.5759832538559936,
     "imageOffsetY": 0.3299070745827819,
     "sortOrder": 79
+  },
+  {
+    "id": "card_080",
+    "name": "撲朔迷離",
+    "characterId": "char_14",
+    "rarityId": "ssr",
+    "classId": "tank",
+    "elementId": "light",
+    "cd": 3,
+    "tags": [
+      "atk_buff_self",
+      "lifesteal",
+      "taunt",
+      "immune_silence"
+    ],
+    "ultimateSkill": "以自身基礎攻擊力81%使我方全體攻擊力增加（2回合）\n使我方全體獲得吸血效果17%（3回合）\n以攻擊力50%對目標造成傷害\n以最大HP40%給予自身護盾（1回合）\n使自身獲得嘲諷（1回合）\n並變為防禦狀態\n［冷卻時間：3回合］",
+    "image": "assets/img/cards/card_080.png",
+    "imageZoom": 1.5,
+    "imageOffsetX": 0.48930261414594733,
+    "imageOffsetY": 0.4219308099826845,
+    "sortOrder": 80
   }
 ]
