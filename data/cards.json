@@ -13,11 +13,11 @@
       "own_normal_dmg_up",
       "immune_stun"
     ],
-    "ultimateSkill": "",
+    "ultimateSkill": "以攻擊力125%對目標造成傷害\n再使自身獲得「普攻時，追加『以143%攻擊力 目標進行追擊』（3回合）」\n［冷卻時間：3回合］",
     "image": "assets/img/cards/card_001.png",
-    "imageZoom": 1.7,
-    "imageOffsetX": 0.4859503880194798,
-    "imageOffsetY": 0.18293969724694792,
+    "imageZoom": 1.72,
+    "imageOffsetX": 0.47843794614102364,
+    "imageOffsetY": 0.16950455586979057,
     "sortOrder": 2
   },
   {
