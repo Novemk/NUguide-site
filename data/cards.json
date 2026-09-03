@@ -840,5 +840,26 @@
     "imageOffsetX": 0.445377479346509,
     "imageOffsetY": 0.23509935588393216,
     "sortOrder": 42
+  },
+  {
+    "id": "card_043",
+    "name": "狂傲紫魅",
+    "characterId": "char_03",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "fire",
+    "cd": 4,
+    "tags": [
+      "burst",
+      "counter",
+      "taunt",
+      "immune_stun"
+    ],
+    "ultimateSkill": "以自身最大HP20%給予自身護盾（2回合）\n再以攻擊力354%對目標造成傷害\n並使自身獲得「被攻擊時，觸發『以攻擊力89%對目標造成傷害』（2回合）」\n再獲得嘲諷（1回合）\n並獲得「被攻擊時，解除嘲諷」（1回合）\n［冷卻時間：4回合］",
+    "image": "assets/img/cards/card_043.png",
+    "imageZoom": 1.54,
+    "imageOffsetX": 0.5464536889148299,
+    "imageOffsetY": 0.4953183316492082,
+    "sortOrder": 43
   }
 ]
