@@ -1110,5 +1110,27 @@
     "imageOffsetX": 0.5158395954582365,
     "imageOffsetY": 0.4027319640176861,
     "sortOrder": 55
+  },
+  {
+    "id": "card_056",
+    "name": "林間的無盡之夜",
+    "characterId": "char_08",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "wood",
+    "cd": 4,
+    "tags": [
+      "break_shield",
+      "enemy_elem_dmg_up",
+      "own_dmg_up",
+      "burst",
+      "immune_stun"
+    ],
+    "ultimateSkill": "使目標解除防禦狀態\n再使目標受到木屬性傷害增加15%（最多1層）\n並使自身造成傷害增加13.5%（最多2層）\n再以攻擊力345%對目標造成傷害\n［冷卻時間：4回合］",
+    "image": "assets/img/cards/card_056.png",
+    "imageZoom": 1.58,
+    "imageOffsetX": 0.4966536677028935,
+    "imageOffsetY": 0.3977847492239956,
+    "sortOrder": 56
   }
 ]
