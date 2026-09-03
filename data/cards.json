@@ -164,8 +164,10 @@
     "elementId": "dark",
     "cd": 3,
     "tags": [
-      "burst"
+      "burst",
+      "immune_sleep"
     ],
+    "ultimateSkill": "使自身受到傷害增加10%（1回合），\n並使自身造成傷害增加25%（2回合），\n並以攻擊力316% 目標造成傷害\n［冷卻時間：3回合］",
     "image": "assets/img/cards/card_009.png",
     "imageZoom": 1.67,
     "imageOffsetX": 0.5265183315970626,
