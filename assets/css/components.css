@@ -250,6 +250,13 @@ hr.ql-divider {
   line-height: 1.6;
   color: var(--text);
   overflow-wrap: break-word;
+  /* Belt-and-suspenders: normal block-level <p>/<br> tags already break
+     correctly without this, but if a paste ever lands as a literal "\n"
+     character inside a text node (rather than as its own tag), the
+     default white-space:normal silently collapses it into a space —
+     this makes any literal newline character visible too, not just tag
+     -based ones. */
+  white-space: pre-wrap;
 }
 .ultimate-skill-desc p { margin: 0 0 0.6em; }
 .ultimate-skill-desc p:last-child { margin-bottom: 0; }
