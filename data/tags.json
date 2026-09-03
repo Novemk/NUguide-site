@@ -14,32 +14,32 @@
     "icon": "assets/img/tags/multi_hit.svg"
   },
   {
-    "id": "dot",
-    "label": "持續傷害",
-    "sortOrder": 3,
-    "group": "damage",
-    "icon": "assets/img/tags/dot.svg"
-  },
-  {
     "id": "burst",
     "label": "爆發",
-    "sortOrder": 4,
+    "sortOrder": 3,
     "group": "damage",
     "icon": "assets/img/tags/burst.svg"
   },
   {
-    "id": "aoe",
-    "label": "全體攻擊",
-    "sortOrder": 5,
+    "id": "dot",
+    "label": "持續傷害",
+    "sortOrder": 4,
     "group": "damage",
-    "icon": "assets/img/tags/aoe.svg"
+    "icon": "assets/img/tags/dot.svg"
   },
   {
     "id": "trigger",
     "label": "觸發",
-    "sortOrder": 6,
+    "sortOrder": 5,
     "group": "damage",
     "icon": "assets/img/tags/trigger.svg"
+  },
+  {
+    "id": "aoe",
+    "label": "全體攻擊",
+    "sortOrder": 6,
+    "group": "damage",
+    "icon": "assets/img/tags/aoe.svg"
   },
   {
     "id": "target_pos",
