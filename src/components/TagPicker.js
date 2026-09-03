@@ -41,6 +41,7 @@ export function highlightTagLabel(label) {
 function buildTagBtn(option, isActive, onToggle, fixedWidthPx) {
   const el = document.createElement('button');
   el.type = 'button';
+  el.className = 'opt-tag';
   if (fixedWidthPx) el.style.width = fixedWidthPx + 'px';
   const img = document.createElement('img');
   img.src = resolveAsset(option.icon);
