@@ -1479,7 +1479,7 @@
     "rarityId": "ssr",
     "classId": "tank",
     "elementId": "water",
-    "cd": 4,
+    "cd": 3,
     "tags": [
       "shield",
       "atk_buff_self",
