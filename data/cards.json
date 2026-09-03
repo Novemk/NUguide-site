@@ -616,17 +616,22 @@
   },
   {
     "id": "card_032",
-    "name": "赤獅咆哮",
+    "name": "午後醺然",
     "characterId": "char_08",
     "rarityId": "ssr",
     "classId": "atk",
-    "elementId": "light",
+    "elementId": "water",
     "cd": 4,
     "tags": [
-      "cleanse",
       "atk_buff_enemy",
-      "normal_atk"
+      "burst",
+      "immune_stun"
     ],
-    "image": "assets/img/cards/card_032.svg"
+    "ultimateSkill": "使目標受到傷害增加15%（2回合），\n以攻擊力345%對目標造成傷害，\n並使自身獲得「攻擊時，觸發『使目標受到傷害增加15%（2回合）』（4回合）」\n［冷卻時間：4回合］",
+    "image": "assets/img/cards/card_032.png",
+    "imageZoom": 1.6,
+    "imageOffsetX": 0.5056418678301479,
+    "imageOffsetY": 0.20667221966911764,
+    "sortOrder": 32
   }
 ]
