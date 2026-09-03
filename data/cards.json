@@ -964,5 +964,27 @@
     "imageOffsetX": 0.46130223001813864,
     "imageOffsetY": 0.29330643113708904,
     "sortOrder": 48
+  },
+  {
+    "id": "card_049",
+    "name": "烈焰的締約者",
+    "characterId": "char_11",
+    "rarityId": "ssr",
+    "classId": "debuf",
+    "elementId": "dark",
+    "cd": 4,
+    "tags": [
+      "target_pos",
+      "enemy_proc_dmg_up",
+      "enemy_dmg_down",
+      "break_shield",
+      "immune_silence"
+    ],
+    "ultimateSkill": "解除敵方全體的防禦狀態\n使敵方全體受到傷害增加14%（3回合）、普攻傷害減少14%（3回合）\n再以攻擊力60%對敵方站位2、3、4各造成2次傷害\n［冷卻時間：3回合］",
+    "image": "assets/img/cards/card_049.png",
+    "imageZoom": 1.72,
+    "imageOffsetX": 0.5433357277556204,
+    "imageOffsetY": 0.2702768877057828,
+    "sortOrder": 49
   }
 ]
