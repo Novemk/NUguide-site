@@ -654,5 +654,26 @@
     "imageOffsetX": 0.41470402122562766,
     "imageOffsetY": 0.39735747588647286,
     "sortOrder": 33
+  },
+  {
+    "id": "card_034",
+    "name": "覺醒的晶瑩花",
+    "characterId": "char_10",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "fire",
+    "cd": 4,
+    "tags": [
+      "break_shield",
+      "immune_silence",
+      "burst",
+      "multi_hit"
+    ],
+    "ultimateSkill": "使目標解除防禦狀態，\n並以攻擊力60%對目標造成3次傷害，\n再以攻擊力406%對目標造成傷害\n［冷卻時間：4回合］",
+    "image": "assets/img/cards/card_034.png",
+    "imageZoom": 1.74,
+    "imageOffsetX": 0.47673590435015695,
+    "imageOffsetY": 0.336349470194582,
+    "sortOrder": 34
   }
 ]
