@@ -126,8 +126,10 @@
     "elementId": "light",
     "cd": 3,
     "tags": [
-      "burst"
+      "burst",
+      "immune_stun"
     ],
+    "ultimateSkill": "使自身造成傷害增加12.5%（最多2層），\n再以攻擊力273%對目標造成傷害\n［冷卻時間：3回合］",
     "image": "assets/img/cards/card_007.png",
     "imageZoom": 1.74,
     "imageOffsetX": 0.4779101799365471,
