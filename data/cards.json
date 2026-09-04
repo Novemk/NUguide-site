@@ -2315,6 +2315,7 @@
       "normal_atk",
       "followup_atk",
       "atk_buff_self",
+      "own_normal_dmg_up",
       "immune_stun"
     ],
     "ultimateSkill": "<p>使自身普攻傷害增加 68%（最多1層）</p><p>使目標受到 <span style=\"color: rgb(226, 96, 79);\">定位妨礙</span> 的角色傷害增加 22%（3回合）</p><p>以攻擊力 100% 對目標造成傷害</p><p>再使自身獲得「普攻時，追加『以攻擊力 87% 對目標進行追擊』（3回合）」</p><p><br></p><p>［冷卻時間：3回合］</p>",
