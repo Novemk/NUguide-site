@@ -2345,5 +2345,26 @@
     "imageOffsetX": 0.5467468565302208,
     "imageOffsetY": 0.3612823835010464,
     "sortOrder": 113
+  },
+  {
+    "id": "card_114",
+    "name": "沉溺詭夢",
+    "characterId": "char_06",
+    "rarityId": "ssr",
+    "classId": "buf",
+    "elementId": "fire",
+    "cd": 3,
+    "tags": [
+      "self_dmg",
+      "team_normal_dmg_up",
+      "atk_buff_self",
+      "immune_sleep"
+    ],
+    "ultimateSkill": "<p>以當前HP 20% 對自身造成真實傷害</p><p>使我方全體 <span style=\"color: rgb(226, 96, 79);\">定位攻擊與妨礙</span> 角色普攻傷害增加 40%（2回合）</p><p>使我方全體造成傷害增加 26%（2回合）</p><p>再以自身基礎攻擊力 49% 使我方全體攻擊力增加（3回合）</p><p><br></p><p>［冷卻時間：3回合］</p>",
+    "image": "assets/img/cards/card_114.png",
+    "imageZoom": 1.47,
+    "imageOffsetX": 0.5148341773439982,
+    "imageOffsetY": 0.37230559350984405,
+    "sortOrder": 114
   }
 ]
