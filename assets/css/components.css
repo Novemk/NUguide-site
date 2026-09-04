@@ -277,8 +277,7 @@ hr.ql-divider {
      -based ones. */
   white-space: pre-wrap;
 }
-.ultimate-skill-desc p { margin: 0 0 0.6em; }
-.ultimate-skill-desc p:last-child { margin-bottom: 0; }
+.ultimate-skill-desc p { margin: 0; }
 .ultimate-skill-desc .ql-size-large { font-size: 1.3em; }
 
 /* =========================================================
