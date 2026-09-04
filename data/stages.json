@@ -72,5 +72,109 @@
       "aoe"
     ],
     "hidden": true
+  },
+  {
+    "id": "stage_8_3",
+    "chapter": "忘卻遺跡 第二十二季",
+    "order": "8-3",
+    "title": "帆潮小鎮之探",
+    "enemies": [
+      {
+        "name": "霞羽？",
+        "note": "",
+        "elementId": "fire",
+        "image": "assets/img/enemies/stage_8_3_0_霞羽_.webp",
+        "imageZoom": 1.21,
+        "imageOffsetX": 0.548988537910657,
+        "imageOffsetY": 0.5727671045776275
+      },
+      {
+        "name": "歛",
+        "note": "",
+        "elementId": "dark",
+        "image": "assets/img/enemies/stage_8_3_1_歛.webp",
+        "imageZoom": 1.18,
+        "imageOffsetX": 0.5967107267461271,
+        "imageOffsetY": 0.5260222634495736
+      },
+      {
+        "name": "啖天",
+        "note": "",
+        "elementId": "",
+        "image": "assets/img/enemies/stage_8_3_2_啖天.webp",
+        "imageZoom": 1.19,
+        "imageOffsetX": 0.5333160523943573,
+        "imageOffsetY": 0.5465771876403048
+      },
+      {
+        "name": "玖夜",
+        "note": "",
+        "elementId": "fire",
+        "image": "assets/img/enemies/stage_8_3_3_玖夜.webp",
+        "imageZoom": 1.24,
+        "imageOffsetX": 0.5563653884258292,
+        "imageOffsetY": 0.5233595874342336
+      },
+      {
+        "name": "自信滿滿的劫匪",
+        "note": "主要敵人",
+        "elementId": "wood",
+        "image": "assets/img/enemies/stage_8_3_4_自信滿滿的劫匪.webp",
+        "imageZoom": 1.16,
+        "imageOffsetX": 0.5750357472998464,
+        "imageOffsetY": 0.5286948253135475
+      }
+    ],
+    "guide": "<p>全SR可以過</p><p><br></p><p>觸發隊專場，Wave 2的木屬劫匪才是真正的敵人</p><p>需要帶坦，推薦帶觸發角</p><p>沒有觸發角就推薦3/6CD角、易傷角、火屬角或多輔助</p><hr class=\"ql-divider\"><p>Wave 1：故事簡介，不用打</p><p><br></p><p>Wave 2：重點打劫匪（木屬），劫匪狀態：</p><p>．每回合受到 普攻 傷害減少3%（最多30層）</p><p>．每回合受到 必殺 傷害減少4%（最多30層）</p><p>．每回合受到 持續 傷害減少6%（最多30層）</p><p><br></p><p>Wave 3：故事結束，不用打</p>",
+    "recommendedTags": [
+      "trigger"
+    ],
+    "hidden": false,
+    "roundTable": [
+      {
+        "col1": "Wave1",
+        "col2": ""
+      },
+      {
+        "col1": "<span style=\"font-size: 14.4px;\">T1</span>",
+        "col2": "隨便行動"
+      },
+      {
+        "col1": "",
+        "col2": ""
+      },
+      {
+        "col1": "<span style=\"font-size: 14.4px;\">Wave 2（6CD機制）</span>",
+        "col2": ""
+      },
+      {
+        "col1": "<span style=\"font-size: 14.4px;\">T2</span>",
+        "col2": "<span style=\"font-size: 14.4px;\">全攻，能開大的可以開大打劫匪（我方全體CD歸0）</span>"
+      },
+      {
+        "col1": "<span style=\"font-size: 14.4px;\">T3、9、15、21</span>",
+        "col2": "<span style=\"font-size: 14.4px;\">全防（我方防禦時受到持續傷害減少75%）</span>"
+      },
+      {
+        "col1": "<span style=\"font-size: 14.4px;\">T5、11、17、23</span>",
+        "col2": "<span style=\"font-size: 14.4px;\">坦角普攻，其他人開必殺打護盾（要靠必殺的觸發來打破護盾）</span>"
+      },
+      {
+        "col1": "<span style=\"font-size: 14.4px;\">T7、13、19、25</span>",
+        "col2": "<span style=\"font-size: 14.4px;\">坦角必殺開嘲諷，其他人普攻不要開大</span>"
+      },
+      {
+        "col1": "",
+        "col2": ""
+      },
+      {
+        "col1": "<span style=\"font-size: 14.4px;\">Wave 3</span>",
+        "col2": ""
+      },
+      {
+        "col1": "T1",
+        "col2": "<span style=\"font-size: 14.4px;\">隨便行動</span>"
+      }
+    ]
   }
 ]
