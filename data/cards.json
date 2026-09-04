@@ -2217,5 +2217,28 @@
     "imageOffsetX": 0.525982054771586,
     "imageOffsetY": 0.3231300561445384,
     "sortOrder": 107
+  },
+  {
+    "id": "card_108",
+    "name": "不羈的遊蕩者",
+    "characterId": "char_14",
+    "rarityId": "ssr",
+    "classId": "heal",
+    "elementId": "wood",
+    "cd": 4,
+    "tags": [
+      "heal_tag",
+      "hot",
+      "atk_buff_self",
+      "self_burst_dmg_up",
+      "own_burst_dmg_up",
+      "immune_sleep"
+    ],
+    "ultimateSkill": "<p>使自身獲得「被攻擊時，觸發『以攻擊力 27% 對自身進行治療』（4回合）」</p><p>使我方全體攻擊力增加 28%（4回合）</p><p>以攻擊力 135% 對我方全體進行治療</p><p>再以攻擊力 42% 對我方全體進行持續治療（4回合）</p><p>使自身必殺技傷害增加 40%（4回合）</p><p>再使除自身以外我方全體必殺技傷害增加 40%（1回合）</p><p><br></p><p>［冷卻時間：4回合］</p>",
+    "image": "assets/img/cards/card_108.png",
+    "imageZoom": 1.39,
+    "imageOffsetX": 0.506406424001118,
+    "imageOffsetY": 0.33820181380955583,
+    "sortOrder": 108
   }
 ]
