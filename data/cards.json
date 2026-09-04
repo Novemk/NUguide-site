@@ -2515,5 +2515,25 @@
     "imageOffsetX": 0.4280331577911809,
     "imageOffsetY": 0.20393390103437187,
     "sortOrder": 121
+  },
+  {
+    "id": "card_122",
+    "name": "妙手覓丹心",
+    "characterId": "char_10",
+    "rarityId": "ssr",
+    "classId": "heal",
+    "elementId": "water",
+    "cd": 4,
+    "tags": [
+      "heal_tag",
+      "hot",
+      "immune_stun"
+    ],
+    "ultimateSkill": "<p>使我方全體受到治療量增加 17%（4回合）</p><p>以攻擊力 80% 對我方全體進行治療</p><p>再以攻擊力 20% 對我方全體進行持續治療（4回合）</p><p>使自身獲得「攻擊時，觸發『以攻擊力 61% 對我方全體進行治療』（4回合）」</p><p><br></p><p>［冷卻時間：4回合］</p>",
+    "image": "assets/img/cards/card_122.png",
+    "imageZoom": 1.37,
+    "imageOffsetX": 0.4655673957632643,
+    "imageOffsetY": 0.42156773334699904,
+    "sortOrder": 122
   }
 ]
