@@ -2891,5 +2891,24 @@
     "imageOffsetX": 0.512975305944056,
     "imageOffsetY": 0.5000229769487136,
     "sortOrder": 89.5
+  },
+  {
+    "id": "card_141",
+    "name": "神命的侍奉",
+    "characterId": "char_05",
+    "rarityId": "sr",
+    "classId": "buf",
+    "elementId": "dark",
+    "cd": 3,
+    "tags": [
+      "atk_buff_self",
+      "immune_silence"
+    ],
+    "ultimateSkill": "<p>使我方全體受到持續治療量增加 41%（3回合）</p><p>再以自身基礎攻擊力 145% 使我方全體攻擊力增加（1回合）</p><p><br></p><p>［冷卻時間：3回合］</p>",
+    "image": "assets/img/cards/card_141.webp",
+    "imageZoom": 1.46,
+    "imageOffsetX": 0.479915748288301,
+    "imageOffsetY": 0.29544745904744696,
+    "sortOrder": 98.5
   }
 ]
