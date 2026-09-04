@@ -7,11 +7,16 @@ async function init() {
   mountNavbar('stages.html');
   mountFooter();
 
-  const [stages, tags, elements] = await Promise.all([
+  const [stages, tags, elements, siteSettings] = await Promise.all([
     loadJSON(DataSources.stages),
     loadJSON(DataSources.tags),
     loadJSON(DataSources.elements),
+    loadJSON(DataSources.siteSettings).catch(() => null),
   ]);
+  if (siteSettings && siteSettings.stagesDescription) {
+    const descEl = document.getElementById('stages-description');
+    if (descEl) descEl.innerHTML = siteSettings.stagesDescription;
+  }
   const tagMap = toMap(tags);
   const elementMap = toMap(elements);
 

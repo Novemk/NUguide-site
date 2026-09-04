@@ -11,14 +11,19 @@ async function init() {
   mountNavbar('cards.html');
   mountFooter();
 
-  const [cardsRaw, rarities, classes, elements, characters, tags] = await Promise.all([
+  const [cardsRaw, rarities, classes, elements, characters, tags, siteSettings] = await Promise.all([
     loadJSON(DataSources.cards),
     loadJSON(DataSources.rarities),
     loadJSON(DataSources.classes),
     loadJSON(DataSources.elements),
     loadJSON(DataSources.characters),
     loadJSON(DataSources.tags),
+    loadJSON(DataSources.siteSettings).catch(() => null),
   ]);
+  if (siteSettings && siteSettings.cardsDescription) {
+    const descEl = document.getElementById('cards-description');
+    if (descEl) descEl.innerHTML = siteSettings.cardsDescription;
+  }
   const cards = sortCardsByOrder(cardsRaw);
   const rarityMap = toMap(rarities);
   const classMap = toMap(classes);
