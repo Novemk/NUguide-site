@@ -1810,5 +1810,24 @@
     "imageOffsetX": 0.6161899102666831,
     "imageOffsetY": 0.43421761820191035,
     "sortOrder": 88
+  },
+  {
+    "id": "card_089",
+    "name": "光輝☆雪白鑽石",
+    "characterId": "char_10",
+    "rarityId": "ssr",
+    "classId": "tank",
+    "elementId": "fire",
+    "cd": 4,
+    "tags": [
+      "trigger",
+      "immune_stun"
+    ],
+    "ultimateSkill": "<p>使自身觸發技傷害增加68%（4回合）</p><p>以自身最大HP25%對自身進行治療</p><p>使自身獲得「攻擊時，觸發『以攻擊力126%對自身進行治療』（4回合）」</p><p>再以攻擊力100%對目標造成傷害</p><p>並使自身變為防禦狀態</p><p><br></p><p>［冷卻時間：4回合］</p>",
+    "image": "assets/img/cards/card_089.png",
+    "imageZoom": 1.44,
+    "imageOffsetX": 0.44733470898165667,
+    "imageOffsetY": 0.3649522369983149,
+    "sortOrder": 89
   }
 ]
