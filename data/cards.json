@@ -1664,5 +1664,27 @@
     "imageOffsetX": 0.41927219731254556,
     "imageOffsetY": 0.21812602081989285,
     "sortOrder": 81
+  },
+  {
+    "id": "card_082",
+    "name": "舊影追跡",
+    "characterId": "char_12",
+    "rarityId": "ssr",
+    "classId": "heal",
+    "elementId": "water",
+    "cd": 4,
+    "tags": [
+      "shield",
+      "heal_tag",
+      "hot",
+      "atk_buff_self",
+      "immune_sleep"
+    ],
+    "ultimateSkill": "<p>使我方全體受到傷害減少 12.5%（2回合）</p><p>以攻擊力 100% 對我方全體進行治療</p><p>以攻擊力 64% 對我方全體造成持續治療（4回合）</p><p>再使我方全體 <span style=\"color: rgb(226, 96, 79);\">定位為妨礙 </span>的隊員造成傷害增加 22%（4回合）</p><p><br></p><p>［冷卻時間：4回合］</p>",
+    "image": "assets/img/cards/card_082.png",
+    "imageZoom": 1.38,
+    "imageOffsetX": 0.4872425289271314,
+    "imageOffsetY": 0.34656387537538735,
+    "sortOrder": 82
   }
 ]
