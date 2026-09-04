@@ -2116,7 +2116,7 @@
     "rarityId": "ssr",
     "classId": "atk",
     "elementId": "light",
-    "cd": 4,
+    "cd": 3,
     "tags": [
       "burst",
       "own_burst_dmg_up",
