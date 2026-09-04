@@ -2282,5 +2282,25 @@
     "imageOffsetX": 0.4843043828517158,
     "imageOffsetY": 0.3085813548239187,
     "sortOrder": 110
+  },
+  {
+    "id": "card_111",
+    "name": "險海的守望者",
+    "characterId": "char_07",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "wood",
+    "cd": 3,
+    "tags": [
+      "burst",
+      "own_burst_dmg_up",
+      "immune_silence"
+    ],
+    "ultimateSkill": "<p>使自身必殺技傷害增加 30%（最多2層）</p><p>以攻擊力 273% 對目標造成傷害</p><p>並使自身獲得『《勇氣》』（50回合）（不可重複獲得）</p><p>若自身已擁有《勇氣》時，則必殺後再使自身獲得『《祝福》』（50回合）（不可重複獲得）</p><p><br></p><p>［冷卻時間：3回合］</p><p><br></p><p><span style=\"color: rgb(201, 164, 92);\">《勇氣》：必殺時可額外觸發「以攻擊力 125% 對目標造成傷害」</span></p><p><span style=\"color: rgb(201, 164, 92);\">《祝福》：必殺時可額外觸發「以攻擊力 150% 對目標造成傷害」</span></p>",
+    "image": "assets/img/cards/card_111.png",
+    "imageZoom": 1.23,
+    "imageOffsetX": 0.49284034968371754,
+    "imageOffsetY": 0.4890815286117116,
+    "sortOrder": 111
   }
 ]
