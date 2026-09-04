@@ -2641,7 +2641,7 @@
     "id": "card_128",
     "name": "騎士副團長",
     "characterId": "char_05",
-    "rarityId": "ssr",
+    "rarityId": "sr",
     "classId": "atk",
     "elementId": "water",
     "cd": 3,
