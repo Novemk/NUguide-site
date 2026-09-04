@@ -1444,7 +1444,7 @@
       "self_burst_dmg_up",
       "immune_sleep"
     ],
-    "ultimateSkill": "使目標受到定位妨礙的角色傷害增加51%（1回合）\n再使我方定位妨礙的角色必殺技傷害增加31%（1回合）\n並以攻擊力345%對目標造成傷害\n［冷卻時間：4回合］",
+    "ultimateSkill": "<p>使目標受到 <span style=\"color: rgb(226, 96, 79);\">定位妨礙 </span>的角色傷害增加 51%（1回合）\n再使我方定位妨礙的角色必殺技傷害增加 31%（1回合）\n並以攻擊力 345% 對目標造成傷害\n［冷卻時間：4回合］</p>",
     "image": "assets/img/cards/card_071.png",
     "imageZoom": 1.47,
     "imageOffsetX": 0.5940004433006997,
