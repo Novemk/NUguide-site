@@ -2788,5 +2788,25 @@
     "imageOffsetX": 0.620796427862409,
     "imageOffsetY": 0.2586255499480337,
     "sortOrder": 0.81
+  },
+  {
+    "id": "card_136",
+    "name": "沉鬱的燻灼木",
+    "characterId": "char_07",
+    "rarityId": "sr",
+    "classId": "debuf",
+    "elementId": "water",
+    "cd": 4,
+    "tags": [
+      "burst",
+      "shield",
+      "immune_stun"
+    ],
+    "ultimateSkill": "<p>以攻擊力 345% 對目標造成傷害</p><p>並使目標攻擊力減少 15%（2回合）</p><p><br></p><p>［冷卻時間：4回合］</p>",
+    "image": "assets/img/cards/card_136.webp",
+    "imageZoom": 1.37,
+    "imageOffsetX": 0.4306649362318394,
+    "imageOffsetY": 0.22118851934750555,
+    "sortOrder": 34.5
   }
 ]
