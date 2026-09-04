@@ -1976,9 +1976,9 @@
     ],
     "ultimateSkill": "<p>使我方全體造成傷害增加 17%（3回合）</p><p>以自身基礎攻擊力 17% 使我方全體攻擊力增加（3回合）</p><p>以攻擊力 50% 對目標造成傷害</p><p>再使我方全體 <span style=\"color: rgb(226, 96, 79);\">定位攻擊、妨礙 </span>的角色獲得「攻擊時，觸發『以攻擊力 58% 對目標造成傷害』（3回合）」</p><p><br></p><p>［冷卻時間：3回合］</p>",
     "image": "assets/img/cards/card_096.png",
-    "imageZoom": 1.38,
-    "imageOffsetX": 0.429627285939133,
-    "imageOffsetY": 0.32088095666270977,
+    "imageZoom": 1.44,
+    "imageOffsetX": 0.44300875696431585,
+    "imageOffsetY": 0.2665691193456629,
     "sortOrder": 96
   },
   {
