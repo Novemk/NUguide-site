@@ -2655,5 +2655,23 @@
     "imageOffsetX": 0.45606697992705225,
     "imageOffsetY": 0.26834120461511607,
     "sortOrder": 0.4
+  },
+  {
+    "id": "card_129",
+    "name": "聖職祭司",
+    "characterId": "char_06",
+    "rarityId": "sr",
+    "classId": "buf",
+    "elementId": "light",
+    "cd": 4,
+    "tags": [
+      "immune_stun"
+    ],
+    "ultimateSkill": "<p>以自身基礎攻擊力 102% 使我方全體攻擊力增加（2回合）</p><p><br></p><p>［冷卻時間：4回合］</p>",
+    "image": "assets/img/cards/card_129.webp",
+    "imageZoom": 1.39,
+    "imageOffsetX": 0.6099167333338062,
+    "imageOffsetY": 0.39722756778492635,
+    "sortOrder": 0.5
   }
 ]
