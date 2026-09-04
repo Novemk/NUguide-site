@@ -1871,5 +1871,27 @@
     "imageOffsetX": 0.42648408011597744,
     "imageOffsetY": 0.11722585107728067,
     "sortOrder": 91
+  },
+  {
+    "id": "card_092",
+    "name": "燃咒幽光",
+    "characterId": "char_04",
+    "rarityId": "ssr",
+    "classId": "buf",
+    "elementId": "water",
+    "cd": 4,
+    "tags": [
+      "atk_support",
+      "team_normal_dmg_up",
+      "atk_buff_self",
+      "atk_buff_enemy",
+      "immune_silence"
+    ],
+    "ultimateSkill": "<p>以攻擊力 100% 對目標造成傷害</p><p>再使除自身以外我方全體普攻傷害增加 34%（最多1層）</p><p>以自身基礎攻擊力 58% 使我方全體攻擊力增加（3回合）</p><p>使目標受到 <span style=\"color: rgb(226, 96, 79);\">定位攻擊、妨礙 </span>的角色傷害增加 12%（3回合）</p><p><br></p><p>［冷卻時間：4回合］</p>",
+    "image": "assets/img/cards/card_092.png",
+    "imageZoom": 1.38,
+    "imageOffsetX": 0.4254454450267398,
+    "imageOffsetY": 0.20103851625637592,
+    "sortOrder": 92
   }
 ]
