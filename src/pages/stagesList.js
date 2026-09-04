@@ -77,14 +77,13 @@ async function init() {
 
       panel.innerHTML = `
         <div class="accordion-block">
+          <div class="enemy-thumb-row"></div>
+        </div>
+        <div class="accordion-block">
           <div class="accordion-block-label">推薦能力</div>
           <div class="tag-row">
             ${recTags.map((t) => `<span class="tag-pill"><img src="${resolveAsset(t.icon)}" alt="">${t.label}</span>`).join('') || '<span class="guide-preview">尚未設定</span>'}
           </div>
-        </div>
-        <div class="accordion-block">
-          <div class="accordion-block-label">敵人</div>
-          <div class="enemy-thumb-row"></div>
         </div>
       `;
 

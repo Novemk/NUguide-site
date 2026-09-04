@@ -28,5 +28,12 @@
     "label": "闇",
     "sortOrder": 5,
     "icon": "assets/img/elements/dark.png"
+  },
+  {
+    "id": "none",
+    "label": "無屬性",
+    "sortOrder": 99,
+    "icon": "assets/img/elements/none.png",
+    "enemyOnly": true
   }
 ]

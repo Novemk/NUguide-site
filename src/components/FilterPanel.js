@@ -13,7 +13,11 @@ export async function mountFilterPanel(container, onChange) {
   const schema = await loadJSON('data/filter-schema.json');
   const sourcesCache = {};
   for (const group of schema) {
-    sourcesCache[group.field] = await loadJSON(group.source);
+    // enemyOnly entries (e.g. 屬性 的「無屬性」— only meaningful when
+    // tagging an enemy, not a card) never show up as a filter option
+    // here. Filtering generically like this (not "if field === element")
+    // is safe since no other data source uses this flag.
+    sourcesCache[group.field] = (await loadJSON(group.source)).filter((o) => !o.enemyOnly);
   }
   let state = createEmptyFilterState(schema);
   let countEl = null;

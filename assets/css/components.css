@@ -147,6 +147,11 @@
 .enemy-chip-note { font-size: 0.82rem; color: var(--text-dim); }
 .guide-content { background: var(--bg-card); border: 1px solid var(--border-soft); border-radius: var(--radius-md); padding: 18px 20px; }
 .guide-content :last-child { margin-bottom: 0; }
+/* Same fix as .ultimate-skill-desc p — Quill wraps each line in its own
+   <p> on Enter; without this, the browser's own default paragraph
+   margin (not this site's design) creates a much looser line spacing
+   here than what the admin's Quill editor itself shows while typing. */
+.guide-content p { margin: 0; }
 /* Quill (the admin's rich-text editor) writes <span class="ql-size-large">
    for the one-step-up size option, and inline color styles for the
    swatch picker (those need no extra CSS — they're plain style="color:").
@@ -202,7 +207,7 @@ hr.ql-divider {
   max-width: 320px;
   height: 4px;
   margin: 1.1em 0;
-  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2222%22%20height%3D%224%22%3E%3Cline%20x1%3D%220%22%20y1%3D%222%22%20x2%3D%2222%22%20y2%3D%222%22%20stroke%3D%22%234fc8b0%22%20stroke-width%3D%221.3%22%20stroke-linecap%3D%22round%22%20stroke-dasharray%3D%226%2C8%2C0%2C8%22/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2222%22%20height%3D%224%22%3E%3Cline%20x1%3D%220%22%20y1%3D%222%22%20x2%3D%2222%22%20y2%3D%222%22%20stroke%3D%22%23a29cbf%22%20stroke-width%3D%221.3%22%20stroke-linecap%3D%22round%22%20stroke-dasharray%3D%226%2C8%2C0%2C8%22/%3E%3C/svg%3E");
   background-repeat: repeat-x;
   background-position: left center;
 }
