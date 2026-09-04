@@ -2261,5 +2261,26 @@
     "imageOffsetX": 0.5277796602097081,
     "imageOffsetY": 0.18026142226184177,
     "sortOrder": 109
+  },
+  {
+    "id": "card_110",
+    "name": "向陽者的私心",
+    "characterId": "char_10",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "fire",
+    "cd": 3,
+    "tags": [
+      "normal_atk",
+      "followup_atk",
+      "own_dmg_up",
+      "immune_stun"
+    ],
+    "ultimateSkill": "<p>使自身攻擊力增加 34%（3回合）</p><p>以攻擊力 100% 對目標造成傷害</p><p>再使自身獲得「普攻時，追加『使自身普攻傷害增加18%（最多4層），再以攻擊力 87% 對目標進行追擊』（3回合）」</p><p><br></p><p>［冷卻時間：3回合］</p>",
+    "image": "assets/img/cards/card_110.png",
+    "imageZoom": 1.44,
+    "imageOffsetX": 0.4843043828517158,
+    "imageOffsetY": 0.3085813548239187,
+    "sortOrder": 110
   }
 ]
