@@ -2130,5 +2130,27 @@
     "imageOffsetX": 0.46353921474462834,
     "imageOffsetY": 0.16023516974828056,
     "sortOrder": 103
+  },
+  {
+    "id": "card_104",
+    "name": "劈斬災厄的意志",
+    "characterId": "char_06",
+    "rarityId": "ssr",
+    "classId": "tank",
+    "elementId": "wood",
+    "cd": 3,
+    "tags": [
+      "dot",
+      "enemy_dot_dmg_up",
+      "shield",
+      "taunt",
+      "immune_sleep"
+    ],
+    "ultimateSkill": "<p>使敵方全體受到持續傷害增加 17%（3回合）</p><p>以攻擊力 66% 對目標造成持續傷害（3回合）</p><p>以最大HP 20% 給予自身護盾（1回合）</p><p>使自身受到傷害減少 15%（1回合）</p><p>使自身獲得嘲諷（1回合）</p><p>並變為防禦狀態</p><p><br></p><p>［冷卻時間：3回合］</p>",
+    "image": "assets/img/cards/card_104.png",
+    "imageZoom": 1.37,
+    "imageOffsetX": 0.5341131536265407,
+    "imageOffsetY": 0.28284640308603876,
+    "sortOrder": 104
   }
 ]
