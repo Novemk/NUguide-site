@@ -2829,5 +2829,25 @@
     "imageOffsetX": 0.48147582139832573,
     "imageOffsetY": 0.24405639910486357,
     "sortOrder": 47.5
+  },
+  {
+    "id": "card_138",
+    "name": "咖啡館的隱伏尋跡",
+    "characterId": "char_04",
+    "rarityId": "sr",
+    "classId": "tank",
+    "elementId": "light",
+    "cd": 4,
+    "tags": [
+      "shield",
+      "counter",
+      "immune_silence"
+    ],
+    "ultimateSkill": "<p>以攻擊力100%對目標造成傷害</p><p>再使我方全體獲得「被攻擊時，觸發『以攻擊力 73% 對目標進行反擊』」（1回合）</p><p>使我方全體受到傷害減少 9%（1回合）</p><p>並變為防禦狀態</p><p><br></p><p>［冷卻時間：4回合］</p>",
+    "image": "assets/img/cards/card_138.webp",
+    "imageZoom": 1.45,
+    "imageOffsetX": 0.5411195166530268,
+    "imageOffsetY": 0.18229576771177614,
+    "sortOrder": 63.5
   }
 ]
