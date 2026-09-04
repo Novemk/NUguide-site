@@ -2494,5 +2494,26 @@
     "imageOffsetX": 0.40420279000219794,
     "imageOffsetY": 0.37864566968241115,
     "sortOrder": 120
+  },
+  {
+    "id": "card_121",
+    "name": "幽谷繚前塵",
+    "characterId": "char_08",
+    "rarityId": "ssr",
+    "classId": "tank",
+    "elementId": "water",
+    "cd": 4,
+    "tags": [
+      "lifesteal",
+      "shield",
+      "heal_tag",
+      "immune_silence"
+    ],
+    "ultimateSkill": "<p>使目標攻擊力減少15%（2回合）</p><p>以攻擊力100%對目標造成傷害</p><p>使我方全體 <span style=\"color: rgb(226, 96, 79);\">定位為攻擊、妨礙</span> 的角色獲得吸血效果 51%（4回合）</p><p>再使我方全體 <span style=\"color: rgb(226, 96, 79);\">定位為守護、治療、輔助</span> 的角色受到治療量增加 34%（4回合）</p><p>再以自身最大 HP 45% 對我方全體進行治療</p><p>並變為防禦狀態</p><p><br></p><p>［冷卻時間：4回合］</p>",
+    "image": "assets/img/cards/card_121.png",
+    "imageZoom": 1.15,
+    "imageOffsetX": 0.4280331577911809,
+    "imageOffsetY": 0.20393390103437187,
+    "sortOrder": 121
   }
 ]
