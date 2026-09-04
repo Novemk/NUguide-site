@@ -2712,5 +2712,25 @@
     "imageOffsetX": 0.528527553346446,
     "imageOffsetY": 0.3022255777310925,
     "sortOrder": 0.7
+  },
+  {
+    "id": "card_132",
+    "name": "流浪小狼",
+    "characterId": "char_09",
+    "rarityId": "sr",
+    "classId": "atk",
+    "elementId": "dark",
+    "cd": 4,
+    "tags": [
+      "aoe",
+      "atk_buff_enemy",
+      "immune_silence"
+    ],
+    "ultimateSkill": "<p>使敵全體受到傷害增加 8%（1回合）</p><p>再以攻擊力 173% 對敵全體造成傷害</p><p><br></p><p>［冷卻時間：4回合］</p>",
+    "image": "assets/img/cards/card_132.webp",
+    "imageZoom": 1.29,
+    "imageOffsetX": 0.48922184799380164,
+    "imageOffsetY": 0.3423924480854063,
+    "sortOrder": 125
   }
 ]
