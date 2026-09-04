@@ -2605,7 +2605,7 @@
     "rarityId": "sr",
     "classId": "tank",
     "elementId": "fire",
-    "cd": 4,
+    "cd": 3,
     "tags": [
       "taunt",
       "immune_sleep"
