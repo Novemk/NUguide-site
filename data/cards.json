@@ -2644,7 +2644,7 @@
     "rarityId": "ssr",
     "classId": "atk",
     "elementId": "water",
-    "cd": 4,
+    "cd": 3,
     "tags": [
       "burst",
       "immune_sleep"
