@@ -1728,5 +1728,25 @@
     "imageOffsetX": 0.5554134099696094,
     "imageOffsetY": 0.37068550259459254,
     "sortOrder": 84
+  },
+  {
+    "id": "card_085",
+    "name": "劍刃前的衷心",
+    "characterId": "char_06",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "wood",
+    "cd": 4,
+    "tags": [
+      "trigger",
+      "enemy_proc_dmg_up",
+      "immune_sleep"
+    ],
+    "ultimateSkill": "<p>使目標受到觸發技傷害增加34%（最多1層）</p><p>以攻擊力50%對目標造成傷害</p><p>再使自身獲得「攻擊時，觸發『使目標受到觸發技傷害增加9%（4回合）</p><p>再以攻擊力140% 目標造成傷害』（4回合）」</p><p><br></p><p>［冷卻時間：4回合］</p>",
+    "image": "assets/img/cards/card_085.png",
+    "imageZoom": 1.36,
+    "imageOffsetX": 0.4796897257834758,
+    "imageOffsetY": 0.2898810954781518,
+    "sortOrder": 85
   }
 ]
