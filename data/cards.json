@@ -1863,7 +1863,7 @@
       "normal_atk",
       "enemy_normal_dmg_up",
       "followup_atk",
-      "immune_stun"
+      "immune_silence"
     ],
     "ultimateSkill": "<p>使除自身以外我方全體獲得「攻擊時，觸發『使目標受到普攻傷害增加4.5%（最多8層）』（3回合）」</p><p>再使自身獲得「普攻時，追加『以攻擊力49%對目標進行追擊』（4回合）」</p><p>及「普攻時，追加『以攻擊力80%對目標進行追擊』（3回合）」</p><p><br></p><p>［冷卻時間：4回合］</p>",
     "image": "assets/img/cards/card_091.png",
