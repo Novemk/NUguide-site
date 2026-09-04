@@ -14,7 +14,7 @@
       "immune_stun"
     ],
     "ultimateSkill": "以攻擊力125%對目標造成傷害\n再使自身獲得「普攻時，追加『以143%攻擊力 目標進行追擊』（3回合）」\n［冷卻時間：3回合］",
-    "image": "assets/img/cards/card_001.png",
+    "image": "assets/img/cards/card_001.webp",
     "imageZoom": 1.72,
     "imageOffsetX": 0.47843794614102364,
     "imageOffsetY": 0.16950455586979057,
@@ -34,7 +34,7 @@
       "own_dmg_up"
     ],
     "ultimateSkill": "使自身攻擊力增加25%（3回合），\n再以攻擊力345%對目標造成傷害\n［冷卻時間：4回合］",
-    "image": "assets/img/cards/card_002.png",
+    "image": "assets/img/cards/card_002.webp",
     "imageZoom": 1.46,
     "imageOffsetX": 0.5136846985946831,
     "imageOffsetY": 0.17083437020068915,
@@ -53,7 +53,7 @@
       "immune_silence"
     ],
     "ultimateSkill": "以攻擊力182%對我方全體進行治療，\n再以攻擊力24%進行持續治療（4回合）\n［冷卻時間：4回合］",
-    "image": "assets/img/cards/card_003.png",
+    "image": "assets/img/cards/card_003.webp",
     "imageZoom": 1.4,
     "imageOffsetX": 0.48069602937172884,
     "imageOffsetY": 0.21428151757831113,
@@ -72,7 +72,7 @@
       "immune_stun"
     ],
     "ultimateSkill": "以攻擊力657%對目標造成傷害\n［冷卻時間：6回合］",
-    "image": "assets/img/cards/card_004.png",
+    "image": "assets/img/cards/card_004.webp",
     "imageZoom": 1.63,
     "imageOffsetX": 0.5698748721143096,
     "imageOffsetY": 0.39921162986498127,
@@ -92,7 +92,7 @@
       "immune_stun"
     ],
     "ultimateSkill": "以攻擊力173%對敵全體造成傷害，\n再以25%機率造成麻痺1回合\n［冷卻時間：4回合］",
-    "image": "assets/img/cards/card_005.png",
+    "image": "assets/img/cards/card_005.webp",
     "imageZoom": 1.61,
     "imageOffsetX": 0.47092211554510216,
     "imageOffsetY": 0.33331460057140927,
@@ -111,7 +111,7 @@
       "immune_stun"
     ],
     "ultimateSkill": "以攻擊力203%對敵全體造成傷害\n［冷卻時間：4回合］",
-    "image": "assets/img/cards/card_006.png",
+    "image": "assets/img/cards/card_006.webp",
     "imageZoom": 1.36,
     "imageOffsetX": 0.3827591221847813,
     "imageOffsetY": 0.32231061862418375,
@@ -130,7 +130,7 @@
       "immune_stun"
     ],
     "ultimateSkill": "使自身造成傷害增加12.5%（最多2層），\n再以攻擊力273%對目標造成傷害\n［冷卻時間：3回合］",
-    "image": "assets/img/cards/card_007.png",
+    "image": "assets/img/cards/card_007.webp",
     "imageZoom": 1.74,
     "imageOffsetX": 0.4779101799365471,
     "imageOffsetY": 0.3723753420683185,
@@ -149,7 +149,7 @@
       "immune_sleep"
     ],
     "ultimateSkill": "以攻擊力100%對目標造成傷害，\n再以自身最大HP18%使我方全體獲得護盾（1回合）\n［冷卻時間：4回合］",
-    "image": "assets/img/cards/card_008.png",
+    "image": "assets/img/cards/card_008.webp",
     "imageZoom": 1.5,
     "imageOffsetX": 0.47039038398316396,
     "imageOffsetY": 0.09470530452891279,
@@ -168,7 +168,7 @@
       "immune_sleep"
     ],
     "ultimateSkill": "使自身受到傷害增加10%（1回合），\n並使自身造成傷害增加25%（2回合），\n並以攻擊力316% 目標造成傷害\n［冷卻時間：3回合］",
-    "image": "assets/img/cards/card_009.png",
+    "image": "assets/img/cards/card_009.webp",
     "imageZoom": 1.67,
     "imageOffsetX": 0.5265183315970626,
     "imageOffsetY": 0.3865980584447897,
@@ -187,7 +187,7 @@
       "immune_sleep"
     ],
     "ultimateSkill": "使目標受必殺技傷害增加27%（2回合），\n再以攻擊力273%對目標造成傷害\n［冷卻時間：3回合］",
-    "image": "assets/img/cards/card_010.png",
+    "image": "assets/img/cards/card_010.webp",
     "imageZoom": 1.67,
     "imageOffsetX": 0.6128127125059173,
     "imageOffsetY": 0.2491131144614146,
@@ -207,7 +207,7 @@
       "immune_stun"
     ],
     "ultimateSkill": "以攻擊力90%對敵全體造成傷害，\n再以攻擊力30%造成持續傷害（3回合）\n［冷卻時間：3回合］",
-    "image": "assets/img/cards/card_011.png",
+    "image": "assets/img/cards/card_011.webp",
     "imageZoom": 1.6,
     "imageOffsetX": 0.46541247545115244,
     "imageOffsetY": 0.2895046780218961,
@@ -226,7 +226,7 @@
       "immune_sleep"
     ],
     "ultimateSkill": "以自身基礎攻擊力152%使我方全體攻擊力增加（1回合）\n［冷卻時間：4回合］",
-    "image": "assets/img/cards/card_012.png",
+    "image": "assets/img/cards/card_012.webp",
     "imageZoom": 1.71,
     "imageOffsetX": 0.5353852560505818,
     "imageOffsetY": 0.21935958726136817,
@@ -247,7 +247,7 @@
       "counter"
     ],
     "ultimateSkill": "以攻擊力100%對目標造成傷害\n再獲得嘲諷（2回合）\n受到麻痹機率減少50%（2回合）\n受到必殺技傷害減少40%（2回合）\n「被攻擊時，觸發『以攻擊力87%對目標進行反擊』（2回合）」\n並變為防禦狀態\n［冷卻時間：4回合］",
-    "image": "assets/img/cards/card_013.png",
+    "image": "assets/img/cards/card_013.webp",
     "imageZoom": 1.63,
     "imageOffsetX": 0.4727839162483365,
     "imageOffsetY": 0,
@@ -266,7 +266,7 @@
       "immune_silence"
     ],
     "ultimateSkill": "以攻擊力273%對目標造成傷害，\n再使目標受到傷害增加10%（9回合）\n［冷卻時間：3回合］",
-    "image": "assets/img/cards/card_014.png",
+    "image": "assets/img/cards/card_014.webp",
     "imageZoom": 1.56,
     "imageOffsetX": 0.5001432258130867,
     "imageOffsetY": 0.4320788620452198,
@@ -287,7 +287,7 @@
       "immune_stun"
     ],
     "ultimateSkill": "以自身攻擊力182%對目標造成持續傷害（3回合），\n並使目標受到持續傷害效果增加10%（最多3層）、\n必殺技傷害減少10%（2回合）\n［冷卻時間：3回合］",
-    "image": "assets/img/cards/card_015.png",
+    "image": "assets/img/cards/card_015.webp",
     "imageZoom": 1.45,
     "imageOffsetX": 0.33409752727379677,
     "imageOffsetY": 0.4460602698566279,
@@ -306,7 +306,7 @@
       "atk_buff_self"
     ],
     "ultimateSkill": "以自身基礎攻擊力87%使我方全體攻擊力增加（2回合），\n使我方全體受到護盾效果增加75%（2回合），\n並使我方全體受到持續型治療增加75%（3回合）\n［冷卻時間：4回合］",
-    "image": "assets/img/cards/card_016.png",
+    "image": "assets/img/cards/card_016.webp",
     "imageZoom": 1.59,
     "imageOffsetX": 0.456510324828267,
     "imageOffsetY": 0.30463232947136015,
@@ -326,7 +326,7 @@
       "immune_stun"
     ],
     "ultimateSkill": "使自身必殺技傷害增加27%（2回合），\n再以攻擊力156%對敵方站位1、3、5造成傷害\n［冷卻時間：4回合］",
-    "image": "assets/img/cards/card_017.png",
+    "image": "assets/img/cards/card_017.webp",
     "imageZoom": 1.65,
     "imageOffsetX": 0.4538649225385494,
     "imageOffsetY": 0.40810985899450963,
@@ -347,7 +347,7 @@
       "counter"
     ],
     "ultimateSkill": "以攻擊力50%對敵全體造成傷害，\n使自身獲得「被攻擊時，觸發『以攻擊力81%對敵全體造成傷害』（2回合）」，\n再獲得嘲諷（1回合），\n並獲得「被攻擊時，解除嘲諷」（1回合）\n［冷卻時間：3回合］",
-    "image": "assets/img/cards/card_018.png",
+    "image": "assets/img/cards/card_018.webp",
     "imageZoom": 1.59,
     "imageOffsetX": 0.3755743110978011,
     "imageOffsetY": 0.36037411572146066,
@@ -366,7 +366,7 @@
       "immune_stun"
     ],
     "ultimateSkill": "以攻擊力273%對目標造成傷害，\n並使目標受到普攻傷害增加27%（3回合）\n［冷卻時間：3回合］",
-    "image": "assets/img/cards/card_019.png",
+    "image": "assets/img/cards/card_019.webp",
     "imageZoom": 1.65,
     "imageOffsetX": 0.49224951829979247,
     "imageOffsetY": 0.21086108667864853,
@@ -386,7 +386,7 @@
       "immune_silence"
     ],
     "ultimateSkill": "使目標解除防禦狀態，\n使目標受必殺技傷害增加27%（1回合），\n並以攻擊力273%對目標造成傷害\n［冷卻時間：3回合］",
-    "image": "assets/img/cards/card_020.png",
+    "image": "assets/img/cards/card_020.webp",
     "imageZoom": 1.53,
     "imageOffsetX": 0.5641825390221928,
     "imageOffsetY": 0.18376253325823785,
@@ -407,7 +407,7 @@
       "immune_stun"
     ],
     "ultimateSkill": "使自身造成傷害增加40%（2回合），\n以攻擊力125%對目標造成傷害，\n再使自身獲得「普攻時，追加『以242%攻擊力對目標進行追擊』（2回合）」\n［冷卻時間：4回合］",
-    "image": "assets/img/cards/card_021.png",
+    "image": "assets/img/cards/card_021.webp",
     "imageZoom": 1.44,
     "imageOffsetX": 0.4561996364997607,
     "imageOffsetY": 0,
@@ -427,7 +427,7 @@
       "immune_sleep"
     ],
     "ultimateSkill": "以攻擊力182%對我方全體進行治療，\n並使我方全體獲得吸血效果15%（4回合）\n［冷卻時間：4回合］",
-    "image": "assets/img/cards/card_022.png",
+    "image": "assets/img/cards/card_022.webp",
     "imageZoom": 1.56,
     "imageOffsetX": 0.5258470068001606,
     "imageOffsetY": 0.3680560781546919,
@@ -448,7 +448,7 @@
       "immune_sleep"
     ],
     "ultimateSkill": "使自身獲得吸血效果100%（1回合），\n以攻擊力50%對目標造成傷害，\n再獲得嘲諷（1回合），\n使自身獲得「被攻擊時，觸發『以自身基礎攻擊力68%對目標進行反擊』（2回合）」，\n並變為防禦狀態\n［冷卻時間：3回合］",
-    "image": "assets/img/cards/card_023.png",
+    "image": "assets/img/cards/card_023.webp",
     "imageZoom": 1.65,
     "imageOffsetX": 0.5759770392948993,
     "imageOffsetY": 0.286808249817355,
@@ -467,7 +467,7 @@
       "immune_stun"
     ],
     "ultimateSkill": "以攻擊力100%對目標造成傷害，\n以自身基礎攻擊力87%使我方全體攻擊力增加（2回合）\n［冷卻時間：4回合］",
-    "image": "assets/img/cards/card_024.png",
+    "image": "assets/img/cards/card_024.webp",
     "imageZoom": 1.84,
     "imageOffsetX": 0.4259082644184381,
     "imageOffsetY": 0.6585202679255608,
@@ -486,7 +486,7 @@
       "immune_stun"
     ],
     "ultimateSkill": "使目標獲得「被攻擊時，觸發『使自身受到傷害增加3.5%（3回合）』（3回合）」，\n再以攻擊力273%對目標造成傷害\n［冷卻時間：3回合］",
-    "image": "assets/img/cards/card_025.png",
+    "image": "assets/img/cards/card_025.webp",
     "imageZoom": 1.67,
     "imageOffsetX": 0.5504695553802267,
     "imageOffsetY": 0.36809633055171453,
@@ -505,7 +505,7 @@
       "own_dmg_up"
     ],
     "ultimateSkill": "使自身造成傷害增加20%（3回合），\n再以攻擊力345%對目標造成傷害，\n並以50％機率造成沉默1回合\n［冷卻時間：4回合］",
-    "image": "assets/img/cards/card_026.png",
+    "image": "assets/img/cards/card_026.webp",
     "imageZoom": 1.64,
     "imageOffsetX": 0.5043558191194594,
     "imageOffsetY": 0.23198633292967052,
@@ -526,7 +526,7 @@
       "immune_silence"
     ],
     "ultimateSkill": "以攻擊力100%對我方全體進行治療，\n以攻擊力45%進行持續治療（3回合），\n再以自身基礎攻擊力17%使我方全體攻擊力增加（4回合）\n［冷卻時間：4回合］",
-    "image": "assets/img/cards/card_027.png",
+    "image": "assets/img/cards/card_027.webp",
     "imageZoom": 1.83,
     "imageOffsetX": 0.45781456742896903,
     "imageOffsetY": 0.3411518152709503,
@@ -546,7 +546,7 @@
       "immune_sleep"
     ],
     "ultimateSkill": "以攻擊力345%對目標造成傷害，\n並以自身最大HP20%對我方全體進行治療\n［冷卻時間：4回合］",
-    "image": "assets/img/cards/card_028.png",
+    "image": "assets/img/cards/card_028.webp",
     "imageZoom": 1.6,
     "imageOffsetX": 0.4742179816810757,
     "imageOffsetY": 0.16845314094987923,
@@ -566,7 +566,7 @@
       "immune_silence"
     ],
     "ultimateSkill": "使我方全體定位攻擊的角色獲得「普攻時，追加『以攻擊力68%對目標造成傷害』（3回合）」\n［冷卻時間：4回合］",
-    "image": "assets/img/cards/card_029.png",
+    "image": "assets/img/cards/card_029.webp",
     "imageZoom": 1.48,
     "imageOffsetX": 0.5013480681000244,
     "imageOffsetY": 0.23670667826124686,
@@ -587,7 +587,7 @@
       "immune_silence"
     ],
     "ultimateSkill": "以自身基礎攻擊力32%使自身以外的我方全體攻擊力增加（5回合），\n使我方全體受到傷害減少5%（5回合），\n★並使除自身以外的我方全體必殺技冷卻時間減少1回合\n［冷卻時間：5回合］",
-    "image": "assets/img/cards/card_030.png",
+    "image": "assets/img/cards/card_030.webp",
     "imageZoom": 1.58,
     "imageOffsetX": 0.4595706952410329,
     "imageOffsetY": 0.19168583347489082,
@@ -608,7 +608,7 @@
       "immune_sleep"
     ],
     "ultimateSkill": "以攻擊力100%對目標造成傷害，\n並使目標造成傷害減少10%（3回合），\n再使自身受到傷害減少7.5%（最多2層），\n並以最大HP12.5%對自身進行持續治療（4回合）\n［冷卻時間：6回合］",
-    "image": "assets/img/cards/card_031.png",
+    "image": "assets/img/cards/card_031.webp",
     "imageZoom": 1.74,
     "imageOffsetX": 0.4145168541395774,
     "imageOffsetY": 0.21545072383680436,
@@ -628,7 +628,7 @@
       "immune_stun"
     ],
     "ultimateSkill": "使目標受到傷害增加15%（2回合），\n以攻擊力345%對目標造成傷害，\n並使自身獲得「攻擊時，觸發『使目標受到傷害增加15%（2回合）』（4回合）」\n［冷卻時間：4回合］",
-    "image": "assets/img/cards/card_032.png",
+    "image": "assets/img/cards/card_032.webp",
     "imageZoom": 1.6,
     "imageOffsetX": 0.5056418678301479,
     "imageOffsetY": 0.20667221966911764,
@@ -649,7 +649,7 @@
       "immune_stun"
     ],
     "ultimateSkill": "使我方全體受到必殺技傷害減少15%（2回合），\n並以自身最大HP18%使我方全體獲得護盾（1回合），\n再使自身獲得嘲諷（1回合），\n並使自身變為防禦狀態\n［冷卻時間：4回合］",
-    "image": "assets/img/cards/card_033.png",
+    "image": "assets/img/cards/card_033.webp",
     "imageZoom": 1.6,
     "imageOffsetX": 0.41470402122562766,
     "imageOffsetY": 0.39735747588647286,
@@ -670,7 +670,7 @@
       "multi_hit"
     ],
     "ultimateSkill": "使目標解除防禦狀態，\n並以攻擊力60%對目標造成3次傷害，\n再以攻擊力406%對目標造成傷害\n［冷卻時間：4回合］",
-    "image": "assets/img/cards/card_034.png",
+    "image": "assets/img/cards/card_034.webp",
     "imageZoom": 1.74,
     "imageOffsetX": 0.47673590435015695,
     "imageOffsetY": 0.336349470194582,
@@ -691,7 +691,7 @@
       "immune_stun"
     ],
     "ultimateSkill": "以攻擊力125%對目標造成傷害\n使目標受到普攻傷害增加27%（最多1層） \n再使自身獲得「普攻時，追加『以攻擊力94% 目標進行追擊』（3回合）」\n及「普攻時，追加『以攻擊力94% 目標進行追擊』（2回合）」\n［冷卻時間：4回合］",
-    "image": "assets/img/cards/card_035.png",
+    "image": "assets/img/cards/card_035.webp",
     "imageZoom": 1.5,
     "imageOffsetX": 0.40163607314736366,
     "imageOffsetY": 0.23954649637324577,
@@ -712,7 +712,7 @@
       "immune_silence"
     ],
     "ultimateSkill": "以當前HP20%對自身造成真實傷害\n使我方全體必殺技傷害增加20%（1回合）\n再以自身基礎攻擊力167%使我方全體攻擊力增加（1回合）\n［冷卻時間：3回合］",
-    "image": "assets/img/cards/card_036.png",
+    "image": "assets/img/cards/card_036.webp",
     "imageZoom": 1.49,
     "imageOffsetX": 0.5113973493099063,
     "imageOffsetY": 0.2886289830873754,
@@ -732,7 +732,7 @@
       "immune_silence"
     ],
     "ultimateSkill": "使除自身以外的我方全體必殺傷害增加37.5%（1回合），\n以攻擊力150%對我方全體進行治療，\n並使自身獲得普攻傷害增加90%（3回合）\n［冷卻時間：3回合］",
-    "image": "assets/img/cards/card_037.png",
+    "image": "assets/img/cards/card_037.webp",
     "imageZoom": 1.54,
     "imageOffsetX": 0.43795568182339645,
     "imageOffsetY": 0.15911452830615094,
@@ -752,7 +752,7 @@
       "immune_stun"
     ],
     "ultimateSkill": "以攻擊力100%對目標造成傷害\n以最大HP40%給予自身護盾（1回合）\n使自身獲得「被攻擊時，觸發『以攻擊力216%對目標進行反擊。』（1回合）」\n並獲得「被攻擊時，解除反擊」（1回合）\n再使自身獲得嘲諷（1回合）\n並變為防禦狀態\n［冷卻時間：3回合］",
-    "image": "assets/img/cards/card_038.png",
+    "image": "assets/img/cards/card_038.webp",
     "imageZoom": 1.58,
     "imageOffsetX": 0.46468133786580673,
     "imageOffsetY": 0.3116576759981395,
@@ -772,7 +772,7 @@
       "immune_silence"
     ],
     "ultimateSkill": "以攻擊力100%對目標造成傷害\n使我方站位2的角色普攻傷害增加54%（2回合）\n使我方站位2的角色獲得「普攻時，追加『以攻擊力137%對目標造成傷害』（2回合）」\n［冷卻時間：3回合］",
-    "image": "assets/img/cards/card_039.png",
+    "image": "assets/img/cards/card_039.webp",
     "imageZoom": 1.54,
     "imageOffsetX": 0.44246619012202126,
     "imageOffsetY": 0.2878153621790146,
@@ -793,7 +793,7 @@
       "immune_sleep"
     ],
     "ultimateSkill": "使目標受到傷害增加13.5%（最多2層）\n以攻擊力345%對目標造成傷害\n再以攻擊力86% 目標造成持續傷害（4回合）\n［冷卻時間：4回合］",
-    "image": "assets/img/cards/card_040.png",
+    "image": "assets/img/cards/card_040.webp",
     "imageZoom": 1.42,
     "imageOffsetX": 0.4393826862698933,
     "imageOffsetY": 0.41017761225991156,
@@ -814,7 +814,7 @@
       "immune_stun"
     ],
     "ultimateSkill": "使敵方全體受到必殺技傷害增加13.5%（最多1層）\n並使自身攻擊力增加27%（1回合）\n再以攻擊力119%對敵方站位2、3、4造成傷害\n［冷卻時間：3回合］",
-    "image": "assets/img/cards/card_041.png",
+    "image": "assets/img/cards/card_041.webp",
     "imageZoom": 1.47,
     "imageOffsetX": 0.4881583484116592,
     "imageOffsetY": 0.38701868002106,
@@ -835,7 +835,7 @@
       "immune_silence"
     ],
     "ultimateSkill": "使自身獲得吸血效果50%（1回合）\n再以攻擊力382%對目標造成傷害\n並使目標造成傷害減少15%（2回合）\n再以100%機率對目標造成睡眠2回合\n［冷卻時間：4回合］",
-    "image": "assets/img/cards/card_042.png",
+    "image": "assets/img/cards/card_042.webp",
     "imageZoom": 1.59,
     "imageOffsetX": 0.43987527135448046,
     "imageOffsetY": 0.20293181605002322,
@@ -856,7 +856,7 @@
       "immune_stun"
     ],
     "ultimateSkill": "以自身最大HP20%給予自身護盾（2回合）\n再以攻擊力354%對目標造成傷害\n並使自身獲得「被攻擊時，觸發『以攻擊力89%對目標造成傷害』（2回合）」\n再獲得嘲諷（1回合）\n並獲得「被攻擊時，解除嘲諷」（1回合）\n［冷卻時間：4回合］",
-    "image": "assets/img/cards/card_043.png",
+    "image": "assets/img/cards/card_043.webp",
     "imageZoom": 1.54,
     "imageOffsetX": 0.5464536889148299,
     "imageOffsetY": 0.4953183316492082,
@@ -876,7 +876,7 @@
       "immune_stun"
     ],
     "ultimateSkill": "使自身攻擊力增加54%（4回合）\n以攻擊力533%對目標造成傷害\n但以自身最大HP5% 自身造成持續傷害（4回合）\n［冷卻時間：6回合］",
-    "image": "assets/img/cards/card_044.png",
+    "image": "assets/img/cards/card_044.webp",
     "imageZoom": 1.46,
     "imageOffsetX": 0.48112426424810983,
     "imageOffsetY": 0.22192750915813317,
@@ -897,7 +897,7 @@
       "immune_silence"
     ],
     "ultimateSkill": "以攻擊力100%對我方全體進行治療\n以攻擊力59%進行持續治療（3回合）\n使除自身以外的我方全體普攻傷害增加27%（3回合）\n［冷卻時間：3回合］",
-    "image": "assets/img/cards/card_045.png",
+    "image": "assets/img/cards/card_045.webp",
     "imageZoom": 1.65,
     "imageOffsetX": 0.48200153865490275,
     "imageOffsetY": 0.44152972195680334,
@@ -917,7 +917,7 @@
       "immune_silence"
     ],
     "ultimateSkill": "使敵方目標造成傷害減少8%（4回合）\n再以攻擊力406%對目標造成傷害\n並以最大HP10%對自身進行持續治療（4回合）\n再以最大HP20%給予自身護盾（4回合）\n［冷卻時間：4回合］",
-    "image": "assets/img/cards/card_046.png",
+    "image": "assets/img/cards/card_046.webp",
     "imageZoom": 1.6,
     "imageOffsetX": 0.45478231440145506,
     "imageOffsetY": 0.33144427997419706,
@@ -938,7 +938,7 @@
       "immune_silence"
     ],
     "ultimateSkill": "使自身造成傷害增加25%（最多1層）\n並以攻擊力125%對目標造成傷害\n並使自身獲得「普攻時，追加『以攻擊力98%對目標進行追擊（6回合）』」\n［冷卻時間：6回合］",
-    "image": "assets/img/cards/card_047.png",
+    "image": "assets/img/cards/card_047.webp",
     "imageZoom": 1.7,
     "imageOffsetX": 0.47372065886822967,
     "imageOffsetY": 0.3440737066312059,
@@ -959,7 +959,7 @@
       "immune_sleep"
     ],
     "ultimateSkill": "以攻擊力44%對我方全體進行持續治療（4回合）\n再使目標受到必殺技傷害增加20%（3回合）\n再以攻擊力513%對目標造成傷害\n［冷卻時間：6回合］",
-    "image": "assets/img/cards/card_048.png",
+    "image": "assets/img/cards/card_048.webp",
     "imageZoom": 1.57,
     "imageOffsetX": 0.46130223001813864,
     "imageOffsetY": 0.29330643113708904,
@@ -981,7 +981,7 @@
       "immune_silence"
     ],
     "ultimateSkill": "解除敵方全體的防禦狀態\n使敵方全體受到傷害增加14%（3回合）、普攻傷害減少14%（3回合）\n再以攻擊力60%對敵方站位2、3、4各造成2次傷害\n［冷卻時間：3回合］",
-    "image": "assets/img/cards/card_049.png",
+    "image": "assets/img/cards/card_049.webp",
     "imageZoom": 1.72,
     "imageOffsetX": 0.5433357277556204,
     "imageOffsetY": 0.2702768877057828,
@@ -1003,7 +1003,7 @@
       "immune_silence"
     ],
     "ultimateSkill": "使自身攻擊力增加13.5%（3回合）\n以攻擊力100%對我方全體進行治療\n再以攻擊力51%進行持續治療（4回合）\n並以攻擊力67%對目標造成持續傷害（3回合）\n［冷卻時間：4回合］",
-    "image": "assets/img/cards/card_050.png",
+    "image": "assets/img/cards/card_050.webp",
     "imageZoom": 1.67,
     "imageOffsetX": 0.4866993271671798,
     "imageOffsetY": 0.29892246595149924,
@@ -1023,7 +1023,7 @@
       "immune_stun"
     ],
     "ultimateSkill": "使我方全體受到傷害減少12.5%（2回合）\n並使我方全體受到持續治療量增加27%（4回合）\n再以自身基礎攻擊力173%使我方全體攻擊力增加（1回合）\n［冷卻時間：4回合］",
-    "image": "assets/img/cards/card_051.png",
+    "image": "assets/img/cards/card_051.webp",
     "imageZoom": 1.45,
     "imageOffsetX": 0.5801800962502063,
     "imageOffsetY": 0.2861818700060879,
@@ -1044,7 +1044,7 @@
       "immune_sleep"
     ],
     "ultimateSkill": "以當前HP20%對自身造成真實傷害\n並以攻擊力82%對敵方站位1、2、3造成傷害\n再以攻擊力82%對敵方站位3、4、5造成傷害\n並使自身獲得吸血效果50%（3回合）\n［冷卻時間：4回合］",
-    "image": "assets/img/cards/card_052.png",
+    "image": "assets/img/cards/card_052.webp",
     "imageZoom": 1.71,
     "imageOffsetX": 0.4803086589509335,
     "imageOffsetY": 0.423671759769109,
@@ -1064,7 +1064,7 @@
       "immune_stun"
     ],
     "ultimateSkill": "使自身獲得文字效果「伊得獲得來自部下們的鼎力相助！」（1回合）\n使目標受到定位攻擊的角色傷害增加34%（3回合）\n再以攻擊力273%對目標造成傷害\n並使自身以外的我方全體定位攻擊的角色必殺技冷卻時間減少1回合\n［冷卻時間：3回合］",
-    "image": "assets/img/cards/card_053.png",
+    "image": "assets/img/cards/card_053.webp",
     "imageZoom": 1.42,
     "imageOffsetX": 0.3952129210307921,
     "imageOffsetY": 0.3698891589217226,
@@ -1084,7 +1084,7 @@
       "immune_sleep"
     ],
     "ultimateSkill": "使自身攻擊力增加27%（3回合）\n再以攻擊力25%對我方全體進行持續治療（3回合）\n並以攻擊力273% 目標造成傷害\n［冷卻時間：3回合］",
-    "image": "assets/img/cards/card_054.png",
+    "image": "assets/img/cards/card_054.webp",
     "imageZoom": 1.44,
     "imageOffsetX": 0.4107518727562516,
     "imageOffsetY": 0.3468210916886343,
@@ -1105,7 +1105,7 @@
       "immune_silence"
     ],
     "ultimateSkill": "以攻擊力100%對目標造成傷害\n使目標受到水屬性傷害增加15%（1回合）\n使自身受到傷害減少15%（3回合）\n以自身最大HP18%使我方全體獲得護盾（1回合）\n［冷卻時間：3回合］",
-    "image": "assets/img/cards/card_055.png",
+    "image": "assets/img/cards/card_055.webp",
     "imageZoom": 1.58,
     "imageOffsetX": 0.5158395954582365,
     "imageOffsetY": 0.4027319640176861,
@@ -1127,7 +1127,7 @@
       "immune_stun"
     ],
     "ultimateSkill": "使目標解除防禦狀態\n再使目標受到木屬性傷害增加15%（最多1層）\n並使自身造成傷害增加13.5%（最多2層）\n再以攻擊力345%對目標造成傷害\n［冷卻時間：4回合］",
-    "image": "assets/img/cards/card_056.png",
+    "image": "assets/img/cards/card_056.webp",
     "imageZoom": 1.58,
     "imageOffsetX": 0.4966536677028935,
     "imageOffsetY": 0.3977847492239956,
@@ -1148,7 +1148,7 @@
       "immune_sleep"
     ],
     "ultimateSkill": "使敵方全體受到必殺技傷害增加20%（1回合）\n並使我方全體定位攻擊與妨礙的角色造成傷害增加17%（1回合）\n再以攻擊力345%對目標造成傷害\n［冷卻時間：4回合］",
-    "image": "assets/img/cards/card_057.png",
+    "image": "assets/img/cards/card_057.webp",
     "imageZoom": 1.5,
     "imageOffsetX": 0.510732033019078,
     "imageOffsetY": 0.4558998251218992,
@@ -1171,7 +1171,7 @@
       "immune_silence"
     ],
     "ultimateSkill": "以攻擊力253%對目標造成傷害\n再使敵方全體受到觸發技傷害增加27%（3回合）\n使敵方全體造成傷害減少10%（1回合）\n並使自身獲得「被攻擊時，觸發『以攻擊力64%對目標造成傷害』（2回合）」\n再獲得嘲諷（1回合）\n並獲得「被攻擊時，解除嘲諷」（1回合）\n［冷卻時間：3回合］",
-    "image": "assets/img/cards/card_058.png",
+    "image": "assets/img/cards/card_058.webp",
     "imageZoom": 1.6,
     "imageOffsetX": 0.5185801491226939,
     "imageOffsetY": 0.3954249363319547,
@@ -1193,7 +1193,7 @@
       "immune_stun"
     ],
     "ultimateSkill": "<p>以攻擊力150%對我方全體進行治療\n並使自身獲得「攻擊時，觸發『以攻擊力127%對我方當前HP最低者進行治療』（3回合）」\n並使我方全體造成傷害增加10%（3回合）\n［冷卻時間：3回合］</p>",
-    "image": "assets/img/cards/card_059.png",
+    "image": "assets/img/cards/card_059.webp",
     "imageZoom": 1.64,
     "imageOffsetX": 0.5052298981414919,
     "imageOffsetY": 0.32344498042187664,
@@ -1215,7 +1215,7 @@
       "immune_stun"
     ],
     "ultimateSkill": "以自身基礎攻擊力21%使我方全體攻擊力增加（3回合）\n使我方全體觸發技傷害增加27%（3回合）\n並使自身以外的我方全體獲得「攻擊時，觸發『以攻擊力32% 目標造成傷害』（3回合）」\n［冷卻時間：3回合］",
-    "image": "assets/img/cards/card_060.png",
+    "image": "assets/img/cards/card_060.webp",
     "imageZoom": 1.4,
     "imageOffsetX": 0.49760925847114135,
     "imageOffsetY": 0.33601401833926925,
@@ -1236,7 +1236,7 @@
       "immune_sleep"
     ],
     "ultimateSkill": "使目標受到火屬性傷害增加5%（3回合）\n以攻擊力125%對目標造成傷害\n再使自身獲得「攻擊時，觸發『以攻擊力139%對目標造成傷害』（3回合）」\n［冷卻時間：3回合］",
-    "image": "assets/img/cards/card_061.png",
+    "image": "assets/img/cards/card_061.webp",
     "imageZoom": 1.34,
     "imageOffsetX": 0.5323333714798573,
     "imageOffsetY": 0.04045136472333807,
@@ -1257,7 +1257,7 @@
       "immune_stun"
     ],
     "ultimateSkill": "以當前HP20%對自身造成真實傷害\n使目標受到傷害增加27%（3回合）\n使目標受到五屬性傷害增加12%（3回合）\n再以攻擊力290%對目標造成傷害\n［冷卻時間：3回合］",
-    "image": "assets/img/cards/card_062.png",
+    "image": "assets/img/cards/card_062.webp",
     "imageZoom": 1.47,
     "imageOffsetX": 0.6462149705275003,
     "imageOffsetY": 0.5329187526074259,
@@ -1279,7 +1279,7 @@
       "immune_silence"
     ],
     "ultimateSkill": "以當前HP12.5%對我方全體造成真實傷害\n並使敵方全體受到光屬性傷害增加9%（2回合）\n使我方全體必殺技傷害增加21%（2回合）\n再以攻擊力419%對目標造成傷害\n並以自身最大HP10%對我方全體進行持續治療（2回合）\n［冷卻時間：4回合］",
-    "image": "assets/img/cards/card_063.png",
+    "image": "assets/img/cards/card_063.webp",
     "imageZoom": 1.27,
     "imageOffsetX": 0.4864407011084145,
     "imageOffsetY": 0.10801312260291837,
@@ -1300,7 +1300,7 @@
       "immune_sleep"
     ],
     "ultimateSkill": "使敵方全體受到傷害增加13.5%（最多2層）\n以攻擊力125%對目標造成傷害\n以攻擊力147%對目標造成持續傷害（3回合）\n並使我方全體定位攻擊與妨礙的角色獲得「攻擊時，觸發『以攻擊力34%對目標造成持續傷害（3回合）』（1回合）」\n［冷卻時間：4回合］",
-    "image": "assets/img/cards/card_064.png",
+    "image": "assets/img/cards/card_064.webp",
     "imageZoom": 1.34,
     "imageOffsetX": 0.47099596010564165,
     "imageOffsetY": 0.16818581303262556,
@@ -1320,7 +1320,7 @@
       "immune_stun"
     ],
     "ultimateSkill": "使目標受到持續傷害量增加30%（最多1層）\n以自身基礎攻擊力69%使我方全體攻擊力增加（2回合）\n並以攻擊力50%對目標造成持續傷害（2回合）\n［冷卻時間：3回合］",
-    "image": "assets/img/cards/card_065.png",
+    "image": "assets/img/cards/card_065.webp",
     "imageZoom": 1.38,
     "imageOffsetX": 0.5381726315935291,
     "imageOffsetY": 0.2221874050704445,
@@ -1341,7 +1341,7 @@
       "immune_silence"
     ],
     "ultimateSkill": "<p>使目標造成傷害減少10%（3回合）\n使自身必殺技傷害增加30%（1回合）\n並以攻擊力25%對目標造成2次傷害\n再以攻擊力345%對目標造成傷害\n［冷卻時間：4回合］</p>",
-    "image": "assets/img/cards/card_066.png",
+    "image": "assets/img/cards/card_066.webp",
     "imageZoom": 1.37,
     "imageOffsetX": 0.3929720620890782,
     "imageOffsetY": 0.2241146163402786,
@@ -1363,7 +1363,7 @@
       "immune_sleep"
     ],
     "ultimateSkill": "使除自身以外我方全體必殺技傷害增加37.5%（1回合）\n使我方全體攻擊力增加28%（2回合）\n並以攻擊力150%對我方全體進行治療\n再以攻擊力77％進行持續治療（2回合）\n［冷卻時間：4回合］",
-    "image": "assets/img/cards/card_067.png",
+    "image": "assets/img/cards/card_067.webp",
     "imageZoom": 1.48,
     "imageOffsetX": 0.4858844765824755,
     "imageOffsetY": 0.31011284722222227,
@@ -1384,7 +1384,7 @@
       "immune_stun"
     ],
     "ultimateSkill": "使目標受到傷害增加30%（1回合）\n使自身攻擊力增加30%（4回合）\n再以攻擊力345%對目標造成傷害\n［冷卻時間：4回合］",
-    "image": "assets/img/cards/card_068.png",
+    "image": "assets/img/cards/card_068.webp",
     "imageZoom": 1.43,
     "imageOffsetX": 0.6113205320009109,
     "imageOffsetY": 0.2841967158999037,
@@ -1404,7 +1404,7 @@
       "immune_silence"
     ],
     "ultimateSkill": "使目標受到傷害增加17%（3回合）\n使我方全體造成持續傷害量增加18%（3回合）\n並以攻擊力273% 目標造成傷害\n［冷卻時間：3回合］",
-    "image": "assets/img/cards/card_069.png",
+    "image": "assets/img/cards/card_069.webp",
     "imageZoom": 1.45,
     "imageOffsetX": 0.3498912388225897,
     "imageOffsetY": 0.08811947574199941,
@@ -1425,7 +1425,7 @@
       "immune_stun"
     ],
     "ultimateSkill": "使我方站位5的角色必殺技冷卻時間減少4回合\n使我方全體造成傷害增加34%（1回合）\n使我方站位5的攻擊力增加34%（1回合）\n以自身基礎攻擊力44%使我方全體攻擊力增加（4回合）【不可疊加】\n再以攻擊力100%對我方全體進行治療\n［冷卻時間：4回合］",
-    "image": "assets/img/cards/card_070.png",
+    "image": "assets/img/cards/card_070.webp",
     "imageZoom": 1.43,
     "imageOffsetX": 0.33567238836657354,
     "imageOffsetY": 0.363412616136571,
@@ -1446,7 +1446,7 @@
       "immune_sleep"
     ],
     "ultimateSkill": "<p>使目標受到 <span style=\"color: rgb(226, 96, 79);\">定位妨礙 </span>的角色傷害增加 51%（1回合）\n再使我方 <span style=\"color: rgb(226, 96, 79);\">定位妨礙</span> 的角色必殺技傷害增加 31%（1回合）\n並以攻擊力 345% 對目標造成傷害</p><p>\n［冷卻時間：4回合］</p>",
-    "image": "assets/img/cards/card_071.png",
+    "image": "assets/img/cards/card_071.webp",
     "imageZoom": 1.47,
     "imageOffsetX": 0.5940004433006997,
     "imageOffsetY": 0.17089204737725028,
@@ -1467,7 +1467,7 @@
       "immune_silence"
     ],
     "ultimateSkill": "<p>使目標受到 <span style=\"color: rgb(79, 200, 176);\">闇屬性</span> 傷害增加15%（3回合）\n以攻擊力100%對目標造成傷害\n再以最大HP40%給予自身護盾（1回合）\n使我方全體必殺技傷害增加26%（1回合）\n使自身獲得嘲諷（1回合）\n並使自身變為防禦狀態\n［冷卻時間：3回合］</p>",
-    "image": "assets/img/cards/card_072.png",
+    "image": "assets/img/cards/card_072.webp",
     "imageZoom": 1.41,
     "imageOffsetX": 0.641090399428211,
     "imageOffsetY": 0.2451403899760986,
@@ -1489,7 +1489,7 @@
       "immune_silence"
     ],
     "ultimateSkill": "以攻擊力100%對目標造成傷害\n使自身受到傷害減少28%（1回合）\n使我方全體造成傷害增加17%（3回合）\n使自身獲得「被攻擊時，觸發『以自身最大HP20%對我方全體進行治療』（2回合）（觸發1次後解除）」\n使自身獲得嘲諷（1回合）\n並變為防禦狀態\n［冷卻時間：3回合］",
-    "image": "assets/img/cards/card_073.png",
+    "image": "assets/img/cards/card_073.webp",
     "imageZoom": 1.52,
     "imageOffsetX": 0.5539880990093098,
     "imageOffsetY": 0.27219017128448064,
@@ -1508,7 +1508,7 @@
       "immune_silence"
     ],
     "ultimateSkill": "<p>以自身基礎攻擊力 173% 使我方全體攻擊力增加（1回合）\n使我方全體受到治療量增加 17%（4回合）\n並使我方全體 <span style=\"color: rgb(226, 96, 79);\">定位妨礙 </span>的角色造成傷害增加 21％（1回合）</p><p>\n［冷卻時間：4回合］</p>",
-    "image": "assets/img/cards/card_074.png",
+    "image": "assets/img/cards/card_074.webp",
     "imageZoom": 1.46,
     "imageOffsetX": 0.488477726046457,
     "imageOffsetY": 0.40247304277613843,
@@ -1528,7 +1528,7 @@
       "immune_sleep"
     ],
     "ultimateSkill": "使自身造成傷害增加34%（4回合）\n以攻擊力657%對目標造成傷害\n［冷卻時間：6回合］",
-    "image": "assets/img/cards/card_075.png",
+    "image": "assets/img/cards/card_075.webp",
     "imageZoom": 1.47,
     "imageOffsetX": 0.6265619545103832,
     "imageOffsetY": 0.3146725225911001,
@@ -1550,7 +1550,7 @@
       "immune_stun"
     ],
     "ultimateSkill": "<p>使除自身以外我方全體觸發技傷害增加 34%（1回合）</p><p>使我方全體 <span style=\"color: rgb(226, 96, 79);\">定位守護 </span>的角色受到必殺技傷害減少 27%（1回合）</p><p>使除自身以外我方全體獲得「攻擊時，觸發『以攻擊力 99% 對目標造成傷害』（1回合）」</p><p>並以自身基礎攻擊力 30% 使我方全體攻擊力增加（1回合）</p><p><br></p><p>［冷卻時間：3回合］</p>",
-    "image": "assets/img/cards/card_076.png",
+    "image": "assets/img/cards/card_076.webp",
     "imageZoom": 1.46,
     "imageOffsetX": 0.40887506375838434,
     "imageOffsetY": 0.39952587188883903,
@@ -1572,7 +1572,7 @@
       "immune_sleep"
     ],
     "ultimateSkill": "<p>以攻擊力125%對目標造成傷害\n使自身攻擊力增加34%（4回合）\n使我方全體 <span style=\"color: rgb(226, 96, 79);\">定位攻擊與妨礙 </span>的角色普攻傷害增加34%（4回合）\n再使自身獲得「普攻時，追加『以攻擊力73%對目標進行追擊』（4回合）」</p><p>\n［冷卻時間：4回合］</p>",
-    "image": "assets/img/cards/card_077.png",
+    "image": "assets/img/cards/card_077.webp",
     "imageZoom": 1.44,
     "imageOffsetX": 0.41079121514818295,
     "imageOffsetY": 0.3696141990016394,
@@ -1594,7 +1594,7 @@
       "immune_sleep"
     ],
     "ultimateSkill": "使目標受到治療量減少100%（3回合）\n使目標受到普攻傷害增加34%（最多1層）\n並以攻擊力50%對目標造成傷害\n再使自身獲得「普攻時，追加『以攻擊力129%對目標造成傷害，再以攻擊力25%對我方全體進行治療』（3回合）」\n［冷卻時間：3回合］",
-    "image": "assets/img/cards/card_078.png",
+    "image": "assets/img/cards/card_078.webp",
     "imageZoom": 1.33,
     "imageOffsetX": 0.5039230503381974,
     "imageOffsetY": 0.33175031783250714,
@@ -1615,7 +1615,7 @@
       "immune_stun"
     ],
     "ultimateSkill": "以自身基礎攻擊力105%使我方全體攻擊力增加（1回合）\n使我方全體受到治療量增加34%（6回合）\n以攻擊力25%對我方全體進行治療，\n攻擊力56%進行持續治療（6回合）\n［冷卻時間：6回合］",
-    "image": "assets/img/cards/card_079.png",
+    "image": "assets/img/cards/card_079.webp",
     "imageZoom": 1.51,
     "imageOffsetX": 0.5759832538559936,
     "imageOffsetY": 0.3299070745827819,
@@ -1636,7 +1636,7 @@
       "immune_silence"
     ],
     "ultimateSkill": "以自身基礎攻擊力81%使我方全體攻擊力增加（2回合）\n使我方全體獲得吸血效果17%（3回合）\n以攻擊力50%對目標造成傷害\n以最大HP40%給予自身護盾（1回合）\n使自身獲得嘲諷（1回合）\n並變為防禦狀態\n［冷卻時間：3回合］",
-    "image": "assets/img/cards/card_080.png",
+    "image": "assets/img/cards/card_080.webp",
     "imageZoom": 1.5,
     "imageOffsetX": 0.48930261414594733,
     "imageOffsetY": 0.4219308099826845,
@@ -1659,7 +1659,7 @@
       "immune_silence"
     ],
     "ultimateSkill": "<p>使我方全體<span style=\"color: rgb(226, 96, 79);\">定位攻擊</span>的角色造成傷害增加22%（2回合）\n以攻擊力100%對目標造成傷害\n再獲得嘲諷（2回合）\n使自身受到麻痹機率減少100%（2回合）\n並使自身受到必殺技傷害減少40%（2回合）\n並使自身獲得「被攻擊時，觸發『以攻擊力87%對目標進行反擊』（2回合）」\n再以自身最大HP18%使我方全體獲得護盾（2回合）\n並變為防禦狀態</p><p>\n［冷卻時間：4回合］</p>",
-    "image": "assets/img/cards/card_081.png",
+    "image": "assets/img/cards/card_081.webp",
     "imageZoom": 1.32,
     "imageOffsetX": 0.41927219731254556,
     "imageOffsetY": 0.21812602081989285,
@@ -1681,7 +1681,7 @@
       "immune_sleep"
     ],
     "ultimateSkill": "<p>使我方全體受到傷害減少 12.5%（2回合）</p><p>以攻擊力 100% 對我方全體進行治療</p><p>以攻擊力 64% 對我方全體造成持續治療（4回合）</p><p>再使我方全體 <span style=\"color: rgb(226, 96, 79);\">定位為妨礙 </span>的隊員造成傷害增加 22%（4回合）</p><p><br></p><p>［冷卻時間：4回合］</p>",
-    "image": "assets/img/cards/card_082.png",
+    "image": "assets/img/cards/card_082.webp",
     "imageZoom": 1.38,
     "imageOffsetX": 0.4872425289271314,
     "imageOffsetY": 0.34656387537538735,
@@ -1702,7 +1702,7 @@
       "immune_stun"
     ],
     "ultimateSkill": "<p>使目標造成傷害減少10%（3回合）</p><p>使自身攻擊力增加34%（3回合）</p><p>並以攻擊力100%對我方全體進行治療</p><p>再以攻擊力70%進行持續治療（2回合）</p><p><br></p><p>［冷卻時間：3回合］</p>",
-    "image": "assets/img/cards/card_083.png",
+    "image": "assets/img/cards/card_083.webp",
     "imageZoom": 1.37,
     "imageOffsetX": 0.4694696952074424,
     "imageOffsetY": 0.3340618818856196,
@@ -1723,7 +1723,7 @@
       "immune_silence"
     ],
     "ultimateSkill": "<p>以自身基礎攻擊力 51% 使我方全體攻擊力增加（1回合）</p><p>使目標受到傷害增加 17%（最多1層）</p><p>解除目標防禦狀態</p><p>再以攻擊力273%對目標造成傷害</p><p><br></p><p>［冷卻時間：3回合］</p>",
-    "image": "assets/img/cards/card_084.png",
+    "image": "assets/img/cards/card_084.webp",
     "imageZoom": 1.36,
     "imageOffsetX": 0.5554134099696094,
     "imageOffsetY": 0.37068550259459254,
@@ -1743,7 +1743,7 @@
       "immune_sleep"
     ],
     "ultimateSkill": "<p>使目標受到觸發技傷害增加34%（最多1層）</p><p>以攻擊力50%對目標造成傷害</p><p>再使自身獲得「攻擊時，觸發『使目標受到觸發技傷害增加9%（4回合），再以攻擊力140% 目標造成傷害』（4回合）」</p><p><br></p><p>［冷卻時間：4回合］</p>",
-    "image": "assets/img/cards/card_085.png",
+    "image": "assets/img/cards/card_085.webp",
     "imageZoom": 1.36,
     "imageOffsetX": 0.4796897257834758,
     "imageOffsetY": 0.2898810954781518,
@@ -1763,7 +1763,7 @@
       "immune_silence"
     ],
     "ultimateSkill": "<p>使自身造成傷害增加20%（最多2層）</p><p>並以攻擊力50%對目標造成2次傷害</p><p>再以攻擊力316%對目標造成傷害</p><p><br></p><p>［冷卻時間：3回合］</p>",
-    "image": "assets/img/cards/card_086.png",
+    "image": "assets/img/cards/card_086.webp",
     "imageZoom": 1.43,
     "imageOffsetX": 0.5298062410579035,
     "imageOffsetY": 0.4938465751722888,
@@ -1784,7 +1784,7 @@
       "immune_stun"
     ],
     "ultimateSkill": "<p>以攻擊力100%對目標造成傷害</p><p>使我方全體必殺技傷害增加 25%（1回合）</p><p>以自身基礎攻擊力 137% 使我方全體攻擊力增加（1回合）</p><p>使我方全體 <span style=\"color: rgb(226, 96, 79);\">定位攻擊、守護與妨礙</span> 的角色獲得「必殺時，觸發『使自身以外的我方全體攻擊力增加 46%（1回合）』（1回合）」</p><p><br></p><p>［冷卻時間：3回合］</p>",
-    "image": "assets/img/cards/card_087.png",
+    "image": "assets/img/cards/card_087.webp",
     "imageZoom": 1.46,
     "imageOffsetX": 0.5048369409839881,
     "imageOffsetY": 0.4306142771014151,
@@ -1805,7 +1805,7 @@
       "immune_stun"
     ],
     "ultimateSkill": "<p>使自身攻擊力增加 34%（最多1層）</p><p>再以攻擊力 123% 對敵方站位 1、3、5 造成傷害</p><p>以攻擊力 31% 對敵方站位 1、3、5 造成持續傷害（4回合）</p><p><br></p><p>［冷卻時間：4回合］</p>",
-    "image": "assets/img/cards/card_088.png",
+    "image": "assets/img/cards/card_088.webp",
     "imageZoom": 1.65,
     "imageOffsetX": 0.6161899102666831,
     "imageOffsetY": 0.43421761820191035,
@@ -1824,7 +1824,7 @@
       "immune_stun"
     ],
     "ultimateSkill": "<p>使自身觸發技傷害增加68%（4回合）</p><p>以自身最大HP25%對自身進行治療</p><p>使自身獲得「攻擊時，觸發『以攻擊力126%對自身進行治療』（4回合）」</p><p>再以攻擊力100%對目標造成傷害</p><p>並使自身變為防禦狀態</p><p><br></p><p>［冷卻時間：4回合］</p>",
-    "image": "assets/img/cards/card_089.png",
+    "image": "assets/img/cards/card_089.webp",
     "imageZoom": 1.44,
     "imageOffsetX": 0.44733470898165667,
     "imageOffsetY": 0.3649522369983149,
@@ -1845,7 +1845,7 @@
       "immune_stun"
     ],
     "ultimateSkill": "<p>以攻擊力100%對目標造成傷害</p><p>並以自身最大HP35%使自身獲得護盾（2回合）</p><p>再以自身最大HP6%使我方全體獲得護盾（4回合）</p><p>使自身普攻傷害增加68%（3回合）</p><p>再獲得嘲諷（1回合）</p><p>並變為防禦狀態</p><p><br></p><p>［冷卻時間：4回合］</p>",
-    "image": "assets/img/cards/card_090.png",
+    "image": "assets/img/cards/card_090.webp",
     "imageZoom": 1.43,
     "imageOffsetX": 0.5178863958270847,
     "imageOffsetY": 0.26808928505548446,
@@ -1866,7 +1866,7 @@
       "immune_silence"
     ],
     "ultimateSkill": "<p>使除自身以外我方全體獲得「攻擊時，觸發『使目標受到普攻傷害增加4.5%（最多8層）』（3回合）」</p><p>再使自身獲得「普攻時，追加『以攻擊力49%對目標進行追擊』（4回合）」</p><p>及「普攻時，追加『以攻擊力80%對目標進行追擊』（3回合）」</p><p><br></p><p>［冷卻時間：4回合］</p>",
-    "image": "assets/img/cards/card_091.png",
+    "image": "assets/img/cards/card_091.webp",
     "imageZoom": 1.38,
     "imageOffsetX": 0.42648408011597744,
     "imageOffsetY": 0.11722585107728067,
@@ -1888,7 +1888,7 @@
       "immune_silence"
     ],
     "ultimateSkill": "<p>以攻擊力 100% 對目標造成傷害</p><p>再使除自身以外我方全體普攻傷害增加 34%（最多1層）</p><p>以自身基礎攻擊力 58% 使我方全體攻擊力增加（3回合）</p><p>使目標受到 <span style=\"color: rgb(226, 96, 79);\">定位攻擊、妨礙 </span>的角色傷害增加 12%（3回合）</p><p><br></p><p>［冷卻時間：4回合］</p>",
-    "image": "assets/img/cards/card_092.png",
+    "image": "assets/img/cards/card_092.webp",
     "imageZoom": 1.38,
     "imageOffsetX": 0.4254454450267398,
     "imageOffsetY": 0.20103851625637592,
@@ -1910,7 +1910,7 @@
       "immune_stun"
     ],
     "ultimateSkill": "<p>使自身普攻傷害增加 68%（最多1層）</p><p>使自身攻擊力增加 51%（4回合）</p><p>以攻擊力 125% 對目標造成傷害</p><p>並使自身獲得「普攻時，追加『以攻擊力 130% 對目標進行追擊』（4回合）」</p><p><br></p><p>［冷卻時間：6 回合］</p>",
-    "image": "assets/img/cards/card_093.png",
+    "image": "assets/img/cards/card_093.webp",
     "imageZoom": 1.47,
     "imageOffsetX": 0.45257791909753864,
     "imageOffsetY": 0.442159416444741,
@@ -1932,7 +1932,7 @@
       "immune_silence"
     ],
     "ultimateSkill": "<p>使我方全體觸發技傷害增加 68%（3回合）</p><p>以攻擊力 50% 對我方全體進行治療</p><p>以攻擊力 25% 對我方全體進行持續治療（3回合）</p><p>再使自身獲得「攻擊時，觸發『以攻擊力 73% 對我方全體進行治療』（3回合）」</p><p><br></p><p>［冷卻時間：3回合］</p>",
-    "image": "assets/img/cards/card_094.png",
+    "image": "assets/img/cards/card_094.webp",
     "imageZoom": 1.35,
     "imageOffsetX": 0.5117548011147874,
     "imageOffsetY": 0.26590199443039647,
@@ -1953,7 +1953,7 @@
       "immune_sleep"
     ],
     "ultimateSkill": "<p>使自身觸發技傷害增加68%（最多1層）</p><p>以攻擊力50%對目標造成傷害</p><p>使自身獲得「攻擊時，觸發『以攻擊力118%對目標造成傷害』（3回合）」</p><p>再使自身獲得「必殺時，觸發『以攻擊力118%對目標造成傷害』（6回合）【不可疊加】」</p><p><br></p><p>［冷卻時間：3回合］</p>",
-    "image": "assets/img/cards/card_095.png",
+    "image": "assets/img/cards/card_095.webp",
     "imageZoom": 1.55,
     "imageOffsetX": 0.4661469130436856,
     "imageOffsetY": 0.3087472994446034,
@@ -1975,7 +1975,7 @@
       "team_proc_dmg_up"
     ],
     "ultimateSkill": "<p>使我方全體造成傷害增加 17%（3回合）</p><p>以自身基礎攻擊力 17% 使我方全體攻擊力增加（3回合）</p><p>以攻擊力 50% 對目標造成傷害</p><p>再使我方全體 <span style=\"color: rgb(226, 96, 79);\">定位攻擊、妨礙 </span>的角色獲得「攻擊時，觸發『以攻擊力 58% 對目標造成傷害』（3回合）」</p><p><br></p><p>［冷卻時間：3回合］</p>",
-    "image": "assets/img/cards/card_096.png",
+    "image": "assets/img/cards/card_096.webp",
     "imageZoom": 1.44,
     "imageOffsetX": 0.44300875696431585,
     "imageOffsetY": 0.2665691193456629,
@@ -1996,7 +1996,7 @@
       "immune_stun"
     ],
     "ultimateSkill": "<p>使自身攻擊力增加 34%（4回合）</p><p>使我方全體 <span style=\"color: rgb(226, 96, 79);\">定位為攻擊與妨礙</span> 的角色普攻傷害增加 43%（4回合）</p><p>並以攻擊力 140% 對我方全體進行治療</p><p>再以攻擊力 54％ 進行持續治療（4回合）</p><p><br></p><p>［冷卻時間：4回合］</p>",
-    "image": "assets/img/cards/card_097.png",
+    "image": "assets/img/cards/card_097.webp",
     "imageZoom": 1.33,
     "imageOffsetX": 0.40921630747788273,
     "imageOffsetY": 0.4436412649391003,
@@ -2017,7 +2017,7 @@
       "immune_silence"
     ],
     "ultimateSkill": "<p>以當前HP 20% 對自身造成真實傷害</p><p>使敵方全體受到 <span style=\"color: rgb(79, 200, 176);\">闇屬性</span> 傷害增加 22%（1回合）</p><p>以攻擊力 50% 對敵方站位 1、2、3、4、5 造成傷害</p><p>再以攻擊 50% 對敵方站位 5、4、3、2、1 造成傷害</p><p><br></p><p>［冷卻時間：4回合］</p>",
-    "image": "assets/img/cards/card_098.png",
+    "image": "assets/img/cards/card_098.webp",
     "imageZoom": 1.45,
     "imageOffsetX": 0.5078458585741211,
     "imageOffsetY": 0.09207948692984053,
@@ -2038,7 +2038,7 @@
       "immune_sleep"
     ],
     "ultimateSkill": "<p>使除自身以外我方全體必殺技傷害增加 25%（1回合）</p><p>以自身基礎攻擊力 173% 使我方全體攻擊力增加（1回合）</p><p>再以攻擊力 20% 對敵方站位 1、2、3、4、5 造成傷害</p><p><br></p><p>［冷卻時間：4回合］</p>",
-    "image": "assets/img/cards/card_099.png",
+    "image": "assets/img/cards/card_099.webp",
     "imageZoom": 1.38,
     "imageOffsetX": 0.6637331754225179,
     "imageOffsetY": 0.37703197388703114,
@@ -2059,7 +2059,7 @@
       "immune_sleep"
     ],
     "ultimateSkill": "<p>使敵方全體受到必殺技傷害增加 15%（最多2層）</p><p>再使自身攻擊力增加 34%（4回合）</p><p>再以攻擊力 345% 對目標造成傷害</p><p><br></p><p>［冷卻時間：4回合］</p>",
-    "image": "assets/img/cards/card_100.png",
+    "image": "assets/img/cards/card_100.webp",
     "imageZoom": 1.54,
     "imageOffsetX": 0.4803389126305793,
     "imageOffsetY": 0.38891711513649363,
@@ -2081,7 +2081,7 @@
       "immune_stun"
     ],
     "ultimateSkill": "<p>使敵方全體受到持續傷害增加 34%（1回合）</p><p>使敵方站位 2、4 獲得「被攻擊時，觸發『使自身受到傷害增加 4%（1回合）』（1回合）」</p><p>再以攻擊力 54% 對敵方站位 2、4 造成傷害</p><p>以攻擊力 180% 對敵方站位 2、4 造成持續傷害（1回合）</p><p><br></p><p>［冷卻時間：4回合］</p>",
-    "image": "assets/img/cards/card_101.png",
+    "image": "assets/img/cards/card_101.webp",
     "imageZoom": 1.57,
     "imageOffsetX": 0.5051097832127207,
     "imageOffsetY": 0.30801109242480246,
@@ -2103,7 +2103,7 @@
       "immune_silence"
     ],
     "ultimateSkill": "<p>以攻擊力 75% 對目標造成傷害</p><p>使我方全體受到傷害減少 7%（4回合）</p><p>以攻擊力 27% 對我方全體進行持續治療（4回合）</p><p>再使自身獲得「普攻時，追加『以攻擊力 90% 目標進行追擊』（4回合）」</p><p><br></p><p>「冷卻時間：4回合］</p>",
-    "image": "assets/img/cards/card_102.png",
+    "image": "assets/img/cards/card_102.webp",
     "imageZoom": 1.47,
     "imageOffsetX": 0.5131993371759426,
     "imageOffsetY": 0.3951160365658896,
@@ -2125,7 +2125,7 @@
       "immune_stun"
     ],
     "ultimateSkill": "<p>使自身必殺技傷害增加 52%（1回合）</p><p>使自身造成傷害增加 34%（最多1層）</p><p>使目標受到 <span style=\"color: rgb(79, 200, 176);\">光屬性</span> 傷害增加 14%（最多1層）</p><p>再以攻擊力 273% 對目標造成傷害</p><p><br></p><p>［冷卻時間：3回合］</p>",
-    "image": "assets/img/cards/card_103.png",
+    "image": "assets/img/cards/card_103.webp",
     "imageZoom": 1.38,
     "imageOffsetX": 0.46353921474462834,
     "imageOffsetY": 0.16023516974828056,
@@ -2147,7 +2147,7 @@
       "immune_sleep"
     ],
     "ultimateSkill": "<p>使敵方全體受到持續傷害增加 17%（3回合）</p><p>以攻擊力 66% 對目標造成持續傷害（3回合）</p><p>以最大HP 20% 給予自身護盾（1回合）</p><p>使自身受到傷害減少 15%（1回合）</p><p>使自身獲得嘲諷（1回合）</p><p>並變為防禦狀態</p><p><br></p><p>［冷卻時間：3回合］</p>",
-    "image": "assets/img/cards/card_104.png",
+    "image": "assets/img/cards/card_104.webp",
     "imageZoom": 1.37,
     "imageOffsetX": 0.5341131536265407,
     "imageOffsetY": 0.28284640308603876,
@@ -2169,7 +2169,7 @@
       "immune_silence"
     ],
     "ultimateSkill": "<p>使目標獲得嘲諷效果（1回合）</p><p>使目標受到傷害增加 17%（最多1層）</p><p>使我方全體必殺技傷害增加 26%（最多1層）</p><p>再以攻擊力 191% 對敵方站位 1、2 造成傷害</p><p><br></p><p>［冷卻時間：4回合］</p>",
-    "image": "assets/img/cards/card_105.png",
+    "image": "assets/img/cards/card_105.webp",
     "imageZoom": 1.38,
     "imageOffsetX": 0.40732499301513997,
     "imageOffsetY": 0.2503915369687495,
@@ -2191,7 +2191,7 @@
       "immune_silence"
     ],
     "ultimateSkill": "<p>使我方全體受到治療量增加 26%（2回合）</p><p>使除自身以外我方全體觸發技傷害增加 31%（2回合）</p><p>並以自身基礎攻擊力 69% 使我方攻擊力增加（2回合）</p><p>再以攻擊力 21% 對我方全體進行治療</p><p><br></p><p>［冷卻時間：3回合］</p>",
-    "image": "assets/img/cards/card_106.png",
+    "image": "assets/img/cards/card_106.webp",
     "imageZoom": 1.33,
     "imageOffsetX": 0.6055712095563357,
     "imageOffsetY": 0.38966125434183135,
@@ -2212,7 +2212,7 @@
       "immune_silence"
     ],
     "ultimateSkill": "<p>以攻擊力 50% 對目標造成傷害</p><p>使自身獲得「攻擊時，觸發『以攻擊力 73% 對敵方站位 1、3、5 造成傷害』（4回合）」</p><p><br></p><p>［冷卻時間：4回合］</p>",
-    "image": "assets/img/cards/card_107.png",
+    "image": "assets/img/cards/card_107.webp",
     "imageZoom": 1.53,
     "imageOffsetX": 0.525982054771586,
     "imageOffsetY": 0.3231300561445384,
@@ -2235,7 +2235,7 @@
       "immune_sleep"
     ],
     "ultimateSkill": "<p>使自身獲得「被攻擊時，觸發『以攻擊力 27% 對自身進行治療』（4回合）」</p><p>使我方全體攻擊力增加 28%（4回合）</p><p>以攻擊力 135% 對我方全體進行治療</p><p>再以攻擊力 42% 對我方全體進行持續治療（4回合）</p><p>使自身必殺技傷害增加 40%（4回合）</p><p>再使除自身以外我方全體必殺技傷害增加 40%（1回合）</p><p><br></p><p>［冷卻時間：4回合］</p>",
-    "image": "assets/img/cards/card_108.png",
+    "image": "assets/img/cards/card_108.webp",
     "imageZoom": 1.39,
     "imageOffsetX": 0.506406424001118,
     "imageOffsetY": 0.33820181380955583,
@@ -2256,7 +2256,7 @@
       "immune_silence"
     ],
     "ultimateSkill": "<p>使我方全體造成持續傷害增加 34%（4回合）</p><p>以自身基礎攻擊力 40% 使我方全體攻擊力增加（1回合）</p><p>以自身基礎攻擊力 33% 使我方全體攻擊力增加（4回合）</p><p>使我方全體 <span style=\"color: rgb(226, 96, 79);\">定位攻擊與妨礙</span> 的角色獲得「攻擊時，觸發『以攻擊力 43% 對目標造成持續傷害（1回合）』（4回合）」</p><p><br></p><p>［冷卻時間：4回合］</p>",
-    "image": "assets/img/cards/card_109.png",
+    "image": "assets/img/cards/card_109.webp",
     "imageZoom": 1.47,
     "imageOffsetX": 0.5277796602097081,
     "imageOffsetY": 0.18026142226184177,
@@ -2277,7 +2277,7 @@
       "immune_stun"
     ],
     "ultimateSkill": "<p>使自身攻擊力增加 34%（3回合）</p><p>以攻擊力 100% 對目標造成傷害</p><p>再使自身獲得「普攻時，追加『使自身普攻傷害增加18%（最多4層），再以攻擊力 87% 對目標進行追擊』（3回合）」</p><p><br></p><p>［冷卻時間：3回合］</p>",
-    "image": "assets/img/cards/card_110.png",
+    "image": "assets/img/cards/card_110.webp",
     "imageZoom": 1.44,
     "imageOffsetX": 0.4843043828517158,
     "imageOffsetY": 0.3085813548239187,
@@ -2297,7 +2297,7 @@
       "immune_silence"
     ],
     "ultimateSkill": "<p>使自身必殺技傷害增加 30%（最多2層）</p><p>以攻擊力 273% 對目標造成傷害</p><p>並使自身獲得『《勇氣》』（50回合）（不可重複獲得）</p><p>若自身已擁有《勇氣》時，則必殺後再使自身獲得『《祝福》』（50回合）（不可重複獲得）</p><p><br></p><p>［冷卻時間：3回合］</p><p><br></p><p><span style=\"color: rgb(201, 164, 92);\">《勇氣》：必殺時可額外觸發「以攻擊力 125% 對目標造成傷害」</span></p><p><span style=\"color: rgb(201, 164, 92);\">《祝福》：必殺時可額外觸發「以攻擊力 150% 對目標造成傷害」</span></p>",
-    "image": "assets/img/cards/card_111.png",
+    "image": "assets/img/cards/card_111.webp",
     "imageZoom": 1.23,
     "imageOffsetX": 0.49284034968371754,
     "imageOffsetY": 0.4890815286117116,
@@ -2319,7 +2319,7 @@
       "immune_stun"
     ],
     "ultimateSkill": "<p>使自身普攻傷害增加 68%（最多1層）</p><p>使目標受到 <span style=\"color: rgb(226, 96, 79);\">定位妨礙</span> 的角色傷害增加 22%（3回合）</p><p>以攻擊力 100% 對目標造成傷害</p><p>再使自身獲得「普攻時，追加『以攻擊力 87% 對目標進行追擊』（3回合）」</p><p><br></p><p>［冷卻時間：3回合］</p>",
-    "image": "assets/img/cards/card_112.png",
+    "image": "assets/img/cards/card_112.webp",
     "imageZoom": 1.39,
     "imageOffsetX": 0.5576302693283613,
     "imageOffsetY": 0.5961093718134753,
@@ -2340,7 +2340,7 @@
       "immune_silence"
     ],
     "ultimateSkill": "<p>使我方全體必殺技傷害增加 26%（1回合）</p><p>使自身攻擊力增加 34%（3回合）</p><p>並以攻擊力 100% 對我方全體進行治療</p><p>再以攻擊力 47% 進行持續治療（3回合）</p><p><br></p><p>［冷卻時間：3回合］</p>",
-    "image": "assets/img/cards/card_113.png",
+    "image": "assets/img/cards/card_113.webp",
     "imageZoom": 1.56,
     "imageOffsetX": 0.5467468565302208,
     "imageOffsetY": 0.3612823835010464,
@@ -2361,7 +2361,7 @@
       "immune_sleep"
     ],
     "ultimateSkill": "<p>以當前HP 20% 對自身造成真實傷害</p><p>使我方全體 <span style=\"color: rgb(226, 96, 79);\">定位攻擊與妨礙</span> 角色普攻傷害增加 40%（2回合）</p><p>使我方全體造成傷害增加 26%（2回合）</p><p>再以自身基礎攻擊力 49% 使我方全體攻擊力增加（3回合）</p><p><br></p><p>［冷卻時間：3回合］</p>",
-    "image": "assets/img/cards/card_114.png",
+    "image": "assets/img/cards/card_114.webp",
     "imageZoom": 1.47,
     "imageOffsetX": 0.5148341773439982,
     "imageOffsetY": 0.37230559350984405,
@@ -2384,7 +2384,7 @@
       "immune_silence"
     ],
     "ultimateSkill": "<p>使我方全體 <span style=\"color: rgb(226, 96, 79);\">定位攻擊與妨礙</span> 的角色獲得「攻擊時，觸發『使目標受到觸發技傷害增加 25%（1回合）』（4回合）」</p><p>以攻擊力 15% 對敵方站位 1、3、5 造成傷害</p><p>再使自身獲得「攻擊時，觸發『以攻擊力47%對敵方站位 1、3、5 造成傷害』（4回合）」</p><p><br></p><p>［冷卻時間：4回合］</p>",
-    "image": "assets/img/cards/card_115.png",
+    "image": "assets/img/cards/card_115.webp",
     "imageZoom": 1.45,
     "imageOffsetX": 0.5073618143282783,
     "imageOffsetY": 0.2774983124028237,
@@ -2405,7 +2405,7 @@
       "immune_sleep"
     ],
     "ultimateSkill": "<p>解除敵方全體防禦狀態</p><p>以攻擊力 119% 對敵方站位 1、2、4、5 造成傷害</p><p>再以攻擊力 60% 對我方全體進行持續治療（2回合）</p><p><br></p><p>［冷卻時間：3回合］</p>",
-    "image": "assets/img/cards/card_116.png",
+    "image": "assets/img/cards/card_116.webp",
     "imageZoom": 1.43,
     "imageOffsetX": 0.5785345666586386,
     "imageOffsetY": 0.42825203272397255,
@@ -2426,7 +2426,7 @@
       "immune_stun"
     ],
     "ultimateSkill": "<p>使我方全體受到傷害減少 7%（3回合）</p><p>使敵方全體受到傷害增加 26%（1回合）</p><p>以自身基礎攻擊力 137% 使我方全體攻擊力增加（1回合）</p><p><br></p><p>［冷卻時間：3回合］</p>",
-    "image": "assets/img/cards/card_117.png",
+    "image": "assets/img/cards/card_117.webp",
     "imageZoom": 1.38,
     "imageOffsetX": 0.530213740075094,
     "imageOffsetY": 0.3214565608805095,
@@ -2447,7 +2447,7 @@
       "immune_silence"
     ],
     "ultimateSkill": "<p>使我方全體普攻傷害增加 40%（3回合）</p><p>再以攻擊力 50% 對目標造成傷害</p><p>再使自身獲得「普攻時，追加『以攻擊力 99% 目標進行追擊』（3回合）」</p><p>及「普攻時，追加『以攻擊力 159% 對目標進行追擊』（2回合）」</p><p><br></p><p>［冷卻時間：4回合］</p>",
-    "image": "assets/img/cards/card_118.png",
+    "image": "assets/img/cards/card_118.webp",
     "imageZoom": 1.31,
     "imageOffsetX": 0.42161601707893925,
     "imageOffsetY": 0.3119817214952565,
@@ -2468,7 +2468,7 @@
       "immune_stun"
     ],
     "ultimateSkill": "<p>使自身攻擊力增加 34%（最多1層）</p><p>並使我方全體造成持續傷害增加 34%（最多1層）</p><p>再以攻擊 182% 對目標造成持續傷害（3回合）</p><p><br></p><p>［冷卻時間：3回合］</p>",
-    "image": "assets/img/cards/card_119.png",
+    "image": "assets/img/cards/card_119.webp",
     "imageZoom": 1.26,
     "imageOffsetX": 0.41601715333616784,
     "imageOffsetY": 0.46402410216640766,
@@ -2489,7 +2489,7 @@
       "immune_silence"
     ],
     "ultimateSkill": "<p>使我方全體造成傷害增加 17%（2回合）</p><p>以攻擊力 406% 對目標造成傷害</p><p>再清除由激發潛能獲得的全部【必殺技傷害增加】層數</p><p><br></p><p>［冷卻時間：4回合］</p>",
-    "image": "assets/img/cards/card_120.png",
+    "image": "assets/img/cards/card_120.webp",
     "imageZoom": 1.45,
     "imageOffsetX": 0.40420279000219794,
     "imageOffsetY": 0.37864566968241115,
@@ -2510,7 +2510,7 @@
       "immune_silence"
     ],
     "ultimateSkill": "<p>使目標攻擊力減少15%（2回合）</p><p>以攻擊力100%對目標造成傷害</p><p>使我方全體 <span style=\"color: rgb(226, 96, 79);\">定位為攻擊、妨礙</span> 的角色獲得吸血效果 51%（4回合）</p><p>再使我方全體 <span style=\"color: rgb(226, 96, 79);\">定位為守護、治療、輔助</span> 的角色受到治療量增加 34%（4回合）</p><p>再以自身最大 HP 45% 對我方全體進行治療</p><p>並變為防禦狀態</p><p><br></p><p>［冷卻時間：4回合］</p>",
-    "image": "assets/img/cards/card_121.png",
+    "image": "assets/img/cards/card_121.webp",
     "imageZoom": 1.15,
     "imageOffsetX": 0.4280331577911809,
     "imageOffsetY": 0.20393390103437187,
@@ -2530,7 +2530,7 @@
       "immune_stun"
     ],
     "ultimateSkill": "<p>使我方全體受到治療量增加 17%（4回合）</p><p>以攻擊力 80% 對我方全體進行治療</p><p>再以攻擊力 20% 對我方全體進行持續治療（4回合）</p><p>使自身獲得「攻擊時，觸發『以攻擊力 61% 對我方全體進行治療』（4回合）」</p><p><br></p><p>［冷卻時間：4回合］</p>",
-    "image": "assets/img/cards/card_122.png",
+    "image": "assets/img/cards/card_122.webp",
     "imageZoom": 1.37,
     "imageOffsetX": 0.4655673957632643,
     "imageOffsetY": 0.42156773334699904,
@@ -2550,7 +2550,7 @@
       "immune_sleep"
     ],
     "ultimateSkill": "<p>以自身基礎攻擊力 44% 使我方全體攻擊力增加（4回合）</p><p>使我方全體造成傷害增加 17%（4回合）</p><p>再使我方全體普攻傷害增加 34%（4回合）</p><p><br></p><p>［冷卻時間：4回合］</p>",
-    "image": "assets/img/cards/card_123.png",
+    "image": "assets/img/cards/card_123.webp",
     "imageZoom": 1.34,
     "imageOffsetX": 0.5863624002028418,
     "imageOffsetY": 0.31648366692336416,
@@ -2573,7 +2573,7 @@
       "immune_stun"
     ],
     "ultimateSkill": "<p>使敵方全體受到傷害增加 8.5%（最多2層）</p><p>使我方全體 <span style=\"color: rgb(226, 96, 79);\">定位攻擊與妨礙</span> 的角色觸發技傷害增加 42.5%（3回合）</p><p>以攻擊力 10% 對敵方站位 1、2、3、4、5 造成傷害</p><p>再使自身獲得「攻擊時，觸發『以攻擊力31%對敵方站位 1、2、3、4、5 造成傷害』（3回合）」</p><p><br></p><p>［冷卻時間：3回合］</p>",
-    "image": "assets/img/cards/card_124.png",
+    "image": "assets/img/cards/card_124.webp",
     "imageZoom": 1.3,
     "imageOffsetX": 0.4535398774138785,
     "imageOffsetY": 0.3106167355873879,
