@@ -2389,5 +2389,26 @@
     "imageOffsetX": 0.5073618143282783,
     "imageOffsetY": 0.2774983124028237,
     "sortOrder": 115
+  },
+  {
+    "id": "card_116",
+    "name": "厄海鱗光",
+    "characterId": "char_04",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "dark",
+    "cd": 3,
+    "tags": [
+      "break_shield",
+      "target_pos",
+      "hot",
+      "immune_sleep"
+    ],
+    "ultimateSkill": "<p>解除敵方全體防禦狀態</p><p>以攻擊力 119% 對敵方站位 1、2、4、5 造成傷害</p><p>再以攻擊力 60% 對我方全體進行持續治療（2回合）</p><p><br></p><p>［冷卻時間：3回合］</p>",
+    "image": "assets/img/cards/card_116.png",
+    "imageZoom": 1.43,
+    "imageOffsetX": 0.5785345666586386,
+    "imageOffsetY": 0.42825203272397255,
+    "sortOrder": 116
   }
 ]
