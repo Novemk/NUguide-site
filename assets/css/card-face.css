@@ -66,8 +66,8 @@
 .card-face-gradient {
   position: absolute;
   left: 0; right: 0; bottom: 0;
-  height: 33%;
-  background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.9) 78%);
+  height: 22%;
+  background: linear-gradient(to bottom, transparent, rgba(25,23,38,0.9) 78%);
   pointer-events: none;
 }
 .card-face-rarity {
