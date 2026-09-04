@@ -2751,5 +2751,24 @@
     "imageOffsetX": 0.5277039007092199,
     "imageOffsetY": 0.4047952083786561,
     "sortOrder": 0.72
+  },
+  {
+    "id": "card_134",
+    "name": "太陽城主",
+    "characterId": "char_11",
+    "rarityId": "sr",
+    "classId": "atk",
+    "elementId": "fire",
+    "cd": 3,
+    "tags": [
+      "atk_buff_enemy",
+      "break_shield"
+    ],
+    "ultimateSkill": "<p>使目標受到傷害增加12%（2回合）</p><p>再以攻擊力273%對目標造成傷害</p><p><br></p><p>［冷卻時間：3回合］</p><p><br></p><p><span style=\"color: rgb(201, 164, 92);\">普攻：解除目標防禦狀態，再以攻擊力100%對目標造成傷。</span></p>",
+    "image": "assets/img/cards/card_134.webp",
+    "imageZoom": 1.41,
+    "imageOffsetX": 0.49985342583487197,
+    "imageOffsetY": 0.23403397387831923,
+    "sortOrder": 0.8
   }
 ]
