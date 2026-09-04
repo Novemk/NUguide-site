@@ -1893,5 +1893,27 @@
     "imageOffsetX": 0.4254454450267398,
     "imageOffsetY": 0.20103851625637592,
     "sortOrder": 92
+  },
+  {
+    "id": "card_093",
+    "name": "翦咒銀芒",
+    "characterId": "char_10",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "wood",
+    "cd": 6,
+    "tags": [
+      "normal_atk",
+      "own_dmg_up",
+      "own_normal_dmg_up",
+      "followup_atk",
+      "immune_stun"
+    ],
+    "ultimateSkill": "<p>使自身普攻傷害增加 68%（最多1層）</p><p>使自身攻擊力增加 51%（4回合）</p><p>以攻擊力 125% 對目標造成傷害</p><p>並使自身獲得「普攻時，追加『以攻擊力 130% 對目標進行追擊』（4回合）」</p><p><br></p><p>［冷卻時間：6 回合］</p>",
+    "image": "assets/img/cards/card_093.png",
+    "imageZoom": 1.47,
+    "imageOffsetX": 0.45257791909753864,
+    "imageOffsetY": 0.442159416444741,
+    "sortOrder": 93
   }
 ]
