@@ -2324,5 +2324,26 @@
     "imageOffsetX": 0.5576302693283613,
     "imageOffsetY": 0.5961093718134753,
     "sortOrder": 112
+  },
+  {
+    "id": "card_113",
+    "name": "破浪的決策者",
+    "characterId": "char_11",
+    "rarityId": "ssr",
+    "classId": "heal",
+    "elementId": "dark",
+    "cd": 3,
+    "tags": [
+      "self_burst_dmg_up",
+      "heal_tag",
+      "hot",
+      "immune_silence"
+    ],
+    "ultimateSkill": "<p>使我方全體必殺技傷害增加 26%（1回合）</p><p>使自身攻擊力增加 34%（3回合）</p><p>並以攻擊力 100% 對我方全體進行治療</p><p>再以攻擊力 47% 進行持續治療（3回合）</p><p><br></p><p>［冷卻時間：3回合］</p>",
+    "image": "assets/img/cards/card_113.png",
+    "imageZoom": 1.56,
+    "imageOffsetX": 0.5467468565302208,
+    "imageOffsetY": 0.3612823835010464,
+    "sortOrder": 113
   }
 ]
