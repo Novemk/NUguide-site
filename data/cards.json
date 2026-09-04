@@ -2064,5 +2064,27 @@
     "imageOffsetX": 0.4803389126305793,
     "imageOffsetY": 0.38891711513649363,
     "sortOrder": 100
+  },
+  {
+    "id": "card_101",
+    "name": "冥火引渡",
+    "characterId": "char_05",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "light",
+    "cd": 4,
+    "tags": [
+      "dot",
+      "target_pos",
+      "enemy_dot_dmg_up",
+      "atk_buff_enemy",
+      "immune_stun"
+    ],
+    "ultimateSkill": "<p>使敵方全體受到持續傷害增加 34%（1回合）</p><p>使敵方站位 2、4 獲得「被攻擊時，觸發『使自身受到傷害增加 4%（1回合）』（1回合）」</p><p>再以攻擊力 54% 對敵方站位 2、4 造成傷害</p><p>以攻擊力 180% 對敵方站位 2、4 造成持續傷害（1回合）</p><p><br></p><p>［冷卻時間：4回合］</p>",
+    "image": "assets/img/cards/card_101.png",
+    "imageZoom": 1.57,
+    "imageOffsetX": 0.5051097832127207,
+    "imageOffsetY": 0.30801109242480246,
+    "sortOrder": 101
   }
 ]
