@@ -2431,5 +2431,26 @@
     "imageOffsetX": 0.530213740075094,
     "imageOffsetY": 0.3214565608805095,
     "sortOrder": 117
+  },
+  {
+    "id": "card_118",
+    "name": "沉穩不移的抗衡",
+    "characterId": "char_05",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "dark",
+    "cd": 4,
+    "tags": [
+      "normal_atk",
+      "followup_atk",
+      "team_normal_dmg_up",
+      "immune_silence"
+    ],
+    "ultimateSkill": "<p>使我方全體普攻傷害增加 40%（3回合）</p><p>再以攻擊力 50% 對目標造成傷害</p><p>再使自身獲得「普攻時，追加『以攻擊力 99% 目標進行追擊』（3回合）」</p><p>及「普攻時，追加『以攻擊力 159% 對目標進行追擊』（2回合）」</p><p><br></p><p>［冷卻時間：4回合］</p>",
+    "image": "assets/img/cards/card_118.png",
+    "imageZoom": 1.31,
+    "imageOffsetX": 0.42161601707893925,
+    "imageOffsetY": 0.3119817214952565,
+    "sortOrder": 118
   }
 ]
