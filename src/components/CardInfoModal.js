@@ -63,8 +63,8 @@ export function showCardInfoModal(card, maps) {
 
   const metaRow = document.createElement('div');
   metaRow.className = 'card-info-meta';
-  if (cls) metaRow.innerHTML += `<img class="card-info-icon" src="${resolveAsset(cls.icon)}" alt="${cls.label}" title="定位：${cls.label}">`;
-  if (elem) metaRow.innerHTML += `<img class="card-info-icon" src="${resolveAsset(elem.icon)}" alt="${elem.label}" title="屬性：${elem.label}">`;
+  if (cls) metaRow.innerHTML += `<img class="card-info-icon" src="${resolveAsset(cls.icon)}" alt="${cls.label}" title="定位：${cls.label}" draggable="false">`;
+  if (elem) metaRow.innerHTML += `<img class="card-info-icon" src="${resolveAsset(elem.icon)}" alt="${elem.label}" title="屬性：${elem.label}" draggable="false">`;
   metaRow.innerHTML += `<span class="card-info-cd">CD：${card.cd}</span>`;
 
   const ultimateWrap = document.createElement('div');

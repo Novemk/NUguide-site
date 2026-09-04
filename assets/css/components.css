@@ -234,6 +234,7 @@ hr.ql-divider {
   height: 30px;
   object-fit: contain;
   filter: drop-shadow(0 1px 3px rgba(0,0,0,0.5));
+  -webkit-user-drag: none;
 }
 .card-info-cd { font-size: 0.9rem; color: var(--text-dim); margin-left: 4px; }
 
