@@ -1,21 +1,5 @@
 [
   {
-    "stageId": "stage_8_2",
-    "teams": [
-      {
-        "name": "新隊伍",
-        "note": "",
-        "members": [
-          "card_002",
-          "card_001",
-          null,
-          null,
-          null
-        ]
-      }
-    ]
-  },
-  {
     "stageId": "stage_7_5",
     "teams": [
       {
@@ -27,6 +11,22 @@
           "card_011",
           "card_015",
           "card_019"
+        ]
+      }
+    ]
+  },
+  {
+    "stageId": "stage_8_2",
+    "teams": [
+      {
+        "name": "學奧+SR",
+        "note": "",
+        "members": [
+          "card_036",
+          "card_132",
+          "card_133",
+          "card_125",
+          "card_127"
         ]
       }
     ]
