@@ -123,13 +123,11 @@
       }
     ],
     "guide": "<p>全SR可以過</p><p><br></p><p>觸發隊專場，Wave 2的木屬劫匪才是真正的敵人</p><p>需要帶坦，推薦帶觸發角</p><p>沒有觸發角就推薦3/6CD角、易傷角、火屬角或多輔助</p><hr class=\"ql-divider\"><p>Wave 1：故事簡介，不用打</p><p><br></p><p>Wave 2：重點打劫匪（木屬），劫匪狀態：</p><p>．每回合受到 普攻 傷害減少3%（最多30層）</p><p>．每回合受到 必殺 傷害減少4%（最多30層）</p><p>．每回合受到 持續 傷害減少6%（最多30層）</p><p><br></p><p>Wave 3：故事結束，不用打</p>",
-    "recommendedTags": [
-      "trigger"
-    ],
+    "recommendedTags": [],
     "hidden": false,
     "roundTable": [
       {
-        "col1": "Wave1",
+        "col1": "<span style=\"color: rgb(201, 164, 92);\">Wave1</span>",
         "col2": ""
       },
       {
@@ -141,7 +139,7 @@
         "col2": ""
       },
       {
-        "col1": "<span style=\"font-size: 14.4px;\">Wave 2（6CD機制）</span>",
+        "col1": "<span style=\"font-size: 14.4px; color: rgb(201, 164, 92);\">Wave 2（6CD機制）</span>",
         "col2": ""
       },
       {
@@ -165,7 +163,7 @@
         "col2": ""
       },
       {
-        "col1": "<span style=\"font-size: 14.4px;\">Wave 3</span>",
+        "col1": "<span style=\"font-size: 14.4px; color: rgb(201, 164, 92);\">Wave 3</span>",
         "col2": ""
       },
       {
