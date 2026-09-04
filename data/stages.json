@@ -2,24 +2,44 @@
   {
     "id": "stage_8_2",
     "chapter": "忘卻遺跡 第二十二季",
-    "order": "1-1",
-    "title": "共同陪伴之探ＡＡＡ",
+    "order": "8-1",
+    "title": "帆潮小鎮之探",
     "enemies": [
       {
-        "name": "旋轉木馬",
-        "note": "自身受到的護盾量，每回合持續增加。",
+        "name": "自信的居民",
+        "note": "",
+        "elementId": "fire",
+        "image": "assets/img/enemies/stage_8_2_0_自信的居民.webp",
+        "imageZoom": 1.24,
+        "imageOffsetX": 0.4950986925741105,
+        "imageOffsetY": 0.5132211538461539
+      },
+      {
+        "name": "熱情的居民",
+        "note": "",
         "elementId": "water",
-        "image": "assets/img/enemies/stage_8_2_0_旋轉木馬.png",
-        "imageZoom": 1.23,
-        "imageOffsetX": 0.6027371522400354,
-        "imageOffsetY": 0.5494230411839586
+        "image": "assets/img/enemies/stage_8_2_1_熱情的居民.webp",
+        "imageZoom": 1.22,
+        "imageOffsetX": 0.5261501498989293,
+        "imageOffsetY": 0.45486378169574027
+      },
+      {
+        "name": "活潑的居民",
+        "note": "",
+        "elementId": "wood",
+        "image": "assets/img/enemies/stage_8_2_2_活潑的居民.webp",
+        "imageZoom": 1.24,
+        "imageOffsetX": 0.5975236357565221,
+        "imageOffsetY": 0.5506117769127893
       }
     ],
-    "guide": "<p>【挑戰核心】</p><p>當旋轉木馬受到《侵蝕》時，會獲得高額的護盾效果，須及時突破護盾以解除蓄力，否則將受到高額全體傷害，並永久大幅降低受到的治療量。</p><p>且每特定回合，旋轉木馬還會進行《木馬協奏曲》的全體攻擊，因此若蓄力解除失敗達至2次，將難以應對挑戰。</p><p><br></p><hr class=\"ql-divider\"><p><br></p><p><br></p><p>【隊伍建議】</p><p>有利快速通關的隊伍，推薦攜帶必殺技3CD且高爆發型的角色。</p>",
+    "guide": "<p>每回合都要打一下每個粉絲，否則粉絲會減傷+加攻</p><p>最後一回合必須把三位粉絲同時打到1%，否則粉絲會補血至15%</p><p>必須在16回合或以內打完，否則第16回合我方全滅</p><p><br></p><p>推薦帶至少1隻群攻角／分岔攻擊手</p><p><span style=\"color: rgb(226, 96, 79);\">留意綠色粉絲會幫血量最低的粉絲減傷20%（最多2層）</span></p><p>可以帶一隻單攻角，令其中一位粉絲保持壓在三粉絲中的血量最低，只讓他一個人吃盡減傷</p><p><br></p><p>本關沒什麼特殊機制，可以全程攻擊就不寫回合表了。</p>",
     "recommendedTags": [
-      "burst"
+      "aoe",
+      "target_pos"
     ],
-    "hidden": false
+    "hidden": false,
+    "roundTable": []
   },
   {
     "id": "stage_7_5",
