@@ -2240,5 +2240,343 @@
     "imageOffsetX": 0.506406424001118,
     "imageOffsetY": 0.33820181380955583,
     "sortOrder": 108
+  },
+  {
+    "id": "card_109",
+    "name": "偏執者的至情",
+    "characterId": "char_05",
+    "rarityId": "ssr",
+    "classId": "buf",
+    "elementId": "wood",
+    "cd": 4,
+    "tags": [
+      "team_dot_dmg_up",
+      "atk_buff_self",
+      "proc_followup",
+      "immune_silence"
+    ],
+    "ultimateSkill": "<p>使我方全體造成持續傷害增加 34%（4回合）</p><p>以自身基礎攻擊力 40% 使我方全體攻擊力增加（1回合）</p><p>以自身基礎攻擊力 33% 使我方全體攻擊力增加（4回合）</p><p>使我方全體 <span style=\"color: rgb(226, 96, 79);\">定位攻擊與妨礙</span> 的角色獲得「攻擊時，觸發『以攻擊力 43% 對目標造成持續傷害（1回合）』（4回合）」</p><p><br></p><p>［冷卻時間：4回合］</p>",
+    "image": "assets/img/cards/card_109.png",
+    "imageZoom": 1.47,
+    "imageOffsetX": 0.5277796602097081,
+    "imageOffsetY": 0.18026142226184177,
+    "sortOrder": 109
+  },
+  {
+    "id": "card_110",
+    "name": "向陽者的私心",
+    "characterId": "char_10",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "fire",
+    "cd": 3,
+    "tags": [
+      "normal_atk",
+      "followup_atk",
+      "own_dmg_up",
+      "immune_stun"
+    ],
+    "ultimateSkill": "<p>使自身攻擊力增加 34%（3回合）</p><p>以攻擊力 100% 對目標造成傷害</p><p>再使自身獲得「普攻時，追加『使自身普攻傷害增加18%（最多4層），再以攻擊力 87% 對目標進行追擊』（3回合）」</p><p><br></p><p>［冷卻時間：3回合］</p>",
+    "image": "assets/img/cards/card_110.png",
+    "imageZoom": 1.44,
+    "imageOffsetX": 0.4843043828517158,
+    "imageOffsetY": 0.3085813548239187,
+    "sortOrder": 110
+  },
+  {
+    "id": "card_111",
+    "name": "險海的守望者",
+    "characterId": "char_07",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "wood",
+    "cd": 3,
+    "tags": [
+      "burst",
+      "own_burst_dmg_up",
+      "immune_silence"
+    ],
+    "ultimateSkill": "<p>使自身必殺技傷害增加 30%（最多2層）</p><p>以攻擊力 273% 對目標造成傷害</p><p>並使自身獲得『《勇氣》』（50回合）（不可重複獲得）</p><p>若自身已擁有《勇氣》時，則必殺後再使自身獲得『《祝福》』（50回合）（不可重複獲得）</p><p><br></p><p>［冷卻時間：3回合］</p><p><br></p><p><span style=\"color: rgb(201, 164, 92);\">《勇氣》：必殺時可額外觸發「以攻擊力 125% 對目標造成傷害」</span></p><p><span style=\"color: rgb(201, 164, 92);\">《祝福》：必殺時可額外觸發「以攻擊力 150% 對目標造成傷害」</span></p>",
+    "image": "assets/img/cards/card_111.png",
+    "imageZoom": 1.23,
+    "imageOffsetX": 0.49284034968371754,
+    "imageOffsetY": 0.4890815286117116,
+    "sortOrder": 111
+  },
+  {
+    "id": "card_112",
+    "name": "遠眺的行動者",
+    "characterId": "char_09",
+    "rarityId": "ssr",
+    "classId": "debuf",
+    "elementId": "wood",
+    "cd": 3,
+    "tags": [
+      "normal_atk",
+      "followup_atk",
+      "atk_buff_self",
+      "own_normal_dmg_up",
+      "immune_stun"
+    ],
+    "ultimateSkill": "<p>使自身普攻傷害增加 68%（最多1層）</p><p>使目標受到 <span style=\"color: rgb(226, 96, 79);\">定位妨礙</span> 的角色傷害增加 22%（3回合）</p><p>以攻擊力 100% 對目標造成傷害</p><p>再使自身獲得「普攻時，追加『以攻擊力 87% 對目標進行追擊』（3回合）」</p><p><br></p><p>［冷卻時間：3回合］</p>",
+    "image": "assets/img/cards/card_112.png",
+    "imageZoom": 1.39,
+    "imageOffsetX": 0.5576302693283613,
+    "imageOffsetY": 0.5961093718134753,
+    "sortOrder": 112
+  },
+  {
+    "id": "card_113",
+    "name": "破浪的決策者",
+    "characterId": "char_11",
+    "rarityId": "ssr",
+    "classId": "heal",
+    "elementId": "dark",
+    "cd": 3,
+    "tags": [
+      "self_burst_dmg_up",
+      "heal_tag",
+      "hot",
+      "immune_silence"
+    ],
+    "ultimateSkill": "<p>使我方全體必殺技傷害增加 26%（1回合）</p><p>使自身攻擊力增加 34%（3回合）</p><p>並以攻擊力 100% 對我方全體進行治療</p><p>再以攻擊力 47% 進行持續治療（3回合）</p><p><br></p><p>［冷卻時間：3回合］</p>",
+    "image": "assets/img/cards/card_113.png",
+    "imageZoom": 1.56,
+    "imageOffsetX": 0.5467468565302208,
+    "imageOffsetY": 0.3612823835010464,
+    "sortOrder": 113
+  },
+  {
+    "id": "card_114",
+    "name": "沉溺詭夢",
+    "characterId": "char_06",
+    "rarityId": "ssr",
+    "classId": "buf",
+    "elementId": "fire",
+    "cd": 3,
+    "tags": [
+      "self_dmg",
+      "team_normal_dmg_up",
+      "atk_buff_self",
+      "immune_sleep"
+    ],
+    "ultimateSkill": "<p>以當前HP 20% 對自身造成真實傷害</p><p>使我方全體 <span style=\"color: rgb(226, 96, 79);\">定位攻擊與妨礙</span> 角色普攻傷害增加 40%（2回合）</p><p>使我方全體造成傷害增加 26%（2回合）</p><p>再以自身基礎攻擊力 49% 使我方全體攻擊力增加（3回合）</p><p><br></p><p>［冷卻時間：3回合］</p>",
+    "image": "assets/img/cards/card_114.png",
+    "imageZoom": 1.47,
+    "imageOffsetX": 0.5148341773439982,
+    "imageOffsetY": 0.37230559350984405,
+    "sortOrder": 114
+  },
+  {
+    "id": "card_115",
+    "name": "窺視虛妄",
+    "characterId": "char_08",
+    "rarityId": "ssr",
+    "classId": "debuf",
+    "elementId": "light",
+    "cd": 4,
+    "tags": [
+      "target_pos",
+      "trigger",
+      "team_proc_dmg_up",
+      "proc_followup",
+      "enemy_proc_dmg_up",
+      "immune_silence"
+    ],
+    "ultimateSkill": "<p>使我方全體 <span style=\"color: rgb(226, 96, 79);\">定位攻擊與妨礙</span> 的角色獲得「攻擊時，觸發『使目標受到觸發技傷害增加 25%（1回合）』（4回合）」</p><p>以攻擊力 15% 對敵方站位 1、3、5 造成傷害</p><p>再使自身獲得「攻擊時，觸發『以攻擊力47%對敵方站位 1、3、5 造成傷害』（4回合）」</p><p><br></p><p>［冷卻時間：4回合］</p>",
+    "image": "assets/img/cards/card_115.png",
+    "imageZoom": 1.45,
+    "imageOffsetX": 0.5073618143282783,
+    "imageOffsetY": 0.2774983124028237,
+    "sortOrder": 115
+  },
+  {
+    "id": "card_116",
+    "name": "厄海鱗光",
+    "characterId": "char_04",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "dark",
+    "cd": 3,
+    "tags": [
+      "break_shield",
+      "target_pos",
+      "hot",
+      "immune_sleep"
+    ],
+    "ultimateSkill": "<p>解除敵方全體防禦狀態</p><p>以攻擊力 119% 對敵方站位 1、2、4、5 造成傷害</p><p>再以攻擊力 60% 對我方全體進行持續治療（2回合）</p><p><br></p><p>［冷卻時間：3回合］</p>",
+    "image": "assets/img/cards/card_116.png",
+    "imageZoom": 1.43,
+    "imageOffsetX": 0.5785345666586386,
+    "imageOffsetY": 0.42825203272397255,
+    "sortOrder": 116
+  },
+  {
+    "id": "card_117",
+    "name": "迷海信條",
+    "characterId": "char_12",
+    "rarityId": "ssr",
+    "classId": "buf",
+    "elementId": "light",
+    "cd": 3,
+    "tags": [
+      "shield",
+      "atk_buff_enemy",
+      "atk_buff_self",
+      "immune_stun"
+    ],
+    "ultimateSkill": "<p>使我方全體受到傷害減少 7%（3回合）</p><p>使敵方全體受到傷害增加 26%（1回合）</p><p>以自身基礎攻擊力 137% 使我方全體攻擊力增加（1回合）</p><p><br></p><p>［冷卻時間：3回合］</p>",
+    "image": "assets/img/cards/card_117.png",
+    "imageZoom": 1.38,
+    "imageOffsetX": 0.530213740075094,
+    "imageOffsetY": 0.3214565608805095,
+    "sortOrder": 117
+  },
+  {
+    "id": "card_118",
+    "name": "沉穩不移的抗衡",
+    "characterId": "char_05",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "dark",
+    "cd": 4,
+    "tags": [
+      "normal_atk",
+      "followup_atk",
+      "team_normal_dmg_up",
+      "immune_silence"
+    ],
+    "ultimateSkill": "<p>使我方全體普攻傷害增加 40%（3回合）</p><p>再以攻擊力 50% 對目標造成傷害</p><p>再使自身獲得「普攻時，追加『以攻擊力 99% 目標進行追擊』（3回合）」</p><p>及「普攻時，追加『以攻擊力 159% 對目標進行追擊』（2回合）」</p><p><br></p><p>［冷卻時間：4回合］</p>",
+    "image": "assets/img/cards/card_118.png",
+    "imageZoom": 1.31,
+    "imageOffsetX": 0.42161601707893925,
+    "imageOffsetY": 0.3119817214952565,
+    "sortOrder": 118
+  },
+  {
+    "id": "card_119",
+    "name": "伶俐不紊的阻截",
+    "characterId": "char_09",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "dark",
+    "cd": 3,
+    "tags": [
+      "dot",
+      "team_dot_dmg_up",
+      "own_dmg_up",
+      "immune_stun"
+    ],
+    "ultimateSkill": "<p>使自身攻擊力增加 34%（最多1層）</p><p>並使我方全體造成持續傷害增加 34%（最多1層）</p><p>再以攻擊 182% 對目標造成持續傷害（3回合）</p><p><br></p><p>［冷卻時間：3回合］</p>",
+    "image": "assets/img/cards/card_119.png",
+    "imageZoom": 1.26,
+    "imageOffsetX": 0.41601715333616784,
+    "imageOffsetY": 0.46402410216640766,
+    "sortOrder": 119
+  },
+  {
+    "id": "card_120",
+    "name": "春色引武路",
+    "characterId": "char_06",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "fire",
+    "cd": 4,
+    "tags": [
+      "burst",
+      "atk_buff_self",
+      "own_burst_dmg_up",
+      "immune_silence"
+    ],
+    "ultimateSkill": "<p>使我方全體造成傷害增加 17%（2回合）</p><p>以攻擊力 406% 對目標造成傷害</p><p>再清除由激發潛能獲得的全部【必殺技傷害增加】層數</p><p><br></p><p>［冷卻時間：4回合］</p>",
+    "image": "assets/img/cards/card_120.png",
+    "imageZoom": 1.45,
+    "imageOffsetX": 0.40420279000219794,
+    "imageOffsetY": 0.37864566968241115,
+    "sortOrder": 120
+  },
+  {
+    "id": "card_121",
+    "name": "幽谷繚前塵",
+    "characterId": "char_08",
+    "rarityId": "ssr",
+    "classId": "tank",
+    "elementId": "water",
+    "cd": 4,
+    "tags": [
+      "lifesteal",
+      "shield",
+      "heal_tag",
+      "immune_silence"
+    ],
+    "ultimateSkill": "<p>使目標攻擊力減少15%（2回合）</p><p>以攻擊力100%對目標造成傷害</p><p>使我方全體 <span style=\"color: rgb(226, 96, 79);\">定位為攻擊、妨礙</span> 的角色獲得吸血效果 51%（4回合）</p><p>再使我方全體 <span style=\"color: rgb(226, 96, 79);\">定位為守護、治療、輔助</span> 的角色受到治療量增加 34%（4回合）</p><p>再以自身最大 HP 45% 對我方全體進行治療</p><p>並變為防禦狀態</p><p><br></p><p>［冷卻時間：4回合］</p>",
+    "image": "assets/img/cards/card_121.png",
+    "imageZoom": 1.15,
+    "imageOffsetX": 0.4280331577911809,
+    "imageOffsetY": 0.20393390103437187,
+    "sortOrder": 121
+  },
+  {
+    "id": "card_122",
+    "name": "妙手覓丹心",
+    "characterId": "char_10",
+    "rarityId": "ssr",
+    "classId": "heal",
+    "elementId": "water",
+    "cd": 4,
+    "tags": [
+      "heal_tag",
+      "hot",
+      "immune_stun"
+    ],
+    "ultimateSkill": "<p>使我方全體受到治療量增加 17%（4回合）</p><p>以攻擊力 80% 對我方全體進行治療</p><p>再以攻擊力 20% 對我方全體進行持續治療（4回合）</p><p>使自身獲得「攻擊時，觸發『以攻擊力 61% 對我方全體進行治療』（4回合）」</p><p><br></p><p>［冷卻時間：4回合］</p>",
+    "image": "assets/img/cards/card_122.png",
+    "imageZoom": 1.37,
+    "imageOffsetX": 0.4655673957632643,
+    "imageOffsetY": 0.42156773334699904,
+    "sortOrder": 122
+  },
+  {
+    "id": "card_123",
+    "name": "煦陽下的漫遊",
+    "characterId": "char_07",
+    "rarityId": "ssr",
+    "classId": "buf",
+    "elementId": "water",
+    "cd": 4,
+    "tags": [
+      "atk_buff_self",
+      "team_normal_dmg_up",
+      "immune_sleep"
+    ],
+    "ultimateSkill": "<p>以自身基礎攻擊力 44% 使我方全體攻擊力增加（4回合）</p><p>使我方全體造成傷害增加 17%（4回合）</p><p>再使我方全體普攻傷害增加 34%（4回合）</p><p><br></p><p>［冷卻時間：4回合］</p>",
+    "image": "assets/img/cards/card_123.png",
+    "imageZoom": 1.34,
+    "imageOffsetX": 0.5863624002028418,
+    "imageOffsetY": 0.31648366692336416,
+    "sortOrder": 123
+  },
+  {
+    "id": "card_124",
+    "name": "夕暉中的弧光",
+    "characterId": "char_11",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "fire",
+    "cd": 4,
+    "tags": [
+      "target_pos",
+      "trigger",
+      "team_proc_dmg_up",
+      "proc_followup",
+      "break_shield",
+      "immune_stun"
+    ],
+    "ultimateSkill": "<p>使敵方全體受到傷害增加 8.5%（最多2層）</p><p>使我方全體 <span style=\"color: rgb(226, 96, 79);\">定位攻擊與妨礙</span> 的角色觸發技傷害增加 42.5%（3回合）</p><p>以攻擊力 10% 對敵方站位 1、2、3、4、5 造成傷害</p><p>再使自身獲得「攻擊時，觸發『以攻擊力31%對敵方站位 1、2、3、4、5 造成傷害』（3回合）」</p><p><br></p><p>［冷卻時間：3回合］</p>",
+    "image": "assets/img/cards/card_124.png",
+    "imageZoom": 1.3,
+    "imageOffsetX": 0.4535398774138785,
+    "imageOffsetY": 0.3106167355873879,
+    "sortOrder": 124
   }
 ]
