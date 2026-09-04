@@ -2452,5 +2452,26 @@
     "imageOffsetX": 0.42161601707893925,
     "imageOffsetY": 0.3119817214952565,
     "sortOrder": 118
+  },
+  {
+    "id": "card_119",
+    "name": "伶俐不紊的阻截",
+    "characterId": "char_09",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "dark",
+    "cd": 3,
+    "tags": [
+      "dot",
+      "team_dot_dmg_up",
+      "own_dmg_up",
+      "immune_stun"
+    ],
+    "ultimateSkill": "<p>使自身攻擊力增加 34%（最多1層）</p><p>並使我方全體造成持續傷害增加 34%（最多1層）</p><p>再以攻擊 182% 對目標造成持續傷害（3回合）</p><p><br></p><p>［冷卻時間：3回合］</p>",
+    "image": "assets/img/cards/card_119.png",
+    "imageZoom": 1.26,
+    "imageOffsetX": 0.41601715333616784,
+    "imageOffsetY": 0.46402410216640766,
+    "sortOrder": 119
   }
 ]
