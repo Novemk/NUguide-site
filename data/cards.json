@@ -2535,5 +2535,25 @@
     "imageOffsetX": 0.4655673957632643,
     "imageOffsetY": 0.42156773334699904,
     "sortOrder": 122
+  },
+  {
+    "id": "card_123",
+    "name": "煦陽下的漫遊",
+    "characterId": "char_07",
+    "rarityId": "ssr",
+    "classId": "buf",
+    "elementId": "water",
+    "cd": 4,
+    "tags": [
+      "atk_buff_self",
+      "team_normal_dmg_up",
+      "immune_sleep"
+    ],
+    "ultimateSkill": "<p>以自身基礎攻擊力 44% 使我方全體攻擊力增加（4回合）</p><p>使我方全體造成傷害增加 17%（4回合）</p><p>再使我方全體普攻傷害增加 34%（4回合）</p><p><br></p><p>［冷卻時間：4回合］</p>",
+    "image": "assets/img/cards/card_123.png",
+    "imageZoom": 1.34,
+    "imageOffsetX": 0.5863624002028418,
+    "imageOffsetY": 0.31648366692336416,
+    "sortOrder": 123
   }
 ]
