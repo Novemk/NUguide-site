@@ -2240,5 +2240,26 @@
     "imageOffsetX": 0.506406424001118,
     "imageOffsetY": 0.33820181380955583,
     "sortOrder": 108
+  },
+  {
+    "id": "card_109",
+    "name": "偏執者的至情",
+    "characterId": "char_05",
+    "rarityId": "ssr",
+    "classId": "buf",
+    "elementId": "wood",
+    "cd": 4,
+    "tags": [
+      "team_dot_dmg_up",
+      "atk_buff_self",
+      "proc_followup",
+      "immune_silence"
+    ],
+    "ultimateSkill": "<p>使我方全體造成持續傷害增加 34%（4回合）</p><p>以自身基礎攻擊力 40% 使我方全體攻擊力增加（1回合）</p><p>以自身基礎攻擊力 33% 使我方全體攻擊力增加（4回合）</p><p>使我方全體 <span style=\"color: rgb(226, 96, 79);\">定位攻擊與妨礙</span> 的角色獲得「攻擊時，觸發『以攻擊力 43% 對目標造成持續傷害（1回合）』（4回合）」</p><p><br></p><p>［冷卻時間：4回合］</p>",
+    "image": "assets/img/cards/card_109.png",
+    "imageZoom": 1.47,
+    "imageOffsetX": 0.5277796602097081,
+    "imageOffsetY": 0.18026142226184177,
+    "sortOrder": 109
   }
 ]
