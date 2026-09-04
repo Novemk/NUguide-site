@@ -2473,5 +2473,26 @@
     "imageOffsetX": 0.41601715333616784,
     "imageOffsetY": 0.46402410216640766,
     "sortOrder": 119
+  },
+  {
+    "id": "card_120",
+    "name": "春色引武路",
+    "characterId": "char_06",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "fire",
+    "cd": 4,
+    "tags": [
+      "burst",
+      "atk_buff_self",
+      "own_burst_dmg_up",
+      "immune_silence"
+    ],
+    "ultimateSkill": "<p>使我方全體造成傷害增加 17%（2回合）</p><p>以攻擊力 406% 對目標造成傷害</p><p>再清除由激發潛能獲得的全部【必殺技傷害增加】層數</p><p><br></p><p>［冷卻時間：4回合］</p>",
+    "image": "assets/img/cards/card_120.png",
+    "imageZoom": 1.45,
+    "imageOffsetX": 0.40420279000219794,
+    "imageOffsetY": 0.37864566968241115,
+    "sortOrder": 120
   }
 ]
