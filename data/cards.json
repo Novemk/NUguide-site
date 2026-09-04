@@ -2770,5 +2770,23 @@
     "imageOffsetX": 0.49985342583487197,
     "imageOffsetY": 0.23403397387831923,
     "sortOrder": 0.8
+  },
+  {
+    "id": "card_135",
+    "name": "寶石專家",
+    "characterId": "char_12",
+    "rarityId": "sr",
+    "classId": "debuf",
+    "elementId": "dark",
+    "cd": 3,
+    "tags": [
+      "immune_sleep"
+    ],
+    "ultimateSkill": "<p>以攻擊力 273% 對目標造成傷害</p><p>以50%機率造成目標睡眠 2 回合</p><p><br></p><p>［冷卻時間：3回合］</p>",
+    "image": "assets/img/cards/card_135.webp",
+    "imageZoom": 1.48,
+    "imageOffsetX": 0.620796427862409,
+    "imageOffsetY": 0.2586255499480337,
+    "sortOrder": 0.81
   }
 ]
