@@ -2673,5 +2673,25 @@
     "imageOffsetX": 0.6099167333338062,
     "imageOffsetY": 0.39722756778492635,
     "sortOrder": 0.5
+  },
+  {
+    "id": "card_130",
+    "name": "古森守護者",
+    "characterId": "char_07",
+    "rarityId": "sr",
+    "classId": "atk",
+    "elementId": "wood",
+    "cd": 6,
+    "tags": [
+      "burst",
+      "break_shield",
+      "immune_silence"
+    ],
+    "ultimateSkill": "<p>使目標解除防禦狀態</p><p>再以攻擊力616%對目標造成傷害</p><p><br></p><p>［冷卻時間：6回合］</p>",
+    "image": "assets/img/cards/card_130.webp",
+    "imageZoom": 1.3,
+    "imageOffsetX": 0.5436513210104388,
+    "imageOffsetY": 0.2609094565190542,
+    "sortOrder": 0.6
   }
 ]
