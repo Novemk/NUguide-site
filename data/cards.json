@@ -1850,5 +1850,26 @@
     "imageOffsetX": 0.5178863958270847,
     "imageOffsetY": 0.26808928505548446,
     "sortOrder": 90
+  },
+  {
+    "id": "card_091",
+    "name": "沉影暗語",
+    "characterId": "char_07",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "light",
+    "cd": 4,
+    "tags": [
+      "normal_atk",
+      "enemy_normal_dmg_up",
+      "followup_atk",
+      "immune_stun"
+    ],
+    "ultimateSkill": "<p>使除自身以外我方全體獲得「攻擊時，觸發『使目標受到普攻傷害增加4.5%（最多8層）』（3回合）」</p><p>再使自身獲得「普攻時，追加『以攻擊力49%對目標進行追擊』（4回合）」</p><p>及「普攻時，追加『以攻擊力80%對目標進行追擊』（3回合）」</p><p><br></p><p>［冷卻時間：4回合］</p>",
+    "image": "assets/img/cards/card_091.png",
+    "imageZoom": 1.38,
+    "imageOffsetX": 0.42648408011597744,
+    "imageOffsetY": 0.11722585107728067,
+    "sortOrder": 91
   }
 ]
