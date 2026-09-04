@@ -148,6 +148,7 @@ export function renderCardFace({
     const bimg = document.createElement('img');
     bimg.src = resolveAsset(cls.icon);
     bimg.alt = cls.label;
+    bimg.draggable = false;
     badge.appendChild(bimg);
     face.appendChild(badge);
   }
@@ -159,9 +160,16 @@ export function renderCardFace({
     const bimg = document.createElement('img');
     bimg.src = resolveAsset(element.icon);
     bimg.alt = element.label;
+    bimg.draggable = false;
     badge.appendChild(bimg);
     face.appendChild(badge);
   }
+
+  // Blocks the right-click "另存圖片"/"在新分頁開啟圖片" menu on the
+  // whole card face (artwork + both badges) — a single listener here
+  // covers everything since it's on the shared root, rather than
+  // needing to repeat this on every image individually.
+  face.addEventListener('contextmenu', (e) => e.preventDefault());
 
   return face;
 }
@@ -205,6 +213,8 @@ export function renderCardCrop({
     border.className = `card-face-border ${borderClass}`;
     face.appendChild(border);
   }
+
+  face.addEventListener('contextmenu', (e) => e.preventDefault());
 
   return face;
 }

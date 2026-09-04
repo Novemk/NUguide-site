@@ -237,6 +237,14 @@ hr.ql-divider {
 }
 .card-info-cd { font-size: 0.9rem; color: var(--text-dim); margin-left: 4px; }
 
+/* Card info modal — no text selection anywhere in it (title, meta,
+   必殺技 description, tags); right-click is separately blocked in
+   CardInfoModal.js. Doesn't stop someone determined via devtools, just
+   removes the easy "select all, copy" / "right-click → 另存圖片" path. */
+.card-info-modal-body {
+  user-select: none;
+  -webkit-user-select: none;
+}
 /* The label sits like a tab on top of the description box: rounded top
    corners, square bottom corners, no gap to the box below it. The desc
    box mirrors this — square top-left (so the two shapes fuse into one

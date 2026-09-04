@@ -24,6 +24,8 @@ export function showCardInfoModal(card, maps) {
   const cardTags = tagMap ? (card.tags || []).map((id) => tagMap.get(id)).filter(Boolean) : [];
 
   const body = document.createElement('div');
+  body.className = 'card-info-modal-body';
+  body.addEventListener('contextmenu', (e) => e.preventDefault());
   const wrap = document.createElement('div');
   // align-items:flex-start is the fix here — flex's default (stretch)
   // was forcing the fixed-size thumbnail to stretch to match whatever
