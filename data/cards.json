@@ -2870,5 +2870,26 @@
     "imageOffsetX": 0.5363602891931268,
     "imageOffsetY": 0.46050226372143527,
     "sortOrder": 74.5
+  },
+  {
+    "id": "card_140",
+    "name": "疾走☆躍動月光",
+    "characterId": "char_09",
+    "rarityId": "sr",
+    "classId": "atk",
+    "elementId": "light",
+    "cd": 4,
+    "tags": [
+      "normal_atk",
+      "own_normal_dmg_up",
+      "followup_atk",
+      "immune_silence"
+    ],
+    "ultimateSkill": "<p>使自身普攻傷害增加 54%（4回合）</p><p>以攻擊力 100% 對目標造成傷害</p><p>再使自身獲得「普攻時，追加『以攻擊力 82% 對目標進行追擊』（4回合）」</p><p><br></p><p>［冷卻時間：4回合］</p>",
+    "image": "assets/img/cards/card_140.webp",
+    "imageZoom": 1.36,
+    "imageOffsetX": 0.512975305944056,
+    "imageOffsetY": 0.5000229769487136,
+    "sortOrder": 89.5
   }
 ]
