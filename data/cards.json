@@ -2108,5 +2108,27 @@
     "imageOffsetX": 0.5131993371759426,
     "imageOffsetY": 0.3951160365658896,
     "sortOrder": 102
+  },
+  {
+    "id": "card_103",
+    "name": "踏破怯心的勇氣",
+    "characterId": "char_04",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "light",
+    "cd": 4,
+    "tags": [
+      "burst",
+      "own_burst_dmg_up",
+      "own_dmg_up",
+      "enemy_elem_dmg_up",
+      "immune_stun"
+    ],
+    "ultimateSkill": "<p>使自身必殺技傷害增加 52%（1回合）</p><p>使自身造成傷害增加 34%（最多1層）</p><p>使目標受到 <span style=\"color: rgb(79, 200, 176);\">光屬性</span> 傷害增加 14%（最多1層）</p><p>再以攻擊力 273% 對目標造成傷害</p><p><br></p><p>［冷卻時間：3回合］</p>",
+    "image": "assets/img/cards/card_103.png",
+    "imageZoom": 1.38,
+    "imageOffsetX": 0.46353921474462834,
+    "imageOffsetY": 0.16023516974828056,
+    "sortOrder": 103
   }
 ]
