@@ -2022,5 +2022,26 @@
     "imageOffsetX": 0.5078458585741211,
     "imageOffsetY": 0.09207948692984053,
     "sortOrder": 98
+  },
+  {
+    "id": "card_099",
+    "name": "熱舞☆絢爛飛躍",
+    "characterId": "char_09",
+    "rarityId": "ssr",
+    "classId": "buf",
+    "elementId": "wood",
+    "cd": 4,
+    "tags": [
+      "target_pos",
+      "self_burst_dmg_up",
+      "atk_buff_self",
+      "immune_sleep"
+    ],
+    "ultimateSkill": "<p>使除自身以外我方全體必殺技傷害增加 25%（1回合）</p><p>以自身基礎攻擊力 173% 使我方全體攻擊力增加（1回合）</p><p>再以攻擊力 20% 對敵方站位 1、2、3、4、5 造成傷害</p><p><br></p><p>［冷卻時間：4回合］</p>",
+    "image": "assets/img/cards/card_099.png",
+    "imageZoom": 1.38,
+    "imageOffsetX": 0.6637331754225179,
+    "imageOffsetY": 0.37703197388703114,
+    "sortOrder": 99
   }
 ]
