@@ -15,10 +15,16 @@ async function init() {
   const tagMap = toMap(tags);
   const elementMap = toMap(elements);
 
+  // Hidden stages don't show up here — same as if they'd been deleted,
+  // from a player's point of view. (Their own saved team records for a
+  // hidden stage still show on 我的隊伍總覽 if they have any, just
+  // without a working link back to this stage — see myTeamsOverview.js.)
+  const visibleStages = stages.filter((s) => !s.hidden);
+
   // group by chapter, preserving JSON order
   const chapters = [];
   const chapterIndex = new Map();
-  for (const stage of stages) {
+  for (const stage of visibleStages) {
     if (!chapterIndex.has(stage.chapter)) {
       chapterIndex.set(stage.chapter, { chapter: stage.chapter, stages: [] });
       chapters.push(chapterIndex.get(stage.chapter));
@@ -29,7 +35,7 @@ async function init() {
   const root = document.getElementById('stage-list-root');
   root.innerHTML = '';
 
-  if (stages.length === 0) {
+  if (visibleStages.length === 0) {
     root.innerHTML = '<div class="empty-state"><h3>目前還沒有關卡資料</h3><p>請由站主於後台新增關卡。</p></div>';
     return;
   }

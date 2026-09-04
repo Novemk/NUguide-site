@@ -33,7 +33,12 @@ async function init() {
   ]);
 
   const stage = stages.find((s) => s.id === stageId);
-  if (!stage) {
+  // A hidden stage behaves exactly like a deleted one from here — same
+  // message, whether you got here via a direct link, a bookmark, or a
+  // stale link someone shared before it was hidden. Its data isn't
+  // actually gone (see myTeamsOverview.js, which still shows a
+  // player's own saved team records for it), this page just won't open.
+  if (!stage || stage.hidden) {
     root.innerHTML = '<div class="empty-state"><h3>找不到這個關卡</h3><p>可能已被移除，請回到關卡列表重新選擇。</p></div>';
     return;
   }

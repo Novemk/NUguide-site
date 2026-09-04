@@ -12,13 +12,22 @@ async function init() {
   mountNavbar('my-teams.html');
   mountFooter();
 
-  const [stages, cards, rarities, classes, elements] = await Promise.all([
+  const [stages, cards, rarities, classes, elements, siteSettings] = await Promise.all([
     loadJSON(DataSources.stages),
     loadJSON(DataSources.cards),
     loadJSON(DataSources.rarities),
     loadJSON(DataSources.classes),
     loadJSON(DataSources.elements),
+    loadJSON(DataSources.siteSettings).catch(() => null),
   ]);
+  // Editable from the admin's 網站設定 page — HTML (may contain colored
+  // <span> from that field's "select text, apply color" editor), so
+  // this uses innerHTML; falls back to whatever's already in the static
+  // HTML (my-teams.html) if the field is missing or the fetch fails.
+  if (siteSettings && siteSettings.myTeamsDescription) {
+    const descEl = document.getElementById('my-teams-description');
+    if (descEl) descEl.innerHTML = siteSettings.myTeamsDescription;
+  }
   const stageMap = toMap(stages);
   const cardMap = toMap(cards);
   const cardMaps = { rarityMap: toMap(rarities), classMap: toMap(classes), elementMap: toMap(elements) };
@@ -47,7 +56,13 @@ async function init() {
 
     for (const entry of grouped) {
       const stage = stageMap.get(entry.stageId);
-      const stageTitle = stage ? `${stage.chapter} ${stage.order} ${stage.title}` : entry.stageId;
+      // Stage data itself is gone (deleted from the admin) — the
+      // player's team records for it still exist in their own
+      // browser's localStorage (that's never touched from here), but
+      // there's nothing meaningful left to show without the stage's
+      // title/chapter, so this section just doesn't render at all.
+      if (!stage) continue;
+      const stageTitle = `${stage.chapter} ${stage.order} ${stage.title}`;
       const isStageOpen = openStages.has(entry.stageId);
 
       const block = document.createElement('div');
@@ -67,7 +82,11 @@ async function init() {
       });
       titleRow.appendChild(toggleBtn);
 
-      if (stage) {
+      // A hidden stage's own page refuses to open (see stageDetail.js),
+      // so there's no point linking to it — the record itself still
+      // shows here (the player's own saved data), just without a dead-
+      // end link to a guide page that will say "找不到這個關卡".
+      if (!stage.hidden) {
         const link = document.createElement('a');
         link.href = `stage-detail.html?id=${encodeURIComponent(stage.id)}`;
         link.className = 'btn btn-sm btn-secondary';
