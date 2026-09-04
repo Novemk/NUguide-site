@@ -1,21 +1,5 @@
 [
   {
-    "stageId": "stage_7_5",
-    "teams": [
-      {
-        "name": "試探輸出隊",
-        "note": "先普攻試探回聲機制",
-        "members": [
-          "card_003",
-          "card_007",
-          "card_011",
-          "card_015",
-          "card_019"
-        ]
-      }
-    ]
-  },
-  {
     "stageId": "stage_8_2",
     "teams": [
       {
@@ -27,6 +11,22 @@
           null,
           null,
           null
+        ]
+      }
+    ]
+  },
+  {
+    "stageId": "stage_7_5",
+    "teams": [
+      {
+        "name": "試探輸出隊",
+        "note": "先普攻試探回聲機制",
+        "members": [
+          "card_003",
+          "card_007",
+          "card_011",
+          "card_015",
+          "card_019"
         ]
       }
     ]
