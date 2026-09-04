@@ -616,6 +616,16 @@ hr.ql-divider {
 }
 .note-editor:focus { border-color: var(--accent-teal); }
 .note-editor:empty::before { content: attr(data-placeholder); color: var(--text-faint); }
+/* Links inserted via the 🔗 button in this editor — same styling
+   whether you're looking at it in the admin's editing view (.note-editor)
+   or the public page it ends up rendered into (.page-header p, where
+   我的隊伍/關卡攻略/卡片資料庫's description text lives). */
+.note-editor a, .page-header p a {
+  color: var(--accent-teal);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.note-editor a:hover, .page-header p a:hover { color: var(--accent-gold); }
 
 /* =========================================================
    我的隊伍總覽 — two-level accordion (stage → team)
