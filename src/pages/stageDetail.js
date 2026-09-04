@@ -72,6 +72,26 @@ async function init() {
   // Guide (rich text HTML from admin editor)
   document.getElementById('guide-content').innerHTML = stage.guide || '<p>尚未撰寫攻略。</p>';
 
+  // Round table (回合表) — a real <table>, entirely separate from the
+  // rich-text guide content above (see stageAdmin.js's roundTable field).
+  // Only rendered when the stage actually has rows; a stage that never
+  // used this feature just doesn't show a table at all.
+  const roundTable = stage.roundTable || [];
+  if (roundTable.length > 0) {
+    const table = document.createElement('table');
+    table.className = 'rt-table';
+    for (const row of roundTable) {
+      const tr = document.createElement('tr');
+      const td1 = document.createElement('td');
+      td1.innerHTML = row.col1 || '';
+      const td2 = document.createElement('td');
+      td2.innerHTML = row.col2 || '';
+      tr.append(td1, td2);
+      table.appendChild(tr);
+    }
+    document.getElementById('guide-content').insertAdjacentElement('afterend', table);
+  }
+
   // Recommended abilities
   const recTags = (stage.recommendedTags || []).map((id) => tagMap.get(id)).filter(Boolean);
   const recWrap = document.getElementById('recommended-tags');

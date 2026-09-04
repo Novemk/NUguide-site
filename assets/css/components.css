@@ -156,6 +156,39 @@
    (not Quill's default 1.5em) per the "限制一個程度不能放太大" request. */
 .guide-content .ql-size-large { font-size: 1.3em; }
 
+/* Round table (回合表) — a real <table>, separate from .guide-content's
+   rich text. Fixed max-width (not full-container-width) so it doesn't
+   stretch into a mostly-empty wide block on a big desktop screen —
+   stays roughly the same visual size whether you're on mobile or a wide
+   monitor, just left-aligned rather than centered so it lines up with
+   the guide text above/below it. table-layout is deliberately left at
+   its default (auto), not "fixed" — that's what lets column 1 hug
+   whatever its longest line actually is while column 2 takes the rest;
+   no JS measurement involved. */
+.rt-table {
+  max-width: 640px;
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+}
+.rt-table td {
+  border: 1px solid var(--border-soft);
+  padding: 8px 12px;
+  color: var(--text);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  vertical-align: top;
+}
+.rt-table td:first-child {
+  white-space: nowrap;
+  font-weight: 600;
+  color: var(--text-dim);
+}
+.rt-table td:last-child {
+  width: 100%; /* takes whatever's left after column 1's content-hugged width */
+  overflow-wrap: break-word;
+}
+
 /* Divider inserted from the rich-text editor's toolbar (攻略內容 /
    必殺技敘述 — both share this). A "ticket perforation" dash-dot line:
    drawn with an SVG background (round-capped dashes + a round dot, on a
