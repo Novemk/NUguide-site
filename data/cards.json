@@ -1936,5 +1936,26 @@
     "imageOffsetX": 0.5117548011147874,
     "imageOffsetY": 0.26590199443039647,
     "sortOrder": 94
+  },
+  {
+    "id": "card_095",
+    "name": "燈影掩映的祈願",
+    "characterId": "char_11",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "light",
+    "cd": 3,
+    "tags": [
+      "trigger",
+      "own_proc_dmg_up",
+      "proc_followup",
+      "immune_sleep"
+    ],
+    "ultimateSkill": "<p>使自身觸發技傷害增加68%（最多1層）</p><p>以攻擊力50%對目標造成傷害</p><p>使自身獲得「攻擊時，觸發『以攻擊力118%對目標造成傷害』（3回合）」</p><p>再使自身獲得「必殺時，觸發『以攻擊力118%對目標造成傷害』（6回合）【不可疊加】」</p><p><br></p><p>［冷卻時間：3回合］</p>",
+    "image": "assets/img/cards/card_095.png",
+    "imageZoom": 1.55,
+    "imageOffsetX": 0.45841167227260077,
+    "imageOffsetY": 0.2779427690475724,
+    "sortOrder": 95
   }
 ]
