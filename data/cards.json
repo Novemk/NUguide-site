@@ -2624,7 +2624,7 @@
     "rarityId": "sr",
     "classId": "heal",
     "elementId": "fire",
-    "cd": 4,
+    "cd": 3,
     "tags": [
       "heal_tag",
       "hot",
