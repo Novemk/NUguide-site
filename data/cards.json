@@ -2849,5 +2849,26 @@
     "imageOffsetX": 0.5411195166530268,
     "imageOffsetY": 0.18229576771177614,
     "sortOrder": 63.5
+  },
+  {
+    "id": "card_139",
+    "name": "溫柔鞭策♡奧利萌",
+    "characterId": "char_06",
+    "rarityId": "sr",
+    "classId": "atk",
+    "elementId": "wood",
+    "cd": 4,
+    "tags": [
+      "shield",
+      "heal_tag",
+      "hot",
+      "immune_sleep"
+    ],
+    "ultimateSkill": "<p>以攻擊力 100% 對我方全體進行治療</p><p>再以攻擊力 64% 進行持續治療（4回合）</p><p>並使我方全體 <span style=\"color: rgb(226, 96, 79);\">定位守護</span> 的隊員受到傷害減少 10%（4回合）</p><p><br></p><p>［冷卻時間：4回合］</p>",
+    "image": "assets/img/cards/card_139.webp",
+    "imageZoom": 1.51,
+    "imageOffsetX": 0.5363602891931268,
+    "imageOffsetY": 0.46050226372143527,
+    "sortOrder": 74.5
   }
 ]
