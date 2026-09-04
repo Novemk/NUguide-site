@@ -1340,11 +1340,11 @@
       "burst",
       "immune_silence"
     ],
-    "ultimateSkill": "使目標造成傷害減少10%（3回合）\n使自身必殺技傷害增加30%（1回合）\n並以攻擊力25%對目標造成2次傷害\n再以攻擊力345%對目標造成傷害\n［冷卻時間：4回合］",
+    "ultimateSkill": "<p>使目標造成傷害減少10%（3回合）\n使自身必殺技傷害增加30%（1回合）\n並以攻擊力25%對目標造成2次傷害\n再以攻擊力345%對目標造成傷害\n［冷卻時間：4回合］</p>",
     "image": "assets/img/cards/card_066.png",
-    "imageZoom": 1.41,
-    "imageOffsetX": 0.4221964397286994,
-    "imageOffsetY": 0.22080248067520175,
+    "imageZoom": 1.37,
+    "imageOffsetX": 0.3929720620890782,
+    "imageOffsetY": 0.2241146163402786,
     "sortOrder": 66
   },
   {
