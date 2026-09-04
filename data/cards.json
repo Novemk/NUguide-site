@@ -2410,5 +2410,26 @@
     "imageOffsetX": 0.5785345666586386,
     "imageOffsetY": 0.42825203272397255,
     "sortOrder": 116
+  },
+  {
+    "id": "card_117",
+    "name": "迷海信條",
+    "characterId": "char_12",
+    "rarityId": "ssr",
+    "classId": "buf",
+    "elementId": "light",
+    "cd": 3,
+    "tags": [
+      "shield",
+      "atk_buff_enemy",
+      "atk_buff_self",
+      "immune_stun"
+    ],
+    "ultimateSkill": "<p>使我方全體受到傷害減少 7%（3回合）</p><p>使敵方全體受到傷害增加 26%（1回合）</p><p>以自身基礎攻擊力 137% 使我方全體攻擊力增加（1回合）</p><p><br></p><p>［冷卻時間：3回合］</p>",
+    "image": "assets/img/cards/card_117.png",
+    "imageZoom": 1.38,
+    "imageOffsetX": 0.530213740075094,
+    "imageOffsetY": 0.3214565608805095,
+    "sortOrder": 117
   }
 ]
