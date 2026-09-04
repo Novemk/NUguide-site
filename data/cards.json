@@ -1186,12 +1186,13 @@
     "elementId": "wood",
     "cd": 3,
     "tags": [
-      "heal_tag",
+      "trigger",
       "atk_buff_self",
+      "heal_tag",
       "hot",
       "immune_stun"
     ],
-    "ultimateSkill": "以攻擊力150%對我方全體進行治療\n並使自身獲得「攻擊時，觸發『以攻擊力127%對我方當前HP最低者進行治療』（3回合）」\n並使我方全體造成傷害增加10%（3回合）\n［冷卻時間：3回合］",
+    "ultimateSkill": "<p>以攻擊力150%對我方全體進行治療\n並使自身獲得「攻擊時，觸發『以攻擊力127%對我方當前HP最低者進行治療』（3回合）」\n並使我方全體造成傷害增加10%（3回合）\n［冷卻時間：3回合］</p>",
     "image": "assets/img/cards/card_059.png",
     "imageZoom": 1.64,
     "imageOffsetX": 0.5052298981414919,
