@@ -2302,5 +2302,26 @@
     "imageOffsetX": 0.49284034968371754,
     "imageOffsetY": 0.4890815286117116,
     "sortOrder": 111
+  },
+  {
+    "id": "card_112",
+    "name": "遠眺的行動者",
+    "characterId": "char_09",
+    "rarityId": "ssr",
+    "classId": "debuf",
+    "elementId": "wood",
+    "cd": 3,
+    "tags": [
+      "normal_atk",
+      "followup_atk",
+      "atk_buff_self",
+      "immune_stun"
+    ],
+    "ultimateSkill": "<p>使自身普攻傷害增加 68%（最多1層）</p><p>使目標受到 <span style=\"color: rgb(226, 96, 79);\">定位妨礙</span> 的角色傷害增加 22%（3回合）</p><p>以攻擊力 100% 對目標造成傷害</p><p>再使自身獲得「普攻時，追加『以攻擊力 87% 對目標進行追擊』（3回合）」</p><p><br></p><p>［冷卻時間：3回合］</p>",
+    "image": "assets/img/cards/card_112.png",
+    "imageZoom": 1.39,
+    "imageOffsetX": 0.5576302693283613,
+    "imageOffsetY": 0.5961093718134753,
+    "sortOrder": 112
   }
 ]
