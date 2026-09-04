@@ -2931,5 +2931,25 @@
     "imageOffsetX": 0.6439914969929023,
     "imageOffsetY": 0.36273699898291445,
     "sortOrder": 102.5
+  },
+  {
+    "id": "card_143",
+    "name": "運籌不亂的統率",
+    "characterId": "char_11",
+    "rarityId": "sr",
+    "classId": "tank",
+    "elementId": "dark",
+    "cd": 3,
+    "tags": [
+      "shield",
+      "taunt",
+      "immune_stun"
+    ],
+    "ultimateSkill": "<p>以攻擊力 100% 對目標造成傷害</p><p>使我方全體受到必殺技傷害減少 11%（2回合）</p><p>再獲得嘲諷（1回合）</p><p>並變為防禦狀態</p><p><br></p><p>［冷卻時間：3回合］</p>",
+    "image": "assets/img/cards/card_143.webp",
+    "imageZoom": 1.42,
+    "imageOffsetX": 0.4689351524044106,
+    "imageOffsetY": 0.2370009791839913,
+    "sortOrder": 119.5
   }
 ]
