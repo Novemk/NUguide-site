@@ -1640,5 +1640,28 @@
     "imageOffsetX": 0.48930261414594733,
     "imageOffsetY": 0.4219308099826845,
     "sortOrder": 80
+  },
+  {
+    "id": "card_081",
+    "name": "重燃鐵誓",
+    "characterId": "char_07",
+    "rarityId": "ssr",
+    "classId": "tank",
+    "elementId": "dark",
+    "cd": 4,
+    "tags": [
+      "atk_buff_self",
+      "shield",
+      "shield_gain",
+      "counter",
+      "taunt",
+      "immune_silence"
+    ],
+    "ultimateSkill": "使我方全體定位攻擊的角色造成傷害增加22%（2回合）\n以攻擊力100%對目標造成傷害\n再獲得嘲諷（2回合）\n使自身受到麻痹機率減少100%（2回合）\n並使自身受到必殺技傷害減少40%（2回合）\n並使自身獲得「被攻擊時，觸發『以攻擊力87%對目標進行反擊』（2回合）」\n再以自身最大HP18%使我方全體獲得護盾（2回合）\n並變為防禦狀態\n［冷卻時間：4回合］",
+    "image": "assets/img/cards/card_081.png",
+    "imageZoom": 1.32,
+    "imageOffsetX": 0.41927219731254556,
+    "imageOffsetY": 0.21812602081989285,
+    "sortOrder": 81
   }
 ]
