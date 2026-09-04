@@ -1707,5 +1707,26 @@
     "imageOffsetX": 0.4694696952074424,
     "imageOffsetY": 0.3340618818856196,
     "sortOrder": 83
+  },
+  {
+    "id": "card_084",
+    "name": "劍影中的真容",
+    "characterId": "char_05",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "water",
+    "cd": 3,
+    "tags": [
+      "break_shield",
+      "atk_buff_self",
+      "atk_buff_enemy",
+      "immune_silence"
+    ],
+    "ultimateSkill": "<p>以自身基礎攻擊力 51% 使我方全體攻擊力增加（1回合）</p><p>使目標受到傷害增加 17%（最多1層）</p><p>解除目標防禦狀態</p><p>再以攻擊力273%對目標造成傷害</p><p><br></p><p>［冷卻時間：3回合］</p>",
+    "image": "assets/img/cards/card_084.png",
+    "imageZoom": 1.36,
+    "imageOffsetX": 0.5554134099696094,
+    "imageOffsetY": 0.37068550259459254,
+    "sortOrder": 84
   }
 ]
