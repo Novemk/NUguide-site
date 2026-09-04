@@ -1748,5 +1748,25 @@
     "imageOffsetX": 0.4796897257834758,
     "imageOffsetY": 0.2898810954781518,
     "sortOrder": 85
+  },
+  {
+    "id": "card_086",
+    "name": "奔躍狼蹤",
+    "characterId": "char_09",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "fire",
+    "cd": 3,
+    "tags": [
+      "burst",
+      "own_dmg_up",
+      "immune_silence"
+    ],
+    "ultimateSkill": "<p>使自身造成傷害增加20%（最多2層）</p><p>並以攻擊力50%對目標造成2次傷害</p><p>再以攻擊力316%對目標造成傷害</p><p><br></p><p>［冷卻時間：3回合］</p>",
+    "image": "assets/img/cards/card_086.png",
+    "imageZoom": 1.43,
+    "imageOffsetX": 0.5298062410579035,
+    "imageOffsetY": 0.4938465751722888,
+    "sortOrder": 86
   }
 ]
