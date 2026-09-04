@@ -2001,5 +2001,26 @@
     "imageOffsetX": 0.40921630747788273,
     "imageOffsetY": 0.4436412649391003,
     "sortOrder": 97
+  },
+  {
+    "id": "card_098",
+    "name": "百戰的征服",
+    "characterId": "char_07",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "dark",
+    "cd": 4,
+    "tags": [
+      "self_dmg",
+      "target_pos",
+      "enemy_elem_dmg_up",
+      "immune_silence"
+    ],
+    "ultimateSkill": "<p>以當前HP 20% 對自身造成真實傷害</p><p>使敵方全體受到 <span style=\"color: rgb(79, 200, 176);\">闇屬性</span> 傷害增加 22%（1回合）</p><p>以攻擊力 50% 對敵方站位 1、2、3、4、5 造成傷害</p><p>再以攻擊 50% 對敵方站位 5、4、3、2、1 造成傷害</p><p><br></p><p>［冷卻時間：4回合］</p>",
+    "image": "assets/img/cards/card_098.png",
+    "imageZoom": 1.45,
+    "imageOffsetX": 0.5078458585741211,
+    "imageOffsetY": 0.09207948692984053,
+    "sortOrder": 98
   }
 ]
