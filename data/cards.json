@@ -2086,5 +2086,27 @@
     "imageOffsetX": 0.5051097832127207,
     "imageOffsetY": 0.30801109242480246,
     "sortOrder": 101
+  },
+  {
+    "id": "card_102",
+    "name": "蒼炎破煞",
+    "characterId": "char_11",
+    "rarityId": "ssr",
+    "classId": "atk",
+    "elementId": "dark",
+    "cd": 4,
+    "tags": [
+      "shield",
+      "normal_atk",
+      "followup_atk",
+      "hot",
+      "immune_silence"
+    ],
+    "ultimateSkill": "<p>以攻擊力 75% 對目標造成傷害</p><p>使我方全體受到傷害減少 7%（4回合）</p><p>以攻擊力 27% 對我方全體進行持續治療（4回合）</p><p>再使自身獲得「普攻時，追加『以攻擊力 90% 目標進行追擊』（4回合）」</p><p><br></p><p>「冷卻時間：4回合］</p>",
+    "image": "assets/img/cards/card_102.png",
+    "imageZoom": 1.47,
+    "imageOffsetX": 0.5131993371759426,
+    "imageOffsetY": 0.3951160365658896,
+    "sortOrder": 102
   }
 ]
