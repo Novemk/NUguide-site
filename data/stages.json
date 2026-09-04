@@ -51,6 +51,6 @@
       "shield",
       "aoe"
     ],
-    "hidden": false
+    "hidden": true
   }
 ]
