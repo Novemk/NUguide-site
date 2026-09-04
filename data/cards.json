@@ -2152,5 +2152,27 @@
     "imageOffsetX": 0.5341131536265407,
     "imageOffsetY": 0.28284640308603876,
     "sortOrder": 104
+  },
+  {
+    "id": "card_105",
+    "name": "歧路的徬徨者",
+    "characterId": "char_07",
+    "rarityId": "ssr",
+    "classId": "debuf",
+    "elementId": "fire",
+    "cd": 4,
+    "tags": [
+      "force_taunt",
+      "target_pos",
+      "self_burst_dmg_up",
+      "atk_buff_enemy",
+      "immune_silence"
+    ],
+    "ultimateSkill": "<p>使目標獲得嘲諷效果（1回合）</p><p>使目標受到傷害增加 17%（最多1層）</p><p>使我方全體必殺技傷害增加 26%（最多1層）</p><p>再以攻擊力 191% 對敵方站位 1、2 造成傷害</p><p><br></p><p>［冷卻時間：4回合］</p>",
+    "image": "assets/img/cards/card_105.png",
+    "imageZoom": 1.38,
+    "imageOffsetX": 0.40732499301513997,
+    "imageOffsetY": 0.2503915369687495,
+    "sortOrder": 105
   }
 ]
