@@ -2808,5 +2808,26 @@
     "imageOffsetX": 0.4306649362318394,
     "imageOffsetY": 0.22118851934750555,
     "sortOrder": 34.5
+  },
+  {
+    "id": "card_137",
+    "name": "冷眼異客",
+    "characterId": "char_08",
+    "rarityId": "sr",
+    "classId": "buf",
+    "elementId": "dark",
+    "cd": 3,
+    "tags": [
+      "heal_down",
+      "atk_buff_self",
+      "self_burst_dmg_up",
+      "immune_stun"
+    ],
+    "ultimateSkill": "<p><span style=\"color: rgb(201, 164, 92);\">使目標受到回復量減少 100%</span>（3回合）</p><p>再以自身基礎攻擊力 154% 使我方全體攻擊力增加（1回合）</p><p><br></p><p>［冷卻時間：3回合］</p>",
+    "image": "assets/img/cards/card_137.webp",
+    "imageZoom": 1.31,
+    "imageOffsetX": 0.48147582139832573,
+    "imageOffsetY": 0.24405639910486357,
+    "sortOrder": 47.5
   }
 ]
