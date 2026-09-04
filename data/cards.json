@@ -1829,5 +1829,26 @@
     "imageOffsetX": 0.44733470898165667,
     "imageOffsetY": 0.3649522369983149,
     "sortOrder": 89
+  },
+  {
+    "id": "card_090",
+    "name": "銳眼洞察",
+    "characterId": "char_05",
+    "rarityId": "ssr",
+    "classId": "tank",
+    "elementId": "water",
+    "cd": 4,
+    "tags": [
+      "shield_gain",
+      "own_normal_dmg_up",
+      "taunt",
+      "immune_stun"
+    ],
+    "ultimateSkill": "<p>以攻擊力100%對目標造成傷害</p><p>並以自身最大HP35%使自身獲得護盾（2回合）</p><p>再以自身最大HP6%使我方全體獲得護盾（4回合）</p><p>使自身普攻傷害增加68%（3回合）</p><p>再獲得嘲諷（1回合）</p><p>並變為防禦狀態</p><p><br></p><p>［冷卻時間：4回合］</p>",
+    "image": "assets/img/cards/card_090.png",
+    "imageZoom": 1.43,
+    "imageOffsetX": 0.5178863958270847,
+    "imageOffsetY": 0.26808928505548446,
+    "sortOrder": 90
   }
 ]
