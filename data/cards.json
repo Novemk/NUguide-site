@@ -2597,5 +2597,24 @@
     "imageOffsetX": 0.4880840913576662,
     "imageOffsetY": 0.3417258596553856,
     "sortOrder": 0.1
+  },
+  {
+    "id": "card_126",
+    "name": "使魔",
+    "characterId": "char_03",
+    "rarityId": "sr",
+    "classId": "tank",
+    "elementId": "fire",
+    "cd": 4,
+    "tags": [
+      "taunt",
+      "immune_sleep"
+    ],
+    "ultimateSkill": "<p>以攻擊力100%對目標造成傷害</p><p>以最大HP40%給予自身護盾（1回合）</p><p>再獲得防禦減傷增加10%（1回合）、嘲諷（1回合）</p><p>並變為防禦狀態</p><p><br></p><p>［冷卻時間：3回合］</p>",
+    "image": "assets/img/cards/card_126.webp",
+    "imageZoom": 1.39,
+    "imageOffsetX": 0.5036443165695937,
+    "imageOffsetY": 0.31381975867269984,
+    "sortOrder": 0.2
   }
 ]
