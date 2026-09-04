@@ -2918,7 +2918,7 @@
     "rarityId": "sr",
     "classId": "heal",
     "elementId": "wood",
-    "cd": 4,
+    "cd": 3,
     "tags": [
       "dot",
       "heal_tag",
