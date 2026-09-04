@@ -2043,5 +2043,26 @@
     "imageOffsetX": 0.6637331754225179,
     "imageOffsetY": 0.37703197388703114,
     "sortOrder": 99
+  },
+  {
+    "id": "card_100",
+    "name": "潮舞☆自由律動",
+    "characterId": "char_10",
+    "rarityId": "ssr",
+    "classId": "debuf",
+    "elementId": "dark",
+    "cd": 4,
+    "tags": [
+      "burst",
+      "enemy_burst_dmg_up",
+      "own_dmg_up",
+      "immune_sleep"
+    ],
+    "ultimateSkill": "<p>使敵方全體受到必殺技傷害增加 15%（最多2層）</p><p>再使自身攻擊力增加 34%（4回合）</p><p>再以攻擊力 345% 對目標造成傷害</p><p><br></p><p>［冷卻時間：4回合］</p>",
+    "image": "assets/img/cards/card_100.png",
+    "imageZoom": 1.54,
+    "imageOffsetX": 0.4803389126305793,
+    "imageOffsetY": 0.38891711513649363,
+    "sortOrder": 100
   }
 ]
