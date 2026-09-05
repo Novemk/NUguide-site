@@ -2,7 +2,7 @@
   {
     "id": "stage_8_2",
     "chapter": "忘卻遺跡 第二十二季",
-    "order": "8-1",
+    "order": "8 - 1",
     "title": "帆潮小鎮之探",
     "enemies": [
       {
@@ -36,7 +36,8 @@
     "guide": "<p>每回合都要打一下每個粉絲，否則粉絲會減傷+加攻</p><p>最後一回合必須把三位粉絲同時打到1%，否則粉絲會補血至15%</p><p>必須在16回合或以內打完，否則第16回合我方全滅</p><p><br></p><p>推薦帶至少1隻群攻角／分岔攻擊手</p><p><span style=\"color: rgb(226, 96, 79);\">留意綠色粉絲會幫血量最低的粉絲減傷20%（最多2層）</span></p><p>可以帶一隻單攻角，令其中一位粉絲保持壓在三粉絲中的血量最低，只讓他一個人吃盡減傷</p><p><br></p><p>本關沒什麼特殊機制，可以全程攻擊就不寫回合表了。</p>",
     "recommendedTags": [],
     "hidden": false,
-    "roundTable": []
+    "roundTable": [],
+    "rowBreak": false
   },
   {
     "id": "stage_7_5",
@@ -171,5 +172,49 @@
         "col2": "<span style=\"font-size: 14.4px;\">隨便行動</span>"
       }
     ]
+  },
+  {
+    "id": "stage_8_2_2",
+    "chapter": "忘卻遺跡 第二十二季",
+    "order": "8-2",
+    "title": "",
+    "enemies": [
+      {
+        "name": "Ａ",
+        "note": "",
+        "elementId": "",
+        "image": "assets/img/enemies/stage_8_2_2_0__.webp",
+        "imageZoom": 1,
+        "imageOffsetX": 0.5,
+        "imageOffsetY": 0.5
+      }
+    ],
+    "guide": "<p><br></p>",
+    "recommendedTags": [],
+    "hidden": false,
+    "roundTable": [],
+    "rowBreak": false
+  },
+  {
+    "id": "stage_7_1",
+    "chapter": "忘卻遺跡 第二十二季",
+    "order": "7-1",
+    "title": "",
+    "enemies": [
+      {
+        "name": "12334",
+        "note": "",
+        "elementId": "",
+        "image": "assets/img/enemies/stage_7_1_0_12334.webp",
+        "imageZoom": 1,
+        "imageOffsetX": 0.5,
+        "imageOffsetY": 0.5
+      }
+    ],
+    "guide": "<p><br></p>",
+    "recommendedTags": [],
+    "hidden": false,
+    "roundTable": [],
+    "rowBreak": false
   }
 ]
