@@ -95,6 +95,23 @@ export function resolveAsset(path) {
   return new URL(path.replace(/^\.?\//, ''), resolveBase()).href;
 }
 
+/**
+ * Resolves a card image path to its small (240px-wide) thumbnail
+ * variant instead of the full-resolution original — e.g.
+ * "assets/img/cards/card_001.webp" → ".../cards/thumb/card_001.webp".
+ * For every place a card's art only ever displays at avatar/thumbnail
+ * size (team member previews, the 選擇卡片 picker, the 卡片資訊 modal),
+ * so the browser isn't downloading a ~60KB full-size image just to
+ * shrink it via CSS. 卡片資料庫's own grid intentionally keeps
+ * resolveAsset(card.image) (the full original) since its cards can
+ * render considerably larger than 240px on a wide screen.
+ */
+export function resolveCardThumb(path) {
+  if (!path) return '';
+  const thumbPath = path.replace(/\/cards\/([^/]+)$/, '/cards/thumb/$1');
+  return resolveAsset(thumbPath);
+}
+
 export function byId(list, id) {
   return list.find((item) => item.id === id);
 }

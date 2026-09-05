@@ -16,7 +16,11 @@ import { renderCardButton } from './CardButton.js';
  * @param {string} [opts.emptyBody]
  * @param {boolean} [opts.compact] - smaller minimum tile size (see
  *   .card-grid--compact in components.css) — used by CardPicker so more
- *   cards fit per row in the narrower modal than on the full 卡片資料庫 page
+ *   cards fit per row in the narrower modal than on the full 卡片資料庫 page.
+ *   Also doubles as the thumbnail-image signal passed to renderCardButton
+ *   (2026-09-05) — compact is already exactly "this is the picker, not
+ *   卡片資料庫", the same distinction the thumbnail/full-res choice needs,
+ *   so it's reused rather than threading a second near-identical flag.
  */
 export function renderCardGrid(container, cards, maps, opts = {}) {
   container.innerHTML = '';
@@ -32,7 +36,7 @@ export function renderCardGrid(container, cards, maps, opts = {}) {
   for (const card of cards) {
     const selected = opts.isSelected ? opts.isSelected(card) : false;
     const disabled = opts.isDisabled ? opts.isDisabled(card) : false;
-    grid.appendChild(renderCardButton(card, maps, { selected, disabled, onClick: opts.onCardClick, onInfoClick: opts.onInfoClick }));
+    grid.appendChild(renderCardButton(card, maps, { selected, disabled, onClick: opts.onCardClick, onInfoClick: opts.onInfoClick, thumbnail: opts.compact }));
   }
   container.appendChild(grid);
 }

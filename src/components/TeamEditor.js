@@ -125,6 +125,7 @@ export function openTeamEditor(stageId, existingTeam = null) {
 
         if (card) {
           const btn = renderCardButton(card, cardMaps, {
+            thumbnail: true,
             onClick: async () => {
               const chosen = await openCardPicker({ excludeIds: members.filter((id, i) => id && i !== index) });
               if (chosen) {

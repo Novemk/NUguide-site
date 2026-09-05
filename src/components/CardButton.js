@@ -1,5 +1,5 @@
 // src/components/CardButton.js
-import { resolveAsset } from '../core/dataLoader.js';
+import { resolveAsset, resolveCardThumb } from '../core/dataLoader.js';
 import { renderCardFace } from './CardFace.js';
 
 const INFO_ICON_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><line x1="12" y1="11" x2="12" y2="16"></line><circle cx="12" cy="7.5" r="0.6" fill="currentColor" stroke="none"></circle></svg>';
@@ -16,6 +16,10 @@ const INFO_ICON_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor
  * @param {boolean} [opts.disabled] - dims the card with a 30% black overlay
  *   and blocks onClick (e.g. a card already in the team being edited) —
  *   onInfoClick still works, so it's still possible to look the card up.
+ * @param {boolean} [opts.thumbnail] - use the 240px-wide thumbnail image
+ *   instead of the full-resolution original (see resolveCardThumb) —
+ *   for every caller EXCEPT 卡片資料庫's own grid, where cards can render
+ *   considerably larger than 240px on a wide screen.
  * @param {(card:Object) => void} [opts.onClick]
  * @param {(card:Object) => void} [opts.onInfoClick] - when set, shows a small
  *   info button in the bottom-right corner on hover (same size as the
@@ -37,7 +41,7 @@ export function renderCardButton(card, maps, opts = {}) {
   if (opts.disabled) btn.setAttribute('aria-disabled', 'true');
 
   const face = renderCardFace({
-    imageSrc: resolveAsset(card.image),
+    imageSrc: opts.thumbnail ? resolveCardThumb(card.image) : resolveAsset(card.image),
     imageAlt: card.name,
     rarity,
     element,

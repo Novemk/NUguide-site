@@ -1,5 +1,5 @@
 // src/components/TeamCard.js
-import { resolveAsset } from '../core/dataLoader.js';
+import { resolveCardThumb } from '../core/dataLoader.js';
 import { renderCardFace, BORDER_CLASS_BY_RARITY } from './CardFace.js';
 
 // Reference size CardFace is measured against before being scaled down —
@@ -64,7 +64,7 @@ export function renderTeamCard(team, cardMap, opts = {}) {
 
       const rarity = rarityMap ? rarityMap.get(card.rarityId) : null;
       const face = renderCardFace({
-        imageSrc: resolveAsset(card.image),
+        imageSrc: resolveCardThumb(card.image),
         imageAlt: card.name,
         rarity,
         element: elementMap ? elementMap.get(card.elementId) : null,

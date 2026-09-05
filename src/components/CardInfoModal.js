@@ -2,7 +2,7 @@
 // The "卡片資訊" detail modal — factored out of cardsPage.js so
 // CardPicker.js (選擇卡片) can open the exact same modal from its new
 // hover info button, instead of drifting into its own copy over time.
-import { resolveAsset } from '../core/dataLoader.js';
+import { resolveAsset, resolveCardThumb } from '../core/dataLoader.js';
 import { renderCardCrop } from './CardFace.js';
 import { openModal } from './Modal.js';
 
@@ -39,7 +39,7 @@ export function showCardInfoModal(card, maps) {
   const thumbBox = document.createElement('div');
   thumbBox.className = 'card-preview-box';
   thumbBox.appendChild(renderCardCrop({
-    imageSrc: resolveAsset(card.image),
+    imageSrc: resolveCardThumb(card.image),
     imageAlt: card.name,
     rarity,
     imageZoom: card.imageZoom,
