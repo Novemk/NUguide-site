@@ -6,6 +6,7 @@ const LINKS = [
   { href: 'stages.html', label: '關卡攻略' },
   { href: 'cards.html', label: '卡片資料庫' },
   { href: 'my-teams.html', label: '我的隊伍' },
+  { href: 'team-notes.html', label: '隊伍筆記' },
 ];
 
 const DEFAULT_SITE_TITLE = '流光秘境攻略';

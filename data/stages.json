@@ -183,33 +183,19 @@
     "title": "",
     "enemies": [
       {
-        "name": "天真的小偷",
+        "name": "Ａ",
         "note": "",
-        "elementId": "fire",
-        "image": "assets/img/enemies/stage_8_2_2_0_天真的小偷.webp",
-        "imageZoom": 1.1,
-        "imageOffsetX": 0.4498748779296876,
-        "imageOffsetY": 0.6305325826009112
-      },
-      {
-        "name": "暴躁的小偷",
-        "note": "",
-        "elementId": "dark",
-        "image": "assets/img/enemies/stage_8_2_2_1_暴躁的小偷.webp",
-        "imageZoom": 1.13,
-        "imageOffsetX": 0.5611222985185388,
-        "imageOffsetY": 0.5353118429660936
+        "elementId": "",
+        "image": "assets/img/enemies/stage_8_2_2_0__.webp",
+        "imageZoom": 1,
+        "imageOffsetX": 0.5,
+        "imageOffsetY": 0.5
       }
     ],
-    "guide": "<p>開場紫小偷減傷500%</p><p>先打<span style=\"color: rgb(226, 96, 79);\">紅色天真的小偷</span>，後打<span style=\"color: rgb(79, 200, 176);\">紫色暴躁的小偷</span></p><p><br></p><p>每4回合裡紅小偷有2回合都有護盾+減傷保護</p><p>推薦帶3-4CD必殺角，<span style=\"color: rgb(226, 96, 79);\">在紅小偷沒護盾的回合開必殺</span></p><p><br></p><p><span style=\"color: rgb(79, 200, 176);\">場上只剩紫小偷時，每回合找1個人防禦</span></p><p>第一次把紫小偷打到1%後，他會立即補血到51%，且必須在2回合內打完</p><p>所以第一次打紫小偷接近1%時記得保留大招</p><p><br></p><p>4CD機制（紅小偷在場時）──</p><p>T1、5、9：（我方全體被降攻5%／紫小偷增攻，可疊加）</p><p>T3、7、11：【紅小偷有護盾2回合+減傷30%，不需要打破護盾，會自動消失】</p><p><br></p><p>把紅小偷打到1%的回合，以及後續所有回合──</p><p>．讓血量健康的一人防禦（紫小偷會打防禦的人）</p><p>．在即將打到1%時保留大招</p><p><br></p><p>把紫小偷打到1%──</p><p>．紫小偷回復至51%血量，必須2回合內打掉</p><p>．如果不能1回合擊殺，繼續讓血量健康的一人防禦（紫小偷會打防禦的人）</p>",
+    "guide": "<p><br></p>",
     "recommendedTags": [],
     "hidden": false,
-    "roundTable": [
-      {
-        "col1": "<span style=\"font-size: 13px; white-space: pre-wrap;\">T3、7、11</span>",
-        "col2": "<span style=\"font-size: 13px; white-space: pre-wrap;\">不需要打破護盾，會自動消失</span>"
-      }
-    ],
+    "roundTable": [],
     "rowBreak": false,
     "sortOrder": 8.2
   },

@@ -36,78 +36,13 @@
     "teams": [
       {
         "name": "學奧+SR",
-        "note": "小爛．日常  https://youtu.be/sNfOZ4XVYmA",
+        "note": "",
         "members": [
           "card_036",
           "card_132",
           "card_133",
           "card_125",
           "card_127"
-        ]
-      }
-    ]
-  },
-  {
-    "stageId": "stage_8_2_2",
-    "teams": [
-      {
-        "name": "學奧+劍副+SR",
-        "note": "https://youtu.be/fsmGaFiLYTk",
-        "members": [
-          "card_036",
-          "card_127",
-          "card_084",
-          "card_134",
-          "card_128"
-        ]
-      }
-    ]
-  },
-  {
-    "stageId": "stage_8_3",
-    "teams": [
-      {
-        "name": "全SR",
-        "note": "https://youtu.be/YfMBLJy85QE",
-        "members": [
-          "card_129",
-          "card_126",
-          "card_134",
-          "card_130",
-          "card_127"
-        ]
-      },
-      {
-        "name": "快攻1",
-        "note": "https://youtube.com/shorts/W3ooX3chA-o",
-        "members": [
-          "card_092",
-          "card_067",
-          "card_062",
-          "card_053",
-          "card_133"
-        ]
-      },
-      {
-        "name": "快攻2",
-        "note": "https://www.youtube.com/shorts/k9QG0yYhOCs",
-        "members": [
-          "card_087",
-          "card_108",
-          "card_049",
-          "card_020",
-          "card_086"
-        ]
-      },
-      {
-        "name": "速攻",
-        "note": "https://www.youtube.com/shorts/QD7BHQCKSwo",
-        "members": [
-          "card_070",
-          "card_036",
-          "card_129",
-          "card_130",
-          "card_063"
         ]
       }
     ]

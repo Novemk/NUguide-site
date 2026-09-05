@@ -1,15 +1,22 @@
-// src/pages/myTeamsOverview.js
+// src/pages/teamNotes.js
+// 隊伍筆記 — same underlying team data and interaction pattern as
+// myTeamsOverview.js (頁籤 → 隊伍頭像預覽 → 展開細節), just a different
+// slice of stages (archived ones only) and a lighter panel: an enemy
+// row up top (icon+name, no 查看攻略 recommended-team detail), no team
+// name field, no link out to a full guide page. See stageAdmin.js's
+// 過往關卡 checkbox for how a stage ends up on this page instead of
+// 我的隊伍總覽.
 import { loadJSON, DataSources, toMap } from '../core/dataLoader.js';
 import { mountNavbar, mountFooter } from '../components/Navbar.js';
 import { getAllTeamsGrouped, deleteTeam } from '../core/store.js';
 import { renderTeamCard } from '../components/TeamCard.js';
+import { renderEnemyChip } from '../components/EnemyPortrait.js';
 import { openTeamEditor } from '../components/TeamEditor.js';
 import { confirmDialog } from '../components/Modal.js';
 import { showToast } from '../core/toast.js';
-import { downloadTeamsBackup, promptImportTeamsBackup } from '../modules/teamBackup.js';
 
 async function init() {
-  mountNavbar('my-teams.html');
+  mountNavbar('team-notes.html');
   mountFooter();
 
   const [stages, cards, rarities, classes, elements, siteSettings] = await Promise.all([
@@ -20,64 +27,45 @@ async function init() {
     loadJSON(DataSources.elements),
     loadJSON(DataSources.siteSettings).catch(() => null),
   ]);
-  if (siteSettings && siteSettings.myTeamsDescription) {
-    const descEl = document.getElementById('my-teams-description');
-    if (descEl) descEl.innerHTML = siteSettings.myTeamsDescription;
+  if (siteSettings && siteSettings.teamNotesDescription) {
+    const descEl = document.getElementById('team-notes-description');
+    if (descEl) descEl.innerHTML = siteSettings.teamNotesDescription;
   }
   const stageMap = toMap(stages);
   const cardMap = toMap(cards);
   const cardMaps = { rarityMap: toMap(rarities), classMap: toMap(classes), elementMap: toMap(elements) };
-  const root = document.getElementById('overview-root');
+  const root = document.getElementById('notes-root');
 
-  // Which stage is currently "open" within each chapter — a Map keyed
-  // by chapter name, one open stage at a time per chapter (opening a
-  // new one in the same chapter auto-closes the previous one); a
-  // different chapter's own open stage is unaffected.
   const openStageByChapter = new Map();
-  // Independent of which stage/tab is open — per-stage flag for
-  // whether that stage's single team has been clicked open to show
-  // its full detail (name/note/修改/刪除). Selecting a tab only reveals
-  // the collapsed avatar-row preview; the detail is a second, separate
-  // click on that preview, same two-step interaction as the old
-  // accordion version of this page.
   const openTeamDetail = new Set();
 
   async function refresh() {
     const grouped = await getAllTeamsGrouped();
     root.innerHTML = '';
 
-    // Only one team per stage now (MAX_TEAMS_PER_STAGE = 1 — see
-    // store.js) — take that single team directly rather than an array.
     const teamByStageId = new Map();
     for (const entry of grouped) {
       const stage = stageMap.get(entry.stageId);
-      // Stage data itself is gone (deleted from the admin), hidden, or
-      // archived (moved to 隊伍筆記 — see teamNotes.js) — the player's
-      // own saved record still exists in their browser, this page just
-      // has nothing meaningful to show it under, same as everywhere
-      // else this situation comes up on the site.
-      if (!stage || stage.hidden || stage.archived) continue;
+      // The mirror image of myTeamsOverview.js's own filter — only
+      // 過往關卡 (archived), and 隱藏 still wins if somehow both are set
+      // (see stageAdmin.js's 過往關卡 checkbox note on priority).
+      if (!stage || stage.hidden || !stage.archived) continue;
       if (entry.teams && entry.teams[0]) teamByStageId.set(entry.stageId, entry.teams[0]);
     }
 
     if (teamByStageId.size === 0) {
       root.innerHTML = `
         <div class="empty-state">
-          <h3>還沒有任何隊伍紀錄</h3>
-          <p>前往任一關卡的攻略頁面，建立你的第一組隊伍。</p>
-          <a href="stages.html" class="btn btn-primary" style="margin-top:14px; display:inline-flex;">前往關卡列表</a>
+          <h3>還沒有任何筆記</h3>
+          <p>把一個已經打過、暫時不想寫完整攻略的關卡標成「過往關卡」（在後台的關卡編輯頁），它就會出現在這裡。</p>
         </div>`;
       return;
     }
 
-    // Only chapters that actually have at least one saved team show up
-    // here at all — a chapter the player has never touched doesn't
-    // clutter this page just because it exists on the site.
     const chaptersWithTeams = new Set();
     for (const stageId of teamByStageId.keys()) {
       chaptersWithTeams.add(stageMap.get(stageId).chapter);
     }
-    // Preserve stages.json's own chapter ordering, not alphabetical.
     const chapterOrder = [];
     const seenChapters = new Set();
     for (const s of stages) {
@@ -87,14 +75,10 @@ async function init() {
       }
     }
 
-    // Group every chapter's stages into rows (same rowBreak rule as
-    // 關卡攻略's own button grid) — one bordered box per row, not per
-    // chapter, since 7-1 and 8-1/8-2/8-3 are visually separate boxes
-    // even though both sit under the same "忘卻遺跡" title.
     const rowsByChapter = new Map();
     for (const chapter of chapterOrder) {
       const chapterStages = stages
-        .filter((s) => s.chapter === chapter && !s.hidden && !s.archived)
+        .filter((s) => s.chapter === chapter && !s.hidden && s.archived)
         .sort((a, b) => (a.sortOrder ?? 0) - (b.sortOrder ?? 0));
 
       const rows = [];
@@ -108,12 +92,6 @@ async function init() {
       rowsByChapter.set(chapter, rows);
     }
 
-    // Fixed width per tab column (px) — a tab's size never depends on
-    // its own label length or how many stages share its row. 104px is
-    // derived from the card-avatar row below (56px avatar + 8px gap =
-    // 64px per card): 3 tabs should reach the same total width as 5
-    // of those card slots (5×64=320px÷3≈104px), matching the ratio the
-    // 2026-09-05 reference screenshots were resized to.
     const TAB_COL_WIDTH = '104px';
 
     for (const chapter of chapterOrder) {
@@ -128,45 +106,19 @@ async function init() {
 
       const activeStageId = openStageByChapter.get(chapter) || null;
 
-      // One bordered box PER ROW (not one box for the whole chapter) —
-      // 7-1 and 8-1/8-2/8-3 are visually separate boxes even though
-      // they're both under the same "忘卻遺跡" title. Whichever row
-      // contains the currently-open stage gets its "查看攻略" link and
-      // the team panel appended inside that same row's own box; other
-      // rows in the chapter are untouched by that.
       for (const row of rows) {
         const boxEl = document.createElement('div');
         boxEl.className = 'mt-chapter-box';
 
-        // No more 'auto' separator tracks or gap — cells sit directly
-        // edge-to-edge (see .mt-tab-row column-gap:0 in CSS). The '｜'
-        // divider is drawn as a border-left on each cell instead of a
-        // text glyph in its own track: a glyph carries its own font
-        // whitespace that can't be squeezed to 0, but a border can —
-        // which is what lets the active cell's background reach fully
-        // flush against its neighbor with zero gap (see 'sep-left'
-        // below, per the 對齊方式 reference).
         const gridTemplate = Array.from({ length: row.length }, () => TAB_COL_WIDTH).join(' ');
 
         const rowEl = document.createElement('div');
         rowEl.className = 'mt-tab-row';
         rowEl.style.gridTemplateColumns = gridTemplate;
         row.forEach((s, i) => {
-          // The grid item is this cell (a plain div) — divs reliably
-          // stretch to fill their CSS Grid column, unlike a <button>
-          // (a replaced/form element, which does not always honor the
-          // grid's stretch sizing). The active background/color live
-          // on the CELL, not on the button/text inside it, so the
-          // highlight always spans the full column width regardless
-          // of how wide the label text itself is.
           const cell = document.createElement('div');
           cell.className = 'mt-tab-cell';
 
-          // A divider only shows between two NEITHER of which is the
-          // active one — once either neighbor is active, that shared
-          // edge is exactly where the active background should sit
-          // flush, so drawing a line there would cut straight through
-          // its own highlight.
           if (i > 0) {
             const prevActive = row[i - 1].id === activeStageId;
             const thisActive = s.id === activeStageId;
@@ -196,48 +148,45 @@ async function init() {
         const wrapEl = document.createElement('div');
         wrapEl.className = 'mt-tab-wrap';
 
-        // Tabs and the "查看攻略" link share one line (see
-        // .mt-tab-toprow) — the link is only added as a second flex
-        // child when this row has the open stage, so on an inactive
-        // row the tab grid just sits alone at the left with nothing
-        // pushed to the right.
+        // No 查看攻略 link on this page at all (unlike myTeamsOverview.js)
+        // — this whole page is explicitly for stages that don't have
+        // (or don't need) a full guide, so .mt-tab-toprow only ever
+        // holds the tab strip, nothing pushed to the right of it.
         const topRow = document.createElement('div');
         topRow.className = 'mt-tab-toprow';
-
-        // Wrap the tab grid in its own horizontally-scrollable strip
-        // (see .mt-tab-scroll) — on a narrow phone, 104px×N columns
-        // can add up to more than the box's actual width, and
-        // .mt-chapter-box uses overflow:hidden for its rounded
-        // corners, which would otherwise silently CLIP the extra tabs
-        // (invisible and unclickable) instead of squeezing or
-        // wrapping them. This scroll strip is what turns that into
-        // "swipe to see more" instead of "tab disappears".
         const scrollEl = document.createElement('div');
         scrollEl.className = 'mt-tab-scroll';
         scrollEl.appendChild(rowEl);
         topRow.appendChild(scrollEl);
-
-        const rowHasActiveStage = row.some((s) => s.id === activeStageId);
-        if (rowHasActiveStage) {
-          const link = document.createElement('a');
-          link.href = `stage-detail.html?id=${encodeURIComponent(activeStageId)}`;
-          link.className = 'mt-tab-link';
-          link.textContent = '查看攻略 →';
-          topRow.appendChild(link);
-        }
         wrapEl.appendChild(topRow);
         boxEl.appendChild(wrapEl);
 
+        const rowHasActiveStage = row.some((s) => s.id === activeStageId);
         if (rowHasActiveStage) {
+          const activeStage = row.find((s) => s.id === activeStageId);
           const team = teamByStageId.get(activeStageId);
           const panel = document.createElement('div');
           panel.className = 'mt-tab-panel';
 
+          // Enemy row — icon + name only (see .tn-enemy-row in
+          // components.css, which hides renderEnemyChip's own note
+          // text and shrinks the portrait to roughly the team card's
+          // own avatar size), then a divider so it doesn't visually
+          // fuse with the team card below it.
+          if (activeStage.enemies && activeStage.enemies.length) {
+            const enemyRow = document.createElement('div');
+            enemyRow.className = 'tn-enemy-row';
+            for (const enemy of activeStage.enemies) {
+              enemyRow.appendChild(renderEnemyChip(enemy, cardMaps.elementMap));
+            }
+            panel.appendChild(enemyRow);
+            const divider = document.createElement('div');
+            divider.className = 'tn-enemy-divider';
+            panel.appendChild(divider);
+          }
+
           const isDetailOpen = openTeamDetail.has(activeStageId);
 
-          // Step 1 of the two-step reveal: a clickable avatar-only
-          // preview (no name/note/buttons yet). Clicking it toggles the
-          // detail below, same as the old accordion's team-row preview.
           const previewBtn = document.createElement('button');
           previewBtn.type = 'button';
           previewBtn.className = 'mt-team-preview-btn';
@@ -250,18 +199,12 @@ async function init() {
           });
           panel.appendChild(previewBtn);
 
-          // Step 2: only once the preview above has been clicked open —
-          // name, note, and the 修改/刪除 actions (複製 removed per
-          // 2026-09-05 request, both here and in myTeamsSection.js).
+          // No 隊伍名稱 field shown here (per explicit request — this
+          // page is "just record the team", not name it) — straight to
+          // the note (筆記內文) and the 修改/刪除 actions.
           if (isDetailOpen) {
             const detail = document.createElement('div');
             detail.className = 'mt-team-detail';
-
-            const name = document.createElement('div');
-            name.className = 'team-card-name';
-            name.style.marginBottom = '6px';
-            name.textContent = team.name;
-            detail.appendChild(name);
 
             if (team.note) {
               const note = document.createElement('div');
@@ -309,13 +252,6 @@ async function init() {
     showToast('已刪除隊伍');
     refresh();
   }
-
-  document.getElementById('export-btn').addEventListener('click', () => downloadTeamsBackup());
-  document.getElementById('import-btn').addEventListener('click', async () => {
-    const merge = confirmDialog('選擇「確定」以合併匯入（保留現有隊伍並更新同名紀錄）；選擇「取消」則改為覆蓋匯入（清空後套用備份內容）。');
-    const ok = await promptImportTeamsBackup(merge ? 'merge' : 'replace');
-    if (ok) refresh();
-  });
 
   await refresh();
 }

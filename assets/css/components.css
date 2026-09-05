@@ -951,6 +951,31 @@ hr.ql-divider {
 .mt-tab-panel .team-card-members .mini-avatar,
 .mt-tab-panel .team-card-members .mini-avatar-empty { width: 70px; height: 91px; }
 .mt-tab-panel .team-card-members .mini-avatar-stage { transform: scale(0.35); }
+
+/* 隊伍筆記 (teamNotes.js) — the enemy row at the top of a 過往關卡's
+   panel. Reuses renderEnemyChip (same component as 關卡攻略's own 敵人
+   list) but shrunk to roughly match the team card's own mini-avatar
+   size just below it (70×91px, see above), not 關卡攻略's full 88px
+   square — otherwise the enemy row would visually dominate over the
+   team it's paired with. Only icon+name per the "敵人圖示＋名稱" spec;
+   the chip's own note text (enemy.note — a different field from the
+   team's own 筆記/note) is hidden here, not deleted from the data. */
+.tn-enemy-row { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 12px; }
+.tn-enemy-row .enemy-chip { width: 64px; gap: 4px; }
+.tn-enemy-row .enemy-portrait,
+.tn-enemy-row .enemy-portrait-clip,
+.tn-enemy-row .enemy-portrait-empty { width: 64px; height: 64px; }
+/* Badge is a fixed 38px normally (see enemy-portrait.css) — scaled
+   down to match the smaller 64px portrait here (same ~43% ratio),
+   otherwise it reads oversized relative to its own portrait. */
+.tn-enemy-row .enemy-portrait-badge { width: 28px; height: 28px; top: -6px; left: -6px; }
+.tn-enemy-row .enemy-chip-name { font-size: 0.75rem; text-align: center; }
+.tn-enemy-row .enemy-chip-note { display: none; }
+/* Separates the enemy row from the team card below it — without this
+   the two blocks read as one continuous list, which is confusing
+   since they're different kinds of things (敵人 vs 你的隊伍). */
+.tn-enemy-divider { border-top: 1px solid var(--border-soft); margin-bottom: 12px; }
+
 .form-row { display: flex; gap: 14px; }
 .form-row .form-field { flex: 1; }
 
