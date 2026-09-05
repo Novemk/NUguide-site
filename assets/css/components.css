@@ -778,7 +778,7 @@ hr.ql-divider {
    doesn't reference the variable), #887242 for the active/enabled tab
    elements, #5c5c5c for stages with no saved team.
    ========================================================= */
-.mt-tab-wrap { padding: 6px 14px 0; }
+.mt-tab-wrap { padding: 6px 14px 10px; }
 /* Tabs and the "查看攻略" link now share one line: this wraps both,
    with justify-content:space-between pushing the link to the box's
    far-right edge while the (fixed-width, content-sized) tab grid sits
