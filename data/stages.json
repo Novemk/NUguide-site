@@ -243,7 +243,8 @@
     "hidden": false,
     "roundTable": [],
     "rowBreak": false,
-    "sortOrder": 2
+    "sortOrder": 2,
+    "archived": true
   },
   {
     "id": "stage_55",
