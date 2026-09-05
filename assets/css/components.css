@@ -859,7 +859,7 @@ hr.ql-divider {
      read as a wide, short bar, not a box with equal padding on every
      side). */
   padding: 3px 2px;
-  font-family: var(--font-mono);
+  font-family: var(--font-display);
   font-weight: 700;
   font-size: 0.9rem;
   cursor: pointer;
@@ -871,7 +871,7 @@ hr.ql-divider {
 .mt-tab-cell.active .mt-tab { color: #201e2f; }
 .mt-tab-disabled {
   color: #5c5c5c;
-  font-family: var(--font-mono);
+  font-family: var(--font-display);
   font-weight: 700;
   font-size: 0.9rem;
   cursor: default;
@@ -934,11 +934,11 @@ hr.ql-divider {
    (render at full 200×260 reference size, then shrink as one unit via
    transform:scale so CardFace's badges/gradient/border keep correct
    proportions), just a smaller scale factor for this specific context
-   per the "隊伍整體等比縮小顯示" request. 0.28 keeps 200×0.28/260×0.28
-   on whole pixels (56/72.8) same as the other breakpoints' reasoning. */
+   per the "隊伍整體等比縮小顯示" request. Bumped from 0.28 to 0.35
+   (2026-09-05, "整排比例放大一點") — 200×0.35/260×0.35 = 70/91. */
 .mt-tab-panel .team-card-members .mini-avatar,
-.mt-tab-panel .team-card-members .mini-avatar-empty { width: 56px; height: 72.8px; }
-.mt-tab-panel .team-card-members .mini-avatar-stage { transform: scale(0.28); }
+.mt-tab-panel .team-card-members .mini-avatar-empty { width: 70px; height: 91px; }
+.mt-tab-panel .team-card-members .mini-avatar-stage { transform: scale(0.35); }
 .form-row { display: flex; gap: 14px; }
 .form-row .form-field { flex: 1; }
 
