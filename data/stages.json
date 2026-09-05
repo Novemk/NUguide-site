@@ -10,7 +10,7 @@
         "note": "",
         "elementId": "fire",
         "image": "assets/img/enemies/stage_8_2_0_自信的居民.webp",
-        "imageZoom": 1.24,
+        "imageZoom": 1.22,
         "imageOffsetX": 0.4950986925741105,
         "imageOffsetY": 0.5132211538461539
       },
@@ -34,10 +34,7 @@
       }
     ],
     "guide": "<p>每回合都要打一下每個粉絲，否則粉絲會減傷+加攻</p><p>最後一回合必須把三位粉絲同時打到1%，否則粉絲會補血至15%</p><p>必須在16回合或以內打完，否則第16回合我方全滅</p><p><br></p><p>推薦帶至少1隻群攻角／分岔攻擊手</p><p><span style=\"color: rgb(226, 96, 79);\">留意綠色粉絲會幫血量最低的粉絲減傷20%（最多2層）</span></p><p>可以帶一隻單攻角，令其中一位粉絲保持壓在三粉絲中的血量最低，只讓他一個人吃盡減傷</p><p><br></p><p>本關沒什麼特殊機制，可以全程攻擊就不寫回合表了。</p>",
-    "recommendedTags": [
-      "aoe",
-      "target_pos"
-    ],
+    "recommendedTags": [],
     "hidden": false,
     "roundTable": []
   },
@@ -126,13 +123,11 @@
       }
     ],
     "guide": "<p>全SR可以過</p><p><br></p><p>觸發隊專場，Wave 2的木屬劫匪才是真正的敵人</p><p>需要帶坦，推薦帶觸發角</p><p>沒有觸發角就推薦3/6CD角、易傷角、火屬角或多輔助</p><hr class=\"ql-divider\"><p>Wave 1：故事簡介，不用打</p><p><br></p><p>Wave 2：重點打劫匪（木屬），劫匪狀態：</p><p>．每回合受到 普攻 傷害減少3%（最多30層）</p><p>．每回合受到 必殺 傷害減少4%（最多30層）</p><p>．每回合受到 持續 傷害減少6%（最多30層）</p><p><br></p><p>Wave 3：故事結束，不用打</p>",
-    "recommendedTags": [
-      "trigger"
-    ],
+    "recommendedTags": [],
     "hidden": false,
     "roundTable": [
       {
-        "col1": "Wave1",
+        "col1": "<span style=\"color: rgb(201, 164, 92);\">Wave1</span>",
         "col2": ""
       },
       {
@@ -144,7 +139,7 @@
         "col2": ""
       },
       {
-        "col1": "<span style=\"font-size: 14.4px;\">Wave 2（6CD機制）</span>",
+        "col1": "<span style=\"font-size: 14.4px; color: rgb(201, 164, 92);\">Wave 2（6CD機制）</span>",
         "col2": ""
       },
       {
@@ -168,7 +163,7 @@
         "col2": ""
       },
       {
-        "col1": "<span style=\"font-size: 14.4px;\">Wave 3</span>",
+        "col1": "<span style=\"font-size: 14.4px; color: rgb(201, 164, 92);\">Wave 3</span>",
         "col2": ""
       },
       {
