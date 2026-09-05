@@ -35,10 +35,26 @@ export function renderTeamCard(team, cardMap, opts = {}) {
     name.className = 'team-card-name';
     name.textContent = team.name;
     head.appendChild(name);
+
+    // 推薦隊伍 (opts.official) only — 備註 here is always a plain video
+    // URL (admin's own field is a plain <input>, not the rich-text note
+    // editor players use), so it becomes a "觀看影片" link in the header
+    // row instead of printed out as text (2026-09-06 request). Player's
+    // own saved teams elsewhere keep their note exactly as before — see
+    // the showNote block below, now scoped to !opts.official.
+    if (opts.official && team.note) {
+      const videoLink = document.createElement('a');
+      videoLink.href = team.note;
+      videoLink.target = '_blank';
+      videoLink.rel = 'noopener noreferrer';
+      videoLink.className = 'team-card-video-link';
+      videoLink.textContent = '觀看影片 →';
+      head.appendChild(videoLink);
+    }
     el.appendChild(head);
   }
 
-  if (opts.showNote !== false && team.note) {
+  if (opts.showNote !== false && !opts.official && team.note) {
     const note = document.createElement('div');
     note.className = 'team-card-note';
     // team.note is HTML (the 備註 editor supports selecting text and

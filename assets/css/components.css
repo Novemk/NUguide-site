@@ -1006,6 +1006,18 @@ hr.ql-divider {
   border-color: rgba(201, 164, 92, 0.4);
 }
 .team-card-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; margin-bottom: 4px; }
+/* 推薦隊伍's "觀看影片" link (2026-09-06) — same look as .mt-tab-link's
+   "查看攻略" (accent-teal, no underline until hover), sits in the same
+   header row as the team name via .team-card-head's own
+   justify-content:space-between. */
+.team-card-video-link {
+  color: var(--accent-teal);
+  font-size: 0.85rem;
+  text-decoration: none;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+.team-card-video-link:hover { text-decoration: underline; }
 .team-card-name { font-weight: 700; font-size: 1.02rem; }
 .team-card-note { font-size: 0.82rem; color: var(--text-dim); margin-bottom: 10px; white-space: pre-wrap; }
 .team-card-members { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
