@@ -387,5 +387,42 @@
     ],
     "rowBreak": false,
     "sortOrder": 4.5
+  },
+  {
+    "id": "stage_50_2",
+    "chapter": "忘卻遺跡 第二十六季",
+    "order": "50",
+    "title": "",
+    "enemies": [
+      {
+        "name": "享樂時光 小墨菲",
+        "note": "無視屬性相剋",
+        "elementId": "fire",
+        "image": "assets/img/enemies/stage_50_2_0_享樂時光_小墨菲.webp",
+        "imageZoom": 1.22,
+        "imageOffsetX": 0.5472396427939973,
+        "imageOffsetY": 0.559185606060606
+      }
+    ],
+    "guide": "<p><span style=\"color: rgb(201, 164, 92);\">【組隊事項】</span></p><ul><li><span style=\"color: rgb(226, 96, 79);\">要帶坦+坦放第3位</span></li><li>如果想確保全程補師補血，補師要放24位</li><li>20%有鎖血線</li></ul><p><br></p><p>本關有全體反擊機制，<span style=\"color: rgb(79, 200, 176);\">推薦帶不會造成直接傷害的角色</span>，例如毒隊的火狐、鬥牛可。</p><p>含觸發輔助的雙輔助隊（不會攻擊的輔助）也是很好的選擇，可以同時保持輸出和補血量</p><p>如果帶舞可，可以讓舞可只必殺不普攻</p><hr class=\"ql-divider\"><p><span style=\"color: rgb(201, 164, 92);\">小墨菲開場狀態──</span></p><p>被普攻：以60%攻擊力反擊敵方全體</p><p>被必殺：以120%攻擊力反擊敵方第3位</p>",
+    "recommendedTags": [],
+    "hidden": false,
+    "archived": false,
+    "roundTable": [
+      {
+        "col1": "T2、10",
+        "col2": "最少3個人攻擊（對小墨菲降攻）<br><span style=\"color: rgb(79, 200, 176);\">第一個攻擊的角色不要選打人的角色（否則會吃高傷害反擊）</span><br>我方防禦可以80%攻擊力全體補血"
+      },
+      {
+        "col1": "T5、13",
+        "col2": "2、4 必殺（降低小墨菲造成傷害）<br>3 攻擊<br>1、5 防禦（全體護盾）"
+      },
+      {
+        "col1": "T8、16",
+        "col2": "坦角嘲諷"
+      }
+    ],
+    "rowBreak": false,
+    "sortOrder": 5
   }
 ]
