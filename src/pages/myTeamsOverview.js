@@ -133,27 +133,20 @@ async function init() {
         const boxEl = document.createElement('div');
         boxEl.className = 'mt-chapter-box';
 
-        // Every real stage gets a fixed-width column, with a separator
-        // track between each pair (mirrors the '｜' glyph rendered
-        // below). The grid itself is only ever as wide as this row's
-        // own tabs need — the box (see .mt-chapter-box) stays full
-        // width (640px, same as the site's tables/team cards) and the
-        // grid sits left-aligned inside it, so whatever's left over on
-        // the right is just blank box, which is also where the
-        // "查看攻略" link lands (see .mt-tab-toprow below).
-        const gridTemplate = Array.from({ length: row.length }, () => TAB_COL_WIDTH).join(' auto ');
+        // No more 'auto' separator tracks or gap — cells sit directly
+        // edge-to-edge (see .mt-tab-row column-gap:0 in CSS). The '｜'
+        // divider is drawn as a border-left on each cell instead of a
+        // text glyph in its own track: a glyph carries its own font
+        // whitespace that can't be squeezed to 0, but a border can —
+        // which is what lets the active cell's background reach fully
+        // flush against its neighbor with zero gap (see 'sep-left'
+        // below, per the 對齊方式 reference).
+        const gridTemplate = Array.from({ length: row.length }, () => TAB_COL_WIDTH).join(' ');
 
         const rowEl = document.createElement('div');
         rowEl.className = 'mt-tab-row';
         rowEl.style.gridTemplateColumns = gridTemplate;
         row.forEach((s, i) => {
-          if (i > 0) {
-            const sep = document.createElement('span');
-            sep.className = 'mt-tab-sep';
-            sep.textContent = '｜';
-            rowEl.appendChild(sep);
-          }
-
           // The grid item is this cell (a plain div) — divs reliably
           // stretch to fill their CSS Grid column, unlike a <button>
           // (a replaced/form element, which does not always honor the
@@ -163,6 +156,17 @@ async function init() {
           // of how wide the label text itself is.
           const cell = document.createElement('div');
           cell.className = 'mt-tab-cell';
+
+          // A divider only shows between two NEITHER of which is the
+          // active one — once either neighbor is active, that shared
+          // edge is exactly where the active background should sit
+          // flush, so drawing a line there would cut straight through
+          // its own highlight.
+          if (i > 0) {
+            const prevActive = row[i - 1].id === activeStageId;
+            const thisActive = s.id === activeStageId;
+            if (!prevActive && !thisActive) cell.classList.add('sep-left');
+          }
 
           if (!teamByStageId.has(s.id)) {
             cell.appendChild(Object.assign(document.createElement('span'), {

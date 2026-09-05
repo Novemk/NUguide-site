@@ -788,12 +788,16 @@ hr.ql-divider {
   display: grid;
   /* grid-template-columns is set inline per-row by myTeamsOverview.js
      (see gridTemplate there) — every column is the same fixed width,
-     so a tab's size never depends on its own label length. The grid
-     itself is only as wide as its columns need (it's a flex child of
-     .mt-tab-toprow, not stretched), so it stays left-aligned inside
-     the box while the link sits at the far right of the same line. */
+     so a tab's size never depends on its own label length. No gap
+     between columns any more — cells sit directly edge-to-edge, and
+     the '｜' divider is drawn as a border on the cell itself (see
+     .mt-tab-cell.sep-left) instead of eating its own gap/track, so an
+     active cell's background can reach fully flush against whichever
+     neighbor it's next to. The grid itself is only as wide as this
+     row's own tabs need (it's a flex child of .mt-tab-toprow, not
+     stretched), so it stays left-aligned inside the box. */
   align-items: stretch;
-  column-gap: 10px;
+  column-gap: 0;
   padding: 2px 0;
 }
 .mt-tab-cell {
@@ -805,9 +809,17 @@ hr.ql-divider {
   min-width: 0;
   box-sizing: border-box;
 }
+/* The '｜' divider between two tabs, as a 1px border instead of a text
+   glyph — a glyph carries its own font whitespace that can't be
+   squeezed to 0, a border can. Only present when NEITHER side of this
+   edge is the active tab (see myTeamsOverview.js) — once one is, the
+   active cell's own background fills that edge instead. */
+.mt-tab-cell.sep-left { border-left: 1px solid #887242; }
 .mt-tab-cell.active {
   background: #887242;
-  border-radius: 4px;
+  /* Square corners, not rounded — per explicit reference image, the
+     active highlight reads as a flat continuous bar, not a chip. */
+  border-radius: 0;
 }
 .mt-tab {
   background: none;
@@ -842,7 +854,6 @@ hr.ql-divider {
   align-items: center;
   justify-content: center;
 }
-.mt-tab-sep { color: #887242; font-size: 0.85rem; display: flex; align-items: center; justify-content: center; }
 .mt-tab-link {
   color: var(--accent-teal);
   font-size: 0.85rem;
