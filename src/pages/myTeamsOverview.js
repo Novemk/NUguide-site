@@ -107,6 +107,13 @@ async function init() {
       titleEl.textContent = chapter;
       chapterEl.appendChild(titleEl);
 
+      // Single bordered box for the whole chapter — tab rows AND
+      // whatever's expanded below them both live inside this one box
+      // (not the box only appearing once something's open).
+      const boxEl = document.createElement('div');
+      boxEl.className = 'mt-chapter-box';
+      chapterEl.appendChild(boxEl);
+
       const wrapEl = document.createElement('div');
       wrapEl.className = 'mt-tab-wrap';
 
@@ -151,7 +158,7 @@ async function init() {
         }
         wrapEl.appendChild(rowEl);
       }
-      chapterEl.appendChild(wrapEl);
+      boxEl.appendChild(wrapEl);
 
       if (activeStageId) {
         const team = teamByStageId.get(activeStageId);
@@ -180,7 +187,7 @@ async function init() {
           footer.appendChild(btn);
         }
         panel.appendChild(footer);
-        chapterEl.appendChild(panel);
+        boxEl.appendChild(panel);
       }
 
       root.appendChild(chapterEl);

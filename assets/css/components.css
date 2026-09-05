@@ -778,7 +778,7 @@ hr.ql-divider {
    doesn't reference the variable), #887242 for the active/enabled tab
    elements, #5c5c5c for stages with no saved team.
    ========================================================= */
-.mt-tab-wrap { max-width: 640px; margin-bottom: 10px; }
+.mt-tab-wrap { padding: 14px 14px 4px; }
 .mt-tab-row {
   display: flex;
   align-items: center;
@@ -796,8 +796,11 @@ hr.ql-divider {
   cursor: pointer;
   border-radius: 4px;
   color: #887242;
+  min-width: 44px;
+  text-align: center;
+  display: inline-block;
 }
-.mt-tab.active { background: #887242; color: #201e2f; padding: 4px 10px; }
+.mt-tab.active { background: #887242; color: #201e2f; padding: 4px 10px; min-width: 52px; }
 .mt-tab-disabled {
   color: #5c5c5c;
   font-family: var(--font-mono);
@@ -805,6 +808,9 @@ hr.ql-divider {
   font-size: 0.9rem;
   cursor: default;
   padding: 4px 2px;
+  min-width: 44px;
+  text-align: center;
+  display: inline-block;
 }
 .mt-tab-sep { color: #887242; font-size: 0.85rem; }
 .mt-tab-link {
@@ -815,16 +821,27 @@ hr.ql-divider {
   flex-shrink: 0;
 }
 .mt-tab-link:hover { text-decoration: underline; }
-.mt-tab-panel {
+/* Whole-chapter box — tab rows AND whatever team is expanded below
+   them both live inside this one border, always visible whether or
+   not anything's currently expanded (not a border that only appears
+   once you open something). */
+.mt-chapter-box {
   max-width: 640px;
   border: 1px solid #c9a45c;
   border-radius: var(--radius-md);
-  padding: 14px 16px;
   margin-bottom: 20px;
-  background: var(--bg-card);
+  overflow: hidden;
+}
+.mt-tab-panel {
+  padding: 14px 16px;
+  /* This divider is what actually marks "tabs end, expanded team
+     content begins" now that the outer box itself is always drawn —
+     .mt-tab-panel only exists in the DOM while something's open, so a
+     plain border-top here is exactly the "點開後才出現分隔線" effect. */
+  border-top: 1px solid #c9a45c;
 }
 /* renderTeamCard() normally draws its own .team-card box (background/
-   border/padding) — redundant here since .mt-tab-panel already draws
+   border/padding) — redundant here since .mt-chapter-box already draws
    that same box, so it's flattened to just the member row. */
 .mt-tab-panel .team-card { padding: 0; margin-bottom: 0; border: none; background: none; }
 /* Scaled down further than the member avatars' own default size (see
