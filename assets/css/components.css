@@ -778,7 +778,18 @@ hr.ql-divider {
    doesn't reference the variable), #887242 for the active/enabled tab
    elements, #5c5c5c for stages with no saved team.
    ========================================================= */
-.mt-tab-wrap { padding: 6px 14px 10px; }
+.mt-tab-wrap {
+  /* Single source of truth for the vertical spacing above/below the
+     tab row — symmetric top and bottom (8px each) so the gap from the
+     box's top border down to the tabs matches the gap from the tabs
+     down to whatever comes next (the .mt-tab-panel divider, or the
+     box's own bottom border when nothing's expanded). .mt-tab-row NO
+     LONGER has its own top/bottom padding (see below) — mixing two
+     separately-tuned padding values here is exactly what produced the
+     top/bottom mismatch this replaced.
+   */
+  padding: 8px 14px;
+}
 /* Tabs and the "查看攻略" link now share one line: this wraps both,
    with justify-content:space-between pushing the link to the box's
    far-right edge while the (fixed-width, content-sized) tab grid sits
@@ -795,17 +806,24 @@ hr.ql-divider {
      active cell's background can reach fully flush against whichever
      neighbor it's next to. The grid itself is only as wide as this
      row's own tabs need (it's a flex child of .mt-tab-toprow, not
-     stretched), so it stays left-aligned inside the box. */
+     stretched), so it stays left-aligned inside the box. Vertical
+     spacing lives entirely on .mt-tab-wrap now, not here. */
   align-items: stretch;
   column-gap: 0;
-  padding: 2px 0;
 }
 .mt-tab-cell {
   /* This div is the actual grid item now (not the button/span inside
      it) — divs reliably stretch to their grid column's full width by
      default, which a <button> does not always do. min-width:0 blocks
      the "item won't shrink below its content" default that could
-     otherwise re-expand the column past the fixed px width. */
+     otherwise re-expand the column past the fixed px width.
+     display:flex here (stretch is flex's default align-items) forces
+     the button/span inside to fill this cell's FULL height, not just
+     its own natural content height — otherwise the text could sit
+     flush at the top with the cell's stretched extra height left
+     empty underneath, instead of the text landing dead-center with
+     equal space above and below within the gold background. */
+  display: flex;
   min-width: 0;
   box-sizing: border-box;
 }
