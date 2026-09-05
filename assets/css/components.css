@@ -778,7 +778,7 @@ hr.ql-divider {
    doesn't reference the variable), #887242 for the active/enabled tab
    elements, #5c5c5c for stages with no saved team.
    ========================================================= */
-.mt-tab-wrap { padding: 10px 14px 0; }
+.mt-tab-wrap { padding: 6px 14px 0; }
 /* Tabs and the "查看攻略" link now share one line: this wraps both,
    with justify-content:space-between pushing the link to the box's
    far-right edge while the (fixed-width, content-sized) tab grid sits
@@ -794,12 +794,26 @@ hr.ql-divider {
      the box while the link sits at the far right of the same line. */
   align-items: stretch;
   column-gap: 10px;
-  padding: 4px 0;
+  padding: 2px 0;
 }
 .mt-tab {
   background: none;
   border: none;
-  padding: 4px 2px;
+  /* Explicit width:100% — <button> is a replaced/form element and
+     does NOT reliably stretch to fill its CSS Grid column just from
+     the grid's own align-items/justify-items:stretch default (unlike
+     a plain span or div); without this, the active background below
+     only wraps the text instead of reaching the column's full width,
+     i.e. it stops short of the '｜' separators on either side instead
+     of filling exactly up to them. */
+  width: 100%;
+  box-sizing: border-box;
+  /* Padding is intentionally NOT symmetric — tighter top/bottom than
+     left/right, per explicit request (the active highlight should
+     read as a wide, short bar, not a box with equal padding on every
+     side). Horizontal barely matters now that width:100% + text-align
+     center does the real horizontal centering. */
+  padding: 3px 2px;
   font-family: var(--font-mono);
   font-weight: 700;
   font-size: 0.9rem;
@@ -818,7 +832,9 @@ hr.ql-divider {
   font-weight: 700;
   font-size: 0.9rem;
   cursor: default;
-  padding: 4px 2px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 3px 2px;
   min-width: 44px;
   display: flex;
   align-items: center;
