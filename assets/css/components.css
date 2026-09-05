@@ -796,36 +796,39 @@ hr.ql-divider {
   column-gap: 10px;
   padding: 2px 0;
 }
+.mt-tab-cell {
+  /* This div is the actual grid item now (not the button/span inside
+     it) — divs reliably stretch to their grid column's full width by
+     default, which a <button> does not always do. min-width:0 blocks
+     the "item won't shrink below its content" default that could
+     otherwise re-expand the column past the fixed px width. */
+  min-width: 0;
+  box-sizing: border-box;
+}
+.mt-tab-cell.active {
+  background: #887242;
+  border-radius: 4px;
+}
 .mt-tab {
   background: none;
   border: none;
-  /* Explicit width:100% — <button> is a replaced/form element and
-     does NOT reliably stretch to fill its CSS Grid column just from
-     the grid's own align-items/justify-items:stretch default (unlike
-     a plain span or div); without this, the active background below
-     only wraps the text instead of reaching the column's full width,
-     i.e. it stops short of the '｜' separators on either side instead
-     of filling exactly up to them. */
   width: 100%;
   box-sizing: border-box;
   /* Padding is intentionally NOT symmetric — tighter top/bottom than
      left/right, per explicit request (the active highlight should
      read as a wide, short bar, not a box with equal padding on every
-     side). Horizontal barely matters now that width:100% + text-align
-     center does the real horizontal centering. */
+     side). */
   padding: 3px 2px;
   font-family: var(--font-mono);
   font-weight: 700;
   font-size: 0.9rem;
   cursor: pointer;
-  border-radius: 4px;
   color: #887242;
-  min-width: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.mt-tab.active { background: #887242; color: #201e2f; }
+.mt-tab-cell.active .mt-tab { color: #201e2f; }
 .mt-tab-disabled {
   color: #5c5c5c;
   font-family: var(--font-mono);
@@ -835,7 +838,6 @@ hr.ql-divider {
   width: 100%;
   box-sizing: border-box;
   padding: 3px 2px;
-  min-width: 44px;
   display: flex;
   align-items: center;
   justify-content: center;

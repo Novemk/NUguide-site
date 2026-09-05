@@ -153,22 +153,35 @@ async function init() {
             sep.textContent = '｜';
             rowEl.appendChild(sep);
           }
+
+          // The grid item is this cell (a plain div) — divs reliably
+          // stretch to fill their CSS Grid column, unlike a <button>
+          // (a replaced/form element, which does not always honor the
+          // grid's stretch sizing). The active background/color live
+          // on the CELL, not on the button/text inside it, so the
+          // highlight always spans the full column width regardless
+          // of how wide the label text itself is.
+          const cell = document.createElement('div');
+          cell.className = 'mt-tab-cell';
+
           if (!teamByStageId.has(s.id)) {
-            const span = document.createElement('span');
-            span.className = 'mt-tab mt-tab-disabled';
-            span.textContent = s.order;
-            rowEl.appendChild(span);
+            cell.appendChild(Object.assign(document.createElement('span'), {
+              className: 'mt-tab-disabled',
+              textContent: s.order,
+            }));
           } else {
+            if (activeStageId === s.id) cell.classList.add('active');
             const btn = document.createElement('button');
             btn.type = 'button';
-            btn.className = 'mt-tab' + (activeStageId === s.id ? ' active' : '');
+            btn.className = 'mt-tab';
             btn.textContent = s.order;
             btn.addEventListener('click', () => {
               openStageByChapter.set(chapter, activeStageId === s.id ? null : s.id);
               refresh();
             });
-            rowEl.appendChild(btn);
+            cell.appendChild(btn);
           }
+          rowEl.appendChild(cell);
         });
 
         const wrapEl = document.createElement('div');
