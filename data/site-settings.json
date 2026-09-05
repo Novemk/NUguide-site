@@ -7,9 +7,9 @@
   "stageButtonStyle": {
     "fontFamily": "display",
     "fontSize": 15,
-    "paddingY": 12,
+    "paddingY": 5,
     "paddingX": 6,
-    "borderRadius": 8,
+    "borderRadius": 4,
     "gradientEnabled": true,
     "gradientAngle": 180,
     "gradientColors": [
@@ -23,8 +23,8 @@
     "dividerWidth": 1,
     "dividerGradientEnabled": false,
     "dividerColors": [
-      "#c9a45c",
-      "#c9a45c"
+      "#4d4128",
+      "#5b5549"
     ]
   }
 }
