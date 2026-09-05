@@ -242,7 +242,7 @@
     "recommendedTags": [],
     "hidden": false,
     "roundTable": [],
-    "rowBreak": true,
+    "rowBreak": false,
     "sortOrder": 4
   },
   {
