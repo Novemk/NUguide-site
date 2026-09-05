@@ -768,81 +768,75 @@ hr.ql-divider {
 .note-editor a:hover, .page-header p a:hover { color: var(--accent-gold); }
 
 /* =========================================================
-   我的隊伍總覽 — two-level accordion (stage → team)
+   我的隊伍總覽 — chapter header + a row of order-number tabs
+   (mirrors 關卡攻略's own button grid), one team preview panel below
+   whichever tab in that chapter is currently active. Colors here are
+   deliberately hand-picked (not the site's normal --accent-gold/
+   --border-soft tokens) per an explicit design request for this one
+   page — #c9a45c for the chapter title/panel border (same as
+   --accent-gold, just spelled out since this section intentionally
+   doesn't reference the variable), #887242 for the active/enabled tab
+   elements, #5c5c5c for stages with no saved team.
    ========================================================= */
-.mt-stage-toggle {
+.mt-tab-wrap { max-width: 640px; margin-bottom: 10px; }
+.mt-tab-row {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 10px 0;
+}
+.mt-tab {
   background: none;
   border: none;
-  padding: 0;
-  cursor: pointer;
-  text-align: left;
-  color: var(--accent-gold);
-  font-family: var(--font-display);
-  font-size: 1.1rem;
-}
-.mt-stage-caret { color: var(--text-faint); transition: transform 0.18s; flex-shrink: 0; }
-.mt-stage-block.open .mt-stage-caret { transform: rotate(90deg); }
-.mt-stage-panel { display: none; margin-top: 14px; }
-.mt-stage-block.open .mt-stage-panel { display: block; }
-.mt-team-row {
-  background: var(--bg-card);
-  border: 1px solid var(--border-soft);
-  border-radius: var(--radius-md);
-  padding: 12px 16px;
-  margin-bottom: 10px;
-  max-width: 640px;
-}
-.mt-team-row-main { display: flex; align-items: center; gap: 14px; }
-.mt-team-number {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  border: 2px solid var(--accent-gold);
-  color: var(--accent-gold);
-  font-family: var(--font-display);
+  padding: 4px 2px;
+  font-family: var(--font-mono);
   font-weight: 700;
-  font-size: 0.95rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border-radius: 4px;
+  color: #887242;
+}
+.mt-tab.active { background: #887242; color: #201e2f; padding: 4px 10px; }
+.mt-tab-disabled {
+  color: #5c5c5c;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: default;
+  padding: 4px 2px;
+}
+.mt-tab-sep { color: #887242; font-size: 0.85rem; }
+.mt-tab-link {
+  margin-left: auto;
+  color: var(--accent-teal);
+  font-size: 0.85rem;
+  text-decoration: none;
   flex-shrink: 0;
 }
-.mt-team-preview-btn {
-  display: block;
-  flex: 1;
-  min-width: 0;
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  text-align: left;
+.mt-tab-link:hover { text-decoration: underline; }
+.mt-tab-panel {
+  max-width: 640px;
+  border: 1px solid #c9a45c;
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  margin-bottom: 20px;
+  background: var(--bg-card);
 }
-.mt-team-preview-btn .team-card-members { margin-bottom: 0; }
-/* renderTeamCard() returns a .team-card div with its own background/
-   border/padding — appropriate when it's used standalone (stage-detail
-   page, 卡片資料庫 etc), but here it's nested inside .mt-team-row, which
-   already draws that same box. Without this override the two padded/
-   bordered boxes stack, which is what was reading as "too much empty
-   space" — it wasn't extra padding, it was a second box drawn inside
-   the first one. */
-.mt-team-preview-btn .team-card {
-  padding: 0;
-  margin-bottom: 0;
-  border: none;
-  background: none;
-}
-.mt-team-detail {
-  margin-top: 14px;
-  padding-top: 14px;
-  border-top: 1px solid var(--border-soft);
-  /* Lines up with the first avatar's left edge, not the row's own edge —
-     the avatar row starts after the number circle (32px) + the gap next
-     to it (14px), so the text below should start at that same x. */
-  margin-left: 46px;
-}
+/* renderTeamCard() normally draws its own .team-card box (background/
+   border/padding) — redundant here since .mt-tab-panel already draws
+   that same box, so it's flattened to just the member row. */
+.mt-tab-panel .team-card { padding: 0; margin-bottom: 0; border: none; background: none; }
+/* Scaled down further than the member avatars' own default size (see
+   .team-card-members .mini-avatar-stage in this file) — same technique
+   (render at full 200×260 reference size, then shrink as one unit via
+   transform:scale so CardFace's badges/gradient/border keep correct
+   proportions), just a smaller scale factor for this specific context
+   per the "隊伍整體等比縮小顯示" request. 0.28 keeps 200×0.28/260×0.28
+   on whole pixels (56/72.8) same as the other breakpoints' reasoning. */
+.mt-tab-panel .team-card-members .mini-avatar,
+.mt-tab-panel .team-card-members .mini-avatar-empty { width: 56px; height: 72.8px; }
+.mt-tab-panel .team-card-members .mini-avatar-stage { transform: scale(0.28); }
 .form-row { display: flex; gap: 14px; }
 .form-row .form-field { flex: 1; }
 

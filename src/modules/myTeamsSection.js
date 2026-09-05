@@ -1,5 +1,5 @@
 // src/modules/myTeamsSection.js
-import { getTeams, deleteTeam, duplicateTeam, MAX_TEAMS_PER_STAGE } from '../core/store.js';
+import { getTeams, deleteTeam, MAX_TEAMS_PER_STAGE } from '../core/store.js';
 import { openTeamEditor } from '../components/TeamEditor.js';
 import { renderTeamCard } from '../components/TeamCard.js';
 import { confirmDialog } from '../components/Modal.js';
@@ -39,7 +39,6 @@ export async function renderMyTeamsSection(container, stageId, cardMap, maps) {
           maps,
           actions: [
             { label: '修改', className: 'btn btn-sm', onClick: () => handleEdit(team) },
-            { label: '複製', className: 'btn btn-sm btn-secondary', onClick: () => handleDuplicate(team) },
             { label: '刪除', className: 'btn btn-sm btn-danger', onClick: () => handleDelete(team) },
           ],
         }));
@@ -59,17 +58,6 @@ export async function renderMyTeamsSection(container, stageId, cardMap, maps) {
 
   async function handleEdit(team) {
     await openTeamEditor(stageId, team);
-    refresh();
-  }
-
-  async function handleDuplicate(team) {
-    const teams = await getTeams(stageId);
-    if (teams.length >= MAX_TEAMS_PER_STAGE) {
-      showToast(`每個關卡最多只能建立 ${MAX_TEAMS_PER_STAGE} 組隊伍`, { type: 'error' });
-      return;
-    }
-    await duplicateTeam(stageId, team.localId);
-    showToast('已複製隊伍');
     refresh();
   }
 

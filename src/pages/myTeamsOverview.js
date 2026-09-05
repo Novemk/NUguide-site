@@ -1,7 +1,7 @@
 // src/pages/myTeamsOverview.js
 import { loadJSON, DataSources, toMap } from '../core/dataLoader.js';
 import { mountNavbar, mountFooter } from '../components/Navbar.js';
-import { getAllTeamsGrouped, deleteTeam, duplicateTeam } from '../core/store.js';
+import { getAllTeamsGrouped, deleteTeam } from '../core/store.js';
 import { renderTeamCard } from '../components/TeamCard.js';
 import { openTeamEditor } from '../components/TeamEditor.js';
 import { confirmDialog } from '../components/Modal.js';
@@ -20,10 +20,6 @@ async function init() {
     loadJSON(DataSources.elements),
     loadJSON(DataSources.siteSettings).catch(() => null),
   ]);
-  // Editable from the admin's 網站設定 page — HTML (may contain colored
-  // <span> from that field's "select text, apply color" editor), so
-  // this uses innerHTML; falls back to whatever's already in the static
-  // HTML (my-teams.html) if the field is missing or the fetch fails.
   if (siteSettings && siteSettings.myTeamsDescription) {
     const descEl = document.getElementById('my-teams-description');
     if (descEl) descEl.innerHTML = siteSettings.myTeamsDescription;
@@ -33,18 +29,30 @@ async function init() {
   const cardMaps = { rarityMap: toMap(rarities), classMap: toMap(classes), elementMap: toMap(elements) };
   const root = document.getElementById('overview-root');
 
-  // Which stage sections are expanded, and — independently, per stage —
-  // which single team (if any) is expanded to show its name/note/actions.
-  // Kept outside refresh() so the accordion state survives a refresh
-  // (e.g. after editing a team) instead of collapsing everything back.
-  const openStages = new Set();
-  const openTeamByStage = new Map(); // stageId -> team.localId | null
+  // Which stage is currently "open" within each chapter — a Map keyed
+  // by chapter name, one open stage at a time per chapter (opening a
+  // new one in the same chapter auto-closes the previous one); a
+  // different chapter's own open stage is unaffected.
+  const openStageByChapter = new Map();
 
   async function refresh() {
     const grouped = await getAllTeamsGrouped();
     root.innerHTML = '';
 
-    if (grouped.length === 0) {
+    // Only one team per stage now (MAX_TEAMS_PER_STAGE = 1 — see
+    // store.js) — take that single team directly rather than an array.
+    const teamByStageId = new Map();
+    for (const entry of grouped) {
+      const stage = stageMap.get(entry.stageId);
+      // Stage data itself is gone (deleted from the admin), or hidden —
+      // the player's own saved record still exists in their browser,
+      // this page just has nothing meaningful to show it under, same
+      // as everywhere else this situation comes up on the site.
+      if (!stage || stage.hidden) continue;
+      if (entry.teams && entry.teams[0]) teamByStageId.set(entry.stageId, entry.teams[0]);
+    }
+
+    if (teamByStageId.size === 0) {
       root.innerHTML = `
         <div class="empty-state">
           <h3>還沒有任何隊伍紀錄</h3>
@@ -54,118 +62,128 @@ async function init() {
       return;
     }
 
-    for (const entry of grouped) {
-      const stage = stageMap.get(entry.stageId);
-      // Stage data itself is gone (deleted from the admin) — the
-      // player's team records for it still exist in their own
-      // browser's localStorage (that's never touched from here), but
-      // there's nothing meaningful left to show without the stage's
-      // title/chapter, so this section just doesn't render at all.
-      if (!stage) continue;
-      const stageTitle = `${stage.chapter} · ${stage.order}`;
-      const isStageOpen = openStages.has(entry.stageId);
-
-      const block = document.createElement('div');
-      block.className = 'section mt-stage-block' + (isStageOpen ? ' open' : '');
-
-      const titleRow = document.createElement('div');
-      titleRow.className = 'section-title';
-
-      const toggleBtn = document.createElement('button');
-      toggleBtn.type = 'button';
-      toggleBtn.className = 'mt-stage-toggle';
-      toggleBtn.innerHTML = `<span class="mt-stage-caret">▶</span><span>${stageTitle}</span>`;
-      toggleBtn.addEventListener('click', () => {
-        if (openStages.has(entry.stageId)) openStages.delete(entry.stageId);
-        else openStages.add(entry.stageId);
-        refresh();
-      });
-      titleRow.appendChild(toggleBtn);
-
-      // A hidden stage's own page refuses to open (see stageDetail.js),
-      // so there's no point linking to it — the record itself still
-      // shows here (the player's own saved data), just without a dead-
-      // end link to a guide page that will say "找不到這個關卡".
-      if (!stage.hidden) {
-        const link = document.createElement('a');
-        link.href = `stage-detail.html?id=${encodeURIComponent(stage.id)}`;
-        link.className = 'btn btn-sm btn-secondary';
-        link.textContent = '查看攻略 →';
-        link.style.flexShrink = '0';
-        link.style.marginLeft = 'auto';
-        titleRow.appendChild(link);
+    // Only chapters that actually have at least one saved team show up
+    // here at all — a chapter the player has never touched doesn't
+    // clutter this page just because it exists on the site.
+    const chaptersWithTeams = new Set();
+    for (const stageId of teamByStageId.keys()) {
+      chaptersWithTeams.add(stageMap.get(stageId).chapter);
+    }
+    // Preserve stages.json's own chapter ordering, not alphabetical.
+    const chapterOrder = [];
+    const seenChapters = new Set();
+    for (const s of stages) {
+      if (chaptersWithTeams.has(s.chapter) && !seenChapters.has(s.chapter)) {
+        seenChapters.add(s.chapter);
+        chapterOrder.push(s.chapter);
       }
-      block.appendChild(titleRow);
+    }
 
-      const panel = document.createElement('div');
-      panel.className = 'mt-stage-panel';
+    for (const chapter of chapterOrder) {
+      // Every non-hidden stage in this chapter is listed (not just the
+      // ones with a saved team) — the ones without a team just render
+      // as plain disabled text instead of a clickable tab, per the
+      // 灰色/無法點擊 requirement, so you can see at a glance which of
+      // this chapter's stages you haven't recorded a team for yet.
+      const chapterStages = stages
+        .filter((s) => s.chapter === chapter && !s.hidden)
+        .sort((a, b) => (a.sortOrder ?? 0) - (b.sortOrder ?? 0));
 
-      const activeTeamId = openTeamByStage.get(entry.stageId) ?? null;
-      entry.teams.forEach((team, teamIndex) => {
-        const row = document.createElement('div');
-        row.className = 'mt-team-row';
+      // Same row-grouping rule as 關卡攻略's own button grid (see
+      // stagesList.js/stageAdmin.js's 另起一排) — same underlying data,
+      // so the layout reads the same way on both pages.
+      const rows = [];
+      let currentRow = [];
+      for (const s of chapterStages) {
+        if (s.rowBreak && currentRow.length > 0) { rows.push(currentRow); currentRow = []; }
+        currentRow.push(s);
+      }
+      if (currentRow.length) rows.push(currentRow);
 
-        const rowMain = document.createElement('div');
-        rowMain.className = 'mt-team-row-main';
+      const chapterEl = document.createElement('div');
+      chapterEl.className = 'chapter-group';
+      const titleEl = document.createElement('div');
+      titleEl.className = 'chapter-title';
+      titleEl.textContent = chapter;
+      chapterEl.appendChild(titleEl);
 
-        const numberBadge = document.createElement('div');
-        numberBadge.className = 'mt-team-number';
-        numberBadge.textContent = String(teamIndex + 1);
-        rowMain.appendChild(numberBadge);
+      const wrapEl = document.createElement('div');
+      wrapEl.className = 'mt-tab-wrap';
 
-        // Collapsed preview — member avatars only, no name/note/buttons,
-        // per request. Clicking it expands (or, if already the open one,
-        // collapses) this team's full detail below.
-        const previewBtn = document.createElement('button');
-        previewBtn.type = 'button';
-        previewBtn.className = 'mt-team-preview-btn';
-        previewBtn.setAttribute('aria-label', `${team.name}：${activeTeamId === team.localId ? '收合' : '展開'}隊伍內容`);
-        previewBtn.appendChild(renderTeamCard(team, cardMap, { maps: cardMaps, showName: false, showNote: false }));
-        previewBtn.addEventListener('click', () => {
-          openTeamByStage.set(entry.stageId, activeTeamId === team.localId ? null : team.localId);
-          refresh();
-        });
-        rowMain.appendChild(previewBtn);
-        row.appendChild(rowMain);
+      const activeStageId = openStageByChapter.get(chapter) || null;
 
-        if (activeTeamId === team.localId) {
-          const detail = document.createElement('div');
-          detail.className = 'mt-team-detail';
-          const name = document.createElement('div');
-          name.className = 'team-card-name';
-          name.style.marginBottom = '6px';
-          name.textContent = team.name;
-          detail.appendChild(name);
-          if (team.note) {
-            const note = document.createElement('div');
-            note.className = 'team-card-note';
-            note.innerHTML = team.note;
-            detail.appendChild(note);
+      for (const row of rows) {
+        const rowEl = document.createElement('div');
+        rowEl.className = 'mt-tab-row';
+        row.forEach((s, i) => {
+          if (i > 0) {
+            const sep = document.createElement('span');
+            sep.className = 'mt-tab-sep';
+            sep.textContent = '｜';
+            rowEl.appendChild(sep);
           }
-          const footer = document.createElement('div');
-          footer.className = 'team-card-footer';
-          footer.style.marginTop = '10px';
-          const actions = [
-            { label: '修改', className: 'btn btn-sm', onClick: () => handleEdit(entry.stageId, team) },
-            { label: '複製', className: 'btn btn-sm btn-secondary', onClick: () => handleDuplicate(entry.stageId, team) },
-            { label: '刪除', className: 'btn btn-sm btn-danger', onClick: () => handleDelete(entry.stageId, team) },
-          ];
-          for (const action of actions) {
+          if (!teamByStageId.has(s.id)) {
+            const span = document.createElement('span');
+            span.className = 'mt-tab mt-tab-disabled';
+            span.textContent = s.order;
+            rowEl.appendChild(span);
+          } else {
             const btn = document.createElement('button');
             btn.type = 'button';
-            btn.className = action.className;
-            btn.textContent = action.label;
-            btn.addEventListener('click', () => action.onClick());
-            footer.appendChild(btn);
+            btn.className = 'mt-tab' + (activeStageId === s.id ? ' active' : '');
+            btn.textContent = s.order;
+            btn.addEventListener('click', () => {
+              openStageByChapter.set(chapter, activeStageId === s.id ? null : s.id);
+              refresh();
+            });
+            rowEl.appendChild(btn);
           }
-          detail.appendChild(footer);
-          row.appendChild(detail);
+        });
+        // "查看攻略" only appears on the row containing the currently
+        // open stage — mirrors 關卡攻略's own button row layout, where
+        // the link always points at whichever stage is actually active.
+        if (row.some((s) => s.id === activeStageId)) {
+          const link = document.createElement('a');
+          link.href = `stage-detail.html?id=${encodeURIComponent(activeStageId)}`;
+          link.className = 'mt-tab-link';
+          link.textContent = '查看攻略 →';
+          rowEl.appendChild(link);
         }
+        wrapEl.appendChild(rowEl);
+      }
+      chapterEl.appendChild(wrapEl);
 
-        panel.appendChild(row);
-      });
-      block.appendChild(panel);
-      root.appendChild(block);
+      if (activeStageId) {
+        const team = teamByStageId.get(activeStageId);
+        const panel = document.createElement('div');
+        panel.className = 'mt-tab-panel';
+        // Scaled-down members-only preview (see .mt-tab-panel in
+        // components.css) — no name (per the earlier discussion), no
+        // note either, since the note is really about explaining a
+        // specific team's approach and there's no name to give it
+        // context without.
+        panel.appendChild(renderTeamCard(team, cardMap, { maps: cardMaps, showName: false, showNote: false }));
+
+        const footer = document.createElement('div');
+        footer.className = 'team-card-footer';
+        footer.style.marginTop = '10px';
+        const actions = [
+          { label: '修改', className: 'btn btn-sm', onClick: () => handleEdit(activeStageId, team) },
+          { label: '刪除', className: 'btn btn-sm btn-danger', onClick: () => handleDelete(activeStageId, team) },
+        ];
+        for (const action of actions) {
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = action.className;
+          btn.textContent = action.label;
+          btn.addEventListener('click', () => action.onClick());
+          footer.appendChild(btn);
+        }
+        panel.appendChild(footer);
+        chapterEl.appendChild(panel);
+      }
+
+      root.appendChild(chapterEl);
     }
   }
 
@@ -173,13 +191,8 @@ async function init() {
     await openTeamEditor(stageId, team);
     refresh();
   }
-  async function handleDuplicate(stageId, team) {
-    await duplicateTeam(stageId, team.localId);
-    showToast('已複製隊伍');
-    refresh();
-  }
   async function handleDelete(stageId, team) {
-    if (!confirmDialog(`確定要刪除「${team.name}」嗎？此動作無法復原。`)) return;
+    if (!confirmDialog('確定要刪除這組隊伍嗎？此動作無法復原。')) return;
     await deleteTeam(stageId, team.localId);
     showToast('已刪除隊伍');
     refresh();
