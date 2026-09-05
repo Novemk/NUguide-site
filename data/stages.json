@@ -202,7 +202,7 @@
   {
     "id": "stage_7_1",
     "chapter": "忘卻遺跡 第二十二季",
-    "order": "7-1",
+    "order": "7 - 1",
     "title": "",
     "enemies": [
       {
@@ -220,6 +220,6 @@
     "hidden": false,
     "roundTable": [],
     "rowBreak": true,
-    "sortOrder": 7.1
+    "sortOrder": 1
   }
 ]
