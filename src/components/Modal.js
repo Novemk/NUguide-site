@@ -25,7 +25,22 @@ function onGlobalKeydown(e) {
  * @param {() => void} [opts.onClose]
  * @returns {{ close: () => void, overlay: HTMLElement }}
  */
-export function openModal({ title, body, wide = false, onClose }) {
+/**
+ * Opens a modal dialog.
+ * @param {Object} opts
+ * @param {string} opts.title
+ * @param {HTMLElement} opts.body - element to place in the modal body
+ * @param {boolean} [opts.wide]
+ * @param {() => void} [opts.onClose]
+ * @param {() => boolean} [opts.canClose] - consulted before the ×
+ *   button, clicking outside, or pressing Esc actually close the
+ *   modal (e.g. TeamEditor.js uses this to confirm discarding unsaved
+ *   changes). Return false to block the close. NOT consulted for the
+ *   `close()` returned below — that one's for the caller's own
+ *   explicit buttons (儲存/取消), which already know what they're doing.
+ * @returns {{ close: () => void, overlay: HTMLElement, box: HTMLElement }}
+ */
+export function openModal({ title, body, wide = false, onClose, canClose }) {
   const overlay = document.createElement('div');
   overlay.className = 'modal-overlay';
 
@@ -55,7 +70,7 @@ export function openModal({ title, body, wide = false, onClose }) {
   if (openModalStack.length === 0) document.addEventListener('keydown', onGlobalKeydown);
   document.body.style.overflow = 'hidden';
 
-  const entry = { close };
+  const entry = { close: requestClose };
   let closed = false;
   function close() {
     if (closed) return;
@@ -69,12 +84,18 @@ export function openModal({ title, body, wide = false, onClose }) {
     }
     if (onClose) onClose();
   }
-  entry.close = close;
+  // The ×button / outside-click / Esc path — asks canClose() first (if
+  // provided) instead of closing unconditionally. This is what the
+  // stack's Esc handler calls, not the raw close() above.
+  function requestClose() {
+    if (canClose && !canClose()) return;
+    close();
+  }
   openModalStack.push(entry);
 
-  closeBtn.addEventListener('click', close);
+  closeBtn.addEventListener('click', requestClose);
   overlay.addEventListener('click', (e) => {
-    if (e.target === overlay) close();
+    if (e.target === overlay) requestClose();
   });
 
   return { close, overlay, box };

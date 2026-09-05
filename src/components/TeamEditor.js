@@ -1,5 +1,5 @@
 // src/components/TeamEditor.js
-import { openModal } from './Modal.js';
+import { openModal, confirmDialog } from './Modal.js';
 import { openCardPicker } from './CardPicker.js';
 import { renderCardButton } from './CardButton.js';
 import { loadJSON, DataSources } from '../core/dataLoader.js';
@@ -40,6 +40,14 @@ export function openTeamEditor(stageId, existingTeam = null) {
       ? [...existingTeam.members]
       : Array(TEAM_MEMBER_SLOTS).fill(null);
     while (members.length < TEAM_MEMBER_SLOTS) members.push(null);
+
+    // Snapshot right here — after padding, before any UI-driven edits —
+    // so isDirty() below compares apples to apples (same array length,
+    // same starting values) regardless of whether this is a new or
+    // existing team.
+    const initialName = existingTeam ? existingTeam.name : '';
+    const initialNote = existingTeam ? existingTeam.note || '' : '';
+    const initialMembers = [...members];
 
     const body = document.createElement('div');
 
@@ -205,6 +213,19 @@ export function openTeamEditor(stageId, existingTeam = null) {
     }
     renderSlots();
 
+    // Confirms before discarding any unsaved edit — covers all three
+    // ways this modal could otherwise close silently (Esc, clicking the
+    // dark overlay, the × button) plus the 取消 button itself, since
+    // that's just as easy to hit by mistake as the other three.
+    function isDirty() {
+      return nameInput.value !== initialName
+        || noteEditor.innerHTML !== initialNote
+        || JSON.stringify(members) !== JSON.stringify(initialMembers);
+    }
+    function confirmDiscard() {
+      return !isDirty() || confirmDialog('放棄這次修改嗎？尚未儲存的內容會遺失。');
+    }
+
     const footer = document.createElement('div');
     footer.className = 'modal-footer';
     const cancelBtn = document.createElement('button');
@@ -223,10 +244,14 @@ export function openTeamEditor(stageId, existingTeam = null) {
       title: existingTeam ? '修改隊伍' : '新增隊伍',
       body,
       wide: true,
+      canClose: confirmDiscard,
       onClose: () => { if (!settled) resolve(null); },
     });
 
-    cancelBtn.addEventListener('click', () => { settled = true; close(); resolve(null); });
+    cancelBtn.addEventListener('click', () => {
+      if (!confirmDiscard()) return;
+      settled = true; close(); resolve(null);
+    });
 
     saveBtn.addEventListener('click', async () => {
       if (!nameInput.value.trim()) {
