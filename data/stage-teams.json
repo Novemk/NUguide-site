@@ -30,5 +30,21 @@
         ]
       }
     ]
+  },
+  {
+    "stageId": "stage_7_1_2",
+    "teams": [
+      {
+        "name": "學奧+SR",
+        "note": "",
+        "members": [
+          "card_036",
+          "card_132",
+          "card_133",
+          "card_125",
+          "card_127"
+        ]
+      }
+    ]
   }
 ]
