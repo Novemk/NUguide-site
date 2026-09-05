@@ -498,6 +498,15 @@ hr.ql-divider {
   border: 2px dashed var(--border);
   border-radius: var(--radius-md);
   aspect-ratio: 200 / 260;
+  /* Without this, a <button> just sizes to its own "+" content (small,
+     roughly square) and only THEN applies aspect-ratio to that small
+     width — same underlying issue as elsewhere on this site, a form
+     element not filling its container on its own. The filled slot's
+     card button gets width:100% set inline (see TeamEditor.js); this
+     is the empty-slot equivalent, so both end up the same size/shape
+     inside their shared 88px-wide .team-slot-btn column. */
+  width: 100%;
+  box-sizing: border-box;
   color: var(--text-faint);
   font-size: 2rem;
 }
