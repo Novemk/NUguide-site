@@ -385,7 +385,7 @@
         "col2": "<span style=\"color: rgb(226, 96, 79);\">【動搖】狀態結束後，下回合會重新啟動【孤單】機制</span>"
       }
     ],
-    "rowBreak": true,
+    "rowBreak": false,
     "sortOrder": 4.5
   }
 ]
