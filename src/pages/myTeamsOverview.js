@@ -108,8 +108,12 @@ async function init() {
     }
 
     // Fixed width per tab column (px) — a tab's size never depends on
-    // its own label length or how many stages share its row.
-    const TAB_COL_WIDTH = '64px';
+    // its own label length or how many stages share its row. 104px is
+    // derived from the card-avatar row below (56px avatar + 8px gap =
+    // 64px per card): 3 tabs should reach the same total width as 5
+    // of those card slots (5×64=320px÷3≈104px), matching the ratio the
+    // 2026-09-05 reference screenshots were resized to.
+    const TAB_COL_WIDTH = '104px';
 
     for (const chapter of chapterOrder) {
       const rows = rowsByChapter.get(chapter);
@@ -198,7 +202,19 @@ async function init() {
         // pushed to the right.
         const topRow = document.createElement('div');
         topRow.className = 'mt-tab-toprow';
-        topRow.appendChild(rowEl);
+
+        // Wrap the tab grid in its own horizontally-scrollable strip
+        // (see .mt-tab-scroll) — on a narrow phone, 104px×N columns
+        // can add up to more than the box's actual width, and
+        // .mt-chapter-box uses overflow:hidden for its rounded
+        // corners, which would otherwise silently CLIP the extra tabs
+        // (invisible and unclickable) instead of squeezing or
+        // wrapping them. This scroll strip is what turns that into
+        // "swipe to see more" instead of "tab disappears".
+        const scrollEl = document.createElement('div');
+        scrollEl.className = 'mt-tab-scroll';
+        scrollEl.appendChild(rowEl);
+        topRow.appendChild(scrollEl);
 
         const rowHasActiveStage = row.some((s) => s.id === activeStageId);
         if (rowHasActiveStage) {

@@ -795,6 +795,15 @@ hr.ql-divider {
    far-right edge while the (fixed-width, content-sized) tab grid sits
    at the left — not two separate stacked rows. */
 .mt-tab-toprow { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+/* Horizontally-scrollable strip around the tab grid (see
+   myTeamsOverview.js) — min-width:0 is required for a flex child to
+   be allowed to shrink below its content's natural size at all,
+   otherwise this would just push the box wider (or get clipped by
+   .mt-chapter-box's overflow:hidden) instead of scrolling. The link
+   (flex-shrink:0, see .mt-tab-link) always keeps its own full space,
+   only this strip gives up room / scrolls when a row's tabs don't fit
+   the box's actual width — e.g. 104px columns on a narrow phone. */
+.mt-tab-scroll { min-width: 0; overflow-x: auto; }
 .mt-tab-row {
   display: grid;
   /* grid-template-columns is set inline per-row by myTeamsOverview.js
@@ -805,8 +814,9 @@ hr.ql-divider {
      .mt-tab-cell.sep-left) instead of eating its own gap/track, so an
      active cell's background can reach fully flush against whichever
      neighbor it's next to. The grid itself is only as wide as this
-     row's own tabs need (it's a flex child of .mt-tab-toprow, not
-     stretched), so it stays left-aligned inside the box. Vertical
+     row's own tabs need — it stays left-aligned, and when it's wider
+     than the box actually is, .mt-tab-scroll (its parent) is what
+     handles that instead of it being squeezed or clipped. Vertical
      spacing lives entirely on .mt-tab-wrap now, not here. */
   align-items: stretch;
   column-gap: 0;
