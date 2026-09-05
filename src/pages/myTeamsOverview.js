@@ -34,6 +34,13 @@ async function init() {
   // new one in the same chapter auto-closes the previous one); a
   // different chapter's own open stage is unaffected.
   const openStageByChapter = new Map();
+  // Independent of which stage/tab is open — per-stage flag for
+  // whether that stage's single team has been clicked open to show
+  // its full detail (name/note/修改/刪除). Selecting a tab only reveals
+  // the collapsed avatar-row preview; the detail is a second, separate
+  // click on that preview, same two-step interaction as the old
+  // accordion version of this page.
+  const openTeamDetail = new Set();
 
   async function refresh() {
     const grouped = await getAllTeamsGrouped();
@@ -79,19 +86,16 @@ async function init() {
       }
     }
 
+    // Group every chapter's stages into rows (same rowBreak rule as
+    // 關卡攻略's own button grid) — one bordered box per row, not per
+    // chapter, since 7-1 and 8-1/8-2/8-3 are visually separate boxes
+    // even though both sit under the same "忘卻遺跡" title.
+    const rowsByChapter = new Map();
     for (const chapter of chapterOrder) {
-      // Every non-hidden stage in this chapter is listed (not just the
-      // ones with a saved team) — the ones without a team just render
-      // as plain disabled text instead of a clickable tab, per the
-      // 灰色/無法點擊 requirement, so you can see at a glance which of
-      // this chapter's stages you haven't recorded a team for yet.
       const chapterStages = stages
         .filter((s) => s.chapter === chapter && !s.hidden)
         .sort((a, b) => (a.sortOrder ?? 0) - (b.sortOrder ?? 0));
 
-      // Same row-grouping rule as 關卡攻略's own button grid (see
-      // stagesList.js/stageAdmin.js's 另起一排) — same underlying data,
-      // so the layout reads the same way on both pages.
       const rows = [];
       let currentRow = [];
       for (const s of chapterStages) {
@@ -99,6 +103,16 @@ async function init() {
         currentRow.push(s);
       }
       if (currentRow.length) rows.push(currentRow);
+
+      rowsByChapter.set(chapter, rows);
+    }
+
+    // Fixed width per tab column (px) — a tab's size never depends on
+    // its own label length or how many stages share its row.
+    const TAB_COL_WIDTH = '64px';
+
+    for (const chapter of chapterOrder) {
+      const rows = rowsByChapter.get(chapter);
 
       const chapterEl = document.createElement('div');
       chapterEl.className = 'chapter-group';
@@ -119,10 +133,15 @@ async function init() {
         const boxEl = document.createElement('div');
         boxEl.className = 'mt-chapter-box';
 
-        // Column widths only need to fit this one row's own item count
-        // now — no more reconciling against a different row's count,
-        // since each row is its own self-contained box.
-        const gridTemplate = Array.from({ length: row.length }, () => '1fr').join(' auto ');
+        // Every real stage gets a fixed-width column, with a separator
+        // track between each pair (mirrors the '｜' glyph rendered
+        // below). The grid itself is only ever as wide as this row's
+        // own tabs need — the box (see .mt-chapter-box) stays full
+        // width (640px, same as the site's tables/team cards) and the
+        // grid sits left-aligned inside it, so whatever's left over on
+        // the right is just blank box, which is also where the
+        // "查看攻略" link lands (see .mt-tab-toprow below).
+        const gridTemplate = Array.from({ length: row.length }, () => TAB_COL_WIDTH).join(' auto ');
 
         const rowEl = document.createElement('div');
         rowEl.className = 'mt-tab-row';
@@ -154,48 +173,88 @@ async function init() {
 
         const wrapEl = document.createElement('div');
         wrapEl.className = 'mt-tab-wrap';
-        wrapEl.appendChild(rowEl);
+
+        // Tabs and the "查看攻略" link share one line (see
+        // .mt-tab-toprow) — the link is only added as a second flex
+        // child when this row has the open stage, so on an inactive
+        // row the tab grid just sits alone at the left with nothing
+        // pushed to the right.
+        const topRow = document.createElement('div');
+        topRow.className = 'mt-tab-toprow';
+        topRow.appendChild(rowEl);
 
         const rowHasActiveStage = row.some((s) => s.id === activeStageId);
         if (rowHasActiveStage) {
-          const linkRow = document.createElement('div');
-          linkRow.className = 'mt-tab-link-row';
           const link = document.createElement('a');
           link.href = `stage-detail.html?id=${encodeURIComponent(activeStageId)}`;
           link.className = 'mt-tab-link';
           link.textContent = '查看攻略 →';
-          linkRow.appendChild(link);
-          wrapEl.appendChild(linkRow);
+          topRow.appendChild(link);
         }
+        wrapEl.appendChild(topRow);
         boxEl.appendChild(wrapEl);
 
         if (rowHasActiveStage) {
           const team = teamByStageId.get(activeStageId);
           const panel = document.createElement('div');
           panel.className = 'mt-tab-panel';
-          // Scaled-down members-only preview (see .mt-tab-panel in
-          // components.css) — no name (per the earlier discussion), no
-          // note either, since the note is really about explaining a
-          // specific team's approach and there's no name to give it
-          // context without.
-          panel.appendChild(renderTeamCard(team, cardMap, { maps: cardMaps, showName: false, showNote: false }));
 
-          const footer = document.createElement('div');
-          footer.className = 'team-card-footer';
-          footer.style.marginTop = '10px';
-          const actions = [
-            { label: '修改', className: 'btn btn-sm', onClick: () => handleEdit(activeStageId, team) },
-            { label: '刪除', className: 'btn btn-sm btn-danger', onClick: () => handleDelete(activeStageId, team) },
-          ];
-          for (const action of actions) {
-            const btn = document.createElement('button');
-            btn.type = 'button';
-            btn.className = action.className;
-            btn.textContent = action.label;
-            btn.addEventListener('click', () => action.onClick());
-            footer.appendChild(btn);
+          const isDetailOpen = openTeamDetail.has(activeStageId);
+
+          // Step 1 of the two-step reveal: a clickable avatar-only
+          // preview (no name/note/buttons yet). Clicking it toggles the
+          // detail below, same as the old accordion's team-row preview.
+          const previewBtn = document.createElement('button');
+          previewBtn.type = 'button';
+          previewBtn.className = 'mt-team-preview-btn';
+          previewBtn.setAttribute('aria-label', `${isDetailOpen ? '收合' : '展開'}隊伍內容`);
+          previewBtn.appendChild(renderTeamCard(team, cardMap, { maps: cardMaps, showName: false, showNote: false }));
+          previewBtn.addEventListener('click', () => {
+            if (openTeamDetail.has(activeStageId)) openTeamDetail.delete(activeStageId);
+            else openTeamDetail.add(activeStageId);
+            refresh();
+          });
+          panel.appendChild(previewBtn);
+
+          // Step 2: only once the preview above has been clicked open —
+          // name, note, and the 修改/刪除 actions (複製 removed per
+          // 2026-09-05 request, both here and in myTeamsSection.js).
+          if (isDetailOpen) {
+            const detail = document.createElement('div');
+            detail.className = 'mt-team-detail';
+
+            const name = document.createElement('div');
+            name.className = 'team-card-name';
+            name.style.marginBottom = '6px';
+            name.textContent = team.name;
+            detail.appendChild(name);
+
+            if (team.note) {
+              const note = document.createElement('div');
+              note.className = 'team-card-note';
+              note.innerHTML = team.note;
+              detail.appendChild(note);
+            }
+
+            const footer = document.createElement('div');
+            footer.className = 'team-card-footer';
+            footer.style.marginTop = '10px';
+            const actions = [
+              { label: '修改', className: 'btn btn-sm', onClick: () => handleEdit(activeStageId, team) },
+              { label: '刪除', className: 'btn btn-sm btn-danger', onClick: () => handleDelete(activeStageId, team) },
+            ];
+            for (const action of actions) {
+              const btn = document.createElement('button');
+              btn.type = 'button';
+              btn.className = action.className;
+              btn.textContent = action.label;
+              btn.addEventListener('click', () => action.onClick());
+              footer.appendChild(btn);
+            }
+            detail.appendChild(footer);
+            panel.appendChild(detail);
           }
-          panel.appendChild(footer);
+
           boxEl.appendChild(panel);
         }
 

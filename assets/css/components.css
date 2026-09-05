@@ -778,19 +778,24 @@ hr.ql-divider {
    doesn't reference the variable), #887242 for the active/enabled tab
    elements, #5c5c5c for stages with no saved team.
    ========================================================= */
-.mt-tab-wrap { padding: 14px 14px 4px; }
+.mt-tab-wrap { padding: 10px 14px 0; }
+/* Tabs and the "查看攻略" link now share one line: this wraps both,
+   with justify-content:space-between pushing the link to the box's
+   far-right edge while the (fixed-width, content-sized) tab grid sits
+   at the left — not two separate stacked rows. */
+.mt-tab-toprow { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
 .mt-tab-row {
   display: grid;
-  /* grid-template-columns is set inline per-chapter by
-     myTeamsOverview.js (see gridTemplate there) — every row in the
-     same chapter gets the same column widths, decided by whichever row
-     has the most stages; a shorter row just leaves the extra columns
-     empty rather than stretching its own tabs to fill them. */
+  /* grid-template-columns is set inline per-row by myTeamsOverview.js
+     (see gridTemplate there) — every column is the same fixed width,
+     so a tab's size never depends on its own label length. The grid
+     itself is only as wide as its columns need (it's a flex child of
+     .mt-tab-toprow, not stretched), so it stays left-aligned inside
+     the box while the link sits at the far right of the same line. */
   align-items: stretch;
   column-gap: 10px;
-  padding: 6px 0;
+  padding: 4px 0;
 }
-.mt-tab-link-row { display: flex; justify-content: flex-end; padding: 0 0 6px; }
 .mt-tab {
   background: none;
   border: none;
@@ -821,11 +826,11 @@ hr.ql-divider {
 }
 .mt-tab-sep { color: #887242; font-size: 0.85rem; display: flex; align-items: center; justify-content: center; }
 .mt-tab-link {
-  margin-left: auto;
   color: var(--accent-teal);
   font-size: 0.85rem;
   text-decoration: none;
   flex-shrink: 0;
+  white-space: nowrap;
 }
 .mt-tab-link:hover { text-decoration: underline; }
 /* Whole-chapter box — tab rows AND whatever team is expanded below
@@ -834,6 +839,7 @@ hr.ql-divider {
    once you open something). */
 .mt-chapter-box {
   max-width: 640px;
+  width: 100%;
   border: 1px solid #c9a45c;
   border-radius: var(--radius-md);
   margin-bottom: 20px;
@@ -852,6 +858,20 @@ hr.ql-divider {
    border/padding) — redundant here since .mt-chapter-box already draws
    that same box, so it's flattened to just the member row. */
 .mt-tab-panel .team-card { padding: 0; margin-bottom: 0; border: none; background: none; }
+/* Step-1 preview button (see myTeamsOverview.js) — just an unstyled
+   button wrapping the avatar-only team card, full width, so clicking
+   anywhere on the card row toggles the detail below it open/closed. */
+.mt-team-preview-btn {
+  display: block;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  text-align: left;
+}
+.mt-team-detail { margin-top: 12px; padding-top: 12px; border-top: 1px solid #c9a45c; }
 /* Scaled down further than the member avatars' own default size (see
    .team-card-members .mini-avatar-stage in this file) — same technique
    (render at full 200×260 reference size, then shrink as one unit via
