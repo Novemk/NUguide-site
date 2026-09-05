@@ -75,7 +75,7 @@
   {
     "id": "stage_8_3",
     "chapter": "忘卻遺跡 第二十二季",
-    "order": "8-3",
+    "order": "8 - 3",
     "title": "帆潮小鎮之探",
     "enemies": [
       {
@@ -172,7 +172,9 @@
         "col1": "T1",
         "col2": "<span style=\"font-size: 14.4px;\">隨便行動</span>"
       }
-    ]
+    ],
+    "sortOrder": 3,
+    "rowBreak": false
   },
   {
     "id": "stage_8_2_2",
