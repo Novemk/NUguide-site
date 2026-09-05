@@ -1,5 +1,5 @@
 // src/pages/stageDetail.js
-import { loadJSON, DataSources, toMap, resolveAsset } from '../core/dataLoader.js';
+import { loadJSON, DataSources, toMap } from '../core/dataLoader.js';
 import { mountNavbar, mountFooter, getSiteTitle } from '../components/Navbar.js';
 import { renderTeamCard } from '../components/TeamCard.js';
 import { renderEnemyChip } from '../components/EnemyPortrait.js';
@@ -22,10 +22,9 @@ async function init() {
     return;
   }
 
-  const [stages, stageTeams, tags, cards, elements, rarities, classes] = await Promise.all([
+  const [stages, stageTeams, cards, elements, rarities, classes] = await Promise.all([
     loadJSON(DataSources.stages),
     loadJSON(DataSources.stageTeams),
-    loadJSON(DataSources.tags),
     loadJSON(DataSources.cards),
     loadJSON(DataSources.elements),
     loadJSON(DataSources.rarities),
@@ -43,7 +42,6 @@ async function init() {
     return;
   }
 
-  const tagMap = toMap(tags);
   const cardMap = toMap(cards);
   const elementMap = toMap(elements);
   const rarityMap = toMap(rarities);
@@ -51,12 +49,33 @@ async function init() {
   const cardMaps = { rarityMap, elementMap, classMap };
   const officialTeams = (stageTeams.find((t) => t.stageId === stageId) || {}).teams || [];
 
-  document.title = `${stage.order} ${stage.title} | ${await getSiteTitle()}`;
+  document.title = `${stage.chapter} ${stage.order} | ${await getSiteTitle()}`;
+
+  // Header is a dropdown, not static text — 標題 doesn't exist anymore
+  // (章節 already names things; see the earlier discussion), and this
+  // doubles as a quick way to jump straight to another stage without
+  // going back to 關卡攻略's own button grid. Grouped by chapter via
+  // <optgroup> so a long list still reads in sections.
+  const visibleStages = stages.filter((s) => !s.hidden);
+  const chapterOrder = [];
+  const byChapter = new Map();
+  for (const s of visibleStages) {
+    if (!byChapter.has(s.chapter)) { byChapter.set(s.chapter, []); chapterOrder.push(s.chapter); }
+    byChapter.get(s.chapter).push(s);
+  }
+  const optionsHtml = chapterOrder.map((chapter) => `
+    <optgroup label="${chapter}">
+      ${byChapter.get(chapter).map((s) => `<option value="${s.id}" ${s.id === stage.id ? 'selected' : ''}>${chapter} · ${s.order}</option>`).join('')}
+    </optgroup>
+  `).join('');
 
   document.getElementById('stage-header').innerHTML = `
-    <div class="page-eyebrow">${stage.chapter} · ${stage.order}</div>
-    <h1>${stage.title}</h1>
+    <div class="page-eyebrow">${stage.chapter}</div>
+    <select class="stage-switcher" id="stage-switcher">${optionsHtml}</select>
   `;
+  document.getElementById('stage-switcher').addEventListener('change', (e) => {
+    window.location.href = `stage-detail.html?id=${encodeURIComponent(e.target.value)}`;
+  });
 
   // Enemies
   const enemyList = document.getElementById('enemy-list');
@@ -92,19 +111,12 @@ async function init() {
     document.getElementById('guide-content').insertAdjacentElement('afterend', table);
   }
 
-  // Recommended abilities
-  const recTags = (stage.recommendedTags || []).map((id) => tagMap.get(id)).filter(Boolean);
-  const recWrap = document.getElementById('recommended-tags');
-  recWrap.innerHTML = recTags.length
-    ? recTags.map((t) => `<span class="tag-pill"><img src="${resolveAsset(t.icon)}" alt="">${t.label}</span>`).join('')
-    : '<p class="guide-preview">尚未設定推薦能力。</p>';
-
   // Official teams
   const officialWrap = document.getElementById('official-teams');
   if (officialTeams.length) {
     officialWrap.innerHTML = '';
     for (const team of officialTeams) {
-      officialWrap.appendChild(renderTeamCard(team, cardMap, { showNote: true, maps: cardMaps }));
+      officialWrap.appendChild(renderTeamCard(team, cardMap, { showNote: true, maps: cardMaps, official: true }));
     }
   } else {
     officialWrap.innerHTML = '<p class="guide-preview">尚未提供推薦隊伍。</p>';

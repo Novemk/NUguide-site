@@ -26,7 +26,7 @@ export function renderTeamCard(team, cardMap, opts = {}) {
   const { rarityMap, elementMap, classMap } = opts.maps || {};
 
   const el = document.createElement('div');
-  el.className = 'team-card';
+  el.className = 'team-card' + (opts.official ? ' team-card-official' : '');
 
   if (opts.showName !== false) {
     const head = document.createElement('div');

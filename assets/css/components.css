@@ -40,6 +40,26 @@
 }
 
 .page-header { padding-top: 36px; padding-bottom: 20px; border-bottom: 1px solid var(--border-soft); margin-bottom: 28px; }
+/* stage-detail.html's header — replaces the old plain <h1>{{標題}}</h1>.
+   Sized between body text and the site's normal 1.9rem h1 (per the
+   "不要一樣大" request), color stays plain --text rather than the gold
+   accent so it doesn't compete with .chapter-title above it or
+   .page-eyebrow. Native <select> chrome is stripped back to look like
+   a heading with a dropdown affordance, not an obvious form control. */
+.stage-switcher {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--text);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+}
+.stage-switcher:focus { outline: none; }
 .page-header p { color: var(--text-dim); margin: 0; }
 .page-eyebrow {
   font-family: var(--font-mono);
@@ -89,6 +109,59 @@
   margin-bottom: 10px;
   padding-left: 2px;
 }
+
+/* 關卡攻略 stage-order buttons — replaces the old per-stage accordion.
+   Every visual property here has a var(--so-xxx, fallback) — the
+   fallback is what renders if site-settings.json's stageButtonStyle is
+   ever missing/incomplete; the actual value normally comes from
+   stagesList.js reading that setting and writing these custom
+   properties onto .so-wrap. Deliberately max-width-capped (not 100% of
+   the page container) so it stays a similar visual size on a wide
+   desktop screen instead of stretching into a mostly-empty wide block —
+   same reasoning as the round table's own max-width. */
+.so-wrap { max-width: 640px; }
+.so-grid { margin-bottom: 28px; }
+.so-row {
+  display: flex;
+  gap: 10px;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+  /* Divider drawn as a background strip (not border-bottom) — a CSS
+     border can't render a gradient reliably, but a background-image
+     gradient can, which is what lets 分隔線 support a two-color
+     gradient the same way the button background does. Solid color is
+     just this same gradient with both stops set to the same color. */
+  background-image: linear-gradient(to right, var(--so-divider-start, var(--accent-gold)), var(--so-divider-end, var(--accent-gold)));
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100% var(--so-divider-width, 1px);
+}
+.so-row:last-child { background-image: none; margin-bottom: 0; padding-bottom: 0; }
+.so-btn {
+  flex: 1; /* every button in a row equally shares that row's width,
+              whether the row has 2 buttons or 4 — never wraps, never
+              gets visually squeezed unevenly */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--so-btn-pad-y, 12px) var(--so-btn-pad-x, 6px);
+  border-style: solid;
+  border-width: var(--so-btn-border-width, 1px);
+  border-color: var(--so-btn-border-color, var(--border-soft));
+  border-radius: var(--so-btn-radius, 8px);
+  background: var(--so-btn-bg, var(--bg-card));
+  color: var(--text);
+  font-family: var(--so-btn-font, var(--font-display));
+  font-size: var(--so-btn-font-size, 0.95rem);
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.so-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.35);
+}
+
 .accordion { border: 1px solid var(--border-soft); border-radius: var(--radius-md); overflow: hidden; }
 .accordion-item + .accordion-item { border-top: 1px solid var(--border-soft); }
 .accordion-header {
@@ -175,6 +248,7 @@
   width: 100%;
   border-collapse: collapse;
   margin: 16px 0;
+  background: var(--bg-card);
 }
 .rt-table td {
   border: 1px solid var(--border-soft);
@@ -752,6 +826,15 @@ hr.ql-divider {
   border-radius: var(--radius-md);
   padding: 16px 18px;
   margin-bottom: 12px;
+}
+/* 推薦隊伍 (official teams, stage-detail.html) — a muted/translucent
+   gold tint over the same base card, so it reads as "this one is the
+   recommended pick" at a glance without it being a jarring solid color
+   block; same gold as .chapter-title/--accent-gold, just heavily
+   softened via low-opacity rgba rather than a flat fill. */
+.team-card-official {
+  background: rgba(201, 164, 92, 0.12);
+  border-color: rgba(201, 164, 92, 0.4);
 }
 .team-card-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; margin-bottom: 4px; }
 .team-card-name { font-weight: 700; font-size: 1.02rem; }
