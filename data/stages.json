@@ -201,26 +201,26 @@
   },
   {
     "id": "stage_7_1",
-    "chapter": "魔法檢定所 第二十二季",
-    "order": "45",
+    "chapter": "魔法檢定所 第二十六季",
+    "order": "40",
     "title": "",
     "enemies": [
       {
-        "name": "12334",
-        "note": "",
-        "elementId": "",
-        "image": "assets/img/enemies/stage_7_1_0_12334.webp",
-        "imageZoom": 1,
-        "imageOffsetX": 0.5,
-        "imageOffsetY": 0.5
+        "name": "窺探內心 玖夜",
+        "note": "無視屬性相剋",
+        "elementId": "fire",
+        "image": "assets/img/enemies/stage_7_1_0_窺探內心_玖夜.webp",
+        "imageZoom": 1.2,
+        "imageOffsetX": 0.5849964000560619,
+        "imageOffsetY": 0.47889240807514466
       }
     ],
-    "guide": "<p><br></p>",
+    "guide": "<p>本場戰鬥中 <span style=\"color: rgb(226, 96, 79);\">僅可攜帶一名＜守護者＞，且須配置於3號站位。</span></p><p>否則玖夜將給予高額的持續傷害且無法進行治療，任何掙扎皆無效果，戰鬥提前結束。</p>",
     "recommendedTags": [],
     "hidden": false,
     "roundTable": [],
     "rowBreak": false,
-    "sortOrder": 1
+    "sortOrder": 4
   },
   {
     "id": "stage_50",
@@ -233,9 +233,9 @@
         "note": "",
         "elementId": "",
         "image": "assets/img/enemies/stage_7_1_0_12334.webp",
-        "imageZoom": 1,
-        "imageOffsetX": 0.5,
-        "imageOffsetY": 0.5
+        "imageZoom": 1.24,
+        "imageOffsetX": 0.5088566825503394,
+        "imageOffsetY": 0.5316487269434176
       }
     ],
     "guide": "<p><br></p>",
@@ -243,7 +243,8 @@
     "hidden": false,
     "roundTable": [],
     "rowBreak": false,
-    "sortOrder": 2
+    "sortOrder": 2,
+    "archived": true
   },
   {
     "id": "stage_55",
