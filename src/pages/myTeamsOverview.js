@@ -119,9 +119,27 @@ async function init() {
 
       const activeStageId = openStageByChapter.get(chapter) || null;
 
+      // Every row in this chapter uses the SAME column width — decided
+      // by whichever row has the most stages, not each row's own count.
+      // A 3-stage row then only fills the first 3 of those columns and
+      // leaves the rest of the width empty, rather than stretching to
+      // fill it. Grid (not flex) is what gets this "fewer items just
+      // leaves space, doesn't stretch" behavior for free: a row with
+      // fewer grid items than grid-template-columns defines simply
+      // doesn't fill the remaining columns.
+      const maxCols = Math.max(...rows.map((r) => r.length));
+      // Alternates a 1fr column (for a tab) with an auto column (for
+      // the "｜" separator between two tabs) — auto sizes to the
+      // separator's own natural width, 1fr columns split whatever's
+      // left evenly. One row's DOM order (tab, sep, tab, sep, tab...)
+      // maps directly onto this without needing explicit grid-column
+      // placement on each child.
+      const gridTemplate = Array.from({ length: maxCols }, () => '1fr').join(' auto ');
+
       for (const row of rows) {
         const rowEl = document.createElement('div');
         rowEl.className = 'mt-tab-row';
+        rowEl.style.gridTemplateColumns = gridTemplate;
         row.forEach((s, i) => {
           if (i > 0) {
             const sep = document.createElement('span');
@@ -146,17 +164,21 @@ async function init() {
             rowEl.appendChild(btn);
           }
         });
-        // "查看攻略" only appears on the row containing the currently
-        // open stage — mirrors 關卡攻略's own button row layout, where
-        // the link always points at whichever stage is actually active.
-        if (row.some((s) => s.id === activeStageId)) {
-          const link = document.createElement('a');
-          link.href = `stage-detail.html?id=${encodeURIComponent(activeStageId)}`;
-          link.className = 'mt-tab-link';
-          link.textContent = '查看攻略 →';
-          rowEl.appendChild(link);
-        }
         wrapEl.appendChild(rowEl);
+      }
+
+      // "查看攻略" is its own row now (not squeezed into one of the
+      // fixed tab columns above) — always right-aligned, regardless of
+      // how many columns this chapter's grid ended up with.
+      if (activeStageId) {
+        const linkRow = document.createElement('div');
+        linkRow.className = 'mt-tab-link-row';
+        const link = document.createElement('a');
+        link.href = `stage-detail.html?id=${encodeURIComponent(activeStageId)}`;
+        link.className = 'mt-tab-link';
+        link.textContent = '查看攻略 →';
+        linkRow.appendChild(link);
+        wrapEl.appendChild(linkRow);
       }
       boxEl.appendChild(wrapEl);
 

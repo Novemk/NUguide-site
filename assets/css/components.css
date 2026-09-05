@@ -780,12 +780,17 @@ hr.ql-divider {
    ========================================================= */
 .mt-tab-wrap { padding: 14px 14px 4px; }
 .mt-tab-row {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-  padding: 10px 0;
+  display: grid;
+  /* grid-template-columns is set inline per-chapter by
+     myTeamsOverview.js (see gridTemplate there) — every row in the
+     same chapter gets the same column widths, decided by whichever row
+     has the most stages; a shorter row just leaves the extra columns
+     empty rather than stretching its own tabs to fill them. */
+  align-items: stretch;
+  column-gap: 10px;
+  padding: 6px 0;
 }
+.mt-tab-link-row { display: flex; justify-content: flex-end; padding: 0 0 6px; }
 .mt-tab {
   background: none;
   border: none;
@@ -797,10 +802,11 @@ hr.ql-divider {
   border-radius: 4px;
   color: #887242;
   min-width: 44px;
-  text-align: center;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.mt-tab.active { background: #887242; color: #201e2f; padding: 4px 10px; min-width: 52px; }
+.mt-tab.active { background: #887242; color: #201e2f; }
 .mt-tab-disabled {
   color: #5c5c5c;
   font-family: var(--font-mono);
@@ -809,10 +815,11 @@ hr.ql-divider {
   cursor: default;
   padding: 4px 2px;
   min-width: 44px;
-  text-align: center;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.mt-tab-sep { color: #887242; font-size: 0.85rem; }
+.mt-tab-sep { color: #887242; font-size: 0.85rem; display: flex; align-items: center; justify-content: center; }
 .mt-tab-link {
   margin-left: auto;
   color: var(--accent-teal);
@@ -831,6 +838,7 @@ hr.ql-divider {
   border-radius: var(--radius-md);
   margin-bottom: 20px;
   overflow: hidden;
+  background: var(--bg-card);
 }
 .mt-tab-panel {
   padding: 14px 16px;
