@@ -65,6 +65,15 @@ export function openTeamEditor(stageId, existingTeam = null) {
     noteEditor.contentEditable = 'true';
     noteEditor.setAttribute('data-placeholder', '例如：第三回合保留大招。');
     noteEditor.innerHTML = existingTeam ? existingTeam.note || '' : '';
+    // Paste as plain text only — see admin-src/modules/richTextEditor.js's
+    // Quill matcher for the fuller explanation; same fix, contenteditable
+    // version (2026-09-06 request, applies to every one of these color
+    // note editors across both site and admin).
+    noteEditor.addEventListener('paste', (e) => {
+      e.preventDefault();
+      const text = (e.clipboardData || window.clipboardData).getData('text/plain');
+      document.execCommand('insertText', false, text);
+    });
 
     function applyNoteColor(color) {
       noteEditor.focus();
