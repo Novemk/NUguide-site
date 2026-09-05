@@ -1,6 +1,6 @@
 [
   { "id": "ssr", "label": "SSR", "color": "#c9a45c" },
   { "id": "sr",  "label": "SR",  "color": "#9b7fd4" },
-  { "id": "r",   "label": "R",   "color": "#5aa8e0" },
-  { "id": "n",   "label": "N",   "color": "#8b87a3" }
+  { "id": "r",   "label": "R",   "color": "#5aa8e0", "filterHidden": true },
+  { "id": "n",   "label": "N",   "color": "#8b87a3", "filterHidden": true }
 ]

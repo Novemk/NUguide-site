@@ -577,6 +577,9 @@ hr.ql-divider {
   -webkit-user-select: none;
 }
 .opt-icon.active { opacity: 1; transform: scale(1.08); }
+/* 屬性 icons only (定位 stays 56px) — per explicit request the element
+   icons read as slightly too large relative to 定位's. */
+.filter-group-elementId .opt-icon { width: 44px; height: 44px; }
 
 .opt-avatar {
   width: 56px; height: 56px;

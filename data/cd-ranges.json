@@ -1,6 +1,6 @@
 [
-  { "id": "cd_le3", "label": "≤3", "min": 0, "max": 3 },
+  { "id": "cd_le3", "label": "3", "min": 0, "max": 3 },
   { "id": "cd_4",   "label": "4",  "min": 4, "max": 4 },
   { "id": "cd_5",   "label": "5",  "min": 5, "max": 5 },
-  { "id": "cd_ge6", "label": "≥6", "min": 6, "max": 999 }
+  { "id": "cd_ge6", "label": "6", "min": 6, "max": 999 }
 ]

@@ -15,9 +15,13 @@ export async function mountFilterPanel(container, onChange) {
   for (const group of schema) {
     // enemyOnly entries (e.g. 屬性 的「無屬性」— only meaningful when
     // tagging an enemy, not a card) never show up as a filter option
-    // here. Filtering generically like this (not "if field === element")
-    // is safe since no other data source uses this flag.
-    sourcesCache[group.field] = (await loadJSON(group.source)).filter((o) => !o.enemyOnly);
+    // here. filterHidden (e.g. 稀有度 的 R/N — 2026-09-05, hidden from
+    // this filter panel only) works the same way but independently,
+    // so either flag alone is enough to exclude an option; the
+    // underlying data row itself is untouched, so anything elsewhere
+    // that maps card.rarityId → this same rarities.json entry (card
+    // badges, etc.) still finds it and renders normally.
+    sourcesCache[group.field] = (await loadJSON(group.source)).filter((o) => !o.enemyOnly && !o.filterHidden);
   }
   let state = createEmptyFilterState(schema);
   let countEl = null;
@@ -163,6 +167,10 @@ export async function mountFilterPanel(container, onChange) {
     for (const group of schema) {
       const wrap = document.createElement('div');
       wrap.className = 'filter-group';
+      // Per-field class (e.g. filter-group-elementId) — lets CSS target
+      // just one group's options (see 屬性 icon size in components.css)
+      // without touching 定位, which shares the same .opt-icon markup.
+      wrap.classList.add(`filter-group-${group.field}`);
 
       const label = document.createElement('div');
       label.className = 'filter-group-label';
