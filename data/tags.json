@@ -245,13 +245,6 @@
     "icon": "assets/img/tags/def_down.svg"
   },
   {
-    "id": "stun",
-    "label": "暈眩",
-    "sortOrder": 36,
-    "group": "control",
-    "icon": "assets/img/tags/stun.svg"
-  },
-  {
     "id": "break_shield",
     "label": "解除防禦",
     "sortOrder": 37,
