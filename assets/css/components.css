@@ -974,7 +974,13 @@ hr.ql-divider {
 /* Separates the enemy row from the team card below it — without this
    the two blocks read as one continuous list, which is confusing
    since they're different kinds of things (敵人 vs 你的隊伍). */
-.tn-enemy-divider { border-top: 1px solid var(--border-soft); margin-bottom: 12px; }
+/* Matches .mt-team-detail's own divider exactly (same gold #c9a45c) —
+   was using --border-soft before, which reads as basically invisible
+   against the dark background, very different from the visible gold
+   line further down. This is a standalone empty divider (no content
+   below it to pad away from, unlike .mt-team-detail), so symmetric
+   margin instead of margin+padding. */
+.tn-enemy-divider { margin: 12px 0; border-top: 1px solid #c9a45c; }
 
 .form-row { display: flex; gap: 14px; }
 .form-row .form-field { flex: 1; }

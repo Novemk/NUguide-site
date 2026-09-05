@@ -54,11 +54,8 @@ async function init() {
     }
 
     if (teamByStageId.size === 0) {
-      root.innerHTML = `
-        <div class="empty-state">
-          <h3>還沒有任何筆記</h3>
-          <p>把一個已經打過、暫時不想寫完整攻略的關卡標成「過往關卡」（在後台的關卡編輯頁），它就會出現在這裡。</p>
-        </div>`;
+      // Blank, no placeholder box/text — same as myTeamsSection.js's
+      // own empty state (2026-09-06 request).
       return;
     }
 

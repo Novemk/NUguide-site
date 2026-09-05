@@ -29,10 +29,10 @@ export async function renderMyTeamsSection(container, stageId, cardMap, maps) {
     }
 
     if (teams.length === 0) {
-      const empty = document.createElement('div');
-      empty.className = 'empty-state';
-      empty.innerHTML = '<h3>還沒有隊伍紀錄</h3><p>建立一組隊伍，記錄你在這關使用的隊員。</p>';
-      container.appendChild(empty);
+      // Just leave it blank — per explicit request, no dashed
+      // placeholder box/text when there's nothing recorded yet
+      // (2026-09-06). The "+ 新增隊伍" button above is already the
+      // call to action; an empty-state box under it was redundant.
     } else {
       for (const team of teams) {
         container.appendChild(renderTeamCard(team, cardMap, {
