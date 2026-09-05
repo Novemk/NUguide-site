@@ -46,5 +46,21 @@
         ]
       }
     ]
+  },
+  {
+    "stageId": "stage_8_2_2",
+    "teams": [
+      {
+        "name": "學奧+劍副+SR",
+        "note": "https://youtu.be/fsmGaFiLYTk",
+        "members": [
+          "card_036",
+          "card_127",
+          "card_084",
+          "card_134",
+          "card_128"
+        ]
+      }
+    ]
   }
 ]
