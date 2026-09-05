@@ -107,36 +107,23 @@ async function init() {
       titleEl.textContent = chapter;
       chapterEl.appendChild(titleEl);
 
-      // Single bordered box for the whole chapter — tab rows AND
-      // whatever's expanded below them both live inside this one box
-      // (not the box only appearing once something's open).
-      const boxEl = document.createElement('div');
-      boxEl.className = 'mt-chapter-box';
-      chapterEl.appendChild(boxEl);
-
-      const wrapEl = document.createElement('div');
-      wrapEl.className = 'mt-tab-wrap';
-
       const activeStageId = openStageByChapter.get(chapter) || null;
 
-      // Every row in this chapter uses the SAME column width — decided
-      // by whichever row has the most stages, not each row's own count.
-      // A 3-stage row then only fills the first 3 of those columns and
-      // leaves the rest of the width empty, rather than stretching to
-      // fill it. Grid (not flex) is what gets this "fewer items just
-      // leaves space, doesn't stretch" behavior for free: a row with
-      // fewer grid items than grid-template-columns defines simply
-      // doesn't fill the remaining columns.
-      const maxCols = Math.max(...rows.map((r) => r.length));
-      // Alternates a 1fr column (for a tab) with an auto column (for
-      // the "｜" separator between two tabs) — auto sizes to the
-      // separator's own natural width, 1fr columns split whatever's
-      // left evenly. One row's DOM order (tab, sep, tab, sep, tab...)
-      // maps directly onto this without needing explicit grid-column
-      // placement on each child.
-      const gridTemplate = Array.from({ length: maxCols }, () => '1fr').join(' auto ');
-
+      // One bordered box PER ROW (not one box for the whole chapter) —
+      // 7-1 and 8-1/8-2/8-3 are visually separate boxes even though
+      // they're both under the same "忘卻遺跡" title. Whichever row
+      // contains the currently-open stage gets its "查看攻略" link and
+      // the team panel appended inside that same row's own box; other
+      // rows in the chapter are untouched by that.
       for (const row of rows) {
+        const boxEl = document.createElement('div');
+        boxEl.className = 'mt-chapter-box';
+
+        // Column widths only need to fit this one row's own item count
+        // now — no more reconciling against a different row's count,
+        // since each row is its own self-contained box.
+        const gridTemplate = Array.from({ length: row.length }, () => '1fr').join(' auto ');
+
         const rowEl = document.createElement('div');
         rowEl.className = 'mt-tab-row';
         rowEl.style.gridTemplateColumns = gridTemplate;
@@ -164,52 +151,55 @@ async function init() {
             rowEl.appendChild(btn);
           }
         });
+
+        const wrapEl = document.createElement('div');
+        wrapEl.className = 'mt-tab-wrap';
         wrapEl.appendChild(rowEl);
-      }
 
-      // "查看攻略" is its own row now (not squeezed into one of the
-      // fixed tab columns above) — always right-aligned, regardless of
-      // how many columns this chapter's grid ended up with.
-      if (activeStageId) {
-        const linkRow = document.createElement('div');
-        linkRow.className = 'mt-tab-link-row';
-        const link = document.createElement('a');
-        link.href = `stage-detail.html?id=${encodeURIComponent(activeStageId)}`;
-        link.className = 'mt-tab-link';
-        link.textContent = '查看攻略 →';
-        linkRow.appendChild(link);
-        wrapEl.appendChild(linkRow);
-      }
-      boxEl.appendChild(wrapEl);
-
-      if (activeStageId) {
-        const team = teamByStageId.get(activeStageId);
-        const panel = document.createElement('div');
-        panel.className = 'mt-tab-panel';
-        // Scaled-down members-only preview (see .mt-tab-panel in
-        // components.css) — no name (per the earlier discussion), no
-        // note either, since the note is really about explaining a
-        // specific team's approach and there's no name to give it
-        // context without.
-        panel.appendChild(renderTeamCard(team, cardMap, { maps: cardMaps, showName: false, showNote: false }));
-
-        const footer = document.createElement('div');
-        footer.className = 'team-card-footer';
-        footer.style.marginTop = '10px';
-        const actions = [
-          { label: '修改', className: 'btn btn-sm', onClick: () => handleEdit(activeStageId, team) },
-          { label: '刪除', className: 'btn btn-sm btn-danger', onClick: () => handleDelete(activeStageId, team) },
-        ];
-        for (const action of actions) {
-          const btn = document.createElement('button');
-          btn.type = 'button';
-          btn.className = action.className;
-          btn.textContent = action.label;
-          btn.addEventListener('click', () => action.onClick());
-          footer.appendChild(btn);
+        const rowHasActiveStage = row.some((s) => s.id === activeStageId);
+        if (rowHasActiveStage) {
+          const linkRow = document.createElement('div');
+          linkRow.className = 'mt-tab-link-row';
+          const link = document.createElement('a');
+          link.href = `stage-detail.html?id=${encodeURIComponent(activeStageId)}`;
+          link.className = 'mt-tab-link';
+          link.textContent = '查看攻略 →';
+          linkRow.appendChild(link);
+          wrapEl.appendChild(linkRow);
         }
-        panel.appendChild(footer);
-        boxEl.appendChild(panel);
+        boxEl.appendChild(wrapEl);
+
+        if (rowHasActiveStage) {
+          const team = teamByStageId.get(activeStageId);
+          const panel = document.createElement('div');
+          panel.className = 'mt-tab-panel';
+          // Scaled-down members-only preview (see .mt-tab-panel in
+          // components.css) — no name (per the earlier discussion), no
+          // note either, since the note is really about explaining a
+          // specific team's approach and there's no name to give it
+          // context without.
+          panel.appendChild(renderTeamCard(team, cardMap, { maps: cardMaps, showName: false, showNote: false }));
+
+          const footer = document.createElement('div');
+          footer.className = 'team-card-footer';
+          footer.style.marginTop = '10px';
+          const actions = [
+            { label: '修改', className: 'btn btn-sm', onClick: () => handleEdit(activeStageId, team) },
+            { label: '刪除', className: 'btn btn-sm btn-danger', onClick: () => handleDelete(activeStageId, team) },
+          ];
+          for (const action of actions) {
+            const btn = document.createElement('button');
+            btn.type = 'button';
+            btn.className = action.className;
+            btn.textContent = action.label;
+            btn.addEventListener('click', () => action.onClick());
+            footer.appendChild(btn);
+          }
+          panel.appendChild(footer);
+          boxEl.appendChild(panel);
+        }
+
+        chapterEl.appendChild(boxEl);
       }
 
       root.appendChild(chapterEl);
