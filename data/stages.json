@@ -309,5 +309,38 @@
     "roundTable": [],
     "rowBreak": true,
     "sortOrder": 7.1
+  },
+  {
+    "id": "stage_45",
+    "chapter": "魔法檢定所 第二十六季",
+    "order": "45",
+    "title": "（複製）",
+    "enemies": [
+      {
+        "name": "環",
+        "note": "無視屬性相剋",
+        "elementId": "dark",
+        "image": "assets/img/enemies/stage_45_0_環.webp",
+        "imageZoom": 1.23,
+        "imageOffsetX": 0.5768640766973081,
+        "imageOffsetY": 0.5100411642111327
+      },
+      {
+        "name": "入夢儀",
+        "note": "",
+        "elementId": "none",
+        "image": "assets/img/enemies/stage_45_1_入夢儀.webp",
+        "imageZoom": 1.21,
+        "imageOffsetX": 0.6680228033914822,
+        "imageOffsetY": 0.5433607190214774
+      }
+    ],
+    "guide": "<p>這關必須帶<span style=\"color: rgb(79, 200, 176);\">輔助、補師、坦角</span></p><p>第二階段環，減CD機制無效化（魔伊、星布無法減CD）</p><p>推薦帶較高<span style=\"color: rgb(79, 200, 176);\">緩補</span>能力的補師，以及可以少回合打破護盾的角色（檢定60的護盾是237,648）</p><p><br></p><p><br></p>",
+    "recommendedTags": [],
+    "hidden": false,
+    "archived": false,
+    "roundTable": [],
+    "rowBreak": true,
+    "sortOrder": 4.5
   }
 ]
