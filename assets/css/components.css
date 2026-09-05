@@ -48,7 +48,7 @@
    a heading with a dropdown affordance, not an obvious form control. */
 .stage-switcher {
   font-family: var(--font-display);
-  font-size: 1.35rem;
+  font-size: 1rem;
   font-weight: 700;
   letter-spacing: 0.02em;
   color: var(--text);
@@ -60,7 +60,12 @@
   -webkit-appearance: none;
 }
 .stage-switcher:focus { outline: none; }
-.page-header p { color: var(--text-dim); margin: 0; }
+.page-header p {
+  color: var(--text-dim);
+  margin: 0;
+  font-size: 0.8rem;
+  white-space: pre-wrap;
+}
 .page-eyebrow {
   font-family: var(--font-mono);
   font-size: 0.72rem;
@@ -218,7 +223,15 @@
 }
 .enemy-chip-name { font-weight: 700; margin-bottom: 4px; }
 .enemy-chip-note { font-size: 0.82rem; color: var(--text-dim); }
-.guide-content { background: var(--bg-card); border: 1px solid var(--border-soft); border-radius: var(--radius-md); padding: 18px 20px; }
+.guide-content {
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md);
+  padding: 18px 20px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  max-width: 640px;
+}
 .guide-content :last-child { margin-bottom: 0; }
 /* Same fix as .ultimate-skill-desc p — Quill wraps each line in its own
    <p> on Enter; without this, the browser's own default paragraph
@@ -687,6 +700,21 @@ hr.ql-divider {
    Forms
    ========================================================= */
 .form-field { margin-bottom: 16px; }
+/* Marks a field as the start of a visually distinct sub-section (e.g.
+   關卡按鈕外觀 after a run of plain text-description fields) — a
+   clear rule + extra breathing room above it, rather than just another
+   16px-spaced field blending into the ones before it. */
+.form-field-section-break {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 2px solid var(--border-soft);
+}
+.form-field-section-break > label {
+  font-size: 1.05rem;
+  color: var(--text);
+  font-weight: 700;
+  margin-bottom: 4px;
+}
 .form-field label { display: block; font-size: 0.85rem; color: var(--text-dim); margin-bottom: 6px; }
 .form-field input[type="text"], .form-field textarea { width: 100%; }
 .form-field textarea { resize: vertical; min-height: 70px; white-space: pre-wrap; }
@@ -765,6 +793,7 @@ hr.ql-divider {
   border-radius: var(--radius-md);
   padding: 12px 16px;
   margin-bottom: 10px;
+  max-width: 640px;
 }
 .mt-team-row-main { display: flex; align-items: center; gap: 14px; }
 .mt-team-number {
@@ -826,6 +855,7 @@ hr.ql-divider {
   border-radius: var(--radius-md);
   padding: 16px 18px;
   margin-bottom: 12px;
+  max-width: 640px;
 }
 /* 推薦隊伍 (official teams, stage-detail.html) — a muted/translucent
    gold tint over the same base card, so it reads as "this one is the

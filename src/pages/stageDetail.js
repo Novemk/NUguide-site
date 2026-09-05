@@ -63,6 +63,9 @@ async function init() {
     if (!byChapter.has(s.chapter)) { byChapter.set(s.chapter, []); chapterOrder.push(s.chapter); }
     byChapter.get(s.chapter).push(s);
   }
+  for (const list of byChapter.values()) {
+    list.sort((a, b) => (a.sortOrder ?? 0) - (b.sortOrder ?? 0));
+  }
   const optionsHtml = chapterOrder.map((chapter) => `
     <optgroup label="${chapter}">
       ${byChapter.get(chapter).map((s) => `<option value="${s.id}" ${s.id === stage.id ? 'selected' : ''}>${chapter} · ${s.order}</option>`).join('')}

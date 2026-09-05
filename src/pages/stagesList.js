@@ -86,6 +86,12 @@ async function init() {
     }
     chapterIndex.get(stage.chapter).stages.push(stage);
   }
+  // Sorted by 排序編號 (see stageAdmin.js) within each chapter — plain
+  // array order (whatever sequence stages.json happens to store them
+  // in) isn't a meaningful ordering on its own.
+  for (const group of chapters) {
+    group.stages.sort((a, b) => (a.sortOrder ?? 0) - (b.sortOrder ?? 0));
+  }
 
   for (const group of chapters) {
     const groupEl = document.createElement('div');

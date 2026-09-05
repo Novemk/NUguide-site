@@ -62,7 +62,7 @@ async function init() {
       // there's nothing meaningful left to show without the stage's
       // title/chapter, so this section just doesn't render at all.
       if (!stage) continue;
-      const stageTitle = `${stage.chapter} ${stage.order} ${stage.title}`;
+      const stageTitle = `${stage.chapter} · ${stage.order}`;
       const isStageOpen = openStages.has(entry.stageId);
 
       const block = document.createElement('div');
