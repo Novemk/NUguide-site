@@ -11,14 +11,14 @@
     "paddingX": 6,
     "borderRadius": 4,
     "gradientEnabled": true,
-    "gradientAngle": 180,
+    "gradientAngle": 196,
     "gradientColors": [
       "#211f30",
       "#2a2740"
     ],
     "bgColor": "#211f30",
-    "borderColor": "#3a3650",
-    "borderOpacity": 100,
+    "borderColor": "#4d4128",
+    "borderOpacity": 62,
     "borderWidth": 1,
     "dividerWidth": 1,
     "dividerGradientEnabled": false,
