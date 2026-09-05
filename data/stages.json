@@ -193,5 +193,27 @@
     "hidden": false,
     "roundTable": [],
     "rowBreak": false
+  },
+  {
+    "id": "stage_7_1",
+    "chapter": "忘卻遺跡 第二十二季",
+    "order": "7-1",
+    "title": "",
+    "enemies": [
+      {
+        "name": "12334",
+        "note": "",
+        "elementId": "",
+        "image": "assets/img/enemies/stage_7_1_0_12334.webp",
+        "imageZoom": 1,
+        "imageOffsetX": 0.5,
+        "imageOffsetY": 0.5
+      }
+    ],
+    "guide": "<p><br></p>",
+    "recommendedTags": [],
+    "hidden": false,
+    "roundTable": [],
+    "rowBreak": false
   }
 ]
