@@ -390,7 +390,7 @@
   },
   {
     "id": "stage_50_2",
-    "chapter": "忘卻遺跡 第二十六季",
+    "chapter": "魔法檢定所 第二十六季",
     "order": "50",
     "title": "",
     "enemies": [
@@ -422,7 +422,7 @@
         "col2": "坦角嘲諷"
       }
     ],
-    "rowBreak": false,
+    "rowBreak": true,
     "sortOrder": 5
   }
 ]
