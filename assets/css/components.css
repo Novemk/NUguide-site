@@ -106,13 +106,70 @@
 /* =========================================================
    Accordion (stage list)
    ========================================================= */
-.chapter-group { margin-bottom: 30px; }
+/* Each chapter's own box (2026-09-06) — border/background come from
+   --chapter-box-border/--chapter-box-bg, set inline per-chapter by
+   stagesList.js from 網站設定 → 章節外觀 (keyed by the exact chapter
+   string, e.g. "忘卻遺跡 第 22 季") — a chapter with no configured
+   style just falls back to the plain default box below. */
+.chapter-group {
+  margin-bottom: 24px;
+  border: 1px solid var(--chapter-box-border, var(--border-soft));
+  background: var(--chapter-box-bg, transparent);
+  border-radius: var(--radius-md);
+  padding: 20px;
+}
 .chapter-title {
   font-family: var(--font-display);
   color: var(--accent-gold);
   font-size: 1.1rem;
   margin-bottom: 10px;
   padding-left: 2px;
+}
+
+/* 過往關卡 (2026-09-06) — one shared box around the WHOLE section (not
+   one box per chapter inside it, unlike the main chapters above), plus
+   its own divider above the "過往關卡" heading. Button appearance is
+   scoped by setting the exact same --so-btn-*/--so-divider-* custom
+   properties stagesList.js's main .so-wrap already uses, but on THIS
+   element instead — CSS variables resolve from the nearest ancestor
+   that sets them, so every .so-btn/.so-row inside naturally picks up
+   the past-section's own values without needing separate selectors or
+   duplicated CSS rules. */
+.stage-past-divider {
+  height: var(--past-divider-width, 1px);
+  background: var(--past-divider-color, var(--accent-gold));
+  border: none;
+  margin: 30px 0;
+  max-width: 640px;
+}
+.stage-past-heading {
+  font-family: var(--font-display);
+  color: var(--accent-gold);
+  font-size: 1.3rem;
+  margin-bottom: 16px;
+}
+.stage-past-section {
+  max-width: 640px;
+  border: 1px solid var(--past-box-border, var(--border-soft));
+  background: var(--past-box-bg, transparent);
+  border-radius: var(--radius-md);
+  padding: 20px;
+}
+.stage-past-section .chapter-group {
+  /* No per-chapter box inside the past section — the outer
+     .stage-past-section above is the only box here — so this is
+     un-done back to a plain spacer, and the title gets its own
+     (smaller, dimmer, admin-editable) treatment instead of
+     .chapter-title's normal size/color. */
+  margin-bottom: 24px;
+  border: none;
+  background: none;
+  padding: 0;
+}
+.stage-past-section .chapter-group:last-child { margin-bottom: 0; }
+.stage-past-section .chapter-title {
+  color: var(--past-chapter-title-color, var(--text-dim));
+  font-size: var(--past-chapter-title-size, 0.9rem);
 }
 
 /* 關卡攻略 stage-order buttons — replaces the old per-stage accordion.
