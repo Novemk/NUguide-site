@@ -14,12 +14,12 @@
     "gradientEnabled": true,
     "gradientAngle": 196,
     "gradientColors": [
-      "#211f30",
-      "#2a2740"
+      "#241c0a",
+      "#1c170d"
     ],
     "bgColor": "#211f30",
-    "borderColor": "#4d4128",
-    "borderOpacity": 62,
+    "borderColor": "#574828",
+    "borderOpacity": 100,
     "borderWidth": 1,
     "dividerWidth": 1,
     "dividerGradientEnabled": false,
