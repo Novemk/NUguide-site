@@ -27,5 +27,58 @@
       "#4d4128",
       "#5b5549"
     ]
+  },
+  "chapterStyles": {
+    "忘卻遺跡 第二十二季": {
+      "bgColor": "#3c407c",
+      "bgOpacity": 38,
+      "borderColor": "#d7c184",
+      "borderOpacity": 18
+    },
+    "魔法檢定所 第二十六季": {
+      "bgColor": "#3e3419",
+      "bgOpacity": 35,
+      "borderColor": "#d7c184",
+      "borderOpacity": 18
+    },
+    "魔法檢定所 第二十二季": {
+      "bgColor": "#3e3419",
+      "bgOpacity": 29,
+      "borderColor": "#d7c180",
+      "borderOpacity": 20
+    }
+  },
+  "pastSectionStyle": {
+    "dividerColor": "#69541c",
+    "dividerWidth": 1,
+    "chapterTitleColor": "#8b87a3",
+    "chapterTitleFontSize": 11,
+    "boxBgColor": "#141f1c",
+    "boxBgOpacity": 71,
+    "boxBorderColor": "#2d7163",
+    "boxBorderOpacity": 77,
+    "buttonStyle": {
+      "fontFamily": "display",
+      "fontSize": 15,
+      "paddingY": 6,
+      "paddingX": 6,
+      "borderRadius": 7,
+      "gradientEnabled": true,
+      "gradientAngle": 187,
+      "gradientColors": [
+        "#112432",
+        "#071418"
+      ],
+      "bgColor": "#151f23",
+      "borderColor": "#159d82",
+      "borderOpacity": 61,
+      "borderWidth": 1,
+      "dividerWidth": 1,
+      "dividerGradientEnabled": false,
+      "dividerColors": [
+        "#29755c",
+        "#5c5c5c"
+      ]
+    }
   }
 }
