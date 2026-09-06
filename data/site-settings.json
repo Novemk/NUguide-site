@@ -30,15 +30,15 @@
   },
   "chapterStyles": {
     "忘卻遺跡 第 22 季": {
-      "bgColor": "#211f30",
+      "bgColor": "#071713",
       "bgOpacity": 0,
-      "borderColor": "#3a3650",
+      "borderColor": "#47b398",
       "borderOpacity": 100
     },
     "魔法檢定所 第 26 季": {
-      "bgColor": "#23d7b9",
+      "bgColor": "#2c220c",
       "bgOpacity": 0,
-      "borderColor": "#543cdd",
+      "borderColor": "#c9a45c",
       "borderOpacity": 100
     },
     "魔法檢定所 第 22 季": {
@@ -52,10 +52,10 @@
     "dividerColor": "#69541c",
     "dividerWidth": 1,
     "chapterTitleColor": "#8b87a3",
-    "chapterTitleFontSize": 11,
-    "boxBgColor": "#141f1c",
+    "chapterTitleFontSize": 15,
+    "boxBgColor": "#191820",
     "boxBgOpacity": 71,
-    "boxBorderColor": "#2d7163",
+    "boxBorderColor": "#4f4f54",
     "boxBorderOpacity": 77,
     "buttonStyle": {
       "fontFamily": "display",
@@ -66,17 +66,17 @@
       "gradientEnabled": true,
       "gradientAngle": 187,
       "gradientColors": [
-        "#112432",
-        "#071418"
+        "#21282c",
+        "#0d1112"
       ],
       "bgColor": "#151f23",
-      "borderColor": "#159d82",
-      "borderOpacity": 61,
+      "borderColor": "#434c4a",
+      "borderOpacity": 89,
       "borderWidth": 1,
       "dividerWidth": 1,
       "dividerGradientEnabled": false,
       "dividerColors": [
-        "#29755c",
+        "#454f4c",
         "#5c5c5c"
       ]
     }
