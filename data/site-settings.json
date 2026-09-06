@@ -31,13 +31,13 @@
   "chapterStyles": {
     "忘卻遺跡 第 22 季": {
       "bgColor": "#071713",
-      "bgOpacity": 0,
+      "bgOpacity": 80,
       "borderColor": "#47b398",
       "borderOpacity": 100
     },
     "魔法檢定所 第 26 季": {
       "bgColor": "#2c220c",
-      "bgOpacity": 0,
+      "bgOpacity": 83,
       "borderColor": "#c9a45c",
       "borderOpacity": 100
     },
@@ -49,7 +49,7 @@
     }
   },
   "pastSectionStyle": {
-    "dividerColor": "#69541c",
+    "dividerColor": "#828282",
     "dividerWidth": 1,
     "chapterTitleColor": "#8b87a3",
     "chapterTitleFontSize": 15,
@@ -76,7 +76,7 @@
       "dividerWidth": 1,
       "dividerGradientEnabled": false,
       "dividerColors": [
-        "#454f4c",
+        "#29adff",
         "#5c5c5c"
       ]
     }
