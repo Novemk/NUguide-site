@@ -29,23 +29,23 @@
     ]
   },
   "chapterStyles": {
-    "忘卻遺跡 第二十二季": {
-      "bgColor": "#3c407c",
-      "bgOpacity": 38,
-      "borderColor": "#d7c184",
-      "borderOpacity": 18
+    "忘卻遺跡 第 22 季": {
+      "bgColor": "#211f30",
+      "bgOpacity": 0,
+      "borderColor": "#3a3650",
+      "borderOpacity": 100
     },
-    "魔法檢定所 第二十六季": {
-      "bgColor": "#3e3419",
-      "bgOpacity": 35,
-      "borderColor": "#d7c184",
-      "borderOpacity": 18
+    "魔法檢定所 第 26 季": {
+      "bgColor": "#23d7b9",
+      "bgOpacity": 0,
+      "borderColor": "#543cdd",
+      "borderOpacity": 100
     },
-    "魔法檢定所 第二十二季": {
-      "bgColor": "#3e3419",
-      "bgOpacity": 29,
-      "borderColor": "#d7c180",
-      "borderOpacity": 20
+    "魔法檢定所 第 22 季": {
+      "bgColor": "#211f30",
+      "bgOpacity": 0,
+      "borderColor": "#3a3650",
+      "borderOpacity": 100
     }
   },
   "pastSectionStyle": {
