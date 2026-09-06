@@ -49,7 +49,7 @@
     }
   },
   "pastSectionStyle": {
-    "dividerColor": "#828282",
+    "dividerColor": "#40ff3d",
     "dividerWidth": 1,
     "chapterTitleColor": "#8b87a3",
     "chapterTitleFontSize": 15,
@@ -76,7 +76,7 @@
       "dividerWidth": 1,
       "dividerGradientEnabled": false,
       "dividerColors": [
-        "#29adff",
+        "#434c4a",
         "#5c5c5c"
       ]
     }
