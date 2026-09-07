@@ -25,6 +25,24 @@ function seriesOf(chapter) {
   const idx = (chapter || '').indexOf(' ');
   return idx === -1 ? (chapter || '') : chapter.slice(0, idx);
 }
+// Applies one chapter's 章節外觀 — same shared shape/logic as
+// stagesList.js's own applyChapterStyle (2026-09-07, gradient bg/border
+// support for a metallic look, set directly as inline style rather
+// than through a CSS custom property).
+function applyChapterStyle(el, cs) {
+  if (!cs) return;
+  el.style.background = cs.bgGradientEnabled
+    ? `linear-gradient(${cs.bgGradientAngle ?? 135}deg, ${cs.bgGradientColor1 || '#4a4a3a'} 0%, ${cs.bgGradientColor2 || '#1a1a14'} ${cs.bgGradientStop ?? 60}%)`
+    : (cs.bgColor ? hexToRgba(cs.bgColor, cs.bgOpacity) : '');
+  if (cs.borderWidth != null) el.style.borderWidth = `${cs.borderWidth}px`;
+  if (cs.borderGradientEnabled) {
+    el.style.borderStyle = 'solid';
+    el.style.borderImage = `linear-gradient(${cs.borderGradientAngle ?? 135}deg, ${cs.borderGradientColor1 || '#e8d9a0'} 0%, ${cs.borderGradientColor2 || '#8a7140'} ${cs.borderGradientStop ?? 60}%) 1`;
+  } else if (cs.borderColor) {
+    el.style.borderStyle = 'solid';
+    el.style.borderColor = hexToRgba(cs.borderColor, cs.borderOpacity);
+  }
+}
 // 系列篩選 chips (2026-09-07) — same small widget as stagesList.js's own.
 function renderSeriesFilter(container, allSeries, selected, onSelect) {
   if (allSeries.length < 2) return;
@@ -192,10 +210,7 @@ async function init() {
         // entry there falls back to .mt-chapter-box's own default gold
         // border (see components.css).
         const cs = chapterStyles[chapter];
-        if (cs) {
-          if (cs.bgColor) boxEl.style.setProperty('--chapter-box-bg', hexToRgba(cs.bgColor, cs.bgOpacity));
-          if (cs.borderColor) boxEl.style.setProperty('--chapter-box-border', hexToRgba(cs.borderColor, cs.borderOpacity));
-        }
+        if (cs) applyChapterStyle(boxEl, cs);
 
         // No more 'auto' separator tracks or gap — cells sit directly
         // edge-to-edge (see .mt-tab-row column-gap:0 in CSS). The '｜'

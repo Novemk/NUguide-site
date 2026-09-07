@@ -23,6 +23,30 @@ function seriesOf(chapter) {
   return idx === -1 ? (chapter || '') : chapter.slice(0, idx);
 }
 
+// Applies one chapter's 章節外觀 (2026-09-07: now supports an optional
+// gradient background and/or gradient border, for a metallic look, on
+// top of the original flat color+opacity) directly as inline style —
+// not through a CSS custom property this time (see stagesList.js's own
+// hard-won divider lesson: a class-based rule silently not matching in
+// production, for reasons that were never fully pinned down, is exactly
+// what inline style sidesteps entirely). Shared shape/logic duplicated
+// across stagesList.js/myTeamsOverview.js/teamNotes.js, same as
+// hexToRgba/seriesOf already are.
+function applyChapterStyle(el, cs) {
+  if (!cs) return;
+  el.style.background = cs.bgGradientEnabled
+    ? `linear-gradient(${cs.bgGradientAngle ?? 135}deg, ${cs.bgGradientColor1 || '#4a4a3a'} 0%, ${cs.bgGradientColor2 || '#1a1a14'} ${cs.bgGradientStop ?? 60}%)`
+    : (cs.bgColor ? hexToRgba(cs.bgColor, cs.bgOpacity) : '');
+  if (cs.borderWidth != null) el.style.borderWidth = `${cs.borderWidth}px`;
+  if (cs.borderGradientEnabled) {
+    el.style.borderStyle = 'solid';
+    el.style.borderImage = `linear-gradient(${cs.borderGradientAngle ?? 135}deg, ${cs.borderGradientColor1 || '#e8d9a0'} 0%, ${cs.borderGradientColor2 || '#8a7140'} ${cs.borderGradientStop ?? 60}%) 1`;
+  } else if (cs.borderColor) {
+    el.style.borderStyle = 'solid';
+    el.style.borderColor = hexToRgba(cs.borderColor, cs.borderOpacity);
+  }
+}
+
 const FONT_VAR_BY_KEY = {
   display: 'var(--font-display)',
   body: 'var(--font-body)',
@@ -199,10 +223,7 @@ async function init() {
     for (const group of groupByChapter(activeStages)) {
       const groupEl = renderChapterGroup(group);
       const cs = chapterStyles[group.chapter];
-      if (cs) {
-        if (cs.bgColor) groupEl.style.setProperty('--chapter-box-bg', hexToRgba(cs.bgColor, cs.bgOpacity));
-        if (cs.borderColor) groupEl.style.setProperty('--chapter-box-border', hexToRgba(cs.borderColor, cs.borderOpacity));
-      }
+      if (cs) applyChapterStyle(groupEl, cs);
       root.appendChild(groupEl);
     }
 
