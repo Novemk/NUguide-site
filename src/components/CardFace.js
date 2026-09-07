@@ -9,13 +9,20 @@ import { resolveAsset } from '../core/dataLoader.js';
  *
  * @param {HTMLElement} clip - the overflow:hidden container the image is cropped against
  * @param {string} imageSrc
+ * @param {string} [imageSrcset] - responsive-image candidates (2026-09-07,
+ *   卡片資料庫 only) — e.g. "thumb.webp 240w, medium.webp 480w, full.webp 800w".
+ *   The browser picks whichever candidate actually matches, instead of
+ *   always downloading the full original just to shrink it via CSS.
+ * @param {string} [imageSizes] - paired with imageSrcset; tells the
+ *   browser how wide the image actually renders at different viewport
+ *   widths, since that's what it needs to pick the right candidate.
  * @param {string} imageAlt
  * @param {number} imageZoom
  * @param {number} imageOffsetX
  * @param {number} imageOffsetY
  * @returns {HTMLImageElement}
  */
-function mountCoverImage(clip, { imageSrc, imageAlt = '', imageZoom = 1, imageOffsetX = 0.5, imageOffsetY = 0.5 }) {
+function mountCoverImage(clip, { imageSrc, imageSrcset, imageSizes, imageAlt = '', imageZoom = 1, imageOffsetX = 0.5, imageOffsetY = 0.5 }) {
   const img = document.createElement('img');
   img.className = 'card-face-img';
   img.alt = imageAlt;
@@ -40,6 +47,10 @@ function mountCoverImage(clip, { imageSrc, imageAlt = '', imageZoom = 1, imageOf
     img.style.top = `${-overflowY * imageOffsetY}px`;
   }
   img.addEventListener('load', layout);
+  if (imageSrcset) {
+    img.sizes = imageSizes || '160px';
+    img.srcset = imageSrcset;
+  }
   img.src = imageSrc;
   if (img.complete && img.naturalWidth) layout(); // cached image, load already fired
 
@@ -74,6 +85,8 @@ export const BORDER_CLASS_BY_RARITY = { ssr: 'card-face-border-ssr', sr: 'card-f
  */
 export function renderCardFace({
   imageSrc,
+  imageSrcset,
+  imageSizes,
   imageAlt = '',
   rarity = null,
   element = null,
@@ -89,7 +102,7 @@ export function renderCardFace({
   clip.className = 'card-face-clip';
   face.appendChild(clip);
 
-  mountCoverImage(clip, { imageSrc, imageAlt, imageZoom, imageOffsetX, imageOffsetY });
+  mountCoverImage(clip, { imageSrc, imageSrcset, imageSizes, imageAlt, imageZoom, imageOffsetX, imageOffsetY });
 
   const gradient = document.createElement('div');
   gradient.className = 'card-face-gradient';

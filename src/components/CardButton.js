@@ -1,5 +1,5 @@
 // src/components/CardButton.js
-import { resolveAsset, resolveCardThumb } from '../core/dataLoader.js';
+import { resolveAsset, resolveCardThumb, resolveCardMedium } from '../core/dataLoader.js';
 import { renderCardFace } from './CardFace.js';
 
 const INFO_ICON_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><line x1="12" y1="11" x2="12" y2="16"></line><circle cx="12" cy="7.5" r="0.6" fill="currentColor" stroke="none"></circle></svg>';
@@ -40,8 +40,21 @@ export function renderCardButton(card, maps, opts = {}) {
   btn.dataset.cardId = card.id;
   if (opts.disabled) btn.setAttribute('aria-disabled', 'true');
 
+  // 卡片資料庫's own grid (opts.thumbnail/opts.compact both false) gets
+  // srcset instead of always the full original (2026-09-07) — its cells
+  // range from ~120px up to considerably larger on a wide screen with
+  // few results, so a single fixed size (thumb or full) would either
+  // look soft when stretched or over-download when small. sizes is an
+  // approximation (CSS grid auto-fill's actual per-card width isn't
+  // something a static sizes string can express exactly), tuned to the
+  // grid's own minmax(120px,...) baseline.
+  const useResponsive = !opts.thumbnail;
   const face = renderCardFace({
     imageSrc: opts.thumbnail ? resolveCardThumb(card.image) : resolveAsset(card.image),
+    imageSrcset: useResponsive
+      ? `${resolveCardThumb(card.image)} 240w, ${resolveCardMedium(card.image)} 480w, ${resolveAsset(card.image)} 800w`
+      : undefined,
+    imageSizes: useResponsive ? '(max-width: 480px) 30vw, 160px' : undefined,
     imageAlt: card.name,
     rarity,
     element,

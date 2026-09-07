@@ -112,6 +112,18 @@ export function resolveCardThumb(path) {
   return resolveAsset(thumbPath);
 }
 
+/**
+ * Same idea as resolveCardThumb but the 480px-wide tier — for 卡片資料庫
+ * itself (2026-09-07), whose grid cells can be considerably bigger than
+ * the fixed avatar/thumbnail contexts resolveCardThumb covers, but still
+ * rarely need the full original resolution.
+ */
+export function resolveCardMedium(path) {
+  if (!path) return '';
+  const mediumPath = path.replace(/\/cards\/([^/]+)$/, '/cards/medium/$1');
+  return resolveAsset(mediumPath);
+}
+
 export function byId(list, id) {
   return list.find((item) => item.id === id);
 }
