@@ -158,10 +158,18 @@ async function init() {
   if (pastStages.length) {
     const pastStyle = (siteSettings && siteSettings.pastSectionStyle) || {};
 
+    // Every visual property set directly as inline style here, not via
+    // a CSS class + custom property (2026-09-07) — after this element
+    // specifically refused to pick up its own class's rule in
+    // production for reasons that couldn't be pinned down even with
+    // matched DevTools evidence, inline style removes components.css
+    // as a dependency entirely: inline style always wins regardless of
+    // what is or isn't loaded/matching in any external stylesheet.
     const divider = document.createElement('div');
-    divider.className = 'stage-past-divider';
-    if (pastStyle.dividerColor) divider.style.setProperty('--past-divider-color', pastStyle.dividerColor);
-    if (pastStyle.dividerWidth != null) divider.style.setProperty('--past-divider-width', `${pastStyle.dividerWidth}px`);
+    divider.style.height = `${pastStyle.dividerWidth ?? 1}px`;
+    divider.style.backgroundColor = pastStyle.dividerColor || '#c9a45c';
+    divider.style.margin = '30px 0';
+    divider.style.maxWidth = '640px';
     root.appendChild(divider);
 
     const heading = document.createElement('div');
