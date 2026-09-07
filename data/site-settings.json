@@ -30,7 +30,7 @@
   },
   "chapterStyles": {
     "忘卻遺跡 第 22 季": {
-      "bgColor": "#0e251f",
+      "bgColor": "#071713",
       "bgOpacity": 80,
       "borderColor": "#47b398",
       "borderOpacity": 100
@@ -49,10 +49,10 @@
     }
   },
   "pastSectionStyle": {
-    "dividerColor": "#ff0000",
+    "dividerColor": "#828282",
     "dividerWidth": 1,
     "chapterTitleColor": "#8b87a3",
-    "chapterTitleFontSize": 18,
+    "chapterTitleFontSize": 15,
     "boxBgColor": "#191820",
     "boxBgOpacity": 71,
     "boxBorderColor": "#4f4f54",
@@ -76,7 +76,7 @@
       "dividerWidth": 1,
       "dividerGradientEnabled": false,
       "dividerColors": [
-        "#434c4a",
+        "#29adff",
         "#5c5c5c"
       ]
     }
