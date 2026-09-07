@@ -49,7 +49,7 @@
     }
   },
   "pastSectionStyle": {
-    "dividerColor": "#ff0000",
+    "dividerColor": "#808080",
     "dividerWidth": 1,
     "chapterTitleColor": "#8b87a3",
     "chapterTitleFontSize": 15,
