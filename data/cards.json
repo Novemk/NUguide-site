@@ -325,7 +325,7 @@
       "target_pos",
       "immune_stun"
     ],
-    "ultimateSkill": "使自身必殺技傷害增加 27%（2回合）\n再以攻擊力 156% 對敵方站位1、3、5造成傷害\n［冷卻時間：4回合］",
+    "ultimateSkill": "使自身必殺技傷害增加 27%（2回合）\n再以攻擊力 156% 對敵方站位 1、3、5 造成傷害\n［冷卻時間：4回合］",
     "image": "assets/img/cards/card_017.webp",
     "imageZoom": 1.65,
     "imageOffsetX": 0.4538649225385494,
@@ -813,7 +813,7 @@
       "target_pos",
       "immune_stun"
     ],
-    "ultimateSkill": "使敵方全體受到必殺技傷害增加 13.5%（最多1層）\n並使自身攻擊力增加 27%（1回合）\n再以攻擊力 119% 對敵方站位2、3、4造成傷害\n［冷卻時間：3回合］",
+    "ultimateSkill": "使敵方全體受到必殺技傷害增加 13.5%（最多1層）\n並使自身攻擊力增加 27%（1回合）\n再以攻擊力 119% 對敵方站位 2、3、4 造成傷害\n［冷卻時間：3回合］",
     "image": "assets/img/cards/card_041.webp",
     "imageZoom": 1.47,
     "imageOffsetX": 0.4881583484116592,
@@ -980,7 +980,7 @@
       "break_shield",
       "immune_silence"
     ],
-    "ultimateSkill": "解除敵方全體的防禦狀態\n使敵方全體受到傷害增加 14%（3回合）、普攻傷害減少 14%（3回合）\n再以攻擊力 60% 對敵方站位2、3、4各造成2次傷害\n［冷卻時間：3回合］",
+    "ultimateSkill": "解除敵方全體的防禦狀態\n使敵方全體受到傷害增加 14%（3回合）、普攻傷害減少 14%（3回合）\n再以攻擊力 60% 對敵方站位 2、3、4 各造成2次傷害\n［冷卻時間：3回合］",
     "image": "assets/img/cards/card_049.webp",
     "imageZoom": 1.72,
     "imageOffsetX": 0.5433357277556204,
@@ -1043,7 +1043,7 @@
       "lifesteal",
       "immune_sleep"
     ],
-    "ultimateSkill": "以當前HP 20% 對自身造成真實傷害\n並以攻擊力 82% 對敵方站位1、2、3造成傷害\n再以攻擊力 82% 對敵方站位3、4、5造成傷害\n並使自身獲得吸血效果 50%（3回合）\n［冷卻時間：4回合］",
+    "ultimateSkill": "以當前HP 20% 對自身造成真實傷害\n並以攻擊力 82% 對敵方站位 1、2、3 造成傷害\n再以攻擊力 82% 對敵方站位 3、4、5 造成傷害\n並使自身獲得吸血效果 50%（3回合）\n［冷卻時間：4回合］",
     "image": "assets/img/cards/card_052.webp",
     "imageZoom": 1.71,
     "imageOffsetX": 0.4803086589509335,
