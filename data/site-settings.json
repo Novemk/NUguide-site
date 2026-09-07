@@ -93,7 +93,7 @@
     },
     "main": {
       "color": "#100f18",
-      "opacity": 100,
+      "opacity": 22,
       "gradientEnabled": true,
       "gradientColor1": "#fff1cc",
       "gradientColor2": "#977544",
