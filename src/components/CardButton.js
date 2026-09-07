@@ -54,7 +54,7 @@ export function renderCardButton(card, maps, opts = {}) {
     imageSrcset: useResponsive
       ? `${resolveCardThumb(card.image)} 240w, ${resolveCardMedium(card.image)} 480w, ${resolveAsset(card.image)} 800w`
       : undefined,
-    imageSizes: useResponsive ? '(max-width: 480px) 30vw, 160px' : undefined,
+    imageSizes: useResponsive ? '(max-width: 480px) 45vw, 260px' : undefined,
     imageAlt: card.name,
     rarity,
     element,
