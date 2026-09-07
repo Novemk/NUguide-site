@@ -53,6 +53,19 @@ const FONT_VAR_BY_KEY = {
   mono: 'var(--font-mono)',
 };
 
+// 按鈕外觀 used to be one setting shared by the whole page; each chapter
+// now has its own (2026-09-07, see 後台 → 章節外觀). This is the same
+// look that global default used to be — the fallback for any chapter
+// that hasn't been individually customized yet, so it doesn't suddenly
+// look unstyled/plain the moment 網站設定's old shared setting stopped
+// applying.
+const DEFAULT_BUTTON_STYLE = {
+  fontFamily: 'display', fontSize: 15, paddingY: 12, paddingX: 6, borderRadius: 8,
+  gradientEnabled: true, gradientAngle: 180, gradientColors: ['#211f30', '#2a2740'],
+  bgColor: '#211f30', borderColor: '#3a3650', borderOpacity: 100, borderWidth: 1,
+  dividerWidth: 1, dividerGradientEnabled: false, dividerColors: ['#c9a45c', '#c9a45c'],
+};
+
 // Applies a 關卡按鈕外觀-shaped style object as CSS custom properties on
 // `el` — the actual visual rules (.so-btn/.so-row) live in components.css
 // and read these vars, with sane fallbacks baked in via CSS's own
@@ -208,22 +221,23 @@ async function init() {
     const root = document.getElementById('stage-list-root');
     root.innerHTML = '';
     root.className = 'so-wrap';
-    applyButtonStyle(root, siteSettings && siteSettings.stageButtonStyle);
 
     if (activeStages.length === 0 && pastStages.length === 0) {
       root.innerHTML = '<div class="empty-state"><h3>目前還沒有關卡資料</h3><p>請由站主於後台新增關卡。</p></div>';
       return;
     }
 
-    // Per-chapter box color (2026-09-06) — keyed by the exact chapter
-    // string (e.g. "忘卻遺跡 第 22 季"), set in 網站設定 → 章節外觀. A
-    // chapter with no entry there just falls back to the plain default
-    // box (see .chapter-group's own var(...,fallback) in components.css).
+    // Per-chapter box color + button style (2026-09-07: 按鈕外觀 used to
+    // be one setting shared by the whole page — now each chapter has
+    // its own, set in 後台 → 章節外觀). A chapter with no entry there
+    // just falls back to .chapter-group's own plain default (box) /
+    // applyButtonStyle's own {} default (buttons).
     const chapterStyles = (siteSettings && siteSettings.chapterStyles) || {};
     for (const group of groupByChapter(activeStages)) {
       const groupEl = renderChapterGroup(group);
       const cs = chapterStyles[group.chapter];
       if (cs) applyChapterStyle(groupEl, cs);
+      applyButtonStyle(groupEl, (cs && cs.buttonStyle) || DEFAULT_BUTTON_STYLE);
       root.appendChild(groupEl);
     }
 
