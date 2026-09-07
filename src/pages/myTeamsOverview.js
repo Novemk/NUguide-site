@@ -8,6 +8,46 @@ import { confirmDialog } from '../components/Modal.js';
 import { showToast } from '../core/toast.js';
 import { downloadTeamsBackup, promptImportTeamsBackup } from '../modules/teamBackup.js';
 
+// Same conversion as stagesList.js's own hexToRgba — kept as a small
+// local copy rather than a shared import, since this is the only place
+// in this file that needs it (2026-09-07, 章節外觀 applied here too).
+function hexToRgba(hex, opacityPercent) {
+  const h = (hex || '#3a3650').replace('#', '');
+  const r = parseInt(h.substring(0, 2), 16) || 0;
+  const g = parseInt(h.substring(2, 4), 16) || 0;
+  const b = parseInt(h.substring(4, 6), 16) || 0;
+  const a = Math.max(0, Math.min(100, opacityPercent ?? 100)) / 100;
+  return `rgba(${r}, ${g}, ${b}, ${a})`;
+}
+// Same "text before the first space" rule used across the admin pages
+// and stagesList.js.
+function seriesOf(chapter) {
+  const idx = (chapter || '').indexOf(' ');
+  return idx === -1 ? (chapter || '') : chapter.slice(0, idx);
+}
+// 系列篩選 chips (2026-09-07) — same small widget as stagesList.js's own.
+function renderSeriesFilter(container, allSeries, selected, onSelect) {
+  if (allSeries.length < 2) return;
+  const bar = document.createElement('div');
+  bar.className = 'series-filter';
+  const allBtn = document.createElement('button');
+  allBtn.type = 'button';
+  allBtn.className = 'series-filter-btn' + (!selected ? ' active' : '');
+  allBtn.textContent = '全部';
+  allBtn.addEventListener('click', () => onSelect(null));
+  bar.appendChild(allBtn);
+  for (const s of allSeries) {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'series-filter-btn' + (selected === s ? ' active' : '');
+    btn.textContent = s;
+    btn.addEventListener('click', () => onSelect(s));
+    bar.appendChild(btn);
+  }
+  container.appendChild(bar);
+}
+let selectedSeries = null;
+
 async function init() {
   mountNavbar('my-teams.html');
   mountFooter();
@@ -27,6 +67,7 @@ async function init() {
   const stageMap = toMap(stages);
   const cardMap = toMap(cards);
   const cardMaps = { rarityMap: toMap(rarities), classMap: toMap(classes), elementMap: toMap(elements) };
+  const chapterStyles = (siteSettings && siteSettings.chapterStyles) || {};
   const root = document.getElementById('overview-root');
 
   // Which stage is currently "open" within each chapter — a Map keyed
@@ -46,6 +87,13 @@ async function init() {
     const grouped = await getAllTeamsGrouped();
     root.innerHTML = '';
 
+    const filterHost = document.getElementById('overview-filter');
+    if (filterHost) {
+      filterHost.innerHTML = '';
+      const allSeries = [...new Set(stages.filter((s) => !s.hidden).map((s) => seriesOf(s.chapter)))];
+      renderSeriesFilter(filterHost, allSeries, selectedSeries, (s) => { selectedSeries = s; refresh(); });
+    }
+
     // Only one team per stage now (MAX_TEAMS_PER_STAGE = 1 — see
     // store.js) — take that single team directly rather than an array.
     const teamByStageId = new Map();
@@ -57,6 +105,8 @@ async function init() {
       // has nothing meaningful to show it under, same as everywhere
       // else this situation comes up on the site.
       if (!stage || stage.hidden || stage.archived) continue;
+      // 系列篩選 (2026-09-07)
+      if (selectedSeries && seriesOf(stage.chapter) !== selectedSeries) continue;
       if (entry.teams && entry.teams[0]) teamByStageId.set(entry.stageId, entry.teams[0]);
     }
 
@@ -137,6 +187,15 @@ async function init() {
       for (const row of rows) {
         const boxEl = document.createElement('div');
         boxEl.className = 'mt-chapter-box';
+        // 章節外觀 (2026-09-07) — same chapterStyles data stagesList.js
+        // uses, keyed by the exact chapter string; a chapter with no
+        // entry there falls back to .mt-chapter-box's own default gold
+        // border (see components.css).
+        const cs = chapterStyles[chapter];
+        if (cs) {
+          if (cs.bgColor) boxEl.style.setProperty('--chapter-box-bg', hexToRgba(cs.bgColor, cs.bgOpacity));
+          if (cs.borderColor) boxEl.style.setProperty('--chapter-box-border', hexToRgba(cs.borderColor, cs.borderOpacity));
+        }
 
         // No more 'auto' separator tracks or gap — cells sit directly
         // edge-to-edge (see .mt-tab-row column-gap:0 in CSS). The '｜'

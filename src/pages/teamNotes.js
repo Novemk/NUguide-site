@@ -15,6 +15,44 @@ import { openTeamEditor } from '../components/TeamEditor.js';
 import { confirmDialog } from '../components/Modal.js';
 import { showToast } from '../core/toast.js';
 
+// Same conversion as stagesList.js's own hexToRgba.
+function hexToRgba(hex, opacityPercent) {
+  const h = (hex || '#3a3650').replace('#', '');
+  const r = parseInt(h.substring(0, 2), 16) || 0;
+  const g = parseInt(h.substring(2, 4), 16) || 0;
+  const b = parseInt(h.substring(4, 6), 16) || 0;
+  const a = Math.max(0, Math.min(100, opacityPercent ?? 100)) / 100;
+  return `rgba(${r}, ${g}, ${b}, ${a})`;
+}
+// Same "text before the first space" rule used across stageAdmin.js /
+// stageAppearanceAdmin.js / stagesList.js.
+function seriesOf(chapter) {
+  const idx = (chapter || '').indexOf(' ');
+  return idx === -1 ? (chapter || '') : chapter.slice(0, idx);
+}
+// 系列篩選 chips (2026-09-07) — same small widget as stagesList.js's own.
+function renderSeriesFilter(container, allSeries, selected, onSelect) {
+  if (allSeries.length < 2) return;
+  const bar = document.createElement('div');
+  bar.className = 'series-filter';
+  const allBtn = document.createElement('button');
+  allBtn.type = 'button';
+  allBtn.className = 'series-filter-btn' + (!selected ? ' active' : '');
+  allBtn.textContent = '全部';
+  allBtn.addEventListener('click', () => onSelect(null));
+  bar.appendChild(allBtn);
+  for (const s of allSeries) {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'series-filter-btn' + (selected === s ? ' active' : '');
+    btn.textContent = s;
+    btn.addEventListener('click', () => onSelect(s));
+    bar.appendChild(btn);
+  }
+  container.appendChild(bar);
+}
+let selectedSeries = null;
+
 async function init() {
   mountNavbar('team-notes.html');
   mountFooter();
@@ -34,6 +72,7 @@ async function init() {
   const stageMap = toMap(stages);
   const cardMap = toMap(cards);
   const cardMaps = { rarityMap: toMap(rarities), classMap: toMap(classes), elementMap: toMap(elements) };
+  const pastStyle = (siteSettings && siteSettings.pastSectionStyle) || {};
   const root = document.getElementById('notes-root');
 
   const openStageByChapter = new Map();
@@ -43,6 +82,13 @@ async function init() {
     const grouped = await getAllTeamsGrouped();
     root.innerHTML = '';
 
+    const filterHost = document.getElementById('notes-filter');
+    if (filterHost) {
+      filterHost.innerHTML = '';
+      const allSeries = [...new Set(stages.filter((s) => !s.hidden && s.archived).map((s) => seriesOf(s.chapter)))];
+      renderSeriesFilter(filterHost, allSeries, selectedSeries, (s) => { selectedSeries = s; refresh(); });
+    }
+
     const teamByStageId = new Map();
     for (const entry of grouped) {
       const stage = stageMap.get(entry.stageId);
@@ -50,6 +96,8 @@ async function init() {
       // 過往關卡 (archived), and 隱藏 still wins if somehow both are set
       // (see stageAdmin.js's 過往關卡 checkbox note on priority).
       if (!stage || stage.hidden || !stage.archived) continue;
+      // 系列篩選 (2026-09-07)
+      if (selectedSeries && seriesOf(stage.chapter) !== selectedSeries) continue;
       if (entry.teams && entry.teams[0]) teamByStageId.set(entry.stageId, entry.teams[0]);
     }
 
@@ -99,6 +147,14 @@ async function init() {
       const titleEl = document.createElement('div');
       titleEl.className = 'chapter-title';
       titleEl.textContent = chapter;
+      // 整頁都是「過往」內容，章節標題一律套用「過往關卡外觀」的樣式
+      // (2026-09-07)，不是主要區域那組金色固定樣式；系列標題顏色設定
+      // 有值就蓋過下面這個統一色。
+      if (pastStyle.chapterTitleColor) {
+        const seriesColors = pastStyle.seriesTitleColors || {};
+        titleEl.style.color = seriesColors[seriesOf(chapter)] || pastStyle.chapterTitleColor;
+      }
+      if (pastStyle.chapterTitleFontSize) titleEl.style.fontSize = `${pastStyle.chapterTitleFontSize}px`;
       chapterEl.appendChild(titleEl);
 
       const activeStageId = openStageByChapter.get(chapter) || null;
@@ -106,6 +162,12 @@ async function init() {
       for (const row of rows) {
         const boxEl = document.createElement('div');
         boxEl.className = 'mt-chapter-box';
+        // 整頁共用同一組「過往關卡外觀」外框樣式（2026-09-07），不分章
+        // 節各自上色——呼應「過往的忘卻遺跡＋過往的檢定所，一起換色」
+        // 那個決定,跟「我的隊伍總覽」用的是不同資料（那邊是每章節各自
+        // 顏色的 chapterStyles）。
+        if (pastStyle.boxBgColor) boxEl.style.setProperty('--chapter-box-bg', hexToRgba(pastStyle.boxBgColor, pastStyle.boxBgOpacity));
+        if (pastStyle.boxBorderColor) boxEl.style.setProperty('--chapter-box-border', hexToRgba(pastStyle.boxBorderColor, pastStyle.boxBorderOpacity));
 
         const gridTemplate = Array.from({ length: row.length }, () => TAB_COL_WIDTH).join(' ');
 

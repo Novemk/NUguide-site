@@ -111,13 +111,19 @@
    stagesList.js from 網站設定 → 章節外觀 (keyed by the exact chapter
    string, e.g. "忘卻遺跡 第 22 季") — a chapter with no configured
    style just falls back to the plain default box below. */
-.chapter-group {
+/* Scoped to .so-wrap specifically (2026-09-07) — .chapter-group is
+   also reused on 我的隊伍總覽/隊伍筆記 as a plain title wrapper (their
+   own visible box is .mt-chapter-box instead, one per row, not one per
+   chapter), so this box styling must NOT leak there unscoped — it did
+   before this fix, as an unintended side effect. */
+.so-wrap > .chapter-group {
   margin-bottom: 24px;
   border: 1px solid var(--chapter-box-border, var(--border-soft));
   background: var(--chapter-box-bg, transparent);
   border-radius: var(--radius-md);
   padding: 20px;
 }
+.chapter-group { margin-bottom: 24px; }
 .chapter-title {
   font-family: var(--font-display);
   color: var(--accent-gold);
@@ -145,6 +151,20 @@
   margin: 30px 0;
   max-width: 640px;
 }
+/* 系列篩選 chips (2026-09-07) — shared markup across 關卡攻略/我的隊伍
+   總覽/隊伍筆記 (each page's own small renderSeriesFilter copy). */
+.series-filter { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+.series-filter-btn {
+  padding: 6px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: none;
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+.series-filter-btn.active { background: var(--accent-gold); border-color: var(--accent-gold); color: #201e2f; font-weight: 700; }
+
 .stage-past-heading {
   /* Matches the page's own <h1>（"關卡攻略"）— color/weight/family,
      NOT .chapter-title's gold (2026-09-06 correction: this heading
@@ -974,11 +994,15 @@ hr.ql-divider {
 .mt-chapter-box {
   max-width: 640px;
   width: 100%;
-  border: 1px solid #c9a45c;
+  /* Falls back to the original hardcoded look when a chapter has no
+     章節外觀 entry (2026-09-07) — same --chapter-box-border/-bg vars
+     stagesList.js's own .chapter-group reads, set inline per-chapter by
+     myTeamsOverview.js/teamNotes.js the same way. */
+  border: 1px solid var(--chapter-box-border, #c9a45c);
   border-radius: var(--radius-md);
   margin-bottom: 20px;
   overflow: hidden;
-  background: var(--bg-card);
+  background: var(--chapter-box-bg, var(--bg-card));
 }
 .mt-tab-panel {
   padding: 14px 16px;

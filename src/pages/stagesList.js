@@ -14,6 +14,15 @@ function hexToRgba(hex, opacityPercent) {
   return `rgba(${r}, ${g}, ${b}, ${a})`;
 }
 
+// Same "text before the first space" rule as stageAdmin.js's own
+// splitChapter/stageAppearanceAdmin.js's seriesOf — safe for the same
+// reason: every chapter string is guaranteed "系列 季" (one space) by
+// the admin's 系列/季 split fields.
+function seriesOf(chapter) {
+  const idx = (chapter || '').indexOf(' ');
+  return idx === -1 ? (chapter || '') : chapter.slice(0, idx);
+}
+
 const FONT_VAR_BY_KEY = {
   display: 'var(--font-display)',
   body: 'var(--font-body)',
@@ -71,12 +80,17 @@ function groupByChapter(stageList) {
 // per stageAdmin.js's 另起一排 checkbox, is entirely admin-controlled,
 // no auto-wrap logic here) — used for both a normal chapter box and a
 // chapter listed inside 過往關卡.
-function renderChapterGroup(group) {
+// @param {string} [titleColorOverride] - 過往關卡 only (2026-09-07) —
+//   per-系列 title color from 網站設定 → 過往關卡外觀 → 系列標題顏色,
+//   set directly as inline style since it overrides whatever the
+//   section-wide --past-chapter-title-color otherwise applies.
+function renderChapterGroup(group, titleColorOverride) {
   const groupEl = document.createElement('div');
   groupEl.className = 'chapter-group';
   const title = document.createElement('div');
   title.className = 'chapter-title';
   title.textContent = group.chapter;
+  if (titleColorOverride) title.style.color = titleColorOverride;
   groupEl.appendChild(title);
 
   const gridEl = document.createElement('div');
@@ -110,6 +124,32 @@ function renderChapterGroup(group) {
   return groupEl;
 }
 
+// 系列篩選 chips (2026-09-07) — reused identically on 我的隊伍總覽/隊伍
+// 筆記 (each file keeps its own small copy, same as hexToRgba/seriesOf
+// already are, rather than a shared cross-page module).
+function renderSeriesFilter(container, allSeries, selected, onSelect) {
+  if (allSeries.length < 2) return; // nothing meaningful to filter
+  const bar = document.createElement('div');
+  bar.className = 'series-filter';
+  const allBtn = document.createElement('button');
+  allBtn.type = 'button';
+  allBtn.className = 'series-filter-btn' + (!selected ? ' active' : '');
+  allBtn.textContent = '全部';
+  allBtn.addEventListener('click', () => onSelect(null));
+  bar.appendChild(allBtn);
+  for (const s of allSeries) {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'series-filter-btn' + (selected === s ? ' active' : '');
+    btn.textContent = s;
+    btn.addEventListener('click', () => onSelect(s));
+    bar.appendChild(btn);
+  }
+  container.appendChild(bar);
+}
+
+let selectedSeries = null;
+
 async function init() {
   mountNavbar('stages.html');
   mountFooter();
@@ -123,77 +163,93 @@ async function init() {
     if (descEl) descEl.innerHTML = siteSettings.stagesDescription;
   }
 
-  // Hidden stages don't show up here at all, same as before. Among the
-  // rest, 過往關卡 (archived) stages are split into their own section
-  // further down the page (2026-09-06) instead of sitting mixed in with
-  // their chapter's other stages — see stageAdmin.js's 過往關卡 checkbox.
-  const activeStages = stages.filter((s) => !s.hidden && !s.archived);
-  const pastStages = stages.filter((s) => !s.hidden && s.archived);
+  const filterHost = document.getElementById('stage-list-filter');
+  const allSeries = [...new Set(stages.filter((s) => !s.hidden).map((s) => seriesOf(s.chapter)))];
 
-  const root = document.getElementById('stage-list-root');
-  root.innerHTML = '';
-  root.className = 'so-wrap';
-  applyButtonStyle(root, siteSettings && siteSettings.stageButtonStyle);
-
-  if (activeStages.length === 0 && pastStages.length === 0) {
-    root.innerHTML = '<div class="empty-state"><h3>目前還沒有關卡資料</h3><p>請由站主於後台新增關卡。</p></div>';
-    return;
-  }
-
-  // Per-chapter box color (2026-09-06) — keyed by the exact chapter
-  // string (e.g. "忘卻遺跡 第 22 季"), set in 網站設定 → 章節外觀. A
-  // chapter with no entry there just falls back to the plain default
-  // box (see .chapter-group's own var(...,fallback) in components.css).
-  const chapterStyles = (siteSettings && siteSettings.chapterStyles) || {};
-  for (const group of groupByChapter(activeStages)) {
-    const groupEl = renderChapterGroup(group);
-    const cs = chapterStyles[group.chapter];
-    if (cs) {
-      if (cs.bgColor) groupEl.style.setProperty('--chapter-box-bg', hexToRgba(cs.bgColor, cs.bgOpacity));
-      if (cs.borderColor) groupEl.style.setProperty('--chapter-box-border', hexToRgba(cs.borderColor, cs.borderOpacity));
+  function render() {
+    if (filterHost) {
+      filterHost.innerHTML = '';
+      renderSeriesFilter(filterHost, allSeries, selectedSeries, (s) => { selectedSeries = s; render(); });
     }
-    root.appendChild(groupEl);
-  }
 
-  if (pastStages.length) {
-    const pastStyle = (siteSettings && siteSettings.pastSectionStyle) || {};
+    // Hidden stages don't show up here at all, same as before. Among the
+    // rest, 過往關卡 (archived) stages are split into their own section
+    // further down the page (2026-09-06) instead of sitting mixed in with
+    // their chapter's other stages — see stageAdmin.js's 過往關卡
+    // checkbox. 系列篩選 (2026-09-07) narrows both groups the same way.
+    const bySeries = (s) => !selectedSeries || seriesOf(s.chapter) === selectedSeries;
+    const activeStages = stages.filter((s) => !s.hidden && !s.archived && bySeries(s));
+    const pastStages = stages.filter((s) => !s.hidden && s.archived && bySeries(s));
 
-    // Every visual property set directly as inline style here, not via
-    // a CSS class + custom property (2026-09-07) — after this element
-    // specifically refused to pick up its own class's rule in
-    // production for reasons that couldn't be pinned down even with
-    // matched DevTools evidence, inline style removes components.css
-    // as a dependency entirely: inline style always wins regardless of
-    // what is or isn't loaded/matching in any external stylesheet.
-    const divider = document.createElement('div');
-    divider.style.height = `${pastStyle.dividerWidth ?? 1}px`;
-    divider.style.backgroundColor = pastStyle.dividerColor || '#c9a45c';
-    divider.style.margin = '30px 0';
-    divider.style.maxWidth = '640px';
-    root.appendChild(divider);
+    const root = document.getElementById('stage-list-root');
+    root.innerHTML = '';
+    root.className = 'so-wrap';
+    applyButtonStyle(root, siteSettings && siteSettings.stageButtonStyle);
 
-    const heading = document.createElement('div');
-    heading.className = 'stage-past-heading';
-    heading.textContent = '過往關卡';
-    root.appendChild(heading);
-
-    const pastSection = document.createElement('div');
-    pastSection.className = 'stage-past-section';
-    if (pastStyle.boxBgColor) pastSection.style.setProperty('--past-box-bg', hexToRgba(pastStyle.boxBgColor, pastStyle.boxBgOpacity));
-    if (pastStyle.boxBorderColor) pastSection.style.setProperty('--past-box-border', hexToRgba(pastStyle.boxBorderColor, pastStyle.boxBorderOpacity));
-    if (pastStyle.chapterTitleColor) pastSection.style.setProperty('--past-chapter-title-color', pastStyle.chapterTitleColor);
-    if (pastStyle.chapterTitleFontSize) pastSection.style.setProperty('--past-chapter-title-size', `${pastStyle.chapterTitleFontSize}px`);
-    // Button appearance scoped to just this section — see the
-    // components.css comment on .stage-past-section for why setting
-    // the SAME --so-btn-*/--so-divider-* vars here (instead of on the
-    // page root like the main section above) is enough on its own.
-    applyButtonStyle(pastSection, pastStyle.buttonStyle);
-
-    for (const group of groupByChapter(pastStages)) {
-      pastSection.appendChild(renderChapterGroup(group));
+    if (activeStages.length === 0 && pastStages.length === 0) {
+      root.innerHTML = '<div class="empty-state"><h3>目前還沒有關卡資料</h3><p>請由站主於後台新增關卡。</p></div>';
+      return;
     }
-    root.appendChild(pastSection);
+
+    // Per-chapter box color (2026-09-06) — keyed by the exact chapter
+    // string (e.g. "忘卻遺跡 第 22 季"), set in 網站設定 → 章節外觀. A
+    // chapter with no entry there just falls back to the plain default
+    // box (see .chapter-group's own var(...,fallback) in components.css).
+    const chapterStyles = (siteSettings && siteSettings.chapterStyles) || {};
+    for (const group of groupByChapter(activeStages)) {
+      const groupEl = renderChapterGroup(group);
+      const cs = chapterStyles[group.chapter];
+      if (cs) {
+        if (cs.bgColor) groupEl.style.setProperty('--chapter-box-bg', hexToRgba(cs.bgColor, cs.bgOpacity));
+        if (cs.borderColor) groupEl.style.setProperty('--chapter-box-border', hexToRgba(cs.borderColor, cs.borderOpacity));
+      }
+      root.appendChild(groupEl);
+    }
+
+    if (pastStages.length) {
+      const pastStyle = (siteSettings && siteSettings.pastSectionStyle) || {};
+
+      // Every visual property set directly as inline style here, not via
+      // a CSS class + custom property (2026-09-07) — after this element
+      // specifically refused to pick up its own class's rule in
+      // production for reasons that couldn't be pinned down even with
+      // matched DevTools evidence, inline style removes components.css
+      // as a dependency entirely: inline style always wins regardless of
+      // what is or isn't loaded/matching in any external stylesheet.
+      const divider = document.createElement('div');
+      divider.style.height = `${pastStyle.dividerWidth ?? 1}px`;
+      divider.style.backgroundColor = pastStyle.dividerColor || '#c9a45c';
+      divider.style.margin = '30px 0';
+      divider.style.maxWidth = '640px';
+      root.appendChild(divider);
+
+      const heading = document.createElement('div');
+      heading.className = 'stage-past-heading';
+      heading.textContent = '過往關卡';
+      root.appendChild(heading);
+
+      const pastSection = document.createElement('div');
+      pastSection.className = 'stage-past-section';
+      if (pastStyle.boxBgColor) pastSection.style.setProperty('--past-box-bg', hexToRgba(pastStyle.boxBgColor, pastStyle.boxBgOpacity));
+      if (pastStyle.boxBorderColor) pastSection.style.setProperty('--past-box-border', hexToRgba(pastStyle.boxBorderColor, pastStyle.boxBorderOpacity));
+      if (pastStyle.chapterTitleColor) pastSection.style.setProperty('--past-chapter-title-color', pastStyle.chapterTitleColor);
+      if (pastStyle.chapterTitleFontSize) pastSection.style.setProperty('--past-chapter-title-size', `${pastStyle.chapterTitleFontSize}px`);
+      // Button appearance scoped to just this section — see the
+      // components.css comment on .stage-past-section for why setting
+      // the SAME --so-btn-*/--so-divider-* vars here (instead of on the
+      // page root like the main section above) is enough on its own.
+      applyButtonStyle(pastSection, pastStyle.buttonStyle);
+
+      for (const group of groupByChapter(pastStages)) {
+        const seriesColors = pastStyle.seriesTitleColors || {};
+        const titleColorOverride = seriesColors[seriesOf(group.chapter)];
+        pastSection.appendChild(renderChapterGroup(group, titleColorOverride));
+      }
+      root.appendChild(pastSection);
+    }
   }
+
+  render();
 }
 
 init();
