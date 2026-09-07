@@ -95,8 +95,8 @@
       "color": "#100f18",
       "opacity": 22,
       "gradientEnabled": true,
-      "gradientColor1": "#fff1cc",
-      "gradientColor2": "#977544",
+      "gradientColor1": "#201e30",
+      "gradientColor2": "#100f18",
       "gradientAngle": 135,
       "gradientStop": 74
     },
