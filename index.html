@@ -14,14 +14,14 @@
 <body>
 <div id="navbar-host"></div>
 
-<header class="container page-header">
+<header class="container page-header" id="home-header">
   <div class="page-eyebrow">Player Guide</div>
   <h1 id="site-title">新世界狂歡 | 關卡攻略筆記</h1>
   <p id="site-tagline">轉貼關卡攻略、角色簡易資料庫、關卡隊伍紀錄，方便照抄過往隊伍用✌️</p>
 </header>
 
-<main class="container">
-  <div class="section" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px;">
+<main class="container" id="home-main">
+  <div class="section" id="home-cards" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px;">
     <a class="btn btn-primary btn-block" style="padding:20px; flex-direction:column; align-items:flex-start; gap:4px;" href="stages.html">
       <strong style="font-size:1.05rem;">關卡攻略</strong>
       <span style="font-weight:400; font-size:0.85rem; opacity:0.85;">敵人資訊、推薦能力、推薦隊伍</span>
@@ -42,8 +42,27 @@
 <script type="module">
 import { mountNavbar, mountFooter } from './src/components/Navbar.js';
 import { loadJSON, DataSources } from './src/core/dataLoader.js';
+import { mountCoverImage } from './src/components/CardFace.js';
 mountNavbar('index.html');
 mountFooter();
+
+function hexToRgba(hex, opacityPercent) {
+  const h = (hex || '#100f18').replace('#', '');
+  const r = parseInt(h.substring(0, 2), 16) || 0;
+  const g = parseInt(h.substring(2, 4), 16) || 0;
+  const b = parseInt(h.substring(4, 6), 16) || 0;
+  const a = Math.max(0, Math.min(100, opacityPercent ?? 100)) / 100;
+  return `rgba(${r}, ${g}, ${b}, ${a})`;
+}
+function applyZoneBg(el, zone) {
+  if (!zone) return;
+  el.style.background = zone.gradientEnabled
+    ? `linear-gradient(${zone.gradientAngle}deg, ${zone.gradientColor1} 0%, ${zone.gradientColor2} ${zone.gradientStop}%)`
+    : hexToRgba(zone.color, zone.opacity);
+}
+const CARD_LABELS = ['關卡攻略', '卡片資料庫', '我的隊伍'];
+const CARD_LINKS = ['stages.html', 'cards.html', 'my-teams.html'];
+const CARD_SUBTITLES = ['敵人資訊、推薦能力、推薦隊伍', '多條件圖片式篩選', '跨關卡總覽，快速修改'];
 
 // data/site-settings.json is edited from the admin's 網站設定 page; fall
 // back to the text already in the HTML (above) if the file is missing so
@@ -56,6 +75,58 @@ loadJSON(DataSources.siteSettings).then((settings) => {
   if (settings.siteTagline) {
     document.getElementById('site-tagline').textContent = settings.siteTagline;
   }
+
+  const hp = settings.homepageStyle;
+  if (!hp) return;
+
+  applyZoneBg(document.getElementById('home-header'), hp.header);
+  applyZoneBg(document.getElementById('home-main'), hp.main);
+
+  const cardsHost = document.getElementById('home-cards');
+  const cards = hp.cards || [];
+  // Only replace the default text buttons if at least one card actually
+  // has an image set — otherwise keep the plain text version above
+  // rather than showing 3 empty image frames.
+  if (!cards.some((c) => c && c.image)) return;
+
+  cardsHost.innerHTML = '';
+  cardsHost.style.gridTemplateColumns = 'repeat(auto-fit, minmax(200px, 1fr))';
+  cards.forEach((c, i) => {
+    if (!c) return;
+    const eff = c.linkMode === 'follow' && cards[c.followIndex] ? cards[c.followIndex] : c;
+    const a = document.createElement('a');
+    a.className = 'home-card';
+    a.href = CARD_LINKS[i];
+    const [w, h] = (c.cropRatio || '2:3').split(':').map(Number);
+    a.style.aspectRatio = `${w || 2} / ${h || 3}`;
+    a.style.background = eff.bgGradientEnabled
+      ? `linear-gradient(${eff.bgGradientAngle}deg, ${eff.bgGradientColor1} 0%, ${eff.bgGradientColor2} ${eff.bgGradientStop}%)`
+      : hexToRgba(eff.bgColor, eff.bgOpacity);
+    a.style.borderWidth = `${eff.borderWidth}px`;
+    a.style.borderStyle = 'solid';
+    if (eff.borderGradientEnabled) {
+      a.style.borderImage = `linear-gradient(${eff.borderGradientAngle}deg, ${eff.borderGradientColor1} 0%, ${eff.borderGradientColor2} ${eff.borderGradientStop}%) 1`;
+    } else {
+      a.style.borderColor = hexToRgba(eff.borderColor, eff.borderOpacity);
+    }
+    if (c.image) {
+      const clip = document.createElement('div');
+      clip.className = 'home-card-clip';
+      a.appendChild(clip);
+      mountCoverImage(clip, {
+        imageSrc: c.image,
+        imageAlt: CARD_LABELS[i],
+        imageZoom: c.imageZoom,
+        imageOffsetX: c.imageOffsetX,
+        imageOffsetY: c.imageOffsetY,
+      });
+    }
+    const overlay = document.createElement('div');
+    overlay.className = 'home-card-overlay';
+    overlay.innerHTML = `<strong>${CARD_LABELS[i]}</strong><span>${CARD_SUBTITLES[i]}</span>`;
+    a.appendChild(overlay);
+    cardsHost.appendChild(a);
+  });
 }).catch(() => {});
 </script>
 </body>

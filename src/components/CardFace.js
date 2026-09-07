@@ -22,7 +22,7 @@ import { resolveAsset } from '../core/dataLoader.js';
  * @param {number} imageOffsetY
  * @returns {HTMLImageElement}
  */
-function mountCoverImage(clip, { imageSrc, imageSrcset, imageSizes, imageAlt = '', imageZoom = 1, imageOffsetX = 0.5, imageOffsetY = 0.5 }) {
+export function mountCoverImage(clip, { imageSrc, imageSrcset, imageSizes, imageAlt = '', imageZoom = 1, imageOffsetX = 0.5, imageOffsetY = 0.5 }) {
   const img = document.createElement('img');
   img.className = 'card-face-img';
   img.alt = imageAlt;

@@ -1208,3 +1208,27 @@ hr.ql-divider {
    Footer
    ========================================================= */
 .site-footer { border-top: 1px solid var(--border-soft); margin-top: 60px; padding: 26px 0; color: var(--text-faint); font-size: 0.82rem; }
+
+/* =========================================================
+   首頁圖片框 (2026-09-07, 後台「首頁外觀」)
+   ========================================================= */
+.home-card {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+}
+/* 跟 card-face.css 的 .card-face-clip/.card-face-img 同一套定位邏輯
+   (2026-09-07) — mountCoverImage() 用 JS 算縮放/位移，需要這個
+   position:absolute + inset:0 的容器當基準，才能吃到後台裁切器存的
+   imageZoom/imageOffsetX/imageOffsetY。 */
+.home-card-clip { position: absolute; inset: 0; overflow: hidden; }
+.home-card-clip .card-face-img { position: absolute; object-fit: cover; -webkit-user-drag: none; }
+.home-card-overlay {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  padding: 16px; display: flex; flex-direction: column; gap: 2px;
+  background: linear-gradient(to top, rgba(0,0,0,0.75), transparent);
+}
+.home-card-overlay strong { color: #fff; font-size: 1.05rem; }
+.home-card-overlay span { color: rgba(255,255,255,0.85); font-size: 0.85rem; }
