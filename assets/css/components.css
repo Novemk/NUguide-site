@@ -479,6 +479,15 @@ hr.ql-divider {
   line-height: 1.6;
   color: var(--text);
   overflow-wrap: break-word;
+  /* Some 必殺技敘述 entries are legacy plain text with literal \n line
+     breaks (not Quill's usual per-line <p>) — a browser's default
+     white-space handling collapses a bare \n to a single space, which
+     is why 後台 (Quill, which does preserve raw \n visually) and 前台
+     used to disagree on the same text (2026-09-07). pre-line preserves
+     \n as a real line break while still letting normal spaces/wrapping
+     behave as usual — it doesn't do anything to content that's already
+     properly <p>-wrapped, so this is safe for every other card too. */
+  white-space: pre-line;
   /* Belt-and-suspenders: normal block-level <p>/<br> tags already break
      correctly without this, but if a paste ever lands as a literal "\n"
      character inside a text node (rather than as its own tag), the
