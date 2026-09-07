@@ -158,7 +158,7 @@ async function init() {
   if (pastStages.length) {
     const pastStyle = (siteSettings && siteSettings.pastSectionStyle) || {};
 
-    const divider = document.createElement('hr');
+    const divider = document.createElement('div');
     divider.className = 'stage-past-divider';
     if (pastStyle.dividerColor) divider.style.setProperty('--past-divider-color', pastStyle.dividerColor);
     if (pastStyle.dividerWidth != null) divider.style.setProperty('--past-divider-width', `${pastStyle.dividerWidth}px`);

@@ -135,10 +135,13 @@
    that sets them, so every .so-btn/.so-row inside naturally picks up
    the past-section's own values without needing separate selectors or
    duplicated CSS rules. */
+/* A plain div, not <hr> (2026-09-06) — <hr> carries inconsistent
+   browser-default styling (inset border/groove effects vary by
+   browser) that can silently fight with author CSS trying to recolor
+   it; a div has none of that baggage. */
 .stage-past-divider {
   height: var(--past-divider-width, 1px);
   background: var(--past-divider-color, var(--accent-gold));
-  border: none;
   margin: 30px 0;
   max-width: 640px;
 }
