@@ -71,7 +71,7 @@ export function showCardInfoModal(card, maps) {
   ultimateWrap.style.marginBottom = '16px';
   const ultimateLabel = document.createElement('div');
   ultimateLabel.className = 'ultimate-skill-label';
-  ultimateLabel.textContent = '必殺技';
+  ultimateLabel.textContent = '必殺技 Lv3';
   const ultimateDesc = document.createElement('div');
   ultimateDesc.className = 'ultimate-skill-desc';
   ultimateDesc.innerHTML = card.ultimateSkill && card.ultimateSkill.trim() ? card.ultimateSkill : '空白。';
