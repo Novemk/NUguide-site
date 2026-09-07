@@ -94,11 +94,11 @@
     "main": {
       "color": "#100f18",
       "opacity": 100,
-      "gradientEnabled": false,
-      "gradientColor1": "#211f30",
-      "gradientColor2": "#100f18",
+      "gradientEnabled": true,
+      "gradientColor1": "#fff1cc",
+      "gradientColor2": "#977544",
       "gradientAngle": 135,
-      "gradientStop": 60
+      "gradientStop": 74
     },
     "cards": [
       {
