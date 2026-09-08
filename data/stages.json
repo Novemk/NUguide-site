@@ -431,5 +431,47 @@
     "roundTable": [],
     "rowBreak": false,
     "sortOrder": 7.2
+  },
+  {
+    "id": "stage_7_3",
+    "chapter": "忘卻遺跡 第 22 季",
+    "order": "7 - 3",
+    "title": "帆潮小鎮之探（複製）（複製）（複製）",
+    "enemies": [
+      {
+        "name": "八雲",
+        "note": "《支援請求》時需補血",
+        "elementId": "water",
+        "image": "assets/img/enemies/stage_7_3_0_八雲.webp",
+        "imageZoom": 1.23,
+        "imageOffsetX": 0.5813997533476307,
+        "imageOffsetY": 0.5788329304128453
+      },
+      {
+        "name": "蘇爾",
+        "note": "特定回合將對“最大血量最高者”進行重擊",
+        "elementId": "water",
+        "image": "assets/img/enemies/stage_7_3_1_蘇爾.webp",
+        "imageZoom": 1.25,
+        "imageOffsetX": 0.5950520833333334,
+        "imageOffsetY": 0.5522763405317141
+      },
+      {
+        "name": "布儡",
+        "note": "《支援請求》時需補血",
+        "elementId": "wood",
+        "image": "assets/img/enemies/stage_7_3_2_布儡.webp",
+        "imageZoom": 1.22,
+        "imageOffsetX": 0.5223174603370098,
+        "imageOffsetY": 0.5108142507070389
+      }
+    ],
+    "guide": "<p>推薦攜帶 <span style=\"color: rgb(226, 96, 79);\">爆發型 </span>的隊伍。</p>",
+    "recommendedTags": [],
+    "hidden": false,
+    "archived": false,
+    "roundTable": [],
+    "rowBreak": false,
+    "sortOrder": 7.3
   }
 ]
