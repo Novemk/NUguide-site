@@ -210,10 +210,10 @@
     },
     "cards": [
       {
-        "image": "assets/img/homepage/card1.jpg",
+        "image": "assets/img/homepage/card1.webp",
         "cropRatio": "2:3",
         "imageZoom": 2.25,
-        "imageOffsetX": 0.4354411405675551,
+        "imageOffsetX": 0.4400735294117647,
         "imageOffsetY": 0,
         "linkMode": "follow",
         "followIndex": 2,
@@ -255,11 +255,11 @@
         ]
       },
       {
-        "image": "assets/img/homepage/card2.jpg",
+        "image": "assets/img/homepage/card2.webp",
         "cropRatio": "2:3",
         "imageZoom": 2.01,
-        "imageOffsetX": 0.4522951034243316,
-        "imageOffsetY": 0.12617578286148912,
+        "imageOffsetX": 0.44766948581079585,
+        "imageOffsetY": 0.12548475611721316,
         "linkMode": "follow",
         "followIndex": 2,
         "bgColor": "#211f30",
@@ -300,10 +300,10 @@
         ]
       },
       {
-        "image": "assets/img/homepage/card3.jpg",
+        "image": "assets/img/homepage/card3.webp",
         "cropRatio": "2:3",
         "imageZoom": 2.17,
-        "imageOffsetX": 0.656707763671875,
+        "imageOffsetX": 0.6698681838494585,
         "imageOffsetY": 0,
         "linkMode": "independent",
         "followIndex": 0,
