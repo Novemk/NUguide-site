@@ -117,8 +117,8 @@
         "imageZoom": 2.25,
         "imageOffsetX": 0.4474005665114898,
         "imageOffsetY": 0,
-        "linkMode": "independent",
-        "followIndex": 0,
+        "linkMode": "follow",
+        "followIndex": 2,
         "bgColor": "#211f30",
         "bgOpacity": 100,
         "bgGradientEnabled": false,
@@ -162,8 +162,8 @@
         "imageZoom": 2.01,
         "imageOffsetX": 0.44570920091346045,
         "imageOffsetY": 0.12411745300571536,
-        "linkMode": "independent",
-        "followIndex": 0,
+        "linkMode": "follow",
+        "followIndex": 2,
         "bgColor": "#211f30",
         "bgOpacity": 100,
         "bgGradientEnabled": false,
@@ -223,17 +223,17 @@
         "bgGradientAngle": 135,
         "borderColor": "#c9a45c",
         "borderOpacity": 100,
-        "borderWidth": 2,
-        "borderGradientEnabled": false,
+        "borderWidth": 1,
+        "borderGradientEnabled": true,
         "borderGradientColors": [
-          "#e8d9a0",
-          "#8a7140"
+          "#fff0a3",
+          "#856123"
         ],
         "borderGradientPositions": [
           0,
           100
         ],
-        "borderGradientAngle": 135,
+        "borderGradientAngle": 173,
         "overlayColor": "#000000",
         "overlayStops": [
           {
