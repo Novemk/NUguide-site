@@ -564,7 +564,7 @@
     "enemies": [
       {
         "name": "崑西",
-        "note": "不會受到任何傷害",
+        "note": "不會受任何傷害",
         "elementId": "water",
         "image": "assets/img/enemies/stage__01_0_崑西.webp",
         "imageZoom": 1.25,
@@ -573,7 +573,7 @@
       },
       {
         "name": "啖天",
-        "note": "不會受到任何傷害",
+        "note": "不會受任何傷害",
         "elementId": "fire",
         "image": "assets/img/enemies/stage__01_1_啖天.webp",
         "imageZoom": 1.15,
