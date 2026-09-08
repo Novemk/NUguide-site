@@ -54,10 +54,18 @@ function hexToRgba(hex, opacityPercent) {
   const a = Math.max(0, Math.min(100, opacityPercent ?? 100)) / 100;
   return `rgba(${r}, ${g}, ${b}, ${a})`;
 }
+// 每個顏色點各自的位置 (2026-09-08) — 沒有 positions 陣列，或長度跟
+// colors 對不上時（舊資料），退回平均分配。
+function gradientStops(colors, positions) {
+  if (!positions || positions.length !== colors.length) {
+    return colors.map((c, i) => `${c} ${colors.length === 1 ? 0 : Math.round((i / (colors.length - 1)) * 100)}%`).join(', ');
+  }
+  return colors.map((c, i) => `${c} ${positions[i]}%`).join(', ');
+}
 function applyZoneBg(el, zone) {
   if (!zone) return;
   el.style.background = zone.gradientEnabled
-    ? `linear-gradient(${zone.gradientAngle}deg, ${zone.gradientColors.join(', ')})`
+    ? `linear-gradient(${zone.gradientAngle}deg, ${gradientStops(zone.gradientColors, zone.gradientPositions)})`
     : hexToRgba(zone.color, zone.opacity);
 }
 const CARD_LABELS = ['關卡攻略', '卡片資料庫', '我的隊伍'];
@@ -100,12 +108,12 @@ loadJSON(DataSources.siteSettings).then((settings) => {
     const [w, h] = (c.cropRatio || '2:3').split(':').map(Number);
     a.style.aspectRatio = `${w || 2} / ${h || 3}`;
     a.style.background = eff.bgGradientEnabled
-      ? `linear-gradient(${eff.bgGradientAngle}deg, ${eff.bgGradientColors.join(', ')})`
+      ? `linear-gradient(${eff.bgGradientAngle}deg, ${gradientStops(eff.bgGradientColors, eff.bgGradientPositions)})`
       : hexToRgba(eff.bgColor, eff.bgOpacity);
     a.style.borderWidth = `${eff.borderWidth}px`;
     a.style.borderStyle = 'solid';
     if (eff.borderGradientEnabled) {
-      a.style.borderImage = `linear-gradient(${eff.borderGradientAngle}deg, ${eff.borderGradientColors.join(', ')}) 1`;
+      a.style.borderImage = `linear-gradient(${eff.borderGradientAngle}deg, ${gradientStops(eff.borderGradientColors, eff.borderGradientPositions)}) 1`;
     } else {
       a.style.borderColor = hexToRgba(eff.borderColor, eff.borderOpacity);
     }

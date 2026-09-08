@@ -29,15 +29,23 @@ function seriesOf(chapter) {
 // stagesList.js's own applyChapterStyle (2026-09-07, gradient bg/border
 // support for a metallic look, set directly as inline style rather
 // than through a CSS custom property).
+// 每個顏色點各自的位置 (2026-09-08) — 沒有 positions 陣列，或長度跟
+// colors 對不上時（舊資料），退回平均分配。
+function gradientStops(colors, positions) {
+  if (!positions || positions.length !== colors.length) {
+    return colors.map((c, i) => `${c} ${colors.length === 1 ? 0 : Math.round((i / (colors.length - 1)) * 100)}%`).join(', ');
+  }
+  return colors.map((c, i) => `${c} ${positions[i]}%`).join(', ');
+}
 function applyChapterStyle(el, cs) {
   if (!cs) return;
   el.style.background = cs.bgGradientEnabled
-    ? `linear-gradient(${cs.bgGradientAngle ?? 135}deg, ${(cs.bgGradientColors || ['#4a4a3a', '#1a1a14']).join(', ')})`
+    ? `linear-gradient(${cs.bgGradientAngle ?? 135}deg, ${gradientStops(cs.bgGradientColors || ['#4a4a3a', '#1a1a14'], cs.bgGradientPositions)})`
     : (cs.bgColor ? hexToRgba(cs.bgColor, cs.bgOpacity) : '');
   if (cs.borderWidth != null) el.style.borderWidth = `${cs.borderWidth}px`;
   if (cs.borderGradientEnabled) {
     el.style.borderStyle = 'solid';
-    el.style.borderImage = `linear-gradient(${cs.borderGradientAngle ?? 135}deg, ${(cs.borderGradientColors || ['#e8d9a0', '#8a7140']).join(', ')}) 1`;
+    el.style.borderImage = `linear-gradient(${cs.borderGradientAngle ?? 135}deg, ${gradientStops(cs.borderGradientColors || ['#e8d9a0', '#8a7140'], cs.borderGradientPositions)}) 1`;
   } else if (cs.borderColor) {
     el.style.borderStyle = 'solid';
     el.style.borderColor = hexToRgba(cs.borderColor, cs.borderOpacity);
