@@ -356,5 +356,6 @@
     "忘卻遺跡",
     "魔法檢定所"
   ],
-  "myTeamsTabPaddingY": 3
+  "myTeamsTabPaddingY": 3,
+  "teamNotesTabPaddingY": 3
 }
