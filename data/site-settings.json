@@ -38,8 +38,8 @@
       "bgGradientEnabled": true,
       "bgGradientAngle": 17,
       "bgGradientColors": [
-        "#3c4944",
-        "#1a3c32"
+        "#627a70",
+        "#237059"
       ],
       "bgGradientPositions": [
         0,
@@ -347,5 +347,9 @@
         ]
       }
     ]
-  }
+  },
+  "seriesOrder": [
+    "忘卻遺跡",
+    "魔法檢定所"
+  ]
 }
