@@ -152,8 +152,8 @@
       "bgGradientEnabled": true,
       "bgGradientAngle": 21,
       "bgGradientColors": [
-        "#99806c",
-        "#a13652"
+        "#785f4a",
+        "#992e4a"
       ],
       "bgGradientPositions": [
         0,
@@ -182,8 +182,8 @@
         "gradientEnabled": true,
         "gradientAngle": 190,
         "gradientColors": [
-          "#be3c56",
-          "#bda665"
+          "#cc3856",
+          "#ac9562"
         ],
         "bgColor": "#211f30",
         "borderColor": "#3a3650",
