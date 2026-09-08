@@ -85,16 +85,16 @@
     "header": {
       "color": "#100f18",
       "opacity": 100,
-      "gradientEnabled": false,
+      "gradientEnabled": true,
       "gradientColors": [
-        "#211f30",
-        "#100f18"
+        "#5c2371",
+        "#1f0a24"
       ],
       "gradientPositions": [
         0,
         100
       ],
-      "gradientAngle": 135
+      "gradientAngle": 198
     },
     "main": {
       "color": "#100f18",
