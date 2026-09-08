@@ -78,5 +78,21 @@
         ]
       }
     ]
+  },
+  {
+    "stageId": "stage_55_3",
+    "teams": [
+      {
+        "name": "學奧+魔伊+偵布+SR",
+        "note": "https://youtu.be/Qakr93OuGWg",
+        "members": [
+          "card_036",
+          "card_053",
+          "card_062",
+          "card_126",
+          "card_127"
+        ]
+      }
+    ]
   }
 ]
