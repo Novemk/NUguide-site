@@ -145,28 +145,30 @@
     },
     "極速追風 高難": {
       "bgColor": "#211f30",
-      "bgOpacity": 0,
+      "bgOpacity": 75,
       "borderColor": "#3a3650",
       "borderOpacity": 100,
       "borderWidth": 1,
-      "bgGradientEnabled": false,
-      "bgGradientAngle": 135,
+      "bgGradientEnabled": true,
+      "bgGradientAngle": 21,
       "bgGradientColors": [
-        "#4a4a3a",
-        "#1a1a14"
+        "#99806c",
+        "#8d344b"
       ],
       "bgGradientPositions": [
         0,
-        100
+        50
       ],
-      "borderGradientEnabled": false,
-      "borderGradientAngle": 135,
+      "borderGradientEnabled": true,
+      "borderGradientAngle": 180,
       "borderGradientColors": [
+        "#807046",
         "#e8d9a0",
-        "#8a7140"
+        "#807046"
       ],
       "borderGradientPositions": [
         0,
+        50,
         100
       ],
       "numberColor": "#887242",
@@ -174,14 +176,14 @@
       "buttonStyle": {
         "fontFamily": "display",
         "fontSize": 15,
-        "paddingY": 12,
+        "paddingY": 3,
         "paddingX": 6,
-        "borderRadius": 8,
+        "borderRadius": 3,
         "gradientEnabled": true,
-        "gradientAngle": 180,
+        "gradientAngle": 214,
         "gradientColors": [
-          "#211f30",
-          "#2a2740"
+          "#be3c56",
+          "#bda665"
         ],
         "bgColor": "#211f30",
         "borderColor": "#3a3650",
