@@ -206,6 +206,12 @@ async function init() {
 
         const wrapEl = document.createElement('div');
         wrapEl.className = 'mt-tab-wrap';
+        // 「隊伍筆記」自己獨立的可調整設定 (2026-09-08) — 跟「我的隊伍
+        // 總覽」是完全分開的欄位，不共用數值，各自在後台獨立調整。
+        if (siteSettings && siteSettings.teamNotesTabPaddingY != null) {
+          wrapEl.style.paddingTop = `${siteSettings.teamNotesTabPaddingY}px`;
+          wrapEl.style.paddingBottom = `${siteSettings.teamNotesTabPaddingY}px`;
+        }
 
         // No 查看攻略 link on this page at all (unlike myTeamsOverview.js)
         // — this whole page is explicitly for stages that don't have
