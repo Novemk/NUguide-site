@@ -87,8 +87,8 @@
       "opacity": 100,
       "gradientEnabled": true,
       "gradientColors": [
-        "#5c2371",
-        "#1f0a24"
+        "#633573",
+        "#131018"
       ],
       "gradientPositions": [
         0,
@@ -233,7 +233,7 @@
           0,
           100
         ],
-        "borderGradientAngle": 173,
+        "borderGradientAngle": 172,
         "overlayColor": "#000000",
         "overlayStops": [
           {
