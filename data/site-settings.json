@@ -100,10 +100,9 @@
       "opacity": 22,
       "gradientEnabled": true,
       "gradientColors": [
-        "#ffde66",
-        "#f6ffc7",
-        "#ffdd33",
-        "#794701"
+        "#100f18",
+        "#201e30",
+        "#201e30"
       ],
       "gradientAngle": 187,
       "gradientColor1": "#201e30",
