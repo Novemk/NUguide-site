@@ -40,15 +40,17 @@ function gradientStops(colors, positions) {
 function applyChapterStyle(el, cs) {
   if (!cs) return;
   el.style.background = cs.bgGradientEnabled
-    ? `linear-gradient(${cs.bgGradientAngle ?? 135}deg, ${gradientStops(cs.bgGradientColors || ['#4a4a3a', '#1a1a14'], cs.bgGradientPositions)})`
+    ? `linear-gradient(${cs.bgGradientAngle ?? 135}deg, ${gradientStops((cs.bgGradientColors || ['#4a4a3a', '#1a1a14']).map((c) => hexToRgba(c, cs.bgOpacity)), cs.bgGradientPositions)})`
     : (cs.bgColor ? hexToRgba(cs.bgColor, cs.bgOpacity) : '');
   if (cs.borderWidth != null) el.style.borderWidth = `${cs.borderWidth}px`;
   if (cs.borderGradientEnabled) {
     el.style.borderStyle = 'solid';
     el.style.borderImage = `linear-gradient(${cs.borderGradientAngle ?? 135}deg, ${gradientStops(cs.borderGradientColors || ['#e8d9a0', '#8a7140'], cs.borderGradientPositions)}) 1`;
+    el.style.borderRadius = '0';
   } else if (cs.borderColor) {
     el.style.borderStyle = 'solid';
     el.style.borderColor = hexToRgba(cs.borderColor, cs.borderOpacity);
+    el.style.borderRadius = '';
   }
 }
 // 系列篩選 chips (2026-09-07) — same small widget as stagesList.js's own.

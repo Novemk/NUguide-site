@@ -42,16 +42,23 @@ function gradientStops(colors, positions) {
 }
 function applyChapterStyle(el, cs) {
   if (!cs) return;
+  // 背景漸層套用透明度 (2026-09-08 bug 修正) — 之前漸層模式下這個
+  // 欄位完全沒作用，改成每個顏色都套用同一個透明度數值。
   el.style.background = cs.bgGradientEnabled
-    ? `linear-gradient(${cs.bgGradientAngle ?? 135}deg, ${gradientStops(cs.bgGradientColors || ['#4a4a3a', '#1a1a14'], cs.bgGradientPositions)})`
+    ? `linear-gradient(${cs.bgGradientAngle ?? 135}deg, ${gradientStops((cs.bgGradientColors || ['#4a4a3a', '#1a1a14']).map((c) => hexToRgba(c, cs.bgOpacity)), cs.bgGradientPositions)})`
     : (cs.bgColor ? hexToRgba(cs.bgColor, cs.bgOpacity) : '');
   if (cs.borderWidth != null) el.style.borderWidth = `${cs.borderWidth}px`;
   if (cs.borderGradientEnabled) {
     el.style.borderStyle = 'solid';
     el.style.borderImage = `linear-gradient(${cs.borderGradientAngle ?? 135}deg, ${gradientStops(cs.borderGradientColors || ['#e8d9a0', '#8a7140'], cs.borderGradientPositions)}) 1`;
+    // 外框漸層時底色裁切一起變直角 (2026-09-08) — border-image 這個
+    // CSS 屬性本身不支援圓角，只有邊框變直角、底色裁切還是圓角的話
+    // 兩者對不起來會很奇怪，乾脆一起變直角。
+    el.style.borderRadius = '0';
   } else if (cs.borderColor) {
     el.style.borderStyle = 'solid';
     el.style.borderColor = hexToRgba(cs.borderColor, cs.borderOpacity);
+    el.style.borderRadius = '';
   }
 }
 
