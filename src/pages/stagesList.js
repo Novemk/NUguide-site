@@ -128,6 +128,22 @@ function groupByChapter(stageList) {
   return chapters;
 }
 
+// 系列顯示順序可自訂 (2026-09-08, 後台「章節外觀」→「系列順序」) —
+// 章節群組本來的排列順序，是照 stages.json 資料裡出現的先後，換季、
+// 新增系列的時候常常會跟你想要的顯示順序對不上。這裡把「哪個系列排
+// 在前面」抽出來另外排序，系列內部（同系列不同季）的相對順序不受
+// 影響，還是照原本的樣子，只有整個系列區塊會被搬動。沒被設定過的
+// 系列排在所有已排序系列的後面，維持原本出現的順序。
+function sortBySeriesOrder(items, seriesOrder, chapterOf) {
+  if (!seriesOrder || !seriesOrder.length) return items;
+  const rank = new Map(seriesOrder.map((s, i) => [s, i]));
+  return [...items].sort((a, b) => {
+    const ra = rank.has(seriesOf(chapterOf(a))) ? rank.get(seriesOf(chapterOf(a))) : Infinity;
+    const rb = rank.has(seriesOf(chapterOf(b))) ? rank.get(seriesOf(chapterOf(b))) : Infinity;
+    return ra - rb;
+  });
+}
+
 // Renders one chapter's title + button grid (the row-break splitting,
 // per stageAdmin.js's 另起一排 checkbox, is entirely admin-controlled,
 // no auto-wrap logic here) — used for both a normal chapter box and a
@@ -248,7 +264,8 @@ async function init() {
     // just falls back to .chapter-group's own plain default (box) /
     // applyButtonStyle's own {} default (buttons).
     const chapterStyles = (siteSettings && siteSettings.chapterStyles) || {};
-    for (const group of groupByChapter(activeStages)) {
+    const seriesOrder = (siteSettings && siteSettings.seriesOrder) || [];
+    for (const group of sortBySeriesOrder(groupByChapter(activeStages), seriesOrder, (g) => g.chapter)) {
       const groupEl = renderChapterGroup(group);
       const cs = chapterStyles[group.chapter];
       if (cs) applyChapterStyle(groupEl, cs);
@@ -290,7 +307,7 @@ async function init() {
       // page root like the main section above) is enough on its own.
       applyButtonStyle(pastSection, pastStyle.buttonStyle);
 
-      for (const group of groupByChapter(pastStages)) {
+      for (const group of sortBySeriesOrder(groupByChapter(pastStages), seriesOrder, (g) => g.chapter)) {
         const seriesColors = pastStyle.seriesTitleColors || {};
         const titleColorOverride = seriesColors[seriesOf(group.chapter)];
         pastSection.appendChild(renderChapterGroup(group, titleColorOverride));

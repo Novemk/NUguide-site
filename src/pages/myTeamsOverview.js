@@ -25,6 +25,16 @@ function seriesOf(chapter) {
   const idx = (chapter || '').indexOf(' ');
   return idx === -1 ? (chapter || '') : chapter.slice(0, idx);
 }
+// 系列顯示順序可自訂 (2026-09-08) — 同一套邏輯，跟 stagesList.js 一樣。
+function sortBySeriesOrder(items, seriesOrder, chapterOf) {
+  if (!seriesOrder || !seriesOrder.length) return items;
+  const rank = new Map(seriesOrder.map((s, i) => [s, i]));
+  return [...items].sort((a, b) => {
+    const ra = rank.has(seriesOf(chapterOf(a))) ? rank.get(seriesOf(chapterOf(a))) : Infinity;
+    const rb = rank.has(seriesOf(chapterOf(b))) ? rank.get(seriesOf(chapterOf(b))) : Infinity;
+    return ra - rb;
+  });
+}
 // Applies one chapter's 章節外觀 — same shared shape/logic as
 // stagesList.js's own applyChapterStyle (2026-09-07, gradient bg/border
 // support for a metallic look, set directly as inline style rather
@@ -155,7 +165,10 @@ async function init() {
     for (const stageId of teamByStageId.keys()) {
       chaptersWithTeams.add(stageMap.get(stageId).chapter);
     }
-    // Preserve stages.json's own chapter ordering, not alphabetical.
+    // Preserve stages.json's own chapter ordering, not alphabetical —
+    // then re-sort by 系列順序 (2026-09-08, 後台「章節外觀」→「系列
+    // 順序」) if the admin has set one, without disturbing the relative
+    // order of chapters within the same series.
     const chapterOrder = [];
     const seenChapters = new Set();
     for (const s of stages) {
@@ -164,13 +177,15 @@ async function init() {
         chapterOrder.push(s.chapter);
       }
     }
+    const seriesOrder = (siteSettings && siteSettings.seriesOrder) || [];
+    const sortedChapterOrder = sortBySeriesOrder(chapterOrder, seriesOrder, (c) => c);
 
     // Group every chapter's stages into rows (same rowBreak rule as
     // 關卡攻略's own button grid) — one bordered box per row, not per
     // chapter, since 7-1 and 8-1/8-2/8-3 are visually separate boxes
     // even though both sit under the same "忘卻遺跡" title.
     const rowsByChapter = new Map();
-    for (const chapter of chapterOrder) {
+    for (const chapter of sortedChapterOrder) {
       const chapterStages = stages
         .filter((s) => s.chapter === chapter && !s.hidden && !s.archived)
         .sort((a, b) => (a.sortOrder ?? 0) - (b.sortOrder ?? 0));
@@ -194,7 +209,7 @@ async function init() {
     // 2026-09-05 reference screenshots were resized to.
     const TAB_COL_WIDTH = '104px';
 
-    for (const chapter of chapterOrder) {
+    for (const chapter of sortedChapterOrder) {
       const rows = rowsByChapter.get(chapter);
 
       const chapterEl = document.createElement('div');
