@@ -32,12 +32,12 @@ function seriesOf(chapter) {
 function applyChapterStyle(el, cs) {
   if (!cs) return;
   el.style.background = cs.bgGradientEnabled
-    ? `linear-gradient(${cs.bgGradientAngle ?? 135}deg, ${cs.bgGradientColor1 || '#4a4a3a'} 0%, ${cs.bgGradientColor2 || '#1a1a14'} ${cs.bgGradientStop ?? 60}%)`
+    ? `linear-gradient(${cs.bgGradientAngle ?? 135}deg, ${(cs.bgGradientColors || ['#4a4a3a', '#1a1a14']).join(', ')})`
     : (cs.bgColor ? hexToRgba(cs.bgColor, cs.bgOpacity) : '');
   if (cs.borderWidth != null) el.style.borderWidth = `${cs.borderWidth}px`;
   if (cs.borderGradientEnabled) {
     el.style.borderStyle = 'solid';
-    el.style.borderImage = `linear-gradient(${cs.borderGradientAngle ?? 135}deg, ${cs.borderGradientColor1 || '#e8d9a0'} 0%, ${cs.borderGradientColor2 || '#8a7140'} ${cs.borderGradientStop ?? 60}%) 1`;
+    el.style.borderImage = `linear-gradient(${cs.borderGradientAngle ?? 135}deg, ${(cs.borderGradientColors || ['#e8d9a0', '#8a7140']).join(', ')}) 1`;
   } else if (cs.borderColor) {
     el.style.borderStyle = 'solid';
     el.style.borderColor = hexToRgba(cs.borderColor, cs.borderOpacity);

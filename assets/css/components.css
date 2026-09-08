@@ -1216,7 +1216,10 @@ hr.ql-divider {
   position: relative;
   display: block;
   overflow: hidden;
-  border-radius: var(--radius-md);
+  /* 首頁圖片框固定直角 (2026-09-07) — 外框漸層本身就沒辦法保持圓角
+     (CSS border-image 的限制)，如果只有邊框變直角、圖片裁切還是圓角，
+     兩者對不起來會很奇怪，乾脆整組固定用直角，不看有沒有開漸層。 */
+  border-radius: 0;
   text-decoration: none;
 }
 /* 跟 card-face.css 的 .card-face-clip/.card-face-img 同一套定位邏輯

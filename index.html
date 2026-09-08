@@ -57,7 +57,7 @@ function hexToRgba(hex, opacityPercent) {
 function applyZoneBg(el, zone) {
   if (!zone) return;
   el.style.background = zone.gradientEnabled
-    ? `linear-gradient(${zone.gradientAngle}deg, ${zone.gradientColor1} 0%, ${zone.gradientColor2} ${zone.gradientStop}%)`
+    ? `linear-gradient(${zone.gradientAngle}deg, ${zone.gradientColors.join(', ')})`
     : hexToRgba(zone.color, zone.opacity);
 }
 const CARD_LABELS = ['關卡攻略', '卡片資料庫', '我的隊伍'];
@@ -100,12 +100,12 @@ loadJSON(DataSources.siteSettings).then((settings) => {
     const [w, h] = (c.cropRatio || '2:3').split(':').map(Number);
     a.style.aspectRatio = `${w || 2} / ${h || 3}`;
     a.style.background = eff.bgGradientEnabled
-      ? `linear-gradient(${eff.bgGradientAngle}deg, ${eff.bgGradientColor1} 0%, ${eff.bgGradientColor2} ${eff.bgGradientStop}%)`
+      ? `linear-gradient(${eff.bgGradientAngle}deg, ${eff.bgGradientColors.join(', ')})`
       : hexToRgba(eff.bgColor, eff.bgOpacity);
     a.style.borderWidth = `${eff.borderWidth}px`;
     a.style.borderStyle = 'solid';
     if (eff.borderGradientEnabled) {
-      a.style.borderImage = `linear-gradient(${eff.borderGradientAngle}deg, ${eff.borderGradientColor1} 0%, ${eff.borderGradientColor2} ${eff.borderGradientStop}%) 1`;
+      a.style.borderImage = `linear-gradient(${eff.borderGradientAngle}deg, ${eff.borderGradientColors.join(', ')}) 1`;
     } else {
       a.style.borderColor = hexToRgba(eff.borderColor, eff.borderOpacity);
     }
