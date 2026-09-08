@@ -142,6 +142,58 @@
       "bgOpacity": 0,
       "borderColor": "#3a3650",
       "borderOpacity": 100
+    },
+    "極速追風 高難": {
+      "bgColor": "#211f30",
+      "bgOpacity": 0,
+      "borderColor": "#3a3650",
+      "borderOpacity": 100,
+      "borderWidth": 1,
+      "bgGradientEnabled": false,
+      "bgGradientAngle": 135,
+      "bgGradientColors": [
+        "#4a4a3a",
+        "#1a1a14"
+      ],
+      "bgGradientPositions": [
+        0,
+        100
+      ],
+      "borderGradientEnabled": false,
+      "borderGradientAngle": 135,
+      "borderGradientColors": [
+        "#e8d9a0",
+        "#8a7140"
+      ],
+      "borderGradientPositions": [
+        0,
+        100
+      ],
+      "numberColor": "#887242",
+      "numberColorDisabled": "#5c5c5c",
+      "buttonStyle": {
+        "fontFamily": "display",
+        "fontSize": 15,
+        "paddingY": 12,
+        "paddingX": 6,
+        "borderRadius": 8,
+        "gradientEnabled": true,
+        "gradientAngle": 180,
+        "gradientColors": [
+          "#211f30",
+          "#2a2740"
+        ],
+        "bgColor": "#211f30",
+        "borderColor": "#3a3650",
+        "borderOpacity": 100,
+        "borderWidth": 1,
+        "dividerWidth": 1,
+        "dividerGradientEnabled": false,
+        "dividerColors": [
+          "#c9a45c",
+          "#c9a45c"
+        ]
+      }
     }
   },
   "pastSectionStyle": {
@@ -353,6 +405,7 @@
     ]
   },
   "seriesOrder": [
+    "極速追風",
     "忘卻遺跡",
     "魔法檢定所"
   ],
