@@ -45,14 +45,16 @@
         0,
         100
       ],
-      "borderGradientEnabled": false,
-      "borderGradientAngle": 135,
+      "borderGradientEnabled": true,
+      "borderGradientAngle": 180,
       "borderGradientColors": [
-        "#e8d9a0",
-        "#8a7140"
+        "#4e6b4c",
+        "#d2ee87",
+        "#4e6b4c"
       ],
       "borderGradientPositions": [
         0,
+        50,
         100
       ],
       "buttonStyle": {
@@ -95,14 +97,16 @@
         0,
         100
       ],
-      "borderGradientEnabled": false,
-      "borderGradientAngle": 135,
+      "borderGradientEnabled": true,
+      "borderGradientAngle": 180,
       "borderGradientColors": [
+        "#817046",
         "#e8d9a0",
-        "#8a7140"
+        "#807046"
       ],
       "borderGradientPositions": [
         0,
+        50,
         100
       ],
       "buttonStyle": {
