@@ -609,5 +609,55 @@
     ],
     "rowBreak": false,
     "sortOrder": 1
+  },
+  {
+    "id": "stage__02",
+    "chapter": "極速追風 高難",
+    "order": "巔峰-02",
+    "title": "（複製）",
+    "enemies": [
+      {
+        "name": "車隊選手(火)",
+        "note": "",
+        "elementId": "fire",
+        "image": "assets/img/enemies/stage__02_0_車隊選手_火_.webp",
+        "imageZoom": 1.15,
+        "imageOffsetX": 0.5009875827365451,
+        "imageOffsetY": 0.5006377625608158
+      },
+      {
+        "name": "車隊選手(水)",
+        "note": "",
+        "elementId": "water",
+        "image": "assets/img/enemies/stage__02_1_車隊選手_水_.webp",
+        "imageZoom": 1.13,
+        "imageOffsetX": 0.5867992543392696,
+        "imageOffsetY": 0.4556125738681891
+      }
+    ],
+    "guide": "<p><span style=\"color: rgb(201, 164, 92);\">【組隊事項】</span></p><p>本關要帶至少 <span style=\"color: rgb(226, 96, 79);\">2名 攻擊 或 妨礙</span> 角色，並且至少有一隻<span style=\"color: rgb(79, 200, 176);\">解除防御</span>（例如SR啖）</p><p>有些回合需要全防，推薦帶<span style=\"color: rgb(226, 96, 79);\">緩補</span></p><hr class=\"ql-divider\"><p>全SR可以過</p><p>敵方兩位賽車手開場有75%減傷（5層15%減傷）</p><p>我方跟著機制走，就會慢慢削走敵方的減傷效果</p>",
+    "recommendedTags": [],
+    "hidden": false,
+    "archived": false,
+    "roundTable": [
+      {
+        "col1": "T2、8",
+        "col2": "全員普攻（敵方減傷減少1層）"
+      },
+      {
+        "col1": "T3、9",
+        "col2": "全員防禦（敵方減傷減少1層）"
+      },
+      {
+        "col1": "T5、11",
+        "col2": "至少2人普攻；對紅色敵人破防"
+      },
+      {
+        "col1": "T6、12",
+        "col2": "補血迎接敵人群攻（兩個敵人群攻，扛不住就防禦）"
+      }
+    ],
+    "rowBreak": false,
+    "sortOrder": 2
   }
 ]
