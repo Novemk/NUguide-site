@@ -183,14 +183,16 @@
       "opacity": 100,
       "gradientEnabled": true,
       "gradientColors": [
+        "#111019",
         "#633573",
         "#131018"
       ],
       "gradientPositions": [
         0,
+        50,
         100
       ],
-      "gradientAngle": 198
+      "gradientAngle": 28
     },
     "main": {
       "color": "#100f18",
