@@ -555,5 +555,59 @@
     ],
     "rowBreak": false,
     "sortOrder": 6
+  },
+  {
+    "id": "stage__01",
+    "chapter": "極速追風 高難",
+    "order": "巔峰-01",
+    "title": "",
+    "enemies": [
+      {
+        "name": "崑西",
+        "note": "不會受到任何傷害",
+        "elementId": "water",
+        "image": "assets/img/enemies/stage__01_0_崑西.webp",
+        "imageZoom": 1.25,
+        "imageOffsetX": 0.5703470959641417,
+        "imageOffsetY": 0.5617192586263021
+      },
+      {
+        "name": "啖天",
+        "note": "不會受到任何傷害",
+        "elementId": "fire",
+        "image": "assets/img/enemies/stage__01_1_啖天.webp",
+        "imageZoom": 1.15,
+        "imageOffsetX": 0.5857204861111113,
+        "imageOffsetY": 0.5143039237983403
+      }
+    ],
+    "guide": "<p>全R卡可以過，單純跟著機制走13回合的<span style=\"color: rgb(79, 200, 176);\">純機制關</span></p><p>我方不能對敵人造成傷害或補血</p><p>新手可以帶多輔助、坦角、高血量的角色，但<span style=\"color: rgb(226, 96, 79);\">補師只能帶1個</span></p>",
+    "recommendedTags": [],
+    "hidden": false,
+    "archived": false,
+    "roundTable": [
+      {
+        "col1": "T2、6、10",
+        "col2": "全員普攻"
+      },
+      {
+        "col1": "T3、7、11",
+        "col2": "全員防禦"
+      },
+      {
+        "col1": "T4、8、12",
+        "col2": "第 1、2、4、5 位對啖天和崑西兩人<span style=\"color: rgb(79, 200, 176);\">各必殺2次</span>"
+      },
+      {
+        "col1": "T5、9",
+        "col2": "全員防禦"
+      },
+      {
+        "col1": "T13",
+        "col2": "1防禦，2普攻，3必殺，4普攻，5防禦"
+      }
+    ],
+    "rowBreak": false,
+    "sortOrder": 1
   }
 ]
