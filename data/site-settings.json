@@ -100,10 +100,12 @@
       "opacity": 22,
       "gradientEnabled": true,
       "gradientColors": [
-        "#211f30",
-        "#100f18"
+        "#ffde66",
+        "#f6ffc7",
+        "#ffdd33",
+        "#794701"
       ],
-      "gradientAngle": 135,
+      "gradientAngle": 187,
       "gradientColor1": "#201e30",
       "gradientColor2": "#100f18",
       "gradientStop": 74
@@ -114,7 +116,7 @@
         "cropRatio": "2:3",
         "imageZoom": 1,
         "imageOffsetX": 0.5,
-        "imageOffsetY": 0.5,
+        "imageOffsetY": 0,
         "linkMode": "independent",
         "followIndex": 0,
         "bgColor": "#211f30",
@@ -130,10 +132,12 @@
         "borderWidth": 2,
         "borderGradientEnabled": true,
         "borderGradientColors": [
-          "#e8d9a0",
-          "#8a7140"
+          "#ffdb57",
+          "#faffb3",
+          "#ffb31a",
+          "#6b4700"
         ],
-        "borderGradientAngle": 135,
+        "borderGradientAngle": 201,
         "bgGradientColor1": "#c9a45c",
         "bgGradientColor2": "#8a7140",
         "bgGradientStop": 60,
