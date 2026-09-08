@@ -299,6 +299,13 @@ async function init() {
 
         const wrapEl = document.createElement('div');
         wrapEl.className = 'mt-tab-wrap';
+        // 上下內距可自訂 (2026-09-08, 後台「網站設定」) — 沒設定過的
+        // 話用 CSS 原本寫死的 8px，不會突然變樣子。左右內距(14px)維持
+        // 固定，只有上下可以調。
+        if (siteSettings && siteSettings.myTeamsTabPaddingY != null) {
+          wrapEl.style.paddingTop = `${siteSettings.myTeamsTabPaddingY}px`;
+          wrapEl.style.paddingBottom = `${siteSettings.myTeamsTabPaddingY}px`;
+        }
 
         // Tabs and the "查看攻略" link share one line (see
         // .mt-tab-toprow) — the link is only added as a second flex
