@@ -398,5 +398,38 @@
     ],
     "rowBreak": true,
     "sortOrder": 5
+  },
+  {
+    "id": "stage_7_2",
+    "chapter": "忘卻遺跡 第 22 季",
+    "order": "7 - 2",
+    "title": "帆潮小鎮之探（複製）（複製）",
+    "enemies": [
+      {
+        "name": "回憶重現 驅魔師",
+        "note": "無視屬性相剋",
+        "elementId": "light",
+        "image": "assets/img/enemies/stage_7_2_0_回憶重現_驅魔師.webp",
+        "imageZoom": 1.19,
+        "imageOffsetX": 0.5138767978601289,
+        "imageOffsetY": 0.5235094160132904
+      },
+      {
+        "name": "永夜輪迴 驅魔師",
+        "note": "無視屬性相剋",
+        "elementId": "water",
+        "image": "assets/img/enemies/stage_7_2_1_永夜輪迴_驅魔師.webp",
+        "imageZoom": 1.22,
+        "imageOffsetX": 0.5113803755952583,
+        "imageOffsetY": 0.5355113636363636
+      }
+    ],
+    "guide": "<p>推薦攜帶 <span style=\"color: rgb(226, 96, 79);\">爆發型 </span>的隊伍。</p>",
+    "recommendedTags": [],
+    "hidden": false,
+    "archived": false,
+    "roundTable": [],
+    "rowBreak": false,
+    "sortOrder": 7.2
   }
 ]
