@@ -149,26 +149,27 @@
     "boxBgOpacity": 71,
     "boxBorderColor": "#4f4f54",
     "boxBorderOpacity": 77,
+    "seriesTitleColors": {},
     "buttonStyle": {
       "fontFamily": "display",
       "fontSize": 15,
-      "paddingY": 6,
+      "paddingY": 3,
       "paddingX": 6,
-      "borderRadius": 7,
+      "borderRadius": 4,
       "gradientEnabled": true,
-      "gradientAngle": 187,
+      "gradientAngle": 191,
       "gradientColors": [
-        "#21282c",
-        "#0d1112"
+        "#2a2532",
+        "#2f2c35"
       ],
       "bgColor": "#151f23",
-      "borderColor": "#434c4a",
+      "borderColor": "#544861",
       "borderOpacity": 89,
       "borderWidth": 1,
       "dividerWidth": 1,
       "dividerGradientEnabled": false,
       "dividerColors": [
-        "#29adff",
+        "#45404f",
         "#5c5c5c"
       ]
     }
