@@ -272,17 +272,22 @@ async function init() {
             if (!prevActive && !thisActive) cell.classList.add('sep-left');
           }
 
+          const cs = chapterStyles[chapter];
           if (!teamByStageId.has(s.id)) {
-            cell.appendChild(Object.assign(document.createElement('span'), {
-              className: 'mt-tab-disabled',
-              textContent: s.order,
-            }));
+            const disabledSpan = document.createElement('span');
+            disabledSpan.className = 'mt-tab-disabled';
+            disabledSpan.textContent = s.order;
+            // 章節外觀可自訂的字色 (2026-09-08) — 沒設定過的話用 CSS
+            // 原本寫死的顏色，維持原樣不變。
+            if (cs && cs.numberColorDisabled) disabledSpan.style.color = cs.numberColorDisabled;
+            cell.appendChild(disabledSpan);
           } else {
             if (activeStageId === s.id) cell.classList.add('active');
             const btn = document.createElement('button');
             btn.type = 'button';
             btn.className = 'mt-tab';
             btn.textContent = s.order;
+            if (cs && cs.numberColor && activeStageId !== s.id) btn.style.color = cs.numberColor;
             btn.addEventListener('click', () => {
               openStageByChapter.set(chapter, activeStageId === s.id ? null : s.id);
               refresh();
@@ -316,7 +321,14 @@ async function init() {
         scrollEl.appendChild(rowEl);
         topRow.appendChild(scrollEl);
 
-        const rowHasActiveStage = row.some((s) => s.id === activeStageId);
+        // 展開狀態要對應到「還真的有隊伍」的關卡，不能只看
+        // activeStageId 本身還在不在 (2026-09-08 bug 修正) —— 剛把這
+        // 一關的隊伍刪掉之後，openStageByChapter 還記得它是「展開中」
+        // 的那一關，但 teamByStageId 已經沒有它的資料了，硬要照舊畫出
+        // 隊伍面板會直接讀到 undefined 整個當掉，害同一個系列後面的
+        // 章節都畫不出來。這裡多檢查一次還有沒有隊伍，沒有的話就當作
+        // 沒有展開，跟這一關從來沒被點開過一樣。
+        const rowHasActiveStage = row.some((s) => s.id === activeStageId) && teamByStageId.has(activeStageId);
         if (rowHasActiveStage) {
           const link = document.createElement('a');
           link.href = `stage-detail.html?id=${encodeURIComponent(activeStageId)}`;
@@ -405,6 +417,13 @@ async function init() {
   async function handleDelete(stageId, team) {
     if (!confirmDialog('確定要刪除這組隊伍嗎？此動作無法復原。')) return;
     await deleteTeam(stageId, team.localId);
+    // 刪掉之後這一關不再有隊伍了，把「展開中」的狀態一起清掉，不要留著
+    // 一個對應不到任何資料的殘留選取 (2026-09-08)。
+    const stage = stageMap.get(stageId);
+    if (stage && openStageByChapter.get(stage.chapter) === stageId) {
+      openStageByChapter.set(stage.chapter, null);
+    }
+    openTeamDetail.delete(stageId);
     showToast('已刪除隊伍');
     refresh();
   }

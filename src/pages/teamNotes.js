@@ -220,7 +220,9 @@ async function init() {
         wrapEl.appendChild(topRow);
         boxEl.appendChild(wrapEl);
 
-        const rowHasActiveStage = row.some((s) => s.id === activeStageId);
+        // 展開狀態要對應到「還真的有隊伍」的關卡，見 myTeamsOverview.js
+        // 同一處的說明 (2026-09-08 bug 修正)。
+        const rowHasActiveStage = row.some((s) => s.id === activeStageId) && teamByStageId.has(activeStageId);
         if (rowHasActiveStage) {
           const activeStage = row.find((s) => s.id === activeStageId);
           const team = teamByStageId.get(activeStageId);
@@ -308,6 +310,11 @@ async function init() {
   async function handleDelete(stageId, team) {
     if (!confirmDialog('確定要刪除這組隊伍嗎？此動作無法復原。')) return;
     await deleteTeam(stageId, team.localId);
+    const stage = stageMap.get(stageId);
+    if (stage && openStageByChapter.get(stage.chapter) === stageId) {
+      openStageByChapter.set(stage.chapter, null);
+    }
+    openTeamDetail.delete(stageId);
     showToast('已刪除隊伍');
     refresh();
   }
