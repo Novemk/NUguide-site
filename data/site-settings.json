@@ -57,8 +57,8 @@
         50,
         100
       ],
-      "numberColor": "#fff0d1",
-      "numberColorDisabled": "#2e483f",
+      "numberColor": "#e2d5bb",
+      "numberColorDisabled": "#437a66",
       "buttonStyle": {
         "fontFamily": "display",
         "fontSize": 15,
@@ -111,8 +111,8 @@
         50,
         100
       ],
-      "numberColor": "#fff0d1",
-      "numberColorDisabled": "#3b311c",
+      "numberColor": "#e2d5bb",
+      "numberColorDisabled": "#866e3c",
       "buttonStyle": {
         "fontFamily": "display",
         "fontSize": 15,
