@@ -171,8 +171,8 @@
         50,
         100
       ],
-      "numberColor": "#887242",
-      "numberColorDisabled": "#5c5c5c",
+      "numberColor": "#e2d5bb",
+      "numberColorDisabled": "#8d5858",
       "buttonStyle": {
         "fontFamily": "display",
         "fontSize": 15,
