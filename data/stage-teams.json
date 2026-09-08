@@ -62,5 +62,21 @@
         ]
       }
     ]
+  },
+  {
+    "stageId": "stage_55_2",
+    "teams": [
+      {
+        "name": "學奧+槍啖+SR",
+        "note": "https://youtu.be/UXWQpw6vFUs",
+        "members": [
+          "card_036",
+          "card_049",
+          "card_130",
+          "card_126",
+          "card_127"
+        ]
+      }
+    ]
   }
 ]
