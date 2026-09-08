@@ -514,7 +514,7 @@
   {
     "id": "stage_55_3",
     "chapter": "魔法檢定所 第 26 季",
-    "order": "55",
+    "order": "60",
     "title": "（複製）（複製）",
     "enemies": [
       {
@@ -554,6 +554,6 @@
       }
     ],
     "rowBreak": false,
-    "sortOrder": 9.3
+    "sortOrder": 6
   }
 ]
