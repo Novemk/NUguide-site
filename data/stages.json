@@ -213,54 +213,6 @@
     "archived": false
   },
   {
-    "id": "stage_50",
-    "chapter": "魔法檢定所 第 25 季",
-    "order": "50",
-    "title": "（複製）",
-    "enemies": [
-      {
-        "name": "12334",
-        "note": "",
-        "elementId": "",
-        "image": "assets/img/enemies/stage_7_1_0_12334.webp",
-        "imageZoom": 1.24,
-        "imageOffsetX": 0.5088566825503394,
-        "imageOffsetY": 0.5316487269434176
-      }
-    ],
-    "guide": "<p><br></p>",
-    "recommendedTags": [],
-    "hidden": false,
-    "roundTable": [],
-    "rowBreak": false,
-    "sortOrder": 2,
-    "archived": true
-  },
-  {
-    "id": "stage_55",
-    "chapter": "魔法檢定所 第 25 季",
-    "order": "55",
-    "title": "（複製）（複製）",
-    "enemies": [
-      {
-        "name": "12334",
-        "note": "",
-        "elementId": "",
-        "image": "assets/img/enemies/stage_7_1_0_12334.webp",
-        "imageZoom": 1,
-        "imageOffsetX": 0.5,
-        "imageOffsetY": 0.5
-      }
-    ],
-    "guide": "<p><br></p>",
-    "recommendedTags": [],
-    "hidden": false,
-    "roundTable": [],
-    "rowBreak": false,
-    "sortOrder": 3,
-    "archived": true
-  },
-  {
     "id": "stage_7_1_2",
     "chapter": "忘卻遺跡 第 22 季",
     "order": "7 - 1",
