@@ -473,5 +473,42 @@
     "roundTable": [],
     "rowBreak": false,
     "sortOrder": 7.3
+  },
+  {
+    "id": "stage_55_2",
+    "chapter": "魔法檢定所 第 26 季",
+    "order": "55",
+    "title": "（複製）",
+    "enemies": [
+      {
+        "name": "初試琴音  歛",
+        "note": "無視屬性相剋",
+        "elementId": "dark",
+        "image": "assets/img/enemies/stage_55_2_0_初試琴音_歛.webp",
+        "imageZoom": 1.23,
+        "imageOffsetX": 0.5122248015788772,
+        "imageOffsetY": 0.5288508352146813
+      }
+    ],
+    "guide": "<p><span style=\"color: rgb(201, 164, 92);\">【組隊事項】</span></p><ul><li>＜守護＞的 <span style=\"color: rgb(226, 96, 79);\">必殺技CD需 ≤ 4</span></li><li>本關有回合限制，超過20回合就會輸</li><li>本關必須帶坦，<span style=\"color: rgb(226, 96, 79);\">坦建議放第4位</span>，補師建議帶<span style=\"color: rgb(226, 96, 79);\">緩補</span></li></ul><p><br></p><p>小歛的攻擊全部是群攻，對坦角單坦要求低，</p><p>因此推薦<span style=\"color: rgb(79, 200, 176);\">能強化隊友的坦（兔伊、女僕啖）、反擊坦或者群體盾/減傷坦</span></p><p><br></p><p>由於攻擊妨礙角會提升小歛的攻擊力，輔助補師開必殺能夠降低小歛的減傷，</p><p>因此推薦帶<span style=\"color: rgb(79, 200, 176);\">短CD的輔助和補師，或者雙輔助</span></p><hr class=\"ql-divider\"><p><span style=\"color: rgb(201, 164, 92);\">我方開場狀態──</span></p><p>【攻擊妨礙】攻擊時，小歛的攻擊力增加2%（最多20層）</p><p>【輔助補師】必殺時，小歛的攻擊力增加2%（最多20層） 官方狀態欄文字有bug，</p><p>這個是「必殺時，減少1層小歛的『受到傷害減少6%』」，戰鬥TIPS的描述才是正確。</p>",
+    "recommendedTags": [],
+    "hidden": false,
+    "archived": false,
+    "roundTable": [
+      {
+        "col1": "T2、8、14",
+        "col2": "補師 先 防禦，其他人行動"
+      },
+      {
+        "col1": "T4、10、16",
+        "col2": "全員防禦"
+      },
+      {
+        "col1": "T6、12、18",
+        "col2": "第4位先必殺，其他人行動"
+      }
+    ],
+    "rowBreak": false,
+    "sortOrder": 5.5
   }
 ]
