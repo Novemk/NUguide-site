@@ -153,7 +153,7 @@
       "bgGradientAngle": 21,
       "bgGradientColors": [
         "#99806c",
-        "#8d344b"
+        "#a13652"
       ],
       "bgGradientPositions": [
         0,
@@ -180,7 +180,7 @@
         "paddingX": 6,
         "borderRadius": 3,
         "gradientEnabled": true,
-        "gradientAngle": 214,
+        "gradientAngle": 190,
         "gradientColors": [
           "#be3c56",
           "#bda665"
