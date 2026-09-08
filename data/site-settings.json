@@ -3,7 +3,7 @@
   "siteTagline": "轉貼關卡攻略、角色簡易資料庫、關卡隊伍紀錄，方便照抄過往隊伍用✌️",
   "myTeamsDescription": "僅存在你目前這台裝置、這個瀏覽器裡\n清除瀏覽紀錄、換裝置、換瀏覽器，或使用無痕視窗，都會遺失已記錄的隊伍內容。\n重要的隊伍建議用「匯出備份」存在你的裝置內。",
   "teamNotesDescription": "非當季的過往關卡紀錄，會移動到筆記這頁。\n僅存在你目前這台裝置、這個瀏覽器裡，清除瀏覽記錄就會消失。\n想保存等下一季再使用的話，可回 [我的隊伍] 頁面按「匯出備份」。",
-  "stagesDescription": "點擊關卡快速展開摘要，需要完整攻略內容再點進去查看。",
+  "stagesDescription": "攻略流程紀錄、推薦隊伍。",
   "cardsDescription": "所有篩選條件同時生效，可以逐步縮小範圍。",
   "stageButtonStyle": {
     "fontFamily": "display",
@@ -30,16 +30,104 @@
   },
   "chapterStyles": {
     "忘卻遺跡 第 22 季": {
-      "bgColor": "#071713",
-      "bgOpacity": 80,
+      "bgColor": "#1a3c34",
+      "bgOpacity": 39,
       "borderColor": "#47b398",
-      "borderOpacity": 100
+      "borderOpacity": 100,
+      "borderWidth": 1,
+      "bgGradientEnabled": true,
+      "bgGradientAngle": 17,
+      "bgGradientColors": [
+        "#3c4944",
+        "#1a3c32"
+      ],
+      "bgGradientPositions": [
+        0,
+        100
+      ],
+      "borderGradientEnabled": false,
+      "borderGradientAngle": 135,
+      "borderGradientColors": [
+        "#e8d9a0",
+        "#8a7140"
+      ],
+      "borderGradientPositions": [
+        0,
+        100
+      ],
+      "buttonStyle": {
+        "fontFamily": "display",
+        "fontSize": 15,
+        "paddingY": 3,
+        "paddingX": 6,
+        "borderRadius": 3,
+        "gradientEnabled": true,
+        "gradientAngle": 214,
+        "gradientColors": [
+          "#288a6d",
+          "#57756c"
+        ],
+        "bgColor": "#211f30",
+        "borderColor": "#919343",
+        "borderOpacity": 100,
+        "borderWidth": 1,
+        "dividerWidth": 1,
+        "dividerGradientEnabled": false,
+        "dividerColors": [
+          "#34835e",
+          "#c9a45c"
+        ]
+      }
     },
     "魔法檢定所 第 26 季": {
       "bgColor": "#2c220c",
       "bgOpacity": 83,
       "borderColor": "#c9a45c",
-      "borderOpacity": 100
+      "borderOpacity": 100,
+      "borderWidth": 1,
+      "bgGradientEnabled": true,
+      "bgGradientAngle": 17,
+      "bgGradientColors": [
+        "#61573d",
+        "#483b19"
+      ],
+      "bgGradientPositions": [
+        0,
+        100
+      ],
+      "borderGradientEnabled": false,
+      "borderGradientAngle": 135,
+      "borderGradientColors": [
+        "#e8d9a0",
+        "#8a7140"
+      ],
+      "borderGradientPositions": [
+        0,
+        100
+      ],
+      "buttonStyle": {
+        "fontFamily": "display",
+        "fontSize": 15,
+        "paddingY": 3,
+        "paddingX": 6,
+        "borderRadius": 4,
+        "gradientEnabled": true,
+        "gradientAngle": 216,
+        "gradientColors": [
+          "#a38329",
+          "#7a6752"
+        ],
+        "bgColor": "#211f30",
+        "borderColor": "#c9a45c",
+        "borderOpacity": 100,
+        "borderWidth": 1,
+        "dividerWidth": 1,
+        "dividerGradientEnabled": false,
+        "dividerColors": [
+          "#c9a45c",
+          "#c9a45c"
+        ]
+      }
     },
     "魔法檢定所 第 22 季": {
       "bgColor": "#211f30",
@@ -80,5 +168,174 @@
         "#5c5c5c"
       ]
     }
+  },
+  "homepageStyle": {
+    "header": {
+      "color": "#100f18",
+      "opacity": 100,
+      "gradientEnabled": true,
+      "gradientColors": [
+        "#633573",
+        "#131018"
+      ],
+      "gradientPositions": [
+        0,
+        100
+      ],
+      "gradientAngle": 198
+    },
+    "main": {
+      "color": "#100f18",
+      "opacity": 100,
+      "gradientEnabled": false,
+      "gradientColors": [
+        "#211f30",
+        "#100f18"
+      ],
+      "gradientPositions": [
+        0,
+        100
+      ],
+      "gradientAngle": 135
+    },
+    "cards": [
+      {
+        "image": "assets/img/homepage/card1.jpg",
+        "cropRatio": "2:3",
+        "imageZoom": 2.25,
+        "imageOffsetX": 0.4474005665114898,
+        "imageOffsetY": 0,
+        "linkMode": "follow",
+        "followIndex": 2,
+        "bgColor": "#211f30",
+        "bgOpacity": 100,
+        "bgGradientEnabled": false,
+        "bgGradientColors": [
+          "#c9a45c",
+          "#8a7140"
+        ],
+        "bgGradientPositions": [
+          0,
+          100
+        ],
+        "bgGradientAngle": 135,
+        "borderColor": "#c9a45c",
+        "borderOpacity": 100,
+        "borderWidth": 2,
+        "borderGradientEnabled": false,
+        "borderGradientColors": [
+          "#e8d9a0",
+          "#8a7140"
+        ],
+        "borderGradientPositions": [
+          0,
+          100
+        ],
+        "borderGradientAngle": 135,
+        "overlayColor": "#16040c",
+        "overlayStops": [
+          {
+            "position": 38,
+            "opacity": 66
+          },
+          {
+            "position": 100,
+            "opacity": 0
+          }
+        ]
+      },
+      {
+        "image": "assets/img/homepage/card2.jpg",
+        "cropRatio": "2:3",
+        "imageZoom": 2.01,
+        "imageOffsetX": 0.44570920091346045,
+        "imageOffsetY": 0.12411745300571536,
+        "linkMode": "follow",
+        "followIndex": 2,
+        "bgColor": "#211f30",
+        "bgOpacity": 100,
+        "bgGradientEnabled": false,
+        "bgGradientColors": [
+          "#c9a45c",
+          "#8a7140"
+        ],
+        "bgGradientPositions": [
+          0,
+          100
+        ],
+        "bgGradientAngle": 135,
+        "borderColor": "#c9a45c",
+        "borderOpacity": 100,
+        "borderWidth": 2,
+        "borderGradientEnabled": false,
+        "borderGradientColors": [
+          "#e8d9a0",
+          "#8a7140"
+        ],
+        "borderGradientPositions": [
+          0,
+          100
+        ],
+        "borderGradientAngle": 135,
+        "overlayColor": "#000000",
+        "overlayStops": [
+          {
+            "position": 38,
+            "opacity": 66
+          },
+          {
+            "position": 100,
+            "opacity": 0
+          }
+        ]
+      },
+      {
+        "image": "assets/img/homepage/card3.jpg",
+        "cropRatio": "2:3",
+        "imageZoom": 2.17,
+        "imageOffsetX": 0.6715145052809064,
+        "imageOffsetY": 0.0043448858451299865,
+        "linkMode": "independent",
+        "followIndex": 0,
+        "bgColor": "#211f30",
+        "bgOpacity": 100,
+        "bgGradientEnabled": false,
+        "bgGradientColors": [
+          "#c9a45c",
+          "#8a7140"
+        ],
+        "bgGradientPositions": [
+          0,
+          100
+        ],
+        "bgGradientAngle": 135,
+        "borderColor": "#c9a45c",
+        "borderOpacity": 100,
+        "borderWidth": 1,
+        "borderGradientEnabled": true,
+        "borderGradientColors": [
+          "#fff0a3",
+          "#856123",
+          "#a17d30"
+        ],
+        "borderGradientPositions": [
+          0,
+          33,
+          100
+        ],
+        "borderGradientAngle": 198,
+        "overlayColor": "#000000",
+        "overlayStops": [
+          {
+            "position": 38,
+            "opacity": 66
+          },
+          {
+            "position": 100,
+            "opacity": 0
+          }
+        ]
+      }
+    ]
   }
 }
