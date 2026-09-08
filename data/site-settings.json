@@ -149,7 +149,10 @@
     "boxBgOpacity": 71,
     "boxBorderColor": "#4f4f54",
     "boxBorderOpacity": 77,
-    "seriesTitleColors": {},
+    "seriesTitleColors": {
+      "忘卻遺跡": "#3b8770",
+      "魔法檢定所": "#957d50"
+    },
     "buttonStyle": {
       "fontFamily": "display",
       "fontSize": 15,
