@@ -80,5 +80,172 @@
         "#5c5c5c"
       ]
     }
+  },
+  "homepageStyle": {
+    "header": {
+      "color": "#100f18",
+      "opacity": 100,
+      "gradientEnabled": false,
+      "gradientColors": [
+        "#211f30",
+        "#100f18"
+      ],
+      "gradientPositions": [
+        0,
+        100
+      ],
+      "gradientAngle": 135
+    },
+    "main": {
+      "color": "#100f18",
+      "opacity": 100,
+      "gradientEnabled": false,
+      "gradientColors": [
+        "#211f30",
+        "#100f18"
+      ],
+      "gradientPositions": [
+        0,
+        100
+      ],
+      "gradientAngle": 135
+    },
+    "cards": [
+      {
+        "image": "assets/img/homepage/card1.jpg",
+        "cropRatio": "2:3",
+        "imageZoom": 2.25,
+        "imageOffsetX": 0.4474005665114898,
+        "imageOffsetY": 0,
+        "linkMode": "independent",
+        "followIndex": 0,
+        "bgColor": "#211f30",
+        "bgOpacity": 100,
+        "bgGradientEnabled": false,
+        "bgGradientColors": [
+          "#c9a45c",
+          "#8a7140"
+        ],
+        "bgGradientPositions": [
+          0,
+          100
+        ],
+        "bgGradientAngle": 135,
+        "borderColor": "#c9a45c",
+        "borderOpacity": 100,
+        "borderWidth": 2,
+        "borderGradientEnabled": false,
+        "borderGradientColors": [
+          "#e8d9a0",
+          "#8a7140"
+        ],
+        "borderGradientPositions": [
+          0,
+          100
+        ],
+        "borderGradientAngle": 135,
+        "overlayColor": "#16040c",
+        "overlayStops": [
+          {
+            "position": 38,
+            "opacity": 66
+          },
+          {
+            "position": 100,
+            "opacity": 0
+          }
+        ]
+      },
+      {
+        "image": "assets/img/homepage/card2.jpg",
+        "cropRatio": "2:3",
+        "imageZoom": 2.01,
+        "imageOffsetX": 0.44570920091346045,
+        "imageOffsetY": 0.12411745300571536,
+        "linkMode": "independent",
+        "followIndex": 0,
+        "bgColor": "#211f30",
+        "bgOpacity": 100,
+        "bgGradientEnabled": false,
+        "bgGradientColors": [
+          "#c9a45c",
+          "#8a7140"
+        ],
+        "bgGradientPositions": [
+          0,
+          100
+        ],
+        "bgGradientAngle": 135,
+        "borderColor": "#c9a45c",
+        "borderOpacity": 100,
+        "borderWidth": 2,
+        "borderGradientEnabled": false,
+        "borderGradientColors": [
+          "#e8d9a0",
+          "#8a7140"
+        ],
+        "borderGradientPositions": [
+          0,
+          100
+        ],
+        "borderGradientAngle": 135,
+        "overlayColor": "#000000",
+        "overlayStops": [
+          {
+            "position": 38,
+            "opacity": 66
+          },
+          {
+            "position": 100,
+            "opacity": 0
+          }
+        ]
+      },
+      {
+        "image": "assets/img/homepage/card3.jpg",
+        "cropRatio": "2:3",
+        "imageZoom": 2.17,
+        "imageOffsetX": 0.6715145052809064,
+        "imageOffsetY": 0.0043448858451299865,
+        "linkMode": "independent",
+        "followIndex": 0,
+        "bgColor": "#211f30",
+        "bgOpacity": 100,
+        "bgGradientEnabled": false,
+        "bgGradientColors": [
+          "#c9a45c",
+          "#8a7140"
+        ],
+        "bgGradientPositions": [
+          0,
+          100
+        ],
+        "bgGradientAngle": 135,
+        "borderColor": "#c9a45c",
+        "borderOpacity": 100,
+        "borderWidth": 2,
+        "borderGradientEnabled": false,
+        "borderGradientColors": [
+          "#e8d9a0",
+          "#8a7140"
+        ],
+        "borderGradientPositions": [
+          0,
+          100
+        ],
+        "borderGradientAngle": 135,
+        "overlayColor": "#000000",
+        "overlayStops": [
+          {
+            "position": 38,
+            "opacity": 66
+          },
+          {
+            "position": 100,
+            "opacity": 0
+          }
+        ]
+      }
+    ]
   }
 }
