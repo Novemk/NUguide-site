@@ -80,5 +80,107 @@
         "#5c5c5c"
       ]
     }
+  },
+  "homepageStyle": {
+    "header": {
+      "color": "#100f18",
+      "opacity": 100,
+      "gradientEnabled": false,
+      "gradientColors": [
+        "#211f30",
+        "#100f18"
+      ],
+      "gradientAngle": 135
+    },
+    "main": {
+      "color": "#100f18",
+      "opacity": 100,
+      "gradientEnabled": false,
+      "gradientColors": [
+        "#211f30",
+        "#100f18"
+      ],
+      "gradientAngle": 135
+    },
+    "cards": [
+      {
+        "image": "assets/img/homepage/card1.jpg",
+        "cropRatio": "2:3",
+        "imageZoom": 2.2,
+        "imageOffsetX": 0.4663141886025436,
+        "imageOffsetY": 0.14075963087614682,
+        "linkMode": "independent",
+        "followIndex": 0,
+        "bgColor": "#211f30",
+        "bgOpacity": 100,
+        "bgGradientEnabled": false,
+        "bgGradientColors": [
+          "#c9a45c",
+          "#8a7140"
+        ],
+        "bgGradientAngle": 135,
+        "borderColor": "#c9a45c",
+        "borderOpacity": 100,
+        "borderWidth": 1,
+        "borderGradientEnabled": false,
+        "borderGradientColors": [
+          "#e8d9a0",
+          "#8a7140"
+        ],
+        "borderGradientAngle": 135
+      },
+      {
+        "image": "assets/img/homepage/card2.jpg",
+        "cropRatio": "2:3",
+        "imageZoom": 1.98,
+        "imageOffsetX": 0.43012706747658075,
+        "imageOffsetY": 0,
+        "linkMode": "independent",
+        "followIndex": 0,
+        "bgColor": "#211f30",
+        "bgOpacity": 100,
+        "bgGradientEnabled": false,
+        "bgGradientColors": [
+          "#c9a45c",
+          "#8a7140"
+        ],
+        "bgGradientAngle": 135,
+        "borderColor": "#c9a45c",
+        "borderOpacity": 100,
+        "borderWidth": 1,
+        "borderGradientEnabled": false,
+        "borderGradientColors": [
+          "#e8d9a0",
+          "#8a7140"
+        ],
+        "borderGradientAngle": 135
+      },
+      {
+        "image": "assets/img/homepage/card3.jpg",
+        "cropRatio": "2:3",
+        "imageZoom": 1.78,
+        "imageOffsetX": 0.5136711223449874,
+        "imageOffsetY": 0,
+        "linkMode": "independent",
+        "followIndex": 0,
+        "bgColor": "#211f30",
+        "bgOpacity": 100,
+        "bgGradientEnabled": false,
+        "bgGradientColors": [
+          "#c9a45c",
+          "#8a7140"
+        ],
+        "bgGradientAngle": 135,
+        "borderColor": "#c9a45c",
+        "borderOpacity": 100,
+        "borderWidth": 1,
+        "borderGradientEnabled": false,
+        "borderGradientColors": [
+          "#e8d9a0",
+          "#8a7140"
+        ],
+        "borderGradientAngle": 135
+      }
+    ]
   }
 }
