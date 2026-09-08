@@ -510,5 +510,50 @@
     ],
     "rowBreak": false,
     "sortOrder": 5.5
+  },
+  {
+    "id": "stage_55_3",
+    "chapter": "魔法檢定所 第 26 季",
+    "order": "55",
+    "title": "（複製）（複製）",
+    "enemies": [
+      {
+        "name": "半信半疑  玖夜",
+        "note": "無視屬性相剋",
+        "elementId": "dark",
+        "image": "assets/img/enemies/stage_55_3_0_半信半疑_玖夜.webp",
+        "imageZoom": 1.3,
+        "imageOffsetX": 0.5349383884006076,
+        "imageOffsetY": 0.5001091427273221
+      }
+    ],
+    "guide": "<p><span style=\"color: rgb(201, 164, 92);\">【組隊事項】</span></p><ul><li>3星條件要帶<span style=\"color: rgb(226, 96, 79);\">坦</span></li></ul><p><br></p><p>如果戰力不足打超過20回合，可以不帶坦，打2次來2星通關</p><hr class=\"ql-divider\"><p>本關 <span style=\"color: rgb(79, 200, 176);\">90%、50%、30%鎖血</span>，鎖血機制只有在累積足夠的「認可」才能解封</p><p>解鎖 90%：認可 x2（第5回合）</p><p>解鎖 50%：認可 x4（第11回合）</p><p>解鎖 30%：認可 x5（第14回合）</p><p><br></p><p>本關的機制很簡單，不過要注意只有特定回合才能獲得「認可」</p><p>所以隊伍再強，也會長期處於鎖血狀態，<span style=\"color: rgb(79, 200, 176);\">必須等到第15回合，才能等到小玖血量全解鎖。</span></p>",
+    "recommendedTags": [],
+    "hidden": false,
+    "archived": false,
+    "roundTable": [
+      {
+        "col1": "T2、11",
+        "col2": "至少3人普攻【認可+1】"
+      },
+      {
+        "col1": "T4、13",
+        "col2": "全員普攻或防禦（必殺會令自身受到治療量減少50%，最多3層）"
+      },
+      {
+        "col1": "T5、14",
+        "col2": "全員防禦【認可+1】"
+      },
+      {
+        "col1": "T7、16",
+        "col2": "（小玖會清除身上的持續傷害）"
+      },
+      {
+        "col1": "T8、17",
+        "col2": "會攻擊的輔助或坦角可以先開必殺（第一擊不要普攻）<br>然後讓一個 <span style=\"color: rgb(79, 200, 176);\">攻擊角或妨礙角 必殺</span> 打斷蓄力【認可+1】<br><br>＊如果前面回合都跟著機制打，T17不需要特地保留攻擊手的必殺"
+      }
+    ],
+    "rowBreak": false,
+    "sortOrder": 9.3
   }
 ]
