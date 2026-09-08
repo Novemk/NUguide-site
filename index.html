@@ -132,6 +132,13 @@ loadJSON(DataSources.siteSettings).then((settings) => {
     const overlay = document.createElement('div');
     overlay.className = 'home-card-overlay';
     overlay.innerHTML = `<strong>${CARD_LABELS[i]}</strong><span>${CARD_SUBTITLES[i]}</span>`;
+    // 疊字底下的遮罩漸層可自訂顏色/範圍 (2026-09-08，後台「首頁外觀」
+    // 每張圖各自的「文字底色遮罩」) — 永遠是這張自己的設定，不受
+    // 顏色/邊框的獨立/跟隨影響，圖片沒設定過時用預設黑色 75%→0%。
+    const overlayColor = c.overlayColor || '#000000';
+    const overlayStops = (c.overlayStops && c.overlayStops.length ? c.overlayStops : [{ position: 0, opacity: 75 }, { position: 100, opacity: 0 }])
+      .slice().sort((s1, s2) => s1.position - s2.position);
+    overlay.style.background = `linear-gradient(to top, ${overlayStops.map((s) => `${hexToRgba(overlayColor, s.opacity)} ${s.position}%`).join(', ')})`;
     a.appendChild(overlay);
     cardsHost.appendChild(a);
   });
