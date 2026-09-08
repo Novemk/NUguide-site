@@ -227,13 +227,15 @@
         "borderGradientEnabled": true,
         "borderGradientColors": [
           "#fff0a3",
-          "#856123"
+          "#856123",
+          "#a17d30"
         ],
         "borderGradientPositions": [
           0,
+          33,
           100
         ],
-        "borderGradientAngle": 172,
+        "borderGradientAngle": 198,
         "overlayColor": "#000000",
         "overlayStops": [
           {
