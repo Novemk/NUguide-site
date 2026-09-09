@@ -3074,5 +3074,24 @@
     "imageOffsetX": 0.4847374833952404,
     "imageOffsetY": 0.17909669564440361,
     "sortOrder": 0.06
+  },
+  {
+    "id": "card_150",
+    "name": "化形妖狐",
+    "characterId": "char_08",
+    "rarityId": "r",
+    "classId": "debuf",
+    "elementId": "fire",
+    "cd": 4,
+    "tags": [
+      "heal_down",
+      "immune_sleep"
+    ],
+    "ultimateSkill": "<p>以攻擊力 345% 對目標造成傷害</p><p>且受到回復量減少 100%（2回合）</p><p>［冷卻時間：4 回合］</p>",
+    "image": "assets/img/cards/card_150.webp",
+    "imageZoom": 1.34,
+    "imageOffsetX": 0.5782543673877759,
+    "imageOffsetY": 0.49489113790711836,
+    "sortOrder": 0.07
   }
 ]
