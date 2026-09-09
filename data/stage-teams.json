@@ -126,5 +126,21 @@
         ]
       }
     ]
+  },
+  {
+    "stageId": "stage_7_2",
+    "teams": [
+      {
+        "name": "學奧+偵布+SR",
+        "note": "https://youtu.be/ZtaBkkRUelY",
+        "members": [
+          "card_036",
+          "card_062",
+          "card_125",
+          "card_130",
+          "card_127"
+        ]
+      }
+    ]
   }
 ]
