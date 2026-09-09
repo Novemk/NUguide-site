@@ -16,22 +16,6 @@
     ]
   },
   {
-    "stageId": "stage__03",
-    "teams": [
-      {
-        "name": "學奧+槍啖+SR",
-        "note": "https://youtu.be/jjM7yeacrAg",
-        "members": [
-          "card_049",
-          "card_036",
-          "card_127",
-          "card_130",
-          "card_125"
-        ]
-      }
-    ]
-  },
-  {
     "stageId": "stage_8_2_2",
     "teams": [
       {
@@ -219,6 +203,22 @@
           "card_084",
           "card_130",
           "card_127"
+        ]
+      }
+    ]
+  },
+  {
+    "stageId": "stage__03",
+    "teams": [
+      {
+        "name": "學奧+槍啖+SR",
+        "note": "https://youtu.be/jjM7yeacrAg",
+        "members": [
+          "card_049",
+          "card_036",
+          "card_127",
+          "card_130",
+          "card_125"
         ]
       }
     ]
