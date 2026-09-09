@@ -2993,9 +2993,9 @@
     ],
     "ultimateSkill": "<p>以攻擊力 100% 對目標造成傷害</p><p>以最大HP 40% 給予自身護盾（1回合）</p><p>再獲得防禦減傷增加 10%（1回合）、嘲諷（1回合）</p><p>並變為防禦狀態</p><p>［冷卻時間：3 回合］</p>",
     "image": "assets/img/cards/card_145.webp",
-    "imageZoom": 1.25,
-    "imageOffsetX": 0.5104147976402323,
-    "imageOffsetY": 0.5719509748072407,
+    "imageZoom": 1.26,
+    "imageOffsetX": 0.5193976179141815,
+    "imageOffsetY": 0.4219931808172488,
     "sortOrder": 0.02
   },
   {
