@@ -206,5 +206,21 @@
         ]
       }
     ]
+  },
+  {
+    "stageId": "stage_35",
+    "teams": [
+      {
+        "name": "偵布+劍副+SR",
+        "note": "https://youtu.be/mw3kbl1JjPk",
+        "members": [
+          "card_129",
+          "card_062",
+          "card_084",
+          "card_130",
+          "card_127"
+        ]
+      }
+    ]
   }
 ]
