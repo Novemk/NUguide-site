@@ -684,7 +684,7 @@
     "guide": "<p>本場戰鬥中 <span style=\"color: rgb(226, 96, 79);\">僅可攜帶一名＜守護者＞，且須配置於3號站位。</span></p><p>否則玖夜將給予高額的持續傷害且無法進行治療，任何掙扎皆無效果，戰鬥提前結束。</p>",
     "recommendedTags": [],
     "hidden": false,
-    "archived": false,
+    "archived": true,
     "roundTable": [],
     "rowBreak": false,
     "sortOrder": 9.3
