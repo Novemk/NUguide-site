@@ -1020,7 +1020,8 @@
     "tags": [
       "shield",
       "atk_buff_self",
-      "immune_stun"
+      "immune_stun",
+      "heal_received_up"
     ],
     "ultimateSkill": "<p>使我方全體受到傷害減少 12.5%（2回合）</p><p>並使我方全體受到持續治療量增加 27%（4回合）</p><p>再以自身基礎攻擊力 173% 使我方全體攻擊力增加（1回合）</p><p><br></p><p>［冷卻時間：4 回合］</p>",
     "image": "assets/img/cards/card_051.webp",
@@ -1505,7 +1506,8 @@
     "cd": 4,
     "tags": [
       "atk_buff_self",
-      "immune_silence"
+      "immune_silence",
+      "heal_received_up"
     ],
     "ultimateSkill": "<p>以自身基礎攻擊力 173% 使我方全體攻擊力增加（1回合）</p><p>使我方全體受到治療量增加 17%（4回合）</p><p>並使我方全體 <span style=\"color: rgb(226, 96, 79);\">定位妨礙 </span>的角色造成傷害增加 21％（1回合）</p><p><br></p><p>［冷卻時間：4 回合］</p>",
     "image": "assets/img/cards/card_074.webp",
@@ -1612,7 +1614,8 @@
       "atk_buff_self",
       "heal_tag",
       "hot",
-      "immune_stun"
+      "immune_stun",
+      "heal_received_up"
     ],
     "ultimateSkill": "<p>以自身基礎攻擊力 105% 使我方全體攻擊力增加（1回合）</p><p>使我方全體受到治療量增加 34%（6回合）</p><p>以攻擊力 25% 對我方全體進行治療</p><p>攻擊力 56% 進行持續治療（6回合）</p><p><br></p><p>［冷卻時間：6 回合］</p>",
     "image": "assets/img/cards/card_079.webp",
@@ -2188,7 +2191,8 @@
       "team_proc_dmg_up",
       "atk_buff_self",
       "heal_tag",
-      "immune_silence"
+      "immune_silence",
+      "heal_received_up"
     ],
     "ultimateSkill": "<p>使我方全體受到治療量增加 26%（2回合）</p><p>使除自身以外我方全體觸發技傷害增加 31%（2回合）</p><p>並以自身基礎攻擊力 69% 使我方攻擊力增加（2回合）</p><p>再以攻擊力 21% 對我方全體進行治療</p><p><br></p><p>［冷卻時間：3 回合］</p>",
     "image": "assets/img/cards/card_106.webp",
@@ -2507,7 +2511,8 @@
       "lifesteal",
       "shield",
       "heal_tag",
-      "immune_silence"
+      "immune_silence",
+      "heal_received_up"
     ],
     "ultimateSkill": "<p>使目標攻擊力減少 15%（2回合）</p><p>以攻擊力 100% 對目標造成傷害</p><p>使我方全體 <span style=\"color: rgb(226, 96, 79);\">定位為攻擊、妨礙</span> 的角色獲得吸血效果 51%（4回合）</p><p>再使我方全體 <span style=\"color: rgb(226, 96, 79);\">定位為守護、治療、輔助</span> 的角色受到治療量增加 34%（4回合）</p><p>再以自身最大 HP 45% 對我方全體進行治療</p><p>並變為防禦狀態</p><p><br></p><p>［冷卻時間：4 回合］</p>",
     "image": "assets/img/cards/card_121.webp",
@@ -2527,7 +2532,8 @@
     "tags": [
       "heal_tag",
       "hot",
-      "immune_stun"
+      "immune_stun",
+      "heal_received_up"
     ],
     "ultimateSkill": "<p>使我方全體受到治療量增加 17%（4回合）</p><p>以攻擊力 80% 對我方全體進行治療</p><p>再以攻擊力 20% 對我方全體進行持續治療（4回合）</p><p>使自身獲得「攻擊時，觸發『以攻擊力 61% 對我方全體進行治療』（4回合）」</p><p><br></p><p>［冷卻時間：4 回合］</p>",
     "image": "assets/img/cards/card_122.webp",
@@ -2902,7 +2908,8 @@
     "cd": 3,
     "tags": [
       "atk_buff_self",
-      "immune_silence"
+      "immune_silence",
+      "heal_received_up"
     ],
     "ultimateSkill": "<p>使我方全體受到持續治療量增加 41%（3回合）</p><p>再以自身基礎攻擊力 145% 使我方全體攻擊力增加（1回合）</p><p><br></p><p>［冷卻時間：3 回合］</p>",
     "image": "assets/img/cards/card_141.webp",
