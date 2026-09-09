@@ -190,5 +190,21 @@
         ]
       }
     ]
+  },
+  {
+    "stageId": "stage_7_1",
+    "teams": [
+      {
+        "name": "蝶奧+火狐+SR",
+        "note": "https://youtu.be/KjHHkVpR-uc",
+        "members": [
+          "card_129",
+          "card_064",
+          "card_126",
+          "card_015",
+          "card_127"
+        ]
+      }
+    ]
   }
 ]
