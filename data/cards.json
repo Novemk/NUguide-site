@@ -3035,5 +3035,24 @@
     "imageOffsetX": 0.5722907255739236,
     "imageOffsetY": 0.1626840229907066,
     "sortOrder": 0.04
+  },
+  {
+    "id": "card_148",
+    "name": "教團祭司",
+    "characterId": "char_06",
+    "rarityId": "r",
+    "classId": "buf",
+    "elementId": "wood",
+    "cd": 4,
+    "tags": [
+      "atk_buff_self",
+      "immune_stun"
+    ],
+    "ultimateSkill": "<p>以自身基礎攻擊力 102% 使我方全體攻擊力增加（2回合）</p><p>［冷卻時間：4 回合］</p>",
+    "image": "assets/img/cards/card_148.webp",
+    "imageZoom": 1.23,
+    "imageOffsetX": 0.47810819528335746,
+    "imageOffsetY": 0.22346985656396123,
+    "sortOrder": 0.05
   }
 ]
