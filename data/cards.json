@@ -3151,5 +3151,23 @@
     "imageOffsetX": 0.48973787760605325,
     "imageOffsetY": 0.21232805248979617,
     "sortOrder": 0.091
+  },
+  {
+    "id": "card_154",
+    "name": "組織學士",
+    "characterId": "char_12",
+    "rarityId": "r",
+    "classId": "debuf",
+    "elementId": "water",
+    "cd": 3,
+    "tags": [
+      "immune_sleep"
+    ],
+    "ultimateSkill": "<p>以攻擊力 273% 對目標造成傷害</p><p>以 50% 機率造成目標睡眠 2 回合</p><p>［冷卻時間：3 回合］</p>",
+    "image": "assets/img/cards/card_154.webp",
+    "imageZoom": 1.28,
+    "imageOffsetX": 0.6704512918097513,
+    "imageOffsetY": 0.2799471061228641,
+    "sortOrder": 0.92
   }
 ]
