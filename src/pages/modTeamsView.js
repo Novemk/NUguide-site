@@ -56,6 +56,10 @@ async function init() {
   const cardMaps = { rarityMap: toMap(rarities), classMap: toMap(classes), elementMap: toMap(elements) };
   const elementMap = cardMaps.elementMap;
   const seriesOrder = (siteSettings && siteSettings.seriesOrder) || [];
+  if (siteSettings && siteSettings.modTeamsDescription) {
+    const descEl = document.getElementById('mod-teams-description');
+    if (descEl) descEl.innerHTML = siteSettings.modTeamsDescription;
+  }
   const root = document.getElementById('mv-root');
   root.innerHTML = '';
 
