@@ -174,5 +174,21 @@
         ]
       }
     ]
+  },
+  {
+    "stageId": "stage_7_3",
+    "teams": [
+      {
+        "name": "華歛+華啖+SR",
+        "note": "https://youtu.be/jbuDNlWMr68",
+        "members": [
+          "card_129",
+          "card_096",
+          "card_095",
+          "card_133",
+          "card_127"
+        ]
+      }
+    ]
   }
 ]
