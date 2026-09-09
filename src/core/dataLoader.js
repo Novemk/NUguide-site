@@ -69,6 +69,10 @@ export const DataSources = {
   stageTeams: 'data/stage-teams.json',
   filterSchema: 'data/filter-schema.json',
   siteSettings: 'data/site-settings.json',
+  // 版主的隊伍 (2026-09-09) — separate from stage-teams.json (那是玩家
+  // 自己在瀏覽器存的推薦隊伍/自己的隊伍紀錄); this is admin-only data,
+  // published the same way as everything else in data/.
+  modTeams: 'data/mod-teams.json',
 };
 
 /** Loads every taxonomy file needed to render the filter panel / forms. */

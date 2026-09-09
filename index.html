@@ -35,6 +35,7 @@
       <span style="font-weight:400; font-size:0.85rem; color:var(--text-dim);">跨關卡總覽，快速修改</span>
     </a>
   </div>
+  <p id="mv-hidden-link-host" style="text-align:center; margin-top:18px; font-size:0.75rem;"></p>
 </main>
 
 <div id="footer-host"></div>
@@ -82,6 +83,19 @@ loadJSON(DataSources.siteSettings).then((settings) => {
   }
   if (settings.siteTagline) {
     document.getElementById('site-tagline').textContent = settings.siteTagline;
+  }
+
+  // 隱藏連結到「版主的隊伍」(2026-09-09) — 不放進導覽列，顏色可以在
+  // 「首頁外觀」自己調成接近背景色，達到「有連結但不顯眼」的效果；
+  // 沒設定過顏色的話用一個本來就偏暗的預設值，不會太顯眼。
+  const linkHost = document.getElementById('mv-hidden-link-host');
+  if (linkHost) {
+    const link = document.createElement('a');
+    link.href = 'mod-teams.html';
+    link.textContent = '·';
+    link.style.color = settings.hiddenLinkColor || '#211f30';
+    link.style.textDecoration = 'none';
+    linkHost.appendChild(link);
   }
 
   const hp = settings.homepageStyle;

@@ -1,6 +1,6 @@
 // src/components/TeamEditor.js
 import { openModal, confirmDialog } from './Modal.js';
-import { openCardPicker } from './CardPicker.js';
+import { openCardPicker, openTeamPicker } from './CardPicker.js';
 import { renderCardButton } from './CardButton.js';
 import { loadJSON, DataSources } from '../core/dataLoader.js';
 import { saveTeam, TEAM_MEMBER_SLOTS } from '../core/store.js';
@@ -120,6 +120,19 @@ export function openTeamEditor(stageId, existingTeam = null) {
     const slotsLabel = document.createElement('div');
     slotsLabel.className = 'form-field';
     slotsLabel.innerHTML = '<label>隊員</label>';
+    // 連續選取整隊 (2026-09-09) — 點一次可以連續選好幾張，不用逐格重
+    // 開視窗；下面單獨重選/左右移動某一格的功能還在，兩種都可以用。
+    const bulkPickBtn = document.createElement('button');
+    bulkPickBtn.type = 'button';
+    bulkPickBtn.className = 'btn btn-sm btn-secondary';
+    bulkPickBtn.style.marginBottom = '8px';
+    bulkPickBtn.textContent = '選擇隊伍';
+    bulkPickBtn.addEventListener('click', async () => {
+      const result = await openTeamPicker(members);
+      members = result;
+      renderSlots();
+    });
+    slotsLabel.appendChild(bulkPickBtn);
     const slots = document.createElement('div');
     slots.className = 'team-slots';
     slotsLabel.appendChild(slots);

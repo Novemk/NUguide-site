@@ -1235,3 +1235,30 @@ hr.ql-divider {
 }
 .home-card-overlay strong { color: #fff; font-size: 1.05rem; }
 .home-card-overlay span { color: rgba(255,255,255,0.85); font-size: 0.85rem; }
+
+/* 版主的隊伍展示頁 (2026-09-09) */
+.mv-section-title { font-family: var(--font-display); color: var(--accent-gold); margin: 28px 0 14px; }
+.mv-stage-block { margin-bottom: 24px; padding-bottom: 20px; border-bottom: 1px solid var(--border-soft); }
+.mv-stage-block:last-child { border-bottom: none; }
+.mv-stage-heading { font-family: var(--font-mono); color: var(--accent-teal); margin-bottom: 8px; }
+
+/* =========================================================
+   連續選取隊伍 (CardPicker.js 的 openTeamPicker, 2026-09-09)
+   ========================================================= */
+.tp-slot-row { display: flex; gap: 10px; margin-bottom: 16px; flex-wrap: wrap; }
+.tp-slot {
+  width: 64px; height: 64px;
+  border: 1px dashed var(--border-soft);
+  border-radius: var(--radius-sm);
+  display: flex; align-items: center; justify-content: center;
+  position: relative;
+  background: var(--bg-elevated);
+}
+.tp-slot img { width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-sm); cursor: pointer; }
+.tp-slot-num { color: var(--text-faint); font-size: 1.1rem; font-family: var(--font-mono); }
+.tp-slot-select {
+  position: absolute; left: 0; right: 0; bottom: -22px;
+  font-size: 0.7rem; text-align: center;
+  background: var(--bg-elevated); color: var(--text-dim);
+  border: 1px solid var(--border-soft); border-radius: var(--radius-sm);
+}
