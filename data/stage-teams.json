@@ -1,21 +1,5 @@
 [
   {
-    "stageId": "stage__02",
-    "teams": [
-      {
-        "name": "全SR",
-        "note": "https://youtu.be/BKG_htZ3ne0",
-        "members": [
-          "card_129",
-          "card_127",
-          "card_132",
-          "card_134",
-          "card_130"
-        ]
-      }
-    ]
-  },
-  {
     "stageId": "stage_8_2_2",
     "teams": [
       {
@@ -219,6 +203,22 @@
           "card_127",
           "card_130",
           "card_125"
+        ]
+      }
+    ]
+  },
+  {
+    "stageId": "stage__02",
+    "teams": [
+      {
+        "name": "全SR",
+        "note": "https://youtu.be/BKG_htZ3ne0",
+        "members": [
+          "card_129",
+          "card_127",
+          "card_132",
+          "card_134",
+          "card_130"
         ]
       }
     ]
