@@ -2,8 +2,9 @@
 import { openModal } from './Modal.js';
 import { mountFilterPanel } from './FilterPanel.js';
 import { renderCardGrid } from './CardGrid.js';
+import { renderCardButton } from './CardButton.js';
 import { showCardInfoModal } from './CardInfoModal.js';
-import { loadJSON, DataSources, toMap, resolveCardThumb } from '../core/dataLoader.js';
+import { loadJSON, DataSources, toMap } from '../core/dataLoader.js';
 import { filterCards } from '../modules/cardFilter.js';
 import { sortCardsByOrder } from '../modules/cardSort.js';
 
@@ -151,14 +152,17 @@ export function openTeamPicker(initialMembers = []) {
         slot.className = 'tp-slot';
         const card = cardId ? cardMap.get(cardId) : null;
         if (card) {
-          const img = document.createElement('img');
-          img.src = resolveCardThumb(card.image);
-          img.alt = card.name;
-          slot.appendChild(img);
-          // 點已選好的格子本身 = 直接把這張移除，空出這一格（不用另外
-          // 找刪除按鈕）。
-          slot.title = '點一下移除這張卡';
-          slot.addEventListener('click', () => { members[idx] = null; renderSlots(); renderGrid(); });
+          // 跟卡片資料庫/選卡格子同一顆元件，才會有一樣的裁切定位
+          // (imageZoom/imageOffsetX/imageOffsetY)、稀有度邊框、屬性/
+          // 定位徽章、SSR 字樣——不要自己另外刻一份簡化版
+          // (2026-09-09 修正：原本這裡是純 <img>，跟卡片本體長得不一樣)。
+          // 點卡片本身 = 直接把這張移除，空出這一格（不用另外找刪除按鈕）。
+          const cardBtn = renderCardButton(card, cardMaps, {
+            thumbnail: true,
+            onClick: () => { members[idx] = null; renderSlots(); renderGrid(); },
+          });
+          cardBtn.title = '點一下移除這張卡';
+          slot.appendChild(cardBtn);
 
           const select = document.createElement('select');
           select.className = 'tp-slot-select';
@@ -182,10 +186,13 @@ export function openTeamPicker(initialMembers = []) {
           });
           slot.appendChild(select);
         } else {
+          const empty = document.createElement('div');
+          empty.className = 'tp-slot-empty';
           const num = document.createElement('span');
           num.className = 'tp-slot-num';
           num.textContent = idx + 1;
-          slot.appendChild(num);
+          empty.appendChild(num);
+          slot.appendChild(empty);
         }
         slotRow.appendChild(slot);
       });

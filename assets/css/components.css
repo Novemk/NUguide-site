@@ -1235,20 +1235,31 @@ hr.ql-divider {
 /* =========================================================
    連續選取隊伍 (CardPicker.js 的 openTeamPicker, 2026-09-09)
    ========================================================= */
-.tp-slot-row { display: flex; gap: 10px; margin-bottom: 16px; flex-wrap: wrap; }
+.tp-slot-row {
+  display: flex; gap: 10px; flex-wrap: wrap;
+  /* 選單往下凸出 22px (見 .tp-slot-select 的 bottom:-22px)，這裡的
+     margin-bottom 一定要蓋過那 22px，不然選單最下面一截會被下面的篩選
+     面板蓋住 (2026-09-09 修正：原本只留 16px，少了將近 10px 淨空)。 */
+  margin-bottom: 30px;
+}
 .tp-slot {
   /* 跟全站卡片同一個比例 (見 .card-btn 的 200/260)，不要硬塞正方形，
      不然直式人像用 object-fit:cover 會被裁掉一大截 (2026-09-09 修正)。 */
   width: 64px;
+  position: relative;
+}
+.tp-slot-empty {
   aspect-ratio: 200 / 260;
-  height: auto;
   border: 1px dashed var(--border-soft);
   border-radius: var(--radius-sm);
   display: flex; align-items: center; justify-content: center;
-  position: relative;
   background: var(--bg-elevated);
 }
-.tp-slot img { width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-sm); cursor: pointer; }
+/* 已選的格子改成直接放 renderCardButton() 出來的 .card-btn，跟卡片本體
+   共用同一顆元件 (稀有度邊框/徽章/SSR字樣/imageZoom 裁切定位都跟著來)，
+   這裡只需要把它縮到格子寬度 (2026-09-09 修正：原本是自己刻的 <img>，
+   裁切位置跟卡片本身對不上)。 */
+.tp-slot .card-btn { width: 100%; cursor: pointer; }
 .tp-slot-num { color: var(--text-faint); font-size: 1.1rem; font-family: var(--font-mono); }
 .tp-slot-select {
   position: absolute; left: 50%; bottom: -22px;
