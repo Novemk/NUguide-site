@@ -281,12 +281,12 @@
     "elementId": "fire",
     "cd": 3,
     "tags": [
-      "cleanse",
       "dot",
       "enemy_dmg_down",
-      "immune_stun"
+      "immune_stun",
+      "enemy_dot_dmg_up"
     ],
-    "ultimateSkill": "<p>以自身攻擊力 182% 對目標造成持續傷害（3回合）</p><p>並使目標受到持續傷害效果增加 10%（最多3層）、</p><p>必殺技傷害減少 10%（2回合）</p><p><br></p><p>［冷卻時間：3 回合］</p>",
+    "ultimateSkill": "<p>以自身攻擊力 182% 對目標造成持續傷害（3回合）</p><p>並使目標受到持續傷害效果增加 10%（最多3層）、必殺技傷害減少 10%（2回合）</p><p><br></p><p>［冷卻時間：3 回合］</p>",
     "image": "assets/img/cards/card_015.webp",
     "imageZoom": 1.45,
     "imageOffsetX": 0.33409752727379677,
