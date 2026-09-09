@@ -2743,7 +2743,7 @@
     "id": "card_133",
     "name": "魔人偶",
     "characterId": "char_10",
-    "rarityId": "ssr",
+    "rarityId": "sr",
     "classId": "atk",
     "elementId": "light",
     "cd": 4,

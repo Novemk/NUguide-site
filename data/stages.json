@@ -204,10 +204,27 @@
         "imageOffsetY": 0.5728400770083879
       }
     ],
-    "guide": "<p>本場戰鬥中 <span style=\"color: rgb(226, 96, 79);\">僅可攜帶一名＜守護者＞，且須配置於3號站位。</span></p><p>否則玖夜將給予高額的持續傷害且無法進行治療，任何掙扎皆無效果，戰鬥提前結束。</p>",
+    "guide": "<p>本場戰鬥中 <span style=\"color: rgb(226, 96, 79);\">僅可攜帶一名＜守護者＞，且須配置於3號站位。</span></p><p>否則玖夜將給予高額的持續傷害且無法進行治療，任何掙扎皆無效果，戰鬥提前結束。</p><p><br></p><p>本篇攻略內容全文轉載、整理自噗浪『小爛．日常』&nbsp;的攻略噗！</p><p><a href=\"https://www.plurk.com/p/3ira0vwdik\" rel=\"noopener noreferrer\" target=\"_blank\">魔法檢定所 第二十五季 爬塔記錄</a></p><p>🌹感謝小爛授權轉載</p><hr class=\"ql-divider\"><p><span style=\"color: rgb(201, 164, 92);\">【組隊事項】</span></p><ul><li><span style=\"color: rgb(79, 200, 176);\">必須帶坦，坦必須放第3位</span>，否則第2回合全體被毒死</li><li>T7、13等回合有麻痺機制，<span style=\"color: rgb(79, 200, 176);\">免疫麻痺角可以免麻</span></li></ul><p><br></p><p>由於降攻機制，這關 <span style=\"color: rgb(79, 200, 176);\">適合必殺隊</span>，平常防禦，集中在必殺回合攻擊；雙輔助加攻也是好選擇</p><p>根據關卡機制，坦角頻繁防禦負責扛毒傷，其他人輪流防禦負責扛單擊</p><hr class=\"ql-divider\"><p>我方狀態：</p><p>．攻擊時，自身攻擊力減少7%（最多30層）</p><p>．1245位受到持續傷害增加500%</p><p>．第3位受到必殺傷害增加500%</p><p>．第3位防禦時，自身獲得嘲諷1回合（防禦可嘲諷）</p>",
     "recommendedTags": [],
     "hidden": false,
-    "roundTable": [],
+    "roundTable": [
+      {
+        "col1": "一般回合",
+        "col2": "<span style=\"color: rgb(79, 200, 176);\">坦角防禦</span> 獲得嘲諷（坦角嘲諷來吸魔玖的下毒）"
+      },
+      {
+        "col1": "T2、8、14",
+        "col2": "坦角可攻擊，找坦角以外的人防禦，<br><span style=\"color: rgb(226, 96, 79);\">最後防禦的人獲得嘲諷</span><br>（魔玖必殺單擊，被攻擊者受到傷害增加30%，永久，可疊加）"
+      },
+      {
+        "col1": "T5、11、17",
+        "col2": "坦角可攻擊（普攻坦防禦）找坦角以外的人防禦，<br><span style=\"color: rgb(226, 96, 79);\">最後防禦的人獲得嘲諷</span><br>（魔玖必殺單擊，被攻擊者受到傷害增加30%，永久，可疊加）"
+      },
+      {
+        "col1": "T7、13、19",
+        "col2": "<span style=\"color: rgb(79, 200, 176);\">坦角必殺</span>（1245位被麻痺）"
+      }
+    ],
     "rowBreak": false,
     "sortOrder": 4,
     "archived": false
@@ -220,7 +237,7 @@
     "enemies": [
       {
         "name": "在走廊徘徊的幽",
-        "note": "當累計使用3次強力攻擊時，幽靈手上的燈籠將會爆發強大的力量。",
+        "note": "",
         "elementId": "dark",
         "image": "assets/img/enemies/stage_7_1_2_0_在走廊徘徊的幽.webp",
         "imageZoom": 1.23,
@@ -228,10 +245,15 @@
         "imageOffsetY": 0.5464218250219373
       }
     ],
-    "guide": "<p>至少攜帶3名必殺技CD小於等於4的角色。</p><p>推薦攜帶多名＜輔助者＞，以增加對應挑戰的彈性。</p><p>建議攜帶能在單一回合造成高額傷害的角色。</p>",
+    "guide": "<p>本篇攻略內容全文轉載、整理自噗浪『小爛．日常』&nbsp;的攻略噗！</p><p><a href=\"https://www.plurk.com/p/3imc3tk7xi\" rel=\"noopener noreferrer\" target=\"_blank\">忘卻遺跡 第二十一季 記錄</a></p><p>🌹感謝小爛授權轉載</p><hr class=\"ql-divider\"><p><span style=\"color: rgb(201, 164, 92);\">【概要】</span></p><p><br></p><p>開場我方全體狀態：必殺時，觸發降攻99%（3回合）</p><p>每當我方必殺3次，幽靈的魔法能量注滿了，就會對我方群攻+我方全體受到闇屬性傷害+10%（可疊加）</p><p><br></p><p><span style=\"color: rgb(79, 200, 176);\">本關推薦帶4CD隊</span>，由於有降攻機制，請帶 <span style=\"color: rgb(79, 200, 176);\">輔助加攻</span></p><p><span style=\"color: rgb(79, 200, 176);\">毒隊最佳，其次必殺隊</span>，<span style=\"color: rgb(226, 96, 79);\">不推薦普攻隊/觸發隊</span>，放完必殺後2回合普攻都是99%降攻，但輔助量夠用也是可以打</p><p><br></p><p>機制很簡單，每4回合開3-5次必殺，慢慢打就過了</p>",
     "recommendedTags": [],
     "hidden": false,
-    "roundTable": [],
+    "roundTable": [
+      {
+        "col1": "T5、9、13",
+        "col2": "幽靈減傷600%，我方先找3人必殺（每人消除幽靈降攻200%）<br><span style=\"color: rgb(226, 96, 79);\">最後讓 攻擊手</span> 攻擊對幽靈造成傷害"
+      }
+    ],
     "rowBreak": true,
     "sortOrder": 7.1,
     "archived": false
@@ -261,7 +283,7 @@
         "imageOffsetY": 0.5433607190214774
       }
     ],
-    "guide": "<p><span style=\"color: rgb(201, 164, 92);\">【組隊事項】</span></p><ul><li>這關必須帶<span style=\"color: rgb(79, 200, 176);\">輔助、補師、坦角</span></li><li>第二階段環，減CD機制無效化（魔伊、星布無法減CD）</li><li>推薦帶較高<span style=\"color: rgb(79, 200, 176);\">緩補</span>能力的補師，以及可以<span style=\"color: rgb(79, 200, 176);\">少回合打破護盾</span>的角色（檢定60的護盾是237,648）</li></ul><hr class=\"ql-divider\"><p>環弟身上有個「忌妒與憤怒」的機制</p><p>如果環沒有特別說話／動作，「忌妒與憤怒」會疊加1層，疊到4層環弟焦躁了，我方全體會出現狀態：</p><p>．攻擊時，攻擊力減少10%（可疊加）</p><p>．防禦時，受到治療量減少30%（可疊加）</p><p>然後「忌妒與憤怒」歸零從新倒數</p><hr class=\"ql-divider\"><p><span style=\"color: rgb(226, 96, 79);\">補充，如果帶純毒隊（例如火狐）</span></p><p><span style=\"color: rgb(226, 96, 79);\">即使把【動搖】的護盾和血條都毒掉了，我方不直接攻擊掉1%是不會中斷【動搖】階段的</span></p>",
+    "guide": "<p>本篇攻略內容全文轉載、整理自噗浪『小爛．日常』&nbsp;的攻略噗！</p><p><a href=\"https://www.plurk.com/p/3ira0vwdik\" rel=\"noopener noreferrer\" target=\"_blank\">魔法檢定所 第二十五季 爬塔記錄</a></p><p>🌹感謝小爛授權轉載</p><hr class=\"ql-divider\"><p><span style=\"color: rgb(201, 164, 92);\">【組隊事項】</span></p><ul><li>這關必須帶<span style=\"color: rgb(79, 200, 176);\">輔助、補師、坦角</span></li><li>第二階段環，減CD機制無效化（魔伊、星布無法減CD）</li><li>推薦帶較高<span style=\"color: rgb(79, 200, 176);\">緩補</span>能力的補師，以及可以<span style=\"color: rgb(79, 200, 176);\">少回合打破護盾</span>的角色（檢定60的護盾是237,648）</li></ul><hr class=\"ql-divider\"><p>環弟身上有個「忌妒與憤怒」的機制</p><p>如果環沒有特別說話／動作，「忌妒與憤怒」會疊加1層，疊到4層環弟焦躁了，我方全體會出現狀態：</p><p>．攻擊時，攻擊力減少10%（可疊加）</p><p>．防禦時，受到治療量減少30%（可疊加）</p><p>然後「忌妒與憤怒」歸零從新倒數</p><hr class=\"ql-divider\"><p><span style=\"color: rgb(226, 96, 79);\">補充，如果帶純毒隊（例如火狐）</span></p><p><span style=\"color: rgb(226, 96, 79);\">即使把【動搖】的護盾和血條都毒掉了，我方不直接攻擊掉1%是不會中斷【動搖】階段的</span></p>",
     "recommendedTags": [],
     "hidden": false,
     "archived": false,
@@ -330,7 +352,7 @@
         "imageOffsetY": 0.559185606060606
       }
     ],
-    "guide": "<p><span style=\"color: rgb(201, 164, 92);\">【組隊事項】</span></p><ul><li><span style=\"color: rgb(226, 96, 79);\">要帶坦+坦放第3位</span></li><li>如果想確保全程補師補血，補師要放24位</li><li>20%有鎖血線</li></ul><p><br></p><p>本關有全體反擊機制，<span style=\"color: rgb(79, 200, 176);\">推薦帶不會造成直接傷害的角色</span>，例如毒隊的火狐、鬥牛可。</p><p>含觸發輔助的雙輔助隊（不會攻擊的輔助）也是很好的選擇，可以同時保持輸出和補血量</p><p>如果帶舞可，可以讓舞可只必殺不普攻</p><hr class=\"ql-divider\"><p><span style=\"color: rgb(201, 164, 92);\">小墨菲開場狀態──</span></p><p>被普攻：以60%攻擊力反擊敵方全體</p><p>被必殺：以120%攻擊力反擊敵方第3位</p>",
+    "guide": "<p>本篇攻略內容全文轉載、整理自噗浪『小爛．日常』&nbsp;的攻略噗！</p><p><a href=\"https://www.plurk.com/p/3j030rdzet\" rel=\"noopener noreferrer\" target=\"_blank\">魔法檢定所 第二十六季 爬塔記錄</a></p><p>🌹感謝小爛授權轉載</p><hr class=\"ql-divider\"><p><span style=\"color: rgb(201, 164, 92);\">【組隊事項】</span></p><ul><li><span style=\"color: rgb(226, 96, 79);\">要帶坦+坦放第3位</span></li><li>如果想確保全程補師補血，補師要放24位</li><li>20%有鎖血線</li></ul><p><br></p><p>本關有全體反擊機制，<span style=\"color: rgb(79, 200, 176);\">推薦帶不會造成直接傷害的角色</span>，例如毒隊的火狐、鬥牛可。</p><p>含觸發輔助的雙輔助隊（不會攻擊的輔助）也是很好的選擇，可以同時保持輸出和補血量</p><p>如果帶舞可，可以讓舞可只必殺不普攻</p><hr class=\"ql-divider\"><p><span style=\"color: rgb(201, 164, 92);\">小墨菲開場狀態──</span></p><p>被普攻：以60%攻擊力反擊敵方全體</p><p>被必殺：以120%攻擊力反擊敵方第3位</p>",
     "recommendedTags": [],
     "hidden": false,
     "archived": false,
@@ -359,7 +381,7 @@
     "enemies": [
       {
         "name": "回憶重現 驅魔師",
-        "note": "無視屬性相剋",
+        "note": "",
         "elementId": "light",
         "image": "assets/img/enemies/stage_7_2_0_回憶重現_驅魔師.webp",
         "imageZoom": 1.19,
@@ -368,7 +390,7 @@
       },
       {
         "name": "永夜輪迴 驅魔師",
-        "note": "無視屬性相剋",
+        "note": "★主要打這隻",
         "elementId": "water",
         "image": "assets/img/enemies/stage_7_2_1_永夜輪迴_驅魔師.webp",
         "imageZoom": 1.22,
@@ -376,11 +398,32 @@
         "imageOffsetY": 0.5355113636363636
       }
     ],
-    "guide": "<p>推薦攜帶 <span style=\"color: rgb(226, 96, 79);\">爆發型 </span>的隊伍。</p>",
+    "guide": "<p>本篇攻略內容全文轉載、整理自噗浪『小爛．日常』&nbsp;的攻略噗！</p><p><a href=\"https://www.plurk.com/p/3imc3tk7xi\" rel=\"noopener noreferrer\" target=\"_blank\">忘卻遺跡 第二十一季 記錄</a></p><p>🌹感謝小爛授權轉載</p><hr class=\"ql-divider\"><p><span style=\"color: rgb(201, 164, 92);\">【概要】</span></p><p><br></p><p>敵人是藍毛驅魔師和金毛驅魔師</p><p><span style=\"color: rgb(226, 96, 79);\">關鍵敵人只有藍毛一個</span>，把藍毛打到1%就能通關了（把金毛打到1%不能通關）</p><p><br></p><p>藍毛是弟弟，防禦型驅魔師，HP66%以上減傷70%，HP33%~66%減傷40%，HP33%以下減傷0%</p><p>金毛是哥哥，攻擊型驅魔師，HP66%以上造傷60%，HP33%~66%造傷20%，HP33%以下造傷0%</p><p><br></p><p><span style=\"color: rgb(226, 96, 79);\">平常重點攻擊藍毛</span></p><p>T6、16藍毛幫金毛補滿血之後，</p><p>在T10、20金毛大招之前打金毛的血量降低至66%以下，確保我方全體能夠承受金毛的大招</p><p><br></p><p>本關推薦帶 高易傷角（例如偵布、星副、劍副等等）</p><p>否則前期打藍毛會磨得很苦</p>",
     "recommendedTags": [],
     "hidden": false,
     "archived": false,
-    "roundTable": [],
+    "roundTable": [
+      {
+        "col1": "T5、15",
+        "col2": "全防（我方防禦可減傷50%；藍毛+金毛群攻）"
+      },
+      {
+        "col1": "T6、16",
+        "col2": "（藍毛幫金毛補滿血至100%）"
+      },
+      {
+        "col1": "T9、19",
+        "col2": "（藍毛破防群攻，我方全體受到傷害+60%，降療30%）"
+      },
+      {
+        "col1": "T10、20",
+        "col2": "全攻，記得幫我方全員補血。<br><span style=\"color: rgb(79, 200, 176);\">這回合請把金毛的血量降低至66%以下（金毛破防群攻）</span>"
+      },
+      {
+        "col1": "T11、21",
+        "col2": "（藍毛幫金毛補滿血至100%）"
+      }
+    ],
     "rowBreak": false,
     "sortOrder": 7.2
   },
@@ -392,7 +435,7 @@
     "enemies": [
       {
         "name": "八雲",
-        "note": "《支援請求》時需補血",
+        "note": "",
         "elementId": "water",
         "image": "assets/img/enemies/stage_7_3_0_八雲.webp",
         "imageZoom": 1.23,
@@ -401,7 +444,7 @@
       },
       {
         "name": "蘇爾",
-        "note": "特定回合將對“最大血量最高者”進行重擊",
+        "note": "★主要敵人",
         "elementId": "water",
         "image": "assets/img/enemies/stage_7_3_1_蘇爾.webp",
         "imageZoom": 1.25,
@@ -410,7 +453,7 @@
       },
       {
         "name": "布儡",
-        "note": "《支援請求》時需補血",
+        "note": "",
         "elementId": "wood",
         "image": "assets/img/enemies/stage_7_3_2_布儡.webp",
         "imageZoom": 1.22,
@@ -418,11 +461,28 @@
         "imageOffsetY": 0.5108142507070389
       }
     ],
-    "guide": "<p>推薦攜帶 <span style=\"color: rgb(226, 96, 79);\">爆發型 </span>的隊伍。</p>",
+    "guide": "<p>本篇攻略內容全文轉載、整理自噗浪『小爛．日常』&nbsp;的攻略噗！</p><p><a href=\"https://www.plurk.com/p/3imc3tk7xi\" rel=\"noopener noreferrer\" target=\"_blank\">忘卻遺跡 第二十一季 記錄</a></p><p>🌹感謝小爛授權轉載</p><hr class=\"ql-divider\"><p><span style=\"color: rgb(201, 164, 92);\">【概要】</span></p><p>敵人是蘇爾，八布是我方的夥伴</p><p>八布天生減傷500%，我方攻擊不會傷害他們，只有蘇爾能攻擊八布</p><p>這關除了打蘇爾，重點還要維持八布的血量，八布任何一人死了就會輸</p><p><br></p><p>T5、9等回合，我方攻擊八布可以幫八布補血</p><p>通常八布血量在30%必須補血，打到近20回合通常要每個循環要攻擊八布3次才能穩定八布的血量</p><p><span style=\"color: rgb(79, 200, 176);\">帶群攻角、能攻擊的輔助可以幫八布輕鬆補血</span></p><p><br></p><p><span style=\"color: rgb(226, 96, 79);\">本關全員必殺的回合沒辦法打出任何傷害</span>（輸出全部打在護盾）</p><p>不推薦必殺隊，護可那種一回合爆發型觸發角也不建議上場</p><p><span style=\"color: rgb(79, 200, 176);\">推薦毒隊、普攻隊，其次觸發角</span></p><p>比起SR奧那些必殺/傳統輔助，能攻擊又高血量的兔伊會是較好的選擇</p>",
     "recommendedTags": [],
     "hidden": false,
     "archived": false,
-    "roundTable": [],
+    "roundTable": [
+      {
+        "col1": "T1-3",
+        "col2": "全防"
+      },
+      {
+        "col1": "T4、8、12、16",
+        "col2": "全員必殺<br><span style=\"color: rgb(79, 200, 176);\">蘇爾減傷200%（永久）<br>我方必殺可以令目標 受到傷害增加40%（5人共200%）</span><br>（蘇爾群攻）（我方不必殺並不會被打死）"
+      },
+      {
+        "col1": "T5、9、13、17",
+        "col2": "<span style=\"color: rgb(226, 96, 79);\">HP最高的角色防禦（被敵人痛擊）</span><br>如果八布血量太低，我方需要攻擊他們<br>（當八布被我方攻擊，補血30%）"
+      },
+      {
+        "col1": "T7、11、15、19",
+        "col2": "<span style=\"color: rgb(226, 96, 79);\">ATK最高角色 和 補師防禦</span><br>（ATK最高角色攻擊會自爆，補師攻擊會幫敵人補血10%）"
+      }
+    ],
     "rowBreak": false,
     "sortOrder": 7.3
   },
@@ -442,7 +502,7 @@
         "imageOffsetY": 0.5288508352146813
       }
     ],
-    "guide": "<p><span style=\"color: rgb(201, 164, 92);\">【組隊事項】</span></p><ul><li>＜守護＞的 <span style=\"color: rgb(226, 96, 79);\">必殺技CD需 ≤ 4</span></li><li>本關有回合限制，超過20回合就會輸</li><li>本關必須帶坦，<span style=\"color: rgb(226, 96, 79);\">坦建議放第4位</span>，補師建議帶<span style=\"color: rgb(226, 96, 79);\">緩補</span></li></ul><p><br></p><p>小歛的攻擊全部是群攻，對坦角單坦要求低，</p><p>因此推薦<span style=\"color: rgb(79, 200, 176);\">能強化隊友的坦（兔伊、女僕啖）、反擊坦或者群體盾/減傷坦</span></p><p><br></p><p>由於攻擊妨礙角會提升小歛的攻擊力，輔助補師開必殺能夠降低小歛的減傷，</p><p>因此推薦帶<span style=\"color: rgb(79, 200, 176);\">短CD的輔助和補師，或者雙輔助</span></p><hr class=\"ql-divider\"><p><span style=\"color: rgb(201, 164, 92);\">我方開場狀態──</span></p><p>【攻擊妨礙】攻擊時，小歛的攻擊力增加2%（最多20層）</p><p>【輔助補師】必殺時，小歛的攻擊力增加2%（最多20層） 官方狀態欄文字有bug，</p><p>這個是「必殺時，減少1層小歛的『受到傷害減少6%』」，戰鬥TIPS的描述才是正確。</p>",
+    "guide": "<p>本篇攻略內容全文轉載、整理自噗浪『小爛．日常』&nbsp;的攻略噗！</p><p><a href=\"https://www.plurk.com/p/3j030rdzet\" rel=\"noopener noreferrer\" target=\"_blank\">魔法檢定所 第二十六季 爬塔記錄</a></p><p>🌹感謝小爛授權轉載</p><hr class=\"ql-divider\"><p><span style=\"color: rgb(201, 164, 92);\">【組隊事項】</span></p><ul><li>＜守護＞的 <span style=\"color: rgb(226, 96, 79);\">必殺技CD需 ≤ 4</span></li><li>本關有回合限制，超過20回合就會輸</li><li>本關必須帶坦，<span style=\"color: rgb(226, 96, 79);\">坦建議放第4位</span>，補師建議帶<span style=\"color: rgb(226, 96, 79);\">緩補</span></li></ul><p><br></p><p>小歛的攻擊全部是群攻，對坦角單坦要求低，</p><p>因此推薦<span style=\"color: rgb(79, 200, 176);\">能強化隊友的坦（兔伊、女僕啖）、反擊坦或者群體盾/減傷坦</span></p><p><br></p><p>由於攻擊妨礙角會提升小歛的攻擊力，輔助補師開必殺能夠降低小歛的減傷，</p><p>因此推薦帶<span style=\"color: rgb(79, 200, 176);\">短CD的輔助和補師，或者雙輔助</span></p><hr class=\"ql-divider\"><p><span style=\"color: rgb(201, 164, 92);\">我方開場狀態──</span></p><p>【攻擊妨礙】攻擊時，小歛的攻擊力增加2%（最多20層）</p><p>【輔助補師】必殺時，小歛的攻擊力增加2%（最多20層） 官方狀態欄文字有bug，</p><p>這個是「必殺時，減少1層小歛的『受到傷害減少6%』」，戰鬥TIPS的描述才是正確。</p>",
     "recommendedTags": [],
     "hidden": false,
     "archived": false,
@@ -479,7 +539,7 @@
         "imageOffsetY": 0.5001091427273221
       }
     ],
-    "guide": "<p><span style=\"color: rgb(201, 164, 92);\">【組隊事項】</span></p><ul><li>3星條件要帶<span style=\"color: rgb(226, 96, 79);\">坦</span></li></ul><p><br></p><p>如果戰力不足打超過20回合，可以不帶坦，打2次來2星通關</p><hr class=\"ql-divider\"><p>本關 <span style=\"color: rgb(79, 200, 176);\">90%、50%、30%鎖血</span>，鎖血機制只有在累積足夠的「認可」才能解封</p><p>解鎖 90%：認可 x2（第5回合）</p><p>解鎖 50%：認可 x4（第11回合）</p><p>解鎖 30%：認可 x5（第14回合）</p><p><br></p><p>本關的機制很簡單，不過要注意只有特定回合才能獲得「認可」</p><p>所以隊伍再強，也會長期處於鎖血狀態，<span style=\"color: rgb(79, 200, 176);\">必須等到第15回合，才能等到小玖血量全解鎖。</span></p>",
+    "guide": "<p>本篇攻略內容全文轉載、整理自噗浪『小爛．日常』&nbsp;的攻略噗！</p><p><a href=\"https://www.plurk.com/p/3j030rdzet\" rel=\"noopener noreferrer\" target=\"_blank\">魔法檢定所 第二十六季 爬塔記錄</a></p><p>🌹感謝小爛授權轉載</p><hr class=\"ql-divider\"><p><span style=\"color: rgb(201, 164, 92);\">【組隊事項】</span></p><ul><li>3星條件要帶<span style=\"color: rgb(226, 96, 79);\">坦</span></li></ul><p><br></p><p>如果戰力不足打超過20回合，可以不帶坦，打2次來2星通關</p><hr class=\"ql-divider\"><p>本關 <span style=\"color: rgb(79, 200, 176);\">90%、50%、30%鎖血</span>，鎖血機制只有在累積足夠的「認可」才能解封</p><p>解鎖 90%：認可 x2（第5回合）</p><p>解鎖 50%：認可 x4（第11回合）</p><p>解鎖 30%：認可 x5（第14回合）</p><p><br></p><p>本關的機制很簡單，不過要注意只有特定回合才能獲得「認可」</p><p>所以隊伍再強，也會長期處於鎖血狀態，<span style=\"color: rgb(79, 200, 176);\">必須等到第15回合，才能等到小玖血量全解鎖。</span></p>",
     "recommendedTags": [],
     "hidden": false,
     "archived": false,
@@ -533,7 +593,7 @@
         "imageOffsetY": 0.5143039237983403
       }
     ],
-    "guide": "<p>全R卡可以過，單純跟著機制走13回合的<span style=\"color: rgb(79, 200, 176);\">純機制關</span></p><p>我方不能對敵人造成傷害或補血</p><p>新手可以帶多輔助、坦角、高血量的角色，但<span style=\"color: rgb(226, 96, 79);\">補師只能帶1個</span></p>",
+    "guide": "<p>本篇攻略內容全文轉載、整理自噗浪『小爛．日常』&nbsp;的攻略噗！</p><p><a href=\"https://www.plurk.com/p/3j4bryds2o\" rel=\"noopener noreferrer\" target=\"_blank\">極速追風高難01-03</a></p><p>🌹感謝小爛授權轉載</p><hr class=\"ql-divider\"><p>全R卡可以過，單純跟著機制走13回合的 <span style=\"color: rgb(79, 200, 176);\">純機制關</span></p><p>我方不能對敵人造成傷害或補血</p><p>新手可以帶多輔助、坦角、高血量的角色，但<span style=\"color: rgb(226, 96, 79);\">補師只能帶1個</span></p>",
     "recommendedTags": [],
     "hidden": false,
     "archived": false,
@@ -587,7 +647,7 @@
         "imageOffsetY": 0.4556125738681891
       }
     ],
-    "guide": "<p><span style=\"color: rgb(201, 164, 92);\">【組隊事項】</span></p><p>本關要帶至少 <span style=\"color: rgb(226, 96, 79);\">2名 攻擊 或 妨礙</span> 角色，並且至少有一隻<span style=\"color: rgb(79, 200, 176);\">解除防御</span>（例如SR啖）</p><p>有些回合需要全防，推薦帶<span style=\"color: rgb(226, 96, 79);\">緩補</span></p><hr class=\"ql-divider\"><p>全SR可以過</p><p>敵方兩位賽車手開場有75%減傷（5層15%減傷）</p><p>我方跟著機制走，就會慢慢削走敵方的減傷效果</p>",
+    "guide": "<p>本篇攻略內容全文轉載、整理自噗浪『小爛．日常』&nbsp;的攻略噗！</p><p><a href=\"https://www.plurk.com/p/3j4bryds2o\" rel=\"noopener noreferrer\" target=\"_blank\">極速追風高難01-03</a></p><p>🌹感謝小爛授權轉載</p><hr class=\"ql-divider\"><p><span style=\"color: rgb(201, 164, 92);\">【組隊事項】</span></p><ul><li>本關要帶至少 <span style=\"color: rgb(226, 96, 79);\">2名 攻擊 或 妨礙</span> 角色，並且至少有一隻<span style=\"color: rgb(79, 200, 176);\">解除防御</span>（例如SR啖）</li><li>有些回合需要全防，推薦帶<span style=\"color: rgb(226, 96, 79);\">緩補</span></li></ul><hr class=\"ql-divider\"><p>全SR可以過</p><p>敵方兩位賽車手開場有75%減傷（5層15%減傷）</p><p>我方跟著機制走，就會慢慢削走敵方的減傷效果</p>",
     "recommendedTags": [],
     "hidden": false,
     "archived": false,
@@ -628,7 +688,7 @@
         "imageOffsetY": 0.5148795380153978
       }
     ],
-    "guide": "<p><span style=\"color: rgb(201, 164, 92);\">【組隊事項】</span></p><p>必須攜帶至少三名有攻擊能力的角色</p><p><span style=\"color: rgb(79, 200, 176);\">1、5 號站位成員，必殺技CD須小於等於 4。</span></p><hr class=\"ql-divider\"><p><span style=\"color: rgb(79, 200, 176);\">必殺和防禦都會令我方受到治療量減少</span></p><p>除非打很快or有增療角/強補師，否則不適合星布、魔伊那些減CD角，<span style=\"color: rgb(226, 96, 79);\">甚至不特別推薦帶多個短CD角</span></p><p>本關較難對軸開大，所以<span style=\"color: rgb(226, 96, 79);\">不太推薦必殺隊</span></p><p>推薦帶<span style=\"color: rgb(79, 200, 176);\">普攻角、觸發角、分叉角，可以輕鬆打斷T4回合的蓄力</span></p><hr class=\"ql-divider\"><p>本關無法全SR通關，角色也需要一定強度</p><p><br></p><p>不愧是賽車競速關卡，<span style=\"color: rgb(226, 96, 79);\">超過20回合敵人贏了我們會全滅</span></p><p>屬性相剋無效</p><p><span style=\"color: rgb(79, 200, 176);\">建議補師放第3位</span></p><hr class=\"ql-divider\"><p><span style=\"color: rgb(201, 164, 92);\">開場我方全員的機制──</span></p><p>防禦：使我方全體「受到治療量減少 5%」增加 3 層（ 最多 16 層，共 80% ）</p><p>必殺：使我方全體「受到治療量減少 5%」增加 3 層（ 最多 16 層，共 80% ）</p><p>普攻：使我方全體「受到治療量減少 5%」減少 1 層</p><p><br></p><p><span style=\"color: rgb(226, 96, 79);\">留意敵人在60%、20%會鎖血並追加機制</span></p>",
+    "guide": "<p>本篇攻略內容全文轉載、整理自噗浪『小爛．日常』&nbsp;的攻略噗！</p><p><a href=\"https://www.plurk.com/p/3j4bryds2o\" rel=\"noopener noreferrer\" target=\"_blank\">極速追風高難01-03</a></p><p>🌹感謝小爛授權轉載</p><hr class=\"ql-divider\"><p><span style=\"color: rgb(201, 164, 92);\">【組隊事項】</span></p><ul><li>必須攜帶至少三名有攻擊能力的角色</li><li><span style=\"color: rgb(79, 200, 176);\">1、5 號站位成員，必殺技CD須小於等於 4。</span></li></ul><hr class=\"ql-divider\"><p><span style=\"color: rgb(79, 200, 176);\">必殺和防禦都會令我方受到治療量減少</span></p><p>除非打很快or有增療角/強補師，否則不適合星布、魔伊那些減CD角，<span style=\"color: rgb(226, 96, 79);\">甚至不特別推薦帶多個短CD角</span></p><p>本關較難對軸開大，所以<span style=\"color: rgb(226, 96, 79);\">不太推薦必殺隊</span></p><p>推薦帶<span style=\"color: rgb(79, 200, 176);\">普攻角、觸發角、分叉角，可以輕鬆打斷T4回合的蓄力</span></p><hr class=\"ql-divider\"><p>本關無法全SR通關，角色也需要一定強度</p><p><br></p><p>不愧是賽車競速關卡，<span style=\"color: rgb(226, 96, 79);\">超過20回合敵人贏了我們會全滅</span></p><p>屬性相剋無效</p><p><span style=\"color: rgb(79, 200, 176);\">建議補師放第3位</span></p><hr class=\"ql-divider\"><p><span style=\"color: rgb(201, 164, 92);\">開場我方全員的機制──</span></p><p>防禦：使我方全體「受到治療量減少 5%」增加 3 層（ 最多 16 層，共 80% ）</p><p>必殺：使我方全體「受到治療量減少 5%」增加 3 層（ 最多 16 層，共 80% ）</p><p>普攻：使我方全體「受到治療量減少 5%」減少 1 層</p><p><br></p><p><span style=\"color: rgb(226, 96, 79);\">留意敵人在60%、20%會鎖血並追加機制</span></p>",
     "recommendedTags": [],
     "hidden": false,
     "archived": false,
@@ -666,27 +726,40 @@
     "sortOrder": 3
   },
   {
-    "id": "stage__",
+    "id": "stage_35",
     "chapter": "魔法檢定所 第 26 季",
-    "order": "測試用",
+    "order": "35",
     "title": "（複製）",
     "enemies": [
       {
-        "name": "窺探內心 玖夜",
-        "note": "無視屬性相剋",
-        "elementId": "fire",
-        "image": "assets/img/enemies/stage_7_1_0_窺探內心_玖夜.webp",
-        "imageZoom": 1.2,
-        "imageOffsetX": 0.5771490732828777,
-        "imageOffsetY": 0.5728400770083879
+        "name": "星界探勘 布儡",
+        "note": "",
+        "elementId": "dark",
+        "image": "assets/img/enemies/stage_35_0_星界探勘_布儡.webp",
+        "imageZoom": 1.17,
+        "imageOffsetX": 0.5703323285540194,
+        "imageOffsetY": 0.5926784440582874
       }
     ],
-    "guide": "<p>本場戰鬥中 <span style=\"color: rgb(226, 96, 79);\">僅可攜帶一名＜守護者＞，且須配置於3號站位。</span></p><p>否則玖夜將給予高額的持續傷害且無法進行治療，任何掙扎皆無效果，戰鬥提前結束。</p>",
+    "guide": "<p>本篇攻略內容全文轉載、整理自噗浪『小爛．日常』&nbsp;的攻略噗！</p><p><a href=\"https://www.plurk.com/p/3ira0vwdik\" rel=\"noopener noreferrer\" target=\"_blank\">魔法檢定所 第二十五季 爬塔記錄</a></p><p>🌹感謝小爛授權轉載</p><hr class=\"ql-divider\"><p><span style=\"color: rgb(201, 164, 92);\">【概要】</span></p><p>開局機制：</p><p>．星布受到持續傷害減少60%</p><p><br></p><p>星布有【星隕強襲】（攻擊強化）和【星隕守護】（防禦強化）兩種形態</p><p>【星隕守護】：星布受到傷害減少70%</p><p>【星隕強襲】：星布造成傷害增加50%</p><p><br></p><p>平常星布是【星隕強襲】，一旦我方有人必殺就會立即切換成【星隕守護】狀態</p><p>所以這關對必殺隊不利，毒隊必須帶蝶奧才能有效抵消持續傷害減少buff</p><p>推薦帶高易傷角，普攻隊或觸發隊</p><p><br></p><p>另外這關有個【星隕胎動】的機制，每回合加1層，疊到4層就會引爆，只要有一個人開必殺就會清零</p><p>只要不要帶純大炮隊或瘋狂憋大招，這個機制基本可以無視</p>",
     "recommendedTags": [],
     "hidden": false,
-    "archived": true,
-    "roundTable": [],
+    "archived": false,
+    "roundTable": [
+      {
+        "col1": "T6、11、16",
+        "col2": "體降攻80%中，永久效果<br>（防禦即可清除降攻狀態，但不一定必須在這回合防禦）"
+      },
+      {
+        "col1": "<br>",
+        "col2": "<span style=\"color: rgb(201, 164, 92);\">【星布50%血量後追加以下機制】</span>"
+      },
+      {
+        "col1": "T8、12、16、20",
+        "col2": "<span style=\"color: rgb(79, 200, 176);\">全體防禦（星布群攻）</span><br>註：如果早就打進50%，T11可以保持攻擊，T12防禦可以順便清除降攻"
+      }
+    ],
     "rowBreak": false,
-    "sortOrder": 9.3
+    "sortOrder": 3
   }
 ]
