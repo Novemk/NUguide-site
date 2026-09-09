@@ -204,10 +204,27 @@
         "imageOffsetY": 0.5728400770083879
       }
     ],
-    "guide": "<p>本場戰鬥中 <span style=\"color: rgb(226, 96, 79);\">僅可攜帶一名＜守護者＞，且須配置於3號站位。</span></p><p>否則玖夜將給予高額的持續傷害且無法進行治療，任何掙扎皆無效果，戰鬥提前結束。</p>",
+    "guide": "<p>本場戰鬥中 <span style=\"color: rgb(226, 96, 79);\">僅可攜帶一名＜守護者＞，且須配置於3號站位。</span></p><p>否則玖夜將給予高額的持續傷害且無法進行治療，任何掙扎皆無效果，戰鬥提前結束。</p><p><br></p><p>本篇攻略內容全文轉載、整理自噗浪『小爛．日常』&nbsp;的攻略噗！</p><p><a href=\"https://www.plurk.com/p/3ira0vwdik\" rel=\"noopener noreferrer\" target=\"_blank\">魔法檢定所 第二十五季 爬塔記錄</a></p><p>🌹感謝小爛授權轉載</p><hr class=\"ql-divider\"><p><span style=\"color: rgb(201, 164, 92);\">【組隊事項】</span></p><ul><li><span style=\"color: rgb(79, 200, 176);\">必須帶坦，坦必須放第3位</span>，否則第2回合全體被毒死</li><li>T7、13等回合有麻痺機制，<span style=\"color: rgb(79, 200, 176);\">免疫麻痺角可以免麻</span></li></ul><p><br></p><p>由於降攻機制，這關 <span style=\"color: rgb(79, 200, 176);\">適合必殺隊</span>，平常防禦，集中在必殺回合攻擊；雙輔助加攻也是好選擇</p><p>根據關卡機制，坦角頻繁防禦負責扛毒傷，其他人輪流防禦負責扛單擊</p><hr class=\"ql-divider\"><p>我方狀態：</p><p>．攻擊時，自身攻擊力減少7%（最多30層）</p><p>．1245位受到持續傷害增加500%</p><p>．第3位受到必殺傷害增加500%</p><p>．第3位防禦時，自身獲得嘲諷1回合（防禦可嘲諷）</p>",
     "recommendedTags": [],
     "hidden": false,
-    "roundTable": [],
+    "roundTable": [
+      {
+        "col1": "一般回合",
+        "col2": "<span style=\"color: rgb(79, 200, 176);\">坦角防禦</span> 獲得嘲諷（坦角嘲諷來吸魔玖的下毒）"
+      },
+      {
+        "col1": "T2、8、14",
+        "col2": "坦角可攻擊，找坦角以外的人防禦，<br><span style=\"color: rgb(226, 96, 79);\">最後防禦的人獲得嘲諷</span><br>（魔玖必殺單擊，被攻擊者受到傷害增加30%，永久，可疊加）"
+      },
+      {
+        "col1": "T5、11、17",
+        "col2": "坦角可攻擊（普攻坦防禦）找坦角以外的人防禦，<br><span style=\"color: rgb(226, 96, 79);\">最後防禦的人獲得嘲諷</span><br>（魔玖必殺單擊，被攻擊者受到傷害增加30%，永久，可疊加）"
+      },
+      {
+        "col1": "T7、13、19",
+        "col2": "<span style=\"color: rgb(79, 200, 176);\">坦角必殺</span>（1245位被麻痺）"
+      }
+    ],
     "rowBreak": false,
     "sortOrder": 4,
     "archived": false
