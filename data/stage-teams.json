@@ -80,22 +80,6 @@
     ]
   },
   {
-    "stageId": "stage_7_1_2",
-    "teams": [
-      {
-        "name": "茶狐+魔狐+SR/R",
-        "note": "https://youtu.be/PYHt7aBGcMc",
-        "members": [
-          "card_129",
-          "card_127",
-          null,
-          "card_032",
-          "card_088"
-        ]
-      }
-    ]
-  },
-  {
     "stageId": "stage_55_3",
     "teams": [
       {
@@ -219,6 +203,22 @@
           "card_132",
           "card_134",
           "card_130"
+        ]
+      }
+    ]
+  },
+  {
+    "stageId": "stage_7_1_2",
+    "teams": [
+      {
+        "name": "茶狐+魔狐+SR/R",
+        "note": "https://youtu.be/PYHt7aBGcMc",
+        "members": [
+          "card_129",
+          "card_148",
+          "card_127",
+          "card_032",
+          "card_088"
         ]
       }
     ]
