@@ -1,1 +1,131 @@
-{}
+{
+  "stage_45": {
+    "members": [
+      "card_137",
+      "card_059",
+      "card_072",
+      "card_049",
+      "card_111"
+    ],
+    "roundTable": [
+      {
+        "col1": "<span style=\"color: rgb(201, 164, 92);\">入夢儀</span>",
+        "col2": "<span style=\"color: rgb(79, 200, 176);\">全自動到T4直接進入下一階段</span>"
+      },
+      {
+        "col1": "<span style=\"color: rgb(201, 164, 92);\">環</span>",
+        "col2": ""
+      },
+      {
+        "col1": "T5&nbsp;&nbsp;",
+        "col2": "【開場】：1、345防禦，2攻擊"
+      },
+      {
+        "col1": "T7&nbsp;",
+        "col2": "【孤單】：1、2普攻，4、5開大，3最後防禦。"
+      },
+      {
+        "col1": "T9&nbsp;",
+        "col2": "【得失】：123開大，45防禦。"
+      },
+      {
+        "col1": "<span style=\"color: rgb(226, 96, 79);\">T10&nbsp;</span>",
+        "col2": "<span style=\"color: rgb(226, 96, 79);\">全普攻等CD</span>"
+      },
+      {
+        "col1": "T12",
+        "col2": "全開大"
+      }
+    ]
+  },
+  "stage__02": {
+    "members": [
+      "card_070",
+      "card_113",
+      "card_124",
+      "card_095",
+      "card_111"
+    ],
+    "roundTable": [
+      {
+        "col1": "T2、8",
+        "col2": "全員普攻"
+      },
+      {
+        "col1": "T3、9",
+        "col2": "全員防禦"
+      },
+      {
+        "col1": "T5、11",
+        "col2": "至少2人普攻；對紅色敵人破防"
+      },
+      {
+        "col1": "T6、12",
+        "col2": "補血迎接敵人群攻（兩個敵人群攻，扛不住就防禦）"
+      }
+    ]
+  },
+  "stage__03": {
+    "members": [
+      "card_070",
+      "card_124",
+      "card_113",
+      "card_034",
+      "card_111"
+    ],
+    "roundTable": [
+      {
+        "col1": "T1",
+        "col2": "全普攻"
+      },
+      {
+        "col1": "T2",
+        "col2": "<span style=\"color: rgb(226, 96, 79);\">【左】第 1 位防禦，第 5 位必殺</span><br><span style=\"color: rgb(79, 200, 176);\">【右】第 5 位防禦，第 1 位必殺</span><br>（沒事不要讓其他角色必殺）"
+      },
+      {
+        "col1": "T3",
+        "col2": "全普攻"
+      },
+      {
+        "col1": "T4",
+        "col2": "全必殺（極速啖天多段五下剛好破盾）"
+      },
+      {
+        "col1": "T5",
+        "col2": "全普攻<br><span style=\"color: rgb(201, 164, 92);\">（剛好進入60%鎖血，進入追加機制）</span>"
+      },
+      {
+        "col1": "T6",
+        "col2": "<span style=\"color: rgb(226, 96, 79);\">【封鎖左】第 2 位攻擊，第 4 位防禦</span><br><span style=\"color: rgb(79, 200, 176);\">【封鎖右】第 2 位防禦，第 4 位攻擊</span><br>其他人普攻，不然會被反擊死。"
+      },
+      {
+        "col1": "T7",
+        "col2": "全普攻"
+      },
+      {
+        "col1": "T8",
+        "col2": "<span style=\"color: rgb(226, 96, 79);\">【左】第 1 位防禦，第 5 位必殺</span><br><span style=\"color: rgb(79, 200, 176);\">【右】第 5 位防禦，第 1 位必殺</span>"
+      },
+      {
+        "col1": "T9",
+        "col2": "全普攻"
+      },
+      {
+        "col1": "T10",
+        "col2": "全必殺<br><span style=\"color: rgb(201, 164, 92);\">（沒意外進入20%鎖血，剩下三回合內要打完。）</span>"
+      },
+      {
+        "col1": "T11",
+        "col2": "全防留必殺"
+      },
+      {
+        "col1": "T12",
+        "col2": "<span style=\"color: rgb(226, 96, 79);\">【封鎖左】第 2 位攻擊，第 4 位防禦</span><br><span style=\"color: rgb(79, 200, 176);\">【封鎖右】第 2 位防禦，第 4 位攻擊<br></span>其他普攻留必殺"
+      },
+      {
+        "col1": "T13",
+        "col2": "全必殺結束"
+      }
+    ]
+  }
+}
