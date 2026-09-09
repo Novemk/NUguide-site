@@ -1,21 +1,5 @@
 [
   {
-    "stageId": "stage_50_2",
-    "teams": [
-      {
-        "name": "學奧+白八+SR",
-        "note": "https://youtu.be/voRSVdeF4P",
-        "members": [
-          "card_036",
-          "card_010",
-          "card_126",
-          "card_127",
-          "card_130"
-        ]
-      }
-    ]
-  },
-  {
     "stageId": "stage__02",
     "teams": [
       {
@@ -187,6 +171,22 @@
           "card_130",
           "card_126",
           "card_127"
+        ]
+      }
+    ]
+  },
+  {
+    "stageId": "stage_50_2",
+    "teams": [
+      {
+        "name": "學奧+白八+SR",
+        "note": "https://youtu.be/voRSVdeF4P",
+        "members": [
+          "card_036",
+          "card_010",
+          "card_126",
+          "card_127",
+          "card_130"
         ]
       }
     ]
