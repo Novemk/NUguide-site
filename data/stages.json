@@ -418,7 +418,7 @@
     "enemies": [
       {
         "name": "八雲",
-        "note": "《支援請求》時需補血",
+        "note": "",
         "elementId": "water",
         "image": "assets/img/enemies/stage_7_3_0_八雲.webp",
         "imageZoom": 1.23,
@@ -427,7 +427,7 @@
       },
       {
         "name": "蘇爾",
-        "note": "特定回合將對“最大血量最高者”進行重擊",
+        "note": "★主要敵人",
         "elementId": "water",
         "image": "assets/img/enemies/stage_7_3_1_蘇爾.webp",
         "imageZoom": 1.25,
@@ -436,7 +436,7 @@
       },
       {
         "name": "布儡",
-        "note": "《支援請求》時需補血",
+        "note": "",
         "elementId": "wood",
         "image": "assets/img/enemies/stage_7_3_2_布儡.webp",
         "imageZoom": 1.22,
@@ -444,11 +444,28 @@
         "imageOffsetY": 0.5108142507070389
       }
     ],
-    "guide": "<p>推薦攜帶 <span style=\"color: rgb(226, 96, 79);\">爆發型 </span>的隊伍。</p>",
+    "guide": "<p>本篇攻略內容全文轉載、整理自噗浪『小爛．日常』&nbsp;的攻略噗！</p><p><a href=\"https://www.plurk.com/p/3imc3tk7xi\" rel=\"noopener noreferrer\" target=\"_blank\">忘卻遺跡 第二十一季 記錄</a></p><p>🌹感謝小爛授權轉載</p><hr class=\"ql-divider\"><p><span style=\"color: rgb(201, 164, 92);\">【概要】</span></p><p>敵人是蘇爾，八布是我方的夥伴</p><p>八布天生減傷500%，我方攻擊不會傷害他們，只有蘇爾能攻擊八布</p><p>這關除了打蘇爾，重點還要維持八布的血量，八布任何一人死了就會輸</p><p><br></p><p>T5、9等回合，我方攻擊八布可以幫八布補血</p><p>通常八布血量在30%必須補血，打到近20回合通常要每個循環要攻擊八布3次才能穩定八布的血量</p><p><span style=\"color: rgb(79, 200, 176);\">帶群攻角、能攻擊的輔助可以幫八布輕鬆補血</span></p><p><br></p><p><span style=\"color: rgb(226, 96, 79);\">本關全員必殺的回合沒辦法打出任何傷害</span>（輸出全部打在護盾）</p><p>不推薦必殺隊，護可那種一回合爆發型觸發角也不建議上場</p><p><span style=\"color: rgb(79, 200, 176);\">推薦毒隊、普攻隊，其次觸發角</span></p><p>比起SR奧那些必殺/傳統輔助，能攻擊又高血量的兔伊會是較好的選擇</p>",
     "recommendedTags": [],
     "hidden": false,
     "archived": false,
-    "roundTable": [],
+    "roundTable": [
+      {
+        "col1": "T1-3",
+        "col2": "全防"
+      },
+      {
+        "col1": "T4、8、12、16",
+        "col2": "全員必殺<br><span style=\"color: rgb(79, 200, 176);\">蘇爾減傷200%（永久）<br>我方必殺可以令目標 受到傷害增加40%（5人共200%）</span><br>（蘇爾群攻）（我方不必殺並不會被打死）"
+      },
+      {
+        "col1": "T5、9、13、17",
+        "col2": "<span style=\"color: rgb(226, 96, 79);\">HP最高的角色防禦（被敵人痛擊）</span><br>如果八布血量太低，我方需要攻擊他們<br>（當八布被我方攻擊，補血30%）"
+      },
+      {
+        "col1": "T7、11、15、19",
+        "col2": "<span style=\"color: rgb(226, 96, 79);\">ATK最高角色 和 補師防禦</span><br>（ATK最高角色攻擊會自爆，補師攻擊會幫敵人補血10%）"
+      }
+    ],
     "rowBreak": false,
     "sortOrder": 7.3
   },
