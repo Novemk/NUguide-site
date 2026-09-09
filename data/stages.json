@@ -228,10 +228,15 @@
         "imageOffsetY": 0.5464218250219373
       }
     ],
-    "guide": "<p>至少攜帶3名必殺技CD小於等於4的角色。</p><p>推薦攜帶多名＜輔助者＞，以增加對應挑戰的彈性。</p><p>建議攜帶能在單一回合造成高額傷害的角色。</p>",
+    "guide": "<p>本篇攻略內容全文轉載、整理自噗浪『小爛．日常』&nbsp;的攻略噗！</p><p><a href=\"https://www.plurk.com/p/3imc3tk7xi\" rel=\"noopener noreferrer\" target=\"_blank\">忘卻遺跡 第二十一季 記錄</a></p><p>🌹感謝小爛授權轉載</p><hr class=\"ql-divider\"><p><span style=\"color: rgb(201, 164, 92);\">【概要】</span></p><p><br></p><p>開場我方全體狀態：必殺時，觸發降攻99%（3回合）</p><p>每當我方必殺3次，幽靈的魔法能量注滿了，就會對我方群攻+我方全體受到闇屬性傷害+10%（可疊加）</p><p><br></p><p><span style=\"color: rgb(79, 200, 176);\">本關推薦帶4CD隊</span>，由於有降攻機制，請帶 <span style=\"color: rgb(79, 200, 176);\">輔助加攻</span></p><p><span style=\"color: rgb(79, 200, 176);\">毒隊最佳，其次必殺隊</span>，<span style=\"color: rgb(226, 96, 79);\">不推薦普攻隊/觸發隊</span>，放完必殺後2回合普攻都是99%降攻，但輔助量夠用也是可以打</p><p><br></p><p>機制很簡單，每4回合開3-5次必殺，慢慢打就過了</p>",
     "recommendedTags": [],
     "hidden": false,
-    "roundTable": [],
+    "roundTable": [
+      {
+        "col1": "T5、9、13",
+        "col2": "幽靈減傷600%，我方先找3人必殺（每人消除幽靈降攻200%）<br><span style=\"color: rgb(226, 96, 79);\">最後讓 攻擊手</span> 攻擊對幽靈造成傷害"
+      }
+    ],
     "rowBreak": true,
     "sortOrder": 7.1,
     "archived": false
