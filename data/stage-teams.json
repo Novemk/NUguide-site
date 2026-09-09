@@ -142,5 +142,21 @@
         ]
       }
     ]
+  },
+  {
+    "stageId": "stage_8_3",
+    "teams": [
+      {
+        "name": "全SR",
+        "note": "https://youtu.be/YfMBLJy85QE",
+        "members": [
+          "card_129",
+          "card_126",
+          "card_134",
+          "card_130",
+          "card_127"
+        ]
+      }
+    ]
   }
 ]
