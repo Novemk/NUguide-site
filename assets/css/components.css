@@ -1238,9 +1238,6 @@ hr.ql-divider {
 
 /* 版主的隊伍展示頁 (2026-09-09) */
 .mv-section-title { font-family: var(--font-display); color: var(--accent-gold); margin: 28px 0 14px; }
-.mv-stage-block { margin-bottom: 24px; padding-bottom: 20px; border-bottom: 1px solid var(--border-soft); }
-.mv-stage-block:last-child { border-bottom: none; }
-.mv-stage-heading { font-family: var(--font-mono); color: var(--accent-teal); margin-bottom: 8px; }
 
 /* =========================================================
    連續選取隊伍 (CardPicker.js 的 openTeamPicker, 2026-09-09)
