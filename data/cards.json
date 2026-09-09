@@ -3113,5 +3113,24 @@
     "imageOffsetX": 0.4963591091708679,
     "imageOffsetY": 0.1963558208354513,
     "sortOrder": 0.08
+  },
+  {
+    "id": "card_152",
+    "name": "謎樣人形",
+    "characterId": "char_10",
+    "rarityId": "r",
+    "classId": "atk",
+    "elementId": "water",
+    "cd": 4,
+    "tags": [
+      "aoe",
+      "immune_stun"
+    ],
+    "ultimateSkill": "<p>以攻擊力 203% 對敵全體造成傷害</p><p>［冷卻時間：4 回合］</p>",
+    "image": "assets/img/cards/card_152.webp",
+    "imageZoom": 1.23,
+    "imageOffsetX": 0.5664069320962977,
+    "imageOffsetY": 0.4256291202214521,
+    "sortOrder": 0.09
   }
 ]
