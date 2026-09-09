@@ -2973,9 +2973,9 @@
     ],
     "ultimateSkill": "<p>獲得吸血效果 25%（4回合），</p><p>再以攻擊力 345% 對目標造成傷害</p><p>［冷卻時間：4 回合］</p>",
     "image": "assets/img/cards/card_144.webp",
-    "imageZoom": 1.41,
-    "imageOffsetX": 0.5425556143825798,
-    "imageOffsetY": 0.33997627743575515,
+    "imageZoom": 1.42,
+    "imageOffsetX": 0.5559294857724827,
+    "imageOffsetY": 0.3397378360523896,
     "sortOrder": 0.01
   },
   {
