@@ -683,6 +683,16 @@ hr.ql-divider {
 }
 .opt-avatar.active { opacity: 1; transform: scale(1.08); }
 
+/* 卡片管理側欄的角色篩選 (2026-09-09) — 跟篩選面板同一顆 .opt-avatar，
+   只是邊欄比篩選面板窄，縮小一點、間距也收緊一點才排得下。 */
+.card-character-filter-grid {
+  display: flex; flex-wrap: wrap; gap: 6px;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-soft);
+}
+.card-character-filter-grid .opt-avatar { width: 40px; height: 40px; }
+
 .opt-range {
   border: 1px solid var(--border);
   background: var(--bg-elevated);
