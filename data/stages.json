@@ -364,7 +364,7 @@
     "enemies": [
       {
         "name": "回憶重現 驅魔師",
-        "note": "無視屬性相剋",
+        "note": "",
         "elementId": "light",
         "image": "assets/img/enemies/stage_7_2_0_回憶重現_驅魔師.webp",
         "imageZoom": 1.19,
@@ -373,7 +373,7 @@
       },
       {
         "name": "永夜輪迴 驅魔師",
-        "note": "無視屬性相剋",
+        "note": "★主要打這隻",
         "elementId": "water",
         "image": "assets/img/enemies/stage_7_2_1_永夜輪迴_驅魔師.webp",
         "imageZoom": 1.22,
@@ -381,11 +381,32 @@
         "imageOffsetY": 0.5355113636363636
       }
     ],
-    "guide": "<p>推薦攜帶 <span style=\"color: rgb(226, 96, 79);\">爆發型 </span>的隊伍。</p>",
+    "guide": "<p>本篇攻略內容全文轉載、整理自噗浪『小爛．日常』&nbsp;的攻略噗！</p><p><a href=\"https://www.plurk.com/p/3imc3tk7xi\" rel=\"noopener noreferrer\" target=\"_blank\">忘卻遺跡 第二十一季 記錄</a></p><p>🌹感謝小爛授權轉載</p><hr class=\"ql-divider\"><p><span style=\"color: rgb(201, 164, 92);\">【概要】</span></p><p><br></p><p>敵人是藍毛驅魔師和金毛驅魔師</p><p><span style=\"color: rgb(226, 96, 79);\">關鍵敵人只有藍毛一個</span>，把藍毛打到1%就能通關了（把金毛打到1%不能通關）</p><p><br></p><p>藍毛是弟弟，防禦型驅魔師，HP66%以上減傷70%，HP33%~66%減傷40%，HP33%以下減傷0%</p><p>金毛是哥哥，攻擊型驅魔師，HP66%以上造傷60%，HP33%~66%造傷20%，HP33%以下造傷0%</p><p><br></p><p><span style=\"color: rgb(226, 96, 79);\">平常重點攻擊藍毛</span></p><p>T6、16藍毛幫金毛補滿血之後，</p><p>在T10、20金毛大招之前打金毛的血量降低至66%以下，確保我方全體能夠承受金毛的大招</p><p><br></p><p>本關推薦帶 高易傷角（例如偵布、星副、劍副等等）</p><p>否則前期打藍毛會磨得很苦</p>",
     "recommendedTags": [],
     "hidden": false,
     "archived": false,
-    "roundTable": [],
+    "roundTable": [
+      {
+        "col1": "T5、15",
+        "col2": "全防（我方防禦可減傷50%；藍毛+金毛群攻）"
+      },
+      {
+        "col1": "T6、16",
+        "col2": "（藍毛幫金毛補滿血至100%）"
+      },
+      {
+        "col1": "T9、19",
+        "col2": "（藍毛破防群攻，我方全體受到傷害+60%，降療30%）"
+      },
+      {
+        "col1": "T10、20",
+        "col2": "全攻，記得幫我方全員補血。<br><span style=\"color: rgb(79, 200, 176);\">這回合請把金毛的血量降低至66%以下（金毛破防群攻）</span>"
+      },
+      {
+        "col1": "T11、21",
+        "col2": "（藍毛幫金毛補滿血至100%）"
+      }
+    ],
     "rowBreak": false,
     "sortOrder": 7.2
   },
