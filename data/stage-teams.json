@@ -32,22 +32,6 @@
     ]
   },
   {
-    "stageId": "stage_45",
-    "teams": [
-      {
-        "name": "馬啖+夏啖+馬可+SR",
-        "note": "https://youtu.be/9q0ppmXsuI0",
-        "members": [
-          "card_087",
-          "card_020",
-          "card_086",
-          "card_126",
-          "card_127"
-        ]
-      }
-    ]
-  },
-  {
     "stageId": "stage_8_2_2",
     "teams": [
       {
@@ -187,6 +171,22 @@
           "card_126",
           "card_127",
           "card_130"
+        ]
+      }
+    ]
+  },
+  {
+    "stageId": "stage_45",
+    "teams": [
+      {
+        "name": "馬啖+夏啖+馬可+SR",
+        "note": "https://youtu.be/9q0ppmXsuI0",
+        "members": [
+          "card_087",
+          "card_020",
+          "card_086",
+          "card_126",
+          "card_127"
         ]
       }
     ]
