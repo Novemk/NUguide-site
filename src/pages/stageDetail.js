@@ -122,7 +122,7 @@ async function init() {
       officialWrap.appendChild(renderTeamCard(team, cardMap, { showNote: true, maps: cardMaps, official: true }));
     }
   } else {
-    officialWrap.innerHTML = '<p class="guide-preview">尚未提供推薦隊伍。</p>';
+    officialWrap.innerHTML = '<p class="guide-preview">尚未提供參考隊伍。</p>';
   }
 
   // My teams
