@@ -3017,5 +3017,23 @@
     "imageOffsetX": 0.4954485104490832,
     "imageOffsetY": 0.3727841041719718,
     "sortOrder": 0.03
+  },
+  {
+    "id": "card_147",
+    "name": "騎士",
+    "characterId": "char_05",
+    "rarityId": "r",
+    "classId": "atk",
+    "elementId": "fire",
+    "cd": 3,
+    "tags": [
+      "immune_sleep"
+    ],
+    "ultimateSkill": "<p>以攻擊力 316% 對目標造成傷害</p><p>［冷卻時間：3 回合］</p>",
+    "image": "assets/img/cards/card_147.webp",
+    "imageZoom": 1.15,
+    "imageOffsetX": 0.5722907255739236,
+    "imageOffsetY": 0.1626840229907066,
+    "sortOrder": 0.04
   }
 ]
