@@ -3054,5 +3054,25 @@
     "imageOffsetX": 0.47810819528335746,
     "imageOffsetY": 0.22346985656396123,
     "sortOrder": 0.05
+  },
+  {
+    "id": "card_149",
+    "name": "隱居者",
+    "characterId": "char_07",
+    "rarityId": "r",
+    "classId": "atk",
+    "elementId": "water",
+    "cd": 6,
+    "tags": [
+      "immune_silence",
+      "burst",
+      "break_shield"
+    ],
+    "ultimateSkill": "<p>使目標解除防禦狀態</p><p>再以攻擊力 616% 對目標造成傷害</p><p>［冷卻時間：6 回合］</p>",
+    "image": "assets/img/cards/card_149.webp",
+    "imageZoom": 1.35,
+    "imageOffsetX": 0.4847374833952404,
+    "imageOffsetY": 0.17909669564440361,
+    "sortOrder": 0.06
   }
 ]
