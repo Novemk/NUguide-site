@@ -220,7 +220,7 @@
     "enemies": [
       {
         "name": "在走廊徘徊的幽",
-        "note": "當累計使用3次強力攻擊時，幽靈手上的燈籠將會爆發強大的力量。",
+        "note": "",
         "elementId": "dark",
         "image": "assets/img/enemies/stage_7_1_2_0_在走廊徘徊的幽.webp",
         "imageZoom": 1.23,
