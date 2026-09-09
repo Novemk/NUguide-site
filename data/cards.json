@@ -3132,5 +3132,24 @@
     "imageOffsetX": 0.5664069320962977,
     "imageOffsetY": 0.4256291202214521,
     "sortOrder": 0.09
+  },
+  {
+    "id": "card_153",
+    "name": "世襲少",
+    "characterId": "char_11",
+    "rarityId": "r",
+    "classId": "atk",
+    "elementId": "dark",
+    "cd": 3,
+    "tags": [
+      "atk_buff_enemy",
+      "immune_sleep"
+    ],
+    "ultimateSkill": "<p>使目標受到傷害增加 12%（2回合）</p><p>再以攻擊力 273% 對目標造成傷害</p><p>［冷卻時間：3 回合］</p>",
+    "image": "assets/img/cards/card_153.webp",
+    "imageZoom": 1.31,
+    "imageOffsetX": 0.48973787760605325,
+    "imageOffsetY": 0.21232805248979617,
+    "sortOrder": 0.091
   }
 ]
