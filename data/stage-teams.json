@@ -158,5 +158,21 @@
         ]
       }
     ]
+  },
+  {
+    "stageId": "stage_7_1_2",
+    "teams": [
+      {
+        "name": "茶狐+魔狐+SR/R",
+        "note": "https://youtu.be/PYHt7aBGcMc",
+        "members": [
+          "card_129",
+          "card_127",
+          null,
+          "card_032",
+          "card_088"
+        ]
+      }
+    ]
   }
 ]
