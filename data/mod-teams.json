@@ -311,6 +311,74 @@
       }
     ]
   },
+  "stage_4_3": {
+    "members": [
+      "card_070",
+      "card_113",
+      "card_072",
+      "card_049",
+      "card_111"
+    ],
+    "roundTable": [
+      {
+        "col1": "T4",
+        "col2": "坦嘲諷"
+      },
+      {
+        "col1": "T5",
+        "col2": "攻擊手 對兩人分別必殺"
+      },
+      {
+        "col1": "T7",
+        "col2": "結束"
+      }
+    ]
+  },
+  "stage_4_2": {
+    "members": [
+      "card_137",
+      "card_132",
+      "card_005",
+      "card_098",
+      "card_037"
+    ],
+    "roundTable": []
+  },
+  "stage_4_1": {
+    "members": [
+      "card_087",
+      "card_095",
+      "card_073",
+      "card_034",
+      "card_059"
+    ],
+    "roundTable": [
+      {
+        "col1": "T3",
+        "col2": "1、5位防禦"
+      },
+      {
+        "col1": "T4",
+        "col2": "普攻留必殺"
+      },
+      {
+        "col1": "T5",
+        "col2": "坦角嘲諷"
+      },
+      {
+        "col1": "T6",
+        "col2": "對獄卒破防"
+      },
+      {
+        "col1": "T7",
+        "col2": "普攻 獄卒 三下打暈他"
+      },
+      {
+        "col1": "T8",
+        "col2": "結束"
+      }
+    ]
+  },
   "stage_55_3": {
     "members": [
       "card_070",
