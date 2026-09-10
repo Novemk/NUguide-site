@@ -222,5 +222,43 @@
         ]
       }
     ]
+  },
+  {
+    "stageId": "stage_SP_1",
+    "teams": [
+      {
+        "name": "刃崑+魔伊+偵布+華啖+星布",
+        "note": "https://youtu.be/Zd6y9F12knc",
+        "members": [
+          "card_081",
+          "card_053",
+          "card_062",
+          "card_095",
+          "card_070"
+        ]
+      },
+      {
+        "name": "舞可+馬啖+墨菲+舞布+刃歛",
+        "note": "https://youtu.be/odrDc0oG3IU",
+        "members": [
+          "card_099",
+          "card_087",
+          "card_126",
+          "card_100",
+          "card_082"
+        ]
+      },
+      {
+        "name": "修八+潛崑+屍啖+墨菲+星布",
+        "note": "https://youtu.be/2Db8mrXu1bw",
+        "members": [
+          "card_126",
+          "card_092",
+          "card_091",
+          "card_102",
+          "card_070"
+        ]
+      }
+    ]
   }
 ]
