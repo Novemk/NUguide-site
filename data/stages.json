@@ -226,7 +226,7 @@
       }
     ],
     "rowBreak": false,
-    "sortOrder": 4,
+    "sortOrder": 40.0,
     "archived": false
   },
   {
@@ -334,7 +334,7 @@
       }
     ],
     "rowBreak": false,
-    "sortOrder": 4.5
+    "sortOrder": 45.0
   },
   {
     "id": "stage_50_2",
@@ -371,7 +371,7 @@
       }
     ],
     "rowBreak": true,
-    "sortOrder": 5
+    "sortOrder": 50.0
   },
   {
     "id": "stage_7_2",
@@ -521,7 +521,7 @@
       }
     ],
     "rowBreak": false,
-    "sortOrder": 5.5
+    "sortOrder": 55.0
   },
   {
     "id": "stage_55_3",
@@ -566,7 +566,7 @@
       }
     ],
     "rowBreak": false,
-    "sortOrder": 6
+    "sortOrder": 60.0
   },
   {
     "id": "stage__01",
@@ -620,7 +620,7 @@
       }
     ],
     "rowBreak": false,
-    "sortOrder": 1
+    "sortOrder": 1.0
   },
   {
     "id": "stage__02",
@@ -670,7 +670,7 @@
       }
     ],
     "rowBreak": false,
-    "sortOrder": 2
+    "sortOrder": 2.0
   },
   {
     "id": "stage__03",
@@ -723,7 +723,7 @@
       }
     ],
     "rowBreak": false,
-    "sortOrder": 3
+    "sortOrder": 3.0
   },
   {
     "id": "stage_35",
@@ -760,6 +760,6 @@
       }
     ],
     "rowBreak": false,
-    "sortOrder": 3.5
+    "sortOrder": 35.0
   }
 ]
