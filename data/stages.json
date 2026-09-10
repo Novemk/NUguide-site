@@ -877,5 +877,56 @@
     ],
     "rowBreak": false,
     "sortOrder": 6.3
+  },
+  {
+    "id": "stage_5_1",
+    "chapter": "忘卻遺跡 第 22 季",
+    "order": "5 - 1",
+    "title": "（複製）",
+    "enemies": [
+      {
+        "name": "湖裡的小可愛",
+        "note": "",
+        "elementId": "fire",
+        "image": "assets/img/enemies/stage_5_1_0_湖裡的小可愛.webp",
+        "imageZoom": 1.21,
+        "imageOffsetX": 0.548393743127483,
+        "imageOffsetY": 0.5124007936507937
+      },
+      {
+        "name": "湖中的小可愛",
+        "note": "",
+        "elementId": "water",
+        "image": "assets/img/enemies/stage_5_1_1_湖中的小可愛.webp",
+        "imageZoom": 1.21,
+        "imageOffsetX": 0.5133912076045128,
+        "imageOffsetY": 0.4231156848725818
+      },
+      {
+        "name": "湖底的小可愛",
+        "note": "",
+        "elementId": "wood",
+        "image": "assets/img/enemies/stage_5_1_2_湖底的小可愛.webp",
+        "imageZoom": 1.18,
+        "imageOffsetX": 0.600549062093099,
+        "imageOffsetY": 0.576539774039842
+      }
+    ],
+    "guide": "<p>本篇攻略內容全文轉載、整理自噗浪『小爛．日常』 的攻略噗！</p><p><a href=\"https://www.plurk.com/p/3i3ho86b0w\" rel=\"noopener noreferrer\" target=\"_blank\">忘卻遺跡 第十九季 記錄</a></p><p>🌹感謝小爛授權轉載</p><hr class=\"ql-divider\"><p><span style=\"color: rgb(201, 164, 92);\">【概要】</span></p><p>紅藍綠三隻小可愛，造成傷害100%能夠回復HP吸血，並且被治療時回復量增加25%</p><p>我方全體HP低於2%時無法補血，所以要避免血量太低</p><p><br></p><p>小可愛打人不太痛，但是會群攻，吸血也兇</p><p>一個小可愛死了，剩下的小可愛攻擊力會提升20%</p><p><br></p><p>這關需要<span style=\"color: rgb(79, 200, 176);\">全員3-4CD</span>，推薦帶<span style=\"color: rgb(79, 200, 176);\">緩補</span></p><p>如果有練常駐玖/強群攻角/分叉角可以群攻</p><p>如果無法群攻速攻，建議帶單攻逐一擊破小可愛</p>",
+    "recommendedTags": [],
+    "hidden": false,
+    "archived": false,
+    "roundTable": [
+      {
+        "col1": "T3、8、13",
+        "col2": "全員防禦"
+      },
+      {
+        "col1": "T5、10、15",
+        "col2": "全員必殺"
+      }
+    ],
+    "rowBreak": true,
+    "sortOrder": 5.1
   }
 ]
