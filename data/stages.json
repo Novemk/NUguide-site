@@ -801,7 +801,7 @@
         "col2": "血量最高角色防禦（<span style=\"color: rgb(201, 164, 92);\">黃色蛋包飯&nbsp;</span>打血量最高角色）"
       }
     ],
-    "rowBreak": false,
+    "rowBreak": true,
     "sortOrder": 6.1
   },
   {
