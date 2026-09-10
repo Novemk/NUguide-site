@@ -844,5 +844,38 @@
     ],
     "rowBreak": false,
     "sortOrder": 6.2
+  },
+  {
+    "id": "stage_6_3",
+    "chapter": "忘卻遺跡 第 22 季",
+    "order": "6 - 3",
+    "title": "（複製）（複製）",
+    "enemies": [
+      {
+        "name": "無敵女僕 可可",
+        "note": "無視屬性相剋的",
+        "elementId": "light",
+        "image": "assets/img/enemies/stage_6_3_0_無敵女僕_可可.webp",
+        "imageZoom": 1.21,
+        "imageOffsetX": 0.6002902076357888,
+        "imageOffsetY": 0.563709305675122
+      }
+    ],
+    "guide": "<p>本篇攻略內容全文轉載、整理自噗浪『小爛．日常』 的攻略噗！</p><p><a href=\"https://www.plurk.com/p/3icdvwqjmh\" rel=\"noopener noreferrer\" target=\"_blank\">忘卻遺跡 第二十季 記錄</a></p><p>🌹感謝小爛授權轉載</p><hr class=\"ql-divider\"><p><span style=\"color: rgb(201, 164, 92);\">【概要】</span></p><p>全SR可以過</p><p><br></p><p>這關要 <span style=\"color: rgb(226, 96, 79);\">帶坦，坦角要放第一位</span>，T4要嘲諷，所以 <span style=\"color: rgb(226, 96, 79);\">不能 </span>帶 4CD 嘲諷坦</p><p>可可每次循環都會補血10%，也會不斷降低我方必殺傷害</p><p>推薦帶<span style=\"color: rgb(79, 200, 176);\">減療角</span>例如SR玖，推薦帶<span style=\"color: rgb(79, 200, 176);\">普攻隊/毒隊</span></p><p><br></p><p>可可50%鎖血，之後每一次循環攻擊力提升15%（可疊加）</p><p>但SR隊都能順利過了就不需要擔心血量問題</p>",
+    "recommendedTags": [],
+    "hidden": false,
+    "archived": false,
+    "roundTable": [
+      {
+        "col1": "T4、10、16、22",
+        "col2": "坦角嘲諷，其他人全防<br>（坦角被痛擊+被麻痺）"
+      },
+      {
+        "col1": "T7、13、19、25",
+        "col2": "4人必殺，最後攻擊手普攻或必殺打斷敵人的蓄力<br>（我方全體造成傷害減少450%；<br>&nbsp; &nbsp; 開必殺令我方全體造成傷害增加100%）"
+      }
+    ],
+    "rowBreak": false,
+    "sortOrder": 6.3
   }
 ]
