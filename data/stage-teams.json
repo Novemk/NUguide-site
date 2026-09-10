@@ -314,5 +314,32 @@
         ]
       }
     ]
+  },
+  {
+    "stageId": "stage_SP_4",
+    "teams": [
+      {
+        "name": "魔伊+偵布+馬啖+馬可+星布",
+        "note": "https://youtu.be/hgqeiwT_NKk",
+        "members": [
+          "card_053",
+          "card_062",
+          "card_087",
+          "card_086",
+          "card_070"
+        ]
+      },
+      {
+        "name": "塵陽dustsun 的毒隊",
+        "note": "https://youtube.com/shorts/f8gW5ZOenwc",
+        "members": [
+          "card_079",
+          "card_109",
+          "card_015",
+          "card_064",
+          "card_040"
+        ]
+      }
+    ]
   }
 ]
