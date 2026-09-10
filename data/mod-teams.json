@@ -254,6 +254,63 @@
       }
     ]
   },
+  "stage_5_3": {
+    "members": [
+      "card_070",
+      "card_113",
+      "card_004",
+      "card_095",
+      "card_111"
+    ],
+    "roundTable": [
+      {
+        "col1": "T4",
+        "col2": "1245位防禦"
+      },
+      {
+        "col1": "T5",
+        "col2": "第3位先防禦，再讓1245位必殺打斷精靈蓄力"
+      }
+    ]
+  },
+  "stage_5_2": {
+    "members": [
+      "card_087",
+      "card_059",
+      "card_073",
+      "card_068",
+      "card_049"
+    ],
+    "roundTable": [
+      {
+        "col1": "T5",
+        "col2": "坦角嘲諷"
+      },
+      {
+        "col1": "T7",
+        "col2": "全必殺，破盾"
+      }
+    ]
+  },
+  "stage_5_1": {
+    "members": [
+      "card_137",
+      "card_132",
+      "card_005",
+      "card_034",
+      "card_037"
+    ],
+    "roundTable": [
+      {
+        "col1": "T3、8",
+        "col2": "&nbsp;全員防禦"
+      },
+      {
+        "col1": "T5、10",
+        "col2": "全員必殺"
+      }
+    ]
+  },
   "stage_55_3": {
     "members": [
       "card_070",
