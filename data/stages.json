@@ -226,7 +226,7 @@
       }
     ],
     "rowBreak": false,
-    "sortOrder": 40.0,
+    "sortOrder": 40,
     "archived": false
   },
   {
@@ -334,7 +334,7 @@
       }
     ],
     "rowBreak": false,
-    "sortOrder": 45.0
+    "sortOrder": 45
   },
   {
     "id": "stage_50_2",
@@ -371,7 +371,7 @@
       }
     ],
     "rowBreak": true,
-    "sortOrder": 50.0
+    "sortOrder": 50
   },
   {
     "id": "stage_7_2",
@@ -521,7 +521,7 @@
       }
     ],
     "rowBreak": false,
-    "sortOrder": 55.0
+    "sortOrder": 55
   },
   {
     "id": "stage_55_3",
@@ -566,7 +566,7 @@
       }
     ],
     "rowBreak": false,
-    "sortOrder": 60.0
+    "sortOrder": 60
   },
   {
     "id": "stage__01",
@@ -620,7 +620,7 @@
       }
     ],
     "rowBreak": false,
-    "sortOrder": 1.0
+    "sortOrder": 1
   },
   {
     "id": "stage__02",
@@ -670,7 +670,7 @@
       }
     ],
     "rowBreak": false,
-    "sortOrder": 2.0
+    "sortOrder": 2
   },
   {
     "id": "stage__03",
@@ -723,7 +723,7 @@
       }
     ],
     "rowBreak": false,
-    "sortOrder": 3.0
+    "sortOrder": 3
   },
   {
     "id": "stage_35",
@@ -760,6 +760,48 @@
       }
     ],
     "rowBreak": false,
-    "sortOrder": 35.0
+    "sortOrder": 35
+  },
+  {
+    "id": "stage_6_1",
+    "chapter": "忘卻遺跡 第 22 季",
+    "order": "6 - 1",
+    "title": "",
+    "enemies": [
+      {
+        "name": "辛辣蛋包飯",
+        "note": "",
+        "elementId": "fire",
+        "image": "assets/img/enemies/stage_6_1_0_辛辣蛋包飯.webp",
+        "imageZoom": 1.24,
+        "imageOffsetX": 0.5931287996413577,
+        "imageOffsetY": 0.5286938231668354
+      },
+      {
+        "name": "酸甜蛋包飯",
+        "note": "",
+        "elementId": "light",
+        "image": "assets/img/enemies/stage_6_1_1_酸甜蛋包飯.webp",
+        "imageZoom": 1.2,
+        "imageOffsetX": 0.5722274663392043,
+        "imageOffsetY": 0.5973429824366715
+      }
+    ],
+    "guide": "<p>本篇攻略內容全文轉載、整理自噗浪『小爛．日常』 的攻略噗！</p><p><a href=\"https://www.plurk.com/p/3icdvwqjmh\" rel=\"noopener noreferrer\" target=\"_blank\">忘卻遺跡 第二十季 記錄</a></p><p>🌹感謝小爛授權轉載</p><hr class=\"ql-divider\"><p><span style=\"color: rgb(201, 164, 92);\">【概要】</span></p><p>每回合都必須打兩隻蛋包飯</p><p>否則沒有被吃的蛋包飯受到傷害減少15%（可疊加），也會令我方造成傷害進一步減少</p><p><br></p><p><span style=\"color: rgb(226, 96, 79);\">必須同時把兩款蛋包飯打到1%</span>，否則蛋包飯會自動補血</p><p>蛋包飯會群攻（加觸發攻擊）及毒傷，沒什麼特別，跟著回合打就對了</p><p><br></p><p>建議帶<span style=\"color: rgb(79, 200, 176);\">群攻</span>或<span style=\"color: rgb(79, 200, 176);\">分叉攻擊手</span>，平均削血</p><p>這關不需要坦，但由於每2回合血量最高的角色要防禦，隊伍不夠強／補量不足的話建議帶坦角</p>",
+    "recommendedTags": [],
+    "hidden": false,
+    "archived": false,
+    "roundTable": [
+      {
+        "col1": "T2、6、10、14",
+        "col2": "血量最高角色防禦（<span style=\"color: rgb(226, 96, 79);\">紅色蛋包飯&nbsp;</span>打血量最高角色）"
+      },
+      {
+        "col1": "T4、8、12、16",
+        "col2": "血量最高角色防禦（<span style=\"color: rgb(201, 164, 92);\">黃色蛋包飯&nbsp;</span>打血量最高角色）"
+      }
+    ],
+    "rowBreak": false,
+    "sortOrder": 6.1
   }
 ]
