@@ -3128,9 +3128,9 @@
     ],
     "ultimateSkill": "<p>以攻擊力 203% 對敵全體造成傷害</p><p>［冷卻時間：4 回合］</p>",
     "image": "assets/img/cards/card_152.webp",
-    "imageZoom": 1.23,
-    "imageOffsetX": 0.5664069320962977,
-    "imageOffsetY": 0.4256291202214521,
+    "imageZoom": 1.29,
+    "imageOffsetX": 0.5736343261842511,
+    "imageOffsetY": 0.3771549660745225,
     "sortOrder": 0.09
   },
   {
