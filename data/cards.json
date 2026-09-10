@@ -1469,9 +1469,9 @@
     ],
     "ultimateSkill": "<p>使目標受到 <span style=\"color: rgb(79, 200, 176);\">闇屬性</span> 傷害增加 15%（3回合）\n以攻擊力 100% 對目標造成傷害\n再以最大HP 40% 給予自身護盾（1回合）\n使我方全體必殺技傷害增加 26%（1回合）\n使自身獲得嘲諷（1回合）\n並使自身變為防禦狀態\n［冷卻時間：3 回合］</p>",
     "image": "assets/img/cards/card_072.webp",
-    "imageZoom": 1.41,
-    "imageOffsetX": 0.641090399428211,
-    "imageOffsetY": 0.2451403899760986,
+    "imageZoom": 1.47,
+    "imageOffsetX": 0.578272792984733,
+    "imageOffsetY": 0.26980557415804485,
     "sortOrder": 72
   },
   {
