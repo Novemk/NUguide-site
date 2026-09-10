@@ -1,4 +1,34 @@
 {
+  "stage_7_1_2": {
+    "members": [
+      "card_087",
+      "card_049",
+      "card_020",
+      "card_066",
+      "card_037"
+    ],
+    "roundTable": []
+  },
+  "stage_7_2": {
+    "members": [
+      "card_137",
+      "card_113",
+      "card_068",
+      "card_095",
+      "card_034"
+    ],
+    "roundTable": []
+  },
+  "stage_7_3": {
+    "members": [
+      "card_132",
+      "card_102",
+      "card_111",
+      "card_015",
+      "card_070"
+    ],
+    "roundTable": []
+  },
   "stage_45": {
     "members": [
       "card_137",
