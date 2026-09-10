@@ -1134,5 +1134,55 @@
     "roundTable": [],
     "rowBreak": false,
     "sortOrder": 4.2
+  },
+  {
+    "id": "stage_4_3",
+    "chapter": "忘卻遺跡 第 22 季",
+    "order": "4 - 3",
+    "title": "（複製）（複製）（複製）（複製）",
+    "enemies": [
+      {
+        "name": "艾德蒙特",
+        "note": "",
+        "elementId": "fire",
+        "image": "assets/img/enemies/stage_4_3_0_艾德蒙特.webp",
+        "imageZoom": 1.22,
+        "imageOffsetX": 0.5119632197488736,
+        "imageOffsetY": 0.5584457859848484
+      },
+      {
+        "name": "崑西",
+        "note": "",
+        "elementId": "fire",
+        "image": "assets/img/enemies/stage_4_3_1_崑西.webp",
+        "imageZoom": 1.21,
+        "imageOffsetX": 0.5604430336502062,
+        "imageOffsetY": 0.5259324570994531
+      }
+    ],
+    "guide": "<p>本篇攻略內容全文轉載、整理自噗浪『小爛．日常』 的攻略噗！</p><p><a href=\"https://www.plurk.com/p/3hulu63vkr\" rel=\"noopener noreferrer\" target=\"_blank\">忘卻遺跡 第十八季 記錄</a></p><p>🌹感謝小爛授權轉載</p><hr class=\"ql-divider\"><p><span style=\"color: rgb(201, 164, 92);\">【概要】</span></p><p>帶<span style=\"color: rgb(226, 96, 79);\">輔補坦攻攻</span>，推薦帶<span style=\"color: rgb(79, 200, 176);\">3-4CD攻擊手</span></p><p>一般建議帶 <span style=\"color: rgb(79, 200, 176);\">雙群攻</span>／大招分叉攻擊手</p><p>T5+4n回合對獄副和獄崑大招兩次（雙群攻開大）</p><p>否則崑副的「等待時機」層數會遞減</p><p>等到時機到了，獄崑獄副的普攻傷害會增加20%（最多5層）</p>",
+    "recommendedTags": [],
+    "hidden": false,
+    "archived": false,
+    "roundTable": [
+      {
+        "col1": "T4、8、12、16",
+        "col2": "角嘲諷（被崑副痛擊+降攻）"
+      },
+      {
+        "col1": "T5、9、13、17",
+        "col2": "攻擊手對獄崑和獄副開大"
+      },
+      {
+        "col1": "T6、10、14、18",
+        "col2": "（如果用SR八，在這回合開大緩補）"
+      },
+      {
+        "col1": "T7、11、15、19",
+        "col2": "全防（全體被崑副連擊）"
+      }
+    ],
+    "rowBreak": false,
+    "sortOrder": 4.3
   }
 ]
