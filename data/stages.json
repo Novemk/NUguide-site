@@ -1224,7 +1224,7 @@
       }
     ],
     "rowBreak": true,
-    "sortOrder": 1
+    "sortOrder": 9.1
   },
   {
     "id": "stage_SP_2",
@@ -1311,7 +1311,7 @@
       }
     ],
     "rowBreak": false,
-    "sortOrder": 2
+    "sortOrder": 9.2
   },
   {
     "id": "stage_SP_3",
@@ -1356,7 +1356,7 @@
       }
     ],
     "rowBreak": false,
-    "sortOrder": 3
+    "sortOrder": 9.3
   },
   {
     "id": "stage_SP_4",
@@ -1401,6 +1401,6 @@
       }
     ],
     "rowBreak": false,
-    "sortOrder": 4
+    "sortOrder": 9.4
   }
 ]
