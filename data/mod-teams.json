@@ -190,7 +190,12 @@
       "card_066",
       "card_037"
     ],
-    "roundTable": []
+    "roundTable": [
+      {
+        "col1": "T5、9",
+        "col2": "1、5、2 先必殺，最後讓 攻擊手 攻擊"
+      }
+    ]
   },
   "stage_55_3": {
     "members": [
