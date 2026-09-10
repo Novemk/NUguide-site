@@ -803,5 +803,46 @@
     ],
     "rowBreak": false,
     "sortOrder": 6.1
+  },
+  {
+    "id": "stage_6_2",
+    "chapter": "忘卻遺跡 第 22 季",
+    "order": "6 - 2",
+    "title": "（複製）",
+    "enemies": [
+      {
+        "name": "難相處的鹿妖",
+        "note": "",
+        "elementId": "wood",
+        "image": "assets/img/enemies/stage_6_2_0_難相處的鹿妖.webp",
+        "imageZoom": 1.23,
+        "imageOffsetX": 0.5,
+        "imageOffsetY": 0.5
+      }
+    ],
+    "guide": "<p>本篇攻略內容全文轉載、整理自噗浪『小爛．日常』 的攻略噗！</p><p><a href=\"https://www.plurk.com/p/3icdvwqjmh\" rel=\"noopener noreferrer\" target=\"_blank\">忘卻遺跡 第二十季 記錄</a></p><p>🌹感謝小爛授權轉載</p><hr class=\"ql-divider\"><p><span style=\"color: rgb(201, 164, 92);\">【概要】</span></p><p>全SR可以過</p><p><br></p><p>這關必殺隊無法完美對軸，加上鹿妖客人會隨機挑一名攻擊手減少必殺技傷害40%，所以對必殺隊不算友好，如果帶必殺隊，要確保攻擊手有能力打掉護盾。</p><p><br></p><p>這關不需要帶坦</p><p>但 T7、13、19 等回合的隨機單擊略痛，如果角色練度低血量少打得慢，可以帶隻坦角來擋順便吸走40%的必殺debuff</p>",
+    "recommendedTags": [],
+    "hidden": false,
+    "archived": false,
+    "roundTable": [
+      {
+        "col1": "T5、11、17",
+        "col2": "全員防禦（不防禦會被加CD）"
+      },
+      {
+        "col1": "T6、12、18",
+        "col2": "找兩個人放必殺"
+      },
+      {
+        "col1": "T7、13、19",
+        "col2": "（隨機一位攻擊手必殺傷害減少40%）"
+      },
+      {
+        "col1": "T8、14、20",
+        "col2": "打掉護盾<br>（打掉護盾鹿妖會被麻痺，沒打掉會令我方全體治療量下跌）"
+      }
+    ],
+    "rowBreak": false,
+    "sortOrder": 6.2
   }
 ]
