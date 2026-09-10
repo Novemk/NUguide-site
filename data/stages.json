@@ -1033,5 +1033,46 @@
     ],
     "rowBreak": false,
     "sortOrder": 5.3
+  },
+  {
+    "id": "stage_4_1",
+    "chapter": "忘卻遺跡 第 22 季",
+    "order": "4 - 1",
+    "title": "（複製）（複製）",
+    "enemies": [
+      {
+        "name": "獄卒",
+        "note": "",
+        "elementId": "dark",
+        "image": "assets/img/enemies/stage_4_1_0_獄卒.webp",
+        "imageZoom": 1.19,
+        "imageOffsetX": 0.5409444173177084,
+        "imageOffsetY": 0.521448112615253
+      }
+    ],
+    "guide": "<p>本篇攻略內容全文轉載、整理自噗浪『小爛．日常』 的攻略噗！</p><p><a href=\"https://www.plurk.com/p/3hulu63vkr\" rel=\"noopener noreferrer\" target=\"_blank\">忘卻遺跡 第十八季 記錄</a></p><p>🌹感謝小爛授權轉載</p><hr class=\"ql-divider\"><p><span style=\"color: rgb(201, 164, 92);\">【概要】</span></p><p>全SR可以過</p><p>要帶 <span style=\"color: rgb(79, 200, 176);\">補+坦+3個能攻擊的</span></p><p>（坦角有免麻痺可以帶少一個攻擊，帶分叉攻擊手也可）</p><p>要帶破防角例如SR啖</p><p><br></p><p><span style=\"color: rgb(79, 200, 176);\">第1、5位要放血量較高的角色</span></p><p>但第1、5位會被攻擊+被降療100%，</p><p>坦角承傷力強的仍然可以放1、5位，</p><p>承傷能力差的要小心無法補血而被打死</p>",
+    "recommendedTags": [],
+    "hidden": false,
+    "archived": false,
+    "roundTable": [
+      {
+        "col1": "T3、9、15",
+        "col2": "1、5位防禦"
+      },
+      {
+        "col1": "T5、11、17",
+        "col2": "坦角嘲諷"
+      },
+      {
+        "col1": "T6、12、18",
+        "col2": "對獄卒破防"
+      },
+      {
+        "col1": "T7、13、19",
+        "col2": "普攻 獄卒 三下打暈他"
+      }
+    ],
+    "rowBreak": true,
+    "sortOrder": 4.1
   }
 ]
