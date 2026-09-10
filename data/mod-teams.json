@@ -1,11 +1,11 @@
 {
-  "stage_7_1_2": {
+  "stage_7_3": {
     "members": [
-      "card_087",
-      "card_049",
-      "card_020",
-      "card_066",
-      "card_037"
+      "card_132",
+      "card_102",
+      "card_111",
+      "card_015",
+      "card_070"
     ],
     "roundTable": []
   },
@@ -19,13 +19,43 @@
     ],
     "roundTable": []
   },
-  "stage_7_3": {
+  "stage_7_1_2": {
     "members": [
-      "card_132",
-      "card_102",
-      "card_111",
+      "card_087",
+      "card_049",
+      "card_020",
+      "card_066",
+      "card_037"
+    ],
+    "roundTable": []
+  },
+  "stage_55_3": {
+    "members": [
+      "card_070",
+      "card_059",
+      "card_072",
+      "card_095",
+      "card_111"
+    ],
+    "roundTable": []
+  },
+  "stage_55_2": {
+    "members": [
+      "card_070",
+      "card_087",
+      "card_059",
+      "card_073",
+      "card_111"
+    ],
+    "roundTable": []
+  },
+  "stage_50_2": {
+    "members": [
+      "card_070",
+      "card_113",
+      "card_072",
       "card_015",
-      "card_070"
+      "card_119"
     ],
     "roundTable": []
   },
@@ -77,33 +107,6 @@
       "card_111"
     ],
     "roundTable": []
-  },
-  "stage__02": {
-    "members": [
-      "card_070",
-      "card_113",
-      "card_124",
-      "card_095",
-      "card_111"
-    ],
-    "roundTable": [
-      {
-        "col1": "T2、8",
-        "col2": "全員普攻"
-      },
-      {
-        "col1": "T3、9",
-        "col2": "全員防禦"
-      },
-      {
-        "col1": "T5、11",
-        "col2": "至少2人普攻；對紅色敵人破防"
-      },
-      {
-        "col1": "T6、12",
-        "col2": "補血迎接敵人群攻（兩個敵人群攻，扛不住就防禦）"
-      }
-    ]
   },
   "stage__03": {
     "members": [
@@ -165,6 +168,33 @@
       {
         "col1": "T13",
         "col2": "全必殺結束"
+      }
+    ]
+  },
+  "stage__02": {
+    "members": [
+      "card_070",
+      "card_113",
+      "card_124",
+      "card_095",
+      "card_111"
+    ],
+    "roundTable": [
+      {
+        "col1": "T2、8",
+        "col2": "全員普攻"
+      },
+      {
+        "col1": "T3、9",
+        "col2": "全員防禦"
+      },
+      {
+        "col1": "T5、11",
+        "col2": "至少2人普攻；對紅色敵人破防"
+      },
+      {
+        "col1": "T6、12",
+        "col2": "補血迎接敵人群攻（兩個敵人群攻，扛不住就防禦）"
       }
     ]
   }
