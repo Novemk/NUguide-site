@@ -3109,9 +3109,9 @@
     ],
     "ultimateSkill": "<p>使敵全體受到傷害增加 8%（1回合）</p><p>再以攻擊力 173% 對敵全體造成傷害</p><p>［冷卻時間：4 回合］</p>",
     "image": "assets/img/cards/card_151.webp",
-    "imageZoom": 1.24,
-    "imageOffsetX": 0.4963591091708679,
-    "imageOffsetY": 0.1963558208354513,
+    "imageZoom": 1.25,
+    "imageOffsetX": 0.48144712090698805,
+    "imageOffsetY": 0.40165471095664834,
     "sortOrder": 0.08
   },
   {
