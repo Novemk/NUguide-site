@@ -68,6 +68,16 @@
       }
     ]
   },
+  "stage_35": {
+    "members": [
+      "card_070",
+      "card_137",
+      "card_059",
+      "card_095",
+      "card_111"
+    ],
+    "roundTable": []
+  },
   "stage__02": {
     "members": [
       "card_070",
