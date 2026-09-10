@@ -965,5 +965,73 @@
     ],
     "rowBreak": false,
     "sortOrder": 5.2
+  },
+  {
+    "id": "stage_5_3",
+    "chapter": "忘卻遺跡 第 22 季",
+    "order": "5 - 3",
+    "title": "（複製）（複製）（複製）",
+    "enemies": [
+      {
+        "name": "可爾",
+        "note": "",
+        "elementId": "water",
+        "image": "assets/img/enemies/stage_5_3_0_可爾.webp",
+        "imageZoom": 1.19,
+        "imageOffsetX": 0.5692166780170642,
+        "imageOffsetY": 0.6187969186452514
+      },
+      {
+        "name": "艾德蒙特",
+        "note": "",
+        "elementId": "light",
+        "image": "assets/img/enemies/stage_5_3_1_艾德蒙特.webp",
+        "imageZoom": 1.18,
+        "imageOffsetX": 0.5857211925365307,
+        "imageOffsetY": 0.5715712493208831
+      },
+      {
+        "name": "崑西",
+        "note": "",
+        "elementId": "fire",
+        "image": "assets/img/enemies/stage_5_3_2_崑西.webp",
+        "imageZoom": 1.2,
+        "imageOffsetX": 0.6287428538004557,
+        "imageOffsetY": 0.561365748764178
+      },
+      {
+        "name": "元素精靈",
+        "note": "",
+        "elementId": "water",
+        "image": "assets/img/enemies/stage_5_3_3_元素精靈.webp",
+        "imageZoom": 1.21,
+        "imageOffsetX": 0.610211448063926,
+        "imageOffsetY": 0.5811579919404957
+      }
+    ],
+    "guide": "<p>本篇攻略內容全文轉載、整理自噗浪『小爛．日常』 的攻略噗！</p><p><a href=\"https://www.plurk.com/p/3i3ho86b0w\" rel=\"noopener noreferrer\" target=\"_blank\">忘卻遺跡 第十九季 記錄</a></p><p>🌹感謝小爛授權轉載</p><hr class=\"ql-divider\"><p><span style=\"color: rgb(201, 164, 92);\">【概要】</span></p><p>全R卡可以過</p><p>目標是先打死精靈（三人組不能死），之後幫三人組補滿血</p><p>霜可開場減少治療量500%（共50層），我方普攻減少3層，必殺減5層</p><p><br></p><p>第3位是一個機制開關，決定要額外攻擊還是補血</p><p><span style=\"color: rgb(201, 164, 92);\">第3位攻擊時──</span></p><p>     1245位普攻會追加對 自身以外的我方＆晶霜三人組 以基礎攻擊力250%攻擊</p><p>     1245位必殺會追加對 自身以外的我方＆晶霜三人組 以基礎攻擊力350%攻擊</p><p><span style=\"color: rgb(201, 164, 92);\">第3位防禦時──</span></p><p>     當第3位被攻擊，會以攻擊力350%對晶霜三人組<span style=\"color: rgb(79, 200, 176);\">補血</span></p><p>     （即第3位防禦後會變成AED，1245攻擊就能把AED拿去幫三人組治療）</p><p><br></p><p>正常行動的情況下，第3位和晶霜三人組比較容易受傷</p><p>如果三人組血量不夠，就讓第3位防禦</p><p>如果第3位（或其他人）血量不夠，就讓1245位防禦，補師補血</p>",
+    "recommendedTags": [],
+    "hidden": false,
+    "archived": false,
+    "roundTable": [
+      {
+        "col1": "T4、10、16",
+        "col2": "1245位防禦<br>（全員攻擊會打斷崑西蓄力，不過打斷了也沒有太大影響）"
+      },
+      {
+        "col1": "T5、11、17",
+        "col2": "第3位先防禦，再讓1245位必殺打斷精靈蓄力"
+      },
+      {
+        "col1": "T7、13、19",
+        "col2": "全防（精靈群攻大招，補師被降療200%）"
+      },
+      {
+        "col1": "<span style=\"color: rgb(201, 164, 92);\">精靈死掉後</span>",
+        "col2": "第3位防禦，1245位攻擊，等晶霜三人組滿血或死掉退場"
+      }
+    ],
+    "rowBreak": false,
+    "sortOrder": 5.3
   }
 ]
