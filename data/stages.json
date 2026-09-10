@@ -226,7 +226,7 @@
       }
     ],
     "rowBreak": false,
-    "sortOrder": 40.0,
+    "sortOrder": 40,
     "archived": false
   },
   {
@@ -334,7 +334,7 @@
       }
     ],
     "rowBreak": false,
-    "sortOrder": 45.0
+    "sortOrder": 45
   },
   {
     "id": "stage_50_2",
@@ -371,7 +371,7 @@
       }
     ],
     "rowBreak": true,
-    "sortOrder": 50.0
+    "sortOrder": 50
   },
   {
     "id": "stage_7_2",
@@ -521,7 +521,7 @@
       }
     ],
     "rowBreak": false,
-    "sortOrder": 55.0
+    "sortOrder": 55
   },
   {
     "id": "stage_55_3",
@@ -566,7 +566,7 @@
       }
     ],
     "rowBreak": false,
-    "sortOrder": 60.0
+    "sortOrder": 60
   },
   {
     "id": "stage__01",
@@ -620,7 +620,7 @@
       }
     ],
     "rowBreak": false,
-    "sortOrder": 1.0
+    "sortOrder": 1
   },
   {
     "id": "stage__02",
@@ -670,7 +670,7 @@
       }
     ],
     "rowBreak": false,
-    "sortOrder": 2.0
+    "sortOrder": 2
   },
   {
     "id": "stage__03",
@@ -723,7 +723,7 @@
       }
     ],
     "rowBreak": false,
-    "sortOrder": 3.0
+    "sortOrder": 3
   },
   {
     "id": "stage_35",
@@ -760,6 +760,278 @@
       }
     ],
     "rowBreak": false,
-    "sortOrder": 35.0
+    "sortOrder": 35
+  },
+  {
+    "id": "stage_6_1",
+    "chapter": "忘卻遺跡 第 22 季",
+    "order": "6 - 1",
+    "title": "",
+    "enemies": [
+      {
+        "name": "辛辣蛋包飯",
+        "note": "",
+        "elementId": "fire",
+        "image": "assets/img/enemies/stage_6_1_0_辛辣蛋包飯.webp",
+        "imageZoom": 1.24,
+        "imageOffsetX": 0.5931287996413577,
+        "imageOffsetY": 0.5286938231668354
+      },
+      {
+        "name": "酸甜蛋包飯",
+        "note": "",
+        "elementId": "light",
+        "image": "assets/img/enemies/stage_6_1_1_酸甜蛋包飯.webp",
+        "imageZoom": 1.2,
+        "imageOffsetX": 0.5722274663392043,
+        "imageOffsetY": 0.5973429824366715
+      }
+    ],
+    "guide": "<p>本篇攻略內容全文轉載、整理自噗浪『小爛．日常』 的攻略噗！</p><p><a href=\"https://www.plurk.com/p/3icdvwqjmh\" rel=\"noopener noreferrer\" target=\"_blank\">忘卻遺跡 第二十季 記錄</a></p><p>🌹感謝小爛授權轉載</p><hr class=\"ql-divider\"><p><span style=\"color: rgb(201, 164, 92);\">【概要】</span></p><p>每回合都必須打兩隻蛋包飯</p><p>否則沒有被吃的蛋包飯受到傷害減少15%（可疊加），也會令我方造成傷害進一步減少</p><p><br></p><p><span style=\"color: rgb(226, 96, 79);\">必須同時把兩款蛋包飯打到1%</span>，否則蛋包飯會自動補血</p><p>蛋包飯會群攻（加觸發攻擊）及毒傷，沒什麼特別，跟著回合打就對了</p><p><br></p><p>建議帶<span style=\"color: rgb(79, 200, 176);\">群攻</span>或<span style=\"color: rgb(79, 200, 176);\">分叉攻擊手</span>，平均削血</p><p>這關不需要坦，但由於每2回合血量最高的角色要防禦，隊伍不夠強／補量不足的話建議帶坦角</p>",
+    "recommendedTags": [],
+    "hidden": false,
+    "archived": false,
+    "roundTable": [
+      {
+        "col1": "T2、6、10、14",
+        "col2": "血量最高角色防禦（<span style=\"color: rgb(226, 96, 79);\">紅色蛋包飯&nbsp;</span>打血量最高角色）"
+      },
+      {
+        "col1": "T4、8、12、16",
+        "col2": "血量最高角色防禦（<span style=\"color: rgb(201, 164, 92);\">黃色蛋包飯&nbsp;</span>打血量最高角色）"
+      }
+    ],
+    "rowBreak": true,
+    "sortOrder": 6.1
+  },
+  {
+    "id": "stage_6_2",
+    "chapter": "忘卻遺跡 第 22 季",
+    "order": "6 - 2",
+    "title": "（複製）",
+    "enemies": [
+      {
+        "name": "難相處的鹿妖",
+        "note": "",
+        "elementId": "wood",
+        "image": "assets/img/enemies/stage_6_2_0_難相處的鹿妖.webp",
+        "imageZoom": 1.23,
+        "imageOffsetX": 0.5,
+        "imageOffsetY": 0.5
+      }
+    ],
+    "guide": "<p>本篇攻略內容全文轉載、整理自噗浪『小爛．日常』 的攻略噗！</p><p><a href=\"https://www.plurk.com/p/3icdvwqjmh\" rel=\"noopener noreferrer\" target=\"_blank\">忘卻遺跡 第二十季 記錄</a></p><p>🌹感謝小爛授權轉載</p><hr class=\"ql-divider\"><p><span style=\"color: rgb(201, 164, 92);\">【概要】</span></p><p>全SR可以過</p><p><br></p><p>這關必殺隊無法完美對軸，加上鹿妖客人會隨機挑一名攻擊手減少必殺技傷害40%，所以對必殺隊不算友好，如果帶必殺隊，要確保攻擊手有能力打掉護盾。</p><p><br></p><p>這關不需要帶坦</p><p>但 T7、13、19 等回合的隨機單擊略痛，如果角色練度低血量少打得慢，可以帶隻坦角來擋順便吸走40%的必殺debuff</p><hr class=\"ql-divider\"><p><span style=\"color: rgb(201, 164, 92);\">官方TIPS：</span></p><p>推薦以<span style=\"color: rgb(79, 200, 176);\">普攻型</span>傷害及<span style=\"color: rgb(79, 200, 176);\">持續傷害</span>為主要輸出的角色。</p>",
+    "recommendedTags": [],
+    "hidden": false,
+    "archived": false,
+    "roundTable": [
+      {
+        "col1": "T5、11、17",
+        "col2": "全員防禦（不防禦會被加CD）"
+      },
+      {
+        "col1": "T6、12、18",
+        "col2": "找兩個人放必殺"
+      },
+      {
+        "col1": "T7、13、19",
+        "col2": "（隨機一位攻擊手必殺傷害減少40%）"
+      },
+      {
+        "col1": "T8、14、20",
+        "col2": "打掉護盾<br>（打掉護盾鹿妖會被麻痺，沒打掉會令我方全體治療量下跌）"
+      }
+    ],
+    "rowBreak": false,
+    "sortOrder": 6.2
+  },
+  {
+    "id": "stage_6_3",
+    "chapter": "忘卻遺跡 第 22 季",
+    "order": "6 - 3",
+    "title": "（複製）（複製）",
+    "enemies": [
+      {
+        "name": "無敵女僕 可可",
+        "note": "無視屬性相剋的",
+        "elementId": "light",
+        "image": "assets/img/enemies/stage_6_3_0_無敵女僕_可可.webp",
+        "imageZoom": 1.21,
+        "imageOffsetX": 0.6002902076357888,
+        "imageOffsetY": 0.563709305675122
+      }
+    ],
+    "guide": "<p>本篇攻略內容全文轉載、整理自噗浪『小爛．日常』 的攻略噗！</p><p><a href=\"https://www.plurk.com/p/3icdvwqjmh\" rel=\"noopener noreferrer\" target=\"_blank\">忘卻遺跡 第二十季 記錄</a></p><p>🌹感謝小爛授權轉載</p><hr class=\"ql-divider\"><p><span style=\"color: rgb(201, 164, 92);\">【概要】</span></p><p>全SR可以過</p><p><br></p><p>這關要 <span style=\"color: rgb(226, 96, 79);\">帶坦，坦角要放第一位</span>，T4要嘲諷，所以 <span style=\"color: rgb(226, 96, 79);\">不能 </span>帶 4CD 嘲諷坦</p><p>可可每次循環都會補血10%，也會不斷降低我方必殺傷害</p><p>推薦帶<span style=\"color: rgb(79, 200, 176);\">減療角</span>例如SR玖，推薦帶<span style=\"color: rgb(79, 200, 176);\">普攻隊/毒隊</span></p><p><br></p><p>可可50%鎖血，之後每一次循環攻擊力提升15%（可疊加）</p><p>但SR隊都能順利過了就不需要擔心血量問題</p>",
+    "recommendedTags": [],
+    "hidden": false,
+    "archived": false,
+    "roundTable": [
+      {
+        "col1": "T4、10、16、22",
+        "col2": "坦角嘲諷，其他人全防<br>（坦角被痛擊+被麻痺）"
+      },
+      {
+        "col1": "T7、13、19、25",
+        "col2": "4人必殺，最後攻擊手普攻或必殺打斷敵人的蓄力<br>（我方全體造成傷害減少450%；<br>&nbsp; &nbsp; 開必殺令我方全體造成傷害增加100%）"
+      }
+    ],
+    "rowBreak": false,
+    "sortOrder": 6.3
+  },
+  {
+    "id": "stage_5_1",
+    "chapter": "忘卻遺跡 第 22 季",
+    "order": "5 - 1",
+    "title": "（複製）",
+    "enemies": [
+      {
+        "name": "湖裡的小可愛",
+        "note": "",
+        "elementId": "fire",
+        "image": "assets/img/enemies/stage_5_1_0_湖裡的小可愛.webp",
+        "imageZoom": 1.21,
+        "imageOffsetX": 0.548393743127483,
+        "imageOffsetY": 0.5124007936507937
+      },
+      {
+        "name": "湖中的小可愛",
+        "note": "",
+        "elementId": "water",
+        "image": "assets/img/enemies/stage_5_1_1_湖中的小可愛.webp",
+        "imageZoom": 1.21,
+        "imageOffsetX": 0.5133912076045128,
+        "imageOffsetY": 0.4231156848725818
+      },
+      {
+        "name": "湖底的小可愛",
+        "note": "",
+        "elementId": "wood",
+        "image": "assets/img/enemies/stage_5_1_2_湖底的小可愛.webp",
+        "imageZoom": 1.18,
+        "imageOffsetX": 0.600549062093099,
+        "imageOffsetY": 0.576539774039842
+      }
+    ],
+    "guide": "<p>本篇攻略內容全文轉載、整理自噗浪『小爛．日常』 的攻略噗！</p><p><a href=\"https://www.plurk.com/p/3i3ho86b0w\" rel=\"noopener noreferrer\" target=\"_blank\">忘卻遺跡 第十九季 記錄</a></p><p>🌹感謝小爛授權轉載</p><hr class=\"ql-divider\"><p><span style=\"color: rgb(201, 164, 92);\">【概要】</span></p><p>紅藍綠三隻小可愛，造成傷害100%能夠回復HP吸血，並且被治療時回復量增加25%</p><p>我方全體HP低於2%時無法補血，所以要避免血量太低</p><p><br></p><p>小可愛打人不太痛，但是會群攻，吸血也兇</p><p>一個小可愛死了，剩下的小可愛攻擊力會提升20%</p><p><br></p><p>這關需要<span style=\"color: rgb(79, 200, 176);\">全員3-4CD</span>，推薦帶<span style=\"color: rgb(79, 200, 176);\">緩補</span></p><p>如果有練常駐玖/強群攻角/分叉角可以群攻</p><p>如果無法群攻速攻，建議帶單攻逐一擊破小可愛</p>",
+    "recommendedTags": [],
+    "hidden": false,
+    "archived": false,
+    "roundTable": [
+      {
+        "col1": "T3、8、13",
+        "col2": "全員防禦"
+      },
+      {
+        "col1": "T5、10、15",
+        "col2": "全員必殺"
+      }
+    ],
+    "rowBreak": true,
+    "sortOrder": 5.1
+  },
+  {
+    "id": "stage_5_2",
+    "chapter": "忘卻遺跡 第 22 季",
+    "order": "5 - 2",
+    "title": "（複製）（複製）",
+    "enemies": [
+      {
+        "name": "兇猛的雪怪",
+        "note": "",
+        "elementId": "dark",
+        "image": "assets/img/enemies/stage_5_2_0_兇猛的雪怪.webp",
+        "imageZoom": 1.18,
+        "imageOffsetX": 0.5723754035101997,
+        "imageOffsetY": 0.5546170603302177
+      }
+    ],
+    "guide": "<p>本篇攻略內容全文轉載、整理自噗浪『小爛．日常』 的攻略噗！</p><p><a href=\"https://www.plurk.com/p/3i3ho86b0w\" rel=\"noopener noreferrer\" target=\"_blank\">忘卻遺跡 第十九季 記錄</a></p><p>🌹感謝小爛授權轉載</p><hr class=\"ql-divider\"><p><span style=\"color: rgb(201, 164, 92);\">【概要】</span></p><p>雪怪每回合都會長毛，長出「受到傷害減少60%（2層，共120%）」，被攻擊會減少1層，所以我方第3下攻擊才有100%輸出，我方全體攻擊時，會令自身受到傷害增加2%（可以疊50層）</p><p><br></p><p>這關需要帶<span style=\"color: rgb(79, 200, 176);\">至少3隻能攻擊的角色</span></p><p>強力推薦帶能攻擊的輔助，如果只有SR奧那倒不如換成兔伊+3攻+補</p><p><br></p><p><span style=\"color: rgb(79, 200, 176);\">推薦帶必殺隊</span>，平常防禦避免debuff，必殺回合大招就安全了</p><p><span style=\"color: rgb(79, 200, 176);\">攻擊順序由弱至強，先讓坦角攻擊，最後讓主攻擊手進攻</span></p>",
+    "recommendedTags": [],
+    "hidden": false,
+    "archived": false,
+    "roundTable": [
+      {
+        "col1": "T5、12",
+        "col2": "坦角嘲諷（坦角攻擊可消除其他人身上的嘲諷效果）"
+      },
+      {
+        "col1": "T7、14",
+        "col2": "必須打破雪怪護盾，否則被大招全滅"
+      },
+      {
+        "col1": "",
+        "col2": "註：雪怪護盾破了被打暈，就無法減少層數<br>帶4個攻擊手打4下也只能減少3層<br>（第4下雪怪暈了不能減少層數），必定有+25%攻擊力殘留<br>如果只帶3個能攻擊的，雪怪有+50%攻擊力殘留<br>但是雪怪的+25%攻擊力buff最多只有4層，T14會重置"
+      }
+    ],
+    "rowBreak": false,
+    "sortOrder": 5.2
+  },
+  {
+    "id": "stage_5_3",
+    "chapter": "忘卻遺跡 第 22 季",
+    "order": "5 - 3",
+    "title": "（複製）（複製）（複製）",
+    "enemies": [
+      {
+        "name": "可爾",
+        "note": "",
+        "elementId": "water",
+        "image": "assets/img/enemies/stage_5_3_0_可爾.webp",
+        "imageZoom": 1.19,
+        "imageOffsetX": 0.5692166780170642,
+        "imageOffsetY": 0.6187969186452514
+      },
+      {
+        "name": "艾德蒙特",
+        "note": "",
+        "elementId": "light",
+        "image": "assets/img/enemies/stage_5_3_1_艾德蒙特.webp",
+        "imageZoom": 1.18,
+        "imageOffsetX": 0.5857211925365307,
+        "imageOffsetY": 0.5715712493208831
+      },
+      {
+        "name": "崑西",
+        "note": "",
+        "elementId": "fire",
+        "image": "assets/img/enemies/stage_5_3_2_崑西.webp",
+        "imageZoom": 1.2,
+        "imageOffsetX": 0.6287428538004557,
+        "imageOffsetY": 0.561365748764178
+      },
+      {
+        "name": "元素精靈",
+        "note": "",
+        "elementId": "water",
+        "image": "assets/img/enemies/stage_5_3_3_元素精靈.webp",
+        "imageZoom": 1.21,
+        "imageOffsetX": 0.610211448063926,
+        "imageOffsetY": 0.5811579919404957
+      }
+    ],
+    "guide": "<p>本篇攻略內容全文轉載、整理自噗浪『小爛．日常』 的攻略噗！</p><p><a href=\"https://www.plurk.com/p/3i3ho86b0w\" rel=\"noopener noreferrer\" target=\"_blank\">忘卻遺跡 第十九季 記錄</a></p><p>🌹感謝小爛授權轉載</p><hr class=\"ql-divider\"><p><span style=\"color: rgb(201, 164, 92);\">【概要】</span></p><p>全R卡可以過</p><p>目標是先打死精靈（三人組不能死），之後幫三人組補滿血</p><p>霜可開場減少治療量500%（共50層），我方普攻減少3層，必殺減5層</p><p><br></p><p>第3位是一個機制開關，決定要額外攻擊還是補血</p><p><span style=\"color: rgb(201, 164, 92);\">第3位攻擊時──</span></p><p>     1245位普攻會追加對 自身以外的我方＆晶霜三人組 以基礎攻擊力250%攻擊</p><p>     1245位必殺會追加對 自身以外的我方＆晶霜三人組 以基礎攻擊力350%攻擊</p><p><span style=\"color: rgb(201, 164, 92);\">第3位防禦時──</span></p><p>     當第3位被攻擊，會以攻擊力350%對晶霜三人組<span style=\"color: rgb(79, 200, 176);\">補血</span></p><p>     （即第3位防禦後會變成AED，1245攻擊就能把AED拿去幫三人組治療）</p><p><br></p><p>正常行動的情況下，第3位和晶霜三人組比較容易受傷</p><p>如果三人組血量不夠，就讓第3位防禦</p><p>如果第3位（或其他人）血量不夠，就讓1245位防禦，補師補血</p>",
+    "recommendedTags": [],
+    "hidden": false,
+    "archived": false,
+    "roundTable": [
+      {
+        "col1": "T4、10、16",
+        "col2": "1245位防禦<br>（全員攻擊會打斷崑西蓄力，不過打斷了也沒有太大影響）"
+      },
+      {
+        "col1": "T5、11、17",
+        "col2": "第3位先防禦，再讓1245位必殺打斷精靈蓄力"
+      },
+      {
+        "col1": "T7、13、19",
+        "col2": "全防（精靈群攻大招，補師被降療200%）"
+      },
+      {
+        "col1": "<span style=\"color: rgb(201, 164, 92);\">精靈死掉後</span>",
+        "col2": "第3位防禦，1245位攻擊，等晶霜三人組滿血或死掉退場"
+      }
+    ],
+    "rowBreak": false,
+    "sortOrder": 5.3
   }
 ]
