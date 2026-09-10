@@ -260,5 +260,32 @@
         ]
       }
     ]
+  },
+  {
+    "stageId": "stage_SP_2",
+    "teams": [
+      {
+        "name": "兔伊+華歛+劍副+華啖+眼鏡伊",
+        "note": "https://youtu.be/GSQ0XrnwhnA",
+        "members": [
+          "card_080",
+          "card_096",
+          "card_084",
+          "card_095",
+          "card_108"
+        ]
+      },
+      {
+        "name": "舞可+馬啖+舞布+馬可+SR八",
+        "note": "https://youtu.be/yauV4GMstN0",
+        "members": [
+          "card_099",
+          "card_087",
+          "card_100",
+          "card_086",
+          "card_127"
+        ]
+      }
+    ]
   }
 ]
