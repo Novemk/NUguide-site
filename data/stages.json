@@ -1225,5 +1225,92 @@
     ],
     "rowBreak": true,
     "sortOrder": 1
+  },
+  {
+    "id": "stage_SP_2",
+    "chapter": "忘卻遺跡 第 22 季",
+    "order": "SP - 2",
+    "title": "帆潮小鎮之探（複製）（複製）",
+    "enemies": [
+      {
+        "name": "艾斯特",
+        "note": "劇情龍套",
+        "elementId": "water",
+        "image": "assets/img/enemies/stage_SP_2_0_艾斯特.webp",
+        "imageZoom": 1.2,
+        "imageOffsetX": 0.5207776925303107,
+        "imageOffsetY": 0.5241613388061523
+      },
+      {
+        "name": "墨菲",
+        "note": "劇情龍套",
+        "elementId": "fire",
+        "image": "assets/img/enemies/stage_SP_2_1_墨菲.webp",
+        "imageZoom": 1.22,
+        "imageOffsetX": 0.601110876364412,
+        "imageOffsetY": 0.4310493469238281
+      },
+      {
+        "name": "休伊的意識？",
+        "note": "主要打這位",
+        "elementId": "light",
+        "image": "assets/img/enemies/stage_SP_2_2_休伊的意識_.webp",
+        "imageZoom": 1.59,
+        "imageOffsetX": 0.5416315500872694,
+        "imageOffsetY": 0.704463320230617
+      }
+    ],
+    "guide": "<p>本篇攻略內容，全文轉載自噗浪『小爛．日常』&nbsp;的攻略噗</p><p><a href=\"https://www.plurk.com/p/3icdvwqjmh\" rel=\"noopener noreferrer\" target=\"_blank\">忘卻遺跡 第二十季 記錄</a></p><p>🌹感謝小爛授權轉載</p><hr class=\"ql-divider\"><p><span style=\"color: rgb(201, 164, 92);\">【概要】</span></p><p>剋屬無效</p><p>我方全體被附上CD變動免疫效果</p><p>星布、魔伊等減CD無效，偵布、遊布等等也沒辦法第1回合開必殺</p><p><br></p><p><span style=\"color: rgb(201, 164, 92);\">第一階段：</span></p><p>休伊每回合受到傷害減少150%，被攻擊1下增加75%（最多2層）</p><p>我方第3次攻擊才能對休伊造成100%輸出，下毒和反擊無效</p><p>推薦帶 <span style=\"color: rgb(79, 200, 176);\">會攻擊的輔助  例如馬啖、沙副、舞可、萬可</span></p><p>不推薦自殘角學奧，如果要帶上場某些回合不能攻擊</p><p><br></p><p>打到5%鎖血，再攻擊一回合便進入第二階段</p><p><br></p><p><span style=\"color: rgb(201, 164, 92);\">第二階段：</span></p><p>休伊從1%滿血復活</p><p>機制大部份跟第一階段相同，但休伊沒有150%減傷（下毒、反擊生效）</p><p>攻擊招式也有變化，例如群攻後追加失控攻擊</p>",
+    "recommendedTags": [],
+    "hidden": false,
+    "archived": false,
+    "roundTable": [
+      {
+        "col1": "<span style=\"color: rgb(201, 164, 92);\">第一階段</span>",
+        "col2": "<br>"
+      },
+      {
+        "col1": "T3、9",
+        "col2": "全防，我方全員起碼要七、八成以上血量<br>攻擊手不能必殺，不能自殘<br>（休伊群攻＆我方追加受到血量百分比120%傷害）"
+      },
+      {
+        "col1": "T4、10",
+        "col2": "攻擊手不能必殺，不能自殘"
+      },
+      {
+        "col1": "T5、11",
+        "col2": "坦角和補師防禦<br>（坦補防禦會令治療量+減傷大增應付下回合<br>&nbsp; &nbsp; 攻擊會永久降攻100%）"
+      },
+      {
+        "col1": "T6、12",
+        "col2": "坦角和另一人開大，其他人防禦<br>（另一人通常是補師，有緩補可以讓另一隻角色開大）<br>（休伊痛擊坦角+全體群攻）"
+      },
+      {
+        "col1": "T7、13",
+        "col2": "（休伊令我方全體造成傷害減少15%（永久））"
+      },
+      {
+        "col1": "<br>",
+        "col2": "<span style=\"color: rgb(79, 200, 176);\">休伊5%鎖血：我方攻擊（進入第二階段）</span>"
+      },
+      {
+        "col1": "<span style=\"color: rgb(201, 164, 92);\">第二階段</span>",
+        "col2": ""
+      },
+      {
+        "col1": "T5、11、17",
+        "col2": "坦角和補師防禦，另外我方角色防禦會有20%護盾。<br><span style=\"color: rgb(79, 200, 176);\">如果下回合能打完，攻擊手攻擊</span><br><span style=\"color: rgb(226, 96, 79);\">如果無法打完，全體防禦準備接休伊大招</span>"
+      },
+      {
+        "col1": "T6、12、18",
+        "col2": "這回合能打完就直接打休伊<br>否則找兩個人開大，其他人防禦<br>（休伊使出「無形的力量」，超痛群攻，<br>&nbsp; &nbsp; 要撐群攻推薦全體盾／減傷角）"
+      },
+      {
+        "col1": "",
+        "col2": "註：<br>如果好好控血，在T12打進5%鎖血線，<br>T13就不會吃到休伊的造傷減少15%，<br>第二階段會有較高輸出"
+      }
+    ],
+    "rowBreak": false,
+    "sortOrder": 2
   }
 ]
