@@ -113,6 +113,25 @@
       }
     ]
   },
+  "stage_8_2": {
+    "members": [
+      "card_137",
+      "card_094",
+      "card_124",
+      "card_132",
+      "card_005"
+    ],
+    "roundTable": [
+      {
+        "col1": "<br>",
+        "col2": "其餘自動＋保留必殺"
+      },
+      {
+        "col1": "T5、9、13",
+        "col2": "全必殺"
+      }
+    ]
+  },
   "stage_7_3": {
     "members": [
       "card_132",
