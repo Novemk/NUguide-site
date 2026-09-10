@@ -3070,9 +3070,9 @@
     ],
     "ultimateSkill": "<p>使目標解除防禦狀態</p><p>再以攻擊力 616% 對目標造成傷害</p><p>［冷卻時間：6 回合］</p>",
     "image": "assets/img/cards/card_149.webp",
-    "imageZoom": 1.35,
-    "imageOffsetX": 0.4847374833952404,
-    "imageOffsetY": 0.17909669564440361,
+    "imageZoom": 1.36,
+    "imageOffsetX": 0.473951163312598,
+    "imageOffsetY": 0.2922282748752169,
     "sortOrder": 0.06
   },
   {
