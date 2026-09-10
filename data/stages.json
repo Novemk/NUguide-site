@@ -928,5 +928,42 @@
     ],
     "rowBreak": true,
     "sortOrder": 5.1
+  },
+  {
+    "id": "stage_5_2",
+    "chapter": "忘卻遺跡 第 22 季",
+    "order": "5 - 2",
+    "title": "（複製）（複製）",
+    "enemies": [
+      {
+        "name": "兇猛的雪怪",
+        "note": "",
+        "elementId": "dark",
+        "image": "assets/img/enemies/stage_5_2_0_兇猛的雪怪.webp",
+        "imageZoom": 1.18,
+        "imageOffsetX": 0.5723754035101997,
+        "imageOffsetY": 0.5546170603302177
+      }
+    ],
+    "guide": "<p>本篇攻略內容全文轉載、整理自噗浪『小爛．日常』 的攻略噗！</p><p><a href=\"https://www.plurk.com/p/3i3ho86b0w\" rel=\"noopener noreferrer\" target=\"_blank\">忘卻遺跡 第十九季 記錄</a></p><p>🌹感謝小爛授權轉載</p><hr class=\"ql-divider\"><p><span style=\"color: rgb(201, 164, 92);\">【概要】</span></p><p>雪怪每回合都會長毛，長出「受到傷害減少60%（2層，共120%）」，被攻擊會減少1層，所以我方第3下攻擊才有100%輸出，我方全體攻擊時，會令自身受到傷害增加2%（可以疊50層）</p><p><br></p><p>這關需要帶<span style=\"color: rgb(79, 200, 176);\">至少3隻能攻擊的角色</span></p><p>強力推薦帶能攻擊的輔助，如果只有SR奧那倒不如換成兔伊+3攻+補</p><p><br></p><p><span style=\"color: rgb(79, 200, 176);\">推薦帶必殺隊</span>，平常防禦避免debuff，必殺回合大招就安全了</p><p><span style=\"color: rgb(79, 200, 176);\">攻擊順序由弱至強，先讓坦角攻擊，最後讓主攻擊手進攻</span></p>",
+    "recommendedTags": [],
+    "hidden": false,
+    "archived": false,
+    "roundTable": [
+      {
+        "col1": "T5、12",
+        "col2": "坦角嘲諷（坦角攻擊可消除其他人身上的嘲諷效果）"
+      },
+      {
+        "col1": "T7、14",
+        "col2": "必須打破雪怪護盾，否則被大招全滅"
+      },
+      {
+        "col1": "",
+        "col2": "註：雪怪護盾破了被打暈，就無法減少層數<br>帶4個攻擊手打4下也只能減少3層<br>（第4下雪怪暈了不能減少層數），必定有+25%攻擊力殘留<br>如果只帶3個能攻擊的，雪怪有+50%攻擊力殘留<br>但是雪怪的+25%攻擊力buff最多只有4層，T14會重置"
+      }
+    ],
+    "rowBreak": false,
+    "sortOrder": 5.2
   }
 ]
