@@ -167,7 +167,20 @@
       "card_095",
       "card_034"
     ],
-    "roundTable": []
+    "roundTable": [
+      {
+        "col1": "<br>",
+        "col2": "<span style=\"color: rgb(79, 200, 176);\">主要打藍毛</span>"
+      },
+      {
+        "col1": "T5",
+        "col2": "全防"
+      },
+      {
+        "col1": "T10",
+        "col2": "全攻（結束）"
+      }
+    ]
   },
   "stage_7_1_2": {
     "members": [
