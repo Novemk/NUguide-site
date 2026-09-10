@@ -1312,5 +1312,50 @@
     ],
     "rowBreak": false,
     "sortOrder": 2
+  },
+  {
+    "id": "stage_SP_3",
+    "chapter": "忘卻遺跡 第 22 季",
+    "order": "SP - 3",
+    "title": "帆潮小鎮之探（複製）（複製）（複製）",
+    "enemies": [
+      {
+        "name": "愛與正義 布儡",
+        "note": "",
+        "elementId": "fire",
+        "image": "assets/img/enemies/stage_SP_3_0_愛與正義_布儡.webp",
+        "imageZoom": 1.24,
+        "imageOffsetX": 0.6087501852362872,
+        "imageOffsetY": 0.4927524536375016
+      }
+    ],
+    "guide": "<p>本篇攻略內容，全文轉載自噗浪『小爛．日常』&nbsp;的攻略噗</p><p><a href=\"https://www.plurk.com/p/3imc3tk7xi\" rel=\"noopener noreferrer\" target=\"_blank\">忘卻遺跡 第二十一季 記錄</a></p><p>🌹感謝小爛授權轉載</p><hr class=\"ql-divider\"><p><span style=\"color: rgb(201, 164, 92);\">【概要】</span></p><p>布儡被普攻，會以攻擊力75%反擊</p><p>布儡被必殺，會以攻擊力125%反擊</p><p><br></p><p>布儡都是集中單擊打坦角，推薦 <span style=\"color: rgb(226, 96, 79);\">帶承傷能力強的坦+強補師</span></p><p>普攻坦、嘲諷坦都可以上場，但普攻坦注意事項較多</p><p>這關帶魔布單坦能享受到瘋狂反擊的快感</p><p><br></p><p><span style=\"color: rgb(226, 96, 79);\">這關一般要帶雙坦</span></p><p>如果有練魔布，這關可以玩魔布單坦，其他普攻角玩單坦隊要求較高</p><p>無論單坦還是雙坦，補師要求都很高，推薦<span style=\"color: rgb(79, 200, 176);\"> 3CD+單人補血的補師，或者用遊布/星布</span></p><p><br></p><p>6CD機制，所以攻擊手推薦帶3/6CD角，但強度足夠也沒差</p><p><br></p><p><span style=\"color: rgb(79, 200, 176);\">第3位是血量安全的位置，</span><span style=\"color: rgb(226, 96, 79);\">把HP最高的坦放在第3位</span></p><p>T2、8的群攻回合第3位坦角自殘頗痛，但後續會剩下較安全的血量</p><p>把兩隻坦角都放在第1234位，T2、8的群攻回合，兩隻坦都能獲得1回合減傷，但被魔布痛擊後，基本上都是黃血狀態再承受隨機單擊了</p>",
+    "recommendedTags": [],
+    "hidden": false,
+    "archived": false,
+    "roundTable": [
+      {
+        "col1": "<br>",
+        "col2": "<span style=\"color: rgb(201, 164, 92);\">兩隻坦分別稱為坦A/坦B，跟血量高低/位置無關</span>"
+      },
+      {
+        "col1": "T2、8、14、20",
+        "col2": "全員攻擊（1245位攻擊能給自身減傷50%）<br>(布儡觸發傷害+900%，要攻擊3次消掉增益)<br><span style=\"color: rgb(79, 200, 176);\">首先讓第3位以外的坦攻擊，</span><br><span style=\"color: rgb(79, 200, 176);\">再讓另一隻坦攻擊，之後再讓攻擊手攻擊</span><br>（布儡打1245位，再單擊打坦）"
+      },
+      {
+        "col1": "T3、9、15、21",
+        "col2": "HP最高的坦攻擊（攻擊能減傷）<br>他必須有75%以上血<br>（布儡固定打坦角最高HP的75%血量）<br>（如果另一隻是普攻坦，普攻坦要防禦）"
+      },
+      {
+        "col1": "T4、10、16、22",
+        "col2": "坦B先攻擊或者防禦，然後坦A嘲諷，其他人攻擊"
+      },
+      {
+        "col1": "T5、11、17、23",
+        "col2": "四人防禦，坦B嘲諷"
+      }
+    ],
+    "rowBreak": false,
+    "sortOrder": 3
   }
 ]
