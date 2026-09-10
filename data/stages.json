@@ -1074,5 +1074,65 @@
     ],
     "rowBreak": true,
     "sortOrder": 4.1
+  },
+  {
+    "id": "stage_4_2",
+    "chapter": "忘卻遺跡 第 22 季",
+    "order": "4 - 2",
+    "title": "（複製）（複製）（複製）",
+    "enemies": [
+      {
+        "name": "囚犯 40 號",
+        "note": "",
+        "elementId": "fire",
+        "image": "assets/img/enemies/stage_4_2_0_囚犯_40_號.webp",
+        "imageZoom": 1.16,
+        "imageOffsetX": 0.6510280149954337,
+        "imageOffsetY": 0.6456671439847306
+      },
+      {
+        "name": "囚犯 28 號",
+        "note": "",
+        "elementId": "water",
+        "image": "assets/img/enemies/stage_4_2_1_囚犯_28_號.webp",
+        "imageZoom": 1.18,
+        "imageOffsetX": 0.5719741538718895,
+        "imageOffsetY": 0.6000086466471355
+      },
+      {
+        "name": "囚犯 11 號",
+        "note": "",
+        "elementId": "wood",
+        "image": "assets/img/enemies/stage_4_2_2_囚犯_11_號.webp",
+        "imageZoom": 1.15,
+        "imageOffsetX": 0.5857204861111112,
+        "imageOffsetY": 0.5331140197483839
+      },
+      {
+        "name": "囚犯 35 號",
+        "note": "",
+        "elementId": "light",
+        "image": "assets/img/enemies/stage_4_2_3_囚犯_35_號.webp",
+        "imageZoom": 1.17,
+        "imageOffsetX": 0.6062729779411765,
+        "imageOffsetY": 0.5950315721022948
+      },
+      {
+        "name": "囚犯 57 號",
+        "note": "",
+        "elementId": "dark",
+        "image": "assets/img/enemies/stage_4_2_4_囚犯_57_號.webp",
+        "imageZoom": 1.21,
+        "imageOffsetX": 0.5509121263270558,
+        "imageOffsetY": 0.5603300032737422
+      }
+    ],
+    "guide": "<p>本篇攻略內容全文轉載、整理自噗浪『小爛．日常』 的攻略噗！</p><p><a href=\"https://www.plurk.com/p/3hulu63vkr\" rel=\"noopener noreferrer\" target=\"_blank\">忘卻遺跡 第十八季 記錄</a></p><p>🌹感謝小爛授權轉載</p><hr class=\"ql-divider\"><p><span style=\"color: rgb(201, 164, 92);\">【概要】</span></p><p>這關推薦<span style=\"color: rgb(79, 200, 176);\">至少帶一隻群攻</span></p><p>把每個敵人磨到剩少量血了，就一口氣放必殺收掉</p><p><br></p><p>機制──</p><p>合共五名囚犯：囚犯會群攻（沒有任何回合機制）</p><p>剩餘四名囚犯：囚犯會群攻，另外以攻擊力10%對我方單人下毒（1回合）</p><p>剩餘三名囚犯：囚犯會群攻，我方全體CD被重置</p><p>剩餘兩名囚犯：囚犯會群攻，並以觸發「對敵方全體造成最大HP2%真實傷害」</p><p>剩餘一名囚犯：囚犯會群攻，攻擊時，有100%機率觸發「使敵方全體受到傷害增加5%（最多20層）」</p><p><br></p><p>另外，每次打死囚犯之後，剩餘囚犯會獲得護盾50回合</p><p>但護盾不會累積（一口氣打死4個囚犯，會更新成最後1層的護盾量，不會累積4層）</p>",
+    "recommendedTags": [],
+    "hidden": false,
+    "archived": false,
+    "roundTable": [],
+    "rowBreak": false,
+    "sortOrder": 4.2
   }
 ]
