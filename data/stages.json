@@ -1357,5 +1357,50 @@
     ],
     "rowBreak": false,
     "sortOrder": 3
+  },
+  {
+    "id": "stage_SP_4",
+    "chapter": "忘卻遺跡 第 22 季",
+    "order": "SP - 4",
+    "title": "帆潮小鎮之探（複製）（複製）（複製）（複製）",
+    "enemies": [
+      {
+        "name": "衝鋒隊長 可爾",
+        "note": "",
+        "elementId": "fire",
+        "image": "assets/img/enemies/stage_SP_4_0_衝鋒隊長_可爾.webp",
+        "imageZoom": 1.17,
+        "imageOffsetX": 0.5436771606205725,
+        "imageOffsetY": 0.4850647122252221
+      }
+    ],
+    "guide": "<p>本篇攻略內容，全文轉載自噗浪『小爛．日常』&nbsp;的攻略噗</p><p><a href=\"https://www.plurk.com/p/3ixk7uwspo\" rel=\"noopener noreferrer\" target=\"_blank\">忘卻遺跡 第二十二季 記錄</a></p><p>🌹感謝小爛授權轉載</p><hr class=\"ql-divider\"><p><span style=\"color: rgb(201, 164, 92);\">【概要】</span></p><p><span style=\"color: rgb(226, 96, 79);\">每回合最多3人防禦</span>，當我方有4人或以上防禦，泳可就會抱怨枯燥然後變強了</p><p><br></p><p>沙堡的血量會讓泳可獲得獎勵──</p><p>沙堡血量90%：泳可獲得減傷20%</p><p>沙堡血量50%：泳可獲得大補血</p><p>沙堡血量30%：泳可獲得減傷30%</p><p><br></p><p>另外，回合也會影響──</p><p>T7時，可爾開始令我方全體回復量減少10%（可疊加）</p><p>T11時，可爾的普攻傷害增加（主要是打1245位更痛）</p><p><br></p><p>一般回合第3位可以全場保持攻擊</p><p>第1245位先讓1-2人攻擊，再讓剩下的人防禦來扣減護盾</p><hr class=\"ql-divider\"><p>本關重點：</p><p>．<span style=\"color: rgb(79, 200, 176);\">要保住第3位</span>（沙堡），並擊敗泳可</p><p>．沙堡護盾越厚，沙堡受到傷害越多</p><p>．強烈建議全程讓<span style=\"color: rgb(79, 200, 176);\">第3位保持在50%以上血量</span></p><p>．一般回合第1245位挑1-2人攻擊，其餘防禦來削減沙堡護盾</p><p>．T6、14、22必須打掉泳可護盾</p><p>．<span style=\"color: rgb(79, 200, 176);\">推薦帶具有永久/多回合增益的角色，例如舞可、舞布、偵布、魔伊、遊布等等</span></p><p>．<span style=\"color: rgb(226, 96, 79);\">這關不能帶坦，帶坦會開場被全滅</span></p><p>．<span style=\"color: rgb(226, 96, 79);\">不要帶會強化或追加 護盾 的角色</span></p><hr class=\"ql-divider\"><p>★ <a href=\"https://www.plurk.com/p/3iw4xrxojt\" rel=\"noopener noreferrer\" target=\"_blank\">塵陽dustsun&nbsp;的攻略</a></p>",
+    "recommendedTags": [],
+    "hidden": false,
+    "archived": false,
+    "roundTable": [
+      {
+        "col1": "T3、11、19",
+        "col2": "1人攻擊，3人防禦<br>（泳可造成傷害99%，<br>&nbsp; &nbsp; 3人防禦可以令泳可造成傷害消失）"
+      },
+      {
+        "col1": "T5、13、21",
+        "col2": "全攻<br>（可爾要休息，不會攻擊；泳可受到毒傷增加30%）"
+      },
+      {
+        "col1": "T6、14、22",
+        "col2": "第3位開大（第3位不會造成傷害），<br>然後1245位攻擊必須把泳可護盾打掉，<br>否則泳可會補血20%"
+      },
+      {
+        "col1": "",
+        "col2": "<span style=\"color: rgb(201, 164, 92);\">&nbsp;把泳可打到1%──</span>"
+      },
+      {
+        "col1": "最後一回合",
+        "col2": "沙堡的減療300%消失，<br><span style=\"color: rgb(226, 96, 79);\">必須把沙堡補血到50%以上去扛住最後一擊</span><br>（泳可無視護盾的最後一擊，固定傷害50%血）"
+      }
+    ],
+    "rowBreak": false,
+    "sortOrder": 4
   }
 ]
