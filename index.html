@@ -28,21 +28,33 @@
 #home-cards { position: relative; z-index: 1; }
 
 .home-card {
-  opacity: 0;
-  transform: translateX(-28px);
   animation: homeCardIn 0.45s cubic-bezier(.2,.7,.3,1) forwards, homeBorderBreathe 5s ease-in-out infinite;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 /* 進場動畫跑完後，JS 會把 homeCardIn 從 animation 清單裡拿掉，只留
-   homeBorderBreathe——不然 forwards 會讓 transform 一直被動畫「佔用」，
-   :hover 想改 transform(放大)完全沒有用 (2026-09-11 修正：滑鼠移上去
-   放大失效就是這個原因)。 */
-@keyframes homeCardIn { to { opacity: 1; transform: translateX(0); } }
+   homeBorderBreathe。opacity/transform 的起始值刻意寫在 keyframes 的
+   0% 裡，不寫成 .home-card 本身的固定樣式——不然動畫一拿掉，沒東西
+   蓋過這個固定樣式，卡片又會彈回「看不見/位移」的狀態
+   (2026-09-11 修正：拿掉動畫後卡片閃一下就消失/位置跑掉，就是這個
+   原因)。拿掉動畫之後這裡自然回到瀏覽器預設(完全顯示、無位移)，
+   :hover 才能正常接手控制 transform。 */
+@keyframes homeCardIn {
+  0%   { opacity: 0; transform: translateX(-28px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
 @keyframes homeBorderBreathe {
   0%, 100% { box-shadow: 0 0 6px 0px rgba(201,164,92,0.25); }
   50%      { box-shadow: 0 0 16px 3px rgba(201,164,92,0.55); }
 }
-.home-card:hover { transform: translateY(-4px) scale(1.045); box-shadow: 0 10px 28px rgba(0,0,0,0.45); }
+.home-card:hover {
+  transform: translateY(-4px) scale(1.045);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.45);
+  /* 滑鼠移上去時把呼吸動畫整個關掉（不是 paused——暫停只是凍結在
+     當下那一格，box-shadow 還是會被動畫卡住，蓋掉這裡想要的立體
+     投影），這樣才能真的把 box-shadow 交還給這條 hover 規則自己控制
+     (2026-09-11 修正)。滑鼠移開後 animation-name 恢復，呼吸繼續跑。 */
+  animation-name: none;
+}
 
 .home-card::after {
   content: "";
