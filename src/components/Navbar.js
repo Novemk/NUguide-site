@@ -63,10 +63,38 @@ export function renderNavbar(current) {
   return nav;
 }
 
+// 全站星空背景 (2026-09-11) — 只有純靜態的小星星（沒有會呼吸發光的那
+// 幾顆，那個效果留給首頁自己專用），每頁呼叫 mountNavbar() 時順便掛上
+// 去，不用每個頁面各自加。全部星星畫在同一個 div 的 box-shadow 清單
+// 裡，不是一堆 DOM 元素，也完全沒有動畫，只畫一次、不會重繪，成本
+// 幾乎可以忽略。首頁自己已經有一份更豐富的版本（含呼吸發光星星），
+// 這裡偵測到首頁那份存在就跳過，不會疊加兩層。
+function mountStaticStarfield() {
+  if (document.getElementById('home-starfield')) return;
+  if (document.querySelector('.site-starfield')) return;
+  const field = document.createElement('div');
+  field.className = 'site-starfield';
+  const dots = [];
+  for (let i = 0; i < 120; i++) {
+    const x = Math.random() * 100;
+    const y = Math.random() * 100;
+    const alpha = 0.25 + Math.random() * 0.45;
+    dots.push(`calc(${x}vw) calc(${y}vh) 0 rgba(255,255,255,${alpha.toFixed(2)})`);
+  }
+  const dotsLayer = document.createElement('div');
+  dotsLayer.style.position = 'absolute';
+  dotsLayer.style.width = '1px';
+  dotsLayer.style.height = '1px';
+  dotsLayer.style.boxShadow = dots.join(',');
+  field.appendChild(dotsLayer);
+  document.body.insertBefore(field, document.body.firstChild);
+}
+
 export function mountNavbar(current) {
   const host = document.getElementById('navbar-host');
   if (!host) return;
   host.replaceWith(renderNavbar(current));
+  mountStaticStarfield();
 
   // Same siteTitle field the homepage's <h1> uses (edited from the
   // admin's 網站設定 page) — applied here too so the navbar brand, the

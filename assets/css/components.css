@@ -1239,6 +1239,11 @@ hr.ql-divider {
 /* 版主的隊伍展示頁 (2026-09-09) */
 .mv-section-title { font-family: var(--font-display); color: var(--accent-gold); margin: 28px 0 14px; }
 
+/* 全站靜態星空背景 (2026-09-11，見 Navbar.js 的 mountStaticStarfield)。
+   首頁自己另有一份更豐富的版本，class 名稱不同 (#home-starfield)，
+   不會被這份蓋到。 */
+.site-starfield { position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }
+
 /* =========================================================
    連續選取隊伍 (CardPicker.js 的 openTeamPicker, 2026-09-09)
    ========================================================= */
