@@ -66,15 +66,16 @@
         "paddingX": 6,
         "borderRadius": 3,
         "gradientEnabled": true,
-        "gradientAngle": 102,
+        "gradientAngle": 17,
         "gradientColors": [
-          "#7f7357",
-          "#9b7d3b"
+          "#675b42",
+          "#93722a"
         ],
         "bgColor": "#211f30",
         "borderColor": "#c9a45c",
         "borderOpacity": 64,
         "borderWidth": 1,
+        "textColor": "#feffcc",
         "dividerWidth": 1,
         "dividerGradientEnabled": true,
         "dividerColors": [
@@ -120,15 +121,16 @@
         "paddingX": 6,
         "borderRadius": 4,
         "gradientEnabled": true,
-        "gradientAngle": 100,
+        "gradientAngle": 17,
         "gradientColors": [
-          "#7f7356",
-          "#9b7d3c"
+          "#675b42",
+          "#93722a"
         ],
         "bgColor": "#211f30",
         "borderColor": "#c9a45c",
         "borderOpacity": 62,
         "borderWidth": 1,
+        "textColor": "#feffcc",
         "dividerWidth": 1,
         "dividerGradientEnabled": true,
         "dividerColors": [
@@ -183,12 +185,13 @@
         "gradientAngle": 190,
         "gradientColors": [
           "#990a0a",
-          "#a99260"
+          "#ce8f55"
         ],
         "bgColor": "#211f30",
         "borderColor": "#3a3650",
         "borderOpacity": 100,
         "borderWidth": 1,
+        "textColor": "#feffcc",
         "dividerWidth": 1,
         "dividerGradientEnabled": false,
         "dividerColors": [
