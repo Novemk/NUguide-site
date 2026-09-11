@@ -30,10 +30,14 @@
 .home-card {
   opacity: 0;
   transform: translateX(-28px);
-  animation: homeCardIn 0.45s cubic-bezier(.2,.7,.3,1) forwards;
+  animation: homeCardIn 0.45s cubic-bezier(.2,.7,.3,1) forwards, homeBorderBreathe 5s ease-in-out infinite;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 @keyframes homeCardIn { to { opacity: 1; transform: translateX(0); } }
+@keyframes homeBorderBreathe {
+  0%, 100% { box-shadow: 0 0 6px 0px rgba(201,164,92,0.25); }
+  50%      { box-shadow: 0 0 16px 3px rgba(201,164,92,0.55); }
+}
 .home-card:hover { transform: translateY(-4px) scale(1.045); box-shadow: 0 10px 28px rgba(0,0,0,0.45); }
 
 .home-card::after {
@@ -76,6 +80,20 @@
   0%   { left: -25%; top: 55%;   opacity: 0.9; }
   88%  { left: 95%;  top: -125%; opacity: 0.9; }
   100% { left: 108%; top: -138%; opacity: 0; }
+}
+
+.home-card-ambient {
+  position: absolute;
+  border-radius: 50%;
+  background: #fff;
+  pointer-events: none;
+  animation-name: homeAmbientBreathe;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes homeAmbientBreathe {
+  0%, 100% { opacity: var(--min-o); transform: scale(0.85); }
+  50%      { opacity: var(--max-o); transform: scale(1.15); }
 }
 
 .home-card-spark {
@@ -270,6 +288,34 @@ loadJSON(DataSources.siteSettings).then((settings) => {
     const shine = document.createElement('div');
     shine.className = 'home-card-shine';
     a.appendChild(shine);
+
+    // 角落常駐光點 (2026-09-11) — 每張卡 3~5 顆，落在角落附近一小塊
+    // 隨機範圍內（不是卡死在正角落本身），大小/亮度/呼吸節奏各自隨機，
+    // 刻意不要四顆一模一樣、不要同步，才不會看起來像機械式貼上去的
+    // 裝飾。
+    const ambientCount = 3 + Math.floor(Math.random() * 3);
+    const ambientCorners = [[0, 0], [1, 0], [0, 1], [1, 1]];
+    for (let s = 0; s < ambientCount; s++) {
+      const corner = ambientCorners[s % ambientCorners.length];
+      const jitter = 22;
+      const baseInset = 10 + Math.random() * 14;
+      const dot = document.createElement('div');
+      dot.className = 'home-card-ambient';
+      const size = 2 + Math.random() * 3;
+      dot.style.width = `${size}px`;
+      dot.style.height = `${size}px`;
+      if (corner[0] === 0) dot.style.left = `${baseInset + Math.random() * jitter}px`;
+      else dot.style.right = `${baseInset + Math.random() * jitter}px`;
+      if (corner[1] === 0) dot.style.top = `${baseInset + Math.random() * jitter}px`;
+      else dot.style.bottom = `${baseInset + Math.random() * jitter}px`;
+      dot.style.setProperty('--min-o', `${(0.15 + Math.random() * 0.15).toFixed(2)}`);
+      dot.style.setProperty('--max-o', `${(0.55 + Math.random() * 0.35).toFixed(2)}`);
+      dot.style.animationDuration = `${(3 + Math.random() * 3.5).toFixed(2)}s`;
+      dot.style.animationDelay = `${(Math.random() * 4).toFixed(2)}s`;
+      const glow = 3 + Math.random() * 5;
+      dot.style.boxShadow = `0 0 ${glow}px 1px rgba(255,255,255,0.9), 0 0 ${glow * 2}px 2px rgba(201,164,92,0.5)`;
+      a.appendChild(dot);
+    }
 
     // 點擊時角落散發細碎光點，短暫延遲一下再真的跳轉，不然頁面切換
     // 太快，動畫根本來不及被看到 (2026-09-11)。
