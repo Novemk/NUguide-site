@@ -33,6 +33,10 @@
   animation: homeCardIn 0.45s cubic-bezier(.2,.7,.3,1) forwards, homeBorderBreathe 5s ease-in-out infinite;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
+/* 進場動畫跑完後，JS 會把 homeCardIn 從 animation 清單裡拿掉，只留
+   homeBorderBreathe——不然 forwards 會讓 transform 一直被動畫「佔用」，
+   :hover 想改 transform(放大)完全沒有用 (2026-09-11 修正：滑鼠移上去
+   放大失效就是這個原因)。 */
 @keyframes homeCardIn { to { opacity: 1; transform: translateX(0); } }
 @keyframes homeBorderBreathe {
   0%, 100% { box-shadow: 0 0 6px 0px rgba(201,164,92,0.25); }
@@ -249,6 +253,11 @@ loadJSON(DataSources.siteSettings).then((settings) => {
     a.className = 'home-card';
     a.href = CARD_LINKS[i];
     a.style.animationDelay = `${i * 0.09}s`;
+    a.addEventListener('animationend', (e) => {
+      if (e.animationName === 'homeCardIn') {
+        a.style.animation = 'homeBorderBreathe 5s ease-in-out infinite';
+      }
+    });
     const [w, h] = (c.cropRatio || '2:3').split(':').map(Number);
     a.style.aspectRatio = `${w || 2} / ${h || 3}`;
     a.style.background = eff.bgGradientEnabled
