@@ -10,8 +10,89 @@
 <link rel="stylesheet" href="assets/css/base.css">
 <link rel="stylesheet" href="assets/css/components.css">
 <link rel="stylesheet" href="assets/css/card-face.css">
+<style>
+/* 首頁三張卡片動態效果 (2026-09-11) — 只有這頁在用，直接寫在這裡，
+   不放進共用的 components.css，兩個 repo 都不用跟著改。跟卡片本身的
+   背景/邊框顏色(後台「首頁外觀」可調)完全獨立疊加，不會互相覆蓋。 */
+.home-starfield { position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }
+.home-glow-star {
+  position: absolute; width: 3px; height: 3px; border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 4px 1px rgba(255,255,255,0.9), 0 0 9px 3px rgba(159,197,255,0.5);
+  animation: homeStarTwinkle 4s ease-in-out infinite;
+}
+@keyframes homeStarTwinkle {
+  0%, 100% { opacity: 0.25; transform: scale(0.8); }
+  50%      { opacity: 1;    transform: scale(1.3); }
+}
+#home-cards { position: relative; z-index: 1; }
+
+.home-card {
+  opacity: 0;
+  transform: translateX(-28px);
+  animation: homeCardIn 0.45s cubic-bezier(.2,.7,.3,1) forwards;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+@keyframes homeCardIn { to { opacity: 1; transform: translateX(0); } }
+.home-card:hover { transform: translateY(-4px) scale(1.045); box-shadow: 0 10px 28px rgba(0,0,0,0.45); }
+
+.home-card::after {
+  content: "";
+  position: absolute; inset: 0;
+  border: 2px solid transparent;
+  background: linear-gradient(120deg, var(--accent-gold), var(--accent-teal), #c48be0, var(--accent-gold)) border-box;
+  -webkit-mask: linear-gradient(#000 0 0) padding-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  background-size: 300% 300%;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  animation: homeBorderShift 3s linear infinite paused;
+}
+.home-card:hover::after { opacity: 1; animation-play-state: running; }
+@keyframes homeBorderShift { 0% { background-position: 0% 50%; } 100% { background-position: 300% 50%; } }
+
+.home-card-shine {
+  position: absolute;
+  width: 70%; height: 180%;
+  left: -25%; top: 55%;
+  transform: rotate(-45deg);
+  transform-origin: center;
+  background: linear-gradient(90deg,
+    transparent,
+    rgba(255,120,140,0.55) 20%,
+    rgba(255,210,120,0.6) 35%,
+    rgba(255,255,255,0.85) 48%,
+    rgba(140,255,210,0.6) 60%,
+    rgba(140,180,255,0.6) 75%,
+    transparent
+  );
+  mix-blend-mode: screen;
+  opacity: 0;
+  pointer-events: none;
+}
+.home-card:hover .home-card-shine { animation: homeShineSweep 1s linear forwards; }
+@keyframes homeShineSweep {
+  0%   { left: -25%; top: 55%;   opacity: 0.9; }
+  88%  { left: 95%;  top: -125%; opacity: 0.9; }
+  100% { left: 108%; top: -138%; opacity: 0; }
+}
+
+.home-card-spark {
+  position: absolute; width: 6px; height: 6px; border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 6px 2px rgba(255,255,255,0.95), 0 0 12px 4px var(--accent-gold);
+  pointer-events: none;
+  animation: homeSparkPop 0.65s ease-out forwards;
+}
+@keyframes homeSparkPop {
+  0%   { opacity: 1; transform: scale(0.4) translate(0,0); }
+  100% { opacity: 0; transform: scale(1.5) translate(var(--dx), var(--dy)); }
+}
+</style>
 </head>
 <body>
+<div class="home-starfield" id="home-starfield"></div>
 <div id="navbar-host"></div>
 
 <header class="container page-header" id="home-header">
@@ -46,6 +127,36 @@ import { loadJSON, DataSources } from './src/core/dataLoader.js';
 import { mountCoverImage } from './src/components/CardFace.js';
 mountNavbar('index.html');
 mountFooter();
+
+// 星空背景 (2026-09-11) — 120 顆星星全部畫在同一個 div 的 box-shadow
+// 清單裡，不是 120 個個別 DOM 元素，而且完全沒有動畫，畫一次之後不會
+// 再重繪；只有 7 顆真的在呼吸發光，只動 opacity/transform，成本很低。
+(function initStarfield() {
+  const field = document.getElementById('home-starfield');
+  if (!field) return;
+  const dots = [];
+  for (let i = 0; i < 120; i++) {
+    const x = Math.random() * 100;
+    const y = Math.random() * 100;
+    const alpha = 0.25 + Math.random() * 0.45;
+    dots.push(`calc(${x}vw) calc(${y}vh) 0 rgba(255,255,255,${alpha.toFixed(2)})`);
+  }
+  const dotsLayer = document.createElement('div');
+  dotsLayer.style.position = 'absolute';
+  dotsLayer.style.width = '1px';
+  dotsLayer.style.height = '1px';
+  dotsLayer.style.boxShadow = dots.join(',');
+  field.appendChild(dotsLayer);
+  for (let g = 0; g < 7; g++) {
+    const star = document.createElement('div');
+    star.className = 'home-glow-star';
+    star.style.left = `${Math.random() * 100}vw`;
+    star.style.top = `${Math.random() * 100}vh`;
+    star.style.animationDelay = `${Math.random() * 4}s`;
+    star.style.animationDuration = `${3 + Math.random() * 3}s`;
+    field.appendChild(star);
+  }
+})();
 
 function hexToRgba(hex, opacityPercent) {
   const h = (hex || '#100f18').replace('#', '');
@@ -119,6 +230,7 @@ loadJSON(DataSources.siteSettings).then((settings) => {
     const a = document.createElement('a');
     a.className = 'home-card';
     a.href = CARD_LINKS[i];
+    a.style.animationDelay = `${i * 0.09}s`;
     const [w, h] = (c.cropRatio || '2:3').split(':').map(Number);
     a.style.aspectRatio = `${w || 2} / ${h || 3}`;
     a.style.background = eff.bgGradientEnabled
@@ -154,6 +266,36 @@ loadJSON(DataSources.siteSettings).then((settings) => {
       .slice().sort((s1, s2) => s1.position - s2.position);
     overlay.style.background = `linear-gradient(to top, ${overlayStops.map((s) => `${hexToRgba(overlayColor, s.opacity)} ${s.position}%`).join(', ')})`;
     a.appendChild(overlay);
+
+    const shine = document.createElement('div');
+    shine.className = 'home-card-shine';
+    a.appendChild(shine);
+
+    // 點擊時角落散發細碎光點，短暫延遲一下再真的跳轉，不然頁面切換
+    // 太快，動畫根本來不及被看到 (2026-09-11)。
+    a.addEventListener('click', (e) => {
+      e.preventDefault();
+      const rect = a.getBoundingClientRect();
+      const inset = 12;
+      const corners = [
+        [inset, inset], [rect.width - inset, inset],
+        [inset, rect.height - inset], [rect.width - inset, rect.height - inset],
+      ];
+      corners.forEach((pos, idx) => {
+        const spark = document.createElement('div');
+        spark.className = 'home-card-spark';
+        spark.style.left = `${pos[0]}px`;
+        spark.style.top = `${pos[1]}px`;
+        const dx = (pos[0] < rect.width / 2 ? -1 : 1) * (12 + Math.random() * 8);
+        const dy = (pos[1] < rect.height / 2 ? -1 : 1) * (12 + Math.random() * 8);
+        spark.style.setProperty('--dx', `${dx}px`);
+        spark.style.setProperty('--dy', `${dy}px`);
+        spark.style.animationDelay = `${idx * 0.03}s`;
+        a.appendChild(spark);
+      });
+      setTimeout(() => { window.location.href = a.href; }, 180);
+    });
+
     cardsHost.appendChild(a);
   });
 }).catch(() => {});
