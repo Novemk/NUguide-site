@@ -31,8 +31,8 @@
   "chapterStyles": {
     "忘卻遺跡 第 22 季": {
       "bgColor": "#1a3c34",
-      "bgOpacity": 39,
-      "borderColor": "#47b398",
+      "bgOpacity": 37,
+      "borderColor": "#866f41",
       "borderOpacity": 100,
       "borderWidth": 1,
       "bgGradientEnabled": true,
@@ -45,7 +45,7 @@
         0,
         100
       ],
-      "borderGradientEnabled": true,
+      "borderGradientEnabled": false,
       "borderGradientAngle": 180,
       "borderGradientColors": [
         "#4e6b4c",
@@ -66,40 +66,40 @@
         "paddingX": 6,
         "borderRadius": 3,
         "gradientEnabled": true,
-        "gradientAngle": 214,
+        "gradientAngle": 102,
         "gradientColors": [
-          "#288a6d",
-          "#57756c"
+          "#7f7357",
+          "#9b7d3b"
         ],
         "bgColor": "#211f30",
-        "borderColor": "#919343",
-        "borderOpacity": 100,
+        "borderColor": "#c9a45c",
+        "borderOpacity": 64,
         "borderWidth": 1,
         "dividerWidth": 1,
-        "dividerGradientEnabled": false,
+        "dividerGradientEnabled": true,
         "dividerColors": [
-          "#87886d",
-          "#c9a45c"
+          "#c9a45c",
+          "#514c29"
         ]
       }
     },
     "魔法檢定所 第 26 季": {
       "bgColor": "#2c220c",
-      "bgOpacity": 83,
-      "borderColor": "#c9a45c",
+      "bgOpacity": 54,
+      "borderColor": "#95815b",
       "borderOpacity": 100,
       "borderWidth": 1,
       "bgGradientEnabled": true,
       "bgGradientAngle": 17,
       "bgGradientColors": [
-        "#61573d",
-        "#483019"
+        "#565348",
+        "#684a18"
       ],
       "bgGradientPositions": [
         0,
         100
       ],
-      "borderGradientEnabled": true,
+      "borderGradientEnabled": false,
       "borderGradientAngle": 180,
       "borderGradientColors": [
         "#817046",
@@ -120,20 +120,20 @@
         "paddingX": 6,
         "borderRadius": 4,
         "gradientEnabled": true,
-        "gradientAngle": 216,
+        "gradientAngle": 100,
         "gradientColors": [
-          "#a37629",
-          "#7a6752"
+          "#7f7356",
+          "#9b7d3c"
         ],
         "bgColor": "#211f30",
         "borderColor": "#c9a45c",
-        "borderOpacity": 100,
+        "borderOpacity": 62,
         "borderWidth": 1,
         "dividerWidth": 1,
-        "dividerGradientEnabled": false,
+        "dividerGradientEnabled": true,
         "dividerColors": [
           "#c9a45c",
-          "#c9a45c"
+          "#94703d"
         ]
       }
     },
@@ -145,21 +145,21 @@
     },
     "極速追風 高難": {
       "bgColor": "#211f30",
-      "bgOpacity": 69,
-      "borderColor": "#3a3650",
+      "bgOpacity": 48,
+      "borderColor": "#95815b",
       "borderOpacity": 100,
       "borderWidth": 1,
       "bgGradientEnabled": true,
       "bgGradientAngle": 21,
       "bgGradientColors": [
         "#933438",
-        "#3b0210"
+        "#5e1225"
       ],
       "bgGradientPositions": [
         0,
         50
       ],
-      "borderGradientEnabled": true,
+      "borderGradientEnabled": false,
       "borderGradientAngle": 180,
       "borderGradientColors": [
         "#705734",
