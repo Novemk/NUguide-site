@@ -66,34 +66,34 @@
         "paddingX": 6,
         "borderRadius": 3,
         "gradientEnabled": true,
-        "gradientAngle": 214,
+        "gradientAngle": 186,
         "gradientColors": [
-          "#288a6d",
-          "#57756c"
+          "#0e201d",
+          "#253131"
         ],
         "bgColor": "#211f30",
-        "borderColor": "#919343",
-        "borderOpacity": 100,
+        "borderColor": "#c9a45c",
+        "borderOpacity": 64,
         "borderWidth": 1,
         "dividerWidth": 1,
-        "dividerGradientEnabled": false,
+        "dividerGradientEnabled": true,
         "dividerColors": [
-          "#87886d",
-          "#c9a45c"
+          "#c9a45c",
+          "#514c29"
         ]
       }
     },
     "魔法檢定所 第 26 季": {
       "bgColor": "#2c220c",
-      "bgOpacity": 83,
+      "bgOpacity": 73,
       "borderColor": "#c9a45c",
       "borderOpacity": 100,
       "borderWidth": 1,
       "bgGradientEnabled": true,
       "bgGradientAngle": 17,
       "bgGradientColors": [
-        "#61573d",
-        "#483019"
+        "#565348",
+        "#684a18"
       ],
       "bgGradientPositions": [
         0,
@@ -122,18 +122,18 @@
         "gradientEnabled": true,
         "gradientAngle": 216,
         "gradientColors": [
-          "#a37629",
-          "#7a6752"
+          "#342a18",
+          "#27211b"
         ],
         "bgColor": "#211f30",
         "borderColor": "#c9a45c",
-        "borderOpacity": 100,
+        "borderOpacity": 62,
         "borderWidth": 1,
         "dividerWidth": 1,
-        "dividerGradientEnabled": false,
+        "dividerGradientEnabled": true,
         "dividerColors": [
           "#c9a45c",
-          "#c9a45c"
+          "#94703d"
         ]
       }
     },
