@@ -2569,7 +2569,7 @@
     "rarityId": "ssr",
     "classId": "atk",
     "elementId": "fire",
-    "cd": 4,
+    "cd": 3,
     "tags": [
       "target_pos",
       "trigger",
