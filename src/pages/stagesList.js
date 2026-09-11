@@ -79,6 +79,7 @@ const DEFAULT_BUTTON_STYLE = {
   gradientEnabled: true, gradientAngle: 180, gradientColors: ['#211f30', '#2a2740'],
   bgColor: '#211f30', borderColor: '#3a3650', borderOpacity: 100, borderWidth: 1,
   dividerWidth: 1, dividerGradientEnabled: false, dividerColors: ['#c9a45c', '#c9a45c'],
+  textColor: '#ece9f7',
 };
 
 // Applies a 關卡按鈕外觀-shaped style object as CSS custom properties on
@@ -97,6 +98,7 @@ function applyButtonStyle(el, style) {
   if (s.borderRadius != null) el.style.setProperty('--so-btn-radius', `${s.borderRadius}px`);
   if (s.borderWidth != null) el.style.setProperty('--so-btn-border-width', `${s.borderWidth}px`);
   el.style.setProperty('--so-btn-border-color', hexToRgba(s.borderColor, s.borderOpacity));
+  if (s.textColor) el.style.setProperty('--so-btn-text', s.textColor);
   el.style.setProperty('--so-divider-width', `${s.dividerWidth ?? 1}px`);
   const dividerColors = s.dividerColors && s.dividerColors.length ? s.dividerColors : [s.dividerColor || 'var(--accent-gold)', s.dividerColor || 'var(--accent-gold)'];
   el.style.setProperty('--so-divider-start', dividerColors[0]);

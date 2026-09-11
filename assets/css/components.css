@@ -240,7 +240,7 @@
   border-color: var(--so-btn-border-color, var(--border-soft));
   border-radius: var(--so-btn-radius, 8px);
   background: var(--so-btn-bg, var(--bg-card));
-  color: var(--text);
+  color: var(--so-btn-text, var(--text));
   font-family: var(--so-btn-font, var(--font-display));
   font-size: var(--so-btn-font-size, 0.95rem);
   font-weight: 700;
