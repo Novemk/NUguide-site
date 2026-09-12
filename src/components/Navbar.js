@@ -9,7 +9,7 @@ const LINKS = [
   { href: 'team-notes.html', label: '隊伍筆記' },
 ];
 
-const DEFAULT_SITE_TITLE = '流光秘境攻略';
+const DEFAULT_SITE_TITLE = '新世界狂歡 | 關卡攻略筆記';
 
 /**
  * Resolves the site title set on the admin's 網站設定 page, falling back
