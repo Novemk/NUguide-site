@@ -44,22 +44,36 @@
    Sized between body text and the site's normal 1.9rem h1 (per the
    "不要一樣大" request), color stays plain --text rather than the gold
    accent so it doesn't compete with .chapter-title above it or
-   .page-eyebrow. Native <select> chrome is stripped back to look like
-   a heading with a dropdown affordance, not an obvious form control. */
-.stage-switcher {
+   .page-eyebrow. The visible heading is .stage-switcher-label (plain
+   text — always shows the full "章節 · 序號", independent of whatever
+   each <option>'s own text says); the actual <select> sits invisible
+   on top of it (opacity:0, stretched via position:absolute) purely so
+   tapping the heading still opens the native picker. This split exists
+   because a native <select> can't show different text for its closed
+   state vs. its open dropdown list — shortening the option labels (see
+   stageDetail.js, avoids the native list wrapping mid-word on long
+   entries like SP-1~4) would otherwise have shortened this heading too. */
+.stage-switcher-wrap { position: relative; display: inline-block; }
+.stage-switcher-label {
   font-family: var(--font-display);
   font-size: 1rem;
   font-weight: 700;
   letter-spacing: 0.02em;
   color: var(--text);
-  background: none;
+  pointer-events: none;
+}
+.stage-switcher {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
   border: none;
   padding: 0;
   cursor: pointer;
-  appearance: none;
-  -webkit-appearance: none;
 }
 .stage-switcher:focus { outline: none; }
+.stage-switcher-wrap:focus-within .stage-switcher-label { outline: 2px solid var(--accent-teal); outline-offset: 2px; }
 .page-header p {
   color: var(--text-dim);
   margin: 0;

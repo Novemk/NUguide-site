@@ -74,7 +74,10 @@ async function init() {
 
   document.getElementById('stage-header').innerHTML = `
     <div class="page-eyebrow">${stage.chapter}</div>
-    <select class="stage-switcher" id="stage-switcher">${optionsHtml}</select>
+    <div class="stage-switcher-wrap">
+      <span class="stage-switcher-label" aria-hidden="true">${stage.chapter} · ${stage.order}</span>
+      <select class="stage-switcher" id="stage-switcher" aria-label="切換關卡">${optionsHtml}</select>
+    </div>
   `;
   document.getElementById('stage-switcher').addEventListener('change', (e) => {
     window.location.href = `stage-detail.html?id=${encodeURIComponent(e.target.value)}`;
