@@ -298,6 +298,10 @@
 }
 .section-title h2 { margin: 0; }
 .section-title::after { content: ""; flex: 1; height: 1px; background: var(--border-soft); }
+/* stage-detail.html「我的隊伍」區塊，說明「我的隊伍總覽」頁只會列出
+   第1組——固定顯示在標題/按鈕列下方，不分桌機/手機都一樣位置，避免
+   跟按鈕擠在同一列時窄螢幕被截斷。 */
+.section-title-note { color: var(--accent-teal); font-size: 0.88rem; margin: -8px 0 16px; }
 .guide-content {
   background: var(--bg-card);
   border: 1px solid var(--border-soft);
