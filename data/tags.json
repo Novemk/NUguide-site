@@ -339,7 +339,7 @@
     "id": "atk_down",
     "label": "敵方攻擊力減少",
     "sortOrder": 50,
-    "group": "control",
+    "group": "survival",
     "icon": "assets/img/tags/atk_down.svg"
   }
 ]
