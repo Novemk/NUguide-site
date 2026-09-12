@@ -95,16 +95,49 @@ function computeFixedTagWidth(label) {
 // re-render without truncation. Scoped to just one group's own wrap
 // element (not the whole tag list), matching how paintGroup below only
 // ever touches the one group that changed.
-function widenOverflowingButtons(wrap) {
-  const measure = () => {
-    requestAnimationFrame(() => {
-      for (const btn of wrap.querySelectorAll('.opt-tag:not(.opt-tag-wide)')) {
-        const span = btn.querySelector('span');
-        if (span && span.scrollWidth > span.clientWidth + 1) {
-          btn.classList.add('opt-tag-wide');
-        }
+// Actual measure-and-mark step, pulled out so it can be called both
+// right after a group first paints and again later on resize (see
+// ensureResizeListener below) — the truncation check itself doesn't
+// care which caller triggered it.
+function measureTagWrap(wrap) {
+  for (const btn of wrap.querySelectorAll('.opt-tag:not(.opt-tag-wide)')) {
+    const span = btn.querySelector('span');
+    if (span && span.scrollWidth > span.clientWidth + 1) {
+      btn.classList.add('opt-tag-wide');
+    }
+  }
+}
+
+// Browser zoom (Cmd/Ctrl +/-) and window resizing both change how much
+// pixel width each of .tag-flow's 2 fixed columns actually gets, so a
+// label that fit at one zoom level can start clipping to "…" at
+// another — but the initial measure below only ever runs once, right
+// after mount. This listener re-runs that same measurement on every
+// resize (debounced) against whatever .tag-flow wraps currently exist
+// in the page, so a newly-clipped label still gets .opt-tag-wide and
+// moves to its own row instead of staying truncated. Registered once
+// module-wide (not per-wrap) so rebuilding a panel from scratch (e.g.
+// FilterPanel.js's "重設") never stacks up duplicate listeners — it
+// just re-queries the DOM fresh each time it fires.
+let resizeListenerAttached = false;
+let resizeDebounceId = null;
+function ensureResizeListener() {
+  if (resizeListenerAttached) return;
+  resizeListenerAttached = true;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeDebounceId);
+    resizeDebounceId = setTimeout(() => {
+      for (const wrap of document.querySelectorAll('.tag-flow')) {
+        measureTagWrap(wrap);
       }
-    });
+    }, 150);
+  });
+}
+
+function widenOverflowingButtons(wrap) {
+  ensureResizeListener();
+  const measure = () => {
+    requestAnimationFrame(() => measureTagWrap(wrap));
   };
   // document.fonts.ready only resolves once the page's actual webfont
   // (Noto Sans TC, loaded from Google Fonts) has finished downloading —

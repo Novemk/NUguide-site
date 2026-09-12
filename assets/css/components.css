@@ -800,6 +800,15 @@ hr.ql-divider {
 .modal-close { background: none; border: none; color: var(--text-faint); font-size: 1.3rem; line-height: 1; padding: 4px 8px; border-radius: 6px; }
 .modal-close:hover { color: var(--text); background: var(--bg-card); }
 .modal-body { padding: 20px 22px; overflow-y: auto; }
+/* 匯入備份 dialog's (例如…) explanatory asides — see backupModals.js.
+   Kept visually distinct (dimmer, smaller) from the actual instruction
+   sentence above it so it reads as "just an example", not part of the
+   core rule. white-space:pre-line preserves the \n line breaks already
+   baked into that string in backupModals.js. */
+.backup-modal-note { color: var(--text-faint); font-size: 0.85rem; white-space: pre-line; margin-top: -6px; }
+/* 【加入檔案】【覆蓋檔案】標題 — 金色（沿用網站既有的 --accent-gold），
+   並把預設 h3 的 0.5em 下邊距收窄，讓標題跟緊接在下面的說明句貼近。 */
+.backup-modal-title { color: var(--accent-gold); margin-bottom: 0.15em; }
 .modal-footer { padding: 16px 22px; border-top: 1px solid var(--border-soft); display: flex; justify-content: flex-end; gap: 10px; }
 
 /* =========================================================

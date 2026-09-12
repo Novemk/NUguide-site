@@ -7,6 +7,7 @@ import { openTeamEditor } from '../components/TeamEditor.js';
 import { confirmDialog } from '../components/Modal.js';
 import { showToast } from '../core/toast.js';
 import { downloadTeamsBackup, promptImportTeamsBackup } from '../modules/teamBackup.js';
+import { confirmExportDialog, confirmImportModeDialog } from '../components/backupModals.js';
 
 // Same conversion as stagesList.js's own hexToRgba — kept as a small
 // local copy rather than a shared import, since this is the only place
@@ -435,10 +436,14 @@ async function init() {
     refresh();
   }
 
-  document.getElementById('export-btn').addEventListener('click', () => downloadTeamsBackup());
+  document.getElementById('export-btn').addEventListener('click', async () => {
+    if (!(await confirmExportDialog())) return;
+    downloadTeamsBackup();
+  });
   document.getElementById('import-btn').addEventListener('click', async () => {
-    const merge = confirmDialog('選擇「確定」以合併匯入（保留現有隊伍並更新同名紀錄）；選擇「取消」則改為覆蓋匯入（清空後套用備份內容）。');
-    const ok = await promptImportTeamsBackup(merge ? 'merge' : 'replace');
+    const mode = await confirmImportModeDialog();
+    if (!mode) return;
+    const ok = await promptImportTeamsBackup(mode);
     if (ok) refresh();
   });
 
