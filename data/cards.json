@@ -2172,7 +2172,7 @@
       "atk_buff_enemy",
       "immune_silence"
     ],
-    "ultimateSkill": "<p>使目標獲得嘲諷效果（1回合）</p><p>使目標受到傷害增加 17%（最多1層）</p><p>使我方全體必殺技傷害增加 26%（最多1層）</p><p>再以攻擊力 191% 對敵方站位 1、2 造成傷害</p><p><br></p><p>［冷卻時間：4 回合］</p>",
+    "ultimateSkill": "<p>使目標獲得嘲諷效果（1回合）</p><p>使目標受到傷害增加 17%（最多1層）</p><p><span style=\"color: rgb(201, 164, 92);\">使我方全體必殺技傷害增加 26%（最多1層）</span></p><p>再以攻擊力 191% 對敵方站位 1、2 造成傷害</p><p><br></p><p>［冷卻時間：4 回合］</p>",
     "image": "assets/img/cards/card_105.webp",
     "imageZoom": 1.38,
     "imageOffsetX": 0.40732499301513997,
