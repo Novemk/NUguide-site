@@ -2039,7 +2039,8 @@
       "target_pos",
       "self_burst_dmg_up",
       "atk_buff_self",
-      "immune_sleep"
+      "immune_sleep",
+      "atk_support"
     ],
     "ultimateSkill": "<p>使除自身以外我方全體必殺技傷害增加 25%（1回合）</p><p>以自身基礎攻擊力 173% 使我方全體攻擊力增加（1回合）</p><p>再以攻擊力 20% 對敵方站位 1、2、3、4、5 造成傷害</p><p><br></p><p>［冷卻時間：4 回合］</p>",
     "image": "assets/img/cards/card_099.webp",
