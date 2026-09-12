@@ -1319,7 +1319,8 @@
     "tags": [
       "dot",
       "atk_buff_self",
-      "immune_stun"
+      "immune_stun",
+      "enemy_dot_dmg_up"
     ],
     "ultimateSkill": "<p>使目標受到持續傷害量增加 30%（最多1層）</p><p>以自身基礎攻擊力 69% 使我方全體攻擊力增加（2回合）</p><p>並以攻擊力 50% 對目標造成持續傷害（2回合）</p><p><br></p><p>［冷卻時間：3 回合］</p>",
     "image": "assets/img/cards/card_065.webp",
