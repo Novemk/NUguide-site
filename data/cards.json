@@ -711,7 +711,7 @@
       "atk_buff_self",
       "immune_silence"
     ],
-    "ultimateSkill": "<p>以當前HP 20% 對自身造成真實傷害</p><p>使我方全體必殺技傷害增加 20%（1回合）</p><p>再以自身基礎攻擊力 167% 使我方全體攻擊力增加（1回合）</p><p><br></p><p>［冷卻時間：3 回合］</p>",
+    "ultimateSkill": "<p>以當前HP 20% 對自身造成真實傷害</p><p><span style=\"color: rgb(201, 164, 92);\">使我方全體必殺技傷害增加 20%（1回合）</span></p><p>再以自身基礎攻擊力 167% 使我方全體攻擊力增加（1回合）</p><p><br></p><p>［冷卻時間：3 回合］</p>",
     "image": "assets/img/cards/card_036.webp",
     "imageZoom": 1.49,
     "imageOffsetX": 0.5113973493099063,
