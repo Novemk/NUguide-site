@@ -464,8 +464,7 @@
     "cd": 4,
     "tags": [
       "atk_buff_self",
-      "immune_stun",
-      "atk_support"
+      "immune_stun"
     ],
     "ultimateSkill": "<p>以攻擊力 100% 對目標造成傷害</p><p>以自身基礎攻擊力 87% 使我方全體攻擊力增加（2回合）</p><p><br></p><p>［冷卻時間：4 回合］</p>",
     "image": "assets/img/cards/card_024.webp",
@@ -583,9 +582,9 @@
     "cd": 5,
     "tags": [
       "atk_buff_self",
-      "shield",
       "cleanse",
-      "immune_silence"
+      "immune_silence",
+      "team_dmg_down"
     ],
     "ultimateSkill": "<p>以自身基礎攻擊力 32% 使自身以外的我方全體攻擊力增加（5回合）</p><p>使我方全體受到傷害減少 5%（5回合）</p><p><br></p><p>★並使除自身以外的我方全體必殺技冷卻時間減少1回合</p><p><br></p><p>［冷卻時間：5 回合］</p>",
     "image": "assets/img/cards/card_030.webp",
@@ -646,8 +645,8 @@
     "tags": [
       "taunt",
       "shield_gain",
-      "shield",
-      "immune_stun"
+      "immune_stun",
+      "team_burst_dmg_down"
     ],
     "ultimateSkill": "<p>使我方全體受到必殺技傷害減少 15%（2回合）</p><p>並以自身最大HP 18% 使我方全體獲得護盾（1回合）</p><p>再使自身獲得嘲諷（1回合）</p><p>並使自身變為防禦狀態</p><p><br></p><p>［冷卻時間：4 回合］</p>",
     "image": "assets/img/cards/card_033.webp",
@@ -712,7 +711,7 @@
       "atk_buff_self",
       "immune_silence"
     ],
-    "ultimateSkill": "<p>以當前HP 20% 對自身造成真實傷害</p><p><span style=\"color: rgb(201, 164, 92);\">使我方全體必殺技傷害增加 20%（1回合）</span></p><p>再以自身基礎攻擊力 167% 使我方全體攻擊力增加（1回合）</p><p><br></p><p>［冷卻時間：3 回合］</p>",
+    "ultimateSkill": "<p>以當前HP 20% 對自身造成真實傷害</p><p>使我方全體必殺技傷害增加 20%（1回合）</p><p>再以自身基礎攻擊力 167% 使我方全體攻擊力增加（1回合）</p><p><br></p><p>［冷卻時間：3 回合］</p>",
     "image": "assets/img/cards/card_036.webp",
     "imageZoom": 1.49,
     "imageOffsetX": 0.5113973493099063,
@@ -732,7 +731,7 @@
       "heal_tag",
       "immune_silence"
     ],
-    "ultimateSkill": "<p><span style=\"color: rgb(201, 164, 92);\">使除自身以外的我方全體必殺傷害增加 37.5%（1回合）</span></p><p>以攻擊力 150% 對我方全體進行治療</p><p>並使自身獲得普攻傷害增加 90%（3回合）</p><p><br></p><p>［冷卻時間：3 回合］</p>",
+    "ultimateSkill": "<p>使除自身以外的我方全體必殺傷害增加 37.5%（1回合）</p><p>以攻擊力 150% 對我方全體進行治療</p><p>並使自身獲得普攻傷害增加 90%（3回合）</p><p><br></p><p>［冷卻時間：3 回合］</p>",
     "image": "assets/img/cards/card_037.webp",
     "imageZoom": 1.54,
     "imageOffsetX": 0.43795568182339645,
@@ -1019,10 +1018,10 @@
     "elementId": "fire",
     "cd": 4,
     "tags": [
-      "shield",
       "atk_buff_self",
       "immune_stun",
-      "heal_received_up"
+      "heal_received_up",
+      "team_dmg_down"
     ],
     "ultimateSkill": "<p>使我方全體受到傷害減少 12.5%（2回合）</p><p>並使我方全體受到持續治療量增加 27%（4回合）</p><p>再以自身基礎攻擊力 173% 使我方全體攻擊力增加（1回合）</p><p><br></p><p>［冷卻時間：4 回合］</p>",
     "image": "assets/img/cards/card_051.webp",
@@ -1319,8 +1318,7 @@
     "tags": [
       "dot",
       "atk_buff_self",
-      "immune_stun",
-      "enemy_dot_dmg_up"
+      "immune_stun"
     ],
     "ultimateSkill": "<p>使目標受到持續傷害量增加 30%（最多1層）</p><p>以自身基礎攻擊力 69% 使我方全體攻擊力增加（2回合）</p><p>並以攻擊力 50% 對目標造成持續傷害（2回合）</p><p><br></p><p>［冷卻時間：3 回合］</p>",
     "image": "assets/img/cards/card_065.webp",
@@ -1365,7 +1363,7 @@
       "hot",
       "immune_sleep"
     ],
-    "ultimateSkill": "<p><span style=\"color: rgb(201, 164, 92);\">使除自身以外我方全體必殺技傷害增加 37.5%（1回合）</span></p><p>使我方全體攻擊力增加 28%（2回合）</p><p>並以攻擊力 150% 對我方全體進行治療</p><p>再以攻擊力 77％ 進行持續治療（2回合）</p><p><br></p><p>［冷卻時間：4 回合］</p>",
+    "ultimateSkill": "<p>使除自身以外我方全體必殺技傷害增加 37.5%（1回合）</p><p>使我方全體攻擊力增加 28%（2回合）</p><p>並以攻擊力 150% 對我方全體進行治療</p><p>再以攻擊力77％進行持續治療（2回合）</p><p><br></p><p>［冷卻時間：4 回合］</p>",
     "image": "assets/img/cards/card_067.webp",
     "imageZoom": 1.48,
     "imageOffsetX": 0.4858844765824755,
@@ -1448,7 +1446,7 @@
       "self_burst_dmg_up",
       "immune_sleep"
     ],
-    "ultimateSkill": "<p>使目標受到 <span style=\"color: rgb(226, 96, 79);\">定位妨礙 </span>的角色傷害增加 51%（1回合）</p><p><span style=\"color: rgb(201, 164, 92);\">再使我方</span> <span style=\"color: rgb(226, 96, 79);\">定位妨礙</span> <span style=\"color: rgb(201, 164, 92);\">的角色必殺技傷害增加 31%（1回合）</span></p><p>並以攻擊力 345% 對目標造成傷害</p><p><br></p><p>［冷卻時間：4 回合］</p>",
+    "ultimateSkill": "<p>使目標受到 <span style=\"color: rgb(226, 96, 79);\">定位妨礙 </span>的角色傷害增加 51%（1回合）</p><p>再使我方 <span style=\"color: rgb(226, 96, 79);\">定位妨礙</span> 的角色必殺技傷害增加 31%（1回合）</p><p>並以攻擊力 345% 對目標造成傷害</p><p><br></p><p>［冷卻時間：4 回合］</p>",
     "image": "assets/img/cards/card_071.webp",
     "imageZoom": 1.47,
     "imageOffsetX": 0.5940004433006997,
@@ -1469,7 +1467,7 @@
       "taunt",
       "immune_silence"
     ],
-    "ultimateSkill": "<p>使目標受到 <span style=\"color: rgb(79, 200, 176);\">闇屬性</span> 傷害增加 15%（3回合）\n以攻擊力 100% 對目標造成傷害\n再以最大HP 40% 給予自身護盾（1回合）\n<span style=\"color: rgb(201, 164, 92);\">使我方全體必殺技傷害增加 26%（1回合）</span>\n使自身獲得嘲諷（1回合）\n並使自身變為防禦狀態\n［冷卻時間：3 回合］</p>",
+    "ultimateSkill": "<p>使目標受到 <span style=\"color: rgb(79, 200, 176);\">闇屬性</span> 傷害增加 15%（3回合）\n以攻擊力 100% 對目標造成傷害\n再以最大HP 40% 給予自身護盾（1回合）\n使我方全體必殺技傷害增加 26%（1回合）\n使自身獲得嘲諷（1回合）\n並使自身變為防禦狀態\n［冷卻時間：3 回合］</p>",
     "image": "assets/img/cards/card_072.webp",
     "imageZoom": 1.47,
     "imageOffsetX": 0.578272792984733,
@@ -1679,11 +1677,11 @@
     "elementId": "water",
     "cd": 4,
     "tags": [
-      "shield",
       "heal_tag",
       "hot",
       "atk_buff_self",
-      "immune_sleep"
+      "immune_sleep",
+      "team_dmg_down"
     ],
     "ultimateSkill": "<p>使我方全體受到傷害減少 12.5%（2回合）</p><p>以攻擊力 100% 對我方全體進行治療</p><p>以攻擊力 64% 對我方全體造成持續治療（4回合）</p><p>再使我方全體 <span style=\"color: rgb(226, 96, 79);\">定位為妨礙 </span>的隊員造成傷害增加 22%（4回合）</p><p><br></p><p>［冷卻時間：4 回合］</p>",
     "image": "assets/img/cards/card_082.webp",
@@ -1701,10 +1699,10 @@
     "elementId": "light",
     "cd": 3,
     "tags": [
-      "shield",
       "heal_tag",
       "hot",
-      "immune_stun"
+      "immune_stun",
+      "enemy_dmg_down"
     ],
     "ultimateSkill": "<p>使目標造成傷害減少 10%（3回合）</p><p>使自身攻擊力增加 34%（3回合）</p><p>並以攻擊力 100% 對我方全體進行治療</p><p>再以攻擊力 70% 進行持續治療（2回合）</p><p><br></p><p>［冷卻時間：3 回合］</p>",
     "image": "assets/img/cards/card_083.webp",
@@ -1788,7 +1786,7 @@
       "atk_buff_self",
       "immune_stun"
     ],
-    "ultimateSkill": "<p>以攻擊力 100% 對目標造成傷害</p><p><span style=\"color: rgb(201, 164, 92);\">使我方全體必殺技傷害增加 25%（1回合）</span></p><p>以自身基礎攻擊力 137% 使我方全體攻擊力增加（1回合）</p><p>使我方全體 <span style=\"color: rgb(226, 96, 79);\">定位攻擊、守護與妨礙</span> 的角色獲得「必殺時，觸發『使自身以外的我方全體攻擊力增加 46%（1回合）』（1回合）」</p><p><br></p><p>［冷卻時間：3 回合］</p>",
+    "ultimateSkill": "<p>以攻擊力 100% 對目標造成傷害</p><p>使我方全體必殺技傷害增加 25%（1回合）</p><p>以自身基礎攻擊力 137% 使我方全體攻擊力增加（1回合）</p><p>使我方全體 <span style=\"color: rgb(226, 96, 79);\">定位攻擊、守護與妨礙</span> 的角色獲得「必殺時，觸發『使自身以外的我方全體攻擊力增加 46%（1回合）』（1回合）」</p><p><br></p><p>［冷卻時間：3 回合］</p>",
     "image": "assets/img/cards/card_087.webp",
     "imageZoom": 1.46,
     "imageOffsetX": 0.5048369409839881,
@@ -1955,8 +1953,7 @@
       "trigger",
       "own_proc_dmg_up",
       "proc_followup",
-      "immune_sleep",
-      "own_cd"
+      "immune_sleep"
     ],
     "ultimateSkill": "<p>使自身觸發技傷害增加 68%（最多1層）</p><p>以攻擊力 50% 對目標造成傷害</p><p>使自身獲得「攻擊時，觸發『以攻擊力 118% 對目標造成傷害』（3回合）」</p><p>再使自身獲得「必殺時，觸發『以攻擊力 118% 對目標造成傷害』（6回合）【不可疊加】」</p><p><br></p><p>［冷卻時間：3 回合］</p>",
     "image": "assets/img/cards/card_095.webp",
@@ -2041,10 +2038,9 @@
       "target_pos",
       "self_burst_dmg_up",
       "atk_buff_self",
-      "immune_sleep",
-      "atk_support"
+      "immune_sleep"
     ],
-    "ultimateSkill": "<p><span style=\"color: rgb(201, 164, 92);\">使除自身以外我方全體必殺技傷害增加 25%（1回合）</span></p><p>以自身基礎攻擊力 173% 使我方全體攻擊力增加（1回合）</p><p>再以攻擊力 20% 對敵方站位 1、2、3、4、5 造成傷害</p><p><br></p><p>［冷卻時間：4 回合］</p><hr class=\"ql-divider\"><p>★３：・我方全體獲得「隊伍中 <span style=\"color: rgb(226, 96, 79);\">定位輔助</span> 的角色</p><p>                  有２人以上時，發動『造成傷害增加60%』」</p><p>             ・第二回合時，觸發「使隊伍中 <span style=\"color: rgb(226, 96, 79);\">定位輔助</span> 的角色</p><p>                 免疫必殺技CD變動(50回合)」</p><p><br></p><p><span style=\"color: rgb(201, 164, 92);\">★５：我方全體 </span><span style=\"color: rgb(226, 96, 79);\">定位攻擊、妨礙 </span><span style=\"color: rgb(201, 164, 92);\">的角色必殺技傷害增加 32% </span></p>",
+    "ultimateSkill": "<p>使除自身以外我方全體必殺技傷害增加 25%（1回合）</p><p>以自身基礎攻擊力 173% 使我方全體攻擊力增加（1回合）</p><p>再以攻擊力 20% 對敵方站位 1、2、3、4、5 造成傷害</p><p><br></p><p>［冷卻時間：4 回合］</p>",
     "image": "assets/img/cards/card_099.webp",
     "imageZoom": 1.38,
     "imageOffsetX": 0.6637331754225179,
@@ -2103,11 +2099,11 @@
     "elementId": "dark",
     "cd": 4,
     "tags": [
-      "shield",
       "normal_atk",
       "followup_atk",
       "hot",
-      "immune_silence"
+      "immune_silence",
+      "team_dmg_down"
     ],
     "ultimateSkill": "<p>以攻擊力 75% 對目標造成傷害</p><p>使我方全體受到傷害減少 7%（4回合）</p><p>以攻擊力 27% 對我方全體進行持續治療（4回合）</p><p>再使自身獲得「普攻時，追加『以攻擊力 90% 目標進行追擊』（4回合）」</p><p><br></p><p>［冷卻時間：4 回合］</p>",
     "image": "assets/img/cards/card_102.webp",
@@ -2175,7 +2171,7 @@
       "atk_buff_enemy",
       "immune_silence"
     ],
-    "ultimateSkill": "<p>使目標獲得嘲諷效果（1回合）</p><p>使目標受到傷害增加 17%（最多1層）</p><p><span style=\"color: rgb(201, 164, 92);\">使我方全體必殺技傷害增加 26%（最多1層）</span></p><p>再以攻擊力 191% 對敵方站位 1、2 造成傷害</p><p><br></p><p>［冷卻時間：4 回合］</p>",
+    "ultimateSkill": "<p>使目標獲得嘲諷效果（1回合）</p><p>使目標受到傷害增加 17%（最多1層）</p><p>使我方全體必殺技傷害增加 26%（最多1層）</p><p>再以攻擊力 191% 對敵方站位 1、2 造成傷害</p><p><br></p><p>［冷卻時間：4 回合］</p>",
     "image": "assets/img/cards/card_105.webp",
     "imageZoom": 1.38,
     "imageOffsetX": 0.40732499301513997,
@@ -2242,7 +2238,7 @@
       "own_burst_dmg_up",
       "immune_sleep"
     ],
-    "ultimateSkill": "<p>使自身獲得「被攻擊時，觸發『以攻擊力 27% 對自身進行治療』（4回合）」</p><p>使我方全體攻擊力增加 28%（4回合）</p><p>以攻擊力 135% 對我方全體進行治療</p><p>再以攻擊力 42% 對我方全體進行持續治療（4回合）</p><p>使自身必殺技傷害增加 40%（4回合）</p><p>再使除自身以外<span style=\"color: rgb(201, 164, 92);\">我方全體必殺技傷害增加 40%（1回合）</span></p><p><br></p><p>［冷卻時間：4 回合］</p><hr class=\"ql-divider\"><p>★５：我方全體最大HP增加 7.5%</p><p>             <span style=\"color: rgb(201, 164, 92);\">我方全體必殺技傷害增加 13% </span></p>",
+    "ultimateSkill": "<p>使自身獲得「被攻擊時，觸發『以攻擊力 27% 對自身進行治療』（4回合）」</p><p>使我方全體攻擊力增加 28%（4回合）</p><p>以攻擊力 135% 對我方全體進行治療</p><p>再以攻擊力 42% 對我方全體進行持續治療（4回合）</p><p>使自身必殺技傷害增加 40%（4回合）</p><p>再使除自身以外我方全體必殺技傷害增加 40%（1回合）</p><p><br></p><p>［冷卻時間：4 回合］</p>",
     "image": "assets/img/cards/card_108.webp",
     "imageZoom": 1.39,
     "imageOffsetX": 0.506406424001118,
@@ -2304,7 +2300,7 @@
       "own_burst_dmg_up",
       "immune_silence"
     ],
-    "ultimateSkill": "<p>使自身必殺技傷害增加 30%（最多2層）</p><p>以攻擊力 273% 對目標造成傷害</p><p>並使自身獲得『《勇氣》』（50回合）（不可重複獲得）</p><p>若自身已擁有《勇氣》時，則必殺後再使自身獲得『《祝福》』（50回合）（不可重複獲得）</p><p><br></p><p>［冷卻時間：3 回合］</p><p><br></p><p><span style=\"color: rgb(201, 164, 92);\">《勇氣》：</span></p><p><span style=\"color: rgb(201, 164, 92);\">    必殺時可額外觸發「以攻擊力 125% 對目標造成傷害」</span></p><p><span style=\"color: rgb(201, 164, 92);\">《祝福》：</span></p><p><span style=\"color: rgb(201, 164, 92);\">    必殺時可額外觸發「以攻擊力 150% 對目標造成傷害」</span></p>",
+    "ultimateSkill": "<p>使自身必殺技傷害增加 30%（最多2層）</p><p>以攻擊力 273% 對目標造成傷害</p><p>並使自身獲得『《勇氣》』（50回合）（不可重複獲得）</p><p>若自身已擁有《勇氣》時，則必殺後再使自身獲得『《祝福》』（50回合）（不可重複獲得）</p><p><br></p><p>［冷卻時間：3 回合］</p><p><br></p><p><span style=\"color: rgb(201, 164, 92);\">《勇氣》：必殺時可額外觸發「以攻擊力 125% 對目標造成傷害」</span></p><p><span style=\"color: rgb(201, 164, 92);\">《祝福》：必殺時可額外觸發「以攻擊力 150% 對目標造成傷害」</span></p>",
     "image": "assets/img/cards/card_111.webp",
     "imageZoom": 1.23,
     "imageOffsetX": 0.49284034968371754,
@@ -2347,7 +2343,7 @@
       "hot",
       "immune_silence"
     ],
-    "ultimateSkill": "<p><span style=\"color: rgb(201, 164, 92);\">使我方全體必殺技傷害增加 26%（1回合）</span></p><p>使自身攻擊力增加 34%（3回合）</p><p>並以攻擊力 100% 對我方全體進行治療</p><p>再以攻擊力 47% 進行持續治療（3回合）</p><p><br></p><p>［冷卻時間：3 回合］</p><hr class=\"ql-divider\"><p><span style=\"color: rgb(201, 164, 92);\">★３：除自身以外的我方全體獲得</span></p><p><span style=\"color: rgb(201, 164, 92);\">           「隊伍中 </span><span style=\"color: rgb(226, 96, 79);\">定位攻擊</span><span style=\"color: rgb(201, 164, 92);\"> 的角色有２人以上時，</span></p><p><span style=\"color: rgb(201, 164, 92);\">             發動『必殺技傷害增加 17% 』」</span></p><p>             使我方全體受到治療量增加 12%</p>",
+    "ultimateSkill": "<p>使我方全體必殺技傷害增加 26%（1回合）</p><p>使自身攻擊力增加 34%（3回合）</p><p>並以攻擊力 100% 對我方全體進行治療</p><p>再以攻擊力 47% 進行持續治療（3回合）</p><p><br></p><p>［冷卻時間：3 回合］</p>",
     "image": "assets/img/cards/card_113.webp",
     "imageZoom": 1.56,
     "imageOffsetX": 0.5467468565302208,
@@ -2428,10 +2424,10 @@
     "elementId": "light",
     "cd": 3,
     "tags": [
-      "shield",
       "atk_buff_enemy",
       "atk_buff_self",
-      "immune_stun"
+      "immune_stun",
+      "team_dmg_down"
     ],
     "ultimateSkill": "<p>使我方全體受到傷害減少 7%（3回合）</p><p>使敵方全體受到傷害增加 26%（1回合）</p><p>以自身基礎攻擊力 137% 使我方全體攻擊力增加（1回合）</p><p><br></p><p>［冷卻時間：3 回合］</p>",
     "image": "assets/img/cards/card_117.webp",
@@ -2513,10 +2509,10 @@
     "cd": 4,
     "tags": [
       "lifesteal",
-      "shield",
       "heal_tag",
       "immune_silence",
-      "heal_received_up"
+      "heal_received_up",
+      "atk_down"
     ],
     "ultimateSkill": "<p>使目標攻擊力減少 15%（2回合）</p><p>以攻擊力 100% 對目標造成傷害</p><p>使我方全體 <span style=\"color: rgb(226, 96, 79);\">定位為攻擊、妨礙</span> 的角色獲得吸血效果 51%（4回合）</p><p>再使我方全體 <span style=\"color: rgb(226, 96, 79);\">定位為守護、治療、輔助</span> 的角色受到治療量增加 34%（4回合）</p><p>再以自身最大 HP 45% 對我方全體進行治療</p><p>並變為防禦狀態</p><p><br></p><p>［冷卻時間：4 回合］</p>",
     "image": "assets/img/cards/card_121.webp",
@@ -2809,8 +2805,8 @@
     "cd": 4,
     "tags": [
       "burst",
-      "shield",
-      "immune_stun"
+      "immune_stun",
+      "atk_down"
     ],
     "ultimateSkill": "<p>以攻擊力 345% 對目標造成傷害</p><p>並使目標攻擊力減少 15%（2回合）</p><p><br></p><p>［冷卻時間：4 回合］</p>",
     "image": "assets/img/cards/card_136.webp",
@@ -2833,7 +2829,7 @@
       "self_burst_dmg_up",
       "immune_stun"
     ],
-    "ultimateSkill": "<p><span style=\"color: rgb(201, 164, 92);\">使目標受到回復量減少 100%</span>（3回合）</p><p>再以自身基礎攻擊力 154% 使我方全體攻擊力增加（1回合）</p><p><br></p><p>［冷卻時間：3 回合］</p><hr class=\"ql-divider\"><p><span style=\"color: rgb(201, 164, 92);\">★３：我方全體必殺技傷害增加 27 %</span></p><p><span style=\"color: rgb(201, 164, 92);\">★５：我方全體必殺技傷害增加 20 %</span></p><p><span style=\"color: rgb(201, 164, 92);\">潛６：我方全體必殺技傷害增加 5 %</span></p>",
+    "ultimateSkill": "<p><span style=\"color: rgb(201, 164, 92);\">使目標受到回復量減少 100%</span>（3回合）</p><p>再以自身基礎攻擊力 154% 使我方全體攻擊力增加（1回合）</p><p><br></p><p>［冷卻時間：3 回合］</p>",
     "image": "assets/img/cards/card_137.webp",
     "imageZoom": 1.31,
     "imageOffsetX": 0.48147582139832573,
@@ -2849,9 +2845,9 @@
     "elementId": "light",
     "cd": 4,
     "tags": [
-      "shield",
       "counter",
-      "immune_silence"
+      "immune_silence",
+      "team_dmg_down"
     ],
     "ultimateSkill": "<p>以攻擊力 100% 對目標造成傷害</p><p>再使我方全體獲得「被攻擊時，觸發『以攻擊力 73% 對目標進行反擊』」（1回合）</p><p>使我方全體受到傷害減少 9%（1回合）</p><p>並變為防禦狀態</p><p><br></p><p>［冷卻時間：4 回合］</p>",
     "image": "assets/img/cards/card_138.webp",
@@ -2952,9 +2948,9 @@
     "elementId": "dark",
     "cd": 3,
     "tags": [
-      "shield",
       "taunt",
-      "immune_stun"
+      "immune_stun",
+      "team_burst_dmg_down"
     ],
     "ultimateSkill": "<p>以攻擊力 100% 對目標造成傷害</p><p>使我方全體受到必殺技傷害減少 11%（2回合）</p><p>再獲得嘲諷（1回合）</p><p>並變為防禦狀態</p><p><br></p><p>［冷卻時間：3 回合］</p>",
     "image": "assets/img/cards/card_143.webp",

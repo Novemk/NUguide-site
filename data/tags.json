@@ -56,13 +56,6 @@
     "icon": "assets/img/tags/atk_buff_self.svg"
   },
   {
-    "id": "atk_support",
-    "label": "攻擊型輔助",
-    "sortOrder": 8,
-    "group": "damage",
-    "icon": "assets/img/tags/atk_support.svg"
-  },
-  {
     "id": "own_dmg_up",
     "label": "自身傷害增加",
     "sortOrder": 9,
@@ -183,7 +176,7 @@
   },
   {
     "id": "shield",
-    "label": "減傷",
+    "label": "自我減傷",
     "sortOrder": 26,
     "group": "survival",
     "icon": "assets/img/tags/shield.svg"
@@ -315,10 +308,38 @@
     "icon": "assets/img/tags/counter.svg"
   },
   {
+    "id": "atk_support",
+    "label": "攻擊型輔助",
+    "sortOrder": 46,
+    "group": "damage",
+    "icon": "assets/img/tags/atk_support.svg"
+  },
+  {
     "id": "lifesteal",
     "label": "吸血",
     "sortOrder": 47,
     "group": "mechanic",
     "icon": "assets/img/tags/lifesteal.svg"
+  },
+  {
+    "id": "team_dmg_down",
+    "label": "我方受到傷害減少",
+    "sortOrder": 48,
+    "group": "survival",
+    "icon": "assets/img/tags/team_dmg_down.svg"
+  },
+  {
+    "id": "team_burst_dmg_down",
+    "label": "我方受必殺傷害減少",
+    "sortOrder": 49,
+    "group": "survival",
+    "icon": "assets/img/tags/team_burst_dmg_down.svg"
+  },
+  {
+    "id": "atk_down",
+    "label": "敵方攻擊力減少",
+    "sortOrder": 50,
+    "group": "control",
+    "icon": "assets/img/tags/atk_down.svg"
   }
 ]
