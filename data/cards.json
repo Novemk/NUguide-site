@@ -2344,7 +2344,7 @@
       "hot",
       "immune_silence"
     ],
-    "ultimateSkill": "<p><span style=\"color: rgb(201, 164, 92);\">使我方全體必殺技傷害增加 26%（1回合）</span></p><p>使自身攻擊力增加 34%（3回合）</p><p>並以攻擊力 100% 對我方全體進行治療</p><p>再以攻擊力 47% 進行持續治療（3回合）</p><p><br></p><p>［冷卻時間：3 回合］</p><hr class=\"ql-divider\"><p><span style=\"color: rgb(201, 164, 92);\">★３：除自身以外的我方全體獲得</span></p><p><span style=\"color: rgb(201, 164, 92);\">           「隊伍中 </span><span style=\"color: rgb(226, 96, 79);\">定位攻擊</span><span style=\"color: rgb(201, 164, 92);\"> 的角色有２人以上時，發動『必殺技傷害增加 17% 』」</span></p><p>             使我方全體受到治療量增加 12%</p>",
+    "ultimateSkill": "<p><span style=\"color: rgb(201, 164, 92);\">使我方全體必殺技傷害增加 26%（1回合）</span></p><p>使自身攻擊力增加 34%（3回合）</p><p>並以攻擊力 100% 對我方全體進行治療</p><p>再以攻擊力 47% 進行持續治療（3回合）</p><p><br></p><p>［冷卻時間：3 回合］</p><hr class=\"ql-divider\"><p><span style=\"color: rgb(201, 164, 92);\">★３：除自身以外的我方全體獲得</span></p><p><span style=\"color: rgb(201, 164, 92);\">           「隊伍中 </span><span style=\"color: rgb(226, 96, 79);\">定位攻擊</span><span style=\"color: rgb(201, 164, 92);\"> 的角色有２人以上時，</span></p><p><span style=\"color: rgb(201, 164, 92);\">             發動『必殺技傷害增加 17% 』」</span></p><p>             使我方全體受到治療量增加 12%</p>",
     "image": "assets/img/cards/card_113.webp",
     "imageZoom": 1.56,
     "imageOffsetX": 0.5467468565302208,
