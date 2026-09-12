@@ -249,7 +249,8 @@
     "label": "降防",
     "sortOrder": 36,
     "group": "control",
-    "icon": "assets/img/tags/def_down.svg"
+    "icon": "assets/img/tags/def_down.svg",
+    "filterHidden": true
   },
   {
     "id": "break_shield",
