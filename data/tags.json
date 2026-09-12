@@ -218,7 +218,7 @@
   },
   {
     "id": "enemy_dmg_down",
-    "label": "敵方傷害減少",
+    "label": "敵方造成傷害減少",
     "sortOrder": 32,
     "group": "survival",
     "icon": "assets/img/tags/enemy_dmg_down.svg"
