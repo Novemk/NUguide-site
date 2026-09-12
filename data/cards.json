@@ -1953,7 +1953,8 @@
       "trigger",
       "own_proc_dmg_up",
       "proc_followup",
-      "immune_sleep"
+      "immune_sleep",
+      "own_cd"
     ],
     "ultimateSkill": "<p>使自身觸發技傷害增加 68%（最多1層）</p><p>以攻擊力 50% 對目標造成傷害</p><p>使自身獲得「攻擊時，觸發『以攻擊力 118% 對目標造成傷害』（3回合）」</p><p>再使自身獲得「必殺時，觸發『以攻擊力 118% 對目標造成傷害』（6回合）【不可疊加】」</p><p><br></p><p>［冷卻時間：3 回合］</p>",
     "image": "assets/img/cards/card_095.webp",
