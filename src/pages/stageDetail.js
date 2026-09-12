@@ -68,7 +68,7 @@ async function init() {
   }
   const optionsHtml = chapterOrder.map((chapter) => `
     <optgroup label="${chapter}">
-      ${byChapter.get(chapter).map((s) => `<option value="${s.id}" ${s.id === stage.id ? 'selected' : ''}>${chapter} · ${s.order}</option>`).join('')}
+      ${byChapter.get(chapter).map((s) => `<option value="${s.id}" ${s.id === stage.id ? 'selected' : ''}>${s.order}</option>`).join('')}
     </optgroup>
   `).join('');
 
