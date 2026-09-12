@@ -2039,7 +2039,8 @@
       "target_pos",
       "self_burst_dmg_up",
       "atk_buff_self",
-      "immune_sleep"
+      "immune_sleep",
+      "atk_support"
     ],
     "ultimateSkill": "<p><span style=\"color: rgb(201, 164, 92);\">使除自身以外我方全體必殺技傷害增加 25%（1回合）</span></p><p>以自身基礎攻擊力 173% 使我方全體攻擊力增加（1回合）</p><p>再以攻擊力 20% 對敵方站位 1、2、3、4、5 造成傷害</p><p><br></p><p>［冷卻時間：4 回合］</p><hr class=\"ql-divider\"><p>★３：・我方全體獲得「隊伍中 <span style=\"color: rgb(226, 96, 79);\">定位輔助</span> 的角色</p><p>                  有２人以上時，發動『造成傷害增加60%』」</p><p>             ・第二回合時，觸發「使隊伍中 <span style=\"color: rgb(226, 96, 79);\">定位輔助</span> 的角色</p><p>                 免疫必殺技CD變動(50回合)」</p><p><br></p><p><span style=\"color: rgb(201, 164, 92);\">★５：我方全體 </span><span style=\"color: rgb(226, 96, 79);\">定位攻擊、妨礙 </span><span style=\"color: rgb(201, 164, 92);\">的角色必殺技傷害增加 32% </span></p>",
     "image": "assets/img/cards/card_099.webp",
